@@ -32,7 +32,7 @@ export default function Work() {
         <div className="relative max-w-md bg-[hsl(var(--rose-surface))] px-6 py-7 sm:px-8 sm:py-9 md:max-w-none md:px-9 md:py-11">
           <p className="font-editorial text-[clamp(2.2rem,3.4vw,3.5rem)] italic leading-none tracking-[-.025em]">Product builder.</p>
           <p className="mt-6 text-balance text-[clamp(1.2rem,1.9vw,1.75rem)] font-medium leading-[1.25] tracking-[-.02em]">
-            I build habit-forming consumer products people love.
+            I build better ways to shop. Easier, more personal, and more fun.
           </p>
         </div>
       </section>
