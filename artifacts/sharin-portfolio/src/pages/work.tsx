@@ -15,7 +15,7 @@ function matchesFilter(category: string, filter: string) {
 
 export default function Work() {
   const [filter, setFilter] = useState('All');
-  usePageMeta('Work — Sharin Khander', 'Explore Sharin Khander’s product work across luxury marketplaces, shopping agents, visual search, checkout, and personalization.');
+  usePageMeta('Work — Sharin Khander', 'Explore Sharin Khander’s product work across luxury marketplaces, shopping agents, visual search, designer discovery, and personalization.');
 
   const visibleProjects = useMemo(
     () => publishedProjects.filter((project) => matchesFilter(project.category, filter)),

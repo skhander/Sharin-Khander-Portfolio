@@ -1,0 +1,272 @@
+I want you to build a visual portfolio story for a product I worked on at The RealReal.
+
+Do NOT build a traditional PM case study.
+
+Do NOT create sections called “Problem / Solution / My Role / Results.”
+
+Do NOT turn this into a deck.
+
+Tell one product story from beginning to end, with the interface and interactions doing most of the explaining.
+
+The core idea:
+
+**We wanted The RealReal to become a place where people discover their next favorite designer — not just a place where they shop for designers they already know.**
+
+The story:
+
+80% of visitors to designer pages left without clicking a product.
+
+Our hypothesis wasn't simply that the page needed better merchandising.
+
+It was that when the products on a designer page didn't resonate, we gave shoppers no meaningful next step.
+
+So we asked:
+
+**What if a designer page could become a doorway into discovering another designer?**
+
+The inspiration is how Spotify helps people move from artists they already like to artists they haven't discovered yet.
+
+We wanted to create the fashion equivalent:
+
+**The Row → Lemaire → Jil Sander → Toteme**
+
+Build the experience around that idea.
+
+---
+
+## SCENE 1 — THE DEAD END
+
+Start immediately with a designer page.
+
+Use a beautiful fashion product grid.
+
+Headline:
+
+**80% of visitors leave without clicking a product.**
+
+Let the user scroll.
+
+They reach the bottom.
+
+Nothing happens.
+
+No giant explanation.
+
+Just:
+
+**They're done.**
+
+Then:
+
+**But did they actually stop shopping?**
+
+Pause here.
+
+---
+
+## SCENE 2 — THE PRODUCT INSIGHT
+
+Transition to a clean statement:
+
+**Maybe they didn't want another product from this designer.**
+
+Then:
+
+**Maybe they wanted another designer.**
+
+This is the key insight of the entire case study.
+
+Make it visually obvious.
+
+Show:
+
+THE ROW
+
+→ ❌ Nothing here
+
+versus:
+
+THE ROW
+
+→ **What else might I like?**
+
+---
+
+## SCENE 3 — THE DISCOVERY LOOP
+
+Introduce the idea through a simple visual analogy.
+
+Show:
+
+**Spotify**
+
+Radiohead → The Smile → Thom Yorke → Portishead
+
+Then:
+
+**The RealReal**
+
+The Row → Lemaire → Jil Sander → Toteme
+
+Caption:
+
+**Turn something you already like into a path toward something new.**
+
+Do not over-explain the Spotify analogy.
+
+---
+
+## SCENE 4 — V1: USE WHAT WE ALREADY KNOW
+
+Now reveal how we actually built it.
+
+Headline:
+
+**We didn't start with a perfect taste model.**
+
+Show a network:
+
+THE ROW
+
+connected to:
+
+LEMAIRE
+TOTEME
+JIL SANDER
+KHAITE
+
+Animate the connections.
+
+Caption:
+
+**People who browsed one designer often browsed another.**
+
+Then:
+
+**So we started there.**
+
+This was the MVP: recommend designers customers naturally browsed and bought together.
+
+Show the actual product experience:
+
+### CUSTOMERS ALSO SHOP
+
+[Designer] [Designer] [Designer]
+
+The source material describes this as the MVP before moving toward more sophisticated similarity and personalization.
+
+---
+
+## SCENE 5 — THE SYSTEM GETS SMARTER
+
+Now make the recommendation system evolve visually.
+
+Keep THE ROW in the center.
+
+First show:
+
+### BEHAVIOR
+
+**Who shops these designers together?**
+
+Connections appear based on behavioral relationships.
+
+Then add:
+
+### LOOK
+
+**Which designers look similar?**
+
+Show product imagery from two designers side by side.
+
+Visually connect shared characteristics such as silhouette, color, material, pattern and shape.
+
+Then add:
+
+### FEEL
+
+**Which designers feel similar?**
+
+Show:
+
+90s minimal
+tailored
+quiet
+black tie
+summer
+
+Use these as semantic/style concepts rather than technical labels.
+
+Then add:
+
+### YOU
+
+**What does this shopper like?**
+
+Show a shopper who has browsed:
+
+The Row
+Jil Sander
+Toteme
+
+The recommendation changes based on that history.
+
+The final visual should communicate:
+
+**Behavior + Look + Feel + You**
+
+→ **Designer recommendations**
+
+This section is the technical heart of the story.
+
+Make it feel like an evolving recommendation system, not an ML architecture diagram.
+
+The actual strategy was to move from designers customers browsed together toward visual similarity, shared attributes, and personalized recommendations based on browsing and purchase behavior.
+
+---
+
+## SCENE 6 — EXPERIENCE THE LOOP
+
+Return to the actual designer page.
+
+Show:
+
+### THE ROW
+
+[beautiful products]
+
+Then:
+
+### Explore other designers
+
+[LEMAIRE] [TOTEME] [JIL SANDER]
+
+Click LEMAIRE.
+
+The page changes to:
+
+### LEMAIRE
+
+Now show its products.
+
+Then another recommendation.
+
+Let the user continue.
+
+The experience should make the thesis tangible:
+
+**A designer page no longer has to be the end of the journey.**
+
+It becomes:
+
+**a starting point.**
+
+---
+
+## SCENE 7 — THE EXPERIMENT
+
+Only now explain how we validated the idea.
+
+Headline:
+
+**The hypothesis was simple:**

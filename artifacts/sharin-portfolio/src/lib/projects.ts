@@ -102,11 +102,11 @@ export const projects: Project[] = [
     status: 'published',
   },
   {
-    slug: 'checkout',
-    title: 'Checkout',
+    slug: 'similar-designers',
+    title: 'Similar Designers',
     company: 'The RealReal',
-    category: 'Commerce',
-    description: 'Improving the path from product discovery to purchase.',
+    category: 'Discovery / Recommendations',
+    description: 'Making a designer page a doorway to the next designer someone might love.',
     status: 'published',
   },
   {
