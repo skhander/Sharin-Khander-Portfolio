@@ -37,56 +37,60 @@
 }
 
 :root {
-  --background: 42 25% 95%;
-  --foreground: 30 11% 13%;
-  --border: 35 10% 82%;
-  --input: 35 10% 82%;
-  --ring: 14 55% 49%;
-  --card: 42 25% 95%;
-  --card-foreground: 30 11% 13%;
-  --card-border: 35 10% 82%;
-  --popover: 42 25% 95%;
-  --popover-foreground: 30 11% 13%;
-  --popover-border: 35 10% 82%;
-  --primary: 30 11% 13%;
-  --primary-foreground: 42 25% 95%;
-  --secondary: 39 17% 90%;
-  --secondary-foreground: 30 11% 13%;
-  --muted: 39 17% 90%;
-  --muted-foreground: 30 7% 43%;
-  --accent: 14 55% 49%;
-  --accent-foreground: 42 25% 95%;
-  --destructive: 4 65% 45%;
-  --destructive-foreground: 42 25% 95%;
+  --background: 39 27% 94%;
+  --foreground: 30 13% 13%;
+  --border: 36 15% 79%;
+  --input: 36 15% 79%;
+  --ring: 347 38% 31%;
+  --card: 39 27% 94%;
+  --card-foreground: 30 13% 13%;
+  --card-border: 36 15% 79%;
+  --popover: 39 27% 94%;
+  --popover-foreground: 30 13% 13%;
+  --popover-border: 36 15% 79%;
+  --primary: 347 38% 31%;
+  --primary-foreground: 39 27% 94%;
+  --secondary: 352 25% 83%;
+  --secondary-foreground: 30 13% 13%;
+  --muted: 65 13% 82%;
+  --muted-foreground: 36 11% 34%;
+  --accent: 347 38% 31%;
+  --accent-foreground: 39 27% 94%;
+  --destructive: 347 48% 36%;
+  --destructive-foreground: 39 27% 94%;
+  --rose-surface: 352 27% 80%;
+  --olive-surface: 68 17% 69%;
   --app-font-sans: 'DM Sans', sans-serif;
   --app-font-serif: 'Instrument Serif', Georgia, serif;
   --app-font-mono: 'DM Mono', monospace;
-  --radius: 0.35rem;
-  --shadow-sm: 0 8px 24px rgba(38, 31, 23, 0.05);
+  --radius: 0.15rem;
+  --shadow-sm: 0 8px 24px rgba(40, 32, 28, 0.05);
 }
 
 .dark {
-  --background: 30 11% 13%;
-  --foreground: 42 25% 95%;
-  --border: 30 8% 26%;
-  --input: 30 8% 26%;
-  --ring: 14 55% 54%;
-  --card: 30 11% 13%;
-  --card-foreground: 42 25% 95%;
-  --card-border: 30 8% 26%;
-  --popover: 30 11% 13%;
-  --popover-foreground: 42 25% 95%;
-  --popover-border: 30 8% 26%;
-  --primary: 42 25% 95%;
-  --primary-foreground: 30 11% 13%;
-  --secondary: 30 8% 20%;
-  --secondary-foreground: 42 25% 95%;
-  --muted: 30 8% 20%;
-  --muted-foreground: 36 10% 66%;
-  --accent: 14 55% 54%;
-  --accent-foreground: 30 11% 13%;
-  --destructive: 4 65% 58%;
-  --destructive-foreground: 30 11% 13%;
+  --background: 30 13% 13%;
+  --foreground: 39 27% 94%;
+  --border: 30 10% 30%;
+  --input: 30 10% 30%;
+  --ring: 352 25% 83%;
+  --card: 30 13% 13%;
+  --card-foreground: 39 27% 94%;
+  --card-border: 30 10% 30%;
+  --popover: 30 13% 13%;
+  --popover-foreground: 39 27% 94%;
+  --popover-border: 30 10% 30%;
+  --primary: 352 25% 83%;
+  --primary-foreground: 30 13% 13%;
+  --secondary: 347 24% 26%;
+  --secondary-foreground: 39 27% 94%;
+  --muted: 65 10% 26%;
+  --muted-foreground: 40 14% 72%;
+  --accent: 352 35% 76%;
+  --accent-foreground: 30 13% 13%;
+  --destructive: 352 35% 76%;
+  --destructive-foreground: 30 13% 13%;
+  --rose-surface: 347 22% 34%;
+  --olive-surface: 68 12% 38%;
 }
 
 @layer base {
@@ -108,7 +112,7 @@
   position: fixed;
   inset: 0;
   pointer-events: none;
-  opacity: .035;
+  opacity: .018;
   z-index: 20;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
 }
@@ -124,11 +128,10 @@
 
 .archive-link { transition: color .2s ease, border-color .2s ease; }
 .archive-link:hover { color: hsl(var(--accent)); }
-.project-row { transition: background-color .25s ease, padding-left .25s ease; }
-.project-row:hover { background-color: hsl(var(--secondary) / .55); padding-left: 1rem; }
+.project-row { transition: background-color .25s ease; }
+.project-row:hover { background-color: hsl(var(--secondary) / .34); }
 .project-row:hover .project-arrow { transform: translate(3px, -3px); color: hsl(var(--accent)); }
 .project-arrow { transition: transform .25s ease, color .25s ease; }
-
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
 }

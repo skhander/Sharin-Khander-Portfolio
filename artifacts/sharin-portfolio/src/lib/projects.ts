@@ -1,4 +1,42 @@
-export type ProjectSectionKey = 'Problem' | 'Insight' | 'Bet' | 'Work' | 'Decisions' | 'Outcome' | 'Next';
+export type MediaAsset = {
+  src: string;
+  alt: string;
+  caption?: string;
+};
+
+export type VideoAsset = {
+  src: string;
+  poster?: string;
+  caption?: string;
+};
+
+export type PrototypeAsset = {
+  src: string;
+  title: string;
+  caption?: string;
+};
+
+export type MetricItem = {
+  value: string;
+  label: string;
+  context?: string;
+};
+
+export type DecisionItem = {
+  title: string;
+  rationale: string;
+};
+
+export type CaseSection = {
+  heading: 'Problem' | 'Insight' | 'Bet' | 'Work' | 'Decisions' | 'Outcome' | 'Next';
+  body?: string[];
+  images?: MediaAsset[];
+  beforeAfter?: { before: MediaAsset; after: MediaAsset };
+  video?: VideoAsset;
+  prototype?: PrototypeAsset;
+  metrics?: MetricItem[];
+  decisions?: DecisionItem[];
+};
 
 export type Project = {
   slug: string;
@@ -10,10 +48,13 @@ export type Project = {
   role?: string;
   team?: string;
   scope?: string;
-  status?: 'published' | 'future';
-  sections: ProjectSectionKey[];
+  cover?: MediaAsset;
+  sections?: CaseSection[];
+  status: 'published' | 'future';
 };
 
+// Add genuine media and case-study content here when available. Empty sections
+// are intentionally not rendered as published research, decisions, or outcomes.
 export const projects: Project[] = [
   {
     slug: 'elevated-experience',
@@ -21,12 +62,11 @@ export const projects: Project[] = [
     company: 'The RealReal',
     category: 'Browse + PDP',
     description: 'Reimagining shopping around luxury inventory.',
-    thesis: 'Making The RealReal feel like a luxury marketplace—not a treasure hunt.',
+    thesis: 'Make luxury browsing feel considered, not like a treasure hunt.',
     role: 'Product strategy, product direction, execution',
     team: 'Design, Engineering, Research, Data',
     scope: 'Browse + PDP',
     status: 'published',
-    sections: ['Problem', 'Insight', 'Bet', 'Work', 'Decisions', 'Outcome', 'Next'],
   },
   {
     slug: 'ai-discovery',
@@ -35,7 +75,6 @@ export const projects: Project[] = [
     category: 'AI / Search / Discovery',
     description: 'Conversational and visual product discovery.',
     status: 'published',
-    sections: ['Problem', 'Insight', 'Bet', 'Work', 'Decisions', 'Outcome'],
   },
   {
     slug: 'visual-search',
@@ -44,7 +83,6 @@ export const projects: Project[] = [
     category: 'AI / Discovery',
     description: 'Turning inspiration into product discovery.',
     status: 'published',
-    sections: ['Problem', 'Insight', 'Bet', 'Work', 'Decisions', 'Outcome'],
   },
   {
     slug: 'checkout',
@@ -53,7 +91,6 @@ export const projects: Project[] = [
     category: 'Commerce',
     description: 'Improving the path from product discovery to purchase.',
     status: 'published',
-    sections: ['Problem', 'Insight', 'Bet', 'Work', 'Decisions', 'Outcome'],
   },
   {
     slug: 'curation',
@@ -62,21 +99,12 @@ export const projects: Project[] = [
     category: 'Discovery / Personalization',
     description: 'Scaling editorial taste into product discovery.',
     status: 'published',
-    sections: ['Problem', 'Insight', 'Bet', 'Work', 'Decisions', 'Outcome'],
-  },
-  {
-    slug: 'future-project',
-    title: 'Future project',
-    company: 'In progress',
-    category: 'Archive slot',
-    description: 'A place for the next piece of work.',
-    status: 'future',
-    sections: ['Problem', 'Insight', 'Bet', 'Work', 'Decisions', 'Outcome'],
   },
 ];
 
-export const publishedProjects = projects.filter((project) => project.status !== 'future');
+export const publishedProjects = projects.filter((project) => project.status === 'published');
+export const futureProjects = projects.filter((project) => project.status === 'future');
 
 export function getProject(slug?: string) {
-  return projects.find((project) => project.slug === slug);
+  return publishedProjects.find((project) => project.slug === slug);
 }

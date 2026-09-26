@@ -1,12 +1,16 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'wouter';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
+import { Footer } from '@/components/project-content';
 
 type PortfolioShellProps = { children: React.ReactNode };
 
 export function PortfolioShell({ children }: PortfolioShellProps) {
   const [location] = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   const closeMenu = () => setMenuOpen(false);
   const links = [
@@ -17,10 +21,9 @@ export function PortfolioShell({ children }: PortfolioShellProps) {
 
   return (
     <div className="archive-noise min-h-[100dvh] bg-background text-foreground">
-      <header className="mx-auto flex w-full max-w-[1440px] items-center justify-between px-6 py-6 sm:px-10 lg:px-16 lg:py-8">
+      <header className="mx-auto flex w-full max-w-[1440px] items-center justify-between border-b border-border px-6 py-5 sm:px-10 lg:px-16">
         <Link href="/" onClick={closeMenu} className="archive-link group flex items-baseline gap-2" data-testid="link-home">
-          <span className="font-editorial text-[1.45rem] leading-none tracking-[-.03em]">Sharin Khander</span>
-          <span className="hidden font-mono-archive text-[9px] uppercase tracking-[.16em] text-muted-foreground sm:inline">Product archive</span>
+          <span className="font-editorial text-[1.5rem] leading-none tracking-[-.03em]">Sharin Khander</span>
         </Link>
         <button
           type="button"
@@ -47,7 +50,7 @@ export function PortfolioShell({ children }: PortfolioShellProps) {
         </nav>
       </header>
       {menuOpen && (
-        <nav id="mobile-navigation" className="absolute inset-x-0 top-[76px] z-20 border-y border-border bg-background px-6 py-6 md:hidden" aria-label="Mobile navigation">
+        <nav id="mobile-navigation" className="absolute inset-x-0 top-[65px] z-20 border-y border-border bg-background px-6 py-6 md:hidden" aria-label="Mobile navigation">
           <div className="flex flex-col gap-5">
             {links.map((link) => (
               <Link
@@ -64,13 +67,7 @@ export function PortfolioShell({ children }: PortfolioShellProps) {
         </nav>
       )}
       <main>{children}</main>
-      <footer className="mx-auto flex w-full max-w-[1440px] flex-col gap-5 px-6 pb-8 pt-20 sm:flex-row sm:items-end sm:justify-between sm:px-10 lg:px-16 lg:pb-10">
-        <div>
-          <p className="font-editorial text-2xl leading-none">The work is the point.</p>
-          <p className="mt-3 font-mono-archive text-[9px] uppercase tracking-[.14em] text-muted-foreground">Sharin Khander · Product builder</p>
-        </div>
-        <p className="font-mono-archive text-[9px] uppercase tracking-[.14em] text-muted-foreground">A living archive · {new Date().getFullYear()}</p>
-      </footer>
+      <Footer />
     </div>
   );
 }

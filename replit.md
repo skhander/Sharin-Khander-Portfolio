@@ -1,45 +1,47 @@
-# [Project name]
+# Sharin Khander — Portfolio
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+An editorial product-work archive for hiring managers and product leaders to explore Sharin Khander's projects.
 
 ## Run & Operate
 
-- `pnpm --filter @workspace/api-server run dev` — run the API server (port 5000)
-- `pnpm run typecheck` — full typecheck across all packages
-- `pnpm run build` — typecheck + build all packages
-- `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
-- `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
-- Required env: `DATABASE_URL` — Postgres connection string
+- `pnpm --filter @workspace/sharin-portfolio run typecheck` — check the portfolio
+- `pnpm run typecheck` — check the full workspace
+- The web artifact uses the managed `artifacts/sharin-portfolio: web` workflow.
 
 ## Stack
 
-- pnpm workspaces, Node.js 24, TypeScript 5.9
-- API: Express 5
-- DB: PostgreSQL + Drizzle ORM
-- Validation: Zod (`zod/v4`), `drizzle-zod`
-- API codegen: Orval (from OpenAPI spec)
-- Build: esbuild (CJS bundle)
+- React + Vite + TypeScript, Tailwind CSS, Wouter
+- Static, data-driven portfolio; no database or API is required for its current public pages
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/sharin-portfolio/src/lib/projects.ts` — project records, optional cover media, and case-study content
+- `artifacts/sharin-portfolio/src/components/project-content.tsx` — reusable project and media modules
+- `artifacts/sharin-portfolio/src/pages/` — work, project detail, about, and contact pages
+- `artifacts/sharin-portfolio/src/index.css` — visual theme and responsive presentation
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- Project detail sections render only when verified content has been entered; do not present empty prompts as finished case studies.
+- Keep original work screenshots and evidence distinct from illustrative placeholder canvases.
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+Visitors can browse and filter the selected work, open reusable project pages, and read short About and Contact pages.
 
 ## User preferences
 
-_Populate as you build — explicit user instructions worth remembering across sessions._
+- Favor a quiet, editorial product archive over a generic PM résumé or SaaS landing page.
+- Keep on-page copy short, punchy, and scannable; remove repeated labels and explanations.
+- Use the supplied reference image's warm cream, dusty rose, muted olive, oxblood, and near-black palette.
+- Never fabricate project screenshots, research, decisions, outcomes, metrics, or contact links.
+- Keep work central; give project imagery room once real assets are supplied.
 
 ## Gotchas
 
-_Populate as you build — sharp edges, "always run X before Y" rules._
+- The initial brief supplied project names and descriptions, but no original screenshots, case-study evidence, verified results, or contact channel. Add these only from supplied/verified source material.
+- The sixth "Future project" is an unpublished archive slot, not a live case study.
 
 ## Pointers
 
-- See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details
+- See the `react-vite` and `pnpm-workspace` skills for web-app and workspace conventions.
