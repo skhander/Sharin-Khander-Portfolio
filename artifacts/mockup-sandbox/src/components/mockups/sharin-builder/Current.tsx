@@ -1,8 +1,9 @@
 import { useMemo, useState } from 'react';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
 import './_group.css';
+import './Current.css';
 
-const filters = ['All', 'Discovery', 'Commerce', 'AI'];
+const filters = ['All', 'Redesigns', 'Machine Learning', '0 → 1', 'LLMs', 'Internal Tools'];
 
 const publishedProjects = [
   {
@@ -11,6 +12,11 @@ const publishedProjects = [
     company: 'The RealReal',
     category: 'Browse + PDP',
     description: 'Reimagining shopping around luxury inventory.',
+    badges: ['Redesigns'],
+    visualKind: 'image',
+    image: '/__mockup/images/current-elevated-browse.webp',
+    imageAlt: 'The RealReal luxury handbag browse interface',
+    imageNote: 'PRODUCT INTERFACE',
     thesis: 'Make luxury browsing feel considered, not like a treasure hunt.',
     role: 'Product strategy, product direction, execution',
     team: 'Design, Engineering, Research, Data',
@@ -23,6 +29,11 @@ const publishedProjects = [
     company: 'The RealReal',
     category: 'AI / Discovery / Curation',
     description: 'Helping shoppers discover fashion by trend, vibe, and occasion.',
+    badges: ['0 → 1', 'Machine Learning', 'LLMs'],
+    visualKind: 'image',
+    image: '/__mockup/images/current-attribute-enrichment-chanel-top.webp',
+    imageAlt: 'Chanel vintage top product visual used in the attribute-enrichment project',
+    imageNote: 'ATTRIBUTE ENRICHMENT / SOURCE VISUAL',
     thesis: 'Give the marketplace a richer language for understanding style.',
     role: 'Prompts, taxonomy, evaluation, UAT, testing strategy',
     team: [
@@ -40,6 +51,11 @@ const publishedProjects = [
     company: 'The RealReal',
     category: 'AI / Discovery / Commerce',
     description: 'MVP: multimodal search and product comparison. Later explorations: virtual try-on and in-agent checkout.',
+    badges: ['Machine Learning', '0 → 1'],
+    visualKind: 'image',
+    image: '/__mockup/images/current-shopping-agent-look.jpg',
+    imageAlt: 'Illustrative fashion look, not a Shopping Agent product screenshot',
+    imageNote: 'ILLUSTRATIVE / NOT PRODUCT UI',
     status: 'published',
   },
   {
@@ -48,6 +64,11 @@ const publishedProjects = [
     company: 'The RealReal',
     category: 'AI / Discovery',
     description: 'Turning inspiration into product discovery.',
+    badges: ['Machine Learning', '0 → 1'],
+    visualKind: 'diagram',
+    image: '',
+    imageAlt: 'Conceptual visual-search input-to-match diagram; not a source screenshot',
+    imageNote: 'CONCEPTUAL DIAGRAM / NO SOURCE IMAGE',
     status: 'published',
   },
   {
@@ -56,6 +77,11 @@ const publishedProjects = [
     company: 'The RealReal',
     category: 'Discovery / Recommendations',
     description: 'Making a designer page a doorway to the next designer someone might love.',
+    badges: ['Recommendations'],
+    visualKind: 'image',
+    image: '/__mockup/images/current-similar-designers-look.jpg',
+    imageAlt: 'A minimal designer look used for a designer-discovery visual',
+    imageNote: 'DESIGNER LOOKBOOK',
     status: 'published',
   },
   {
@@ -64,22 +90,25 @@ const publishedProjects = [
     company: 'The RealReal',
     category: 'Discovery / Personalization',
     description: 'Scaling editorial taste into product discovery.',
+    badges: ['Machine Learning', 'Internal Tools'],
+    visualKind: 'image',
+    image: '/__mockup/images/current-curation-vintage-bridal-lookbook.webp',
+    imageAlt: 'The RealReal customer-facing vintage bridal lookbook',
+    imageNote: 'ACTUAL CUSTOMER-FACING LOOKBOOK',
     status: 'published',
   },
 ];
 
-function matchesFilter(category: string, filter: string) {
+function matchesFilter(badges: string[], filter: string) {
   if (filter === 'All') return true;
-  if (filter === 'Discovery') return category.includes('Discovery') || category.includes('Browse');
-  if (filter === 'Commerce') return category.includes('Commerce') || category.includes('Browse');
-  return category.includes('AI');
+  return badges.includes(filter);
 }
 
 export function Current() {
   const [filter, setFilter] = useState('All');
   const [menuOpen, setMenuOpen] = useState(false);
   const visibleProjects = useMemo(
-    () => publishedProjects.filter((project) => matchesFilter(project.category, filter)),
+    () => publishedProjects.filter((project) => matchesFilter(project.badges, filter)),
     [filter],
   );
   const closeMenu = () => setMenuOpen(false);
@@ -153,54 +182,80 @@ export function Current() {
           </section>
 
           <section id="selected-work" className="mx-auto w-full max-w-[1440px] px-6 pb-20 sm:px-10 md:pb-28 lg:px-16" aria-labelledby="work-heading">
-            <div className="work-band flex flex-col gap-5 bg-[hsl(var(--olive-surface))] px-5 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-7">
-              <h2 id="work-heading" className="font-editorial text-[clamp(2.3rem,4vw,3.8rem)] leading-none tracking-[-.035em]">Selected work</h2>
-              <div className="flex flex-wrap gap-1" role="group" aria-label="Filter projects">
-                {filters.map((item) => (
-                  <button
-                    type="button"
-                    key={item}
-                    onClick={() => setFilter(item)}
-                    className={`min-h-9 border px-3 py-2 font-mono-archive text-[10px] uppercase tracking-[.1em] transition-colors ${filter === item ? 'border-accent bg-accent text-accent-foreground' : 'border-transparent text-foreground hover:border-foreground/50'}`}
-                    aria-pressed={filter === item}
-                    data-testid={`button-filter-${item.toLowerCase().replaceAll(' ', '-')}`}
-                  >
-                    {item}
-                  </button>
-                ))}
+            <div className="work-band current-work-band flex flex-col gap-5 bg-[hsl(var(--olive-surface))] px-5 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-7">
+              <div>
+                <p className="font-mono-archive text-[9px] uppercase tracking-[.16em] text-muted-foreground">Project index / 01—06</p>
+                <h2 id="work-heading" className="mt-2 font-editorial text-[clamp(2.3rem,4vw,3.8rem)] leading-none tracking-[-.035em]">Selected work</h2>
+              </div>
+              <div className="current-filters" role="group" aria-label="Filter projects">
+                {filters.map((item) => {
+                  const count = item === 'All'
+                    ? publishedProjects.length
+                    : publishedProjects.filter((project) => matchesFilter(project.badges, item)).length;
+                  return (
+                    <button
+                      type="button"
+                      key={item}
+                      onClick={() => setFilter(item)}
+                      className={`current-filter${filter === item ? ' is-active' : ''}`}
+                      aria-pressed={filter === item}
+                      data-testid={`button-filter-${item.toLowerCase().replaceAll(' ', '-')}`}
+                    >
+                      <span>{item}</span><small>{String(count).padStart(2, '0')}</small>
+                    </button>
+                  );
+                })}
               </div>
             </div>
 
-            <div className="work-list border-t border-border">
-              <div className="flex items-center justify-between gap-3 py-4 font-mono-archive text-[10px] uppercase tracking-[.15em] text-muted-foreground">
-                <span className="bg-muted px-2.5 py-1 text-foreground">The RealReal</span><span>{visibleProjects.length} projects</span>
-              </div>
+            <div className="current-project-header">
+              <span>The RealReal / Product work</span><span>{visibleProjects.length} {visibleProjects.length === 1 ? 'project' : 'projects'}</span>
+            </div>
+
+            <div className="current-project-grid" aria-live="polite">
               {visibleProjects.map((project) => {
                 const projectIndex = publishedProjects.findIndex((item) => item.slug === project.slug);
                 return (
-                  <a
-                    href={`/work/${project.slug}`}
-                    onClick={(event) => event.preventDefault()}
-                    key={project.slug}
-                    className="project-row group grid min-w-0 grid-cols-[2rem_1fr_auto] items-start gap-3 border-t border-border py-5 sm:grid-cols-[3rem_minmax(0,1fr)_minmax(12rem,.8fr)_auto] sm:items-center sm:gap-6 sm:py-6"
-                    data-testid={`link-project-${project.slug}`}
-                  >
-                    <span className="pt-1 font-mono-archive text-[10px] text-accent">{String(projectIndex + 1).padStart(2, '0')}</span>
-                    <div>
-                      <h3 className="font-editorial text-[clamp(2rem,3.25vw,3.4rem)] leading-[.95] tracking-[-.035em] transition-colors group-hover:text-accent">{project.title}</h3>
-                      <p className="mt-2 text-sm leading-snug text-muted-foreground sm:hidden">{project.description}</p>
+                  <article key={project.slug} className="current-project-card" data-testid={`project-${project.slug}`}>
+                    <figure className="current-project-visual" data-project={project.slug}>
+                      <div className="current-project-artwork">
+                        {project.visualKind === 'diagram' ? (
+                          <div className="current-search-diagram" role="img" aria-label={project.imageAlt}>
+                            <div className="current-search-sample">
+                              <span>INPUT</span><i /><b>Image<br />or idea</b>
+                            </div>
+                            <span className="current-search-arrow" aria-hidden="true">→</span>
+                            <div className="current-search-results">
+                              <span>CONCEPTUAL MATCHES</span><i /><i /><i />
+                            </div>
+                            <small>CONCEPT ONLY · NO SOURCE VISUAL</small>
+                          </div>
+                        ) : (
+                          <img src={project.image} alt={project.imageAlt} loading={projectIndex < 2 ? 'eager' : 'lazy'} />
+                        )}
+                      </div>
+                      <figcaption><span>{project.imageNote}</span><span>FIG. {String(projectIndex + 1).padStart(2, '0')}</span></figcaption>
+                    </figure>
+                    <div className="current-project-copy">
+                      <div className="current-project-kicker">
+                        <span>{String(projectIndex + 1).padStart(2, '0')} / {project.category}</span>
+                        <ArrowUpRight size={16} strokeWidth={1.5} className="project-arrow" aria-hidden="true" />
+                      </div>
+                      <h3>{project.title}</h3>
+                      <p>{project.description}</p>
+                      <div className="current-project-badges" aria-label={`${project.title} badges`}>
+                        {project.badges.map((badge) => <span key={badge}>{badge}</span>)}
+                      </div>
                     </div>
-                    <p className="hidden max-w-[22rem] text-sm leading-snug text-muted-foreground sm:block">{project.description}</p>
-                    <ArrowUpRight size={19} strokeWidth={1.5} className="project-arrow mt-1 text-accent sm:mt-0" aria-hidden="true" />
-                  </a>
+                  </article>
                 );
               })}
             </div>
 
             {visibleProjects.length === 0 && (
-              <div className="border-b border-border py-20 text-center">
+              <div className="current-project-empty">
                 <p className="font-editorial text-3xl">No projects in this filter.</p>
-                <button type="button" onClick={() => setFilter('All')} className="mt-5 border-b border-accent pb-1 font-mono-archive text-[10px] uppercase tracking-[.14em] text-accent" data-testid="button-reset-filter">View all</button>
+                <button type="button" onClick={() => setFilter('All')} data-testid="button-reset-filter">View all work <ArrowUpRight size={14} /></button>
               </div>
             )}
           </section>
