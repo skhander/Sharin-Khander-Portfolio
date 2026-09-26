@@ -1,0 +1,299 @@
+Now build the **Attribute Enrichment** project page using the same editorial, visual storytelling approach as Elevated Experience.
+
+The story should be **concise, punchy, and highly scannable**. The product visuals should do most of the explaining. Avoid turning this into a long AI case study.
+
+The core story is:
+
+**6M listings. 12K new products every day. Not enough structure to understand them. We used LLMs to turn product images into a new layer of fashion metadata—and tested where that metadata actually created value.**
+
+---
+
+# 1. The problem
+
+Start with a large statement:
+
+> **Our catalog knew what a product was. It didn't know what it felt like.**
+
+Then show a product example with the new attributes visually attached to it.
+
+Keep the supporting copy to 2–3 sentences:
+
+> We had 6M live listings and added 12K new products every day. But shoppers couldn't search naturally by trend, occasion, or vibe—and those signals weren't powering recommendations, personalization, or curation.
+
+Use the numbers as large visual anchors:
+
+**6M**
+live listings
+
+**12K**
+new products / day
+
+---
+
+# 2. The idea
+
+Headline:
+
+> **Give every product a richer understanding of style.**
+
+Show the product → attributes transformation visually.
+
+Example:
+
+**Product image**
+
+↓
+
+**Trend**
+Romantic
+
+**Aesthetic**
+Classic · Feminine
+
+**Occasion**
+Date Night · Evening
+
+The uploaded project material shows examples of this attribute enrichment across products, including aesthetic, colorway, occasion, target customer, and body-shape suitability. Use the actual visual examples where possible.
+
+Then one sentence:
+
+> We used LLMs to predict fashion attributes from product images and tag the entire catalog.
+
+---
+
+# 3. Why it mattered
+
+Do NOT make this a wall of possibilities.
+
+Show four simple outcomes as a visual sequence:
+
+**Search**
+Natural-language discovery
+
+**Recommendations**
+More relevant products
+
+**Curation**
+Programmatic assortments
+
+**Personalization**
+A user's style DNA
+
+Then one sharp line:
+
+> The goal was to turn these signals into a shared product language across the marketplace.
+
+---
+
+# 4. My role
+
+Keep this extremely short.
+
+> **I owned the quality bar.**
+
+Then:
+
+**Prompting**
+Designed the prompts and taxonomy.
+
+**Evaluation**
+Defined how we measured attribute quality.
+
+**UAT**
+Tested outputs against real products.
+
+**Testing strategy**
+Sequenced where we would prove value first.
+
+Do not use a generic "Responsibilities" section.
+
+---
+
+# 5. The hard part wasn't generating attributes. It was making them usable.
+
+This should be the key product-thinking section.
+
+Headline:
+
+> **AI could generate the attributes. We had to make them product-ready.**
+
+Show examples of messy output / normalization.
+
+Then three concise trade-offs:
+
+### Normalize the language
+
+AI returned variations like capitalization and inconsistent values. We needed a controlled taxonomy.
+
+### Structure the data
+
+Filters couldn't rely on free-form text. Attributes needed to be structured and predictable.
+
+### Protect the brand
+
+Some outputs were technically plausible but simply weren't "brand right." We needed a way to catch and remove slop.
+
+Keep the visual treatment simple. Don't explain the entire taxonomy.
+
+---
+
+# 6. We didn't test everything at once.
+
+Make the experimentation strategy visual.
+
+Show a horizontal progression:
+
+**Search → Browse → Recommendations**
+
+Then separately:
+
+**Curation Tool ↔ Search**
+
+Supporting copy:
+
+> Search was the largest surface, so it was the first proving ground. Recommendations followed. In parallel, we built Curation Tools with the merchandising team to prove the operational value.
+
+---
+
+# 7. The Curation Tool was the unlock.
+
+Make this a major visual moment.
+
+Headline:
+
+> **What if a merchandiser could build a trend lookbook with one search?**
+
+Show the actual Curation Tool interface.
+
+Then:
+
+> Enter a trend. Get a programmatic assortment. Delete the slop.
+
+This should communicate the workflow visually rather than explaining it in a paragraph.
+
+Optional supporting line:
+
+> The goal was to give merchandising a scalable way to create trend-based assortments without manually tagging thousands of products.
+
+---
+
+# 8. The first test didn't work.
+
+This is important. Do NOT hide the failed experiment.
+
+Headline:
+
+> **The baseline test didn't move.**
+
+Then:
+
+> We learned something important: shoppers weren't naturally searching this way yet.
+
+Show a simple search example:
+
+**"quiet luxury"**
+**"date night"**
+**"boho"**
+**"what should I wear to..."**
+
+Then:
+
+> The capability existed. The behavior didn't.
+
+This is the product insight.
+
+---
+
+# 9. The measurement problem
+
+Make the nuance clear without overexplaining.
+
+Headline:
+
+> **You can't measure a behavior people don't know exists.**
+
+Supporting copy:
+
+> Natural-language search required a stronger go-to-market strategy to teach shoppers they could search by trend, occasion, and vibe. That meant we couldn't expect a controlled test to capture the full impact.
+
+Then:
+
+**Pre → Post**
+
+> We shifted toward measuring the change in behavior after launch rather than relying on a single A/B test.
+
+Do not imply that the pre/post result proves causality.
+
+---
+
+# 10. Where the value showed up
+
+End with the strongest quantitative result.
+
+Huge metric:
+
+**+10% Conversion**
+
+Small label:
+
+**Product recommendations**
+
+Then:
+
+> Recommendations showed the largest step-change lift, suggesting richer product understanding could create value even when shoppers weren't explicitly searching for these attributes.
+
+Keep this wording appropriately cautious.
+
+---
+
+# Final takeaway
+
+End with one large statement:
+
+> **The real opportunity wasn't adding more metadata. It was giving The RealReal a richer language for understanding style.**
+
+Then a small supporting line:
+
+> One foundation. Multiple product experiences: search, recommendations, browse, personalization, and curation.
+
+---
+
+# Visual direction
+
+This page should be **much more visual than textual**.
+
+Use:
+
+* actual product imagery
+* attribute tags
+* search UI
+* recommendation modules
+* Curation Tool screenshots
+* before/after examples
+* simple diagrams showing Product → Attributes → Experiences
+
+Let the interfaces and product imagery occupy most of the page.
+
+Use large whitespace and short copy.
+
+Do NOT use:
+
+* giant paragraphs
+* generic AI illustrations
+* robot imagery
+* glowing gradients
+* excessive cards
+* "AI-powered" marketing language
+* generic "Challenge / Solution / Results" sections
+
+The tone should be:
+
+**smart, direct, product-minded, honest.**
+
+The hiring manager should walk away understanding three things:
+
+**1. I can identify a foundational product problem.**
+**2. I can use AI, experimentation, and systems thinking to solve it.**
+**3. I know how to distinguish between something that technically works and something that actually creates user or business value.**
+
+Most importantly, **show the work. Don't tell the hiring manager that Sharin is a strong product thinker. Let the decisions on the page prove it.**
