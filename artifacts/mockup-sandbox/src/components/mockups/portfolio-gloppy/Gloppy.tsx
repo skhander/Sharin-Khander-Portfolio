@@ -33,7 +33,7 @@ export function Gloppy() {
     <div className="gloppy">
       <header className="gloppy-topline">
         <a href="#" onClick={noNavigate} className="gloppy-brand" aria-label="Sharin Khander home">
-          <span className="gloppy-brand-mark" aria-hidden="true" /> <span>SHARIN KHANDER</span>
+          <span className="gloppy-brand-mark" aria-hidden="true" /> <span>Sharin Khander</span>
         </a>
         <nav className="gloppy-nav" aria-label="Primary navigation">
           {links.map((link) => <a key={link} href={link === 'Work' ? '#selected-work' : '#footer'} onClick={noNavigate}>{link}</a>)}
@@ -61,7 +61,7 @@ export function Gloppy() {
         </div></div>
         <section className="gloppy-work" id="selected-work" aria-labelledby="gloppy-work-heading">
           <div className="gloppy-work-head">
-            <div><p className="gloppy-kicker">A point of view in six parts</p><h2 id="gloppy-work-heading" className="gloppy-display">Selected<br />work<span>.</span></h2></div>
+            <div><p className="gloppy-kicker">A point of view in six parts</p><h2 id="gloppy-work-heading" className="gloppy-display">Selected work<span>.</span></h2></div>
             <div className="gloppy-filter-wrap">
               <span className="gloppy-filter-label">Sort the signal</span>
               <div className="gloppy-filters" role="group" aria-label="Filter projects">

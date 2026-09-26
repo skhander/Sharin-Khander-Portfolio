@@ -27,7 +27,7 @@
   font: 500 10px/1.2 'DM Mono', monospace;
   letter-spacing: .13em; text-transform: uppercase;
 }
-.gloppy-brand { display: inline-flex; align-items: center; gap: 9px; font-weight: 700; letter-spacing: -.03em; }
+.gloppy-brand { display: inline-flex; align-items: center; gap: 9px; font-size: 12px; font-weight: 700; letter-spacing: -.01em; text-transform: none; }
 .gloppy-brand-mark { width: 13px; height: 13px; background: var(--goo-pink); border-radius: 38% 62% 55% 45%; transform: rotate(-24deg); box-shadow: 4px 3px 0 var(--goo-ink); }
 .gloppy-nav { display: flex; gap: clamp(18px, 3vw, 42px); align-items: center; }
 .gloppy-nav a { position: relative; padding: 6px 0; }
@@ -37,41 +37,42 @@
 
 .gloppy-hero {
   position: relative; isolation: isolate;
-  min-height: clamp(590px, 70vw, 810px);
-  padding: clamp(44px, 8vw, 112px) clamp(20px, 7vw, 100px) 72px;
+  min-height: clamp(360px, 32vw, 430px);
+  padding: 35px clamp(20px, 7vw, 100px) 24px;
   display: flex; flex-direction: column; justify-content: center;
 }
 .gloppy-hero::before {
-  content: ''; position: absolute; z-index: -1; width: min(54vw, 660px); aspect-ratio: 1;
-  right: 7%; top: 13%; border-radius: 41% 59% 63% 37% / 40% 38% 62% 60%;
+  content: ''; position: absolute; z-index: -1; width: min(37vw, 480px); aspect-ratio: 1;
+  right: 9%; top: -6%; border-radius: 41% 59% 63% 37% / 40% 38% 62% 60%;
   background: var(--goo-pink); transform: rotate(-13deg);
   animation: goo-float 9s ease-in-out infinite alternate;
 }
 .gloppy-orbit {
-  position: absolute; z-index: -1; right: 10%; top: 21%; width: min(47vw, 570px); aspect-ratio: 1;
+  position: absolute; z-index: -1; right: 10%; top: -2%; width: min(33vw, 420px); aspect-ratio: 1;
   border: 2px solid var(--goo-ink); border-radius: 50%; transform: rotate(24deg) scaleY(.68);
 }
 .gloppy-orbit::after { content: ''; position: absolute; width: 13px; height: 13px; border-radius: 50%; background: var(--goo-blue); top: 14%; left: 10%; }
 .gloppy-eyebrow { display: flex; gap: 12px; align-items: center; font: 500 11px/1.2 'DM Mono', monospace; text-transform: uppercase; letter-spacing: .14em; }
 .gloppy-eyebrow::before { content: ''; width: 28px; height: 2px; background: currentColor; }
 .gloppy-hero h1 {
-  position: relative; z-index: 1; max-width: 1000px; margin: 26px 0 0;
-  font-size: clamp(5.2rem, 15.6vw, 14.5rem); line-height: .76; letter-spacing: -.105em;
-  text-transform: uppercase;
+  position: relative; z-index: 1; max-width: 1000px; margin: 18px 0 0;
+  font-family: 'DM Sans', sans-serif; font-weight: 700;
+  font-size: clamp(5rem, 9.6vw, 8.5rem); line-height: .9; letter-spacing: -.045em;
+  text-transform: none;
 }
 .gloppy-hero h1 span { display: block; white-space: nowrap; }
-.gloppy-hero h1 .gloppy-second { margin-left: clamp(20px, 9vw, 125px); color: var(--goo-blue); -webkit-text-stroke: 1px var(--goo-ink); }
-.gloppy-hero h1 .gloppy-dot { display: inline; color: var(--goo-paper); -webkit-text-stroke: 2px var(--goo-ink); }
+.gloppy-hero h1 .gloppy-second { margin-left: clamp(0px, 3vw, 38px); color: var(--goo-ink); text-shadow: 3px 3px 0 var(--goo-blue); }
+.gloppy-hero h1 .gloppy-dot { display: inline; color: var(--goo-blue); text-shadow: none; }
 .gloppy-hero-note {
-  z-index: 2; position: absolute; right: clamp(22px, 10vw, 140px); bottom: 10%;
-  width: min(330px, 38vw); padding: 22px 24px 25px;
+  z-index: 2; position: absolute; right: clamp(22px, 6vw, 100px); bottom: 22px;
+  width: min(280px, 30vw); padding: 15px 18px 17px;
   background: var(--goo-paper); border: 2px solid var(--goo-ink);
-  box-shadow: 8px 8px 0 var(--goo-blue); transform: rotate(3deg);
+  box-shadow: 7px 7px 0 var(--goo-blue); transform: rotate(1.5deg);
 }
-.gloppy-hero-note .role { margin: 0 0 12px; font: 500 10px 'DM Mono', monospace; text-transform: uppercase; letter-spacing: .12em; }
-.gloppy-hero-note p:last-child { margin: 0; font-size: clamp(16px, 2vw, 21px); font-weight: 700; line-height: 1.17; letter-spacing: -.045em; }
+.gloppy-hero-note .role { margin: 0 0 8px; font: 500 9px 'DM Mono', monospace; text-transform: uppercase; letter-spacing: .1em; }
+.gloppy-hero-note p:last-child { margin: 0; font-size: clamp(16px, 1.4vw, 18px); font-weight: 700; line-height: 1.2; letter-spacing: -.025em; }
 .gloppy-sticker {
-  position: absolute; top: 22%; right: 9%; z-index: 2; width: 94px; height: 94px;
+  position: absolute; top: 10%; right: 9%; z-index: 2; width: 80px; height: 80px;
   display: grid; place-items: center; border-radius: 50%; color: var(--goo-paper);
   background: var(--goo-blue); border: 1.5px solid var(--goo-ink);
   font: 700 10px/1.2 'DM Mono', monospace; text-align: center; text-transform: uppercase;
@@ -79,13 +80,13 @@
 }
 .gloppy-sticker::after { content: '+'; position: absolute; color: var(--goo-lime); font-size: 30px; font-family: 'DM Mono', monospace; top: -13px; right: -12px; }
 .gloppy-marquee { overflow: hidden; display: flex; white-space: nowrap; background: var(--goo-ink); color: var(--goo-lime); border-block: 1px solid var(--goo-ink); transform: rotate(-1.5deg) scale(1.02); }
-.gloppy-marquee-track { display: flex; min-width: max-content; gap: 30px; padding: 14px 0; animation: gloppy-marquee 24s linear infinite; font: 700 12px 'DM Mono', monospace; letter-spacing: .12em; text-transform: uppercase; }
+.gloppy-marquee-track { display: flex; min-width: max-content; gap: 30px; padding: 9px 0; animation: gloppy-marquee 24s linear infinite; font: 700 11px 'DM Mono', monospace; letter-spacing: .12em; text-transform: uppercase; }
 .gloppy-marquee-track span:nth-child(even) { color: var(--goo-pink); }
 
-.gloppy-work { position: relative; padding: clamp(54px, 8vw, 112px) clamp(18px, 5vw, 72px) 96px; background: var(--goo-paper); }
-.gloppy-work-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin: 0 auto 30px; max-width: 1440px; }
-.gloppy-kicker { margin: 0 0 15px; font: 500 10px 'DM Mono', monospace; letter-spacing: .15em; text-transform: uppercase; }
-.gloppy-work h2 { margin: 0; font-size: clamp(3rem, 8vw, 7.2rem); line-height: .82; letter-spacing: -.09em; text-transform: uppercase; }
+.gloppy-work { position: relative; padding: clamp(28px, 3vw, 42px) clamp(18px, 5vw, 72px) 96px; background: var(--goo-paper); }
+.gloppy-work-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin: 0 auto 18px; max-width: 1440px; }
+.gloppy-kicker { margin: 0 0 8px; font: 500 10px 'DM Mono', monospace; letter-spacing: .15em; text-transform: uppercase; }
+.gloppy-work h2 { margin: 0; font-size: clamp(3rem, 5.3vw, 5.2rem); line-height: .92; letter-spacing: -.035em; word-spacing: .05em; text-transform: uppercase; }
 .gloppy-work h2 span { color: var(--goo-blue); }
 .gloppy-filter-wrap { display: flex; flex-direction: column; gap: 10px; align-items: flex-end; }
 .gloppy-filter-label { font: 500 9px 'DM Mono', monospace; text-transform: uppercase; letter-spacing: .13em; }
@@ -97,12 +98,12 @@
 }
 .gloppy-filter:hover { transform: translateY(-3px) rotate(-2deg); }
 .gloppy-filter[aria-pressed="true"] { color: var(--goo-paper); background: var(--goo-ink); }
-.gloppy-indexline { display: flex; justify-content: space-between; align-items: center; padding: 13px 0; margin: 0 auto; max-width: 1440px; border-top: 1px solid rgba(20,32,27,.3); border-bottom: 1px solid rgba(20,32,27,.3); font: 500 10px 'DM Mono', monospace; letter-spacing: .1em; text-transform: uppercase; }
+.gloppy-indexline { display: flex; justify-content: space-between; align-items: center; padding: 9px 0; margin: 0 auto; max-width: 1440px; border-top: 1px solid rgba(20,32,27,.3); border-bottom: 1px solid rgba(20,32,27,.3); font: 500 10px 'DM Mono', monospace; letter-spacing: .1em; text-transform: uppercase; }
 .gloppy-indexline strong { padding: 7px 10px; background: var(--goo-lime); font-weight: 500; }
 .gloppy-projects { max-width: 1440px; margin: 0 auto; }
 .gloppy-project {
   position: relative; display: grid; grid-template-columns: 50px minmax(0, 1fr) minmax(190px, .65fr) 34px;
-  align-items: center; gap: 20px; padding: 26px 17px; border-bottom: 1px solid rgba(20,32,27,.26);
+  align-items: center; gap: 20px; padding: 18px 17px; border-bottom: 1px solid rgba(20,32,27,.26);
   transition: background .2s ease, transform .2s ease;
 }
 .gloppy-project:hover { z-index: 1; background: var(--goo-lime); transform: translateX(6px); }
@@ -127,19 +128,20 @@
   .gloppy-menu-button { display: flex; }
   .gloppy-mobile-nav { position: absolute; z-index: 10; top: 60px; left: 12px; right: 12px; display: flex; flex-direction: column; gap: 2px; padding: 10px; background: var(--goo-paper); border: 2px solid var(--goo-ink); box-shadow: 7px 7px 0 var(--goo-blue); }
   .gloppy-mobile-nav a { padding: 13px 10px; font: 700 20px 'Syne', sans-serif; text-transform: uppercase; border-bottom: 1px solid rgba(20,32,27,.2); }
-  .gloppy-hero { min-height: 650px; justify-content: flex-start; padding: 76px 20px 190px; }
-  .gloppy-hero::before { width: 88vw; right: -23%; top: 24%; }
-  .gloppy-orbit { width: 80vw; right: -14%; top: 30%; }
-  .gloppy-hero h1 { margin-top: 34px; font-size: clamp(4.2rem, 19vw, 7.6rem); }
-  .gloppy-hero h1 .gloppy-second { margin-left: 8vw; }
-  .gloppy-sticker { width: 71px; height: 71px; top: auto; right: 8%; bottom: 28%; font-size: 8px; }
-  .gloppy-hero-note { width: min(330px, 83vw); right: auto; left: 24px; bottom: 7%; padding: 17px 18px; }
-  .gloppy-work { padding: 58px 18px 68px; }
+  .gloppy-hero { min-height: 355px; justify-content: flex-start; padding: 38px 20px 115px; }
+  .gloppy-hero::before { width: 68vw; right: -13%; top: 14%; }
+  .gloppy-orbit { width: 62vw; right: -9%; top: 18%; }
+  .gloppy-hero h1 { margin-top: 20px; font-size: clamp(3.5rem, 14.5vw, 4.6rem); line-height: .9; letter-spacing: -.035em; }
+  .gloppy-hero h1 .gloppy-second { margin-left: 4vw; text-shadow: 2px 2px 0 var(--goo-blue); }
+  .gloppy-sticker { width: 58px; height: 58px; top: auto; right: 8%; bottom: 27%; font-size: 7px; }
+  .gloppy-hero-note { width: min(325px, 83vw); right: auto; left: 20px; bottom: 14px; padding: 12px 14px; transform: rotate(1deg); }
+  .gloppy-work { padding: 28px 18px 68px; }
   .gloppy-work-head { display: block; }
-  .gloppy-work h2 { margin-bottom: 28px; }
+  .gloppy-work h2 { margin-bottom: 16px; font-size: clamp(2.75rem, 10vw, 4rem); letter-spacing: -.035em; }
   .gloppy-filter-wrap { align-items: flex-start; }
-  .gloppy-filters { justify-content: flex-start; }
-  .gloppy-project { grid-template-columns: 27px minmax(0, 1fr) 30px; gap: 10px; padding: 22px 5px; }
+  .gloppy-filters { justify-content: flex-start; gap: 4px; }
+  .gloppy-filter { min-height: 38px; padding: 0 8px; }
+  .gloppy-project { grid-template-columns: 27px minmax(0, 1fr) 30px; gap: 10px; padding: 18px 5px; }
   .gloppy-project h3 { font-size: clamp(1.55rem, 8vw, 2.6rem); }
   .gloppy-description { display: none; }
   .gloppy-mobile-description { display: block; margin: 10px 0 0; max-width: 35ch; color: #344039; font-size: 13px; line-height: 1.4; }
