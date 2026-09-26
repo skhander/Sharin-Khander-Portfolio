@@ -161,6 +161,17 @@
 @media (max-width: 767px) {
   .elevated-browse-scroll img { min-width: 580px; }
 }
+/* Attribute Enrichment: an editorial field study, not a simulated product UI. */
+.attribute-story { --attribute-line: hsl(var(--foreground) / .2); }
+.attribute-story .attribute-rule { border-top: 1px solid var(--attribute-line); }
+.attribute-story .attribute-product { background: hsl(35 19% 87%); }
+.attribute-story .attribute-product img { display: block; height: 100%; width: 100%; object-fit: contain; }
+.attribute-story .attribute-lookbook { overflow-x: auto; overscroll-behavior-inline: contain; scrollbar-color: hsl(var(--accent) / .45) transparent; background: hsl(35 19% 87%); }
+.attribute-story .attribute-lookbook img { display: block; width: 100%; height: auto; }
+.attribute-story .attribute-zoom { animation: page-reveal .25s ease-out both; }
+@media (max-width: 767px) {
+  .attribute-story .attribute-lookbook img { min-width: 800px; }
+}
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
   .elevated-frame:hover img { transform: none; }

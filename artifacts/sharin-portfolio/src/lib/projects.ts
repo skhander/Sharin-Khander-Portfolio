@@ -69,6 +69,17 @@ export const projects: Project[] = [
     status: 'published',
   },
   {
+    slug: 'attribute-enrichment',
+    title: 'Attribute Enrichment',
+    company: 'The RealReal',
+    category: 'AI / Discovery / Curation',
+    description: 'Turning product imagery into richer fashion attributes—and testing where they created value.',
+    thesis: 'Give the marketplace a richer language for understanding style.',
+    role: 'Prompts, taxonomy, evaluation, UAT, testing strategy',
+    scope: 'Search, recommendations, curation',
+    status: 'published',
+  },
+  {
     slug: 'ai-discovery',
     title: 'AI Discovery',
     company: 'The RealReal',
