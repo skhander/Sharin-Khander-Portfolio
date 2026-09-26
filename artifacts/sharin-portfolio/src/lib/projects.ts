@@ -46,7 +46,7 @@ export type Project = {
   description: string;
   thesis?: string;
   role?: string;
-  team?: string;
+  team?: string | { name: string; role: string }[];
   scope?: string;
   cover?: MediaAsset;
   sections?: CaseSection[];
@@ -76,6 +76,12 @@ export const projects: Project[] = [
     description: 'Helping shoppers discover fashion by trend, vibe, and occasion.',
     thesis: 'Give the marketplace a richer language for understanding style.',
     role: 'Prompts, taxonomy, evaluation, UAT, testing strategy',
+    team: [
+      { name: 'Leo Korman', role: 'EM' },
+      { name: 'Beatrice Lynes', role: 'UXD' },
+      { name: 'Dhaval Dholakia', role: 'ML' },
+      { name: 'Alexis DeMan', role: 'AI Platform' },
+    ],
     scope: 'Search, recommendations, curation',
     status: 'published',
   },

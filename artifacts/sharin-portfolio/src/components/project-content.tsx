@@ -43,7 +43,18 @@ export function ProjectMeta({ project }: { project: Project }) {
         {entries.map((entry) => (
           <div key={entry.label}>
             <dt className="font-mono-archive text-[9px] uppercase tracking-[.15em] text-muted-foreground">{entry.label}</dt>
-            <dd className="mt-2 max-w-[220px] text-sm leading-[1.4]">{entry.value}</dd>
+            <dd className="mt-2 max-w-[220px] text-sm leading-[1.4]">
+              {Array.isArray(entry.value) ? (
+                <ul className="space-y-1">
+                  {entry.value.map((member) => (
+                    <li key={member.name} className="flex justify-between gap-3">
+                      <span>{member.name}</span>
+                      <span className="shrink-0 text-muted-foreground">{member.role}</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : entry.value}
+            </dd>
           </div>
         ))}
       </dl>}
