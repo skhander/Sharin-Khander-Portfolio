@@ -50,9 +50,9 @@ const publishedProjects = [
     category: 'AI / Discovery / Commerce',
     description: 'MVP: multimodal search and product comparison. Later explorations: virtual try-on and in-agent checkout.',
     badges: ['Machine Learning', '0 → 1'],
-    image: '/__mockup/images/current-shopping-agent-look.jpg',
-    imageAlt: 'Illustrative fashion look, not a Shopping Agent product screenshot',
-    imageNote: 'ILLUSTRATIVE / NOT PRODUCT UI',
+    image: '/__mockup/images/current-shopping-agent-comparison.png',
+    imageAlt: 'Ask TRR mobile comparison interface showing two lab-grown diamond tennis bracelets and product details',
+    imageNote: 'ASK TRR / PRODUCT COMPARISON',
     status: 'published',
   },
   {
@@ -206,7 +206,7 @@ export function Current() {
               <span>The RealReal / Product work</span><span>{visibleProjects.length} {visibleProjects.length === 1 ? 'project' : 'projects'}</span>
             </div>
 
-            <div className="current-project-grid" aria-live="polite">
+            <div className="current-project-list" aria-live="polite">
               {visibleProjects.map((project) => {
                 const projectIndex = publishedProjects.findIndex((item) => item.slug === project.slug);
                 return (

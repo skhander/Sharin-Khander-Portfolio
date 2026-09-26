@@ -54,28 +54,33 @@
   text-transform: uppercase;
 }
 
-.sharin-current .current-project-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  column-gap: 36px;
+.sharin-current .current-project-list {
+  border-bottom: 1px solid hsl(var(--border));
 }
 
 .sharin-current .current-project-card {
   display: grid;
-  grid-template-columns: minmax(0, 1.02fr) minmax(0, .98fr);
+  grid-template-columns: minmax(0, 1fr) minmax(160px, 240px);
   align-items: center;
-  gap: 20px;
+  gap: 22px;
   min-width: 0;
-  padding: 20px 0;
+  padding: 19px 7px;
   border-bottom: 1px solid hsl(var(--border));
+  transition: background-color .2s ease;
+}
+
+.sharin-current .current-project-card:hover {
+  background: hsl(var(--secondary) / .22);
 }
 
 .sharin-current .current-project-visual {
+  grid-column: 2;
+  grid-row: 1;
   display: grid;
   grid-template-rows: minmax(0, 1fr) auto;
   min-width: 0;
   margin: 0;
-  aspect-ratio: 1.35;
+  aspect-ratio: 1.5;
   overflow: hidden;
   border: 1px solid hsl(var(--border));
   background: hsl(var(--muted) / .4);
@@ -98,12 +103,14 @@
 
 .sharin-current .current-project-visual[data-project="curation"],
 .sharin-current .current-project-visual[data-project="attribute-enrichment"],
+.sharin-current .current-project-visual[data-project="ai-discovery"],
 .sharin-current .current-project-visual[data-project="visual-search"] {
   background: #f6f5f1;
 }
 
 .sharin-current .current-project-visual[data-project="curation"] img,
 .sharin-current .current-project-visual[data-project="attribute-enrichment"] img,
+.sharin-current .current-project-visual[data-project="ai-discovery"] img,
 .sharin-current .current-project-visual[data-project="visual-search"] img {
   object-fit: contain;
 }
@@ -112,11 +119,19 @@
   transform: scale(1.035);
 }
 
+.sharin-current .current-project-visual[data-project="visual-search"] img {
+  transition: none;
+}
+
 .sharin-current .current-project-visual[data-project="curation"] img {
   transition: none;
 }
 
 .sharin-current .current-project-visual[data-project="attribute-enrichment"] img {
+  transition: none;
+}
+
+.sharin-current .current-project-visual[data-project="ai-discovery"] img {
   transition: none;
 }
 
@@ -133,6 +148,8 @@
 }
 
 .sharin-current .current-project-copy {
+  grid-column: 1;
+  grid-row: 1;
   min-width: 0;
 }
 
@@ -218,15 +235,12 @@
   .sharin-current .current-filters {
     justify-content: flex-start;
   }
-  .sharin-current .current-project-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
   .sharin-current .current-project-card {
-    grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
-    gap: 24px;
+    grid-template-columns: minmax(0, 1fr) minmax(150px, 220px);
+    gap: 18px;
   }
   .sharin-current .current-project-copy h3 {
-    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-size: clamp(1.9rem, 3.5vw, 2.6rem);
   }
 }
 
@@ -245,34 +259,19 @@
     padding-inline: 8px;
     font-size: 8px;
   }
-  .sharin-current .current-project-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
   .sharin-current .current-project-card {
-    grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr);
-    align-items: start;
-    gap: 12px;
-    padding: 16px 0;
+    grid-template-columns: minmax(0, 1fr) 92px;
+    gap: 14px;
+    padding: 16px 3px;
   }
   .sharin-current .current-project-visual {
-    aspect-ratio: .88;
+    aspect-ratio: .82;
   }
   .sharin-current .current-project-visual figcaption {
     gap: 4px;
     padding: 5px 4px;
     font-size: 5px;
   }
-  .sharin-current .current-search-diagram {
-    grid-template-columns: minmax(0, .82fr) 18px minmax(0, 1.18fr);
-    gap: 4px;
-    padding: 7px;
-  }
-  .sharin-current .current-search-sample b { font-size: 8px; }
-  .sharin-current .current-search-sample i { width: 24px; height: 31px; }
-  .sharin-current .current-search-sample > span,
-  .sharin-current .current-search-results > span { font-size: 5px; }
-  .sharin-current .current-search-results { gap: 3px; }
-  .sharin-current .current-search-diagram > small { right: 4px; bottom: 4px; font-size: 4px; }
   .sharin-current .current-project-kicker {
     align-items: flex-start;
     font-size: 7px;
