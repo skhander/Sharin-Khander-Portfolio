@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { ArrowDownRight, ArrowUpRight, Blocks, Braces, Search, Sparkles } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { Link } from 'wouter';
 import { publishedProjects } from '@/lib/projects';
 import { usePageMeta } from '@/lib/use-page-meta';
@@ -7,54 +7,42 @@ import './editorial-work.css';
 
 const filters = ['All', 'Discovery', 'Commerce', 'AI'];
 
-const projectVisuals: Record<string, { src: string; alt: string; note: string; problem: string; move: string; label?: string; evidence?: string }> = {
+const projectVisuals: Record<string, { src: string; alt: string; note: string; badges: string[] }> = {
   'elevated-experience': {
     src: '/media/browse-after.webp',
-    alt: 'The RealReal luxury handbag browse interface, with a filter control and larger product imagery.',
-    note: 'BROWSE / AFTER',
-    problem: 'One-of-one luxury items needed a PDP that helped shoppers evaluate the product.',
-    move: 'Tested grid against immersive scroll; reversed a save-button change the same day.',
-    evidence: 'Winning PDP test: +5% orders / visitor',
+    alt: 'The RealReal luxury handbag browse interface',
+    note: 'PRODUCT INTERFACE',
+    badges: ['Redesigns'],
   },
   'attribute-enrichment': {
     src: '/media/attribute-enrichment/chanel-top.webp',
-    alt: 'A Chanel vintage top listing used to show how product images can be enriched with style attributes.',
-    note: 'CATALOG INTELLIGENCE / SOURCE',
-    problem: 'Shoppers could not search millions of listings naturally by trend, vibe or occasion.',
-    move: 'Owned prompts, taxonomy, evaluation and UAT for AI-generated style attributes.',
-    evidence: 'Baseline search test: no lift; measurement strategy changed',
+    alt: 'Chanel vintage top used in the attribute-enrichment project',
+    note: 'ATTRIBUTE ENRICHMENT / SOURCE VISUAL',
+    badges: ['0 → 1', 'Machine Learning', 'LLMs'],
   },
   'ai-discovery': {
     src: '/media/work/shopping-agent-comparison.png',
-    alt: 'Ask TRR product comparison interface showing two diamond tennis bracelets.',
-    note: 'SHOPPING AGENT / COMPARISON',
-    problem: 'Keyword search made shoppers translate real shopping intent into catalog terms.',
-    move: 'Defined agent behavior, core journeys, capabilities and measurement for a discovery MVP.',
-    evidence: 'Learning rollout began with 5% of traffic',
+    alt: 'Ask TRR mobile product comparison interface showing two diamond tennis bracelets',
+    note: 'ASK TRR / PRODUCT COMPARISON',
+    badges: ['Machine Learning', '0 → 1'],
   },
   'visual-search': {
     src: '/media/work/visual-search-ui.png',
-    alt: 'Visual Search mobile interface with selectable regions in a reference photo.',
-    note: 'VISUAL SEARCH / INTERFACE',
-    problem: 'An inspiration photo needed a path into relevant inventory.',
-    move: 'Select a region of a reference image to start a visual search.',
-    label: 'INTERACTION SHOWN',
+    alt: 'Visual Search mobile camera interface with selectable regions in a photo',
+    note: 'VISUAL SEARCH / SOURCE INTERFACE',
+    badges: ['Machine Learning', '0 → 1'],
   },
   'similar-designers': {
     src: '/media/work/similar-designers-look.jpg',
-    alt: 'An editorial designer look used to illustrate a path between fashion designers.',
-    note: 'DESIGNER DISCOVERY / EXAMPLE',
-    problem: 'Designer pages could be a dead end for shoppers looking for what to explore next.',
-    move: 'Started the MVP with co-browsed designers, not an unproven visual similarity model.',
-    evidence: 'Visual and personalized signals were later directions',
+    alt: 'Designer look used for designer discovery',
+    note: 'DESIGNER LOOKBOOK',
+    badges: ['Recommendations'],
   },
   curation: {
     src: '/media/attribute-enrichment/vintage-bridal-lookbook.webp',
-    alt: 'The RealReal customer-facing Shop Vintage Bridal lookbook and product grid.',
-    note: 'CUSTOMER-FACING LOOKBOOK',
-    problem: 'Editorial taste needed a way to connect shoppers with discoverable assortments.',
-    move: 'The customer-facing Vintage Bridal lookbook shows one curated shopping experience.',
-    label: 'EXPERIENCE SHOWN',
+    alt: 'The RealReal vintage bridal lookbook',
+    note: 'ACTUAL CUSTOMER-FACING LOOKBOOK',
+    badges: ['Machine Learning', 'Internal Tools'],
   },
 };
 
@@ -67,7 +55,7 @@ function matchesFilter(category: string, filter: string) {
 
 export default function Work() {
   const [filter, setFilter] = useState('All');
-  usePageMeta('Sharin Khander — Product Builder', 'Product work across luxury marketplace browse, AI discovery, shopping agents, visual search, recommendations, and curation.');
+  usePageMeta('Work — Sharin Khander', 'Explore Sharin Khander’s product work across luxury marketplaces, shopping agents, visual search, designer discovery, and personalization.');
 
   const visibleProjects = useMemo(
     () => publishedProjects.filter((project) => matchesFilter(project.category, filter)),
@@ -76,51 +64,29 @@ export default function Work() {
 
   return (
     <div className="page-reveal editorial-work">
-      <section className="work-hero mx-auto w-full max-w-[1440px] px-6 pb-12 pt-10 sm:px-10 md:px-12 md:pb-16 md:pt-16 lg:px-16" aria-labelledby="work-title">
-        <div className="work-hero-top">
-          <p className="work-eyebrow"><span className="work-status-dot" aria-hidden="true" /> Product portfolio <span>/</span> The RealReal</p>
-           <a className="work-scroll-link" href="#selected-work" data-testid="link-explore-selected-work">Explore selected work <ArrowDownRight size={15} aria-hidden="true" /></a>
+      <section className="work-hero mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-6 pb-16 pt-14 sm:px-10 md:grid-cols-[1.2fr_.8fr] md:items-end md:gap-12 md:pb-20 md:pt-20 lg:px-16">
+        <div>
+          <p className="font-mono-archive text-[10px] uppercase tracking-[.18em] text-accent">Product work / 01—{String(publishedProjects.length).padStart(2, '0')}</p>
+          <h1 className="mt-6 font-editorial text-[clamp(4.3rem,9vw,8.8rem)] leading-[.83] tracking-[-.055em]">Sharin<br />Khander<span className="text-accent">.</span></h1>
         </div>
-        <div className="work-hero-main">
-          <div className="work-hero-title">
-            <p className="work-overline">Strategy <i>×</i> systems <i>×</i> experiences</p>
-            <h1 id="work-title">Product<br />builder<span>.</span></h1>
-            <p className="work-byline">Sharin Khander <span>—</span> product builder with an engineering background.</p>
-          </div>
-          <div className="work-thesis">
-            <p className="work-thesis-label"><Braces size={14} aria-hidden="true" /> How I think about the work</p>
-            <p className="work-thesis-copy">I build habit-formint experiences people love.</p>
-             <p className="work-thesis-note">A few decisions, tests and rollout signals from the work below.</p>
-             <div className="work-system-map" aria-label="Selected product evidence from the case studies">
-               <span><b>+5%</b> orders / visitor · winning PDP test</span>
-               <span><b>No lift</b> first AI-search test · measurement rethought</span>
-               <span><b>5% traffic</b> shopping agent learning rollout</span>
-            </div>
-          </div>
-        </div>
-        <div className="work-hero-foot">
-          <span>Product thinking, scope and trade-offs</span>
-          <span className="work-index">SELECTED WORK <b>{String(publishedProjects.length).padStart(2, '0')}</b></span>
+        <div className="work-intro max-w-md bg-[hsl(var(--rose-surface))] px-6 py-7 sm:px-8 sm:py-9 md:max-w-none md:px-9 md:py-11">
+          <p className="font-editorial text-[clamp(2.2rem,3.4vw,3.5rem)] italic leading-none tracking-[-.025em]">Product builder.</p>
+          <p className="mt-6 text-balance text-[clamp(1.2rem,1.9vw,1.75rem)] font-medium leading-[1.25] tracking-[-.02em]">
+            I build better ways to shop. Easier, more personal, and more fun.
+          </p>
         </div>
       </section>
-      <section id="selected-work" className="mx-auto w-full max-w-[1440px] px-6 pb-20 sm:px-10 md:px-12 md:pb-28 lg:px-16" aria-labelledby="work-heading">
-        <div className="work-section-head">
-          <div>
-            <p className="work-eyebrow"><span>01</span> / Selected product work</p>
-            <h2 id="work-heading">Different problems.<br /><em>Connected systems.</em></h2>
-          </div>
-           <p className="work-section-intro">From catalog foundations to shopping experiences: the problems, product approaches, and work behind better discovery.</p>
-        </div>
 
-        <div className="work-filter-bar">
-          <div className="work-filter-label"><Search size={14} aria-hidden="true" /><span>Filter by product area</span></div>
-          <div className="work-filters" role="group" aria-label="Filter projects by product area">
+      <section id="selected-work" className="mx-auto w-full max-w-[1440px] px-6 pb-20 sm:px-10 md:pb-28 lg:px-16" aria-labelledby="work-heading">
+        <div className="work-band flex flex-col gap-5 bg-[hsl(var(--olive-surface))] px-5 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-7">
+          <h2 id="work-heading" className="font-editorial text-[clamp(2.3rem,4vw,3.8rem)] leading-none tracking-[-.035em]">Selected work</h2>
+          <div className="flex flex-wrap gap-1" role="group" aria-label="Filter projects">
             {filters.map((item) => (
               <button
                 type="button"
                 key={item}
                 onClick={() => setFilter(item)}
-                className={`work-filter${filter === item ? ' is-active' : ''}`}
+                className={`min-h-9 border px-3 py-2 font-mono-archive text-[10px] uppercase tracking-[.1em] transition-colors ${filter === item ? 'border-accent bg-accent text-accent-foreground' : 'border-transparent text-foreground hover:border-foreground/50'}`}
                 aria-pressed={filter === item}
                 data-testid={`button-filter-${item.toLowerCase().replaceAll(' ', '-')}`}
               >
@@ -128,10 +94,12 @@ export default function Work() {
               </button>
             ))}
           </div>
-          <p className="work-result-count" aria-live="polite">{visibleProjects.length} {visibleProjects.length === 1 ? 'case study' : 'case studies'}</p>
         </div>
 
-        <div className="editorial-project-list" aria-live="polite">
+        <div className="work-list editorial-project-list border-t border-border" aria-live="polite">
+          <div className="flex items-center justify-between gap-3 py-4 font-mono-archive text-[10px] uppercase tracking-[.15em] text-muted-foreground">
+            <span className="bg-muted px-2.5 py-1 text-foreground">The RealReal</span><span>{visibleProjects.length} {visibleProjects.length === 1 ? 'project' : 'projects'}</span>
+          </div>
           {visibleProjects.map((project) => {
             const projectIndex = publishedProjects.findIndex((item) => item.slug === project.slug);
             const visual = projectVisuals[project.slug];
@@ -140,27 +108,27 @@ export default function Work() {
               <Link
                 href={`/work/${project.slug}`}
                 key={project.slug}
-                className={`editorial-project project-layout-${projectIndex + 1}`}
+                className={`editorial-project group${projectIndex % 2 === 1 ? ' is-reversed' : ''}${projectIndex % 3 === 2 ? ' is-wide' : ''}`}
                 data-testid={`link-project-${project.slug}`}
-                 aria-label={`${project.title}: ${visual.move}. Read case study.`}
               >
                 <div className="editorial-project-copy">
-                  <div className="editorial-project-kicker">
-                    <span>{String(projectIndex + 1).padStart(2, '0')} <i>/</i> {project.category}</span>
-                    <ArrowUpRight size={17} strokeWidth={1.5} className="project-arrow" aria-hidden="true" />
+                  <div className="editorial-project-kicker font-mono-archive text-accent">
+                    <span>{String(projectIndex + 1).padStart(2, '0')} / {project.category}</span>
+                    <ArrowUpRight size={16} strokeWidth={1.5} className="project-arrow" aria-hidden="true" />
                   </div>
-                  <h3>{project.title}</h3>
-                   <p className="editorial-project-description">{visual.problem}</p>
-                   <div className="project-work-note"><span className="project-note-icon"><Blocks size={13} aria-hidden="true" /></span><div><small>{visual.label ?? 'PRODUCT WORK'}</small><strong>{visual.move}</strong></div></div>
-                   {visual.evidence && <div className="editorial-project-badges"><Sparkles size={12} aria-hidden="true" /><span>{visual.evidence}</span></div>}
-                  <span className="project-open">Read case study <ArrowUpRight size={14} aria-hidden="true" /></span>
+                  <h3 className="font-editorial">{project.title}</h3>
+                  <p className="editorial-project-description text-muted-foreground">{project.description}</p>
+                  <div className="editorial-project-badges" aria-label={`${project.title} categories`}>
+                    {visual.badges.map((badge) => <span key={badge}>{badge}</span>)}
+                  </div>
                 </div>
                 <figure className="editorial-project-visual" data-project={project.slug}>
                   <div className="editorial-project-artwork">
                     <img src={visual.src} alt={visual.alt} loading={projectIndex < 2 ? 'eager' : 'lazy'} />
-                    <span className="project-visual-index" aria-hidden="true">{String(projectIndex + 1).padStart(2, '0')}</span>
                   </div>
-                  <figcaption><span>{visual.note}</span><span>THE REALREAL</span></figcaption>
+                  <figcaption className="font-mono-archive">
+                    <span>{visual.note}</span><span>FIG. {String(projectIndex + 1).padStart(2, '0')}</span>
+                  </figcaption>
                 </figure>
               </Link>
             );
@@ -168,12 +136,11 @@ export default function Work() {
         </div>
 
         {visibleProjects.length === 0 && (
-          <div className="work-empty-state">
-            <p>No case studies in this area yet.</p>
-            <button type="button" onClick={() => setFilter('All')} data-testid="button-reset-filter">Show all work</button>
+          <div className="border-b border-border py-20 text-center">
+            <p className="font-editorial text-3xl">No projects in this filter.</p>
+            <button type="button" onClick={() => setFilter('All')} className="mt-5 border-b border-accent pb-1 font-mono-archive text-[10px] uppercase tracking-[.14em] text-accent" data-testid="button-reset-filter">View all</button>
           </div>
         )}
-        <div className="work-endnote"><span>06 / PRODUCT SYSTEMS</span><p>Commerce is more than the transaction. It’s the whole path to a confident choice.</p></div>
       </section>
     </div>
   );

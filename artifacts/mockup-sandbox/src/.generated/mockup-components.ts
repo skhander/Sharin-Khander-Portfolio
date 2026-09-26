@@ -8,7 +8,5 @@ export const modules: ModuleMap = {
   "./components/mockups/sharin-builder/GalleryIndex.tsx": () => import("../components/mockups/sharin-builder/GalleryIndex.tsx"),
   "./components/mockups/sharin-builder/MobileIndex.tsx": () => import("../components/mockups/sharin-builder/MobileIndex.tsx"),
   "./components/mockups/sharin-builder/QuestionIndex.tsx": () => import("../components/mockups/sharin-builder/QuestionIndex.tsx"),
-  "./components/mockups/sharin-builder/SystemsAtlas.tsx": () => import("../components/mockups/sharin-builder/SystemsAtlas.tsx"),
-  "./components/mockups/shopmy-portfolio/Current.tsx": () => import("../components/mockups/shopmy-portfolio/Current.tsx"),
-  "./components/mockups/shopmy-portfolio/ShopMyDirection.tsx": () => import("../components/mockups/shopmy-portfolio/ShopMyDirection.tsx")
+  "./components/mockups/sharin-builder/SystemsAtlas.tsx": () => import("../components/mockups/sharin-builder/SystemsAtlas.tsx")
 };
