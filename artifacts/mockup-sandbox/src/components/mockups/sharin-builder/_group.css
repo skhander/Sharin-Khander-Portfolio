@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap');
+
+.sharin-current {
+  --background: 39 27% 94%;
+  --foreground: 30 13% 13%;
+  --border: 36 15% 79%;
+  --input: 36 15% 79%;
+  --ring: 347 38% 31%;
+  --card: 39 27% 94%;
+  --card-foreground: 30 13% 13%;
+  --popover: 39 27% 94%;
+  --popover-foreground: 30 13% 13%;
+  --primary: 347 38% 31%;
+  --primary-foreground: 39 27% 94%;
+  --secondary: 352 25% 83%;
+  --secondary-foreground: 30 13% 13%;
+  --muted: 65 13% 82%;
+  --muted-foreground: 36 11% 34%;
+  --accent: 347 38% 31%;
+  --accent-foreground: 39 27% 94%;
+  --destructive: 347 48% 36%;
+  --destructive-foreground: 39 27% 94%;
+  --rose-surface: 352 27% 80%;
+  --olive-surface: 68 17% 69%;
+  --app-font-sans: 'DM Sans', sans-serif;
+  --app-font-serif: 'Instrument Serif', Georgia, serif;
+  --app-font-mono: 'DM Mono', monospace;
+  --font-sans: var(--app-font-sans);
+  --font-serif: var(--app-font-serif);
+  --font-mono: var(--app-font-mono);
+  --radius: 0.15rem;
+  font-family: var(--app-font-sans);
+}
+
+.sharin-current .font-editorial { font-family: var(--app-font-serif); }
+.sharin-current .font-mono-archive { font-family: var(--app-font-mono); }
+.sharin-current .text-balance { text-wrap: balance; }
+
+.sharin-current.archive-noise { position: relative; }
+.sharin-current.archive-noise::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: .018;
+  z-index: 20;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+}
+
+.sharin-current .page-reveal { animation: sharin-page-reveal .65s cubic-bezier(.22, 1, .36, 1) both; }
+@keyframes sharin-page-reveal {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.sharin-current .archive-link { transition: color .2s ease, border-color .2s ease; }
+.sharin-current .archive-link:hover { color: hsl(var(--accent)); }
+.sharin-current .project-row { transition: background-color .25s ease; }
+.sharin-current .project-row:hover { background-color: hsl(var(--secondary) / .34); }
+.sharin-current .project-row:hover .project-arrow { transform: translate(3px, -3px); color: hsl(var(--accent)); }
+.sharin-current .project-arrow { transition: transform .25s ease, color .25s ease; }
+
+.sharin-current .work-hero {
+  position: relative;
+  isolation: isolate;
+}
+.sharin-current .work-hero > * {
+  position: relative;
+  z-index: 1;
+}
+.sharin-current .work-hero::before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  top: -1px;
+  right: 0;
+  width: min(43%, 590px);
+  height: 206px;
+  background: url('/__mockup/images/gold-foil.webp') center 36% / cover no-repeat;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 96% 97%, 90% 99%, 83% 94%, 77% 96%, 72% 90%, 66% 91%, 61% 85%, 55% 86%, 49% 78%, 43% 77%, 38% 69%, 31% 68%, 27% 58%, 21% 55%, 18% 44%, 11% 41%, 10% 30%, 5% 26%, 7% 15%, 0 10%);
+  opacity: .86;
+}
+.sharin-current .work-intro { box-shadow: 12px 12px 0 hsl(var(--background) / .8); }
+.sharin-current .work-band {
+  position: relative;
+  isolation: isolate;
+}
+.sharin-current .work-band::before,
+.sharin-current .work-band::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  background: url('/__mockup/images/gold-foil.webp') center / cover no-repeat;
+}
+.sharin-current .work-band::before {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+}
+.sharin-current .work-band::after {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  opacity: .5;
+}
+.sharin-current .work-list { position: relative; }
+.sharin-current .work-list::before {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  top: 58px;
+  left: -40px;
+  width: 26px;
+  height: 255px;
+  background: url('/__mockup/images/gold-foil.webp') 44% center / cover no-repeat;
+  clip-path: polygon(0 0, 100% 0, 91% 12%, 100% 24%, 85% 36%, 94% 47%, 76% 61%, 85% 72%, 58% 87%, 42% 100%, 0 100%);
+  opacity: .8;
+}
+@media (min-width: 1024px) {
+  .sharin-current .work-list::before { left: -64px; width: 44px; height: 320px; }
+}
+@media (max-width: 767px) {
+  .sharin-current .work-hero::before {
+    width: 32%;
+    height: 118px;
+    background-position: 42% 25%;
+    opacity: .77;
+  }
+  .sharin-current .work-intro { box-shadow: 7px 7px 0 hsl(var(--background) / .8); }
+  .sharin-current .work-list::before { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sharin-current *, .sharin-current *::before, .sharin-current *::after {
+    animation-duration: .001ms !important;
+    transition-duration: .001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

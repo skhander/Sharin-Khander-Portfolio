@@ -1,0 +1,326 @@
+Yes. **Right now the site says “fashion product person who has good taste.”** The visual language is editorial: serif typography, paper, gold foil, muted pastels, art direction.
+
+What’s missing is **evidence of making things**.
+
+I would *not* turn it into a stereotypical “tech builder” portfolio with dark mode, grids, code, terminal windows, etc. That would fight the fashion sensibility. Instead:
+
+> **Fashion editorial on the surface. Product-building artifacts underneath.**
+
+Think **fashion magazine × product studio × prototype wall.**
+
+### 1. Make the hero literally look like something you built
+
+Your pink **“Product builder.”** card is currently just a statement.
+
+Make it an **artifact**.
+
+For example, keep the beautiful pink paper, but layer little pieces of product work into it:
+
+```text
+PRODUCT BUILDER.
+─────────────────────
+I build better ways to shop.
+
+        ┌───────────────┐
+        │ Search        │
+        │ "90s black    │
+        │ tie dress"    │
+        └───────────────┘
+              ↓
+        ┌───────────────┐
+        │ ML            │
+        │ recommendations│
+        └───────────────┘
+              ↓
+        ┌───────────────┐
+        │ Discovery     │
+        └───────────────┘
+
+7 zero → one products
+150+ experiments
+$340M GMV impact
+```
+
+Not literally this UI—but **a little ecosystem of things you've made**.
+
+The key is that the viewer should think:
+
+**“Oh, this person actually builds product.”**
+
+rather than:
+
+**“This person calls themselves a product builder.”**
+
+---
+
+## 2. Introduce a second visual language: “construction”
+
+You already have **fashion materials**:
+
+* gold foil
+* torn paper
+* editorial serif
+* soft pink
+* olive
+* cream
+
+Now introduce **builder materials**:
+
+* thin technical rules
+* grids
+* numbered annotations
+* little diagrams
+* arrows
+* system maps
+* interface fragments
+* cropped prototypes
+* experiment labels
+* handwritten/typed annotations
+* tiny monospace metadata
+
+So you get this tension:
+
+**EDITORIAL**
+
+> Sharin Khander
+> Trend, Vibe, Occasion Discovery
+
+**BUILDER**
+
+> 01 / PROBLEM
+> 02 / HYPOTHESIS
+> 03 / PROTOTYPE
+> 04 / SHIP
+> 05 / MEASURE
+
+That's much more distinctive than simply putting “AI” or “Product” everywhere.
+
+---
+
+# 3. Your project list is the biggest missed opportunity
+
+Right now:
+
+> **01 Elevated Experience**
+> Reimagining shopping around luxury inventory. →
+
+That's gorgeous, but it reads like a **creative director's portfolio**.
+
+I'd make every project row contain a tiny **product artifact**.
+
+Something like:
+
+```text
+01   Elevated Experience
+
+     ┌───────────────────┐
+     │                   │
+     │   PRODUCT UI      │
+     │                   │
+     └───────────────────┘
+
+     Reimagining shopping around luxury inventory.
+
+     0 → 1 PRODUCT     150+ EXPERIMENTS     ML
+```
+
+Or even more editorial:
+
+**01**
+
+### Elevated Experience
+
+`DISCOVERY · PERSONALIZATION · ML`
+
+[small cropped UI / prototype / diagram]
+
+Reimagining shopping around luxury inventory.
+
+Now the **work itself demonstrates the builder identity**.
+
+---
+
+# 4. Use “specimen cards” throughout
+
+This is where I think your site could become *really* good.
+
+Imagine you're looking at a fashion editorial and occasionally you encounter these little technical specimens:
+
+> **MODEL → PRODUCT**
+>
+> Visual Search
+> Multimodal retrieval
+> Women's apparel
+> Phase 01
+
+Or:
+
+> **SHIPPED**
+>
+> Shopping Agent
+> 100% traffic
+> +1.1% visitor conversion
+> +1.5% PDP views
+
+Or:
+
+> **BUILT**
+>
+> Curation Tool
+> Editor → ML → Feed
+
+They can look like **museum labels / garment tags / production notes** rather than dashboards.
+
+That keeps the aesthetic.
+
+---
+
+# 5. Make the gold foil mean something
+
+The gold is beautiful, but right now it mostly functions as decoration.
+
+I'd turn it into a **recurring construction material**.
+
+For example, use little pieces of gold foil to “tape” things together:
+
+![Image](https://images.openai.com/static-rsc-4/FNz-5BeNoy6663BZrrK3TcBitRX_BlRyhsKfAAVw9z8gkHx8C7mccONlgKXceiFtaxUIFz7Ibu2_au1EvNBDxsb8PXwmVdH_D288W2djUanmO3du26wZADaor1QIWFnk-t-zdv6qsVqQ37apMIHDi8g9yD6NKOjkBTvD3iOBG2vo3gk6JlscR-bo6uVVqf2F?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/KQGyxGc0j0h8Cm7PPiOh9ZsRQF90ySCw7EKaDg9fRNIS5K1nJ0GHiXERltCya7WdI1JSPgEZQI3ojnEY_G_z5Bshmpyx2ljusck9v0L4rbjzGGU6SVHP7JuANa3EUjinAu5MUiGuVIUE2lw9tDFmkt3jadJxN_O2IMnU1jIyHQMTXNZ868gzr6OayPcomI-s?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/4XutBElZ3MDIiNezSVIKX54gY22iYiwRYu8hoPitUeMG7y3kehlsIqWMvLcKUFP8hJZnqLYz74wq8WnvGAVJ3ocJQFp1ThnQ501VzfJlIFf-7g80YoyYH567mKRxapZLFMvI8CgQc2z7y50mHTZ2d6rJE8rdpXSJu2Cn2HpmWkl_dq0yFb3UAlzaFVJsEarE?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/ICSEjbObYogoBeePd33T1SYhdESBB_Dfe_haLXzgCPHUHjI5xzSRw4cUsOBKULQgD2Lo30vSuAEo6fG9Y2VfQmtvh48W9fqAktGjptSYM_9qiVBEgWk4GPV6ovxwLFqna1i0Vd_EJPz5Ak5jnJcNXun59M6QtEs_vYSR3RR5KiJpdkbN0uTv_TA6s6JA_769?purpose=fullsize)
+
+A gold strip could literally hold a prototype screenshot onto the page.
+
+A torn piece could sit behind a product diagram.
+
+A little foil tab could mark:
+
+**BUILT**
+
+Another:
+
+**TESTED**
+
+Another:
+
+**SHIPPED**
+
+Now the material becomes part of the storytelling:
+
+**fashion editorial + things being assembled.**
+
+That's a much more interesting metaphor for “builder.”
+
+---
+
+# 6. Add one unmistakably “builder” moment above the fold
+
+I would actually change the composition you have now.
+
+Your left side is:
+
+> **Sharin
+> Khander.**
+
+Beautiful. Keep it.
+
+Your right side should become something like a **builder's workbench**.
+
+Not a literal desk. More like a collage:
+
+```text
+                 PRODUCT BUILDER
+
+        I build better ways to shop.
+        Easier, more personal,
+        and more fun.
+
+        ┌──────────┐       ┌───────────┐
+        │ prototype│ ───→  │ experiment│
+        └──────────┘       └───────────┘
+              ╲                 │
+               ╲                ↓
+                └──────→   SHIPPED
+
+        7 zero→one products
+        150+ experiments
+```
+
+The **fashion styling stays around it**.
+
+So the first impression becomes:
+
+> **This person has taste AND they make shit.**
+
+That's the exact signal you're after.
+
+---
+
+# 7. I'd also change the visual treatment of your categories
+
+You currently have:
+
+**ALL / DISCOVERY / COMMERCE / AI**
+
+That's very portfolio-site.
+
+Instead, make them feel more like **what you build**:
+
+**ALL · DISCOVERY · SHOPPING · AI**
+
+And potentially introduce:
+
+**0→1 · ML · EXPERIMENTS**
+
+Not necessarily as filters. They can be little tags attached to projects.
+
+For example:
+
+### Trend, Vibe, Occasion Discovery
+
+`DISCOVERY` `ML` `0→1`
+
+That communicates your range without saying:
+
+> “I am a multidisciplinary product builder with deep expertise…”
+
+Which is exactly the kind of portfolio copy that gets ignored.
+
+---
+
+# The aesthetic formula I'd use
+
+Your existing design already has **80% of the right DNA**.
+
+I'd think of the system as:
+
+### 70% fashion editorial
+
+* serif typography
+* cream
+* pink
+* olive
+* gold
+* whitespace
+* beautiful imagery
+* tactile paper
+
+### 30% product studio
+
+* grids
+* diagrams
+* interface fragments
+* technical annotations
+* numbered systems
+* experiment data
+* prototypes
+* arrows
+* “built / shipped / tested”
+
+**Don't make the 30% look like Silicon Valley.**
+
+Make it look like **a fashion editor's desk covered in product prototypes.**
+
+That's the visual identity I think fits *you* unusually well: **someone who understands fashion deeply enough to have taste, but is technical enough to actually build the systems underneath it.**
