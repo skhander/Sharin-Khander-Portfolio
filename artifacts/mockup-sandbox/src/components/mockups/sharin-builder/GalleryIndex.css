@@ -1,0 +1,341 @@
+.sharin-gallery-index .gallery-index-nav {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(20px, 4vw, 64px);
+  padding: 19px 0 22px;
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.sharin-gallery-index .gallery-index-label,
+.sharin-gallery-index .gallery-index-item > span:first-child,
+.sharin-gallery-index .gallery-position,
+.sharin-gallery-index .gallery-visual figcaption,
+.sharin-gallery-index .gallery-category {
+  font-family: var(--app-font-mono);
+  text-transform: uppercase;
+}
+
+.sharin-gallery-index .gallery-index-label {
+  flex: 0 0 auto;
+  padding-top: 7px;
+  color: hsl(var(--muted-foreground));
+  font-size: 8px;
+  letter-spacing: .13em;
+}
+
+.sharin-gallery-index .gallery-index-items {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 7px 18px;
+}
+
+.sharin-gallery-index .gallery-index-item {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 7px;
+  min-height: 27px;
+  padding: 4px 0;
+  color: hsl(var(--muted-foreground));
+  text-align: left;
+  transition: color .2s ease;
+}
+
+.sharin-gallery-index .gallery-index-item > span:first-child {
+  color: hsl(var(--accent) / .78);
+  font-size: 8px;
+}
+
+.sharin-gallery-index .gallery-index-item > span:last-child {
+  font-size: 11px;
+  line-height: 1.3;
+}
+
+.sharin-gallery-index .gallery-index-item:hover,
+.sharin-gallery-index .gallery-index-item[aria-current="true"] {
+  color: hsl(var(--foreground));
+}
+
+.sharin-gallery-index .gallery-index-item[aria-current="true"] > span:last-child {
+  text-decoration: underline;
+  text-decoration-color: hsl(var(--accent) / .65);
+  text-underline-offset: 4px;
+}
+
+.sharin-gallery-index .gallery-rail-shell {
+  padding-top: 17px;
+}
+
+.sharin-gallery-index .gallery-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 13px;
+}
+
+.sharin-gallery-index .gallery-position {
+  color: hsl(var(--muted-foreground));
+  font-size: 9px;
+  letter-spacing: .12em;
+}
+
+.sharin-gallery-index .gallery-position > span {
+  color: hsl(var(--accent));
+}
+
+.sharin-gallery-index .gallery-control-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.sharin-gallery-index .gallery-control-buttons button {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border: 1px solid hsl(var(--border));
+  color: hsl(var(--foreground));
+  transition: color .2s ease, background-color .2s ease, border-color .2s ease;
+}
+
+.sharin-gallery-index .gallery-control-buttons button:hover:not(:disabled) {
+  border-color: hsl(var(--foreground));
+  background: hsl(var(--foreground));
+  color: hsl(var(--background));
+}
+
+.sharin-gallery-index .gallery-control-buttons button:disabled {
+  color: hsl(var(--muted-foreground) / .48);
+  cursor: not-allowed;
+}
+
+.sharin-gallery-index .gallery-rail {
+  display: flex;
+  gap: clamp(14px, 2.2vw, 30px);
+  overflow-x: auto;
+  padding: 0 0 24px;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-color: hsl(var(--border)) transparent;
+  scrollbar-width: thin;
+  overscroll-behavior-inline: contain;
+}
+
+.sharin-gallery-index .gallery-slide {
+  flex: 0 0 min(78%, 1000px);
+  min-width: 0;
+  scroll-snap-align: start;
+}
+
+.sharin-gallery-index .gallery-visual {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  aspect-ratio: 1.72;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid hsl(var(--border) / .75);
+  background: #f6f5f1;
+}
+
+.sharin-gallery-index .gallery-artwork {
+  position: relative;
+  min-height: 0;
+  overflow: hidden;
+  background: hsl(var(--background));
+}
+
+.sharin-gallery-index .gallery-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .7s cubic-bezier(.22, 1, .36, 1);
+}
+
+.sharin-gallery-index .gallery-visual[data-project="curation"] img,
+.sharin-gallery-index .gallery-visual[data-project="attribute-enrichment"] img,
+.sharin-gallery-index .gallery-visual[data-project="ai-discovery"] img,
+.sharin-gallery-index .gallery-visual[data-project="visual-search"] img {
+  object-fit: contain;
+}
+
+.sharin-gallery-index .gallery-slide:hover .gallery-visual img {
+  transform: scale(1.018);
+}
+
+.sharin-gallery-index .gallery-image-index {
+  position: absolute;
+  right: 18px;
+  bottom: 14px;
+  color: hsl(var(--foreground) / .62);
+  font: italic 46px/.8 var(--app-font-serif);
+  letter-spacing: -.06em;
+}
+
+.sharin-gallery-index .gallery-visual figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 9px 11px;
+  border-top: 1px solid hsl(var(--border) / .75);
+  background: hsl(var(--background));
+  color: hsl(var(--muted-foreground));
+  font-size: 8px;
+  letter-spacing: .09em;
+  line-height: 1.2;
+}
+
+.sharin-gallery-index .gallery-caption {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, .55fr);
+  align-items: end;
+  gap: 18px 32px;
+  padding: 20px 2px 8px;
+}
+
+.sharin-gallery-index .gallery-caption-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  min-width: 0;
+}
+
+.sharin-gallery-index .gallery-caption-heading > svg {
+  flex: 0 0 auto;
+  margin-top: 2px;
+  color: hsl(var(--muted-foreground));
+  transition: color .2s ease, transform .2s ease;
+}
+
+.sharin-gallery-index .gallery-slide:hover .gallery-caption-heading > svg {
+  color: hsl(var(--accent));
+  transform: translate(2px, -2px);
+}
+
+.sharin-gallery-index .gallery-category {
+  margin: 0 0 7px;
+  color: hsl(var(--accent));
+  font-size: 8px;
+  letter-spacing: .1em;
+  line-height: 1.4;
+}
+
+.sharin-gallery-index .gallery-caption h3 {
+  margin: 0;
+  font: clamp(1.85rem, 3vw, 3.1rem)/.95 var(--app-font-serif);
+  letter-spacing: -.035em;
+}
+
+.sharin-gallery-index .gallery-description {
+  grid-column: 2;
+  grid-row: 1;
+  max-width: 340px;
+  margin: 0 0 2px;
+  color: hsl(var(--muted-foreground));
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.sharin-gallery-index .current-project-badges {
+  grid-column: 1 / -1;
+  margin-top: -5px;
+}
+
+.sharin-gallery-index button:focus-visible {
+  outline: 2px solid hsl(var(--accent));
+  outline-offset: 3px;
+}
+
+@media (max-width: 767px) {
+  .sharin-gallery-index .gallery-index-nav {
+    display: block;
+    padding: 16px 0;
+  }
+
+  .sharin-gallery-index .gallery-index-label {
+    display: block;
+    padding: 0 0 9px;
+  }
+
+  .sharin-gallery-index .gallery-index-items {
+    flex-wrap: nowrap;
+    gap: 16px;
+    overflow-x: auto;
+    padding: 0 1px 6px;
+    scrollbar-width: thin;
+    overscroll-behavior-inline: contain;
+  }
+
+  .sharin-gallery-index .gallery-index-item {
+    flex: 0 0 auto;
+  }
+
+  .sharin-gallery-index .gallery-slide {
+    flex-basis: 88%;
+  }
+
+  .sharin-gallery-index .gallery-visual {
+    aspect-ratio: 1.13;
+  }
+
+  .sharin-gallery-index .gallery-image-index {
+    right: 12px;
+    bottom: 10px;
+    font-size: 36px;
+  }
+
+  .sharin-gallery-index .gallery-visual figcaption {
+    padding: 7px;
+    font-size: 7px;
+    letter-spacing: .05em;
+  }
+
+  .sharin-gallery-index .gallery-caption {
+    display: block;
+    padding-top: 15px;
+  }
+
+  .sharin-gallery-index .gallery-caption h3 {
+    font-size: clamp(1.8rem, 7vw, 2.5rem);
+  }
+
+  .sharin-gallery-index .gallery-description {
+    margin-top: 10px;
+    font-size: 13px;
+  }
+
+  .sharin-gallery-index .gallery-caption .current-project-badges {
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .sharin-gallery-index .gallery-slide {
+    flex-basis: 92%;
+  }
+
+  .sharin-gallery-index .gallery-visual {
+    aspect-ratio: .98;
+  }
+
+  .sharin-gallery-index .gallery-visual figcaption span:first-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sharin-gallery-index .gallery-rail {
+    scroll-behavior: auto;
+  }
+
+  .sharin-gallery-index .gallery-visual img,
+  .sharin-gallery-index .gallery-caption-heading > svg,
+  .sharin-gallery-index .gallery-control-buttons button,
+  .sharin-gallery-index .gallery-index-item {
+    transition: none;
+  }
+}

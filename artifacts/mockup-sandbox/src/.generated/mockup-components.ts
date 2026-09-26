@@ -3,6 +3,9 @@ type ModuleMap = Record<string, () => Promise<Record<string, unknown>>>;
 export const modules: ModuleMap = {
   "./components/mockups/sharin-builder/BuilderStudio.tsx": () => import("../components/mockups/sharin-builder/BuilderStudio.tsx"),
   "./components/mockups/sharin-builder/Current.tsx": () => import("../components/mockups/sharin-builder/Current.tsx"),
+  "./components/mockups/sharin-builder/EditorialSequence.tsx": () => import("../components/mockups/sharin-builder/EditorialSequence.tsx"),
+  "./components/mockups/sharin-builder/ExpandedImageList.tsx": () => import("../components/mockups/sharin-builder/ExpandedImageList.tsx"),
+  "./components/mockups/sharin-builder/GalleryIndex.tsx": () => import("../components/mockups/sharin-builder/GalleryIndex.tsx"),
   "./components/mockups/sharin-builder/MobileIndex.tsx": () => import("../components/mockups/sharin-builder/MobileIndex.tsx"),
   "./components/mockups/sharin-builder/QuestionIndex.tsx": () => import("../components/mockups/sharin-builder/QuestionIndex.tsx"),
   "./components/mockups/sharin-builder/SystemsAtlas.tsx": () => import("../components/mockups/sharin-builder/SystemsAtlas.tsx")

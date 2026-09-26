@@ -1,0 +1,193 @@
+.sharin-editorial-sequence .editorial-sequence-list {
+  border-bottom: 0;
+}
+
+.sharin-editorial-sequence .editorial-sequence-card {
+  position: relative;
+  grid-template-columns: minmax(0, 1.12fr) minmax(250px, .88fr);
+  gap: clamp(34px, 7.5vw, 112px);
+  min-height: clamp(330px, 36vw, 510px);
+  padding: clamp(42px, 7vw, 94px) clamp(10px, 3.2vw, 48px);
+  border-bottom: 1px solid hsl(var(--border) / .8);
+}
+
+.sharin-editorial-sequence .editorial-sequence-card:nth-child(even) {
+  grid-template-columns: minmax(245px, .78fr) minmax(0, 1.22fr);
+  gap: clamp(40px, 9vw, 132px);
+  padding-inline: clamp(10px, 5.2vw, 78px) 0;
+}
+
+.sharin-editorial-sequence .editorial-sequence-card:hover {
+  background: transparent;
+}
+
+.sharin-editorial-sequence .editorial-sequence-card .current-project-copy {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: center;
+  max-width: 490px;
+  padding-block: 20px;
+}
+
+.sharin-editorial-sequence .editorial-sequence-card .current-project-visual {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: center;
+  width: 100%;
+  aspect-ratio: 1.32;
+  border: 0;
+  background: hsl(var(--muted) / .22);
+}
+
+.sharin-editorial-sequence .editorial-sequence-card:nth-child(even) .current-project-copy {
+  grid-column: 2;
+  padding-left: clamp(0px, 1vw, 14px);
+}
+
+.sharin-editorial-sequence .editorial-sequence-card:nth-child(even) .current-project-visual {
+  grid-column: 1;
+  grid-row: 1;
+  aspect-ratio: .92;
+}
+
+.sharin-editorial-sequence .editorial-sequence-card:nth-child(3n) {
+  grid-template-columns: minmax(0, .92fr) minmax(250px, 1.08fr);
+  padding-inline: 0 clamp(8px, 2vw, 30px);
+}
+
+.sharin-editorial-sequence .editorial-sequence-card:nth-child(3n) .current-project-visual {
+  aspect-ratio: 1.65;
+}
+
+.sharin-editorial-sequence .editorial-sequence-card:nth-child(3n):not(.is-reversed) .current-project-copy {
+  padding-left: clamp(18px, 4vw, 60px);
+}
+
+.sharin-editorial-sequence .editorial-sequence-card:nth-child(3n).is-reversed {
+  grid-template-columns: minmax(245px, .78fr) minmax(0, 1.22fr);
+  padding-inline: clamp(10px, 5.2vw, 78px) 0;
+}
+
+.sharin-editorial-sequence .editorial-sequence-card:nth-child(3n).is-reversed .current-project-visual {
+  aspect-ratio: 1.65;
+}
+
+.sharin-editorial-sequence .editorial-sequence-card .current-project-copy h3 {
+  max-width: 11ch;
+  margin-top: 19px;
+  font-size: clamp(2.15rem, 4.5vw, 4.7rem);
+  line-height: .92;
+}
+
+.sharin-editorial-sequence .editorial-sequence-card .current-project-copy p {
+  max-width: 29rem;
+  font-size: clamp(14px, 1.18vw, 16px);
+}
+
+.sharin-editorial-sequence .editorial-sequence-card .current-project-badges {
+  margin-top: 22px;
+}
+
+.sharin-editorial-sequence .editorial-sequence-card .current-project-visual figcaption {
+  padding: 10px 1px;
+  border-top: 1px solid hsl(var(--border) / .75);
+  background: transparent;
+}
+
+.sharin-editorial-sequence .editorial-sequence-card .current-project-visual img {
+  transition: transform .8s cubic-bezier(.22, 1, .36, 1);
+}
+
+.sharin-editorial-sequence .editorial-sequence-card:hover .current-project-visual img {
+  transform: scale(1.025);
+}
+
+.sharin-editorial-sequence .editorial-sequence-card .current-project-visual[data-project="visual-search"] img,
+.sharin-editorial-sequence .editorial-sequence-card .current-project-visual[data-project="curation"] img,
+.sharin-editorial-sequence .editorial-sequence-card .current-project-visual[data-project="attribute-enrichment"] img,
+.sharin-editorial-sequence .editorial-sequence-card .current-project-visual[data-project="ai-discovery"] img {
+  transition: none;
+}
+
+@media (max-width: 1023px) {
+  .sharin-editorial-sequence .editorial-sequence-card,
+  .sharin-editorial-sequence .editorial-sequence-card:nth-child(even),
+  .sharin-editorial-sequence .editorial-sequence-card:nth-child(3n),
+  .sharin-editorial-sequence .editorial-sequence-card:nth-child(3n).is-reversed {
+    grid-template-columns: minmax(0, 1fr) minmax(210px, .88fr);
+    gap: clamp(28px, 5vw, 56px);
+    min-height: 340px;
+    padding: 46px 10px;
+  }
+
+  .sharin-editorial-sequence .editorial-sequence-card:nth-child(even) .current-project-copy {
+    grid-column: 1;
+    padding-left: 0;
+  }
+
+  .sharin-editorial-sequence .editorial-sequence-card:nth-child(even) .current-project-visual {
+    grid-column: 2;
+    aspect-ratio: 1.18;
+  }
+}
+
+@media (max-width: 767px) {
+  .sharin-editorial-sequence .editorial-sequence-card,
+  .sharin-editorial-sequence .editorial-sequence-card:nth-child(even),
+  .sharin-editorial-sequence .editorial-sequence-card:nth-child(3n),
+  .sharin-editorial-sequence .editorial-sequence-card:nth-child(3n).is-reversed {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+    min-height: 0;
+    padding: 32px 0 38px;
+  }
+
+  .sharin-editorial-sequence .editorial-sequence-card .current-project-copy,
+  .sharin-editorial-sequence .editorial-sequence-card:nth-child(even) .current-project-copy,
+  .sharin-editorial-sequence .editorial-sequence-card:nth-child(3n):not(.is-reversed) .current-project-copy {
+    order: 0;
+    max-width: none;
+    padding: 0;
+  }
+
+  .sharin-editorial-sequence .editorial-sequence-card .current-project-visual,
+  .sharin-editorial-sequence .editorial-sequence-card:nth-child(even) .current-project-visual,
+  .sharin-editorial-sequence .editorial-sequence-card:nth-child(3n) .current-project-visual,
+  .sharin-editorial-sequence .editorial-sequence-card:nth-child(3n).is-reversed .current-project-visual {
+    order: 1;
+    width: 100%;
+    aspect-ratio: 1.36;
+  }
+
+  .sharin-editorial-sequence .editorial-sequence-card:nth-child(even) .current-project-copy h3,
+  .sharin-editorial-sequence .editorial-sequence-card .current-project-copy h3 {
+    max-width: 16ch;
+    margin: 11px 0 8px;
+    font-size: clamp(2rem, 8vw, 3.2rem);
+  }
+
+  .sharin-editorial-sequence .editorial-sequence-card .current-project-kicker {
+    align-items: center;
+    font-size: 8px;
+  }
+
+  .sharin-editorial-sequence .editorial-sequence-card .current-project-copy p {
+    font-size: 13px;
+  }
+
+  .sharin-editorial-sequence .editorial-sequence-card .current-project-badges {
+    margin-top: 13px;
+  }
+
+  .sharin-editorial-sequence .editorial-sequence-card .current-project-visual figcaption {
+    font-size: 7px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sharin-editorial-sequence .editorial-sequence-card .current-project-visual img {
+    transition: none;
+  }
+}

@@ -1,0 +1,146 @@
+.sharin-expanded-image-list .current-project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  padding: clamp(28px, 5.4vw, 76px) 0 clamp(34px, 5vw, 68px);
+  background: transparent;
+}
+
+.sharin-expanded-image-list .current-project-visual {
+  order: 0;
+  width: 100%;
+  aspect-ratio: 2.05;
+  border-color: hsl(var(--border) / .8);
+  background: hsl(var(--muted) / .22);
+}
+
+.sharin-expanded-image-list .current-project-artwork {
+  display: grid;
+  place-items: center;
+  background: hsl(var(--background));
+}
+
+.sharin-expanded-image-list .current-project-visual img {
+  object-fit: cover;
+}
+
+.sharin-expanded-image-list .current-project-visual[data-project="curation"],
+.sharin-expanded-image-list .current-project-visual[data-project="attribute-enrichment"],
+.sharin-expanded-image-list .current-project-visual[data-project="ai-discovery"],
+.sharin-expanded-image-list .current-project-visual[data-project="visual-search"] {
+  background: #f6f5f1;
+}
+
+.sharin-expanded-image-list .current-project-visual[data-project="curation"] img,
+.sharin-expanded-image-list .current-project-visual[data-project="attribute-enrichment"] img,
+.sharin-expanded-image-list .current-project-visual[data-project="ai-discovery"] img,
+.sharin-expanded-image-list .current-project-visual[data-project="visual-search"] img {
+  object-fit: contain;
+}
+
+.sharin-expanded-image-list .current-project-visual figcaption {
+  padding: 10px 13px;
+  font-size: 8px;
+}
+
+.sharin-expanded-image-list .current-project-copy {
+  order: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, .7fr);
+  column-gap: clamp(24px, 6vw, 90px);
+  align-items: start;
+  padding: 23px 2px 0;
+}
+
+.sharin-expanded-image-list .current-project-kicker {
+  grid-column: 1 / -1;
+}
+
+.sharin-expanded-image-list .current-project-copy h3 {
+  grid-column: 1;
+  margin: 12px 0 0;
+  font-size: clamp(2rem, 3.4vw, 3.55rem);
+  line-height: .98;
+}
+
+.sharin-expanded-image-list .current-project-copy p {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: center;
+  max-width: 29rem;
+  margin-top: 12px;
+  font-size: 15px;
+}
+
+.sharin-expanded-image-list .current-project-badges {
+  grid-column: 2;
+  margin-top: 17px;
+}
+
+.sharin-expanded-image-list .current-project-card:hover {
+  background: transparent;
+}
+
+.sharin-expanded-image-list .current-project-card:hover .current-project-visual img {
+  transform: scale(1.012);
+}
+
+.sharin-expanded-image-list .current-project-visual img {
+  transition: transform .7s cubic-bezier(.2, .7, .2, 1);
+}
+
+@media (max-width: 767px) {
+  .sharin-expanded-image-list .current-project-card {
+    padding: 28px 0 36px;
+  }
+
+  .sharin-expanded-image-list .current-project-visual {
+    aspect-ratio: 1.18;
+  }
+
+  .sharin-expanded-image-list .current-project-visual figcaption {
+    padding: 8px 8px;
+    font-size: 7px;
+    letter-spacing: .06em;
+  }
+
+  .sharin-expanded-image-list .current-project-copy {
+    display: block;
+    padding: 17px 1px 0;
+  }
+
+  .sharin-expanded-image-list .current-project-kicker {
+    font-size: 8px;
+  }
+
+  .sharin-expanded-image-list .current-project-copy h3 {
+    margin-top: 10px;
+    font-size: clamp(1.9rem, 8vw, 2.8rem);
+  }
+
+  .sharin-expanded-image-list .current-project-copy p {
+    margin-top: 10px;
+    font-size: 13px;
+  }
+
+  .sharin-expanded-image-list .current-project-badges {
+    margin-top: 13px;
+  }
+}
+
+@media (max-width: 560px) {
+  .sharin-expanded-image-list .current-project-visual {
+    aspect-ratio: .98;
+  }
+
+  .sharin-expanded-image-list .current-project-visual figcaption {
+    gap: 6px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sharin-expanded-image-list .current-project-visual img {
+    transition: none;
+  }
+}
