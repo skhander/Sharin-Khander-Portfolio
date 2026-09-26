@@ -61,8 +61,8 @@ export function AttributeEnrichmentStory({ project, nextProject }: { project: Pr
         </Link>
         <div className="mt-14 border-t border-border pt-6 md:mt-20">
           <p className="font-mono-archive text-[10px] uppercase tracking-[.18em] text-accent">{project.company} <span className="mx-2 text-border">/</span> {project.category}</p>
-          <h1 className="mt-6 max-w-[1200px] font-editorial text-[clamp(4.2rem,10vw,10.5rem)] leading-[.83] tracking-[-.055em]" data-testid="text-project-title">
-            Attribute<br />Enrichment<span className="text-accent">.</span>
+          <h1 className="mt-6 max-w-[1200px] font-editorial text-[clamp(3rem,8vw,8.5rem)] leading-[.88] tracking-[-.055em]" data-testid="text-project-title">
+            Trend, Vibe,<br />Occasion<br />Discovery<span className="text-accent">.</span>
           </h1>
           <p className="mt-8 max-w-[690px] text-lg leading-[1.4] md:mt-10 md:text-[1.45rem]">
             A new language for six million products. And a test of where it actually mattered.

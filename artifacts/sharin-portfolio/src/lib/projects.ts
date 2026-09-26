@@ -70,10 +70,10 @@ export const projects: Project[] = [
   },
   {
     slug: 'attribute-enrichment',
-    title: 'Attribute Enrichment',
+    title: 'Trend, Vibe, Occasion Discovery',
     company: 'The RealReal',
     category: 'AI / Discovery / Curation',
-    description: 'Turning product imagery into richer fashion attributes—and testing where they created value.',
+    description: 'Helping shoppers discover fashion by trend, vibe, and occasion.',
     thesis: 'Give the marketplace a richer language for understanding style.',
     role: 'Prompts, taxonomy, evaluation, UAT, testing strategy',
     scope: 'Search, recommendations, curation',
