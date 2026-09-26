@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { ArrowDownRight, ArrowUpRight, Blocks, Menu, Search, Sparkles, X } from 'lucide-react';
+import { ArrowDownRight, ArrowUpRight, Menu, Search, X } from 'lucide-react';
 import './_group.css';
 import './ShopMyDirection.css';
 
@@ -9,37 +9,31 @@ const publishedProjects = [
   {
     slug: 'elevated-experience',
     title: 'Elevated Experience',
-    company: 'The RealReal',
     category: 'Browse + PDP',
   },
   {
     slug: 'attribute-enrichment',
     title: 'Trend, Vibe, Occasion Discovery',
-    company: 'The RealReal',
     category: 'AI / Discovery / Curation',
   },
   {
     slug: 'ai-discovery',
     title: 'Shopping Agent',
-    company: 'The RealReal',
     category: 'AI / Discovery / Commerce',
   },
   {
     slug: 'visual-search',
     title: 'Visual Search',
-    company: 'The RealReal',
     category: 'AI / Discovery',
   },
   {
     slug: 'similar-designers',
     title: 'Similar Designers',
-    company: 'The RealReal',
     category: 'Discovery / Recommendations',
   },
   {
     slug: 'curation',
     title: 'Curation',
-    company: 'The RealReal',
     category: 'Discovery / Personalization',
   },
 ];
@@ -49,57 +43,47 @@ const projectVisuals: Record<string, {
   alt: string;
   note: string;
   problem: string;
-  move: string;
-  label?: string;
-  evidence?: string;
+  move?: string;
 }> = {
   'elevated-experience': {
     src: '/__mockup/images/shopmy-portfolio-browse-after.webp',
     alt: 'The RealReal luxury handbag browse interface, with a filter control and larger product imagery.',
     note: 'BROWSE / AFTER',
-    problem: 'One-of-one luxury items needed a product page that helped shoppers evaluate a piece.',
-    move: 'Tested grid against immersive scroll; reversed a save-button change the same day.',
-    evidence: 'Winning PDP test: +5% orders / visitor',
+    problem: 'One-of-one pieces are harder to judge in a product grid.',
+    move: 'Tested grid vs. immersive PDP; restored the save control the same day.',
   },
   'attribute-enrichment': {
     src: '/__mockup/images/shopmy-portfolio-chanel-top.webp',
     alt: 'A Chanel vintage top listing used to show how product images can be enriched with style attributes.',
     note: 'CATALOG INTELLIGENCE / SOURCE',
-    problem: 'Shoppers needed more natural ways to search listings by trend, vibe or occasion.',
-    move: 'Owned prompts, taxonomy, evaluation and UAT for AI-generated style attributes.',
-    evidence: 'Baseline search test: no lift; measurement strategy changed',
+    problem: 'Millions of listings. Shoppers search by trend, vibe and occasion.',
+    move: 'Owned prompt design, taxonomy, evaluation and UAT.',
   },
   'ai-discovery': {
     src: '/__mockup/images/shopmy-portfolio-shopping-agent-comparison.png',
     alt: 'Ask TRR product comparison interface showing two diamond tennis bracelets.',
     note: 'SHOPPING AGENT / COMPARISON',
-    problem: 'Keyword search made shoppers translate real shopping intent into catalog terms.',
-    move: 'Defined agent behavior, core journeys, capabilities and measurement for a discovery MVP.',
-    evidence: 'Learning rollout began with 5% of traffic',
+    problem: 'Keyword search makes shoppers translate intent into catalog terms.',
+    move: 'Defined agent behavior, core journeys, capabilities and measurement.',
   },
   'visual-search': {
     src: '/__mockup/images/shopmy-portfolio-visual-search-ui.png',
     alt: 'Visual Search mobile interface with selectable regions in a reference photo.',
-    note: 'VISUAL SEARCH / INTERFACE',
-    problem: 'A reference image can be a starting point for product discovery.',
-    move: 'The interface shows selectable regions within a reference photo.',
-    label: 'INTERFACE SHOWN',
+    note: 'SELECTABLE IMAGE REGIONS',
+    problem: 'Find a product inside a reference photo.',
   },
   'similar-designers': {
     src: '/__mockup/images/shopmy-portfolio-similar-designers-look.jpg',
     alt: 'An editorial designer look used to illustrate a path between fashion designers.',
-    note: 'DESIGNER DISCOVERY / EXAMPLE',
-    problem: 'Designer pages could be a dead end for shoppers looking for what to explore next.',
-    move: 'Started the MVP with co-browsed designers, not an unproven visual similarity model.',
-    evidence: 'Visual and personalized signals were later directions',
+    note: 'RECOMMENDATIONS / EXAMPLE',
+    problem: 'A designer page could end the browse journey.',
+    move: 'MVP signal: designers shopped together—not visual similarity.',
   },
   curation: {
     src: '/__mockup/images/shopmy-portfolio-vintage-bridal-lookbook.webp',
     alt: 'The RealReal customer-facing Shop Vintage Bridal lookbook and product grid.',
-    note: 'CUSTOMER-FACING LOOKBOOK',
-    problem: 'The Shop Vintage Bridal lookbook connects an editorial theme with shoppable inventory.',
-    move: 'Customer-facing Vintage Bridal lookbook and product grid shown.',
-    label: 'EXPERIENCE SHOWN',
+    note: 'SHOP VINTAGE BRIDAL',
+    problem: 'Editorial theme linked to shoppable inventory.',
   },
 };
 
@@ -136,7 +120,6 @@ export function ShopMyDirection() {
           aria-label="Sharin Khander, selected work"
         >
           Sharin Khander
-          <small>Product · discovery · commerce</small>
         </a>
         <nav className="direction-nav" aria-label="Primary navigation">
           {navigation.map((link) => (
@@ -182,16 +165,14 @@ export function ShopMyDirection() {
       <main className="direction-reveal">
         <section className="direction-hero direction-shell" aria-labelledby="direction-title">
           <div className="direction-hero-meta">
-            <p className="direction-eyebrow"><span className="direction-dot" aria-hidden="true" /> Product portfolio <b>/</b> The RealReal</p>
             <a className="direction-hero-link" href="#selected-work" data-testid="link-explore-selected-work">
-              Explore selected work <ArrowDownRight size={15} aria-hidden="true" />
+              Projects <ArrowDownRight size={15} aria-hidden="true" />
             </a>
           </div>
           <div className="direction-hero-grid">
             <div className="direction-hero-copy">
-              <p className="direction-title-overline">Strategy <span>×</span> systems <span>×</span> experiences</p>
-              <h1 id="direction-title" className="direction-title">Product<br /><em>builder.</em></h1>
-              <p className="direction-byline"><b>Sharin Khander</b> — product builder with an engineering background, working at the intersection of luxury discovery and commerce.</p>
+              <h1 id="direction-title" className="direction-title">Luxury discovery<span>.</span></h1>
+              <p className="direction-byline">Engineering-led products at The RealReal, from browse to AI agents.</p>
             </div>
             <figure className="direction-feature-visual">
               <div className="direction-feature-image">
@@ -200,40 +181,26 @@ export function ShopMyDirection() {
                   alt={projectVisuals['similar-designers'].alt}
                   fetchPriority="high"
                 />
-                <span className="direction-feature-index" aria-hidden="true">02</span>
               </div>
               <figcaption>
-                <span><small>FROM THE WORK</small><strong>Similar Designers</strong></span>
-                <span className="direction-feature-caption">DESIGNER DISCOVERY / EXAMPLE</span>
+                <strong>Similar Designers</strong>
               </figcaption>
             </figure>
           </div>
           <div className="direction-proof-strip" aria-label="Selected product evidence from the case studies">
-            <div className="direction-proof-intro">
-              <Blocks size={14} aria-hidden="true" />
-              <span>Human taste,<br />measured in product.</span>
-            </div>
-            <p><small>Winning PDP test</small><strong>+5%</strong><span>orders / visitor</span></p>
-            <p><small>First AI-search test</small><strong>No lift</strong><span>measurement strategy changed</span></p>
-            <p><small>Shopping agent</small><strong>5%</strong><span>traffic learning rollout</span></p>
-          </div>
-          <div className="direction-hero-footer">
-            <span>Product thinking, scope and trade-offs</span>
-            <span>SELECTED WORK <strong>{String(publishedProjects.length).padStart(2, '0')}</strong></span>
+              <p><small>PDP test</small><strong>+5%</strong><span>orders / visitor</span></p>
+              <p><small>AI search test</small><strong>No lift</strong><span>measurement revised</span></p>
+              <p><small>Agent rollout plan</small><strong>5%</strong><span>of traffic</span></p>
           </div>
         </section>
 
         <section id="selected-work" className="direction-work direction-shell" aria-labelledby="direction-work-heading">
           <div className="direction-section-head">
-            <div>
-              <p className="direction-section-index"><b>01</b> / Selected product work</p>
-              <h2 id="direction-work-heading">Human taste.<br /><em>Product rigor.</em></h2>
-            </div>
-            <p className="direction-section-intro">A closer look at the decisions, tests and systems behind luxury discovery—from richer catalog foundations to more confident ways to shop.</p>
+            <h2 id="direction-work-heading">Selected work</h2>
           </div>
 
           <div className="direction-filter-bar">
-            <div className="direction-filter-label"><Search size={14} aria-hidden="true" /><span>Filter by product area</span></div>
+            <div className="direction-filter-label"><Search size={14} aria-hidden="true" /><span>Filter</span></div>
             <div className="direction-filters" role="group" aria-label="Filter projects by product area">
               {filters.map((item) => (
                 <button
@@ -263,7 +230,7 @@ export function ShopMyDirection() {
                   key={project.slug}
                   className={`direction-project layout-${projectIndex + 1}`}
                   data-testid={`link-project-${project.slug}`}
-                  aria-label={`${project.title}: ${visual.move}. Read case study.`}
+                  aria-label={`${project.title}: ${visual.problem}${visual.move ? ` ${visual.move}` : ''} Read case study.`}
                 >
                   <div className="direction-project-copy">
                     <div className="direction-project-kicker">
@@ -272,19 +239,13 @@ export function ShopMyDirection() {
                     </div>
                     <h3>{project.title}</h3>
                     <p className="direction-project-description">{visual.problem}</p>
-                    <div className="direction-work-note">
-                      <span className="direction-work-icon"><Blocks size={13} aria-hidden="true" /></span>
-                      <div><small>{visual.label ?? 'PRODUCT WORK'}</small><strong>{visual.move}</strong></div>
-                    </div>
-                    {visual.evidence && <p className="direction-evidence"><Sparkles size={12} aria-hidden="true" /><span>{visual.evidence}</span></p>}
-                    <span className="direction-open">Read case study <ArrowUpRight size={14} aria-hidden="true" /></span>
+                    {visual.move && <div className="direction-work-note"><strong>{visual.move}</strong></div>}
                   </div>
                   <figure className="direction-visual" data-project={project.slug}>
                     <div className="direction-artwork">
                       <img src={visual.src} alt={visual.alt} loading={projectIndex < 2 ? 'eager' : 'lazy'} />
-                      <span className="direction-image-index" aria-hidden="true">{String(projectIndex + 1).padStart(2, '0')}</span>
                     </div>
-                    <figcaption><span>{visual.note}</span><span>{project.company}</span></figcaption>
+                    <figcaption><span>{visual.note}</span></figcaption>
                   </figure>
                 </a>
               );
@@ -297,16 +258,11 @@ export function ShopMyDirection() {
               <button type="button" onClick={() => setFilter('All')} data-testid="button-reset-filter">Show all work</button>
             </div>
           )}
-          <div className="direction-endnote">
-            <span className="direction-endnote-label">06 / Product systems</span>
-            <p>Commerce is more than the transaction. It’s the whole path to a confident choice.</p>
-          </div>
         </section>
       </main>
 
       <footer className="direction-footer">
-        <p className="direction-footer-name">Sharin Khander</p>
-        <p className="direction-footer-note">Product work · {new Date().getFullYear()}</p>
+        <p>© {new Date().getFullYear()}</p>
       </footer>
     </div>
   );
