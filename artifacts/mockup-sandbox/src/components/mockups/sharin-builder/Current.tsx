@@ -113,7 +113,7 @@ export function Current() {
   ];
 
   return (
-    <div className="sharin-current archive-noise min-h-screen min-h-[100dvh] bg-background text-foreground">
+    <div className="sharin-current min-h-screen min-h-[100dvh] bg-background text-foreground">
       <header className="mx-auto flex w-full max-w-[1440px] items-center justify-between border-b border-border px-6 py-5 sm:px-10 lg:px-16">
         <a href="/" onClick={(event) => { event.preventDefault(); closeMenu(); }} className="archive-link group flex items-baseline gap-2" data-testid="link-home">
           <span className="font-editorial text-[1.5rem] leading-none tracking-[-.03em]">Sharin Khander</span>

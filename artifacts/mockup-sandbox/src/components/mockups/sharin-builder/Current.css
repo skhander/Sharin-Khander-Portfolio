@@ -1,45 +1,71 @@
+.sharin-current {
+  color: hsl(var(--foreground));
+}
+
+/* A quieter editorial frame: keep the original typography and imagery, remove
+   the foil, grain and offset-panel effects that competed with the work. */
+.sharin-current .work-hero::before,
+.sharin-current .work-band::before,
+.sharin-current .work-band::after,
+.sharin-current .work-list::before {
+  display: none;
+}
+
+.sharin-current .work-intro {
+  background: hsl(var(--secondary) / .26);
+  box-shadow: none;
+}
+
 .sharin-current .current-work-band {
   align-items: flex-end;
+  gap: 24px;
+  padding: 20px 0;
+  border-top: 1px solid hsl(var(--border));
+  border-bottom: 1px solid hsl(var(--border));
+  background: transparent;
 }
 
 .sharin-current .current-filters {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  gap: 3px;
+  gap: 4px;
 }
 
 .sharin-current .current-filter {
   display: inline-flex;
   align-items: center;
-  gap: 9px;
-  min-height: 36px;
-  padding: 0 10px;
+  gap: 8px;
+  min-height: 38px;
+  padding: 0 11px;
   border: 1px solid transparent;
-  color: hsl(var(--foreground));
+  color: hsl(var(--muted-foreground));
   font: 9px/1 var(--app-font-mono);
-  letter-spacing: .08em;
+  letter-spacing: .07em;
   text-transform: uppercase;
-  transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+  transition: background-color .18s ease, color .18s ease, border-color .18s ease;
 }
 
 .sharin-current .current-filter small {
-  color: hsl(var(--muted-foreground));
+  color: hsl(var(--muted-foreground) / .8);
   font-size: 8px;
 }
 
-.sharin-current .current-filter:hover {
-  border-color: hsl(var(--foreground) / .34);
+.sharin-current .current-filter:hover,
+.sharin-current .current-filter:focus-visible {
+  border-color: hsl(var(--border));
+  color: hsl(var(--foreground));
+  outline: none;
 }
 
 .sharin-current .current-filter.is-active {
-  border-color: hsl(var(--accent));
-  background: hsl(var(--accent));
-  color: hsl(var(--accent-foreground));
+  border-color: hsl(var(--foreground));
+  background: hsl(var(--foreground));
+  color: hsl(var(--background));
 }
 
 .sharin-current .current-filter.is-active small {
-  color: hsl(var(--accent-foreground) / .74);
+  color: hsl(var(--background) / .7);
 }
 
 .sharin-current .current-project-header {
@@ -50,7 +76,7 @@
   border-bottom: 1px solid hsl(var(--border));
   color: hsl(var(--muted-foreground));
   font: 9px/1.3 var(--app-font-mono);
-  letter-spacing: .13em;
+  letter-spacing: .12em;
   text-transform: uppercase;
 }
 
@@ -60,17 +86,21 @@
 
 .sharin-current .current-project-card {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(160px, 240px);
+  grid-template-columns: minmax(0, 1fr) minmax(190px, 280px);
   align-items: center;
-  gap: 22px;
+  gap: clamp(24px, 5vw, 72px);
   min-width: 0;
-  padding: 19px 7px;
+  padding: clamp(24px, 4vw, 42px) 0;
   border-bottom: 1px solid hsl(var(--border));
   transition: background-color .2s ease;
 }
 
+.sharin-current .current-project-card:last-child {
+  border-bottom: 0;
+}
+
 .sharin-current .current-project-card:hover {
-  background: hsl(var(--secondary) / .22);
+  background: hsl(var(--secondary) / .12);
 }
 
 .sharin-current .current-project-visual {
@@ -82,8 +112,8 @@
   margin: 0;
   aspect-ratio: 1.5;
   overflow: hidden;
-  border: 1px solid hsl(var(--border));
-  background: hsl(var(--muted) / .4);
+  border: 1px solid hsl(var(--border) / .75);
+  background: hsl(var(--muted) / .2);
 }
 
 .sharin-current .current-project-artwork {
@@ -116,21 +146,12 @@
 }
 
 .sharin-current .current-project-card:hover .current-project-visual img {
-  transform: scale(1.035);
+  transform: scale(1.025);
 }
 
-.sharin-current .current-project-visual[data-project="visual-search"] img {
-  transition: none;
-}
-
-.sharin-current .current-project-visual[data-project="curation"] img {
-  transition: none;
-}
-
-.sharin-current .current-project-visual[data-project="attribute-enrichment"] img {
-  transition: none;
-}
-
+.sharin-current .current-project-visual[data-project="visual-search"] img,
+.sharin-current .current-project-visual[data-project="curation"] img,
+.sharin-current .current-project-visual[data-project="attribute-enrichment"] img,
 .sharin-current .current-project-visual[data-project="ai-discovery"] img {
   transition: none;
 }
@@ -139,12 +160,12 @@
   display: flex;
   justify-content: space-between;
   gap: 8px;
-  padding: 6px 7px;
+  padding: 8px 9px;
+  border-top: 1px solid hsl(var(--border) / .75);
   background: hsl(var(--background));
-  border-top: 1px solid hsl(var(--border));
-  color: hsl(var(--foreground));
-  font: 7px/1.2 var(--app-font-mono);
-  letter-spacing: .12em;
+  color: hsl(var(--muted-foreground));
+  font: 8px/1.2 var(--app-font-mono);
+  letter-spacing: .09em;
 }
 
 .sharin-current .current-project-copy {
@@ -159,8 +180,8 @@
   justify-content: space-between;
   gap: 8px;
   color: hsl(var(--accent));
-  font: 8px/1.4 var(--app-font-mono);
-  letter-spacing: .1em;
+  font: 9px/1.4 var(--app-font-mono);
+  letter-spacing: .08em;
   text-transform: uppercase;
 }
 
@@ -170,41 +191,44 @@
 
 .sharin-current .current-project-kicker svg {
   flex: 0 0 auto;
-  transition: transform .2s ease;
+  color: hsl(var(--muted-foreground));
+  transition: transform .2s ease, color .2s ease;
 }
 
 .sharin-current .current-project-card:hover .current-project-kicker svg {
   transform: translate(2px, -2px);
+  color: hsl(var(--accent));
 }
 
 .sharin-current .current-project-copy h3 {
-  margin: 10px 0 7px;
-  font: clamp(1.65rem, 2.35vw, 2.55rem)/.96 var(--app-font-serif);
+  margin: 13px 0 8px;
+  font: clamp(1.8rem, 2.6vw, 2.8rem)/.98 var(--app-font-serif);
   letter-spacing: -.035em;
 }
 
 .sharin-current .current-project-copy p {
+  max-width: 38rem;
   margin: 0;
   color: hsl(var(--muted-foreground));
-  font-size: 12px;
-  line-height: 1.45;
+  font-size: 14px;
+  line-height: 1.55;
 }
 
 .sharin-current .current-project-badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
-  margin-top: 13px;
+  gap: 6px;
+  margin-top: 17px;
 }
 
 .sharin-current .current-project-badges span {
   display: inline-flex;
   align-items: center;
-  min-height: 22px;
-  padding: 4px 6px;
+  min-height: 24px;
+  padding: 5px 8px;
   border: 1px solid hsl(var(--border));
-  color: hsl(var(--accent));
-  font: 7px/1.1 var(--app-font-mono);
+  color: hsl(var(--muted-foreground));
+  font: 8px/1.1 var(--app-font-mono);
   letter-spacing: .04em;
   text-transform: uppercase;
 }
@@ -228,6 +252,12 @@
   text-transform: uppercase;
 }
 
+.sharin-current button:focus-visible,
+.sharin-current a:focus-visible {
+  outline: 2px solid hsl(var(--accent));
+  outline-offset: 3px;
+}
+
 @media (max-width: 1023px) {
   .sharin-current .current-work-band {
     align-items: flex-start;
@@ -236,11 +266,48 @@
     justify-content: flex-start;
   }
   .sharin-current .current-project-card {
-    grid-template-columns: minmax(0, 1fr) minmax(150px, 220px);
-    gap: 18px;
+    grid-template-columns: minmax(0, 1fr) minmax(160px, 230px);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .sharin-current .current-work-band {
+    padding: 18px 0;
+  }
+  .sharin-current .current-project-card {
+    grid-template-columns: minmax(0, 1fr) 112px;
+    gap: 16px;
+    padding: 22px 0;
+  }
+  .sharin-current .current-project-visual {
+    aspect-ratio: .86;
+  }
+  .sharin-current .current-project-visual figcaption {
+    gap: 4px;
+    padding: 6px 5px;
+    font-size: 6px;
+    letter-spacing: .04em;
+  }
+  .sharin-current .current-project-kicker {
+    align-items: flex-start;
+    font-size: 8px;
   }
   .sharin-current .current-project-copy h3 {
-    font-size: clamp(1.9rem, 3.5vw, 2.6rem);
+    margin-top: 8px;
+    font-size: clamp(1.55rem, 6vw, 2.1rem);
+  }
+  .sharin-current .current-project-copy p {
+    font-size: 12px;
+  }
+  .sharin-current .current-project-badges {
+    gap: 5px;
+    margin-top: 11px;
+  }
+  .sharin-current .current-project-badges span {
+    min-height: 21px;
+    padding: 4px 5px;
+    font-size: 7px;
   }
 }
 
@@ -248,49 +315,34 @@
   .sharin-current .current-filters {
     flex-wrap: nowrap;
     justify-content: flex-start;
-    width: calc(100vw - 40px);
+    width: calc(100vw - 48px);
     overflow-x: auto;
-    padding-bottom: 5px;
+    padding: 2px 0 8px;
     scrollbar-width: thin;
+    overscroll-behavior-inline: contain;
   }
   .sharin-current .current-filter {
     flex: 0 0 auto;
-    gap: 6px;
-    padding-inline: 8px;
-    font-size: 8px;
+    gap: 7px;
+    min-height: 40px;
+    padding-inline: 10px;
+    font-size: 9px;
   }
   .sharin-current .current-project-card {
-    grid-template-columns: minmax(0, 1fr) 92px;
-    gap: 14px;
-    padding: 16px 3px;
+    grid-template-columns: minmax(0, 1fr) minmax(94px, 30%);
+    gap: 12px;
   }
-  .sharin-current .current-project-visual {
-    aspect-ratio: .82;
-  }
-  .sharin-current .current-project-visual figcaption {
-    gap: 4px;
-    padding: 5px 4px;
-    font-size: 5px;
+  .sharin-current .current-project-visual figcaption span:first-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .sharin-current .current-project-kicker {
-    align-items: flex-start;
     font-size: 7px;
+    letter-spacing: .045em;
   }
   .sharin-current .current-project-copy h3 {
-    margin-top: 6px;
-    font-size: clamp(1.5rem, 6vw, 2rem);
-  }
-  .sharin-current .current-project-copy p {
-    font-size: 11px;
-  }
-  .sharin-current .current-project-badges {
-    gap: 4px;
-    margin-top: 9px;
-  }
-  .sharin-current .current-project-badges span {
-    min-height: 19px;
-    padding: 3px 4px;
-    font-size: 6px;
+    font-size: clamp(1.45rem, 6vw, 1.85rem);
   }
 }
 
