@@ -24,16 +24,21 @@ export default function Work() {
 
   return (
     <div className="page-reveal">
-      <section className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-6 pb-16 pt-14 sm:px-10 md:grid-cols-[1.2fr_.8fr] md:items-end md:gap-12 md:pb-20 md:pt-20 lg:px-16">
-        <div>
-          <p className="font-mono-archive text-[10px] uppercase tracking-[.18em] text-accent">Product work / 01—{String(publishedProjects.length).padStart(2, '0')}</p>
-          <h1 className="mt-6 font-editorial text-[clamp(4.3rem,9vw,8.8rem)] leading-[.83] tracking-[-.055em]">Sharin<br />Khander<span className="text-accent">.</span></h1>
+      <section className="portfolio-hero relative mx-auto grid min-h-[22rem] w-full max-w-[1440px] grid-cols-1 overflow-hidden px-6 pb-8 pt-8 sm:px-10 sm:pb-10 sm:pt-10 md:grid-cols-[1.15fr_.85fr] md:items-end md:gap-12 md:px-14 md:pb-11 md:pt-11 lg:px-16" aria-labelledby="hero-title">
+        <div className="hero-copy">
+          <p className="hero-rule font-mono-archive text-[10px] uppercase tracking-[.18em]">Product work / 01—{String(publishedProjects.length).padStart(2, '0')}</p>
+          <h1 id="hero-title" className="hero-display mt-5 max-w-[10ch] font-editorial text-[clamp(4.7rem,10vw,8.5rem)] leading-[.78] tracking-[-.065em]">Sharin<br />Khander<span className="text-accent">.</span></h1>
+          <a href="#selected-work" className="hero-scroll mt-7 inline-flex items-center gap-3 font-mono-archive text-[10px] uppercase tracking-[.16em]" aria-label="Scroll to selected work">
+            <span className="flex h-8 w-8 items-center justify-center rounded-full border border-accent/50 text-sm leading-none" aria-hidden="true">↓</span>
+            <span>Scroll / selected work</span>
+          </a>
         </div>
-        <div className="relative max-w-md bg-[hsl(var(--rose-surface))] px-6 py-7 sm:px-8 sm:py-9 md:max-w-none md:px-9 md:py-11">
-          <p className="font-editorial text-[clamp(2.2rem,3.4vw,3.5rem)] italic leading-none tracking-[-.025em]">Product builder.</p>
-          <p className="mt-6 text-balance text-[clamp(1.2rem,1.9vw,1.75rem)] font-medium leading-[1.25] tracking-[-.02em]">
+        <div className="hero-intro relative z-10 mt-9 max-w-md border-l-2 border-accent pl-5 sm:pl-7 md:mb-2 md:mt-0 md:max-w-none">
+          <p className="font-editorial text-[clamp(2.35rem,3.8vw,4rem)] italic leading-none tracking-[-.035em]">Product builder.</p>
+          <p className="mt-4 max-w-[29rem] text-balance text-[clamp(1.15rem,1.7vw,1.55rem)] font-medium leading-[1.25] tracking-[-.02em]">
             I build better ways to shop. Easier, more personal, and more fun.
           </p>
+          <p className="mt-6 font-mono-archive text-[10px] uppercase tracking-[.14em] text-muted-foreground">Consumer / commerce / culture</p>
         </div>
       </section>
 

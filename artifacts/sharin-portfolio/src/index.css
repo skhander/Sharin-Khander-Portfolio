@@ -60,6 +60,11 @@
   --destructive-foreground: 39 27% 94%;
   --rose-surface: 352 27% 80%;
   --olive-surface: 68 17% 69%;
+  --hero-oxblood: 347 43% 18%;
+  --hero-oxblood-soft: 347 32% 27%;
+  --hero-cream: 38 31% 92%;
+  --hero-coral: 7 68% 70%;
+  --hero-lime: 67 29% 68%;
   --app-font-sans: 'DM Sans', sans-serif;
   --app-font-serif: 'Instrument Serif', Georgia, serif;
   --app-font-mono: 'DM Mono', monospace;
@@ -91,6 +96,11 @@
   --destructive-foreground: 30 13% 13%;
   --rose-surface: 347 22% 34%;
   --olive-surface: 68 12% 38%;
+  --hero-oxblood: 347 35% 12%;
+  --hero-oxblood-soft: 347 28% 23%;
+  --hero-cream: 38 31% 92%;
+  --hero-coral: 7 68% 70%;
+  --hero-lime: 67 29% 68%;
 }
 
 @layer base {
@@ -132,6 +142,58 @@
 .project-row:hover { background-color: hsl(var(--secondary) / .34); }
 .project-row:hover .project-arrow { transform: translate(3px, -3px); color: hsl(var(--accent)); }
 .project-arrow { transition: transform .25s ease, color .25s ease; }
+
+/* Homepage hero: a compact editorial index that hands attention to the work. */
+.portfolio-hero {
+  background: hsl(var(--background));
+  border-bottom: 1px solid hsl(var(--border));
+  isolation: isolate;
+}
+.portfolio-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 12%;
+  width: min(28rem, 42vw);
+  height: 1px;
+  pointer-events: none;
+  background: hsl(var(--accent) / .8);
+}
+.portfolio-hero::after {
+  content: none;
+}
+.hero-copy {
+  position: relative;
+  z-index: 2;
+}
+.hero-display {
+  color: hsl(var(--hero-oxblood));
+  text-wrap: balance;
+}
+.hero-intro {
+  position: relative;
+  color: hsl(var(--foreground));
+}
+.hero-rule {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  color: hsl(var(--accent));
+}
+.hero-rule::before {
+  content: '';
+  width: 2.7rem;
+  height: 1px;
+  background: currentColor;
+}
+.hero-scroll {
+  transition: color .2s ease, transform .2s ease;
+  color: hsl(var(--accent));
+}
+.hero-scroll:hover {
+  color: hsl(var(--foreground));
+  transform: translateY(3px);
+}
 
 /* Elevated Experience: a restrained editorial product dossier. */
 .elevated-frame {
@@ -175,4 +237,5 @@
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
   .elevated-frame:hover img { transform: none; }
+  .hero-scroll:hover { transform: none; }
 }
