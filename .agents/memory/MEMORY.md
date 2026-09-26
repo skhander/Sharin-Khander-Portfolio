@@ -1,0 +1,1 @@
+- [Temporary PDF tooling](temporary-pdf-tooling.md) — Python PDF inspection can leave package-manager changes in this web workspace; check for incidental setup before delivery.

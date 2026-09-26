@@ -1,0 +1,405 @@
+Build a polished, editorial-style interactive case study for my portfolio about a conversational shopping agent I led at The RealReal.
+
+The goal is NOT to make a traditional product case study with lots of text, cards, and bullet points.
+
+The goal is to **visually tell the story of why conversational shopping matters**.
+
+The core idea:
+
+The RealReal has millions of unique secondhand products. Traditional keyword search works when shoppers know exactly what they want AND know how the catalog describes it. But shoppers don't naturally think in catalog attributes.
+
+They think:
+
+“Something for a summer wedding in Napa.”
+
+“90s minimalist black dress for a black-tie wedding.”
+
+“I want something like this, but less formal.”
+
+“Which of these would work with these shoes?”
+
+An LLM can understand that nuance.
+
+The agent turns search from a keyword-matching exercise into a conversation: users can search naturally with text or images, refine what they want through dialogue, compare products, and get styling/outfitting guidance.
+
+The portfolio story should communicate:
+
+**6M+ products → discovery is hard → keywords force users to speak the catalog's language → LLMs understand intent → conversational shopping makes the inventory easier to explore.**
+
+Use the uploaded TRR Conversational Shopping deck as source material and preserve the terminology and product concepts from it. In particular, the deck describes the shift from precise keywords toward images, half-baked ideas, occasions and trends; guided discovery; product comparison; and styling/outfitting recommendations.
+
+### VISUAL STORY STRUCTURE
+
+#### 1. HERO — “6 million things to discover.”
+
+Start with a visually striking field/grid of hundreds or thousands of fashion product cards.
+
+Do NOT show six million literal cards. Create the visual impression of an enormous inventory.
+
+Headline:
+
+**6M+ products.
+Finding the right one is the hard part.**
+
+Subhead:
+
+**Traditional search makes shoppers describe what they want in the language of the catalog.**
+
+Make this section feel slightly overwhelming.
+
+Animate product cards continuously appearing / moving / shifting so the inventory feels endless.
+
+Then introduce a search bar.
+
+Placeholder:
+
+`Search dresses`
+
+Show the user typing:
+
+`black silk dress`
+
+Results appear.
+
+Then visually expose the problem:
+
+`black silk dress`
+
+→ `black`
+→ `silk`
+→ `dress`
+
+Small caption:
+
+**Useful when you know exactly what you're looking for.**
+
+Then transition.
+
+---
+
+#### 2. THE PROBLEM — “People don't shop in attributes.”
+
+Replace the search bar with natural human language.
+
+Example:
+
+**“I need something for a summer wedding in Napa.”**
+
+Animate the system interpreting the request:
+
+SUMMER
+WEDDING
+NAPA
+→ occasion
+→ setting
+→ season
+→ style
+→ formality
+
+Then show a relevant set of products appearing.
+
+The important visual idea:
+
+**The shopper speaks normally.
+The system does the translation.**
+
+Do not make this feel like an AI technical diagram. Make it feel magical and obvious.
+
+---
+
+#### 3. BEFORE → AFTER
+
+Create a strong full-width transition.
+
+LEFT:
+
+**Traditional search**
+
+User has to:
+
+* guess keywords
+* know fashion terminology
+* match catalog language
+* run multiple searches
+* scroll through hundreds of results
+
+RIGHT:
+
+**Conversational discovery**
+
+User can:
+
+* describe an idea
+* upload an image
+* refine naturally
+* compare options
+* ask for styling help
+
+Keep copy extremely short.
+
+The TRR deck explicitly frames this as moving from precise keywords toward images, half-baked ideas, occasions and trends, followed by guided discovery and comparison. Use that framing.
+
+---
+
+#### 4. LET THE USER EXPERIENCE IT
+
+This should be the centerpiece of the case study.
+
+Create an interactive simulated shopping-agent experience.
+
+Start with:
+
+**“Dresses for a summer wedding in Napa”**
+
+The agent returns 4–6 beautiful product cards.
+
+Each card should feel like a real TRR product card.
+
+Then let the user type:
+
+**“Less formal. Something I could wear with sandals.”**
+
+Results update.
+
+Then:
+
+**“Which one is easiest to dress up later?”**
+
+The agent compares 2–3 products.
+
+Then:
+
+**“What would you wear with it?”**
+
+The agent generates an outfitting recommendation.
+
+The interaction should demonstrate the product better than paragraphs explaining it.
+
+The deck's intended discovery journey is: input → search → results/refinement, followed by comparison and decision.
+
+---
+
+#### 5. MY ROLE
+
+After the experience, introduce the product work.
+
+Headline:
+
+**I built the system behind the conversation.**
+
+Keep this extremely visual and concise.
+
+Show 4–5 interconnected pieces:
+
+**Agent behavior**
+Defined instructions, guardrails, and brand voice.
+
+**Product intelligence**
+Identified the APIs and capabilities needed to search, rank, compare and recommend.
+
+**Core journeys**
+Designed the discovery, refinement, comparison and styling flows.
+
+**Feedback loop**
+Built two-way feedback through user surveys and conversation analysis.
+
+**Measurement**
+Instrumented the full funnel from agent entry → engagement → PDP → Obsess / Add to Cart → conversion.
+
+Use “Obsess” as the TRR term.
+
+The deck specifically calls out full-funnel tracking, AOV/ASP/GMV measurement, session replay, surveys, conversational summaries, and feedback loops.
+
+---
+
+#### 6. THE PRODUCT DECISION / TRADEOFF
+
+Do NOT present this as a perfect success story.
+
+Show the important constraint:
+
+**We couldn't make it a customer-service agent.**
+
+My team did not own customer-service workflows, so I deliberately scoped the MVP around **discovery**.
+
+Visualize the boundary:
+
+DISCOVERY
+✓ search
+✓ refine
+✓ compare
+✓ style
+✓ discover
+
+CUSTOMER SERVICE
+× order questions
+× returns
+× account issues
+× support workflows
+
+Then explain in one sentence:
+
+**The agent could help you decide what to buy — not answer every question about your order.**
+
+This is important because it demonstrates product judgment rather than just AI enthusiasm.
+
+---
+
+#### 7. EXPERIMENT
+
+Show a simple experiment visualization.
+
+**A/B test**
+
+But explain the unusual design clearly:
+
+**We launched without a traditional control because the first question was whether the experience could add value without harming the shopping funnel.**
+
+Then show:
+
+Exposure
+↓
+Agent engagement
+↓
+Product discovery
+↓
+PDP
+↓
+Obsess / Add to Cart
+↓
+Order
+
+The primary behavioral question:
+
+**Does conversational discovery create incremental shopping activity without hurting conversion?**
+
+Do not invent metrics.
+
+Use placeholders for actual numbers if needed.
+
+---
+
+#### 8. THE LESSON — THE NAME MATTERED
+
+This should be the ending and one of the most memorable moments.
+
+Show:
+
+**ASKTRR**
+
+large on screen.
+
+Then:
+
+**The problem wasn't the model.
+It was what users thought the product was.**
+
+The product was intended to be a **discovery agent**.
+
+But the name “AskTRR” led users to interpret it as a **customer-service assistant**.
+
+Visualize the mismatch:
+
+WHAT WE BUILT:
+
+🔎 Discovery
+Compare
+Style
+Explore
+
+WHAT USERS EXPECTED:
+
+💬 Customer service
+Orders
+Returns
+Support
+
+Then show:
+
+**Adoption was low.**
+
+Do not frame this as a failure of AI.
+
+Frame it as a product lesson:
+
+**AI products are not just model experiences.
+The product has to teach users what it is.**
+
+This should be the final takeaway.
+
+---
+
+### DESIGN DIRECTION
+
+Think **Brian Chesky / modern product portfolio / editorial fashion magazine**, not SaaS dashboard.
+
+The RealReal is a fashion marketplace, so the case study should feel like fashion + technology.
+
+Use:
+
+* huge typography
+* lots of whitespace
+* beautiful product imagery
+* editorial layouts
+* subtle motion
+* oversized numbers
+* product cards
+* conversational UI
+* occasional full-bleed visual moments
+* restrained neutral palette
+* TRR-inspired luxury aesthetic
+
+Avoid:
+
+* generic AI gradients
+* robot imagery
+* glowing blue/purple AI effects
+* excessive rounded cards
+* dashboard-style layouts
+* giant paragraphs
+* generic “AI-powered” language
+* stock illustrations
+* cheesy neural-network graphics
+
+The **products should be the visual hero**.
+
+The interface should feel like an actual shopping experience, not a presentation about one.
+
+### INTERACTION DESIGN
+
+Make the page scroll-driven where appropriate.
+
+Use animation to reveal the story:
+
+1. Massive inventory
+2. Keyword search
+3. Search friction
+4. Natural-language intent
+5. Agent interpretation
+6. Product discovery
+7. Refinement
+8. Comparison
+9. Styling
+10. Product decisions
+11. My role
+12. Experiment
+13. AskTRR naming lesson
+
+Animations should be subtle and fast. No excessive parallax.
+
+### IMPORTANT
+
+Do not make up product metrics, business results, or technical details that are not in the source material.
+
+Where quantitative results are needed, create clearly labeled placeholders that I can replace later.
+
+The case study should make the reader understand the product in under 30 seconds even if they don't read every word.
+
+The central story is:
+
+**The problem wasn't finding more products.
+It was helping people describe what they wanted.**
+
+And the product insight is:
+
+**When shoppers can speak naturally, millions of products become easier to discover.**

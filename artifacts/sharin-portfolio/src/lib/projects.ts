@@ -90,7 +90,7 @@ export const projects: Project[] = [
     title: 'Shopping Agent',
     company: 'The RealReal',
     category: 'AI / Discovery / Commerce',
-    description: 'Multimodal search, product comparison, virtual try-on, and in-agent checkout.',
+    description: 'MVP: multimodal search and product comparison. Later explorations: virtual try-on and in-agent checkout.',
     status: 'published',
   },
   {
