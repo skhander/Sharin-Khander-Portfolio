@@ -133,6 +133,84 @@
 .project-row:hover .project-arrow { transform: translate(3px, -3px); color: hsl(var(--accent)); }
 .project-arrow { transition: transform .25s ease, color .25s ease; }
 
+/* The supplied foil is treated as a physical edge of the archive, never a text surface. */
+.work-hero {
+  position: relative;
+  isolation: isolate;
+}
+.work-hero > * {
+  position: relative;
+  z-index: 1;
+}
+.work-hero::before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  top: -1px;
+  right: 0;
+  width: min(43%, 590px);
+  height: 206px;
+  background: url('/media/gold-foil.webp') center 36% / cover no-repeat;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 96% 97%, 90% 99%, 83% 94%, 77% 96%, 72% 90%, 66% 91%, 61% 85%, 55% 86%, 49% 78%, 43% 77%, 38% 69%, 31% 68%, 27% 58%, 21% 55%, 18% 44%, 11% 41%, 10% 30%, 5% 26%, 7% 15%, 0 10%);
+  opacity: .86;
+}
+.work-intro {
+  box-shadow: 12px 12px 0 hsl(var(--background) / .8);
+}
+.work-band {
+  position: relative;
+  isolation: isolate;
+}
+.work-band::before,
+.work-band::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  background: url('/media/gold-foil.webp') center / cover no-repeat;
+}
+.work-band::before {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+}
+.work-band::after {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  opacity: .5;
+}
+.work-list {
+  position: relative;
+}
+.work-list::before {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  top: 58px;
+  left: -40px;
+  width: 26px;
+  height: 255px;
+  background: url('/media/gold-foil.webp') 44% center / cover no-repeat;
+  clip-path: polygon(0 0, 100% 0, 91% 12%, 100% 24%, 85% 36%, 94% 47%, 76% 61%, 85% 72%, 58% 87%, 42% 100%, 0 100%);
+  opacity: .8;
+}
+@media (min-width: 1024px) {
+  .work-list::before { left: -64px; width: 44px; height: 320px; }
+}
+@media (max-width: 767px) {
+  .work-hero::before {
+    width: 32%;
+    height: 118px;
+    background-position: 42% 25%;
+    opacity: .77;
+  }
+  .work-intro { box-shadow: 7px 7px 0 hsl(var(--background) / .8); }
+  .work-list::before { display: none; }
+}
+
 /* Elevated Experience: a restrained editorial product dossier. */
 .elevated-frame {
   background: hsl(38 18% 88%);
