@@ -81,10 +81,10 @@ export const projects: Project[] = [
   },
   {
     slug: 'ai-discovery',
-    title: 'AI Discovery',
+    title: 'Shopping Agent',
     company: 'The RealReal',
-    category: 'AI / Search / Discovery',
-    description: 'Conversational and visual product discovery.',
+    category: 'AI / Discovery / Commerce',
+    description: 'Multimodal search, product comparison, virtual try-on, and in-agent checkout.',
     status: 'published',
   },
   {

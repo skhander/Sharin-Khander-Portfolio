@@ -39,7 +39,7 @@ Visitors can browse and filter the selected work, open reusable project pages, a
 
 ## Gotchas
 
-- Elevated Experience uses user-supplied PDP and Browse screenshots, a PDP recording, and supplied outcomes. Attribute Enrichment uses supplied product examples, a customer-facing Vintage Bridal screenshot, and supplied outcomes; do not label that screenshot as the internal Curation Tool. AI Discovery, Visual Search, Checkout, and Curation still lack verified media and results. The site has no public contact channel.
+- Elevated Experience uses user-supplied PDP and Browse screenshots, a PDP recording, and supplied outcomes. Attribute Enrichment uses supplied product examples, a customer-facing Vintage Bridal screenshot, and supplied outcomes; do not label that screenshot as the internal Curation Tool. Shopping Agent, Visual Search, Checkout, and Curation still lack verified media and results. The site has no public contact channel.
 - The sixth "Future project" is an unpublished archive slot, not a live case study.
 
 ## Pointers
