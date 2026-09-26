@@ -89,7 +89,7 @@ export default function Work() {
           </div>
           <div className="work-thesis">
             <p className="work-thesis-label"><Braces size={14} aria-hidden="true" /> How I think about the work</p>
-            <p className="work-thesis-copy">I build the product logic behind better ways to shop—not just the screen it lives on.</p>
+            <p className="work-thesis-copy">I build habit-formint experiences people love.</p>
              <p className="work-thesis-note">A few decisions, tests and rollout signals from the work below.</p>
              <div className="work-system-map" aria-label="Selected product evidence from the case studies">
                <span><b>+5%</b> orders / visitor · winning PDP test</span>
@@ -103,7 +103,6 @@ export default function Work() {
           <span className="work-index">SELECTED WORK <b>{String(publishedProjects.length).padStart(2, '0')}</b></span>
         </div>
       </section>
-
       <section id="selected-work" className="mx-auto w-full max-w-[1440px] px-6 pb-20 sm:px-10 md:px-12 md:pb-28 lg:px-16" aria-labelledby="work-heading">
         <div className="work-section-head">
           <div>
