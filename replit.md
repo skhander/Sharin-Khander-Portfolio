@@ -39,7 +39,7 @@ Visitors can browse and filter the selected work, open reusable project pages, a
 
 ## Gotchas
 
-- The initial brief supplied project names and descriptions, but no original screenshots, case-study evidence, verified results, or contact channel. Add these only from supplied/verified source material.
+- Elevated Experience now uses user-supplied PDP and Browse screenshots, a PDP screen recording, and user-supplied outcomes. The other projects still lack verified media and results; the site has no public contact channel.
 - The sixth "Future project" is an unpublished archive slot, not a live case study.
 
 ## Pointers

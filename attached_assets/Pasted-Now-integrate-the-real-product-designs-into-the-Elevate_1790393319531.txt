@@ -1,0 +1,137 @@
+Now integrate the real product designs into the **Elevated Experience** project page.
+
+The storytelling should be **extremely concise, visual, and scannable**. Think editorial product story, not a traditional PM case study.
+
+The hiring manager should understand the story by scrolling through the page in ~60 seconds.
+
+### Story structure
+
+Use this sequence:
+
+**1. The starting point**
+
+Show the **PDP Before** screenshot large.
+
+Caption:
+
+> **The PDP felt anything but luxurious.**
+> Small imagery. Too much whitespace. Not enough product.
+
+Then introduce the experiment:
+
+> **We tested two ways to make the product more immersive.**
+
+Show the two designs side-by-side:
+
+**A — Grid**
+**B — Immersive scroll**
+
+Keep the labels extremely small.
+
+---
+
+### 2. A small change. A big lesson.
+
+Show the variation where the **Obsessions heart moved to the left of the product details.**
+
+Large metric:
+
+**−15% Obsessions**
+**−10% Orders / visitor**
+
+Then one sharp takeaway:
+
+> **Don't make users look for muscle memory.**
+
+Supporting copy:
+
+> We moved the heart. Users stopped using it. We shipped the fix the same day.
+
+Do not add more explanation.
+
+---
+
+### 3. The winning experience
+
+Show the **immersive scroll** design prominently, ideally with a short video or interaction.
+
+Headline:
+
+> **Good friction can still be good UX.**
+
+Supporting copy:
+
+> The third image took an extra scroll to reach—but the more immersive experience won.
+
+Large metric:
+
+**+5% Orders / visitor**
+
+Make this feel like a product decision, not a metric dump.
+
+---
+
+### 4. Then we took the same idea to Browse.
+
+Transition with a simple statement:
+
+> **Next, we brought the same thinking to PLPs.**
+
+Show a large **Before → After** comparison.
+
+Before:
+
+* cluttered filters
+* tiny product images
+
+After:
+
+* filters behind a drawer
+* larger product imagery
+* more visual breathing room
+
+---
+
+### 5. The risk
+
+Make the product judgment explicit:
+
+> **This could have backfired.**
+
+Then three very short points:
+
+**More clicks**
+Filtering now required an extra tap.
+
+**6M+ items**
+Shoppers rely on filters to find what they want.
+
+**Bigger images**
+More visual browsing could slow high-throughput shoppers.
+
+Then the result:
+
+**+10% Conversion**
+
+And one final takeaway:
+
+> **More immersive browsing beat faster browsing.**
+
+---
+
+# Overall writing style
+
+The copy should feel:
+
+* punchy
+* intelligent
+* confident
+* extremely concise
+* easy to skim
+* conversational
+* grounded in actual product decisions
+
+Use **short sentences.**
+Use **large headlines.**
+Use **metrics as visual anchors.**
+Use **screenshots to explain the product.**

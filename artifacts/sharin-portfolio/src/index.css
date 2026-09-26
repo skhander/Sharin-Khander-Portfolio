@@ -132,6 +132,36 @@
 .project-row:hover { background-color: hsl(var(--secondary) / .34); }
 .project-row:hover .project-arrow { transform: translate(3px, -3px); color: hsl(var(--accent)); }
 .project-arrow { transition: transform .25s ease, color .25s ease; }
+
+/* Elevated Experience: a restrained editorial product dossier. */
+.elevated-frame {
+  background: hsl(38 18% 88%);
+  overflow: hidden;
+}
+.elevated-frame img,
+.elevated-frame video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.elevated-frame img {
+  transition: transform .55s cubic-bezier(.22, 1, .36, 1);
+}
+.elevated-frame:hover img {
+  transform: scale(1.012);
+}
+.elevated-browse-scroll {
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scrollbar-color: hsl(var(--accent) / .45) transparent;
+}
+.elevated-zoom {
+  animation: page-reveal .25s ease-out both;
+}
+@media (max-width: 767px) {
+  .elevated-browse-scroll img { min-width: 580px; }
+}
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
+  .elevated-frame:hover img { transform: none; }
 }
