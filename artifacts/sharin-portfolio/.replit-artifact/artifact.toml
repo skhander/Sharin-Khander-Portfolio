@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Sharin Khander — Portfolio"
+description = "A premium product portfolio for Sharin Khander, a product builder and former engineer. Explore her work across luxury marketplaces, AI discovery, visual search, checkout, and personalization."
+version = "1.0.0"
+id = "artifacts/sharin-portfolio"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25275
+
+[services.development]
+run = "pnpm --filter @workspace/sharin-portfolio run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/sharin-portfolio", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/sharin-portfolio/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25275"
+BASE_PATH = "/"

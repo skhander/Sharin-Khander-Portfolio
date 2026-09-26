@@ -1,0 +1,484 @@
+Build a premium product portfolio website for **Sharin Khander**, a product builder and former engineer.
+
+### The goal
+
+The primary audience is a **product hiring manager or product leader**.
+
+They should land on the site and immediately understand:
+
+* Sharin is a **product builder**, not a traditional PM who only writes specs.
+* She builds **habit-forming consumer products people love to use**.
+* She has deep experience in **marketplaces, AI-powered discovery, ecommerce, checkout, personalization, virtual try-on, and consumer productivity**.
+* She thinks deeply about **what to build, why to build it, and how to make it feel great**.
+* She can move from strategy → product thinking → prototype → shipped experience.
+
+The site should make me want to **see the work**.
+
+Do NOT make this feel like a generic PM portfolio, résumé website, SaaS landing page, or personal-brand site.
+
+It should feel like a **beautiful product archive**.
+
+---
+
+# Visual direction
+
+Think **minimal, editorial, elevated, modern consumer tech**.
+
+References in spirit:
+
+* Apple product pages
+* Linear
+* Arc
+* Stripe
+* high-end fashion editorial
+* great product design portfolios
+
+But do not copy any of them.
+
+### Design principles
+
+* Mostly black, white, and neutral tones.
+* One restrained accent color used sparingly for interaction, links, tags, or highlights.
+* Lots of whitespace.
+* Strong typography.
+* Excellent hierarchy.
+* Large headlines.
+* Short paragraphs.
+* Tight copy.
+* Generous margins.
+* Avoid visual clutter.
+* Avoid unnecessary cards, pills, gradients, shadows, or decorative UI.
+* Avoid excessive rounded corners.
+* Avoid generic "AI portfolio" aesthetics.
+* Avoid stock photography.
+* Let the actual product screenshots be the visual centerpiece.
+
+The website should feel **quiet and confident**.
+
+Whitespace should communicate confidence, not emptiness.
+
+---
+
+# Homepage
+
+Create a simple homepage with this hierarchy:
+
+### Hero
+
+**Sharin Khander**
+
+**Product builder.**
+
+Build a short supporting statement:
+
+> I build habit-forming consumer products people love.
+
+Then a concise description:
+
+> Product leader and former engineer focused on marketplaces, discovery, AI, and the moments that turn browsing into buying.
+
+Keep this section extremely clean.
+
+Do not put a giant résumé paragraph here.
+
+---
+
+### Selected Work
+
+Make the work the centerpiece of the homepage.
+
+Large project previews with strong imagery.
+
+Each project should have:
+
+**Project name**
+One-line description
+Small metadata such as role / area / year
+
+Use large screenshots, videos, or interactive prototypes as the visual treatment.
+
+Projects should feel editorial rather than like generic portfolio cards.
+
+Initial projects:
+
+1. **Elevated Experience**
+
+   * The RealReal
+   * Browse + PDP
+   * Reimagining the shopping experience around luxury inventory
+
+2. **AI Discovery**
+
+   * The RealReal
+   * AI / Search / Discovery
+   * Helping shoppers discover products through conversational and visual experiences
+
+3. **Visual Search**
+
+   * The RealReal
+   * AI / Discovery
+   * Turning inspiration into product discovery
+
+4. **Checkout**
+
+   * The RealReal
+   * Commerce
+   * Improving the path from product discovery to purchase
+
+5. **Curation**
+
+   * The RealReal
+   * Discovery / Personalization
+   * Scaling editorial taste into product discovery
+
+6. **[Future project]**
+
+The architecture should make adding projects extremely easy.
+
+---
+
+# Project pages
+
+Every project should follow a consistent but flexible framework.
+
+The hiring manager should be able to understand the project in **30 seconds**, then go deeper if they want.
+
+Do NOT make every project a giant 2,000-word case study.
+
+Use progressive disclosure.
+
+### Project header
+
+Large project title.
+
+Short, punchy thesis.
+
+Example:
+
+**Elevated Experience**
+
+> Making The RealReal feel like a luxury marketplace—not a treasure hunt.
+
+Then:
+
+**My role**
+Product strategy, product direction, execution
+
+**Team**
+Design, Engineering, Research, Data
+
+**Scope**
+Browse + PDP
+
+---
+
+# Project framework
+
+Every project should include these sections:
+
+### 01 — The Problem
+
+What wasn't working?
+
+Keep this to 2–4 sentences.
+
+Focus on the actual user or business problem.
+
+Show supporting product screenshots when useful.
+
+---
+
+### 02 — The Insight
+
+What did Sharin learn that changed the direction of the product?
+
+This is important.
+
+Don't just explain what the team built.
+
+Show **how she thinks**.
+
+Include:
+
+* user research
+* behavioral data
+* competitive/contextual insights
+* product principles
+* constraints
+
+Use large pull quotes or metrics when appropriate.
+
+---
+
+### 03 — The Bet
+
+What did Sharin decide to do?
+
+Explain the product decision clearly.
+
+Use concise language:
+
+**We believed X.
+So we built Y.
+Because Z.**
+
+This should communicate product judgment without turning into a strategy deck.
+
+---
+
+### 04 — The Work
+
+This is the visual centerpiece.
+
+Give the product room.
+
+Support:
+
+* large screenshots
+* image galleries
+* videos
+* prototypes
+* Figma embeds if possible
+* interactive demos
+* before / after comparisons
+* annotated screens
+
+Screens should be much larger than the surrounding text.
+
+Allow images to break outside the normal text column when appropriate.
+
+---
+
+### 05 — How I Made Decisions
+
+This section should show actual product thinking.
+
+Examples:
+
+**Decision:** Put more emphasis on imagery.
+
+**Why:** The inventory is the product. Shoppers need to evaluate condition, material, fit, and details quickly.
+
+Or:
+
+**Decision:** Start with women's apparel.
+
+**Why:** It gave the team a focused initial surface to validate model precision before expanding.
+
+Keep these sections concise.
+
+Do not create generic "Challenges / Solutions / Results" filler.
+
+---
+
+### 06 — Outcome
+
+Show measurable impact when available.
+
+Use large typography for important metrics.
+
+Example:
+
+**+1.1%**
+visitor conversion
+
+**+1.5%**
+PDP views
+
+Then explain the context in one sentence.
+
+If quantitative results aren't available, use a qualitative outcome such as:
+
+* launched to X% of users
+* reduced operational effort
+* enabled editorial teams to scale
+* expanded the product's capabilities
+
+Never fabricate metrics.
+
+---
+
+### 07 — What I'd Do Next
+
+Optional.
+
+Use this only when it adds real insight.
+
+Show that Sharin thinks beyond launch:
+
+> If I had another quarter, I'd focus on...
+
+Keep it short.
+
+---
+
+# Interaction design
+
+The site should feel like a product someone wants to explore.
+
+Add subtle interactions:
+
+* smooth page transitions
+* tasteful hover states
+* image zoom
+* sticky project navigation
+* scroll progress
+* video playback when appropriate
+* subtle motion
+* expandable sections
+
+But **do not over-animate**.
+
+No distracting particle effects.
+
+No excessive parallax.
+
+No gimmicky cursor.
+
+No animation that gets in the way of reading or viewing the work.
+
+---
+
+# Typography
+
+Typography is extremely important.
+
+Use a modern sans-serif with excellent typography.
+
+Possible choices:
+
+* Inter
+* Geist
+* SF Pro-style system stack
+
+Use:
+
+* very large headlines
+* tight tracking on large type
+* comfortable body copy
+* strong contrast between headings and supporting text
+
+The site should remain highly readable.
+
+Avoid tiny text.
+
+---
+
+# Layout
+
+Use a strong editorial grid.
+
+Desktop:
+
+* generous margins
+* max-width content container
+* wide visual canvas
+* readable text column
+* images can extend wider than text
+
+Mobile:
+
+* preserve hierarchy
+* make screenshots easy to view
+* avoid tiny UI
+* maintain generous spacing
+* make navigation simple
+
+---
+
+# Navigation
+
+Keep it extremely simple:
+
+**Sharin Khander**
+
+Work
+About
+Contact
+
+The Work page should be the default / primary destination.
+
+Optional small links:
+
+* LinkedIn
+* Resume
+* Email
+
+Do not create a complicated navigation system.
+
+---
+
+# About
+
+Keep the About page short.
+
+Possible positioning:
+
+**I like making things.**
+
+I'm a product builder and former engineer focused on consumer products people love to use.
+
+I've spent the last several years building products across marketplaces, discovery, personalization, AI, ecommerce, and checkout.
+
+I care about the intersection of **product thinking, technology, and design**—and I'm happiest when I can go from a blank page to something people can actually use.
+
+Include a concise career timeline, but keep the work itself more prominent than the résumé.
+
+---
+
+# Technical requirements
+
+Build this as a real production-quality website.
+
+Use React / Next.js or the best modern stack available in Replit.
+
+Requirements:
+
+* responsive
+* fast loading
+* accessible
+* SEO-friendly
+* clean component architecture
+* easy to add new projects
+* project content should be data-driven where possible
+* optimized image loading
+* video support
+* support embedded prototypes
+* smooth transitions
+* excellent mobile experience
+
+Create reusable components for:
+
+* ProjectHero
+* ProjectMeta
+* Section
+* ImageGallery
+* BeforeAfter
+* Video
+* PrototypeEmbed
+* Metric
+* Decision
+* ProjectNavigation
+* Footer
+
+Make it easy for me to add a new project without rebuilding the page structure.
+
+---
+
+# Most important product principle
+
+**The portfolio itself should demonstrate Sharin's product taste.**
+
+Do not explain that she has good product taste.
+
+Make the website feel like something she built.
+
+The actual work should dominate the experience.
+
+A hiring manager should be able to skim the site in 60 seconds and understand:
+
+**Who is she? → What has she built? → How does she think? → What did she ship? → What happened?**
+
+Then they should be able to spend 10–15 minutes going deep into the projects that interest them.
+
+Prioritize **clarity, taste, hierarchy, and the work itself** over clever portfolio conventions.
