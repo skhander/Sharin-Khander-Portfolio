@@ -1,0 +1,1 @@
+- [Mockup preview discovery](mockup-preview-discovery.md) — new mockup directories can need a workflow restart to register; HTTP 200 alone is not proof.

@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap');
+
+/* Tokens and global styling extracted from the portfolio's index.css. */
+:root {
+  --background: 39 27% 94%;
+  --foreground: 30 13% 13%;
+  --border: 36 15% 79%;
+  --input: 36 15% 79%;
+  --ring: 347 38% 31%;
+  --card: 39 27% 94%;
+  --card-foreground: 30 13% 13%;
+  --card-border: 36 15% 79%;
+  --popover: 39 27% 94%;
+  --popover-foreground: 30 13% 13%;
+  --popover-border: 36 15% 79%;
+  --primary: 347 38% 31%;
+  --primary-foreground: 39 27% 94%;
+  --secondary: 352 25% 83%;
+  --secondary-foreground: 30 13% 13%;
+  --muted: 65 13% 82%;
+  --muted-foreground: 36 11% 34%;
+  --accent: 347 38% 31%;
+  --accent-foreground: 39 27% 94%;
+  --destructive: 347 48% 36%;
+  --destructive-foreground: 39 27% 94%;
+  --rose-surface: 352 27% 80%;
+  --olive-surface: 68 17% 69%;
+  --app-font-sans: 'DM Sans', sans-serif;
+  --app-font-serif: 'Instrument Serif', Georgia, serif;
+  --app-font-mono: 'DM Mono', monospace;
+  --font-sans: var(--app-font-sans);
+  --font-serif: var(--app-font-serif);
+  --font-mono: var(--app-font-mono);
+  --radius: 0.15rem;
+}
+
+.dark {
+  --background: 30 13% 13%;
+  --foreground: 39 27% 94%;
+  --border: 30 10% 30%;
+  --input: 30 10% 30%;
+  --ring: 352 25% 83%;
+  --card: 30 13% 13%;
+  --card-foreground: 39 27% 94%;
+  --card-border: 30 10% 30%;
+  --popover: 30 13% 13%;
+  --popover-foreground: 39 27% 94%;
+  --secondary: 347 24% 26%;
+  --muted: 65 10% 26%;
+  --muted-foreground: 40 14% 72%;
+  --accent: 352 35% 76%;
+  --accent-foreground: 30 13% 13%;
+  --rose-surface: 347 22% 34%;
+  --olive-surface: 68 12% 38%;
+}
+
+.font-editorial { font-family: var(--app-font-serif); }
+.font-mono-archive { font-family: var(--app-font-mono); }
+.text-balance { text-wrap: balance; }
+.archive-link { transition: color .2s ease, border-color .2s ease; }
+.archive-link:hover { color: hsl(var(--accent)); }
+.project-row { transition: background-color .25s ease; }
+.project-row:hover { background-color: hsl(var(--secondary) / .34); }
+.project-row:hover .project-arrow { transform: translate(3px, -3px); color: hsl(var(--accent)); }
+.project-arrow { transition: transform .25s ease, color .25s ease; }
+.portfolio-current { font-family: var(--app-font-sans); }
+.portfolio-current * { box-sizing: border-box; }
+.portfolio-current :focus-visible { outline: 2px solid hsl(var(--accent)); outline-offset: 4px; }
+.portfolio-current::selection { background: hsl(var(--accent) / .22); }
+.portfolio-current.archive-noise::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: .018;
+  z-index: 20;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+}
+.portfolio-current .page-reveal { animation: portfolio-page-reveal .65s cubic-bezier(.22, 1, .36, 1) both; }
+@keyframes portfolio-page-reveal {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-current *, .portfolio-current *::before, .portfolio-current *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+}
