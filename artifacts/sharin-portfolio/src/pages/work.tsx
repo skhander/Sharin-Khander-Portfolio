@@ -3,8 +3,48 @@ import { ArrowUpRight } from 'lucide-react';
 import { Link } from 'wouter';
 import { publishedProjects } from '@/lib/projects';
 import { usePageMeta } from '@/lib/use-page-meta';
+import './editorial-work.css';
 
 const filters = ['All', 'Discovery', 'Commerce', 'AI'];
+
+const projectVisuals: Record<string, { src: string; alt: string; note: string; badges: string[] }> = {
+  'elevated-experience': {
+    src: '/media/browse-after.webp',
+    alt: 'The RealReal luxury handbag browse interface',
+    note: 'PRODUCT INTERFACE',
+    badges: ['Redesigns'],
+  },
+  'attribute-enrichment': {
+    src: '/media/attribute-enrichment/chanel-top.webp',
+    alt: 'Chanel vintage top used in the attribute-enrichment project',
+    note: 'ATTRIBUTE ENRICHMENT / SOURCE VISUAL',
+    badges: ['0 → 1', 'Machine Learning', 'LLMs'],
+  },
+  'ai-discovery': {
+    src: '/media/work/shopping-agent-comparison.png',
+    alt: 'Ask TRR mobile product comparison interface showing two diamond tennis bracelets',
+    note: 'ASK TRR / PRODUCT COMPARISON',
+    badges: ['Machine Learning', '0 → 1'],
+  },
+  'visual-search': {
+    src: '/media/work/visual-search-ui.png',
+    alt: 'Visual Search mobile camera interface with selectable regions in a photo',
+    note: 'VISUAL SEARCH / SOURCE INTERFACE',
+    badges: ['Machine Learning', '0 → 1'],
+  },
+  'similar-designers': {
+    src: '/media/work/similar-designers-look.jpg',
+    alt: 'Designer look used for designer discovery',
+    note: 'DESIGNER LOOKBOOK',
+    badges: ['Recommendations'],
+  },
+  curation: {
+    src: '/media/attribute-enrichment/vintage-bridal-lookbook.webp',
+    alt: 'The RealReal vintage bridal lookbook',
+    note: 'ACTUAL CUSTOMER-FACING LOOKBOOK',
+    badges: ['Machine Learning', 'Internal Tools'],
+  },
+};
 
 function matchesFilter(category: string, filter: string) {
   if (filter === 'All') return true;
@@ -23,7 +63,7 @@ export default function Work() {
   );
 
   return (
-    <div className="page-reveal">
+    <div className="page-reveal editorial-work">
       <section className="work-hero mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-6 pb-16 pt-14 sm:px-10 md:grid-cols-[1.2fr_.8fr] md:items-end md:gap-12 md:pb-20 md:pt-20 lg:px-16">
         <div>
           <p className="font-mono-archive text-[10px] uppercase tracking-[.18em] text-accent">Product work / 01—{String(publishedProjects.length).padStart(2, '0')}</p>
@@ -56,26 +96,40 @@ export default function Work() {
           </div>
         </div>
 
-        <div className="work-list border-t border-border">
+        <div className="work-list editorial-project-list border-t border-border" aria-live="polite">
           <div className="flex items-center justify-between gap-3 py-4 font-mono-archive text-[10px] uppercase tracking-[.15em] text-muted-foreground">
-            <span className="bg-muted px-2.5 py-1 text-foreground">The RealReal</span><span>{visibleProjects.length} projects</span>
+            <span className="bg-muted px-2.5 py-1 text-foreground">The RealReal</span><span>{visibleProjects.length} {visibleProjects.length === 1 ? 'project' : 'projects'}</span>
           </div>
           {visibleProjects.map((project) => {
             const projectIndex = publishedProjects.findIndex((item) => item.slug === project.slug);
+            const visual = projectVisuals[project.slug];
+            if (!visual) throw new Error(`Missing homepage visual for ${project.slug}`);
             return (
               <Link
                 href={`/work/${project.slug}`}
                 key={project.slug}
-                className="project-row group grid min-w-0 grid-cols-[2rem_1fr_auto] items-start gap-3 border-t border-border py-5 sm:grid-cols-[3rem_minmax(0,1fr)_minmax(12rem,.8fr)_auto] sm:items-center sm:gap-6 sm:py-6"
+                className={`editorial-project group${projectIndex % 2 === 1 ? ' is-reversed' : ''}${projectIndex % 3 === 2 ? ' is-wide' : ''}`}
                 data-testid={`link-project-${project.slug}`}
               >
-                <span className="pt-1 font-mono-archive text-[10px] text-accent">{String(projectIndex + 1).padStart(2, '0')}</span>
-                <div>
-                  <h3 className="font-editorial text-[clamp(2rem,3.25vw,3.4rem)] leading-[.95] tracking-[-.035em] transition-colors group-hover:text-accent">{project.title}</h3>
-                  <p className="mt-2 text-sm leading-snug text-muted-foreground sm:hidden">{project.description}</p>
+                <div className="editorial-project-copy">
+                  <div className="editorial-project-kicker font-mono-archive text-accent">
+                    <span>{String(projectIndex + 1).padStart(2, '0')} / {project.category}</span>
+                    <ArrowUpRight size={16} strokeWidth={1.5} className="project-arrow" aria-hidden="true" />
+                  </div>
+                  <h3 className="font-editorial">{project.title}</h3>
+                  <p className="editorial-project-description text-muted-foreground">{project.description}</p>
+                  <div className="editorial-project-badges" aria-label={`${project.title} categories`}>
+                    {visual.badges.map((badge) => <span key={badge}>{badge}</span>)}
+                  </div>
                 </div>
-                <p className="hidden max-w-[22rem] text-sm leading-snug text-muted-foreground sm:block">{project.description}</p>
-                <ArrowUpRight size={19} strokeWidth={1.5} className="project-arrow mt-1 text-accent sm:mt-0" aria-hidden="true" />
+                <figure className="editorial-project-visual" data-project={project.slug}>
+                  <div className="editorial-project-artwork">
+                    <img src={visual.src} alt={visual.alt} loading={projectIndex < 2 ? 'eager' : 'lazy'} />
+                  </div>
+                  <figcaption className="font-mono-archive">
+                    <span>{visual.note}</span><span>FIG. {String(projectIndex + 1).padStart(2, '0')}</span>
+                  </figcaption>
+                </figure>
               </Link>
             );
           })}
