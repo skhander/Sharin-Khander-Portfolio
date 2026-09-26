@@ -66,7 +66,7 @@ export default function Work() {
     <div className="page-reveal editorial-work">
       <section className="work-hero mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-8 px-6 pb-16 pt-14 sm:px-10 md:grid-cols-[1.2fr_.8fr] md:items-end md:gap-12 md:pb-20 md:pt-20 lg:px-16">
         <div>
-          <p className="font-mono-archive text-[10px] uppercase tracking-[.18em] text-accent">Product work / 01—{String(publishedProjects.length).padStart(2, '0')}</p>
+          <p className="font-mono-archive text-[10px] uppercase tracking-[.18em] text-accent">7 zero→one products · 150+ experiments · $340M GMV impact · ML + AI · former engineer</p>
           <h1 className="mt-6 font-editorial text-[clamp(4.3rem,9vw,8.8rem)] leading-[.83] tracking-[-.055em]">Sharin<br />Khander<span className="text-accent">.</span></h1>
         </div>
         <div className="work-intro max-w-md bg-[hsl(var(--rose-surface))] px-6 py-7 sm:px-8 sm:py-9 md:max-w-none md:px-9 md:py-11">
@@ -112,7 +112,7 @@ export default function Work() {
               >
                 <div className="editorial-project-copy">
                   <div className="editorial-project-kicker font-mono-archive text-accent">
-                    <span className="text-[10px]">{String(projectIndex + 1).padStart(2, '0')} / {project.category}</span>
+                    <span className="text-[10px]">{project.slug === 'elevated-experience' ? '01 / DISCOVERY · ML · 0→1' : `${String(projectIndex + 1).padStart(2, '0')} / ${project.category}`}</span>
                     <ArrowUpRight size={16} strokeWidth={1.5} className="project-arrow" aria-hidden="true" />
                   </div>
                   <h3 className="font-editorial">{project.title}</h3>
