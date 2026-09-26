@@ -1,13 +1,13 @@
-export function BotanicalSweep() {
+export function BotanicalSweep({ className = '' }: { className?: string }) {
   return (
     <svg
       aria-hidden="true"
       focusable="false"
       viewBox="0 0 720 220"
       preserveAspectRatio="none"
-      className="pointer-events-none absolute inset-0 z-0 h-full w-full text-white"
+      className={`pointer-events-none absolute z-0 text-white ${className}`}
     >
-      <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.4" opacity=".58">
+      <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.4" opacity=".36">
         <path d="M-18 153C71 131 111 47 207 48c87 1 91 82 178 86 112 5 155-77 353-51" />
         <path d="M36 139c-7-19-23-29-42-28m75 10c-2-22-15-36-32-43m75 1c7-20 22-31 41-34m18 7c-7-20-4-37 9-52m27 11c8-19 22-29 41-32m-1 71c20-18 40-22 59-13m-4 39c11-21 27-31 47-32m23 39c18-14 36-16 55-7m16 4c13-20 30-29 51-28m17-9c20-13 39-14 58-4m17 11c17-12 36-13 55-4"
         />
