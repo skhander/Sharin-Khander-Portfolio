@@ -7,6 +7,25 @@ import './editorial-work.css';
 
 const filters = ['All', 'Discovery', 'Commerce', 'AI'];
 
+const homepageProjectSlugs = [
+  'curation',
+  'ai-discovery',
+  'similar-designers',
+  'attribute-enrichment',
+  'visual-search',
+  'elevated-experience',
+] as const;
+
+const homepageProjects = homepageProjectSlugs.map((slug) => {
+  const project = publishedProjects.find((item) => item.slug === slug);
+  if (!project) throw new Error(`Missing published homepage project: ${slug}`);
+  return project;
+});
+
+if (homepageProjects.length !== publishedProjects.length) {
+  throw new Error('Homepage project order must include every published project');
+}
+
 const projectVisuals: Record<string, { src: string; alt: string; note: string; badges: string[] }> = {
   'elevated-experience': {
     src: '/media/browse-after.webp',
@@ -58,7 +77,7 @@ export default function Work() {
   usePageMeta('Work — Sharin Khander', 'Explore Sharin Khander’s product work across luxury marketplaces, shopping agents, visual search, designer discovery, and personalization.');
 
   const visibleProjects = useMemo(
-    () => publishedProjects.filter((project) => matchesFilter(project.category, filter)),
+    () => homepageProjects.filter((project) => matchesFilter(project.category, filter)),
     [filter],
   );
 
@@ -100,7 +119,8 @@ export default function Work() {
             <span className="bg-muted px-2.5 py-1 text-foreground">The RealReal</span><span>{visibleProjects.length} {visibleProjects.length === 1 ? 'project' : 'projects'}</span>
           </div>
           {visibleProjects.map((project) => {
-            const projectIndex = publishedProjects.findIndex((item) => item.slug === project.slug);
+            const projectIndex = homepageProjects.findIndex((item) => item.slug === project.slug);
+            const projectNumber = String(projectIndex + 1).padStart(2, '0');
             const visual = projectVisuals[project.slug];
             if (!visual) throw new Error(`Missing homepage visual for ${project.slug}`);
             return (
@@ -112,7 +132,7 @@ export default function Work() {
               >
                 <div className="editorial-project-copy">
                   <div className="editorial-project-kicker font-mono-archive text-accent">
-                    <span className="text-[10px]">{project.slug === 'elevated-experience' ? '01 / DISCOVERY · ML · 0→1' : `${String(projectIndex + 1).padStart(2, '0')} / ${project.category}`}</span>
+                    <span className="text-[10px]">{projectNumber} / {project.slug === 'elevated-experience' ? 'DISCOVERY · ML · 0→1' : project.category}</span>
                     <ArrowUpRight size={16} strokeWidth={1.5} className="project-arrow" aria-hidden="true" />
                   </div>
                   <h3 className="font-editorial">{project.title}</h3>
@@ -126,7 +146,7 @@ export default function Work() {
                     <img src={visual.src} alt={visual.alt} loading={projectIndex < 2 ? 'eager' : 'lazy'} />
                   </div>
                   <figcaption className="font-mono-archive">
-                    <span>{visual.note}</span><span>FIG. {String(projectIndex + 1).padStart(2, '0')}</span>
+                    <span>{visual.note}</span><span>FIG. {projectNumber}</span>
                   </figcaption>
                 </figure>
               </Link>

@@ -3,8 +3,8 @@ name: Portfolio work layout
 description: The preferred layout for the portfolio homepage's selected-work section.
 ---
 
-Keep the selected minimal homepage as the baseline; explore image-centric layouts in separate frames rather than replacing it. Prefer a vertical project sequence over a conventional multi-column card grid unless the user asks otherwise.
+Prefer an image-centric, alternating vertical project sequence over a conventional multi-column card grid for this portfolio.
 
-**Why:** After reviewing an image-led grid, the user said the vertical list was cleaner. They rejected a separate mobile-first image-led homepage. Among later project-section explorations, they preferred the alternating editorial sequence because it fits their image aspect ratios.
+**Why:** After reviewing an image-led grid, the user said the vertical list was cleaner. They rejected a separate mobile-first homepage, chose the alternating editorial sequence because it fits their image aspect ratios, and then asked to apply it to the real site.
 
-**How to apply:** Preserve project identities, authentic imagery, badges, descriptions, and filters in explorations. Treat the alternating editorial sequence as the preferred canvas direction, not as approval to alter the baseline or live portfolio. The user explicitly said not to change colors, even while mentioning missing hues from the live portfolio. This is project-specific, not a general preference for unrelated apps.
+**How to apply:** Preserve project identities, authentic imagery, badges, descriptions, and filters when changing this homepage. Keep the green, pink, gold, and oxblood palette; the user explicitly asked not to change its colors. This is project-specific, not a general preference for unrelated apps.
