@@ -13,7 +13,6 @@ const publishedProjects = [
     category: 'Browse + PDP',
     description: 'Reimagining shopping around luxury inventory.',
     badges: ['Redesigns'],
-    visualKind: 'image',
     image: '/__mockup/images/current-elevated-browse.webp',
     imageAlt: 'The RealReal luxury handbag browse interface',
     imageNote: 'PRODUCT INTERFACE',
@@ -30,7 +29,6 @@ const publishedProjects = [
     category: 'AI / Discovery / Curation',
     description: 'Helping shoppers discover fashion by trend, vibe, and occasion.',
     badges: ['0 → 1', 'Machine Learning', 'LLMs'],
-    visualKind: 'image',
     image: '/__mockup/images/current-attribute-enrichment-chanel-top.webp',
     imageAlt: 'Chanel vintage top product visual used in the attribute-enrichment project',
     imageNote: 'ATTRIBUTE ENRICHMENT / SOURCE VISUAL',
@@ -52,7 +50,6 @@ const publishedProjects = [
     category: 'AI / Discovery / Commerce',
     description: 'MVP: multimodal search and product comparison. Later explorations: virtual try-on and in-agent checkout.',
     badges: ['Machine Learning', '0 → 1'],
-    visualKind: 'image',
     image: '/__mockup/images/current-shopping-agent-look.jpg',
     imageAlt: 'Illustrative fashion look, not a Shopping Agent product screenshot',
     imageNote: 'ILLUSTRATIVE / NOT PRODUCT UI',
@@ -65,10 +62,9 @@ const publishedProjects = [
     category: 'AI / Discovery',
     description: 'Turning inspiration into product discovery.',
     badges: ['Machine Learning', '0 → 1'],
-    visualKind: 'diagram',
-    image: '',
-    imageAlt: 'Conceptual visual-search input-to-match diagram; not a source screenshot',
-    imageNote: 'CONCEPTUAL DIAGRAM / NO SOURCE IMAGE',
+    image: '/__mockup/images/current-visual-search-ui.png',
+    imageAlt: 'Visual Search mobile camera interface showing selectable regions in a photo',
+    imageNote: 'VISUAL SEARCH / SOURCE INTERFACE',
     status: 'published',
   },
   {
@@ -78,7 +74,6 @@ const publishedProjects = [
     category: 'Discovery / Recommendations',
     description: 'Making a designer page a doorway to the next designer someone might love.',
     badges: ['Recommendations'],
-    visualKind: 'image',
     image: '/__mockup/images/current-similar-designers-look.jpg',
     imageAlt: 'A minimal designer look used for a designer-discovery visual',
     imageNote: 'DESIGNER LOOKBOOK',
@@ -91,7 +86,6 @@ const publishedProjects = [
     category: 'Discovery / Personalization',
     description: 'Scaling editorial taste into product discovery.',
     badges: ['Machine Learning', 'Internal Tools'],
-    visualKind: 'image',
     image: '/__mockup/images/current-curation-vintage-bridal-lookbook.webp',
     imageAlt: 'The RealReal customer-facing vintage bridal lookbook',
     imageNote: 'ACTUAL CUSTOMER-FACING LOOKBOOK',
@@ -219,20 +213,7 @@ export function Current() {
                   <article key={project.slug} className="current-project-card" data-testid={`project-${project.slug}`}>
                     <figure className="current-project-visual" data-project={project.slug}>
                       <div className="current-project-artwork">
-                        {project.visualKind === 'diagram' ? (
-                          <div className="current-search-diagram" role="img" aria-label={project.imageAlt}>
-                            <div className="current-search-sample">
-                              <span>INPUT</span><i /><b>Image<br />or idea</b>
-                            </div>
-                            <span className="current-search-arrow" aria-hidden="true">→</span>
-                            <div className="current-search-results">
-                              <span>CONCEPTUAL MATCHES</span><i /><i /><i />
-                            </div>
-                            <small>CONCEPT ONLY · NO SOURCE VISUAL</small>
-                          </div>
-                        ) : (
-                          <img src={project.image} alt={project.imageAlt} loading={projectIndex < 2 ? 'eager' : 'lazy'} />
-                        )}
+                        <img src={project.image} alt={project.imageAlt} loading={projectIndex < 2 ? 'eager' : 'lazy'} />
                       </div>
                       <figcaption><span>{project.imageNote}</span><span>FIG. {String(projectIndex + 1).padStart(2, '0')}</span></figcaption>
                     </figure>
