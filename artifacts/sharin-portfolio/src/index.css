@@ -60,7 +60,6 @@
   --destructive-foreground: 39 27% 94%;
   --rose-surface: 352 27% 80%;
   --olive-surface: 68 17% 69%;
-  --gold-outline: 42 45% 35%;
   --app-font-sans: 'DM Sans', sans-serif;
   --app-font-serif: 'Instrument Serif', Georgia, serif;
   --app-font-mono: 'DM Mono', monospace;
@@ -92,7 +91,6 @@
   --destructive-foreground: 30 13% 13%;
   --rose-surface: 347 22% 34%;
   --olive-surface: 68 12% 38%;
-  --gold-outline: 42 45% 68%;
 }
 
 @layer base {
