@@ -76,7 +76,6 @@ export default function Work() {
           </p>
         </div>
       </section>
-
       <section id="selected-work" className="mx-auto w-full max-w-[1440px] px-6 pb-20 sm:px-10 md:pb-28 lg:px-16" aria-labelledby="work-heading">
         <div className="work-band flex flex-col gap-5 bg-[hsl(var(--olive-surface))] px-5 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-7">
           <h2 id="work-heading" className="font-editorial text-[clamp(2.3rem,4vw,3.8rem)] leading-none tracking-[-.035em]">Selected work</h2>
@@ -113,7 +112,7 @@ export default function Work() {
               >
                 <div className="editorial-project-copy">
                   <div className="editorial-project-kicker font-mono-archive text-accent">
-                    <span>{String(projectIndex + 1).padStart(2, '0')} / {project.category}</span>
+                    <span className="text-[10px]">{String(projectIndex + 1).padStart(2, '0')} / {project.category}</span>
                     <ArrowUpRight size={16} strokeWidth={1.5} className="project-arrow" aria-hidden="true" />
                   </div>
                   <h3 className="font-editorial">{project.title}</h3>
