@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { Link } from 'wouter';
+import { BotanicalSweep } from '@/components/botanical-sweep';
 import { publishedProjects } from '@/lib/projects';
 import { usePageMeta } from '@/lib/use-page-meta';
 
@@ -29,11 +30,14 @@ export default function Work() {
           <p className="font-mono-archive text-[10px] uppercase tracking-[.18em] text-accent">Product work / 01—05</p>
           <h1 className="mt-6 font-editorial text-[clamp(4.3rem,9vw,8.8rem)] leading-[.83] tracking-[-.055em]">Sharin<br />Khander<span className="text-accent">.</span></h1>
         </div>
-        <div className="relative max-w-md bg-[hsl(var(--rose-surface))] px-6 py-7 sm:px-8 sm:py-9 md:max-w-none md:px-9 md:py-11">
-          <p className="font-editorial text-[clamp(2.2rem,3.4vw,3.5rem)] italic leading-none tracking-[-.025em]">Product builder.</p>
-          <p className="mt-6 text-balance text-[clamp(1.2rem,1.9vw,1.75rem)] font-medium leading-[1.25] tracking-[-.02em]">
-            I build habit-forming consumer products people love.
-          </p>
+        <div className="relative isolate max-w-md overflow-hidden bg-[hsl(var(--rose-surface))] px-6 py-7 sm:px-8 sm:py-9 md:max-w-none md:px-9 md:py-11">
+          <BotanicalSweep />
+          <div className="relative z-10">
+            <p className="font-editorial text-[clamp(2.2rem,3.4vw,3.5rem)] italic leading-none tracking-[-.025em]">Product builder.</p>
+            <p className="mt-6 text-balance text-[clamp(1.2rem,1.9vw,1.75rem)] font-medium leading-[1.25] tracking-[-.02em]">
+              I build habit-forming consumer products people love.
+            </p>
+          </div>
         </div>
       </section>
 
