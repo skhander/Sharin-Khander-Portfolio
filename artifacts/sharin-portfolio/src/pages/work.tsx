@@ -42,7 +42,6 @@ const projectVisuals: Record<string, { src: string; alt: string; note?: string; 
   'ai-discovery': {
     src: '/media/work/shopping-agent-demo.mp4',
     alt: 'Ask TRR shopping agent demo video',
-    note: 'ASK TRR / PRODUCT COMPARISON',
     badges: ['Agents', '0→1'],
   },
   'visual-search': {
@@ -158,7 +157,7 @@ export default function Work() {
                       <img src={visual.src} alt={visual.alt} loading={projectIndex < 2 ? 'eager' : 'lazy'} />
                     )}
                   </div>
-                  {project.slug !== 'curation' && (
+                  {project.slug !== 'curation' && project.slug !== 'ai-discovery' && (
                     <figcaption className="font-mono-archive">
                       <span>{visual.note}</span><span>FIG. {projectNumber}</span>
                     </figcaption>

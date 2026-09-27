@@ -74,15 +74,6 @@
   background: transparent;
 }
 
-.editorial-work .editorial-project.is-shopping-agent .editorial-project-visual {
-  aspect-ratio: auto;
-  grid-template-rows: auto auto;
-}
-
-.editorial-work .editorial-project.is-shopping-agent .editorial-project-artwork {
-  aspect-ratio: 16 / 9;
-}
-
 .editorial-work .editorial-project-artwork {
   min-height: 0;
   overflow: hidden;
