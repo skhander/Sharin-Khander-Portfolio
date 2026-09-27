@@ -37,27 +37,27 @@ const projectVisuals: Record<string, { src: string; alt: string; note?: string; 
     src: '/media/attribute-enrichment/chanel-top.webp',
     alt: 'Chanel vintage top used in the attribute-enrichment project',
     note: 'ATTRIBUTE ENRICHMENT / SOURCE VISUAL',
-    badges: ['LLMs', '0→1'],
+    badges: ['LLMs', 'Computer Vision', '0→1'],
   },
   'ai-discovery': {
     src: '/media/work/shopping-agent-demo.mp4',
     alt: 'Ask TRR shopping agent demo video',
-    badges: ['Agents', '0→1'],
+    badges: ['Agents', 'Computer Vision', '0→1'],
   },
   'visual-search': {
     src: '/media/work/visual-search-ui.png',
     alt: 'Visual Search mobile camera interface with selectable regions in a photo',
-    badges: ['Machine Learning', '0→1'],
+    badges: ['Computer Vision', '0→1'],
   },
   'similar-designers': {
     src: '/media/work/similar-designers-customers-also-shop.png',
     alt: 'Customers also shop recommendations for Chanel, Christian Dior, Gucci, Prada, Fendi, and Hermès',
-    badges: ['Machine Learning', '0→1'],
+    badges: ['Machine Learning', 'Computer Vision', '0→1'],
   },
   curation: {
     src: '/media/work/curation-vacation-shop.mp4',
     alt: 'The RealReal Vacation Shop product browse video',
-    badges: ['Agents', 'Machine Learning', '0→1 BUILD'],
+    badges: ['Agents', 'Machine Learning', 'Computer Vision', '0→1 BUILD'],
   },
 };
 
