@@ -52,12 +52,12 @@ const projectVisuals: Record<string, { src: string; alt: string; note?: string; 
   'similar-designers': {
     src: '/media/work/similar-designers-customers-also-shop.png',
     alt: 'Customers also shop recommendations for Chanel, Christian Dior, Gucci, Prada, Fendi, and Hermès',
-    badges: ['Machine Learning', 'Computer Vision', '0→1'],
+    badges: ['ML', 'Computer Vision', '0→1'],
   },
   curation: {
     src: '/media/work/curation-vacation-shop.mp4',
     alt: 'The RealReal Vacation Shop product browse video',
-    badges: ['Agents', 'Machine Learning', 'Computer Vision', '0→1 BUILD'],
+    badges: ['Agents', 'ML', 'Computer Vision', '0-> 1'],
   },
 };
 
