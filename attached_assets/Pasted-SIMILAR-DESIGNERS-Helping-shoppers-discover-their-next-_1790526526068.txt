@@ -1,0 +1,78 @@
+SIMILAR DESIGNERS
+Helping shoppers discover their next favorite designer.
+
+−10%
+designer-page bounce
+
++3%
+GMV per visitor
+
+3 phases
+from behavioral → visual → personalized similarity
+
+The problem
+80% of shoppers bounced from Designer pages.
+We believed they weren't finding enough products that resonated—and needed better paths to keep exploring.
+
+WHAT I BUILT
+A recommendation system that evolved from “customers also shop” into a personalized way to discover designers based on how they look, feel, and fit your budget.
+
+MODEL → PROTOTYPE → EXPERIMENT → SHIP
+
+[large visual of the module / progression across the 3 phases]
+
+FROM “SIMILAR” TO ACTUALLY SIMILAR
+
+01 — BEHAVIORAL
+Designers customers also shopped.
+
+02 — VISUAL
+Designers with similar aesthetics, attributes, and products.
+
+03 — PERSONALIZED
+Designers that matched your taste and your price point.
+
+That progression is the coolest part of the story. Show it visually. Three cards getting progressively smarter is much more compelling than explaining the methodology in a paragraph.
+
+THE HARD PART
+Our first version was technically reasonable—but not particularly useful.
+
+A quick UX study told us that obvious pairings like Louis Vuitton → Celine weren't giving shoppers a new path to explore. Leadership wanted to test it anyway, so we did. The result: people clicked, but didn't go deeper or convert.
+
+Then:
+
+We learned that similarity wasn't enough. People wanted alternatives that felt like them—including designers at a lower price point.
+
+WHAT HAPPENED
+
+PHASE 01
+Generic recommendations
+→ No harm. No lift.
+
+PHASE 02
+Visual + attribute similarity
+→ More PDP views + ATC, but no conversion lift
+
+PHASE 03
+Personalized + price-aware recommendations
+→ +3% GMV / visitor
+→ −10% designer-page bounce
+
+WHAT I LEARNED
+“Similar” isn't a model output. It's a product decision.
+
+You had to define what similar actually meant, decide what signals mattered, determine what quality bar was good enough to ship, and then learn from real behavior.
+
+One thing I'd change from your original story
+
+I wouldn't lead with “ML” even though the ML work is impressive.
+
+Lead with:
+
+We wanted to help people discover their next favorite designer.
+
+Then let the sophistication reveal itself:
+
+behavior → visual → attributes → personalization → price
+
+That makes the project immediately understandable to someone who has never heard of TRR, while still signaling to a ShopMy interviewer: this person understands recommendations, knows how to work with ML, prototypes herself, and actually ships.

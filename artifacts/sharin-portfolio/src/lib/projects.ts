@@ -106,7 +106,7 @@ export const projects: Project[] = [
     title: 'Similar Designers',
     company: 'The RealReal',
     category: 'Discovery / Recommendations',
-    description: 'Making a designer page a doorway to the next designer someone might love.',
+    description: 'Helping shoppers discover their next favorite designer.',
     status: 'published',
   },
   {
