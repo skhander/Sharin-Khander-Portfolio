@@ -10,7 +10,7 @@ function Walkthrough({ video, poster, alt, label, playLabel }: { video: string; 
   const [started, setStarted] = useState(false);
 
   return (
-    <figure className="mt-10 md:mt-14">
+    <figure className="curation-media mt-10 md:mt-14">
       {started ? (
         <video className="curation-prototype-video" controls autoPlay playsInline preload="metadata" poster={media(poster)} aria-label={alt}>
           <source src={media(video)} type="video/mp4" />
@@ -29,7 +29,7 @@ function Walkthrough({ video, poster, alt, label, playLabel }: { video: string; 
 
 function CustomerPage({ image, alt, label, tall = false }: { image: string; alt: string; label: string; tall?: boolean }) {
   return (
-    <figure className="mt-10 md:mt-14">
+    <figure className="curation-media mt-10 md:mt-14">
       <figcaption className="mb-3 flex flex-wrap items-center justify-between gap-x-4 gap-y-2 font-mono-archive text-[10px] uppercase tracking-[.12em] text-muted-foreground">
         <span>{label}</span>
         <a href={media(image)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-accent underline underline-offset-4 hover:text-foreground">
@@ -105,11 +105,13 @@ export function CurationStory({ project, nextProject }: { project: Project; next
           playLabel="the Evergreen Curation Tool prototype walkthrough"
         />
         <div className="mt-14 border-t border-border pt-10 md:mt-20 md:pt-14">
-          <p className="font-mono-archive text-[10px] uppercase tracking-[.16em] text-accent">The customer experience</p>
-          <h3 className="mt-4 font-editorial text-[clamp(2.5rem,4vw,4.5rem)] leading-[.95] tracking-[-.04em]">Shop Vintage Bridal.</h3>
-          <p className="mt-5 max-w-2xl text-base leading-[1.6] text-muted-foreground md:text-lg">
-            A customer-facing evergreen assortment built around a specific point of view, with fresh inventory continuing the edit.
-          </p>
+          <div className="mx-auto max-w-[1100px]">
+            <p className="font-mono-archive text-[10px] uppercase tracking-[.16em] text-accent">The customer experience</p>
+            <h3 className="mt-4 font-editorial text-[clamp(2.5rem,4vw,4.5rem)] leading-[.95] tracking-[-.04em]">Shop Vintage Bridal.</h3>
+            <p className="mt-5 max-w-2xl text-base leading-[1.6] text-muted-foreground md:text-lg">
+              A customer-facing evergreen assortment built around a specific point of view, with fresh inventory continuing the edit.
+            </p>
+          </div>
           <CustomerPage
             image="shop-vintage-bridal.png"
             alt="The RealReal Shop Vintage Bridal page with an assortment of vintage bridal dresses and accessories"
