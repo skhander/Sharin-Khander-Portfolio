@@ -50,8 +50,8 @@ const projectVisuals: Record<string, { src: string; alt: string; note?: string; 
     badges: ['Machine Learning', '0→1'],
   },
   'similar-designers': {
-    src: '/media/work/similar-designers-customers-also-shop.png',
-    alt: 'Customers also shop recommendations for Chanel, Christian Dior, Gucci, Prada, Fendi, and Hermès',
+    src: '/media/work/similar-designers-mobile-shopping.png',
+    alt: 'The RealReal mobile shopping page showing Customers Also Shop recommendations for Chanel, Christian Dior, Gucci, Prada, Fendi, and Hermès',
     badges: ['Machine Learning', '0→1'],
   },
   curation: {
@@ -130,7 +130,7 @@ export default function Work() {
               <Link
                 href={`/work/${project.slug}`}
                 key={project.slug}
-                className={`editorial-project group${project.slug === 'curation' ? ' is-curation' : ''}${project.slug === 'ai-discovery' ? ' is-shopping-agent' : ''}${project.slug === 'similar-designers' ? ' is-similar-designers' : ''}${project.slug === 'visual-search' ? ' is-visual-search' : ''}${projectIndex % 2 === 1 && project.slug !== 'ai-discovery' ? ' is-reversed' : ''}${projectIndex % 3 === 2 && project.slug !== 'similar-designers' ? ' is-wide' : ''}`}
+                className={`editorial-project group${project.slug === 'curation' ? ' is-curation' : ''}${project.slug === 'ai-discovery' ? ' is-shopping-agent' : ''}${project.slug === 'similar-designers' ? ' is-similar-designers' : ''}${project.slug === 'visual-search' ? ' is-visual-search' : ''}`}
                 data-testid={`link-project-${project.slug}`}
               >
                 <div className="editorial-project-copy">
