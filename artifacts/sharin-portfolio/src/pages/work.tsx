@@ -31,7 +31,7 @@ const projectVisuals: Record<string, { src: string; alt: string; note?: string; 
     src: '/media/browse-after.webp',
     alt: 'The RealReal luxury handbag browse interface',
     note: 'PRODUCT INTERFACE',
-    badges: ['Redesigns'],
+    badges: ['Experiments'],
   },
   'attribute-enrichment': {
     src: '/media/attribute-enrichment/chanel-top.webp',
@@ -123,7 +123,7 @@ export default function Work() {
           {visibleProjects.map((project) => {
             const projectIndex = homepageProjects.findIndex((item) => item.slug === project.slug);
             const projectNumber = String(projectIndex + 1).padStart(2, '0');
-            const cardTitle = project.slug === 'curation' ? 'Curation Tool' : project.slug === 'attribute-enrichment' ? 'Metadata Enrichment' : project.slug === 'visual-search' ? 'Image Search' : project.slug === 'elevated-experience' ? 'Site Optimization' : project.title;
+            const cardTitle = project.slug === 'curation' ? 'Curation Tool' : project.slug === 'attribute-enrichment' ? 'Metadata Enrichment' : project.slug === 'visual-search' ? 'Image Search' : project.slug === 'elevated-experience' ? 'Site Redesign' : project.title;
             const visual = projectVisuals[project.slug];
             if (!visual) throw new Error(`Missing homepage visual for ${project.slug}`);
             return (
