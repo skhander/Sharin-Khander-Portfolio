@@ -111,10 +111,10 @@ export const projects: Project[] = [
   },
   {
     slug: 'curation',
-    title: 'Curation',
+    title: 'Curation Tool',
     company: 'The RealReal',
     category: 'Discovery / Personalization',
-    description: 'Scaling editorial taste into product discovery.',
+    description: 'Making merchandisers faster.',
     status: 'published',
   },
 ];

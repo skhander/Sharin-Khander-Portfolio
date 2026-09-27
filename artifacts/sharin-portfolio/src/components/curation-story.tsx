@@ -52,7 +52,7 @@ function CustomerPage({ image, alt, label, tall = false }: { image: string; alt:
   );
 }
 
-export function CurationStory({ project, nextProject }: { project: Project; nextProject: Project }) {
+export function CurationStory({ nextProject }: { project: Project; nextProject: Project }) {
   return (
     <div className="page-reveal curation-story">
       <section className="mx-auto max-w-[1440px] px-6 pb-12 pt-10 sm:px-10 md:pb-16 md:pt-14 lg:px-16" aria-labelledby="curation-title">
@@ -71,9 +71,9 @@ export function CurationStory({ project, nextProject }: { project: Project; next
       <section className="mx-auto max-w-[1440px] border-y border-border px-6 py-8 sm:px-10 md:py-10 lg:px-16" aria-label="Curation Tool metrics">
         <dl className="grid grid-cols-1 divide-y divide-border sm:grid-cols-3 sm:divide-x sm:divide-y-0">
           {metrics.map((metric) => (
-            <div key={metric.label} className="py-6 sm:px-6 sm:py-2 first:sm:pl-0 last:sm:pr-0">
-              <dt className="font-mono-archive text-[10px] uppercase tracking-[.12em] text-muted-foreground">{metric.label}</dt>
-              <dd className="mt-2 font-editorial text-[clamp(3rem,5vw,5rem)] leading-none tracking-[-.04em]">{metric.value}</dd>
+            <div key={metric.label} className="flex flex-col py-6 sm:px-6 sm:py-2 first:sm:pl-0 last:sm:pr-0">
+              <dt className="order-2 mt-3 font-mono-archive text-[10px] uppercase tracking-[.12em] text-muted-foreground">{metric.label}</dt>
+              <dd className="order-1 font-editorial text-[clamp(3rem,5vw,5rem)] leading-none tracking-[-.04em]">{metric.value}</dd>
             </div>
           ))}
         </dl>
@@ -95,14 +95,14 @@ export function CurationStory({ project, nextProject }: { project: Project; next
           </div>
           <p className="max-w-2xl self-end text-base leading-[1.6] text-muted-foreground md:text-lg">A new curation workflow that turned merchandiser expertise into scalable, programmatic assortments.</p>
         </div>
-        <figure className="curation-media mt-10 md:mt-14">
-          <figcaption className="font-mono-archive text-[10px] uppercase tracking-[.14em] text-accent">0 → 1 · PRODUCT + AI · INTERNAL TOOL</figcaption>
+        <div className="curation-media mt-10 md:mt-14">
+          <p className="font-mono-archive text-[10px] uppercase tracking-[.14em] text-accent">0 → 1 · PRODUCT + AI · INTERNAL TOOL</p>
           <Walkthrough
             video="curation-tool-prototype.mp4"
             poster="curation-tool-poster.jpg"
             alt="Curation Tool prototype showing the Create New Editorial interface"
           />
-        </figure>
+        </div>
       </section>
 
       <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-12 sm:px-10 md:py-16 lg:px-16" aria-labelledby="curation-hard-part">
