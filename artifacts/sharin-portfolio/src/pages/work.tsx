@@ -60,7 +60,7 @@ const projectVisuals: Record<string, { src: string; alt: string; note?: string; 
   curation: {
     src: '/media/work/curation-vacation-shop.mp4',
     alt: 'The RealReal Vacation Shop product browse video',
-    badges: ['Machine Learning', '0→1 BUILD', 'Agents'],
+    badges: ['Agents', 'Machine Learning', '0→1 BUILD'],
   },
 };
 
