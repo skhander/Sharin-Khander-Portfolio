@@ -117,7 +117,7 @@ export default function Work() {
           {visibleProjects.map((project) => {
             const projectIndex = homepageProjects.findIndex((item) => item.slug === project.slug);
             const projectNumber = String(projectIndex + 1).padStart(2, '0');
-            const cardTitle = project.slug === 'curation' ? 'Curation Tool' : project.slug === 'attribute-enrichment' ? 'Trend, Vibe, Occasion' : project.slug === 'visual-search' ? 'Image Search' : project.title;
+            const cardTitle = project.slug === 'curation' ? 'Curation Tool' : project.slug === 'attribute-enrichment' ? 'Trend, Vibe, Occasion' : project.slug === 'visual-search' ? 'Image Search' : project.slug === 'elevated-experience' ? 'Core funnel optimization' : project.title;
             const visual = projectVisuals[project.slug];
             if (!visual) throw new Error(`Missing homepage visual for ${project.slug}`);
             return (
@@ -129,11 +129,11 @@ export default function Work() {
               >
                 <div className="editorial-project-copy">
                   <div className="editorial-project-kicker font-mono-archive text-accent">
-                    <span className="text-[10px]">{project.slug === 'curation' ? `${projectNumber} · DISCOVERY · AI` : project.slug === 'ai-discovery' ? `${projectNumber} · AI · DISCOVERY` : project.slug === 'similar-designers' ? `${projectNumber} · DISCOVERY · RECOMMENDATIONS` : project.slug === 'attribute-enrichment' ? `${projectNumber} · DISCOVERY · PERSONALIZATION` : project.slug === 'visual-search' ? `${projectNumber} · DISCOVERY · SEARCH` : `${projectNumber} / ${project.slug === 'elevated-experience' ? 'DISCOVERY · ML · 0→1' : project.category}`}</span>
+                    <span className="text-[10px]">{project.slug === 'curation' ? `${projectNumber} · DISCOVERY · AI` : project.slug === 'ai-discovery' ? `${projectNumber} · AI · DISCOVERY` : project.slug === 'similar-designers' ? `${projectNumber} · DISCOVERY · RECOMMENDATIONS` : project.slug === 'attribute-enrichment' ? `${projectNumber} · DISCOVERY · PERSONALIZATION` : project.slug === 'visual-search' ? `${projectNumber} · DISCOVERY · SEARCH` : project.slug === 'elevated-experience' ? `${projectNumber} · UX` : `${projectNumber} / ${project.category}`}</span>
                     <ArrowUpRight size={16} strokeWidth={1.5} className="project-arrow" aria-hidden="true" />
                   </div>
                   <h3 className="font-editorial">{cardTitle}</h3>
-                  <p className="editorial-project-description text-muted-foreground">{project.slug === 'curation' ? 'Making editorial taste scalable.' : project.slug === 'ai-discovery' ? 'Search, compare, and buy with natural language.' : project.slug === 'similar-designers' ? 'Helping shoppers discover their next favorite designer.' : project.slug === 'attribute-enrichment' ? 'Making 6M products discoverable by trend, vibe, and occasion.' : project.slug === 'visual-search' ? 'Turn inspiration into something you can shop.' : project.description}</p>
+                  <p className="editorial-project-description text-muted-foreground">{project.slug === 'curation' ? 'Making editorial taste scalable.' : project.slug === 'ai-discovery' ? 'Search, compare, and buy with natural language.' : project.slug === 'similar-designers' ? 'Helping shoppers discover their next favorite designer.' : project.slug === 'attribute-enrichment' ? 'Making 6M products discoverable by trend, vibe, and occasion.' : project.slug === 'visual-search' ? 'Turn inspiration into something you can shop.' : project.slug === 'elevated-experience' ? 'Elevating the shopping experience for improved discovery and conversion.' : project.description}</p>
                   <div className="editorial-project-badges" aria-label={`${cardTitle} categories`}>
                     {visual.badges.map((badge) => <span key={badge}>{badge}</span>)}
                   </div>
