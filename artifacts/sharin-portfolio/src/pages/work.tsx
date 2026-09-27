@@ -140,8 +140,8 @@ export default function Work() {
                   </div>
                   <h3 className="font-editorial">{cardTitle}</h3>
                   <p className="editorial-project-description text-muted-foreground">{project.slug === 'curation' ? 'Making editorial taste scalable.' : project.slug === 'ai-discovery' ? 'Search, compare, and buy with natural language.' : project.slug === 'similar-designers' ? 'Helping shoppers discover their next favorite designer.' : project.slug === 'attribute-enrichment' ? 'Making 6M products discoverable by trend, vibe, and occasion.' : project.slug === 'visual-search' ? 'Turn inspiration into something you can shop.' : project.slug === 'elevated-experience' ? 'Elevating the shopping experience for improved discovery and conversion.' : project.description}</p>
-                  <div className="editorial-project-badges" aria-label={`${cardTitle} categories`}>
-                    {visual.badges.map((badge) => <span key={badge}>{badge}</span>)}
+                  <div className="editorial-project-badges font-mono-archive text-[10px] uppercase tracking-[.15em]" aria-label={`${cardTitle} categories`}>
+                    {visual.badges.map((badge) => <span key={badge} className="bg-muted px-2.5 py-1 text-foreground">{badge}</span>)}
                   </div>
                 </div>
                 <figure className="editorial-project-visual" data-project={project.slug}>
