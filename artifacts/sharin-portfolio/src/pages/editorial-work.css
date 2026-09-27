@@ -141,6 +141,19 @@
   margin-top: 22px;
 }
 
+.editorial-work .editorial-brand-badge,
+.editorial-work .editorial-project-badges span {
+  display: inline-block;
+  background-color: hsl(var(--olive-surface));
+  color: hsl(var(--foreground));
+  padding: .25rem .625rem;
+  font-family: var(--app-font-mono);
+  font-size: 10px;
+  line-height: 1.5;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
 .editorial-work .editorial-project-visual figcaption {
   display: flex;
   justify-content: space-between;
