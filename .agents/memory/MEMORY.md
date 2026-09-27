@@ -1,3 +1,4 @@
 - [Temporary PDF tooling](temporary-pdf-tooling.md) — Python PDF inspection can leave package-manager changes in this web workspace; check for incidental setup before delivery.
 - [Concurrent canvas branches](canvas-branch-visibility.md) — a finished preview can render even if its reserved frame later disappears; verify board state separately.
 - [Portfolio work layout](portfolio-work-layout.md) — user preferred a vertical project list over a grid for a cleaner editorial feel.
+- [Portfolio edit persistence](portfolio-edit-persistence.md) — recent homepage JSX changes have reverted between turns while adjacent assets remained; verify the live card before extending it.

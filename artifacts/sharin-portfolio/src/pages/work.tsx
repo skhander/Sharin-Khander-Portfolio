@@ -26,7 +26,7 @@ if (homepageProjects.length !== publishedProjects.length) {
   throw new Error('Homepage project order must include every published project');
 }
 
-const projectVisuals: Record<string, { src: string; alt: string; note: string; badges: string[] }> = {
+const projectVisuals: Record<string, { src: string; alt: string; note?: string; badges: string[] }> = {
   'elevated-experience': {
     src: '/media/browse-after.webp',
     alt: 'The RealReal luxury handbag browse interface',
@@ -58,10 +58,9 @@ const projectVisuals: Record<string, { src: string; alt: string; note: string; b
     badges: ['Recommendations'],
   },
   curation: {
-    src: '/media/attribute-enrichment/vintage-bridal-lookbook.webp',
-    alt: 'The RealReal vintage bridal lookbook',
-    note: 'ACTUAL CUSTOMER-FACING LOOKBOOK',
-    badges: ['Machine Learning', 'Internal Tools'],
+    src: '/media/work/curation-vacation-shop.mp4',
+    alt: 'The RealReal Vacation Shop product browse video',
+    badges: ['Machine Learning', 'Internal Tools', '0→1 BUILD'],
   },
 };
 
@@ -127,27 +126,42 @@ export default function Work() {
               <Link
                 href={`/work/${project.slug}`}
                 key={project.slug}
-                className={`editorial-project group${projectIndex % 2 === 1 ? ' is-reversed' : ''}${projectIndex % 3 === 2 ? ' is-wide' : ''}`}
+                className={`editorial-project group${project.slug === 'curation' ? ' is-curation' : ''}${projectIndex % 2 === 1 ? ' is-reversed' : ''}${projectIndex % 3 === 2 ? ' is-wide' : ''}`}
                 data-testid={`link-project-${project.slug}`}
               >
                 <div className="editorial-project-copy">
                   <div className="editorial-project-kicker font-mono-archive text-accent">
-                    <span className="text-[10px]">{projectNumber} / {project.slug === 'elevated-experience' ? 'DISCOVERY · ML · 0→1' : project.category}</span>
+                    <span className="text-[10px]">{project.slug === 'curation' ? `${projectNumber} · DISCOVERY · AI` : `${projectNumber} / ${project.slug === 'elevated-experience' ? 'DISCOVERY · ML · 0→1' : project.category}`}</span>
                     <ArrowUpRight size={16} strokeWidth={1.5} className="project-arrow" aria-hidden="true" />
                   </div>
                   <h3 className="font-editorial">{project.title}</h3>
-                  <p className="editorial-project-description text-muted-foreground">{project.description}</p>
+                  <p className="editorial-project-description text-muted-foreground">{project.slug === 'curation' ? 'Making editorial taste scalable.' : project.description}</p>
                   <div className="editorial-project-badges" aria-label={`${project.title} categories`}>
                     {visual.badges.map((badge) => <span key={badge}>{badge}</span>)}
                   </div>
                 </div>
                 <figure className="editorial-project-visual" data-project={project.slug}>
                   <div className="editorial-project-artwork">
-                    <img src={visual.src} alt={visual.alt} loading={projectIndex < 2 ? 'eager' : 'lazy'} />
+                    {project.slug === 'curation' ? (
+                      <video
+                        src={visual.src}
+                        poster="/media/work/curation-vacation-shop-poster.jpg"
+                        aria-label={visual.alt}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        preload="metadata"
+                      />
+                    ) : (
+                      <img src={visual.src} alt={visual.alt} loading={projectIndex < 2 ? 'eager' : 'lazy'} />
+                    )}
                   </div>
-                  <figcaption className="font-mono-archive">
-                    <span>{visual.note}</span><span>FIG. {projectNumber}</span>
-                  </figcaption>
+                  {project.slug !== 'curation' && (
+                    <figcaption className="font-mono-archive">
+                      <span>{visual.note}</span><span>FIG. {projectNumber}</span>
+                    </figcaption>
+                  )}
                 </figure>
               </Link>
             );
