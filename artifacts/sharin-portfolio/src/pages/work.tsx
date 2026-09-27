@@ -40,10 +40,10 @@ const projectVisuals: Record<string, { src: string; alt: string; note?: string; 
     badges: ['0 → 1', 'Machine Learning', 'LLMs'],
   },
   'ai-discovery': {
-    src: '/media/work/shopping-agent-comparison.png',
-    alt: 'Ask TRR mobile product comparison interface showing two diamond tennis bracelets',
+    src: '/media/work/shopping-agent-demo.mp4',
+    alt: 'Ask TRR shopping agent demo video',
     note: 'ASK TRR / PRODUCT COMPARISON',
-    badges: ['Machine Learning', '0 → 1'],
+    badges: ['Agents', '0→1'],
   },
   'visual-search': {
     src: '/media/work/visual-search-ui.png',
@@ -127,26 +127,26 @@ export default function Work() {
               <Link
                 href={`/work/${project.slug}`}
                 key={project.slug}
-                className={`editorial-project group${project.slug === 'curation' ? ' is-curation' : ''}${projectIndex % 2 === 1 ? ' is-reversed' : ''}${projectIndex % 3 === 2 ? ' is-wide' : ''}`}
+                className={`editorial-project group${project.slug === 'curation' ? ' is-curation' : ''}${project.slug === 'ai-discovery' ? ' is-shopping-agent' : ''}${projectIndex % 2 === 1 && project.slug !== 'ai-discovery' ? ' is-reversed' : ''}${projectIndex % 3 === 2 ? ' is-wide' : ''}`}
                 data-testid={`link-project-${project.slug}`}
               >
                 <div className="editorial-project-copy">
                   <div className="editorial-project-kicker font-mono-archive text-accent">
-                    <span className="text-[10px]">{project.slug === 'curation' ? `${projectNumber} · DISCOVERY · AI` : `${projectNumber} / ${project.slug === 'elevated-experience' ? 'DISCOVERY · ML · 0→1' : project.category}`}</span>
+                    <span className="text-[10px]">{project.slug === 'curation' ? `${projectNumber} · DISCOVERY · AI` : project.slug === 'ai-discovery' ? `${projectNumber} · AI · DISCOVERY` : `${projectNumber} / ${project.slug === 'elevated-experience' ? 'DISCOVERY · ML · 0→1' : project.category}`}</span>
                     <ArrowUpRight size={16} strokeWidth={1.5} className="project-arrow" aria-hidden="true" />
                   </div>
                   <h3 className="font-editorial">{cardTitle}</h3>
-                  <p className="editorial-project-description text-muted-foreground">{project.slug === 'curation' ? 'Making editorial taste scalable.' : project.description}</p>
+                  <p className="editorial-project-description text-muted-foreground">{project.slug === 'curation' ? 'Making editorial taste scalable.' : project.slug === 'ai-discovery' ? 'Search, compare, and buy with natural language.' : project.description}</p>
                   <div className="editorial-project-badges" aria-label={`${cardTitle} categories`}>
                     {visual.badges.map((badge) => <span key={badge}>{badge}</span>)}
                   </div>
                 </div>
                 <figure className="editorial-project-visual" data-project={project.slug}>
                   <div className="editorial-project-artwork">
-                    {project.slug === 'curation' ? (
+                    {project.slug === 'curation' || project.slug === 'ai-discovery' ? (
                       <video
                         src={visual.src}
-                        poster="/media/work/curation-vacation-shop-poster.jpg"
+                        poster={project.slug === 'curation' ? '/media/work/curation-vacation-shop-poster.jpg' : '/media/work/shopping-agent-poster.jpg'}
                         aria-label={visual.alt}
                         autoPlay
                         muted

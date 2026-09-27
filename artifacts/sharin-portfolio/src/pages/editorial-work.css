@@ -14,7 +14,8 @@
   color: inherit;
 }
 
-.editorial-work .editorial-project.is-curation {
+.editorial-work .editorial-project.is-curation,
+.editorial-work .editorial-project.is-shopping-agent {
   grid-template-columns: minmax(0, .72fr) minmax(0, 1.28fr);
   gap: clamp(28px, 4vw, 60px);
   min-height: 0;
@@ -67,9 +68,19 @@
   aspect-ratio: 1.65;
 }
 
-.editorial-work .editorial-project.is-curation .editorial-project-visual {
+.editorial-work .editorial-project.is-curation .editorial-project-visual,
+.editorial-work .editorial-project.is-shopping-agent .editorial-project-visual {
   aspect-ratio: 16 / 9;
   background: transparent;
+}
+
+.editorial-work .editorial-project.is-shopping-agent .editorial-project-visual {
+  aspect-ratio: auto;
+  grid-template-rows: auto auto;
+}
+
+.editorial-work .editorial-project.is-shopping-agent .editorial-project-artwork {
+  aspect-ratio: 16 / 9;
 }
 
 .editorial-work .editorial-project-artwork {
@@ -85,7 +96,8 @@
   transition: transform .8s cubic-bezier(.22, 1, .36, 1);
 }
 
-.editorial-work .editorial-project-visual[data-project="curation"] video {
+.editorial-work .editorial-project-visual[data-project="curation"] video,
+.editorial-work .editorial-project-visual[data-project="ai-discovery"] video {
   display: block;
   width: 100%;
   height: 100%;
@@ -208,7 +220,8 @@
     padding: 32px 0 38px;
   }
 
-  .editorial-work .editorial-project.is-curation {
+  .editorial-work .editorial-project.is-curation,
+  .editorial-work .editorial-project.is-shopping-agent {
     gap: 20px;
     padding-block: 32px 38px;
   }
