@@ -13,6 +13,13 @@ const metrics = [
   { value: '+8%', label: 'share of GMV from curation YoY' },
 ];
 
+const partners = [
+  { name: 'Engineering', contribution: 'Built the internal tool, functionality, and data model updates.' },
+  { name: 'ML', contribution: 'Built the models powering programmatic editorial refreshes.' },
+  { name: 'Merchandising', contribution: 'Thought partners and primary users of the product.' },
+  { name: 'UX', contribution: 'Thought partners who translated the prototype into the final experience.' },
+];
+
 function Walkthrough({ video, poster, alt }: { video: string; poster: string; alt: string }) {
   const [started, setStarted] = useState(false);
 
@@ -103,6 +110,18 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
             alt="Curation Tool prototype showing the Create New Editorial interface"
           />
         </div>
+      </section>
+
+      <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-10 sm:px-10 md:py-12 lg:px-16" aria-labelledby="curation-partners">
+        <h2 id="curation-partners" className="font-editorial text-[clamp(2.25rem,3.5vw,3.5rem)] leading-[.94] tracking-[-.04em]">Partners</h2>
+        <ul className="mt-8 grid grid-cols-2 gap-x-5 gap-y-6 lg:grid-cols-4 lg:gap-0">
+          {partners.map((partner) => (
+            <li key={partner.name} className="border-t border-border pt-4 lg:border-l lg:pl-5 lg:pr-5 lg:first:border-l-0 lg:first:pl-0">
+              <h3 className="font-mono-archive text-[10px] uppercase tracking-[.12em] text-accent">{partner.name}</h3>
+              <p className="mt-3 max-w-[28ch] text-sm leading-[1.5] text-muted-foreground">{partner.contribution}</p>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-12 sm:px-10 md:py-16 lg:px-16" aria-labelledby="curation-hard-part">
