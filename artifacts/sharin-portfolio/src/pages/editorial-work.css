@@ -15,7 +15,8 @@
 }
 
 .editorial-work .editorial-project.is-curation,
-.editorial-work .editorial-project.is-shopping-agent {
+.editorial-work .editorial-project.is-shopping-agent,
+.editorial-work .editorial-project.is-similar-designers {
   grid-template-columns: minmax(0, .72fr) minmax(0, 1.28fr);
   gap: clamp(28px, 4vw, 60px);
   min-height: 0;
@@ -31,14 +32,6 @@
 .editorial-work .editorial-project.is-wide:not(.is-reversed) {
   grid-template-columns: minmax(0, .92fr) minmax(250px, 1.08fr);
   padding-inline: 0 clamp(8px, 2vw, 30px);
-}
-
-@media (min-width: 1024px) {
-  .editorial-work .editorial-project.is-wide.is-similar-designers:not(.is-reversed) {
-    grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
-    gap: clamp(28px, 3.2vw, 48px);
-    padding-inline: 0 clamp(10px, 3.2vw, 48px);
-  }
 }
 
 .editorial-work .editorial-project-copy {
@@ -76,13 +69,9 @@
   aspect-ratio: 1.65;
 }
 
-.editorial-work .editorial-project.is-wide .editorial-project-visual[data-project="similar-designers"] {
-  aspect-ratio: 454 / 172;
-  background: transparent;
-}
-
 .editorial-work .editorial-project.is-curation .editorial-project-visual,
-.editorial-work .editorial-project.is-shopping-agent .editorial-project-visual {
+.editorial-work .editorial-project.is-shopping-agent .editorial-project-visual,
+.editorial-work .editorial-project.is-similar-designers .editorial-project-visual {
   aspect-ratio: 16 / 9;
   background: transparent;
 }
@@ -109,6 +98,7 @@
 }
 
 .editorial-work .editorial-project-visual[data-project="attribute-enrichment"] img,
+.editorial-work .editorial-project-visual[data-project="similar-designers"] img,
 .editorial-work .editorial-project-visual[data-project="ai-discovery"] img,
 .editorial-work .editorial-project-visual[data-project="visual-search"] img,
 .editorial-work .editorial-project-visual[data-project="curation"] img {
@@ -225,7 +215,8 @@
   }
 
   .editorial-work .editorial-project.is-curation,
-  .editorial-work .editorial-project.is-shopping-agent {
+  .editorial-work .editorial-project.is-shopping-agent,
+  .editorial-work .editorial-project.is-similar-designers {
     gap: 20px;
     padding-block: 32px 38px;
   }

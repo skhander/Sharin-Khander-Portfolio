@@ -37,7 +37,7 @@ const projectVisuals: Record<string, { src: string; alt: string; note?: string; 
     src: '/media/attribute-enrichment/chanel-top.webp',
     alt: 'Chanel vintage top used in the attribute-enrichment project',
     note: 'ATTRIBUTE ENRICHMENT / SOURCE VISUAL',
-    badges: ['Machine Learning', '0→1'],
+    badges: ['LLMs', '0→1'],
   },
   'ai-discovery': {
     src: '/media/work/shopping-agent-demo.mp4',
@@ -125,7 +125,7 @@ export default function Work() {
               <Link
                 href={`/work/${project.slug}`}
                 key={project.slug}
-                className={`editorial-project group${project.slug === 'curation' ? ' is-curation' : ''}${project.slug === 'ai-discovery' ? ' is-shopping-agent' : ''}${project.slug === 'similar-designers' ? ' is-similar-designers' : ''}${projectIndex % 2 === 1 && project.slug !== 'ai-discovery' ? ' is-reversed' : ''}${projectIndex % 3 === 2 ? ' is-wide' : ''}`}
+                className={`editorial-project group${project.slug === 'curation' ? ' is-curation' : ''}${project.slug === 'ai-discovery' ? ' is-shopping-agent' : ''}${project.slug === 'similar-designers' ? ' is-similar-designers' : ''}${projectIndex % 2 === 1 && project.slug !== 'ai-discovery' ? ' is-reversed' : ''}${projectIndex % 3 === 2 && project.slug !== 'similar-designers' ? ' is-wide' : ''}`}
                 data-testid={`link-project-${project.slug}`}
               >
                 <div className="editorial-project-copy">
