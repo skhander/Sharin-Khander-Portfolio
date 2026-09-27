@@ -135,7 +135,7 @@ export default function Work() {
               >
                 <div className="editorial-project-copy">
                   <div className="editorial-project-kicker font-mono-archive text-accent">
-                    <span className="text-[10px]">{project.slug === 'curation' ? `${projectNumber} · DISCOVERY · AI` : project.slug === 'ai-discovery' ? `${projectNumber} · AI · DISCOVERY` : project.slug === 'similar-designers' ? `${projectNumber} · DISCOVERY · RECOMMENDATIONS` : project.slug === 'attribute-enrichment' ? `${projectNumber} · DISCOVERY · PERSONALIZATION` : project.slug === 'visual-search' ? `${projectNumber} · DISCOVERY · SEARCH` : project.slug === 'elevated-experience' ? `${projectNumber} · UX` : `${projectNumber} / ${project.category}`}</span>
+                    <span className="text-[10px]">{project.slug === 'curation' ? `${projectNumber} · DISCOVERY · BROWSE` : project.slug === 'ai-discovery' ? `${projectNumber} · DISCOVERY · SEARCH` : project.slug === 'similar-designers' ? `${projectNumber} · DISCOVERY · RECOMMENDATIONS` : project.slug === 'attribute-enrichment' ? `${projectNumber} · DISCOVERY · PERSONALIZATION` : project.slug === 'visual-search' ? `${projectNumber} · DISCOVERY · SEARCH` : project.slug === 'elevated-experience' ? `${projectNumber} · UX` : `${projectNumber} / ${project.category}`}</span>
                     <ArrowUpRight size={16} strokeWidth={1.5} className="project-arrow" aria-hidden="true" />
                   </div>
                   <h3 className="font-editorial">{cardTitle}</h3>
