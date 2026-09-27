@@ -50,8 +50,8 @@ const projectVisuals: Record<string, { src: string; alt: string; note?: string; 
     badges: ['Machine Learning', '0→1'],
   },
   'similar-designers': {
-    src: '/media/work/similar-designers-mobile-shopping.png',
-    alt: 'The RealReal mobile shopping page showing Customers Also Shop recommendations for Chanel, Christian Dior, Gucci, Prada, Fendi, and Hermès',
+    src: '/media/work/similar-designers-customers-also-shop.png',
+    alt: 'Customers also shop recommendations for Chanel, Christian Dior, Gucci, Prada, Fendi, and Hermès',
     badges: ['Machine Learning', '0→1'],
   },
   curation: {
@@ -118,7 +118,7 @@ export default function Work() {
 
         <div className="work-list editorial-project-list border-t border-border" aria-live="polite">
           <div className="flex items-center justify-between gap-3 py-4 font-mono-archive text-[10px] uppercase tracking-[.15em] text-muted-foreground">
-            <span className="editorial-brand-badge">The RealReal</span><span>{visibleProjects.length} {visibleProjects.length === 1 ? 'project' : 'projects'}</span>
+            <span className="bg-muted px-2.5 py-1 text-foreground">The RealReal</span><span>{visibleProjects.length} {visibleProjects.length === 1 ? 'project' : 'projects'}</span>
           </div>
           {visibleProjects.map((project) => {
             const projectIndex = homepageProjects.findIndex((item) => item.slug === project.slug);
@@ -130,12 +130,12 @@ export default function Work() {
               <Link
                 href={`/work/${project.slug}`}
                 key={project.slug}
-                className={`editorial-project group${project.slug === 'curation' ? ' is-curation' : ''}${project.slug === 'ai-discovery' ? ' is-shopping-agent' : ''}${project.slug === 'similar-designers' ? ' is-similar-designers' : ''}${project.slug === 'visual-search' ? ' is-visual-search' : ''}`}
+                className={`editorial-project group${project.slug === 'curation' ? ' is-curation' : ''}${project.slug === 'ai-discovery' ? ' is-shopping-agent' : ''}${project.slug === 'similar-designers' ? ' is-similar-designers' : ''}${project.slug === 'visual-search' ? ' is-visual-search' : ''}${projectIndex % 2 === 1 && project.slug !== 'ai-discovery' ? ' is-reversed' : ''}${projectIndex % 3 === 2 && project.slug !== 'similar-designers' ? ' is-wide' : ''}`}
                 data-testid={`link-project-${project.slug}`}
               >
                 <div className="editorial-project-copy">
                   <div className="editorial-project-kicker font-mono-archive text-accent">
-                    <span className="text-[10px]">{project.slug === 'curation' ? `${projectNumber} · DISCOVERY · BROWSE` : project.slug === 'ai-discovery' ? `${projectNumber} · DISCOVERY · SEARCH` : project.slug === 'similar-designers' ? `${projectNumber} · DISCOVERY · RECOMMENDATIONS` : project.slug === 'attribute-enrichment' ? `${projectNumber} · DISCOVERY · PERSONALIZATION` : project.slug === 'visual-search' ? `${projectNumber} · DISCOVERY · SEARCH` : project.slug === 'elevated-experience' ? `${projectNumber} · UX` : `${projectNumber} / ${project.category}`}</span>
+                    <span className="text-[10px]">{project.slug === 'curation' ? `${projectNumber} · DISCOVERY · AI` : project.slug === 'ai-discovery' ? `${projectNumber} · AI · DISCOVERY` : project.slug === 'similar-designers' ? `${projectNumber} · DISCOVERY · RECOMMENDATIONS` : project.slug === 'attribute-enrichment' ? `${projectNumber} · DISCOVERY · PERSONALIZATION` : project.slug === 'visual-search' ? `${projectNumber} · DISCOVERY · SEARCH` : project.slug === 'elevated-experience' ? `${projectNumber} · UX` : `${projectNumber} / ${project.category}`}</span>
                     <ArrowUpRight size={16} strokeWidth={1.5} className="project-arrow" aria-hidden="true" />
                   </div>
                   <h3 className="font-editorial">{cardTitle}</h3>
