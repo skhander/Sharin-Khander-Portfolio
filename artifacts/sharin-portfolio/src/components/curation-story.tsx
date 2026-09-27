@@ -112,18 +112,6 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-10 sm:px-10 md:py-12 lg:px-16" aria-labelledby="curation-partners">
-        <h2 id="curation-partners" className="font-editorial text-[clamp(2.25rem,3.5vw,3.5rem)] leading-[.94] tracking-[-.04em]">Partners</h2>
-        <ul className="mt-8 grid grid-cols-2 gap-x-5 gap-y-6 lg:grid-cols-4 lg:gap-0">
-          {partners.map((partner) => (
-            <li key={partner.name} className="border-t border-border pt-4 lg:border-l lg:pl-5 lg:pr-5 lg:first:border-l-0 lg:first:pl-0">
-              <h3 className="font-mono-archive text-[10px] uppercase tracking-[.12em] text-accent">{partner.name}</h3>
-              <p className="mt-3 max-w-[28ch] text-sm leading-[1.5] text-muted-foreground">{partner.contribution}</p>
-            </li>
-          ))}
-        </ul>
-      </section>
-
       <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-12 sm:px-10 md:py-16 lg:px-16" aria-labelledby="curation-hard-part">
         <div className="grid gap-6 md:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] md:gap-16">
           <h2 id="curation-hard-part" className="max-w-[12ch] font-editorial text-[clamp(2.5rem,4.5vw,4.5rem)] leading-[.94] tracking-[-.04em]">The hard part</h2>
@@ -150,6 +138,18 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
           label="Shop Vintage Bridal"
           tall
         />
+      </section>
+
+      <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-10 sm:px-10 md:py-12 lg:px-16" aria-labelledby="curation-partners">
+        <h2 id="curation-partners" className="font-editorial text-[clamp(2.25rem,3.5vw,3.5rem)] leading-[.94] tracking-[-.04em]">Partners</h2>
+        <ul className="mt-8 grid grid-cols-2 gap-x-5 gap-y-6 lg:grid-cols-4 lg:gap-0">
+          {partners.map((partner) => (
+            <li key={partner.name} className="border-t border-border pt-4 lg:border-l lg:pl-5 lg:pr-5 lg:first:border-l-0 lg:first:pl-0">
+              <h3 className="font-mono-archive text-[10px] uppercase tracking-[.12em] text-accent">{partner.name}</h3>
+              <p className="mt-3 max-w-[28ch] text-sm leading-[1.5] text-muted-foreground">{partner.contribution}</p>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <ProjectNavigation nextProject={nextProject} />
