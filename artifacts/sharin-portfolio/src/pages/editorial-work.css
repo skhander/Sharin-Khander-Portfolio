@@ -33,6 +33,14 @@
   padding-inline: 0 clamp(8px, 2vw, 30px);
 }
 
+@media (min-width: 1024px) {
+  .editorial-work .editorial-project.is-wide.is-similar-designers:not(.is-reversed) {
+    grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+    gap: clamp(28px, 3.2vw, 48px);
+    padding-inline: 0 clamp(10px, 3.2vw, 48px);
+  }
+}
+
 .editorial-work .editorial-project-copy {
   grid-column: 1;
   grid-row: 1;
