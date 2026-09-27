@@ -60,7 +60,7 @@ const projectVisuals: Record<string, { src: string; alt: string; note?: string; 
   curation: {
     src: '/media/work/curation-vacation-shop.mp4',
     alt: 'The RealReal Vacation Shop product browse video',
-    badges: ['Machine Learning', 'Internal Tools', '0→1 BUILD'],
+    badges: ['Machine Learning', '0→1 BUILD'],
   },
 };
 
@@ -120,6 +120,7 @@ export default function Work() {
           {visibleProjects.map((project) => {
             const projectIndex = homepageProjects.findIndex((item) => item.slug === project.slug);
             const projectNumber = String(projectIndex + 1).padStart(2, '0');
+            const cardTitle = project.slug === 'curation' ? 'Curation Tool' : project.title;
             const visual = projectVisuals[project.slug];
             if (!visual) throw new Error(`Missing homepage visual for ${project.slug}`);
             return (
@@ -134,9 +135,9 @@ export default function Work() {
                     <span className="text-[10px]">{project.slug === 'curation' ? `${projectNumber} · DISCOVERY · AI` : `${projectNumber} / ${project.slug === 'elevated-experience' ? 'DISCOVERY · ML · 0→1' : project.category}`}</span>
                     <ArrowUpRight size={16} strokeWidth={1.5} className="project-arrow" aria-hidden="true" />
                   </div>
-                  <h3 className="font-editorial">{project.title}</h3>
+                  <h3 className="font-editorial">{cardTitle}</h3>
                   <p className="editorial-project-description text-muted-foreground">{project.slug === 'curation' ? 'Making editorial taste scalable.' : project.description}</p>
-                  <div className="editorial-project-badges" aria-label={`${project.title} categories`}>
+                  <div className="editorial-project-badges" aria-label={`${cardTitle} categories`}>
                     {visual.badges.map((badge) => <span key={badge}>{badge}</span>)}
                   </div>
                 </div>
