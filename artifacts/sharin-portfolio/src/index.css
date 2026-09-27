@@ -204,12 +204,6 @@
   letter-spacing: .11em;
   line-height: 1.3;
 }
-.work-hero-description {
-  max-width: 410px;
-  margin-top: 32px;
-  font-size: clamp(1.05rem, 1.6vw, 1.25rem);
-  line-height: 1.5;
-}
 .work-band {
   position: relative;
 }
@@ -275,7 +269,6 @@
   .work-proof-item:last-child { border-bottom: 0; }
   .work-proof-number { font-size: clamp(4.5rem, 17vw, 6.5rem); }
   .work-proof-label { margin: 0 0 5px; text-align: right; }
-  .work-hero-description { max-width: 330px; margin-top: 28px; }
   .work-list::before { left: -15px; width: 5px; }
 }
 @media (max-width: 430px) {

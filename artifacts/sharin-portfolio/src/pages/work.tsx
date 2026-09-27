@@ -96,7 +96,6 @@ export default function Work() {
             <span className="work-proof-label">GMV impact</span>
           </div>
         </div>
-        <p className="work-hero-description">I make shopping easier, more personal, and more fun.</p>
       </section>
       <section id="selected-work" className="mx-auto w-full max-w-[1440px] px-6 pb-20 sm:px-10 md:pb-28 lg:px-[5%]" aria-labelledby="work-heading">
         <div className="work-band flex flex-col gap-5 pb-5 sm:flex-row sm:items-center sm:justify-between">
