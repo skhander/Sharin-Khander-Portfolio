@@ -1,6 +1,7 @@
 import { ArrowLeft } from 'lucide-react';
 import { Link, useParams } from 'wouter';
 import { AttributeEnrichmentStory } from '@/components/attribute-enrichment-story';
+import { CurationStory } from '@/components/curation-story';
 import { ElevatedExperienceStory } from '@/components/elevated-experience-story';
 import { ShoppingAgentStory } from '@/components/shopping-agent-story';
 import { SimilarDesignersStory } from '@/components/similar-designers-story';
@@ -39,6 +40,9 @@ export default function ProjectDetail() {
   }
   if (project.slug === 'similar-designers') {
     return <SimilarDesignersStory project={project} nextProject={nextProject} />;
+  }
+  if (project.slug === 'curation') {
+    return <CurationStory project={project} nextProject={nextProject} />;
   }
   const contentSections = project.sections?.filter((section) => section.body?.length || section.images?.length || section.beforeAfter || section.video || section.prototype || section.metrics?.length || section.decisions?.length) ?? [];
 
