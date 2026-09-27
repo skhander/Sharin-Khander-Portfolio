@@ -98,7 +98,7 @@ export const projects: Project[] = [
     title: 'Visual Search',
     company: 'The RealReal',
     category: 'AI / Discovery',
-    description: 'Turning inspiration into product discovery.',
+    description: 'Letting users shop their social media or IRL inspiration.',
     status: 'published',
   },
   {
