@@ -149,38 +149,84 @@
   pointer-events: none;
   top: -1px;
   right: 0;
-  width: min(43%, 590px);
-  height: 206px;
-  background: url('/media/gold-foil.webp') center 36% / cover no-repeat;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 96% 97%, 90% 99%, 83% 94%, 77% 96%, 72% 90%, 66% 91%, 61% 85%, 55% 86%, 49% 78%, 43% 77%, 38% 69%, 31% 68%, 27% 58%, 21% 55%, 18% 44%, 11% 41%, 10% 30%, 5% 26%, 7% 15%, 0 10%);
-  opacity: .86;
+  width: 44%;
+  height: clamp(160px, 18vw, 260px);
+  background: url('/media/gold-foil.webp') center 70% / cover no-repeat;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 94% 97%, 90% 99%, 83% 95%, 78% 97%, 73% 91%, 67% 93%, 62% 86%, 57% 89%, 52% 80%, 48% 82%, 42% 74%, 36% 76%, 32% 66%, 28% 65%, 25% 55%, 19% 53%, 18% 42%, 13% 39%, 12% 29%, 7% 25%, 8% 13%, 0 8%);
+  filter: contrast(1.25) saturate(1.12);
+  opacity: .95;
 }
-.work-intro {
-  box-shadow: 12px 12px 0 hsl(var(--background) / .8);
+.work-hero-name {
+  max-width: max-content;
+  font-size: clamp(5.4rem, 8.8vw, 8rem);
+  line-height: .9;
+  letter-spacing: -.06em;
+}
+.work-hero-role {
+  margin-top: 22px;
+  font-size: clamp(1.65rem, 2.8vw, 2.5rem);
+  line-height: 1.18;
+}
+.work-proof {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  margin-top: 18px;
+  padding: 18px 40px 32px;
+  background: hsl(347 38% 31%);
+  color: hsl(352 27% 84%);
+}
+.work-proof-item {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: end;
+  padding-left: clamp(24px, 4.5vw, 64px);
+  border-left: 1px solid hsl(352 27% 84% / .55);
+}
+.work-proof-item:first-child {
+  padding-left: 0;
+  border-left: 0;
+}
+.work-proof-number {
+  display: block;
+  font-size: clamp(4rem, 7.2vw, 7.5rem);
+  font-weight: 400;
+  line-height: .84;
+  letter-spacing: -.065em;
+  white-space: nowrap;
+}
+.work-proof-label {
+  margin-top: 14px;
+  font-family: var(--app-font-mono);
+  font-size: clamp(.82rem, 1.2vw, .95rem);
+  text-transform: uppercase;
+  letter-spacing: .11em;
+  line-height: 1.3;
+}
+.work-hero-description {
+  max-width: 410px;
+  margin-top: 32px;
+  font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+  line-height: 1.5;
 }
 .work-band {
   position: relative;
-  isolation: isolate;
 }
-.work-band::before,
-.work-band::after {
-  content: '';
-  position: absolute;
-  pointer-events: none;
-  background: url('/media/gold-foil.webp') center / cover no-repeat;
-}
-.work-band::before {
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 5px;
-}
-.work-band::after {
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 2px;
-  opacity: .5;
+@media (min-width: 640px) {
+  .work-band::before {
+    content: '';
+    position: absolute;
+    left: 210px;
+    right: 0;
+    top: 50%;
+    border-top: 1px solid hsl(var(--border));
+  }
+  .work-filters {
+    position: relative;
+    padding-left: 12px;
+    background: hsl(var(--background));
+  }
 }
 .work-list {
   position: relative;
@@ -203,12 +249,38 @@
 @media (max-width: 767px) {
   .work-hero::before {
     width: 32%;
-    height: 118px;
-    background-position: 42% 25%;
-    opacity: .77;
+    height: 92px;
+    background-position: 42% 68%;
+    opacity: .9;
   }
-  .work-intro { box-shadow: 7px 7px 0 hsl(var(--background) / .8); }
+  .work-hero-name {
+    font-size: clamp(3.45rem, 13.8vw, 5.2rem);
+  }
+  .work-hero-role { max-width: 320px; margin-top: 20px; }
+  .work-proof {
+    grid-template-columns: 1fr;
+    margin-top: 20px;
+    padding: 8px 22px;
+  }
+  .work-proof-item,
+  .work-proof-item:first-child {
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 0 18px;
+    border-left: 0;
+    border-bottom: 1px solid hsl(352 27% 84% / .55);
+  }
+  .work-proof-item:last-child { border-bottom: 0; }
+  .work-proof-number { font-size: clamp(4.5rem, 17vw, 6.5rem); }
+  .work-proof-label { margin: 0 0 5px; text-align: right; }
+  .work-hero-description { max-width: 330px; margin-top: 28px; }
   .work-list::before { left: -15px; width: 5px; }
+}
+@media (max-width: 430px) {
+  .work-proof-item:last-child { flex-wrap: wrap; }
+  .work-proof-item:last-child .work-proof-number { font-size: clamp(4.1rem, 16vw, 5.5rem); }
 }
 
 /* Elevated Experience: a restrained editorial product dossier. */

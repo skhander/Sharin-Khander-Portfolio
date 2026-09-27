@@ -1,18 +1,16 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Link, useLocation } from 'wouter';
-import { ArrowUpRight, Menu, X } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { Footer } from '@/components/project-content';
 
 type PortfolioShellProps = { children: React.ReactNode };
 
 export function PortfolioShell({ children }: PortfolioShellProps) {
   const [location] = useLocation();
-  const [menuOpen, setMenuOpen] = useState(false);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
 
-  const closeMenu = () => setMenuOpen(false);
   const links = [
     { href: '/', label: 'Work' },
     { href: '/about', label: 'About' },
@@ -21,22 +19,8 @@ export function PortfolioShell({ children }: PortfolioShellProps) {
 
   return (
     <div className="archive-noise min-h-[100dvh] bg-background text-foreground">
-      <header className="mx-auto flex w-full max-w-[1440px] items-center justify-between border-b border-border px-6 py-5 sm:px-10 lg:px-16">
-        <Link href="/" onClick={closeMenu} className="archive-link group flex items-baseline gap-2" data-testid="link-home">
-          <span className="font-editorial text-[1.5rem] leading-none tracking-[-.03em]">Sharin Khander</span>
-        </Link>
-        <button
-          type="button"
-          onClick={() => setMenuOpen((open) => !open)}
-          className="relative z-30 flex h-10 w-10 items-center justify-center md:hidden"
-          aria-expanded={menuOpen}
-          aria-controls="mobile-navigation"
-          aria-label={menuOpen ? 'Close navigation' : 'Open navigation'}
-          data-testid="button-toggle-navigation"
-        >
-          {menuOpen ? <X size={19} strokeWidth={1.5} /> : <Menu size={19} strokeWidth={1.5} />}
-        </button>
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Primary navigation">
+      <header className="mx-auto flex min-h-16 w-full max-w-[1440px] items-center justify-end border-b border-border px-6 py-4 sm:px-10 lg:px-[5%]">
+        <nav className="flex items-center gap-5 sm:gap-8" aria-label="Primary navigation">
           {links.map((link) => (
             <Link
               key={link.href}
@@ -49,23 +33,6 @@ export function PortfolioShell({ children }: PortfolioShellProps) {
           ))}
         </nav>
       </header>
-      {menuOpen && (
-        <nav id="mobile-navigation" className="absolute inset-x-0 top-[65px] z-20 border-y border-border bg-background px-6 py-6 md:hidden" aria-label="Mobile navigation">
-          <div className="flex flex-col gap-5">
-            {links.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={closeMenu}
-                className={`font-editorial text-3xl ${location === link.href ? 'text-accent' : 'text-foreground'}`}
-                data-testid={`link-mobile-${link.label.toLowerCase()}`}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-        </nav>
-      )}
       <main>{children}</main>
       <Footer />
     </div>
