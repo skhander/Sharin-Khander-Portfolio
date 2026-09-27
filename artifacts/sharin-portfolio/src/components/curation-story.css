@@ -66,6 +66,11 @@
   height: auto;
 }
 
+.curation-story .curation-customer-frame.is-evergreen {
+  max-height: min(1100px, 80vh);
+  overflow-y: auto;
+}
+
 @media (max-width: 767px) {
   .curation-story .curation-customer-frame img {
     width: 720px;
