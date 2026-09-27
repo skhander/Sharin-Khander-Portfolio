@@ -51,10 +51,9 @@ const projectVisuals: Record<string, { src: string; alt: string; note?: string; 
     badges: ['Machine Learning', '0 → 1'],
   },
   'similar-designers': {
-    src: '/media/work/similar-designers-look.jpg',
-    alt: 'Designer look used for designer discovery',
-    note: 'DESIGNER LOOKBOOK',
-    badges: ['Recommendations'],
+    src: '/media/work/similar-designers-customers-also-shop.png',
+    alt: 'Customers also shop recommendations for Chanel, Christian Dior, Gucci, Prada, Fendi, and Hermès',
+    badges: ['Machine Learning', '0→1'],
   },
   curation: {
     src: '/media/work/curation-vacation-shop.mp4',
@@ -131,11 +130,11 @@ export default function Work() {
               >
                 <div className="editorial-project-copy">
                   <div className="editorial-project-kicker font-mono-archive text-accent">
-                    <span className="text-[10px]">{project.slug === 'curation' ? `${projectNumber} · DISCOVERY · AI` : project.slug === 'ai-discovery' ? `${projectNumber} · AI · DISCOVERY` : `${projectNumber} / ${project.slug === 'elevated-experience' ? 'DISCOVERY · ML · 0→1' : project.category}`}</span>
+                    <span className="text-[10px]">{project.slug === 'curation' ? `${projectNumber} · DISCOVERY · AI` : project.slug === 'ai-discovery' ? `${projectNumber} · AI · DISCOVERY` : project.slug === 'similar-designers' ? `${projectNumber} · DISCOVERY · RECOMMENDATIONS` : `${projectNumber} / ${project.slug === 'elevated-experience' ? 'DISCOVERY · ML · 0→1' : project.category}`}</span>
                     <ArrowUpRight size={16} strokeWidth={1.5} className="project-arrow" aria-hidden="true" />
                   </div>
                   <h3 className="font-editorial">{cardTitle}</h3>
-                  <p className="editorial-project-description text-muted-foreground">{project.slug === 'curation' ? 'Making editorial taste scalable.' : project.slug === 'ai-discovery' ? 'Search, compare, and buy with natural language.' : project.description}</p>
+                  <p className="editorial-project-description text-muted-foreground">{project.slug === 'curation' ? 'Making editorial taste scalable.' : project.slug === 'ai-discovery' ? 'Search, compare, and buy with natural language.' : project.slug === 'similar-designers' ? 'Helping shoppers discover their next favorite designer.' : project.description}</p>
                   <div className="editorial-project-badges" aria-label={`${cardTitle} categories`}>
                     {visual.badges.map((badge) => <span key={badge}>{badge}</span>)}
                   </div>
@@ -157,7 +156,7 @@ export default function Work() {
                       <img src={visual.src} alt={visual.alt} loading={projectIndex < 2 ? 'eager' : 'lazy'} />
                     )}
                   </div>
-                  {project.slug !== 'curation' && project.slug !== 'ai-discovery' && (
+                  {project.slug !== 'curation' && project.slug !== 'ai-discovery' && project.slug !== 'similar-designers' && (
                     <figcaption className="font-mono-archive">
                       <span>{visual.note}</span><span>FIG. {projectNumber}</span>
                     </figcaption>

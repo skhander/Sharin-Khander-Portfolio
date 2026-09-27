@@ -68,6 +68,11 @@
   aspect-ratio: 1.65;
 }
 
+.editorial-work .editorial-project.is-wide .editorial-project-visual[data-project="similar-designers"] {
+  aspect-ratio: 454 / 172;
+  background: transparent;
+}
+
 .editorial-work .editorial-project.is-curation .editorial-project-visual,
 .editorial-work .editorial-project.is-shopping-agent .editorial-project-visual {
   aspect-ratio: 16 / 9;
