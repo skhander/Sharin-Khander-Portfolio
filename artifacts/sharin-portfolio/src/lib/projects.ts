@@ -70,7 +70,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'attribute-enrichment',
-    title: 'Catalog Enrichment',
+    title: 'Attribute Prediction Model',
     company: 'The RealReal',
     category: 'AI / Discovery / Curation',
     description: 'Teaching a 6M-item catalog to understand how people actually shop.',
