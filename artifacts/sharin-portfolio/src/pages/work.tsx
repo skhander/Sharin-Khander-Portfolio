@@ -47,17 +47,17 @@ const projectVisuals: Record<string, { src: string; alt: string; note?: string; 
   'visual-search': {
     src: '/media/work/visual-search-ui.png',
     alt: 'Visual Search mobile camera interface with selectable regions in a photo',
-    badges: ['Machine Learning', '0→1'],
+    badges: ['ML', '0→1'],
   },
   'similar-designers': {
     src: '/media/work/similar-designers-customers-also-shop.png',
     alt: 'Customers also shop recommendations for Chanel, Christian Dior, Gucci, Prada, Fendi, and Hermès',
-    badges: ['Machine Learning', '0→1'],
+    badges: ['ML', '0→1'],
   },
   curation: {
     src: '/media/work/curation-vacation-shop.mp4',
     alt: 'The RealReal Vacation Shop product browse video',
-    badges: ['Agents', 'Machine Learning', '0→1 BUILD'],
+    badges: ['Agents', 'ML', '0→1 BUILD'],
   },
 };
 
@@ -135,7 +135,7 @@ export default function Work() {
               >
                 <div className="editorial-project-copy">
                   <div className="editorial-project-kicker font-mono-archive text-accent">
-                    <span className="text-[10px]">{project.slug === 'curation' ? `${projectNumber} · DISCOVERY · AI` : project.slug === 'ai-discovery' ? `${projectNumber} · AI · DISCOVERY` : project.slug === 'similar-designers' ? `${projectNumber} · DISCOVERY · RECOMMENDATIONS` : project.slug === 'attribute-enrichment' ? `${projectNumber} · DISCOVERY · PERSONALIZATION` : project.slug === 'visual-search' ? `${projectNumber} · DISCOVERY · SEARCH` : project.slug === 'elevated-experience' ? `${projectNumber} · UX` : `${projectNumber} / ${project.category}`}</span>
+                    <span className="text-[10px]">{projectNumber}</span>
                     <ArrowUpRight size={16} strokeWidth={1.5} className="project-arrow" aria-hidden="true" />
                   </div>
                   <h3 className="font-editorial">{cardTitle}</h3>
