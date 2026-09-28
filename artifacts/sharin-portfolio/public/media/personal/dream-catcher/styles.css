@@ -583,7 +583,7 @@ html.embed .scroll::-webkit-scrollbar {
 
 .seg {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--space-8);
 }
 
@@ -990,7 +990,7 @@ h2.section-label {
   color: var(--lilac);
 }
 
-.stats { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); }
+.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-16); }
 .stat { text-align: center; }
 .stat strong { display: block; font-size: 24px; font-weight: 400; }
 
@@ -1283,6 +1283,18 @@ h2.section-label {
 
 @keyframes caret {
   50% { opacity: 0; }
+}
+
+@media (max-width: 300px) {
+  .scroll { padding-inline: 12px; }
+  .page-head { gap: 8px; padding-inline: 12px; }
+  .page-head h1 { font-size: 20px; }
+  .record-row { flex-wrap: wrap; max-height: none; }
+  .record-ico { flex: 0 0 32px; width: 32px; height: 32px; }
+  .record-title { flex: 1; min-width: 0; }
+  .record-hint { flex: 0 0 calc(100% - 40px); margin-left: 40px; }
+  .seg-btn { padding-inline: 6px; font-size: 12px; overflow-wrap: anywhere; }
+  .nav-item { font-size: 11px; }
 }
 
 @media (max-width: 430px) {

@@ -196,12 +196,16 @@ export default function Work() {
                     <div className="personal-recordings">{tryOnClips.map((clip) => <Recording key={clip.src} clip={clip} />)}</div>
                   ) : project.preview === 'prototype' ? (
                     <div className="personal-dream-embed">
-                      <iframe
-                        src={`${import.meta.env.BASE_URL}media/personal/dream-catcher/index.html?embed`}
-                        title="Dream Catcher interactive phone prototype"
-                        sandbox="allow-scripts"
-                        loading="lazy"
-                      />
+                      <div className="personal-dream-device">
+                        <iframe
+                          src={`${import.meta.env.BASE_URL}media/personal/dream-catcher/index.html?embed`}
+                          title="Dream Catcher interactive iPhone prototype"
+                          sandbox="allow-scripts"
+                          loading="lazy"
+                        />
+                        <span className="personal-dream-island" aria-hidden="true" />
+                        <span className="personal-dream-home-bar" aria-hidden="true" />
+                      </div>
                     </div>
                   ) : (
                     <div className="personal-unavailable">

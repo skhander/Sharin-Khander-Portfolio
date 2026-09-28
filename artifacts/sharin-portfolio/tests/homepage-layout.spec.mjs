@@ -29,7 +29,19 @@ for (const viewport of viewports) {
     await expect(page.locator('.personal-project h3')).toHaveText(['Virtual Try-On', 'Dream Catcher', 'Medigo']);
     await expect(page.getByTestId('button-filter-all')).toHaveAttribute('aria-pressed', 'true');
     await expect(page.locator('.work-filters button')).toHaveCount(1);
-    await expect(page.locator('.personal-unavailable-status')).toHaveCount(2);
+    await expect(page.locator('.personal-unavailable-status')).toHaveCount(1);
+    const dreamFigure = page.locator('[data-project="dream-catcher"]');
+    const dreamDevice = dreamFigure.locator('.personal-dream-device');
+    await dreamDevice.scrollIntoViewIfNeeded();
+    await expect(dreamDevice.locator('iframe')).toBeVisible();
+    await expect(page.frameLocator('[data-project="dream-catcher"] iframe').locator('.scroll-indicator')).toBeVisible();
+    const dreamWidths = await dreamFigure.evaluate((figure) => ({
+      figure: figure.getBoundingClientRect().width,
+      device: figure.querySelector('.personal-dream-device').getBoundingClientRect().width,
+      frame: figure.querySelector('iframe').getBoundingClientRect().width,
+    }));
+    expect(dreamWidths.device, 'phone frame fits its card').toBeLessThanOrEqual(dreamWidths.figure);
+    expect(dreamWidths.frame, 'prototype fills the frame').toBeGreaterThan(dreamWidths.device - 32);
     await expect(page.locator('.personal-recording-play')).toHaveCount(2);
     await expect(page.locator('.work-list a.editorial-project')).toHaveCount(0);
     await page.getByRole('button', { name: 'Play Virtual Try-On — Product detail recording' }).click();
