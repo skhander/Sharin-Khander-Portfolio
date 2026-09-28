@@ -13,15 +13,18 @@ for (const viewport of viewports) {
 
     const name = page.getByTestId('text-work-name');
     const metrics = page.locator('.work-proof');
-    const selectedWork = page.getByRole('heading', { name: 'Selected work' });
+    const selectedWork = page.getByRole('heading', { name: "Things I've Built" });
 
     await expect(name).toContainText('Sharin');
     await expect(name).toContainText('Khander');
     await expect(page.getByTestId('text-products-count')).toHaveText('7');
-    await expect(page.getByTestId('text-experiments-count')).toHaveText('150+');
-    await expect(page.getByTestId('text-gmv-impact')).toHaveText('$340M');
+    await expect(page.getByTestId('text-experiments-count')).toHaveText('40');
+    await expect(page.getByTestId('text-gmv-impact')).toHaveText('$180M');
+    await expect(page.getByTestId('text-work-tagline')).toHaveText('I build better ways to shop.');
+    await expect(page.getByText('2026 YTD')).toBeVisible();
+    await expect(page.getByText('36 / 40 WINS')).toBeVisible();
     await expect(selectedWork).toBeVisible();
-    await expect(page.getByText('Product builder and former engineer.')).toBeVisible();
+    await expect(page.getByText('Product builder and former engineer.')).toHaveCount(0);
     const personalTab = page.getByRole('tab', { name: 'Personal' });
     const realRealTab = page.getByRole('tab', { name: 'The RealReal' });
     await expect(personalTab).toHaveAttribute('aria-selected', 'true');
@@ -86,7 +89,7 @@ for (const viewport of viewports) {
     });
 
     expect(layout.name.top, 'name starts above the metrics').toBeLessThan(layout.metrics.top);
-    expect(layout.metrics.bottom, 'metrics precede Selected work').toBeLessThan(layout.selectedWork.top);
+    expect(layout.metrics.bottom, 'metrics precede Things I’ve Built').toBeLessThan(layout.selectedWork.top);
     expect(layout.metrics.bottom, 'all metrics fit above the fold').toBeLessThanOrEqual(layout.viewportHeight);
     expect(layout.documentWidth, 'no horizontal page overflow').toBeLessThanOrEqual(layout.viewportWidth + 1);
 

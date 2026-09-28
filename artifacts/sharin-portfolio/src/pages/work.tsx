@@ -105,27 +105,33 @@ export default function Work() {
 
   return (
     <div className="page-reveal editorial-work">
-      <section className="work-hero mx-auto w-full max-w-[1440px] px-6 pb-10 pt-10 sm:px-10 md:pb-12 md:pt-10 lg:px-[5%]">
-        <h1 className="work-hero-name font-editorial" data-testid="text-work-name">Sharin<br />Khander<span className="text-accent">.</span></h1>
-        <p className="work-hero-role font-editorial">Product builder and former engineer.</p>
-        <div className="work-proof" aria-label="Track record">
-          <div className="work-proof-item">
-            <strong className="work-proof-number font-editorial" data-testid="text-products-count">7</strong>
-            <span className="work-proof-label">0→1 products</span>
-          </div>
-          <div className="work-proof-item">
-            <strong className="work-proof-number font-editorial" data-testid="text-experiments-count">150+</strong>
-            <span className="work-proof-label">experiments</span>
-          </div>
-          <div className="work-proof-item">
-            <strong className="work-proof-number font-editorial" data-testid="text-gmv-impact">$340M</strong>
-            <span className="work-proof-label">GMV impact</span>
+      <section className="work-hero mx-auto w-full max-w-[1440px] px-6 pb-10 pt-12 sm:px-10 md:pb-12 lg:px-[5%]">
+        <h1 className="work-hero-name font-editorial" data-testid="text-work-name">Sharin<br />{' '}Khander<span className="text-accent">.</span></h1>
+        <div className="work-hero-support">
+          <p className="work-hero-role font-editorial" data-testid="text-work-tagline">I build better ways<br />{' '}to shop<span className="text-accent">.</span></p>
+          <div className="work-proof" aria-label="2026 year-to-date metrics">
+            <span className="work-proof-heading font-mono-archive">2026 YTD</span>
+            <div className="work-proof-grid">
+              <div className="work-proof-item">
+                <strong className="work-proof-number font-editorial" data-testid="text-products-count">7</strong>
+                <span className="work-proof-label">0→1 PRODUCTS</span>
+              </div>
+              <div className="work-proof-item">
+                <strong className="work-proof-number font-editorial" data-testid="text-experiments-count">40</strong>
+                <span className="work-proof-label">EXPERIMENTS</span>
+                <span className="work-proof-note">36 / 40 WINS</span>
+              </div>
+              <div className="work-proof-item">
+                <strong className="work-proof-number font-editorial" data-testid="text-gmv-impact">$180M</strong>
+                <span className="work-proof-label">GMV IMPACT</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
       <section id="selected-work" className="mx-auto w-full max-w-[1440px] px-6 pb-20 sm:px-10 md:pb-28 lg:px-[5%]" aria-labelledby="work-heading">
         <div className="work-band">
-          <h2 id="work-heading" className="font-editorial text-[clamp(2.3rem,4vw,3.8rem)] leading-none tracking-[-.035em]">Selected work</h2>
+          <h2 id="work-heading" className="font-editorial text-[clamp(2.3rem,4vw,3.8rem)] leading-none tracking-[-.035em]">Things I've Built</h2>
           <div className="work-tabs" role="tablist" aria-label="Work type">
             {workTypes.map((type, index) => (
               <button

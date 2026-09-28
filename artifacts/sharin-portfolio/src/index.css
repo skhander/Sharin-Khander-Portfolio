@@ -135,31 +135,45 @@
 
 .work-hero-name {
   max-width: max-content;
-  font-size: clamp(5.4rem, 8.8vw, 8rem);
-  line-height: .9;
-  letter-spacing: -.06em;
+  font-size: clamp(6rem, 11.5vw, 10rem);
+  line-height: .82;
+  letter-spacing: -.055em;
+}
+.work-hero-support {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(30px, 4.8vw, 72px);
+  margin-top: clamp(44px, 4.6vw, 58px);
 }
 .work-hero-role {
-  margin-top: 22px;
-  font-size: clamp(1.65rem, 2.8vw, 2.5rem);
-  line-height: 1.18;
+  font-size: clamp(2.75rem, 5vw, 4.2rem);
+  line-height: .99;
+  letter-spacing: -.035em;
 }
 .work-proof {
+  padding: 14px clamp(18px, 2vw, 30px) 16px;
+  background: hsl(347 38% 31%);
+  color: hsl(var(--background));
+}
+.work-proof-heading {
+  display: block;
+  margin-bottom: 9px;
+  font-size: .62rem;
+  line-height: 1;
+  letter-spacing: .19em;
+}
+.work-proof-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0;
-  margin-top: 18px;
-  padding: 18px 40px 32px;
-  background: hsl(347 38% 31%);
-  color: hsl(352 27% 84%);
 }
 .work-proof-item {
   display: flex;
   min-width: 0;
   flex-direction: column;
-  justify-content: end;
-  padding-left: clamp(24px, 4.5vw, 64px);
-  border-left: 1px solid hsl(352 27% 84% / .55);
+  justify-content: start;
+  padding-left: clamp(12px, 1.7vw, 26px);
+  border-left: 1px solid hsl(var(--background) / .45);
 }
 .work-proof-item:first-child {
   padding-left: 0;
@@ -167,65 +181,66 @@
 }
 .work-proof-number {
   display: block;
-  font-size: clamp(4rem, 7.2vw, 7.5rem);
+  font-size: clamp(2.25rem, 3vw, 3.1rem);
   font-weight: 400;
-  line-height: .84;
-  letter-spacing: -.065em;
+  line-height: .94;
+  letter-spacing: -.045em;
+  white-space: nowrap;
+}
+.work-proof-label,
+.work-proof-note {
+  display: block;
+  font-family: var(--app-font-mono);
+  font-size: clamp(.53rem, .7vw, .68rem);
+  letter-spacing: .09em;
+  line-height: 1.4;
   white-space: nowrap;
 }
 .work-proof-label {
-  margin-top: 14px;
-  font-family: var(--app-font-mono);
-  font-size: clamp(.82rem, 1.2vw, .95rem);
-  text-transform: uppercase;
-  letter-spacing: .11em;
-  line-height: 1.3;
+  margin-top: 6px;
+}
+.work-proof-note {
+  margin-top: 2px;
 }
 .work-band {
   position: relative;
+  border-top: 1px solid hsl(var(--border));
+  padding-top: clamp(36px, 4.8vw, 50px);
 }
-@media (min-width: 640px) {
-  .work-band::before {
-    content: '';
-    position: absolute;
-    left: 210px;
-    right: 0;
-    top: 50%;
-    border-top: 1px solid hsl(var(--border));
-  }
-  .work-filters {
-    position: relative;
-    padding-left: 12px;
-    background: hsl(var(--background));
+@media (max-width: 899px) {
+  .work-hero-support {
+    grid-template-columns: 1fr;
+    gap: 26px;
   }
 }
 @media (max-width: 767px) {
   .work-hero-name {
-    font-size: clamp(3.45rem, 13.8vw, 5.2rem);
+    font-size: clamp(4.1rem, 17vw, 7rem);
   }
-  .work-hero-role { max-width: 320px; margin-top: 20px; }
+  .work-hero-support {
+    margin-top: 30px;
+  }
+  .work-hero-role {
+    font-size: clamp(2.3rem, 9vw, 3.6rem);
+  }
   .work-proof {
-    grid-template-columns: 1fr;
-    margin-top: 20px;
-    padding: 8px 22px;
+    padding: 16px 18px 19px;
   }
-  .work-proof-item,
-  .work-proof-item:first-child {
-    flex-direction: row;
-    align-items: end;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 14px 0 18px;
-    border-left: 0;
-    border-bottom: 1px solid hsl(352 27% 84% / .55);
+  .work-proof-item {
+    padding-left: 12px;
   }
-  .work-proof-item:last-child { border-bottom: 0; }
-  .work-proof-number { font-size: clamp(4.5rem, 17vw, 6.5rem); }
-  .work-proof-label { margin: 0 0 5px; text-align: right; }
+  .work-proof-number {
+    font-size: clamp(2rem, 8.6vw, 2.6rem);
+  }
+  .work-proof-label,
+  .work-proof-note {
+    font-size: clamp(.48rem, 1.95vw, .6rem);
+    letter-spacing: .04em;
+  }
 }
 @media (max-width: 430px) {
-  .work-proof-item:last-child { flex-wrap: wrap; }
-  .work-proof-item:last-child .work-proof-number { font-size: clamp(4.1rem, 16vw, 5.5rem); }
+  .work-proof { padding-inline: 14px; }
+  .work-proof-item { padding-left: 8px; }
 }
 
 /* Elevated Experience: a restrained editorial product dossier. */
