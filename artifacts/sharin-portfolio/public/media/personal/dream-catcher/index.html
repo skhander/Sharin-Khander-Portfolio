@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Dream Catcher · Prototype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=taste17" />
+  <script>
+    if (new URLSearchParams(location.search).has("embed")) {
+      document.documentElement.classList.add("embed");
+    }
+  </script>
+</head>
+<body>
+  <div class="stage">
+    <div class="phone" id="phone">
+      <canvas id="sky" aria-hidden="true"></canvas>
+      <div class="horizon" aria-hidden="true"></div>
+      <div class="content-haze" aria-hidden="true"></div>
+      <div class="vignette" aria-hidden="true"></div>
+      <main class="app" id="app"></main>
+    </div>
+  </div>
+  <script src="app.js?v=taste14"></script>
+</body>
+</html>

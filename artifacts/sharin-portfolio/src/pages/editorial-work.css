@@ -178,6 +178,26 @@
   aspect-ratio: 1.3;
 }
 
+.editorial-work .personal-project-visual[data-project="dream-catcher"] {
+  aspect-ratio: auto;
+}
+
+.editorial-work .personal-dream-embed {
+  display: grid;
+  min-width: 0;
+  place-items: center;
+  padding: clamp(16px, 3vw, 36px);
+  background: hsl(var(--muted) / .35);
+}
+
+.editorial-work .personal-dream-embed iframe {
+  display: block;
+  width: min(100%, 390px);
+  aspect-ratio: 390 / 844;
+  border: 1px solid hsl(var(--border));
+  background: #141c38;
+}
+
 .editorial-work .personal-recordings {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

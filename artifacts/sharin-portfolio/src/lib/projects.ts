@@ -59,7 +59,7 @@ export type PersonalProject = {
   title: string;
   description: string;
   badges: string[];
-  preview: 'recordings' | 'unavailable';
+  preview: 'recordings' | 'prototype' | 'unavailable';
 };
 
 export const personalProjects: PersonalProject[] = [
@@ -75,7 +75,7 @@ export const personalProjects: PersonalProject[] = [
     title: 'Dream Catcher',
     description: 'An iPhone app for capturing dreams before they disappear.',
     badges: ['iPhone app', 'Personal'],
-    preview: 'unavailable',
+    preview: 'prototype',
   },
   {
     slug: 'medigo',
