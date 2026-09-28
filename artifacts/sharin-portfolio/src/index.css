@@ -133,29 +133,6 @@
 .project-row:hover .project-arrow { transform: translate(3px, -3px); color: hsl(var(--accent)); }
 .project-arrow { transition: transform .25s ease, color .25s ease; }
 
-/* The supplied foil is treated as a physical edge of the archive, never a text surface. */
-.work-hero {
-  position: relative;
-  isolation: isolate;
-}
-.work-hero > * {
-  position: relative;
-  z-index: 1;
-}
-.work-hero::before {
-  content: '';
-  position: absolute;
-  z-index: 0;
-  pointer-events: none;
-  top: -1px;
-  right: 0;
-  width: 44%;
-  height: clamp(160px, 18vw, 260px);
-  background: url('/media/gold-foil.webp') center 70% / cover no-repeat;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 94% 97%, 90% 99%, 83% 95%, 78% 97%, 73% 91%, 67% 93%, 62% 86%, 57% 89%, 52% 80%, 48% 82%, 42% 74%, 36% 76%, 32% 66%, 28% 65%, 25% 55%, 19% 53%, 18% 42%, 13% 39%, 12% 29%, 7% 25%, 8% 13%, 0 8%);
-  filter: contrast(1.25) saturate(1.12);
-  opacity: .95;
-}
 .work-hero-name {
   max-width: max-content;
   font-size: clamp(5.4rem, 8.8vw, 8rem);
@@ -222,31 +199,7 @@
     background: hsl(var(--background));
   }
 }
-.work-list {
-  position: relative;
-}
-.work-list::before {
-  content: '';
-  position: absolute;
-  pointer-events: none;
-  top: 58px;
-  bottom: 0;
-  left: -40px;
-  width: 26px;
-  background: url('/media/gold-foil.webp') 44% top / auto 320px repeat-y;
-  clip-path: polygon(0 0, 100% 0, 86% 5%, 98% 11%, 78% 17%, 94% 23%, 80% 29%, 100% 36%, 83% 42%, 95% 49%, 77% 55%, 96% 62%, 80% 69%, 100% 75%, 82% 82%, 91% 88%, 69% 94%, 45% 100%, 0 100%);
-  opacity: .8;
-}
-@media (min-width: 1024px) {
-  .work-list::before { left: -64px; width: 44px; }
-}
 @media (max-width: 767px) {
-  .work-hero::before {
-    width: 32%;
-    height: 92px;
-    background-position: 42% 68%;
-    opacity: .9;
-  }
   .work-hero-name {
     font-size: clamp(3.45rem, 13.8vw, 5.2rem);
   }
@@ -269,7 +222,6 @@
   .work-proof-item:last-child { border-bottom: 0; }
   .work-proof-number { font-size: clamp(4.5rem, 17vw, 6.5rem); }
   .work-proof-label { margin: 0 0 5px; text-align: right; }
-  .work-list::before { left: -15px; width: 5px; }
 }
 @media (max-width: 430px) {
   .work-proof-item:last-child { flex-wrap: wrap; }

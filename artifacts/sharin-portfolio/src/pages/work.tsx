@@ -57,7 +57,7 @@ const projectVisuals: Record<string, { src: string; alt: string; note?: string; 
   curation: {
     src: '/media/work/curation-vacation-shop.mp4',
     alt: 'The RealReal Vacation Shop product browse video',
-    badges: ['Agents', 'ML', '0→1 BUILD'],
+    badges: ['Agents', 'ML', '0→1'],
   },
 };
 
