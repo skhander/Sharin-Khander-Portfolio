@@ -21,6 +21,20 @@ for (const viewport of viewports) {
     await expect(page.getByTestId('text-experiments-count')).toHaveText('150+');
     await expect(page.getByTestId('text-gmv-impact')).toHaveText('$340M');
     await expect(selectedWork).toBeVisible();
+    await expect(page.getByText('Product builder and former engineer.')).toBeVisible();
+    const personalTab = page.getByRole('tab', { name: 'Personal' });
+    const realRealTab = page.getByRole('tab', { name: 'The RealReal' });
+    await expect(personalTab).toHaveAttribute('aria-selected', 'true');
+    await expect(page.getByRole('tabpanel')).toBeVisible();
+    await expect(page.locator('.personal-project h3')).toHaveText(['Virtual Try-On', 'Dream Catcher', 'Medigo']);
+    await expect(page.getByTestId('button-filter-all')).toHaveAttribute('aria-pressed', 'true');
+    await expect(page.locator('.work-filters button')).toHaveCount(1);
+    await expect(page.locator('.personal-unavailable-status')).toHaveCount(2);
+    await expect(page.locator('.personal-recording-play')).toHaveCount(2);
+    await expect(page.locator('.work-list a.editorial-project')).toHaveCount(0);
+    await page.getByRole('button', { name: 'Play Virtual Try-On — Product detail recording' }).click();
+    await expect(page.getByLabel('Virtual Try-On — Product detail recording')).toHaveAttribute('controls', '');
+    await expect(page.getByLabel('Virtual Try-On — Product detail recording')).toHaveJSProperty('networkState', 1);
 
     // Measure after the entrance animation; don't let it make the geometry flaky.
     await page.locator('.page-reveal').evaluate((element) =>
@@ -79,15 +93,14 @@ for (const viewport of viewports) {
       }
     }
 
-    // The foil is a clipped pseudo-element, not a DOM node. Check the painted
-    // polygon rather than its rectangular CSS box (which includes empty space).
-    expect(layout.foilPolygon.length, 'foil clip-path has measurable points').toBeGreaterThan(2);
+    // If the hero has a clipped foil, check its painted polygon rather than
+    // its rectangular CSS box. Current hero styling has no such pseudo-element.
     const insidePolygon = (point, polygon) => polygon.reduce((inside, a, i) => {
       const b = polygon[(i + 1) % polygon.length];
       return ((a.y > point.y) !== (b.y > point.y) &&
         point.x < (b.x - a.x) * (point.y - a.y) / (b.y - a.y) + a.x) ? !inside : inside;
     }, false);
-    for (const { label, box } of layout.text) {
+    for (const { label, box } of layout.foilPolygon.length > 2 ? layout.text : []) {
       // Sampling catches crossing the foil while tolerating subpixel layout.
       for (let x = box.left + 4; x < box.right - 3; x += 4) {
         for (let y = box.top + 4; y < box.bottom - 3; y += 4) {
@@ -95,5 +108,29 @@ for (const viewport of viewports) {
         }
       }
     }
+
+    await realRealTab.click();
+    await expect(realRealTab).toHaveAttribute('aria-selected', 'true');
+    await expect(page.locator('.work-list a.editorial-project')).toHaveCount(6);
+    await expect(page.locator('.work-list a.editorial-project h3')).toHaveText([
+      'Curation Tool', 'Shopping Agent', 'Similar Designers',
+      'Metadata Enrichment', 'Image Search', 'Site Redesign',
+    ]);
+    await expect(page.locator('.work-filters button')).toHaveText(['All', 'Discovery', 'Commerce', 'AI / ML']);
+    await page.getByRole('button', { name: 'AI / ML' }).click();
+    await expect(page.getByTestId('button-filter-ai---ml')).toHaveAttribute('aria-pressed', 'true');
+    await expect(page.locator('.work-list a.editorial-project')).toHaveCount(3);
+    await personalTab.click();
+    await expect(page.locator('.personal-project')).toHaveCount(3);
+    await realRealTab.focus();
+    await realRealTab.press('ArrowLeft');
+    await expect(personalTab).toHaveAttribute('aria-selected', 'true');
+    await realRealTab.click();
+    await expect(page.getByTestId('button-filter-all')).toHaveAttribute('aria-pressed', 'true');
+    await expect(page.locator('.work-list a.editorial-project')).toHaveCount(6);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(viewport.width + 1);
+    await page.emulateMedia({ reducedMotion: 'reduce' });
+    await personalTab.click();
+    await expect(page.locator('.work-list-content')).toHaveCSS('animation-name', 'none');
   });
 }

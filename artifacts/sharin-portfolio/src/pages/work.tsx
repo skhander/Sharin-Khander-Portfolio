@@ -1,11 +1,35 @@
-import { useMemo, useState } from 'react';
-import { ArrowUpRight } from 'lucide-react';
+import { useMemo, useState, type KeyboardEvent } from 'react';
+import { ArrowUpRight, Play } from 'lucide-react';
 import { Link } from 'wouter';
-import { publishedProjects } from '@/lib/projects';
+import { personalProjects, publishedProjects } from '@/lib/projects';
 import { usePageMeta } from '@/lib/use-page-meta';
 import './editorial-work.css';
 
-const filters = ['All', 'Discovery', 'Commerce', 'AI'];
+const realRealFilters = ['All', 'Discovery', 'Commerce', 'AI / ML'];
+const workTypes = ['Personal', 'The RealReal'] as const;
+type WorkType = typeof workTypes[number];
+
+const tryOnClips = [
+  { label: 'Product detail', src: '/media/personal/virtual-try-on-pdp.mp4', poster: '/media/personal/virtual-try-on-pdp-poster.jpg' },
+  { label: 'Browse grid', src: '/media/personal/virtual-try-on-grid.mp4', poster: '/media/personal/virtual-try-on-grid-poster.jpg' },
+];
+
+function Recording({ clip }: { clip: typeof tryOnClips[number] }) {
+  const [playing, setPlaying] = useState(false);
+  return (
+    <div className="personal-recording">
+      {playing ? (
+        <video src={clip.src} poster={clip.poster} controls autoPlay playsInline aria-label={`Virtual Try-On — ${clip.label} recording`} preload="metadata" />
+      ) : (
+        <button type="button" className="personal-recording-play" onClick={() => setPlaying(true)} aria-label={`Play Virtual Try-On — ${clip.label} recording`}>
+          <img src={clip.poster} alt="" loading="lazy" />
+          <span className="personal-play-icon"><Play size={18} fill="currentColor" aria-hidden="true" /></span>
+        </button>
+      )}
+      <span className="personal-recording-label font-mono-archive">{clip.label} / recording</span>
+    </div>
+  );
+}
 
 const homepageProjectSlugs = [
   'curation',
@@ -69,6 +93,7 @@ function matchesFilter(category: string, filter: string) {
 }
 
 export default function Work() {
+  const [workType, setWorkType] = useState<WorkType>('Personal');
   const [filter, setFilter] = useState('All');
   usePageMeta('Work — Sharin Khander', 'Explore Sharin Khander’s product work across luxury marketplaces, shopping agents, visual search, designer discovery, and personalization.');
 
@@ -76,6 +101,20 @@ export default function Work() {
     () => homepageProjects.filter((project) => matchesFilter(project.category, filter)),
     [filter],
   );
+  const activeFilters = workType === 'Personal' ? ['All'] : realRealFilters;
+  const selectWorkType = (next: WorkType) => {
+    setWorkType(next);
+    setFilter('All');
+  };
+  const handleTabKeyDown = (event: KeyboardEvent<HTMLButtonElement>, index: number) => {
+    const nextIndex = event.key === 'ArrowRight' ? (index + 1) % workTypes.length
+      : event.key === 'ArrowLeft' ? (index - 1 + workTypes.length) % workTypes.length
+      : event.key === 'Home' ? 0 : event.key === 'End' ? workTypes.length - 1 : -1;
+    if (nextIndex < 0) return;
+    event.preventDefault();
+    selectWorkType(workTypes[nextIndex]);
+    document.getElementById(`work-tab-${nextIndex}`)?.focus();
+  };
 
   return (
     <div className="page-reveal editorial-work">
@@ -98,17 +137,36 @@ export default function Work() {
         </div>
       </section>
       <section id="selected-work" className="mx-auto w-full max-w-[1440px] px-6 pb-20 sm:px-10 md:pb-28 lg:px-[5%]" aria-labelledby="work-heading">
-        <div className="work-band flex flex-col gap-5 pb-5 sm:flex-row sm:items-center sm:justify-between">
+        <div className="work-band pb-5">
           <h2 id="work-heading" className="font-editorial text-[clamp(2.3rem,4vw,3.8rem)] leading-none tracking-[-.035em]">Selected work</h2>
+          <div className="work-tabs" role="tablist" aria-label="Work type">
+            {workTypes.map((type, index) => (
+              <button
+                type="button"
+                role="tab"
+                id={`work-tab-${index}`}
+                aria-controls="work-panel"
+                aria-selected={workType === type}
+                tabIndex={workType === type ? 0 : -1}
+                onKeyDown={(event) => handleTabKeyDown(event, index)}
+                onClick={() => selectWorkType(type)}
+                className="work-tab font-editorial"
+                data-testid={`tab-${type === 'Personal' ? 'personal' : 'realreal'}`}
+                key={type}
+              >
+                {type}
+              </button>
+            ))}
+          </div>
           <div className="work-filters flex flex-wrap gap-1" role="group" aria-label="Filter projects">
-            {filters.map((item) => (
+            {activeFilters.map((item) => (
               <button
                 type="button"
                 key={item}
                 onClick={() => setFilter(item)}
                 className={`min-h-9 border px-3 py-2 font-mono-archive text-[10px] uppercase tracking-[.1em] transition-colors ${filter === item ? 'border-accent bg-accent text-accent-foreground' : 'border-transparent text-foreground hover:border-foreground/50'}`}
                 aria-pressed={filter === item}
-                data-testid={`button-filter-${item.toLowerCase().replaceAll(' ', '-')}`}
+                data-testid={`button-filter-${item.toLowerCase().replaceAll(' ', '-').replaceAll('/', '-')}`}
               >
                 {item}
               </button>
@@ -116,11 +174,38 @@ export default function Work() {
           </div>
         </div>
 
-        <div className="work-list editorial-project-list border-t border-border" aria-live="polite">
+        <div id="work-panel" role="tabpanel" aria-labelledby={`work-tab-${workType === 'Personal' ? 0 : 1}`} tabIndex={0} className="work-list editorial-project-list border-t border-border" aria-live="polite">
+          <div key={workType} className="work-list-content">
           <div className="flex items-center justify-between gap-3 py-4 font-mono-archive text-[10px] uppercase tracking-[.15em] text-muted-foreground">
-            <span className="bg-muted px-2.5 py-1 text-foreground">The RealReal</span><span>{visibleProjects.length} {visibleProjects.length === 1 ? 'project' : 'projects'}</span>
+            <span className="bg-muted px-2.5 py-1 text-foreground">{workType}</span><span>{workType === 'Personal' ? personalProjects.length : visibleProjects.length} projects</span>
           </div>
-          {visibleProjects.map((project) => {
+          {workType === 'Personal' ? personalProjects.map((project, index) => {
+            const number = String(index + 1).padStart(2, '0');
+            return (
+              <article className="editorial-project personal-project" key={project.slug} data-testid={`personal-project-${project.slug}`}>
+                <div className="editorial-project-copy">
+                  <div className="editorial-project-kicker font-mono-archive text-accent"><span className="text-[10px]">{number}</span></div>
+                  <h3 className="font-editorial">{project.title}</h3>
+                  <p className="editorial-project-description text-muted-foreground">{project.description}</p>
+                  <div className="editorial-project-badges" aria-label={`${project.title} categories`}>
+                    {project.badges.map((badge) => <span key={badge}>{badge}</span>)}
+                  </div>
+                </div>
+                <figure className="editorial-project-visual personal-project-visual" data-project={project.slug}>
+                  {project.preview === 'recordings' ? (
+                    <div className="personal-recordings">{tryOnClips.map((clip) => <Recording key={clip.src} clip={clip} />)}</div>
+                  ) : (
+                    <div className="personal-unavailable">
+                      <span className="personal-unavailable-number font-mono-archive">FIG. {number} / {project.title}</span>
+                      <span className="personal-unavailable-title font-editorial">{project.title}</span>
+                      <span className="personal-unavailable-status font-mono-archive">Prototype preview unavailable</span>
+                    </div>
+                  )}
+                  <figcaption className="font-mono-archive"><span>{project.preview === 'recordings' ? 'REAL PROTOTYPE RECORDINGS' : 'PROTOTYPE UNAVAILABLE'}</span><span>FIG. {number}</span></figcaption>
+                </figure>
+              </article>
+            );
+          }) : visibleProjects.map((project) => {
             const projectIndex = homepageProjects.findIndex((item) => item.slug === project.slug);
             const projectNumber = String(projectIndex + 1).padStart(2, '0');
             const cardTitle = project.slug === 'curation' ? 'Curation Tool' : project.slug === 'attribute-enrichment' ? 'Metadata Enrichment' : project.slug === 'visual-search' ? 'Image Search' : project.slug === 'elevated-experience' ? 'Site Redesign' : project.title;
@@ -170,9 +255,10 @@ export default function Work() {
               </Link>
             );
           })}
+          </div>
         </div>
 
-        {visibleProjects.length === 0 && (
+        {workType === 'The RealReal' && visibleProjects.length === 0 && (
           <div className="border-b border-border py-20 text-center">
             <p className="font-editorial text-3xl">No projects in this filter.</p>
             <button type="button" onClick={() => setFilter('All')} className="mt-5 border-b border-accent pb-1 font-mono-archive text-[10px] uppercase tracking-[.14em] text-accent" data-testid="button-reset-filter">View all</button>

@@ -53,6 +53,39 @@ export type Project = {
   status: 'published' | 'future';
 };
 
+// Homepage-only personal work. These entries intentionally have no detail routes.
+export type PersonalProject = {
+  slug: string;
+  title: string;
+  description: string;
+  badges: string[];
+  preview: 'recordings' | 'unavailable';
+};
+
+export const personalProjects: PersonalProject[] = [
+  {
+    slug: 'virtual-try-on',
+    title: 'Virtual Try-On',
+    description: 'Exploring virtual try-on across product and browse views.',
+    badges: ['Product prototype', 'Try-on'],
+    preview: 'recordings',
+  },
+  {
+    slug: 'dream-catcher',
+    title: 'Dream Catcher',
+    description: 'An iPhone app for capturing dreams before they disappear.',
+    badges: ['iPhone app', 'Personal'],
+    preview: 'unavailable',
+  },
+  {
+    slug: 'medigo',
+    title: 'Medigo',
+    description: 'A personal product exploration.',
+    badges: ['Personal project'],
+    preview: 'unavailable',
+  },
+];
+
 // Add genuine media and case-study content here when available. Empty sections
 // are intentionally not rendered as published research, decisions, or outcomes.
 export const projects: Project[] = [
