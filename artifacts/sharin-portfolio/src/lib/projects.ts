@@ -58,7 +58,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: 'elevated-experience',
-    title: 'Elevated Experience',
+    title: 'Site Redesign',
     company: 'The RealReal',
     category: 'Browse + PDP',
     description: 'Reimagining shopping around luxury inventory.',

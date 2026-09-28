@@ -17,6 +17,13 @@ const browseImages = {
   },
 };
 
+const metrics = [
+  { value: '+10%', label: 'Add to Cart Rate' },
+  { value: '−3%', label: 'Obsessions' },
+  { value: '+8%', label: 'Orders' },
+  { value: '$60M', label: 'Annualized GMV' },
+];
+
 export function ElevatedExperienceStory({ project, nextProject }: { project: Project; nextProject: Project }) {
   const [zoomedImage, setZoomedImage] = useState<keyof typeof browseImages | null>(null);
   const closeZoomRef = useRef<HTMLButtonElement>(null);
@@ -53,10 +60,20 @@ export function ElevatedExperienceStory({ project, nextProject }: { project: Pro
             {project.company} <span className="mx-2 text-border">/</span> {project.category}
           </p>
           <h1 className="mt-6 max-w-5xl font-editorial text-[clamp(4rem,10vw,10rem)] leading-[.83] tracking-[-.055em]" data-testid="text-project-title">
-            Elevated<br className="hidden sm:block" /> Experience<span className="text-accent">.</span>
+            Site<br className="hidden sm:block" /> Redesign
           </h1>
         </div>
       </header>
+      <section className="mx-auto max-w-[1440px] border-y border-border px-6 py-8 sm:px-10 md:py-10 lg:px-16" aria-label="Site Redesign metrics">
+        <dl className="grid gap-x-8 sm:grid-cols-2 lg:grid-cols-4">
+          {metrics.map((metric) => (
+            <div key={metric.label} className="flex flex-col border-t border-border py-5">
+              <dt className="order-2 mt-3 font-mono-archive text-[10px] uppercase tracking-[.12em] text-muted-foreground">{metric.label}</dt>
+              <dd className="order-1 font-editorial text-[clamp(3rem,5vw,5rem)] leading-none tracking-[-.04em]">{metric.value}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
       <ProjectMeta project={project} />
 
       <div>
