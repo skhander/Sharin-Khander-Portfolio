@@ -26,7 +26,6 @@ function Recording({ clip }: { clip: typeof tryOnClips[number] }) {
           <span className="personal-play-icon"><Play size={18} fill="currentColor" aria-hidden="true" /></span>
         </button>
       )}
-      <span className="personal-recording-label font-mono-archive">{clip.label} / recording</span>
     </div>
   );
 }
@@ -182,7 +181,7 @@ export default function Work() {
           {workType === 'Personal' ? personalProjects.map((project, index) => {
             const number = String(index + 1).padStart(2, '0');
             return (
-              <article className="editorial-project personal-project" key={project.slug} data-testid={`personal-project-${project.slug}`}>
+              <article className={`editorial-project personal-project${project.preview === 'recordings' || project.preview === 'video' ? ' has-video' : ''}`} key={project.slug} data-testid={`personal-project-${project.slug}`}>
                 <div className="editorial-project-copy">
                   <div className="editorial-project-kicker font-mono-archive text-accent"><span className="text-[10px]">{number}</span></div>
                   <h3 className="font-editorial">{project.title}</h3>
@@ -207,20 +206,6 @@ export default function Work() {
                         playsInline
                         preload="metadata"
                       />
-                      <span className="personal-recording-label font-mono-archive">Nine days / nine concepts</span>
-                    </div>
-                  ) : project.preview === 'prototype' ? (
-                    <div className="personal-dream-embed">
-                      <div className="personal-dream-device">
-                        <iframe
-                          src={`${import.meta.env.BASE_URL}media/personal/dream-catcher/index.html?embed`}
-                          title="Dream Catcher interactive iPhone prototype"
-                          sandbox="allow-scripts"
-                          loading="lazy"
-                        />
-                        <span className="personal-dream-island" aria-hidden="true" />
-                        <span className="personal-dream-home-bar" aria-hidden="true" />
-                      </div>
                     </div>
                   ) : (
                     <div className="personal-unavailable">
@@ -229,7 +214,6 @@ export default function Work() {
                       <span className="personal-unavailable-status font-mono-archive">Prototype preview unavailable</span>
                     </div>
                   )}
-                  <figcaption className="font-mono-archive"><span>{project.preview === 'recordings' ? 'REAL PROTOTYPE RECORDINGS' : project.preview === 'video' ? 'AI ADVENT CALENDAR / DEMO RECORDING' : project.preview === 'prototype' ? 'LIVE PROTOTYPE / SCROLL THE PHONE' : 'PROTOTYPE UNAVAILABLE'}</span><span>FIG. {number}</span></figcaption>
                 </figure>
               </article>
             );
@@ -274,11 +258,6 @@ export default function Work() {
                       <img src={visual.src} alt={visual.alt} loading={projectIndex < 2 ? 'eager' : 'lazy'} />
                     )}
                   </div>
-                  {project.slug !== 'curation' && project.slug !== 'ai-discovery' && project.slug !== 'similar-designers' && project.slug !== 'visual-search' && (
-                    <figcaption className="font-mono-archive">
-                      <span>{visual.note}</span><span>FIG. {projectNumber}</span>
-                    </figcaption>
-                  )}
                 </figure>
               </Link>
             );

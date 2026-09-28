@@ -59,7 +59,7 @@ export type PersonalProject = {
   title: string;
   description: string;
   badges: string[];
-  preview: 'recordings' | 'video' | 'prototype' | 'unavailable';
+  preview: 'recordings' | 'video' | 'unavailable';
 };
 
 export const personalProjects: PersonalProject[] = [
@@ -76,13 +76,6 @@ export const personalProjects: PersonalProject[] = [
     description: 'Learning AI can be overwhelming. One concept a day, every day for nine days.',
     badges: ['AI Education', '9 Days'],
     preview: 'video',
-  },
-  {
-    slug: 'dream-catcher',
-    title: 'Dream Catcher',
-    description: 'An iPhone app for capturing dreams before they disappear.',
-    badges: ['Native iOS'],
-    preview: 'prototype',
   },
   {
     slug: 'medigo',
