@@ -194,6 +194,21 @@ export default function Work() {
                 <figure className="editorial-project-visual personal-project-visual" data-project={project.slug}>
                   {project.preview === 'recordings' ? (
                     <div className="personal-recordings">{tryOnClips.map((clip) => <Recording key={clip.src} clip={clip} />)}</div>
+                  ) : project.preview === 'video' ? (
+                    <div className="personal-advent-preview">
+                      <video
+                        src={`${import.meta.env.BASE_URL}media/personal/ai-advent-calendar.mp4`}
+                        poster={`${import.meta.env.BASE_URL}media/personal/ai-advent-calendar-poster.jpg`}
+                        aria-label="AI Advent Calendar demo recording"
+                        autoPlay
+                        muted
+                        loop
+                        controls
+                        playsInline
+                        preload="metadata"
+                      />
+                      <span className="personal-recording-label font-mono-archive">Nine days / nine concepts</span>
+                    </div>
                   ) : project.preview === 'prototype' ? (
                     <div className="personal-dream-embed">
                       <div className="personal-dream-device">
@@ -214,7 +229,7 @@ export default function Work() {
                       <span className="personal-unavailable-status font-mono-archive">Prototype preview unavailable</span>
                     </div>
                   )}
-                  <figcaption className="font-mono-archive"><span>{project.preview === 'recordings' ? 'REAL PROTOTYPE RECORDINGS' : project.preview === 'prototype' ? 'LIVE PROTOTYPE / SCROLL THE PHONE' : 'PROTOTYPE UNAVAILABLE'}</span><span>FIG. {number}</span></figcaption>
+                  <figcaption className="font-mono-archive"><span>{project.preview === 'recordings' ? 'REAL PROTOTYPE RECORDINGS' : project.preview === 'video' ? 'AI ADVENT CALENDAR / DEMO RECORDING' : project.preview === 'prototype' ? 'LIVE PROTOTYPE / SCROLL THE PHONE' : 'PROTOTYPE UNAVAILABLE'}</span><span>FIG. {number}</span></figcaption>
                 </figure>
               </article>
             );

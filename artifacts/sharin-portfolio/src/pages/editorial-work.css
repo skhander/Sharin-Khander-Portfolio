@@ -182,6 +182,26 @@
   aspect-ratio: auto;
 }
 
+.editorial-work .personal-project-visual[data-project="ai-advent-calendar"] {
+  aspect-ratio: auto;
+}
+
+.editorial-work .personal-advent-preview {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: clamp(8px, 1.5vw, 14px);
+  background: hsl(var(--muted) / .35);
+}
+
+.editorial-work .personal-advent-preview video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #0b3029;
+  object-fit: contain;
+}
+
 .editorial-work .personal-dream-embed {
   display: grid;
   min-width: 0;

@@ -26,7 +26,10 @@ for (const viewport of viewports) {
     const realRealTab = page.getByRole('tab', { name: 'The RealReal' });
     await expect(personalTab).toHaveAttribute('aria-selected', 'true');
     await expect(page.getByRole('tabpanel')).toBeVisible();
-    await expect(page.locator('.personal-project h3')).toHaveText(['Virtual Try-On', 'Dream Catcher', 'Medigo']);
+    await expect(page.locator('.personal-project h3')).toHaveText(['Virtual Try-On', 'AI Advent Calendar', 'Dream Catcher', 'Medigo']);
+    await expect(page.getByTestId('personal-project-ai-advent-calendar').locator('.editorial-project-kicker')).toHaveText('02');
+    await expect(page.getByTestId('personal-project-dream-catcher').locator('.editorial-project-kicker')).toHaveText('03');
+    await expect(page.getByLabel('AI Advent Calendar demo recording')).toBeVisible();
     await expect(page.getByTestId('button-filter-all')).toHaveAttribute('aria-pressed', 'true');
     await expect(page.locator('.work-filters button')).toHaveCount(1);
     await expect(page.locator('.personal-unavailable-status')).toHaveCount(1);
@@ -133,7 +136,7 @@ for (const viewport of viewports) {
     await expect(page.getByTestId('button-filter-ai---ml')).toHaveAttribute('aria-pressed', 'true');
     await expect(page.locator('.work-list a.editorial-project')).toHaveCount(3);
     await personalTab.click();
-    await expect(page.locator('.personal-project')).toHaveCount(3);
+    await expect(page.locator('.personal-project')).toHaveCount(4);
     await realRealTab.focus();
     await realRealTab.press('ArrowLeft');
     await expect(personalTab).toHaveAttribute('aria-selected', 'true');
