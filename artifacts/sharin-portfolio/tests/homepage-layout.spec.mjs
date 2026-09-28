@@ -32,10 +32,11 @@ for (const viewport of viewports) {
     await expect(page.getByLabel('AI Advent Calendar demo recording')).toBeVisible();
     await expect(page.locator('.editorial-project-visual figcaption, .personal-recording-label')).toHaveCount(0);
     await expect(page.locator('[data-project="dream-catcher"]')).toHaveCount(0);
-    await expect(page.getByTestId('button-filter-all')).toHaveAttribute('aria-pressed', 'true');
-    await expect(page.locator('.work-filters button')).toHaveCount(1);
+    await expect(page.locator('.work-filters')).toHaveCount(0);
+    await expect(page.locator('.work-list-content > div')).toHaveCount(0);
     await expect(page.locator('.personal-unavailable-status')).toHaveCount(1);
     await expect(page.locator('.personal-recording-play')).toHaveCount(1);
+    await expect(page.locator('.personal-project [src*="virtual-try-on-pdp"]')).toHaveCount(0);
     await expect(page.locator('.work-list a.editorial-project')).toHaveCount(0);
     await page.getByRole('button', { name: 'Play Virtual Try-On — Browse grid recording' }).click();
     await expect(page.getByLabel('Virtual Try-On — Browse grid recording')).toHaveAttribute('controls', '');
@@ -121,17 +122,13 @@ for (const viewport of viewports) {
       'Curation Tool', 'Shopping Agent', 'Similar Designers',
       'Metadata Enrichment', 'Image Search', 'Site Redesign',
     ]);
-    await expect(page.locator('.work-filters button')).toHaveText(['All', 'Discovery', 'Commerce', 'AI / ML']);
-    await page.getByRole('button', { name: 'AI / ML' }).click();
-    await expect(page.getByTestId('button-filter-ai---ml')).toHaveAttribute('aria-pressed', 'true');
-    await expect(page.locator('.work-list a.editorial-project')).toHaveCount(3);
+    await expect(page.locator('.work-filters, .work-list-content > div')).toHaveCount(0);
     await personalTab.click();
     await expect(page.locator('.personal-project')).toHaveCount(3);
     await realRealTab.focus();
     await realRealTab.press('ArrowLeft');
     await expect(personalTab).toHaveAttribute('aria-selected', 'true');
     await realRealTab.click();
-    await expect(page.getByTestId('button-filter-all')).toHaveAttribute('aria-pressed', 'true');
     await expect(page.locator('.work-list a.editorial-project')).toHaveCount(6);
     expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(viewport.width + 1);
     await page.emulateMedia({ reducedMotion: 'reduce' });

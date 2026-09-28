@@ -35,10 +35,6 @@
   content: '';
 }
 
-.editorial-work .work-filters {
-  padding-top: 14px;
-}
-
 .editorial-work .work-list-content {
   animation: work-content-in .22s ease-out both;
 }
@@ -58,6 +54,30 @@
   border-top: 1px solid hsl(var(--border) / .8);
   text-decoration: none;
   color: inherit;
+}
+
+.editorial-work .editorial-project.personal-project {
+  align-items: start;
+  padding-block: clamp(24px, 4vw, 54px);
+}
+
+.editorial-work .personal-project .editorial-project-copy {
+  padding-block: 0;
+}
+
+.editorial-work .work-list-content > .editorial-project:first-child {
+  border-top: 0;
+  padding-top: clamp(18px, 2.8vw, 36px);
+}
+
+@media (min-width: 768px) {
+  .editorial-work .work-list-content > .editorial-project:first-child {
+    align-items: start;
+  }
+
+  .editorial-work .work-list-content > .editorial-project:first-child .editorial-project-copy {
+    padding-top: 0;
+  }
 }
 
 .editorial-work .editorial-project.personal-project.has-video,
@@ -184,6 +204,11 @@
 
 .editorial-work .personal-project-visual {
   aspect-ratio: auto;
+}
+
+.editorial-work .personal-project-visual[data-project="virtual-try-on"] {
+  max-width: 640px;
+  justify-self: center;
 }
 
 .editorial-work .personal-project-visual[data-project="ai-advent-calendar"] {

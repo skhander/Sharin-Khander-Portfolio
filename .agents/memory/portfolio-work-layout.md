@@ -7,4 +7,4 @@ Prefer an image-centric vertical project sequence over a conventional multi-colu
 
 **Why:** After reviewing an image-led grid, the user said the vertical list was cleaner. They originally chose an alternating editorial sequence for mixed aspect ratios, but later explicitly asked for all projects, including Metadata Enrichment and Site Optimization, to read left to right. Portrait imagery should fit without cropping rather than reversing cards.
 
-**How to apply:** Preserve project identities, authentic imagery, badges, descriptions, and filters when changing this homepage. Keep the green, pink, gold, and oxblood palette; the user explicitly asked not to change its colors. This is project-specific, not a general preference for unrelated apps.
+**How to apply:** Preserve project identities, authentic imagery, badges, descriptions, and the two work tabs when changing this homepage. Keep the green, pink, gold, and oxblood palette; the user explicitly asked not to change its colors. This is project-specific, not a general preference for unrelated apps.

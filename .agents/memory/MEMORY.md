@@ -5,3 +5,5 @@
 - [Scoped pnpm installs](scoped-pnpm-installs.md) — the package-install callback may target workspace root; scoped artifact dependencies need a filtered pnpm install.
 - [Portfolio video preview](portfolio-video-preview.md) — mount walkthrough video on click; a video element can show a spinner over its poster even with preloading off.
 - [Embedded phone scrolling](embedded-phone-scrolling.md) — styled native scrollbars can remain invisible inside a phone iframe; show a persistent scroll affordance.
+- [Virtual Try-On page intent](virtual-try-on-page-intent.md) — keep the Product Detail recording for a future separate page; the homepage card shows Browse Grid only.
+- [Screen recording fidelity](screen-recording-fidelity.md) — preserve high-quality UI recordings; tiny compressed previews make interface text unreadable.
