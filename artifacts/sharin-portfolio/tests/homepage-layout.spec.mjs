@@ -35,11 +35,11 @@ for (const viewport of viewports) {
     await expect(page.getByTestId('button-filter-all')).toHaveAttribute('aria-pressed', 'true');
     await expect(page.locator('.work-filters button')).toHaveCount(1);
     await expect(page.locator('.personal-unavailable-status')).toHaveCount(1);
-    await expect(page.locator('.personal-recording-play')).toHaveCount(2);
+    await expect(page.locator('.personal-recording-play')).toHaveCount(1);
     await expect(page.locator('.work-list a.editorial-project')).toHaveCount(0);
-    await page.getByRole('button', { name: 'Play Virtual Try-On — Product detail recording' }).click();
-    await expect(page.getByLabel('Virtual Try-On — Product detail recording')).toHaveAttribute('controls', '');
-    await expect(page.getByLabel('Virtual Try-On — Product detail recording')).toHaveJSProperty('networkState', 1);
+    await page.getByRole('button', { name: 'Play Virtual Try-On — Browse grid recording' }).click();
+    await expect(page.getByLabel('Virtual Try-On — Browse grid recording')).toHaveAttribute('controls', '');
+    await expect(page.getByLabel('Virtual Try-On — Browse grid recording')).toHaveJSProperty('networkState', 1);
 
     // Measure after the entrance animation; don't let it make the geometry flaky.
     await page.locator('.page-reveal').evaluate((element) =>

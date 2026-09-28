@@ -10,7 +10,6 @@ const workTypes = ['Personal', 'The RealReal'] as const;
 type WorkType = typeof workTypes[number];
 
 const tryOnClips = [
-  { label: 'Product detail', src: '/media/personal/virtual-try-on-pdp.mp4', poster: '/media/personal/virtual-try-on-pdp-poster.jpg' },
   { label: 'Browse grid', src: '/media/personal/virtual-try-on-grid.mp4', poster: '/media/personal/virtual-try-on-grid-poster.jpg' },
 ];
 
