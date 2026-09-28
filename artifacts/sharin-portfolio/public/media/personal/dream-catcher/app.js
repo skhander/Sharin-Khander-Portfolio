@@ -1004,17 +1004,67 @@
     reflect: renderReflect
   };
 
+  let indicatorResizeUpdate = null;
+
   function render() {
     const root = document.getElementById("app");
     const view = screens[state.screen] || renderHome;
     root.innerHTML = view();
     bindLiveFields();
+    setupScrollIndicator(root);
     if (state.screen === "saved" && !savedTimer) {
       savedTimer = setTimeout(() => {
         savedTimer = null;
         go("story");
       }, 1800);
     }
+  }
+
+  function setupScrollIndicator(root) {
+    if (indicatorResizeUpdate) window.removeEventListener("resize", indicatorResizeUpdate);
+    indicatorResizeUpdate = null;
+    if (!document.documentElement.classList.contains("embed")) return;
+    const scroller = root.querySelector(".screen > .scroll");
+    if (!scroller) return;
+
+    const track = document.createElement("div");
+    track.className = "scroll-indicator";
+    track.setAttribute("aria-hidden", "true");
+    const thumb = document.createElement("span");
+    thumb.className = "scroll-indicator-thumb";
+    track.append(thumb);
+    scroller.parentElement.append(track);
+
+    function update() {
+      const remaining = scroller.scrollHeight - scroller.clientHeight;
+      track.hidden = remaining <= 2;
+      if (track.hidden) return;
+      const trackHeight = scroller.clientHeight - 16;
+      const thumbHeight = Math.max(32, Math.round(trackHeight * scroller.clientHeight / scroller.scrollHeight));
+      track.style.top = `${scroller.offsetTop + 8}px`;
+      track.style.height = `${trackHeight}px`;
+      thumb.style.height = `${thumbHeight}px`;
+      thumb.style.transform = `translateY(${Math.round(scroller.scrollTop / remaining * (trackHeight - thumbHeight))}px)`;
+    }
+
+    function moveTo(pointerY) {
+      const rect = track.getBoundingClientRect();
+      const thumbHeight = thumb.offsetHeight;
+      const fraction = Math.max(0, Math.min(1, (pointerY - rect.top - thumbHeight / 2) / (rect.height - thumbHeight)));
+      scroller.scrollTop = fraction * (scroller.scrollHeight - scroller.clientHeight);
+    }
+
+    track.addEventListener("pointerdown", (event) => {
+      track.setPointerCapture(event.pointerId);
+      moveTo(event.clientY);
+    });
+    track.addEventListener("pointermove", (event) => {
+      if (track.hasPointerCapture(event.pointerId)) moveTo(event.clientY);
+    });
+    scroller.addEventListener("scroll", update, { passive: true });
+    indicatorResizeUpdate = update;
+    window.addEventListener("resize", update);
+    requestAnimationFrame(update);
   }
 
   function bindLiveFields() {
@@ -1384,6 +1434,40 @@
 
   document.getElementById("app").addEventListener("click", handleClick);
   document.getElementById("app").addEventListener("submit", handleSubmit);
+  let drag = null;
+  let blockClick = false;
+  document.getElementById("app").addEventListener("click", (event) => {
+    if (!blockClick) return;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    blockClick = false;
+  }, true);
+  document.getElementById("app").addEventListener("pointerdown", (event) => {
+    if (event.pointerType !== "mouse" || event.target.closest("input, textarea, select")) return;
+    const scroller = event.target.closest(".scroll");
+    if (scroller) drag = { scroller, y: event.clientY, top: scroller.scrollTop, moved: false };
+  });
+  window.addEventListener("pointermove", (event) => {
+    if (!drag) return;
+    if (Math.abs(event.clientY - drag.y) > 4) drag.moved = true;
+    if (drag.moved) {
+      drag.scroller.classList.add("is-dragging");
+      drag.scroller.scrollTop = drag.top + drag.y - event.clientY;
+      window.getSelection()?.removeAllRanges();
+    }
+  });
+  window.addEventListener("pointerup", () => {
+    if (drag?.moved) {
+      blockClick = true;
+      setTimeout(() => { blockClick = false; }, 0);
+    }
+    drag?.scroller.classList.remove("is-dragging");
+    drag = null;
+  });
+  window.addEventListener("pointercancel", () => {
+    drag?.scroller.classList.remove("is-dragging");
+    drag = null;
+  });
   document.addEventListener("keydown", (event) => {
     if (event.key !== "Escape") return;
     if (state.screen === "capture") {

@@ -67,14 +67,14 @@ export const personalProjects: PersonalProject[] = [
     slug: 'virtual-try-on',
     title: 'Virtual Try-On',
     description: 'Exploring virtual try-on across product and browse views.',
-    badges: ['Product prototype', 'Try-on'],
+    badges: ['Live Demo', 'Try-on'],
     preview: 'recordings',
   },
   {
     slug: 'dream-catcher',
     title: 'Dream Catcher',
     description: 'An iPhone app for capturing dreams before they disappear.',
-    badges: ['iPhone app', 'Personal'],
+    badges: ['Native iOS'],
     preview: 'prototype',
   },
   {

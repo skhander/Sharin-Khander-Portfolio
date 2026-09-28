@@ -4,3 +4,4 @@
 - [Portfolio edit persistence](portfolio-edit-persistence.md) — recent homepage JSX changes have reverted between turns while adjacent assets remained; verify the live card before extending it.
 - [Scoped pnpm installs](scoped-pnpm-installs.md) — the package-install callback may target workspace root; scoped artifact dependencies need a filtered pnpm install.
 - [Portfolio video preview](portfolio-video-preview.md) — mount walkthrough video on click; a video element can show a spinner over its poster even with preloading off.
+- [Embedded phone scrolling](embedded-phone-scrolling.md) — styled native scrollbars can remain invisible inside a phone iframe; show a persistent scroll affordance.
