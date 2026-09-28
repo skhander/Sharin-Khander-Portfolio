@@ -123,7 +123,7 @@ export default function Work() {
           {visibleProjects.map((project) => {
             const projectIndex = homepageProjects.findIndex((item) => item.slug === project.slug);
             const projectNumber = String(projectIndex + 1).padStart(2, '0');
-            const cardTitle = project.slug === 'curation' ? 'Curation Tool' : project.slug === 'attribute-enrichment' ? 'Metadata Enrichment' : project.slug === 'visual-search' ? 'Image Search' : project.slug === 'elevated-experience' ? 'Site Redesign' : project.title;
+            const cardTitle = project.slug === 'curation' ? 'Curation Tool' : project.slug === 'attribute-enrichment' ? 'Catalog Enrichment' : project.slug === 'visual-search' ? 'Image Search' : project.slug === 'elevated-experience' ? 'Site Redesign' : project.title;
             const visual = projectVisuals[project.slug];
             if (!visual) throw new Error(`Missing homepage visual for ${project.slug}`);
             return (
@@ -139,7 +139,7 @@ export default function Work() {
                     <ArrowUpRight size={16} strokeWidth={1.5} className="project-arrow" aria-hidden="true" />
                   </div>
                   <h3 className="font-editorial">{cardTitle}</h3>
-                  <p className="editorial-project-description text-muted-foreground">{project.slug === 'curation' ? 'Making editorial taste scalable.' : project.slug === 'ai-discovery' ? 'Search, compare, and buy with natural dialogue.' : project.slug === 'similar-designers' ? 'Helping shoppers discover their next favorite designer.' : project.slug === 'attribute-enrichment' ? 'Making 6M products discoverable by trend, vibe, and occasion.' : project.slug === 'visual-search' ? 'Turn inspiration into something you can shop.' : project.slug === 'elevated-experience' ? 'Elevating the shopping experience for improved discovery and conversion.' : project.description}</p>
+                  <p className="editorial-project-description text-muted-foreground">{project.slug === 'curation' ? 'Making editorial taste scalable.' : project.slug === 'ai-discovery' ? 'Search, compare, and buy with natural dialogue.' : project.slug === 'similar-designers' ? 'Helping shoppers discover their next favorite designer.' : project.slug === 'attribute-enrichment' ? 'Making 6 million products discoverable by trend, vibe, and occasion.' : project.slug === 'visual-search' ? 'Turn inspiration into something you can shop.' : project.slug === 'elevated-experience' ? 'Elevating the shopping experience for improved discovery and conversion.' : project.description}</p>
                   <div className="editorial-project-badges" aria-label={`${cardTitle} categories`}>
                     {visual.badges.map((badge) => <span key={badge}>{badge}</span>)}
                   </div>
