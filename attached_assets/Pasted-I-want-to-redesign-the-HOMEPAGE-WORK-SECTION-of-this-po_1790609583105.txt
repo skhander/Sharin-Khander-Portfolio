@@ -1,0 +1,276 @@
+I want to redesign the HOMEPAGE WORK SECTION of this portfolio based on the existing design.
+
+IMPORTANT: Do not redesign the visual language of the site. Preserve the current typography, cream background, burgundy accent, spacing system, editorial feel, project-card layout, thin rules, and overall art direction. This should feel like an evolution of the existing site, not a new website.
+
+CURRENT STATE:
+The homepage currently has:
+
+Selected work
+
+ALL | DISCOVERY | COMMERCE | ML
+
+Then a long list of The RealReal projects:
+1. Curation Tool
+2. Shopping Agent
+3. Similar Designers
+4. Attribute Prediction Model
+5. Image Search
+etc.
+
+I want to change the information architecture.
+
+NEW DIRECTION:
+
+The primary navigation should be a TWO-LEVEL browsing experience:
+
+LEVEL 1 = WORK TYPE
+PERSONAL | THE REALREAL
+
+LEVEL 2 = FILTERS within each work type
+
+The homepage should DEFAULT to PERSONAL.
+
+This is intentional. I want the first impression to communicate:
+
+“I'm a product builder who actually makes things.”
+
+The Personal work is more visual, experimental, design-forward, and hands-on. The RealReal work then provides proof of scale, product leadership, ML, and business impact.
+
+Do NOT make Personal feel like a secondary “side projects” section. It should feel like an equally important body of work.
+
+--------------------------------------------------
+HOMEPAGE STRUCTURE
+--------------------------------------------------
+
+Keep the existing hero exactly as it is:
+
+Sharin Khander.
+Product builder and former engineer.
+
+7 | 150+ | $340M
+
+Then:
+
+Selected work
+
+PERSONAL     THE REALREAL
+
+PERSONAL should be selected by default.
+
+Below that, show a subtle secondary filter row.
+
+For Personal, use:
+
+ALL     AI     CONSUMER     EXPERIMENTS
+
+However, if those filters don't correspond cleanly to the actual six projects already in the codebase, don't force them. It is better to have:
+
+ALL
+
+than meaningless filters.
+
+The important interaction is PERSONAL / THE REALREAL.
+
+--------------------------------------------------
+PERSONAL TAB
+--------------------------------------------------
+
+When PERSONAL is selected:
+
+Show ONLY my six personal projects.
+
+Do not use any of the existing RealReal projects in this state.
+
+Keep the same project-list visual structure as the current homepage:
+- project number
+- project title
+- one-line description
+- small metadata tags
+- arrow
+- large visual / prototype preview
+- generous vertical spacing
+- thin horizontal dividers
+
+But make the Personal work feel slightly more expressive and visual.
+
+These are projects I built myself, so the visual previews should be the hero.
+
+The experience should communicate:
+- builder
+- designer
+- engineer
+- AI-native
+- prototype-first
+- curiosity
+- taste
+- hands-on execution
+
+Do NOT add long case-study copy to the homepage.
+
+The homepage should remain extremely scannable.
+
+Example structure:
+
+01
+Dream Catcher
+An iPhone app for capturing dreams before they disappear.
+
+[large product visual]
+
+02
+[Project]
+[one-line description]
+
+[large product visual]
+
+etc.
+
+Use the actual personal project data/assets that already exist in the project. Do not invent new projects or fake screenshots.
+
+--------------------------------------------------
+THE REALREAL TAB
+--------------------------------------------------
+
+When THE REALREAL is selected:
+
+Restore the existing RealReal project list.
+
+The secondary filters should be:
+
+ALL     DISCOVERY     COMMERCE     AI / ML
+
+Preserve the current RealReal projects, copy, images, tags, and ordering unless they already exist elsewhere in the code.
+
+The current RealReal presentation is working well. Do not radically redesign it.
+
+This tab should communicate:
+- scale
+- product leadership
+- ML / AI
+- 0→1
+- business impact
+- enterprise complexity
+
+Personal = “I build.”
+The RealReal = “I build at scale.”
+
+--------------------------------------------------
+INTERACTION
+--------------------------------------------------
+
+The PERSONAL / THE REALREAL control is the primary interaction.
+
+Make it feel like a tasteful editorial tab switch, not a generic SaaS segmented control.
+
+Use the existing visual language:
+- same typography
+- same burgundy
+- same cream
+- same small uppercase labels
+- same understated borders/rules
+
+The selected state should be obvious but elegant.
+
+Do NOT introduce:
+- rounded pill UI
+- gradients
+- cards everywhere
+- shadows
+- glassmorphism
+- loud animations
+- generic startup UI
+- large colored buttons
+
+Keep the interaction minimal and editorial.
+
+The secondary filters should be visually quieter than PERSONAL / THE REALREAL.
+
+Hierarchy should be:
+
+Selected work
+
+PERSONAL     THE REALREAL
+────────────────────────────
+
+ALL     AI     CONSUMER     EXPERIMENTS
+
+[projects]
+
+--------------------------------------------------
+ANIMATION
+--------------------------------------------------
+
+Add a very subtle transition when switching between PERSONAL and THE REALREAL.
+
+The project list can fade / slide slightly.
+
+Keep it fast and understated.
+
+No flashy animations.
+
+The interaction should feel like navigating an editorial portfolio.
+
+--------------------------------------------------
+MOST IMPORTANT DESIGN PRINCIPLE
+--------------------------------------------------
+
+Do not make this feel like:
+
+“Here is my PM portfolio, and here are some side projects.”
+
+Make it feel like:
+
+“Here is what I build when I'm working.
+Here is what I build when I'm building for myself.”
+
+The homepage should lead with PERSONAL because the personal projects are the strongest expression of my builder mentality, design taste, technical curiosity, and ability to take an idea from zero to something real.
+
+The RealReal tab is where I prove scale and business impact.
+
+--------------------------------------------------
+DO NOT CHANGE
+--------------------------------------------------
+
+Do not change:
+- hero typography
+- hero copy
+- metrics
+- cream background
+- burgundy color
+- typefaces
+- overall page width
+- project typography
+- existing RealReal project content
+- existing project imagery
+- navigation at the top of the site
+
+Do not add a new page.
+
+This should all happen inside the existing homepage WORK section.
+
+--------------------------------------------------
+SUCCESS CRITERIA
+--------------------------------------------------
+
+When I load the homepage, I should immediately see:
+
+Sharin Khander.
+Product builder and former engineer.
+
+[metrics]
+
+Selected work
+
+PERSONAL     THE REALREAL
+
+with PERSONAL selected.
+
+The page should immediately feel more like a portfolio of a BUILDER rather than a traditional product-manager portfolio.
+
+Clicking THE REALREAL should reveal my existing RealReal portfolio.
+
+Clicking PERSONAL should reveal my six personal projects.
+
+The transition should feel seamless and intentional.
+
+Preserve the existing visual identity. Change the information architecture, not the brand.
