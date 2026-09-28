@@ -37,27 +37,27 @@ const projectVisuals: Record<string, { src: string; alt: string; note?: string; 
     src: '/media/attribute-enrichment/chanel-top.webp',
     alt: 'Chanel vintage top used in the attribute-enrichment project',
     note: 'ATTRIBUTE ENRICHMENT / SOURCE VISUAL',
-    badges: ['LLMs', 'Computer Vision', '0→1'],
+    badges: ['LLMs', '0→1'],
   },
   'ai-discovery': {
     src: '/media/work/shopping-agent-demo.mp4',
     alt: 'Ask TRR shopping agent demo video',
-    badges: ['Agents', 'Computer Vision', '0→1'],
+    badges: ['Agents', '0→1'],
   },
   'visual-search': {
     src: '/media/work/visual-search-ui.png',
     alt: 'Visual Search mobile camera interface with selectable regions in a photo',
-    badges: ['Computer Vision', '0→1'],
+    badges: ['Machine Learning', '0→1'],
   },
   'similar-designers': {
     src: '/media/work/similar-designers-customers-also-shop.png',
     alt: 'Customers also shop recommendations for Chanel, Christian Dior, Gucci, Prada, Fendi, and Hermès',
-    badges: ['ML', 'Computer Vision', '0→1'],
+    badges: ['Machine Learning', '0→1'],
   },
   curation: {
     src: '/media/work/curation-vacation-shop.mp4',
     alt: 'The RealReal Vacation Shop product browse video',
-    badges: ['Agents', 'ML', 'Computer Vision', '0-> 1'],
+    badges: ['Agents', 'Machine Learning', '0→1 BUILD'],
   },
 };
 
@@ -135,11 +135,11 @@ export default function Work() {
               >
                 <div className="editorial-project-copy">
                   <div className="editorial-project-kicker font-mono-archive text-accent">
-                      <span className="text-[10px]">{projectNumber}</span>
+                    <span className="text-[10px]">{project.slug === 'curation' ? `${projectNumber} · DISCOVERY · AI` : project.slug === 'ai-discovery' ? `${projectNumber} · AI · DISCOVERY` : project.slug === 'similar-designers' ? `${projectNumber} · DISCOVERY · RECOMMENDATIONS` : project.slug === 'attribute-enrichment' ? `${projectNumber} · DISCOVERY · PERSONALIZATION` : project.slug === 'visual-search' ? `${projectNumber} · DISCOVERY · SEARCH` : project.slug === 'elevated-experience' ? `${projectNumber} · UX` : `${projectNumber} / ${project.category}`}</span>
                     <ArrowUpRight size={16} strokeWidth={1.5} className="project-arrow" aria-hidden="true" />
                   </div>
                   <h3 className="font-editorial">{cardTitle}</h3>
-                  <p className="editorial-project-description text-muted-foreground">{project.slug === 'curation' ? 'Making editorial taste scalable.' : project.slug === 'ai-discovery' ? 'Search, compare, and buy with natural language.' : project.slug === 'similar-designers' ? 'Helping shoppers discover their next favorite designer.' : project.slug === 'attribute-enrichment' ? 'Making 6M products discoverable by trend, vibe, and occasion.' : project.slug === 'visual-search' ? 'Letting users shop their social media or IRL inspiration.' : project.slug === 'elevated-experience' ? 'Elevating the shopping experience for improved discovery and conversion.' : project.description}</p>
+                  <p className="editorial-project-description text-muted-foreground">{project.slug === 'curation' ? 'Making editorial taste scalable.' : project.slug === 'ai-discovery' ? 'Search, compare, and buy with natural language.' : project.slug === 'similar-designers' ? 'Helping shoppers discover their next favorite designer.' : project.slug === 'attribute-enrichment' ? 'Making 6M products discoverable by trend, vibe, and occasion.' : project.slug === 'visual-search' ? 'Turn inspiration into something you can shop.' : project.slug === 'elevated-experience' ? 'Elevating the shopping experience for improved discovery and conversion.' : project.description}</p>
                   <div className="editorial-project-badges" aria-label={`${cardTitle} categories`}>
                     {visual.badges.map((badge) => <span key={badge}>{badge}</span>)}
                   </div>
