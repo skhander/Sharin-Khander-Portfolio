@@ -333,13 +333,13 @@
   color: hsl(var(--muted-foreground));
 }
 .about-step {
+  --about-content-indent: clamp(18%, calc(65vw - 485px), 27.5%);
   border-top: 1px solid var(--about-rule);
   padding-top: clamp(34px, 5vw, 62px);
 }
 .about-step-heading {
   display: grid;
-  grid-template-columns: minmax(60px, .55fr) 1.45fr;
-  gap: clamp(24px, 4.5vw, 68px);
+  grid-template-columns: var(--about-content-indent) minmax(0, 1fr);
   align-items: start;
 }
 .about-step-index {
@@ -364,7 +364,7 @@
   grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
   gap: clamp(36px, 7vw, 108px);
   align-items: start;
-  margin: clamp(36px, 6vw, 76px) 0 0 27.5%;
+  margin: clamp(36px, 6vw, 76px) 0 0 var(--about-content-indent);
 }
 .about-step-copy {
   max-width: 440px;
@@ -423,14 +423,6 @@
 }
 .about-brief-figure:hover img {
   transform: scale(1.012);
-}
-.about-brief-figure figcaption {
-  padding: 12px 15px;
-  border-top: 1px solid hsl(var(--foreground) / .12);
-  color: hsl(var(--muted-foreground));
-  font-size: 10px;
-  letter-spacing: .08em;
-  text-transform: uppercase;
 }
 .about-diagram-grid {
   grid-template-columns: minmax(0, 1fr);
@@ -647,6 +639,36 @@
 .about-work-link {
   margin-top: 4px;
 }
+@media (max-width: 980px) {
+  .about-step-grid:not(.about-diagram-grid) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .about-critique-loop {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+  }
+  .about-loop-node {
+    min-height: 76px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 14px;
+    padding: 15px;
+  }
+  .about-loop-node strong { font-size: 15px; }
+  .about-loop-arrow {
+    width: 1px;
+    height: 14px;
+    justify-self: center;
+    background: hsl(var(--accent) / .55);
+  }
+  .about-loop-arrow::after {
+    top: auto;
+    right: -3px;
+    bottom: 0;
+    transform: rotate(135deg);
+  }
+}
 @media (max-width: 767px) {
   .about-title { font-size: clamp(3.15rem, 14.5vw, 5.4rem); }
   .about-step-heading {
@@ -683,31 +705,6 @@
   }
   .about-diagram-caption { text-align: left; }
   .about-critique-diagram { padding: 24px; }
-  .about-critique-loop {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-  .about-loop-node {
-    min-height: 76px;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 14px;
-    padding: 15px;
-  }
-  .about-loop-node strong { font-size: 15px; }
-  .about-loop-arrow {
-    width: 1px;
-    height: 14px;
-    justify-self: center;
-    background: hsl(var(--accent) / .55);
-  }
-  .about-loop-arrow::after {
-    top: auto;
-    right: -3px;
-    bottom: 0;
-    transform: rotate(135deg);
-  }
   .about-loop-return { margin-top: 24px; gap: 12px; }
   .about-tools-table th:first-child { width: 44%; }
   .about-tools-table tbody th,

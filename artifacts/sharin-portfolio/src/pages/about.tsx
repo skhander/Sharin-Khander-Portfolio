@@ -3,7 +3,7 @@ import { Link } from 'wouter';
 import { ArrowUpRight } from 'lucide-react';
 
 export default function About() {
-  usePageMeta('About — Sharin Khander', 'How Sharin Khander builds products: frame the problem, bring the system, build one component at a time, critique with care, then polish and ship.');
+  usePageMeta('Process — Sharin Khander', 'How Sharin Khander builds products: frame the problem, bring the system, build one component at a time, critique with care, then polish and ship.');
 
   return (
     <div className="page-reveal about-process">
@@ -40,7 +40,6 @@ export default function About() {
               loading="lazy"
               data-testid="img-about-build-brief"
             />
-            <figcaption>Claude PRDs</figcaption>
           </figure>
         </div>
       </section>
@@ -55,6 +54,16 @@ export default function About() {
         </div>
         <div className="about-step-grid about-diagram-grid">
           <p className="about-step-lede">I Use Figma to design the product before I build.</p>
+          <figure className="about-system-mockup">
+            <img
+              src="/media/about/figma-system-mockup-refined.png"
+              alt="Figma design screens addressed to Sharin alongside a connected Figma MCP panel and a code-generation example."
+              loading="lazy"
+              decoding="async"
+              data-testid="img-about-figma-system"
+            />
+            <figcaption className="about-diagram-caption">A Figma MCP example</figcaption>
+          </figure>
           <figure className="about-diagram about-system-diagram" role="img" aria-label="Enter a design system, components, tokens, and references to inform the agent.">
             <div className="about-system-inputs">
               <p className="about-system-inputs-title">Enter</p>
@@ -62,16 +71,6 @@ export default function About() {
             </div>
             <span className="about-diagram-connector" aria-hidden="true"><i /></span>
             <div className="about-system-agent">Agent</div>
-          </figure>
-          <figure className="about-system-mockup">
-            <img
-              src="/media/about/figma-system-mockup.png"
-              alt="Figma design screens addressed to Sharin alongside a connected Figma MCP panel and a code-generation example."
-              loading="lazy"
-              decoding="async"
-              data-testid="img-about-figma-system"
-            />
-            <figcaption className="about-diagram-caption">A Figma MCP example</figcaption>
           </figure>
         </div>
       </section>
@@ -170,7 +169,7 @@ export default function About() {
 
       <section className="about-work-link mx-auto w-full max-w-[1440px] border-t border-border px-6 py-6 sm:px-10 lg:px-16">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
-          <p className="font-mono-archive text-[10px] uppercase tracking-[.16em] text-muted-foreground">About / Sharin Khander</p>
+          <p className="font-mono-archive text-[10px] uppercase tracking-[.16em] text-muted-foreground">Process / Sharin Khander</p>
           <Link href="/" className="group inline-flex items-center gap-3 font-editorial text-2xl archive-link" data-testid="link-about-work">View work <ArrowUpRight size={17} strokeWidth={1.2} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" /></Link>
         </div>
       </section>

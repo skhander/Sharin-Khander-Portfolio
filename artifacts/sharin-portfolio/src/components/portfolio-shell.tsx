@@ -13,7 +13,7 @@ export function PortfolioShell({ children }: PortfolioShellProps) {
 
   const links = [
     { href: '/', label: 'Work' },
-    { href: '/about', label: 'About' },
+    { href: '/about', label: 'Process' },
     { href: '/contact', label: 'Contact' },
   ];
 
