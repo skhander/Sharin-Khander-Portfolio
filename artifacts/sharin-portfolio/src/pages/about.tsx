@@ -124,15 +124,15 @@ export default function About() {
           </div>
         </div>
         <div className="about-step-grid about-diagram-grid">
-          <figure className="about-diagram about-critique-diagram" role="img" aria-label="A critique loop: click around, try to break it, give focused feedback, compare to the design system, and repeat.">
+          <figure className="about-diagram about-critique-diagram" role="img" aria-label="A test loop: click around, find failure points, give focused feedback, fix, and repeat.">
             <div className="about-critique-loop">
               <div className="about-loop-node"><span>01</span><strong>Click around</strong></div>
               <span className="about-loop-arrow" aria-hidden="true" />
-              <div className="about-loop-node"><span>02</span><strong>Try to break it</strong></div>
+              <div className="about-loop-node"><span>02</span><strong>Find failure points.</strong></div>
               <span className="about-loop-arrow" aria-hidden="true" />
               <div className="about-loop-node"><span>03</span><strong>Focused feedback</strong></div>
               <span className="about-loop-arrow" aria-hidden="true" />
-              <div className="about-loop-node"><span>04</span><strong>Compare to system</strong></div>
+              <div className="about-loop-node"><span>04</span><strong>Fix</strong></div>
             </div>
             <div className="about-loop-return"><span>Repeat the pass</span></div>
           </figure>
