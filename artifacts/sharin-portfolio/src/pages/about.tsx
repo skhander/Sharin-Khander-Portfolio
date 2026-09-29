@@ -24,12 +24,12 @@ export default function About() {
 
         <div className="about-step-grid">
           <div className="about-step-copy">
-            <p className="about-step-lede">Context and scope. No guessing.</p>
+            <p className="about-step-lede">Checklist</p>
             <ol className="about-brief-list">
-              <li><span className="about-list-mark" aria-hidden="true">A</span><span>Write a clear brief: context + scope.</span></li>
-              <li><span className="about-list-mark" aria-hidden="true">B</span><span>Upload meeting + interview insights.</span></li>
-              <li><span className="about-list-mark" aria-hidden="true">C</span><span>Write a short PRD.</span></li>
-              <li><span className="about-list-mark" aria-hidden="true">D</span><span>Brainstorm out loud with Claude Code.</span></li>
+              <li><span className="about-list-mark" aria-hidden="true">1</span><span>Write a clear brief: context + scope.</span></li>
+              <li><span className="about-list-mark" aria-hidden="true">2</span><span>Upload meeting + interview insights.</span></li>
+              <li><span className="about-list-mark" aria-hidden="true">3</span><span>Write a short PRD.</span></li>
+              <li><span className="about-list-mark" aria-hidden="true">4</span><span>Brainstorm out loud with Claude Code.</span></li>
             </ol>
           </div>
 
