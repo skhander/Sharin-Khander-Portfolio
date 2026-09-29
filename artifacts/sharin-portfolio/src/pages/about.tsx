@@ -148,6 +148,7 @@ export default function About() {
           </div>
         </div>
         <div className="about-step-grid about-diagram-grid">
+          <p className="about-step-lede">I use GitHub and Vercel to deploy, share, and keep improving.</p>
           <table className="about-tools-table">
             <caption className="sr-only">Tools for code history and deployment</caption>
             <thead>
