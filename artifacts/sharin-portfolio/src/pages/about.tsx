@@ -110,7 +110,7 @@ export default function About() {
               loading="lazy"
               decoding="async"
             />
-            <figcaption>My Cursor window <a href="/media/about/cursor-window.png" target="_blank" rel="noopener noreferrer">View full size</a></figcaption>
+            <figcaption>My Cursor window</figcaption>
           </figure>
         </div>
       </section>

@@ -643,20 +643,12 @@
   height: auto;
 }
 .about-cursor-window figcaption {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
   padding: 12px 16px;
   border-top: 1px solid hsl(var(--foreground) / .13);
   color: hsl(var(--muted-foreground));
   font-size: 10px;
   letter-spacing: .08em;
   text-transform: uppercase;
-}
-.about-cursor-window figcaption a {
-  color: hsl(var(--accent));
-  text-decoration: underline;
-  text-underline-offset: 3px;
 }
 .about-work-link {
   margin-top: 4px;
