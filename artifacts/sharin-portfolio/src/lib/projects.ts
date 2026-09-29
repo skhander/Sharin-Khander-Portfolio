@@ -66,7 +66,7 @@ export const personalProjects: PersonalProject[] = [
   {
     slug: 'virtual-try-on',
     title: 'Virtual Try-On',
-    description: 'Exploring virtual try-on across product and browse views.',
+    description: 'Chrome Extension',
     badges: ['Live Demo', 'Try-on'],
     preview: 'recordings',
   },
