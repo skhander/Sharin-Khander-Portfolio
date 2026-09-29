@@ -7,9 +7,9 @@ import './curation-story.css';
 const media = (file: string) => `${import.meta.env.BASE_URL}media/curation/${file}`;
 
 const metrics = [
-  { value: '30%', label: 'more assortments per quarter' },
-  { value: '2×', label: 'share of GMV from curation YoY' },
-  { value: '+8%', label: 'faster assortment creation' },
+  { value: '2×', label: 'faster assortment creation' },
+  { value: '+30%', label: 'assortments per quarter' },
+  { value: '+8%', label: 'share of Curation GMV YoY' },
 ];
 
 function Walkthrough({ video, poster, alt, caption }: { video: string; poster: string; alt: string; caption: string }) {
