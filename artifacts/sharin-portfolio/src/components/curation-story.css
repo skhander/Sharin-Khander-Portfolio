@@ -1,6 +1,7 @@
 .curation-story {
   position: relative;
   isolation: isolate;
+  overflow: clip;
   --curation-gap: clamp(16px, 2.5vw, 32px);
   --curation-section-space: clamp(40px, 4vw, 56px);
   background-color: hsl(var(--background));
@@ -9,7 +10,7 @@
 .curation-story::before {
   position: absolute;
   z-index: 0;
-  inset: 0;
+  inset: -10% -100vw;
   background-image: url('../assets/curation-products-tile.webp');
   background-position: center top;
   background-repeat: repeat;
@@ -17,6 +18,7 @@
   content: '';
   opacity: .15;
   pointer-events: none;
+  transform: rotate(-4deg);
 }
 
 .curation-story::after {
@@ -40,6 +42,24 @@
 .curation-story > * {
   position: relative;
   z-index: 1;
+}
+
+.curation-story > section:first-child::before {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background-color: hsl(42 35% 98% / .9);
+  content: '';
+  pointer-events: none;
+}
+
+.curation-story > section:first-child > .curation-panel {
+  position: relative;
+  z-index: 1;
+}
+
+.dark .curation-story > section:first-child::before {
+  background-color: hsl(var(--background) / .9);
 }
 
 .curation-story .curation-container {
@@ -169,6 +189,10 @@
 }
 
 @media (min-width: 768px) {
+  .curation-story > section:first-child::before {
+    mask-image: linear-gradient(to right, black 0%, black 62%, transparent 92%);
+  }
+
   .curation-story .curation-grid {
     grid-template-columns: repeat(12, minmax(0, 1fr));
     row-gap: 32px;
