@@ -26,9 +26,12 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
         <div className="mt-14 grid gap-7 md:mt-20 md:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] md:items-end md:gap-16">
           <div>
             <p className="mb-6 font-mono-archive text-[10px] uppercase tracking-[.16em] text-accent">SHOPPING AGENT</p>
-            <h1 id="shopping-agent-title" className="font-editorial text-[clamp(2.75rem,5vw,5.5rem)] leading-[.98] tracking-[-.05em]" data-testid="text-project-title">Next-gen product discovery</h1>
+            <h1 id="shopping-agent-title" className="font-editorial text-[clamp(2.75rem,5vw,5.5rem)] leading-[.98] tracking-[-.05em]" data-testid="text-project-title">What if search understood what you meant?</h1>
           </div>
-          <p className="max-w-2xl text-base leading-[1.65] text-muted-foreground md:text-xl">Traditional search only works if you know exactly how to describe what you want. I built a shopping agent that lets users search in their own words, compare products, and get styling advice.</p>
+          <p className="max-w-2xl text-base leading-[1.65] text-muted-foreground md:text-xl">
+            <strong className="block font-semibold text-foreground">Traditional search understands product attributes. Shoppers think in occasions, aesthetics, and ideas.</strong>
+            <span className="block">I built a shopping agent that bridges the gap.</span>
+          </p>
         </div>
       </header>
 
