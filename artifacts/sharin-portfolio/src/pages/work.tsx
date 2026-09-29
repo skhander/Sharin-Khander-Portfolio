@@ -82,7 +82,7 @@ const projectVisuals: Record<string, { src: string; alt: string; note?: string; 
   curation: {
     src: '/media/work/curation-vacation-shop.mp4',
     alt: 'The RealReal Vacation Shop product browse video',
-    badges: ['Agents', 'Machine Learning', '0→1 BUILD'],
+    badges: ['Agents', 'Machine Learning', '0→1'],
   },
 };
 
@@ -114,7 +114,7 @@ export default function Work() {
             <div className="work-proof-grid">
               <div className="work-proof-item">
                 <strong className="work-proof-number font-editorial" data-testid="text-products-count">7</strong>
-                <span className="work-proof-label">0→1 PRODUCTS</span>
+                <span className="work-proof-label">0→1 BUILDS</span>
               </div>
               <div className="work-proof-item">
                 <strong className="work-proof-number font-editorial" data-testid="text-experiments-count">40</strong>
