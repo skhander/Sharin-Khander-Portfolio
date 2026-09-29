@@ -8,7 +8,7 @@ export default function About() {
   return (
     <div className="page-reveal about-process">
       <section className="about-intro mx-auto w-full max-w-[1440px] px-6 pb-16 pt-14 sm:px-10 md:pb-20 md:pt-24 lg:px-16">
-        <h1 className="about-title">How I build products</h1>
+        <h1 className="about-title">How I build</h1>
         <p className="about-process-sequence"><strong>Brief → Design → Build → Refine</strong></p>
         <p className="about-intro-copy">I get clear on the problem, design the experience, build it, and iterate.</p>
       </section>
@@ -82,6 +82,31 @@ export default function About() {
             <p className="font-mono-archive text-[10px] uppercase tracking-[.16em] text-muted-foreground">Build</p>
             <h2 id="about-step-03-title">Build One Component at a Time</h2>
           </div>
+        </div>
+        <div className="about-step-grid about-diagram-grid">
+          <table className="about-tools-table">
+            <caption className="sr-only">How I use Cursor during the build stage</caption>
+            <thead>
+              <tr><th scope="col">Tool</th><th scope="col">How I use it</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"><span className="about-tool-name"><img src="/media/about/cursor-logo.png" alt="" width="56" height="56" loading="lazy" />Cursor</span></th>
+                <td>My workhorse. I use Ask mode to make a clear plan, then build one component at a time.</td>
+              </tr>
+            </tbody>
+          </table>
+          <figure className="about-cursor-window">
+            <img
+              src="/media/about/cursor-window.png"
+              alt="My Cursor editor window, with a project file tree, code editor, and agent panel open."
+              width="1280"
+              height="797"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>My Cursor window <a href="/media/about/cursor-window.png" target="_blank" rel="noopener noreferrer">View full size</a></figcaption>
+          </figure>
         </div>
       </section>
 
