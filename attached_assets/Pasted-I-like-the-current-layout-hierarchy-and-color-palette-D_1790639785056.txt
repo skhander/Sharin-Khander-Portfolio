@@ -1,0 +1,219 @@
+I like the current layout, hierarchy, and color palette. Do NOT redesign the page.
+
+I want a focused typography + whitespace refinement pass based on the current screenshot.
+
+MAIN GOAL:
+
+Make the site feel:
+- cleaner
+- easier to read
+- calmer
+- more modern
+- more editorial
+- less old-fashioned
+- easier to scan
+
+Keep the warm cream + oxblood/burgundy palette exactly as it is.
+
+1. TYPOGRAPHY — MOST IMPORTANT
+
+The current serif font feels too old-school and ornate, especially in:
+- “Sharin Khander”
+- “I build better ways to shop”
+- “Things I’ve Built”
+- “Virtual Try-On”
+
+Keep a serif display font, but switch to a more contemporary, highly legible editorial serif.
+
+The new serif should have:
+- cleaner letterforms
+- less dramatic contrast
+- less vintage/newspaper feeling
+- slightly wider proportions
+- excellent readability at large and medium sizes
+
+Think contemporary fashion/editorial typography rather than Victorian or old-style typography.
+
+Do NOT use a generic sans-serif for the main headlines.
+
+Keep the serif as the personality of the site — just make it more modern and readable.
+
+2. BODY / SUPPORTING TYPE
+
+Keep the existing clean sans-serif for:
+- navigation
+- project descriptions
+- buttons
+- metric labels
+
+Increase body text slightly where necessary.
+
+Everything should be comfortably readable without zooming.
+
+3. EYEBROW / SMALL LABELS
+
+Several small labels are currently too tiny.
+
+Increase the size of:
+- 2026 YTD
+- 0→1 PRODUCTS
+- EXPERIMENTS
+- 36 / 40 WINS
+- GMV IMPACT
+- 01
+- LIVE DEMO
+- TRY-ON
+- WORK / ABOUT / CONTACT
+
+Do not make them huge.
+
+Target approximately 11–12px minimum for small uppercase labels on desktop, with enough letter spacing to remain elegant.
+
+Prioritize legibility over making the labels extremely delicate.
+
+4. MORE WHITESPACE
+
+Increase whitespace throughout the page.
+
+The page currently feels slightly compressed vertically.
+
+Specifically:
+
+- Add more top padding between the navigation and “Sharin Khander.”
+- Give the name more breathing room above and below.
+- Increase the gap between the name and tagline.
+- Increase the gap between the tagline and metrics.
+- Give the metrics block more surrounding whitespace.
+- Increase the vertical space before “Things I’ve Built.”
+- Give the section title more breathing room from the tabs.
+- Increase the space between tabs and the first project.
+- Give the project title, description, buttons, and image more breathing room.
+
+The goal is NOT to make everything dramatically larger.
+
+The goal is to make the page feel less crowded by giving each element room to breathe.
+
+5. VISUAL HIERARCHY
+
+Make the hierarchy extremely clear:
+
+LEVEL 1
+Sharin Khander.
+
+LEVEL 2
+I build better ways to shop.
+
+LEVEL 3
+2026 YTD metrics
+
+LEVEL 4
+Things I’ve Built
+
+LEVEL 5
+Project title
+
+LEVEL 6
+Descriptions / metadata / buttons
+
+Nothing should compete with the name and positioning.
+
+6. HERO
+
+Keep the current two-column relationship:
+
+LEFT:
+Sharin Khander.
+I build better ways to shop.
+
+RIGHT:
+2026 YTD
+7 / 40 / $180M
+
+But give the entire hero more breathing room.
+
+Do not increase the size of the metrics.
+
+If anything, make them slightly smaller and more refined.
+
+The oxblood block should remain exactly the same color.
+
+7. NAME
+
+Keep “Sharin Khander.” large.
+
+However, don't make it so large that the letterforms become difficult to read.
+
+Use a more contemporary serif and slightly more generous line-height.
+
+The name should feel premium and editorial, not theatrical.
+
+8. TAGLINE
+
+Keep:
+
+I build better ways
+to shop.
+
+Make it slightly more readable than it currently is.
+
+Increase line-height.
+
+Avoid overly tight kerning.
+
+The tagline should feel confident and effortless.
+
+9. THINGS I’VE BUILT
+
+Keep the title:
+
+Things I’ve Built
+
+Use the new, more contemporary serif.
+
+Give it more space above and below.
+
+10. PROJECT SECTION
+
+Keep:
+
+01
+
+Virtual Try-On
+
+Exploring virtual try-on across product and
+browse views.
+
+LIVE DEMO
+TRY-ON
+
+Make sure the project description is comfortably readable.
+
+The project image should have enough breathing room around it.
+
+11. GENERAL RULE
+
+Do not make the site “prettier” by adding more design.
+
+Make it better by removing visual friction.
+
+If you have to choose between:
+- more decorative typography
+- better readability
+
+Choose readability.
+
+If you have to choose between:
+- tighter layout
+- more whitespace
+
+Choose whitespace.
+
+If you have to choose between:
+- smaller delicate labels
+- readable labels
+
+Choose readable labels.
+
+Keep the existing color palette, layout, project content, functionality, and overall editorial aesthetic.
+
+This is a refinement pass, not a redesign.

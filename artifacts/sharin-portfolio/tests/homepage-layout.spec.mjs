@@ -13,7 +13,7 @@ for (const viewport of viewports) {
 
     const name = page.getByTestId('text-work-name');
     const metrics = page.locator('.work-proof');
-    const selectedWork = page.getByRole('heading', { name: "Things I've Built" });
+    const selectedWork = page.getByRole('heading', { name: 'Things I’ve Built' });
 
     await expect(name).toContainText('Sharin');
     await expect(name).toContainText('Khander');

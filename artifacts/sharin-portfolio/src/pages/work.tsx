@@ -105,7 +105,7 @@ export default function Work() {
 
   return (
     <div className="page-reveal editorial-work">
-      <section className="work-hero mx-auto w-full max-w-[1440px] px-6 pb-10 pt-12 sm:px-10 md:pb-12 lg:px-[5%]">
+      <section className="work-hero mx-auto w-full max-w-[1440px] px-6 pb-12 pt-14 sm:px-10 md:pb-14 md:pt-16 lg:px-[5%]">
         <h1 className="work-hero-name font-editorial" data-testid="text-work-name">Sharin<br />{' '}Khander<span className="text-accent">.</span></h1>
         <div className="work-hero-support">
           <p className="work-hero-role font-editorial" data-testid="text-work-tagline">I build better ways<br />{' '}to shop<span className="text-accent">.</span></p>
@@ -131,7 +131,7 @@ export default function Work() {
       </section>
       <section id="selected-work" className="mx-auto w-full max-w-[1440px] px-6 pb-20 sm:px-10 md:pb-28 lg:px-[5%]" aria-labelledby="work-heading">
         <div className="work-band">
-          <h2 id="work-heading" className="font-editorial text-[clamp(2.3rem,4vw,3.8rem)] leading-none tracking-[-.035em]">Things I've Built</h2>
+          <h2 id="work-heading" className="font-editorial text-[clamp(2.3rem,4vw,3.8rem)] leading-none tracking-[-.035em]">Things I’ve Built</h2>
           <div className="work-tabs" role="tablist" aria-label="Work type">
             {workTypes.map((type, index) => (
               <button

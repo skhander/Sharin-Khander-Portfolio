@@ -25,7 +25,7 @@ export function PortfolioShell({ children }: PortfolioShellProps) {
             <Link
               key={link.href}
               href={link.href}
-              className={`archive-link font-mono-archive text-[10px] uppercase tracking-[.18em] ${location === link.href ? 'text-accent' : 'text-muted-foreground'}`}
+              className={`archive-link font-mono-archive text-[11px] uppercase tracking-[.16em] ${location === link.href ? 'text-accent' : 'text-muted-foreground'}`}
               data-testid={`link-nav-${link.label.toLowerCase()}`}
             >
               {link.label}
