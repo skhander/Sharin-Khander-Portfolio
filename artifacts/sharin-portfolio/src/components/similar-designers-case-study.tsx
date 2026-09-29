@@ -12,20 +12,20 @@ const metrics = [
 
 const phases = [
   {
-    label: 'Phase 1',
-    name: 'Co-Browsing & Buying',
+    label: '01 — What shoppers bought together',
+    name: 'Behavioral similarity',
     src: 'similar-designers-phase-1.png',
     alt: 'Customers Also Shop: Chanel, Christian Dior, Gucci, Prada, Fendi, Hermès',
   },
   {
-    label: 'Phase 2',
-    name: 'Looks + Feels like',
+    label: '02 — What looks and feels similar',
+    name: 'Visual + attribute similarity',
     src: 'similar-designers-phase-2.png',
     alt: 'Similar Designers: Fendi, Gucci, Loewe, Celine, Ferragamo, Miu Miu',
   },
   {
-    label: 'Phase 3',
-    name: 'Personalized Similar Designers',
+    label: '03 — What you might like',
+    name: 'Personalization',
     src: 'similar-designers-phase-3.png',
     alt: 'You may also like: Mulberry, Strathberry, DeMellier, Polène, Mansur Gavriel, APC',
   },
@@ -45,7 +45,7 @@ function StorySection({ id, heading, children }: { id: string; heading: string; 
             {phases.map((phase) => (
               <figure className="similar-designers-phase" key={phase.label}>
                 <figcaption>
-                  <span className="block font-mono-archive text-[11px] uppercase tracking-[.14em] text-accent">{phase.label}</span>
+                  <span className="block font-mono-archive text-[11px] tracking-[.14em] text-accent">{phase.label}</span>
                   <span className="mt-2 block font-editorial text-[clamp(1.1rem,1.6vw,1.4rem)] leading-tight">{phase.name}</span>
                 </figcaption>
                 <img src={`${import.meta.env.BASE_URL}media/work/${phase.src}`} alt={phase.alt} width={684} height={1312} loading="lazy" />
@@ -90,7 +90,8 @@ export function SimilarDesignersStory({ nextProject }: { project: Project; nextP
       </StorySection>
 
       <StorySection id="similar-built" heading="What I built">
-        A recommendation experience that evolved from “customers also shop” into personalized designer discovery based on what you like, what looks similar, and what fits your price point.
+        <span className="block">I started with “Customers Also Shop” then evolved into a designer discovery engine.</span>{' '}
+        <span className="mt-5 block">Next layering in <strong className="font-semibold">visual similarity → attribute similarity → personalized recommendations.</strong></span>
       </StorySection>
 
       <StorySection id="similar-hard-part" heading="The hard part">
