@@ -74,7 +74,8 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1440px] border-y border-border px-6 py-8 sm:px-10 md:py-10 lg:px-16" aria-label="Curation Tool metrics">
+      <section className="mx-auto max-w-[1440px] border-y border-border px-6 py-8 sm:px-10 md:py-10 lg:px-16" aria-labelledby="curation-impact">
+        <h2 id="curation-impact" className="mb-5 font-mono-archive text-[10px] uppercase tracking-[.16em] text-muted-foreground">Impact</h2>
         <dl className="grid grid-cols-1 divide-y divide-border sm:grid-cols-3 sm:divide-x sm:divide-y-0">
           {metrics.map((metric) => (
             <div key={metric.label} className="flex flex-col py-6 sm:px-6 sm:py-2 first:sm:pl-0 last:sm:pr-0">
