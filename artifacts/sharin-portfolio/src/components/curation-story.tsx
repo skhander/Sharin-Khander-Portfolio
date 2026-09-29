@@ -104,9 +104,9 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
         <div className="curation-panel curation-grid">
           <h2 id="curation-ship" className="curation-rail font-mono-archive text-xs font-semibold uppercase tracking-[.14em] text-accent">02 — BUILD</h2>
           <div className="curation-body">
-            <p className="text-base leading-[1.6] md:text-lg">We automated repetitive work while keeping editors in the loop.</p>
-            <p className="mt-4 font-mono-archive text-sm font-medium tracking-[.02em] text-accent">Rules → ML → Human review</p>
-            <p className="mt-4 text-base leading-[1.6] md:text-lg">We started with rules for predictable criteria, introduced ML where patterns were harder to encode, and kept editors in control of the final assortment.</p>
+            <p className="text-base leading-[1.6] md:text-lg">I turned a fragmented workflow into one place to build, preview, and publish an assortment.</p>
+            <p className="mt-4 text-base leading-[1.6] md:text-lg">I led Design, Engineering, and ML from prototype to production.</p>
+            <p className="mt-4 font-mono-archive text-sm font-medium tracking-[.02em] text-accent">Prototype → Product</p>
           </div>
           <div className="curation-full">
             <CustomerPage
@@ -124,6 +124,7 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
           <div className="curation-body">
             <p className="text-base leading-[1.6] md:text-lg">We automated repetitive work while keeping editors in the loop.</p>
             <p className="mt-4 font-mono-archive text-sm font-medium tracking-[.02em] text-accent">Rules → ML → Human review</p>
+            <p className="mt-4 text-base leading-[1.6] md:text-lg">We started with rules for predictable criteria, introduced ML where patterns were harder to encode, and kept editors in control of the final assortment.</p>
           </div>
           <div className="curation-full">
             <Walkthrough
@@ -139,9 +140,13 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
       <section className="curation-container" aria-labelledby="curation-learn">
         <div className="curation-panel curation-grid">
           <h2 id="curation-learn" className="curation-rail font-mono-archive text-xs font-semibold uppercase tracking-[.14em] text-accent">04 — LEARN</h2>
-          <p className="curation-body text-base leading-[1.6] md:text-lg">Our first model found similar products. It didn’t understand editorial intent.</p>
-          <div className="curation-body curation-lesson">
-            <p className="font-editorial text-[clamp(2.5rem,4vw,4.5rem)] leading-[1.05] tracking-[-.04em]">Similarity isn’t taste.</p>
+          <div className="curation-body">
+            <h3 className="font-editorial text-[clamp(2.5rem,4vw,4.5rem)] leading-[1.05] tracking-[-.04em]">Similarity isn't taste.</h3>
+            <p className="mt-8 text-base leading-[1.6] md:text-lg">Our first model could find products that looked alike.</p>
+            <p className="mt-5 text-base leading-[1.6] md:text-lg">But merchandisers weren't simply looking for similarity. They were making editorial choices—what belonged together, what told a story, and what felt right for the customer.</p>
+          </div>
+          <div className="curation-body curation-lesson font-editorial text-[clamp(1.75rem,2.8vw,2.75rem)] leading-[1.15] tracking-[-.03em]">
+            <p>The lesson: automation could scale the mechanics of curation.<br />Taste still needed a human in the loop.</p>
           </div>
         </div>
       </section>
