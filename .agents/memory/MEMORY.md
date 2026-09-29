@@ -9,3 +9,4 @@
 - [Screen recording fidelity](screen-recording-fidelity.md) — preserve high-quality UI recordings; tiny compressed previews make interface text unreadable.
 - [Portfolio copy fidelity](portfolio-copy-fidelity.md) — visual refinements must not invent or paraphrase page copy; keep exact wording unless explicitly changed.
 - [Portfolio typeface choice](portfolio-typeface-choice.md) — Manrope is the intended site-wide face; do not restore local Avenir or editorial serifs.
+- [Product-only backdrop crops](product-only-backdrop-crops.md) — listing screenshot rows need individual visual checks to exclude labels without clipping products.

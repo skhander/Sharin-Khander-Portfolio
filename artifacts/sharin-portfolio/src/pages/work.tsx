@@ -109,8 +109,8 @@ export default function Work() {
         <h1 className="work-hero-name font-editorial" data-testid="text-work-name">Sharin<br />{' '}Khander<span className="text-accent">.</span></h1>
         <div className="work-hero-support">
           <p className="work-hero-role font-editorial" data-testid="text-work-tagline">I build better ways<br />{' '}to shop<span className="text-accent">.</span></p>
-          <div className="work-proof" aria-label="2026 year-to-date metrics">
-            <span className="work-proof-heading font-mono-archive">2026 YTD</span>
+          <div className="work-proof" aria-label="2026 impact metrics">
+            <span className="work-proof-heading font-mono-archive">2026 Impact</span>
             <div className="work-proof-grid">
               <div className="work-proof-item">
                 <strong className="work-proof-number font-editorial" data-testid="text-products-count">7</strong>
@@ -123,7 +123,7 @@ export default function Work() {
               </div>
               <div className="work-proof-item">
                 <strong className="work-proof-number font-editorial" data-testid="text-gmv-impact">$180M</strong>
-                <span className="work-proof-label">GMV IMPACT</span>
+                <span className="work-proof-label">GMV</span>
               </div>
             </div>
           </div>
