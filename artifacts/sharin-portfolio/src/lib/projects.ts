@@ -73,7 +73,7 @@ export const personalProjects: PersonalProject[] = [
   {
     slug: 'ai-advent-calendar',
     title: 'AI Advent Calendar',
-    description: 'Learning AI can be overwhelming. One concept a day, every day for nine days.',
+    description: 'Master fundamental AI concepts in 9 days.',
     badges: ['AI Education', '9 Days'],
     preview: 'video',
   },

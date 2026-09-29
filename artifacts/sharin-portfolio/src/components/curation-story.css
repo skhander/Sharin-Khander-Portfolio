@@ -42,7 +42,8 @@
   background: hsl(var(--accent));
   color: hsl(var(--accent-foreground));
   font-family: var(--app-font-mono);
-  font-size: 10px;
+  font-size: 11px;
+  line-height: 1.5;
   letter-spacing: .12em;
   text-transform: uppercase;
   white-space: nowrap;

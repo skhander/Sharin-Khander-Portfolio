@@ -8,3 +8,4 @@
 - [Virtual Try-On page intent](virtual-try-on-page-intent.md) — keep the Product Detail recording for a future separate page; the homepage card shows Browse Grid only.
 - [Screen recording fidelity](screen-recording-fidelity.md) — preserve high-quality UI recordings; tiny compressed previews make interface text unreadable.
 - [Portfolio copy fidelity](portfolio-copy-fidelity.md) — visual refinements must not invent or paraphrase page copy; keep exact wording unless explicitly changed.
+- [Portfolio typeface choice](portfolio-typeface-choice.md) — Manrope is the intended site-wide face; do not restore local Avenir or editorial serifs.
