@@ -119,7 +119,7 @@ export default function Work() {
               <div className="work-proof-item">
                 <strong className="work-proof-number font-editorial" data-testid="text-experiments-count">40</strong>
                 <span className="work-proof-label">EXPERIMENTS</span>
-                <span className="work-proof-note">36 / 40 WINS</span>
+                <span className="work-proof-note">36 WINS</span>
               </div>
               <div className="work-proof-item">
                 <strong className="work-proof-number font-editorial" data-testid="text-gmv-impact">$180M</strong>

@@ -22,7 +22,7 @@ for (const viewport of viewports) {
     await expect(page.getByTestId('text-gmv-impact')).toHaveText('$180M');
     await expect(page.getByTestId('text-work-tagline')).toHaveText('I build better ways to shop.');
     await expect(page.getByText('2026 YTD')).toBeVisible();
-    await expect(page.getByText('36 / 40 WINS')).toBeVisible();
+    await expect(page.getByText('36 WINS')).toBeVisible();
     await expect(selectedWork).toBeVisible();
     await expect(page.getByText('Product builder and former engineer.')).toHaveCount(0);
     const personalTab = page.getByRole('tab', { name: 'Personal' });
