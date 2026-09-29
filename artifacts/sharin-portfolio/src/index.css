@@ -425,9 +425,6 @@
   transform: scale(1.012);
 }
 .about-brief-figure figcaption {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
   padding: 12px 15px;
   border-top: 1px solid hsl(var(--foreground) / .12);
   color: hsl(var(--muted-foreground));

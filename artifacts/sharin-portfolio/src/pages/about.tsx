@@ -40,10 +40,7 @@ export default function About() {
               loading="lazy"
               data-testid="img-about-build-brief"
             />
-            <figcaption>
-              <span>Working note</span>
-              <span>Context before code</span>
-            </figcaption>
+            <figcaption>Claude PRD Drafts</figcaption>
           </figure>
         </div>
       </section>
