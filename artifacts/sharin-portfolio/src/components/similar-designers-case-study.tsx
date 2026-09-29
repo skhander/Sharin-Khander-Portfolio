@@ -101,7 +101,8 @@ export function SimilarDesignersStory({ nextProject }: { project: Project; nextP
       </StorySection>
 
       <StorySection id="similar-learned" heading="What I learned">
-        Get to useful before you optimize for incrementality.
+        <span className="block">Lower price didn’t mean lower value.</span>{' '}
+        <span className="mt-5 block">Personalized recommendations drove the highest conversion without hurting GMV or AOV.</span>
       </StorySection>
 
       <ProjectNavigation nextProject={nextProject} />
