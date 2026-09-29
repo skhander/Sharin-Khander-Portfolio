@@ -135,7 +135,6 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
           <div className="max-w-2xl space-y-5 text-base leading-[1.6] md:col-start-2 md:text-lg">
             <p>Natural language unlocked new kinds of shopping intent.</p>
             <p className="text-muted-foreground">The conversational interface showed fewer products and made comparison harder.</p>
-            <p className="border-t-2 border-accent pt-5 font-editorial text-[clamp(2rem,3vw,3.25rem)] leading-[1.08] tracking-[-.04em]">Chatbot interfaces are limiting. They're text-heavy, and shopping is visual.</p>
             <p className="border-t border-border pt-6 font-editorial text-[clamp(2rem,3vw,3.25rem)] leading-[1.08] tracking-[-.04em]">Chat is great for understanding. Feeds are great for shopping.</p>
             <figure>
               <img src={media('customer-feedback.png')} alt="Customer feedback screenshot listing issues with responses, examples, AI search inventory, and the number of products shown." width={676} height={244} loading="lazy" className="block h-auto w-full border border-border" />
