@@ -3,7 +3,7 @@ import { Link } from 'wouter';
 import { ArrowUpRight } from 'lucide-react';
 
 export default function About() {
-  usePageMeta('About — Sharin Khander', 'How Sharin Khander builds products: frame the problem, bring the system, build in batches, critique with care, then polish and ship.');
+  usePageMeta('About — Sharin Khander', 'How Sharin Khander builds products: frame the problem, bring the system, build one component at a time, critique with care, then polish and ship.');
 
   return (
     <div className="page-reveal about-process">
@@ -79,19 +79,9 @@ export default function About() {
         <div className="about-step-heading">
           <span className="about-step-index" aria-hidden="true">03</span>
           <div className="about-step-heading-copy">
-            <p className="font-mono-archive text-[10px] uppercase tracking-[.16em] text-muted-foreground">Build in batches</p>
-            <h2 id="about-step-03-title">One component at a time.</h2>
+            <p className="font-mono-archive text-[10px] uppercase tracking-[.16em] text-muted-foreground">Build</p>
+            <h2 id="about-step-03-title">Build One Component at a Time</h2>
           </div>
-        </div>
-        <div className="about-step-grid about-diagram-grid">
-          <p className="about-step-lede">Describe first. Structure second. Build small.</p>
-          <figure className="about-diagram about-build-diagram" role="img" aria-label="Sequence: describe the design, get the structure right, build one component at a time.">
-            <div className="about-flow-node"><span>01</span><strong>Describe<br />the design</strong></div>
-            <span className="about-flow-arrow" aria-hidden="true" />
-            <div className="about-flow-node"><span>02</span><strong>Get the<br />structure right</strong></div>
-            <span className="about-flow-arrow" aria-hidden="true" />
-            <div className="about-flow-node about-flow-node-accent"><span>03</span><strong>One component<br />at a time</strong></div>
-          </figure>
         </div>
       </section>
 

@@ -527,58 +527,11 @@
   width: 100%;
   height: auto;
 }
-.about-build-diagram {
-  display: flex;
-  align-items: stretch;
-  justify-content: space-between;
-  gap: 12px;
-}
-.about-flow-node {
-  display: flex;
-  min-height: 108px;
-  flex: 1 1 0;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 13px;
-  border: 1px solid hsl(var(--foreground) / .15);
-  background: hsl(var(--background) / .76);
-}
-.about-flow-node > span,
 .about-loop-node > span {
   color: hsl(var(--accent));
   font-size: 10px;
   font-weight: 700;
   letter-spacing: .1em;
-}
-.about-flow-node strong {
-  font-size: clamp(12px, 1.2vw, 15px);
-  font-weight: 600;
-  line-height: 1.35;
-}
-.about-flow-node-accent {
-  border-color: hsl(var(--accent) / .48);
-  background: hsl(var(--primary));
-  color: hsl(var(--primary-foreground));
-}
-.about-flow-node-accent > span { color: hsl(var(--primary-foreground) / .74); }
-.about-flow-arrow {
-  position: relative;
-  display: block;
-  width: 23px;
-  flex: 0 0 23px;
-  align-self: center;
-  border-top: 1px solid hsl(var(--accent) / .55);
-}
-.about-flow-arrow::after {
-  position: absolute;
-  top: -4px;
-  right: 0;
-  width: 7px;
-  height: 7px;
-  border-top: 1px solid hsl(var(--accent));
-  border-right: 1px solid hsl(var(--accent));
-  content: '';
-  transform: rotate(45deg);
 }
 .about-critique-diagram { padding-bottom: 20px; }
 .about-critique-loop {
@@ -716,29 +669,6 @@
     transform: rotate(135deg);
   }
   .about-diagram-caption { text-align: left; }
-  .about-build-diagram {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .about-flow-node {
-    min-height: 76px;
-    flex: none;
-  }
-  .about-flow-node strong { font-size: 14px; }
-  .about-flow-arrow {
-    width: 1px;
-    height: 15px;
-    flex: 0 0 15px;
-    align-self: center;
-    border-top: 0;
-    border-left: 1px solid hsl(var(--accent) / .55);
-  }
-  .about-flow-arrow::after {
-    top: auto;
-    right: -3px;
-    bottom: 0;
-    transform: rotate(135deg);
-  }
   .about-critique-loop {
     grid-template-columns: 1fr;
     gap: 8px;
