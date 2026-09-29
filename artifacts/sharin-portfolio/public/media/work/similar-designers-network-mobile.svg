@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 560">
+  <defs>
+    <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r=".7" fill="#d9d6cf"/>
+    </pattern>
+    <g id="node"><circle r="6" fill="#f7f6f3" stroke="#8c817d" stroke-width="1.5"/><circle r="1.8" fill="#743747"/></g>
+  </defs>
+  <rect width="360" height="560" fill="#f7f6f3"/>
+  <rect width="360" height="560" fill="url(#dots)" opacity=".6"/>
+  <rect x="10" y="10" width="340" height="540" fill="none" stroke="#dedbd5"/>
+  <rect x="24" y="26" width="312" height="91" fill="#fff" stroke="#c9bfc0"/>
+  <rect x="24" y="26" width="3" height="91" fill="#743747"/>
+  <text x="42" y="55" fill="#79736e" font-family="Arial, sans-serif" font-size="10" letter-spacing="1.5">SEED DESIGNER</text>
+  <text x="42" y="94" fill="#282523" font-family="Arial, sans-serif" font-size="26" letter-spacing="-1">The Row</text>
+  <g fill="none" stroke="#a9a69c" stroke-width="1" opacity=".6">
+    <path d="M180 117 Q180 143 66 166 M180 117 Q180 144 141 166 M180 117 Q180 144 219 166 M180 117 Q180 143 294 166"/>
+    <path d="M66 166 Q66 198 46 210 M66 166 Q80 195 112 210 M66 166 Q120 195 180 210 M66 166 Q180 195 248 210 M66 166 Q210 195 314 210"/>
+    <path d="M141 166 Q85 195 46 210 M141 166 Q125 195 112 210 M141 166 Q160 195 180 210 M141 166 Q195 195 248 210 M141 166 Q225 195 314 210"/>
+    <path d="M219 166 Q125 195 46 210 M219 166 Q170 195 112 210 M219 166 Q200 195 180 210 M219 166 Q230 195 248 210 M219 166 Q265 195 314 210"/>
+    <path d="M294 166 Q165 195 46 210 M294 166 Q205 195 112 210 M294 166 Q235 195 180 210 M294 166 Q275 195 248 210 M294 166 Q300 195 314 210"/>
+    <path d="M46 210 Q60 240 80 267 M46 210 Q105 240 155 267 M46 210 Q145 240 225 267 M46 210 Q190 240 290 267"/>
+    <path d="M112 210 Q100 240 80 267 M112 210 Q135 240 155 267 M112 210 Q175 240 225 267 M112 210 Q210 240 290 267"/>
+    <path d="M180 210 Q125 240 80 267 M180 210 Q160 240 155 267 M180 210 Q200 240 225 267 M180 210 Q240 240 290 267"/>
+    <path d="M248 210 Q170 240 80 267 M248 210 Q195 240 155 267 M248 210 Q230 240 225 267 M248 210 Q265 240 290 267"/>
+    <path d="M314 210 Q210 240 80 267 M314 210 Q235 240 155 267 M314 210 Q260 240 225 267 M314 210 Q300 240 290 267"/>
+  </g>
+  <g fill="none" stroke="#743747" stroke-width="2" opacity=".75">
+    <path d="M180 117 Q180 144 141 166 Q125 195 112 210 Q135 240 155 267"/>
+    <path d="M180 117 Q180 144 219 166 Q230 195 248 210 Q230 240 225 267"/>
+  </g>
+  <circle cx="180" cy="117" r="4" fill="#743747"/>
+  <g>
+    <use href="#node" x="66" y="166"/><use href="#node" x="141" y="166"/><use href="#node" x="219" y="166"/><use href="#node" x="294" y="166"/>
+    <use href="#node" x="46" y="210"/><use href="#node" x="112" y="210"/><use href="#node" x="180" y="210"/><use href="#node" x="248" y="210"/><use href="#node" x="314" y="210"/>
+    <use href="#node" x="80" y="267"/><use href="#node" x="155" y="267"/><use href="#node" x="225" y="267"/><use href="#node" x="290" y="267"/>
+  </g>
+  <path d="M80 267 Q80 286 80 303 M155 267 Q155 288 155 303 M225 267 Q225 288 225 303 M290 267 Q290 286 290 303" fill="none" stroke="#8b5b67"/>
+  <rect x="24" y="303" width="312" height="231" fill="#fff" stroke="#d8d3cc"/>
+  <text x="42" y="332" fill="#743747" font-family="Arial, sans-serif" font-size="11" letter-spacing="1.4">OUTPUT</text>
+  <text x="316" y="332" fill="#8a857f" font-family="Arial, sans-serif" font-size="10" letter-spacing="1" text-anchor="end">SCORE</text>
+  <path d="M42 344H318 M42 391H318 M42 438H318 M42 485H318" stroke="#e5e1dc"/>
+  <g font-family="Arial, sans-serif" fill="#282523">
+    <text x="42" y="374" font-size="16">Lemaire</text>
+    <text x="316" y="374" text-anchor="end" font-size="20">96</text>
+    <text x="42" y="421" font-size="16">Studio Nicholson</text>
+    <text x="316" y="421" text-anchor="end" font-size="20">90</text>
+    <text x="42" y="468" font-size="16">Toteme</text>
+    <text x="316" y="468" text-anchor="end" font-size="20">86</text>
+    <text x="42" y="515" font-size="16">Margaret Howell</text>
+    <text x="316" y="515" text-anchor="end" font-size="20">79</text>
+  </g>
+</svg>

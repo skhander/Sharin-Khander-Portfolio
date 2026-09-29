@@ -1,5 +1,5 @@
-import { useRef, useState, type KeyboardEvent } from 'react';
-import { ArrowUpRight, Pause, Play } from 'lucide-react';
+import { useState, type KeyboardEvent } from 'react';
+import { ArrowUpRight, Play } from 'lucide-react';
 import { Link } from 'wouter';
 import { personalProjects, publishedProjects } from '@/lib/projects';
 import { usePageMeta } from '@/lib/use-page-meta';
@@ -28,48 +28,6 @@ function Recording({ clip }: { clip: typeof tryOnClips[number] }) {
           <span className="personal-play-icon"><Play size={18} fill="currentColor" aria-hidden="true" /></span>
         </button>
       )}
-    </div>
-  );
-}
-
-function ImageSearchPrototype({ src, alt }: { src: string; alt: string }) {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [playing, setPlaying] = useState(false);
-
-  const togglePlayback = () => {
-    const video = videoRef.current;
-    if (!video) return;
-    if (video.paused) {
-      void video.play().catch(() => setPlaying(false));
-    } else {
-      video.pause();
-    }
-  };
-
-  return (
-    <div className="image-search-prototype">
-      <video
-        ref={videoRef}
-        src={src}
-        poster={`${import.meta.env.BASE_URL}media/work/image-search-prototype-poster.jpg`}
-        aria-label={alt}
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="metadata"
-        onPlay={() => setPlaying(true)}
-        onPause={() => setPlaying(false)}
-      />
-      <button
-        type="button"
-        className="image-search-playback"
-        onClick={togglePlayback}
-        aria-label={playing ? 'Pause Image Search prototype' : 'Play Image Search prototype'}
-      >
-        {playing ? <Pause size={12} fill="currentColor" aria-hidden="true" /> : <Play size={12} fill="currentColor" aria-hidden="true" />}
-        {playing ? 'Pause preview' : 'Play preview'}
-      </button>
     </div>
   );
 }
@@ -107,24 +65,24 @@ const projectVisuals: Record<string, { src: string; alt: string; note?: string; 
     badges: ['LLMs', '0→1'],
   },
   'ai-discovery': {
-    src: `${import.meta.env.BASE_URL}media/work/shopping-agent-portrait.mp4`,
+    src: '/media/work/shopping-agent-demo.mp4',
     alt: 'Ask TRR shopping agent demo video',
     badges: ['Agents', '0→1'],
   },
   'visual-search': {
-    src: `${import.meta.env.BASE_URL}media/work/image-search-prototype.mp4`,
-    alt: 'Image Search prototype showing camera search and matching products',
-    badges: ['ML', '0→1'],
+    src: '/media/work/visual-search-ui.png',
+    alt: 'Visual Search mobile camera interface with selectable regions in a photo',
+    badges: ['Machine Learning', '0→1'],
   },
   'similar-designers': {
-    src: '/media/work/similar-designers-customers-also-shop.png',
-    alt: 'Customers also shop recommendations for Chanel, Christian Dior, Gucci, Prada, Fendi, and Hermès',
-    badges: ['ML', '0→1'],
+    src: '/media/work/similar-designers-network.svg',
+    alt: 'Illustrative recommendation network: seed designer The Row produces Lemaire score 96, Studio Nicholson score 90, Toteme score 86, and Margaret Howell score 79',
+    badges: ['Machine Learning', '0→1'],
   },
   curation: {
     src: '/media/work/curation-vacation-shop.mp4',
     alt: 'The RealReal Vacation Shop product browse video',
-    badges: ['Agents', 'ML', '0→1'],
+    badges: ['Agents', 'Machine Learning', '0→1 BUILD'],
   },
 };
 
@@ -151,12 +109,12 @@ export default function Work() {
         <h1 className="work-hero-name font-editorial" data-testid="text-work-name">Sharin<br />{' '}Khander<span className="text-accent">.</span></h1>
         <div className="work-hero-support">
           <p className="work-hero-role font-editorial" data-testid="text-work-tagline">I build better ways<br />{' '}to shop<span className="text-accent">.</span></p>
-          <div className="work-proof" aria-label="2026 impact metrics">
-            <span className="work-proof-heading font-mono-archive">2026 Impact</span>
+          <div className="work-proof" aria-label="2026 year-to-date metrics">
+            <span className="work-proof-heading font-mono-archive">2026 YTD</span>
             <div className="work-proof-grid">
               <div className="work-proof-item">
                 <strong className="work-proof-number font-editorial" data-testid="text-products-count">7</strong>
-                <span className="work-proof-label">0→1 BUILDS</span>
+                <span className="work-proof-label">0→1 PRODUCTS</span>
               </div>
               <div className="work-proof-item">
                 <strong className="work-proof-number font-editorial" data-testid="text-experiments-count">40</strong>
@@ -165,7 +123,7 @@ export default function Work() {
               </div>
               <div className="work-proof-item">
                 <strong className="work-proof-number font-editorial" data-testid="text-gmv-impact">$180M</strong>
-                <span className="work-proof-label">GMV</span>
+                <span className="work-proof-label">GMV IMPACT</span>
               </div>
             </div>
           </div>
@@ -173,7 +131,7 @@ export default function Work() {
       </section>
       <section id="selected-work" className="mx-auto w-full max-w-[1440px] px-6 pb-20 sm:px-10 md:pb-28 lg:px-[5%]" aria-labelledby="work-heading">
         <div className="work-band">
-          <h2 id="work-heading" className="font-editorial text-[clamp(2.3rem,4vw,3.8rem)] leading-none tracking-[-.035em]">Things I've Built</h2>
+          <h2 id="work-heading" className="font-editorial text-[clamp(2.3rem,4vw,3.8rem)] leading-none tracking-[-.035em]">Things I’ve Built</h2>
           <div className="work-tabs" role="tablist" aria-label="Work type">
             {workTypes.map((type, index) => (
               <button
@@ -199,30 +157,16 @@ export default function Work() {
           <div key={workType} className="work-list-content">
           {workType === 'Personal' ? personalProjects.map((project, index) => {
             const number = String(index + 1).padStart(2, '0');
-            const copy = (
-              <>
-                <div className="editorial-project-kicker font-mono-archive text-accent">
-                  <span className="text-[10px]">{number}</span>
-                  {project.slug === 'virtual-try-on' && <ArrowUpRight size={16} strokeWidth={1.5} className="project-arrow" aria-hidden="true" />}
-                </div>
-                <h3 className="font-editorial">{project.title}</h3>
-                <p className="editorial-project-description text-muted-foreground">{project.description}</p>
-                {project.badges.length > 0 && (
+            return (
+              <article className={`editorial-project personal-project${project.preview === 'recordings' || project.preview === 'video' ? ' has-video' : ''}`} key={project.slug} data-testid={`personal-project-${project.slug}`}>
+                <div className="editorial-project-copy">
+                  <div className="editorial-project-kicker font-mono-archive text-accent"><span className="text-[10px]">{number}</span></div>
+                  <h3 className="font-editorial">{project.title}</h3>
+                  <p className="editorial-project-description text-muted-foreground">{project.description}</p>
                   <div className="editorial-project-badges" aria-label={`${project.title} categories`}>
                     {project.badges.map((badge) => <span key={badge}>{badge}</span>)}
                   </div>
-                )}
-              </>
-            );
-            return (
-              <article className={`editorial-project personal-project${project.preview === 'recordings' || project.preview === 'video' ? ' has-video' : ''}`} key={project.slug} data-testid={`personal-project-${project.slug}`}>
-                {project.slug === 'virtual-try-on' ? (
-                  <Link href="/work/virtual-try-on" className="editorial-project-copy personal-project-link" data-testid="link-project-virtual-try-on">
-                    {copy}
-                  </Link>
-                ) : (
-                  <div className="editorial-project-copy">{copy}</div>
-                )}
+                </div>
                 <figure className="editorial-project-visual personal-project-visual" data-project={project.slug}>
                   {project.preview === 'recordings' ? (
                     <div className="personal-recordings">{tryOnClips.map((clip) => <Recording key={clip.src} clip={clip} />)}</div>
@@ -241,8 +185,10 @@ export default function Work() {
                       />
                     </div>
                   ) : (
-                    <div className="personal-coming-soon">
-                      <span className="font-editorial">Coming Soon</span>
+                    <div className="personal-unavailable">
+                      <span className="personal-unavailable-number font-mono-archive">FIG. {number} / {project.title}</span>
+                      <span className="personal-unavailable-title font-editorial">{project.title}</span>
+                      <span className="personal-unavailable-status font-mono-archive">Prototype preview unavailable</span>
                     </div>
                   )}
                 </figure>
@@ -254,41 +200,30 @@ export default function Work() {
             const cardTitle = project.slug === 'curation' ? 'Curation Tool' : project.slug === 'attribute-enrichment' ? 'Metadata Enrichment' : project.slug === 'visual-search' ? 'Image Search' : project.slug === 'elevated-experience' ? 'Site Redesign' : project.title;
             const visual = projectVisuals[project.slug];
             if (!visual) throw new Error(`Missing homepage visual for ${project.slug}`);
-            const cardClassName = `editorial-project group${project.slug === 'curation' ? ' is-curation' : ''}${project.slug === 'ai-discovery' ? ' is-shopping-agent' : ''}${project.slug === 'similar-designers' ? ' is-similar-designers' : ''}${project.slug === 'visual-search' ? ' is-visual-search' : ''}${projectIndex % 2 === 1 && project.slug !== 'ai-discovery' ? ' is-reversed' : ''}${projectIndex % 3 === 2 && project.slug !== 'similar-designers' ? ' is-wide' : ''}`;
-            const cardContent = (
-              <>
+            return (
+              <Link
+                href={`/work/${project.slug}`}
+                key={project.slug}
+                className={`editorial-project group${project.slug === 'curation' ? ' is-curation' : ''}${project.slug === 'ai-discovery' ? ' is-shopping-agent' : ''}${project.slug === 'similar-designers' ? ' is-similar-designers' : ''}${project.slug === 'visual-search' ? ' is-visual-search' : ''}${projectIndex % 2 === 1 && project.slug !== 'ai-discovery' ? ' is-reversed' : ''}${projectIndex % 3 === 2 && project.slug !== 'similar-designers' ? ' is-wide' : ''}`}
+                data-testid={`link-project-${project.slug}`}
+              >
                 <div className="editorial-project-copy">
                   <div className="editorial-project-kicker font-mono-archive text-accent">
                     <span className="text-[10px]">{projectNumber}</span>
                     <ArrowUpRight size={16} strokeWidth={1.5} className="project-arrow" aria-hidden="true" />
                   </div>
                   <h3 className="font-editorial">{cardTitle}</h3>
-                  <p className="editorial-project-description text-muted-foreground">{project.slug === 'curation' ? 'Build complete assortments in minutes.' : project.slug === 'ai-discovery' ? 'Search for products in your own words.' : project.slug === 'similar-designers' ? 'Discover your next favorite designer.' : project.slug === 'attribute-enrichment' ? 'Discover products by trend, vibe, and occasion.' : project.slug === 'visual-search' ? 'Shop your social media or IRL inspiration.' : project.slug === 'elevated-experience' ? 'A more elevated way to browse and shop.' : project.description}</p>
+                  <p className="editorial-project-description text-muted-foreground">{project.slug === 'curation' ? 'Making editorial taste scalable.' : project.slug === 'ai-discovery' ? 'Search, compare, and buy with natural language.' : project.slug === 'similar-designers' ? 'Helping shoppers discover their next favorite designer.' : project.slug === 'attribute-enrichment' ? 'Making 6M products discoverable by trend, vibe, and occasion.' : project.slug === 'visual-search' ? 'Turn inspiration into something you can shop.' : project.slug === 'elevated-experience' ? 'Elevating the shopping experience for improved discovery and conversion.' : project.description}</p>
                   <div className="editorial-project-badges" aria-label={`${cardTitle} categories`}>
                     {visual.badges.map((badge) => <span key={badge}>{badge}</span>)}
                   </div>
                 </div>
                 <figure className="editorial-project-visual" data-project={project.slug}>
                   <div className="editorial-project-artwork">
-                    {project.slug === 'ai-discovery' ? (
-                      <div className="shopping-agent-phone">
-                        <div className="shopping-agent-phone-screen">
-                          <video
-                            src={visual.src}
-                            poster={`${import.meta.env.BASE_URL}media/work/shopping-agent-portrait-poster.jpg`}
-                            aria-label={visual.alt}
-                            autoPlay
-                            muted
-                            loop
-                            playsInline
-                            preload="metadata"
-                          />
-                        </div>
-                      </div>
-                    ) : project.slug === 'curation' ? (
+                    {project.slug === 'curation' || project.slug === 'ai-discovery' ? (
                       <video
                         src={visual.src}
-                        poster="/media/work/curation-vacation-shop-poster.jpg"
+                        poster={project.slug === 'curation' ? '/media/work/curation-vacation-shop-poster.jpg' : '/media/work/shopping-agent-poster.jpg'}
                         aria-label={visual.alt}
                         autoPlay
                         muted
@@ -296,51 +231,16 @@ export default function Work() {
                         playsInline
                         preload="metadata"
                       />
-                    ) : project.slug === 'attribute-enrichment' ? (
-                      <div className="metadata-enrichment-preview">
+                    ) : project.slug === 'similar-designers' ? (
+                      <picture>
+                        <source media="(max-width: 767px)" srcSet="/media/work/similar-designers-network-mobile.svg" />
                         <img src={visual.src} alt={visual.alt} loading="lazy" />
-                        <dl className="metadata-enrichment-attributes" aria-label="Predicted attributes">
-                          <div className="metadata-attribute-group">
-                            <dt>Aesthetic</dt>
-                            <dd className="metadata-attribute-tags">
-                              {['Romantic', 'Classic', 'Feminine'].map((tag) => <span key={tag}>{tag}</span>)}
-                            </dd>
-                          </div>
-                          <div className="metadata-attribute-group">
-                            <dt>Occasion</dt>
-                            <dd className="metadata-attribute-tags">
-                              {['Evening wear', 'Date night', 'Party'].map((tag) => <span key={tag}>{tag}</span>)}
-                            </dd>
-                          </div>
-                        </dl>
-                      </div>
-                    ) : project.slug === 'visual-search' ? (
-                      <ImageSearchPrototype src={visual.src} alt={visual.alt} />
+                      </picture>
                     ) : (
                       <img src={visual.src} alt={visual.alt} loading={projectIndex < 2 ? 'eager' : 'lazy'} />
                     )}
                   </div>
                 </figure>
-              </>
-            );
-            return project.slug === 'visual-search' ? (
-              <article key={project.slug} className={cardClassName}>
-                <Link
-                  href={`/work/${project.slug}`}
-                  className="editorial-project-cover-link"
-                  data-testid={`link-project-${project.slug}`}
-                  aria-label={`View ${cardTitle} project`}
-                />
-                {cardContent}
-              </article>
-            ) : (
-              <Link
-                href={`/work/${project.slug}`}
-                key={project.slug}
-                className={cardClassName}
-                data-testid={`link-project-${project.slug}`}
-              >
-                {cardContent}
               </Link>
             );
           })}

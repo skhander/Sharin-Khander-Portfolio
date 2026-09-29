@@ -214,7 +214,13 @@
 }
 
 .editorial-work .editorial-project.is-similar-designers .editorial-project-artwork {
-  height: clamp(440px, 50vw, 640px);
+  height: clamp(440px, 48vw, 580px);
+}
+
+.editorial-work .editorial-project.is-similar-designers picture {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .editorial-work .editorial-project-visual[data-project="attribute-enrichment"],

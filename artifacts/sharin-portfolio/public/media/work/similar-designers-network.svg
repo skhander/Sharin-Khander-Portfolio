@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 560">
+  <defs>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r=".75" fill="#d9d6cf"/>
+    </pattern>
+    <linearGradient id="signal" x1="0" x2="1">
+      <stop stop-color="#a5a296"/>
+      <stop offset=".55" stop-color="#8b5b67"/>
+      <stop offset="1" stop-color="#743747"/>
+    </linearGradient>
+    <g id="node"><circle r="7" fill="#f7f6f3" stroke="#8c817d" stroke-width="1.5"/><circle r="2" fill="#743747"/></g>
+  </defs>
+  <rect width="720" height="560" fill="#f7f6f3"/>
+  <rect width="720" height="560" fill="url(#dots)" opacity=".6"/>
+  <rect x="14" y="14" width="692" height="532" fill="none" stroke="#dedbd5"/>
+
+  <!-- A three-layer recommendation network, with highlighted signals flowing to ranked matches. -->
+  <g fill="none" stroke="#a9a69c" stroke-width="1" opacity=".57">
+    <path d="M188 280 C205 280 208 135 233 135 M188 280 C205 280 208 230 233 230 M188 280 C205 280 208 325 233 325 M188 280 C205 280 208 420 233 420"/>
+    <path d="M233 135 Q274 135 306 105 M233 135 Q274 135 306 215 M233 135 Q274 180 306 325 M233 135 Q274 240 306 435"/>
+    <path d="M233 230 Q274 180 306 105 M233 230 Q274 225 306 215 M233 230 Q274 275 306 325 M233 230 Q274 345 306 435"/>
+    <path d="M233 325 Q274 225 306 105 M233 325 Q274 270 306 215 M233 325 Q274 325 306 325 M233 325 Q274 390 306 435"/>
+    <path d="M233 420 Q274 260 306 105 M233 420 Q274 340 306 215 M233 420 Q274 370 306 325 M233 420 Q274 420 306 435"/>
+    <path d="M306 105 Q350 105 380 155 M306 105 Q350 180 380 280 M306 105 Q350 260 380 405"/>
+    <path d="M306 215 Q350 180 380 155 M306 215 Q350 240 380 280 M306 215 Q350 330 380 405"/>
+    <path d="M306 325 Q350 230 380 155 M306 325 Q350 300 380 280 M306 325 Q350 365 380 405"/>
+    <path d="M306 435 Q350 300 380 155 M306 435 Q350 355 380 280 M306 435 Q350 405 380 405"/>
+    <path d="M380 155 Q417 155 446 175 M380 155 Q417 205 446 255 M380 155 Q417 260 446 335 M380 155 Q417 320 446 415"/>
+    <path d="M380 280 Q417 200 446 175 M380 280 Q417 270 446 255 M380 280 Q417 300 446 335 M380 280 Q417 350 446 415"/>
+    <path d="M380 405 Q417 255 446 175 M380 405 Q417 325 446 255 M380 405 Q417 365 446 335 M380 405 Q417 405 446 415"/>
+  </g>
+  <g fill="none" stroke="url(#signal)" stroke-width="2" opacity=".8">
+    <path d="M188 280 C205 280 208 230 233 230 Q274 180 306 105 Q350 105 380 155 Q417 155 446 175"/>
+    <path d="M188 280 C205 280 208 325 233 325 Q274 325 306 325 Q350 300 380 280 Q417 270 446 255"/>
+  </g>
+
+  <rect x="32" y="225" width="156" height="110" fill="#fff" stroke="#c9bfc0"/>
+  <rect x="32" y="225" width="3" height="110" fill="#743747"/>
+  <text x="48" y="253" fill="#79736e" font-family="Arial, sans-serif" font-size="10" letter-spacing="1.5">SEED DESIGNER</text>
+  <text x="48" y="295" fill="#282523" font-family="Arial, sans-serif" font-size="26" letter-spacing="-1">The Row</text>
+  <circle cx="188" cy="280" r="5" fill="#743747"/>
+
+  <g>
+    <use href="#node" x="233" y="135"/><use href="#node" x="233" y="230"/><use href="#node" x="233" y="325"/><use href="#node" x="233" y="420"/>
+    <use href="#node" x="306" y="105"/><use href="#node" x="306" y="215"/><use href="#node" x="306" y="325"/><use href="#node" x="306" y="435"/>
+    <use href="#node" x="380" y="155"/><use href="#node" x="380" y="280"/><use href="#node" x="380" y="405"/>
+  </g>
+
+  <rect x="446" y="83" width="248" height="394" fill="#fff" stroke="#d8d3cc"/>
+  <text x="465" y="116" fill="#743747" font-family="Arial, sans-serif" font-size="11" letter-spacing="1.4">OUTPUT</text>
+  <text x="674" y="116" fill="#8a857f" font-family="Arial, sans-serif" font-size="10" letter-spacing="1" text-anchor="end">SCORE</text>
+  <path d="M465 130H675 M465 213H675 M465 296H675 M465 379H675" stroke="#e5e1dc"/>
+  <g fill="#743747">
+    <circle cx="446" cy="175" r="4"/><circle cx="446" cy="255" r="4"/><circle cx="446" cy="335" r="4"/><circle cx="446" cy="415" r="4"/>
+  </g>
+  <g font-family="Arial, sans-serif" fill="#282523">
+    <text x="465" y="163" font-size="17">Lemaire</text>
+    <text x="675" y="163" text-anchor="end" font-size="23">96</text>
+    <text x="465" y="246" font-size="16">Studio Nicholson</text>
+    <text x="675" y="246" text-anchor="end" font-size="23">90</text>
+    <text x="465" y="329" font-size="17">Toteme</text>
+    <text x="675" y="329" text-anchor="end" font-size="23">86</text>
+    <text x="465" y="412" font-size="16">Margaret Howell</text>
+    <text x="675" y="412" text-anchor="end" font-size="23">79</text>
+  </g>
+  <g fill="#e9e2e3"><rect x="465" y="179" width="162" height="3"/><rect x="465" y="262" width="162" height="3"/><rect x="465" y="345" width="162" height="3"/><rect x="465" y="428" width="162" height="3"/></g>
+  <g fill="#743747"><rect x="465" y="179" width="156" height="3"/><rect x="465" y="262" width="146" height="3"/><rect x="465" y="345" width="139" height="3"/><rect x="465" y="428" width="128" height="3"/></g>
+</svg>
