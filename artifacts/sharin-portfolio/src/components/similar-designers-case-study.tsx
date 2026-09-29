@@ -5,9 +5,9 @@ import { ProjectNavigation } from './project-content';
 import './similar-designers-case-study.css';
 
 const metrics = [
-  { value: '80%', label: 'bounce on designer pages' },
+  { value: '$30M', label: 'GMV' },
   { value: '+3%', label: 'GMV per visitor' },
-  { value: '−10%', label: 'bounce rate' },
+  { value: '↓10%', label: 'bounce rate' },
 ];
 
 const phases = [
@@ -67,8 +67,7 @@ export function SimilarDesignersStory({ nextProject }: { project: Project; nextP
         </Link>
         <div className="mt-14 grid grid-cols-1 gap-7 md:mt-20 md:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] md:items-end md:gap-16">
           <div>
-            <p className="font-mono-archive text-[10px] uppercase tracking-[.16em] text-accent">SIMILAR DESIGNERS</p>
-            <h1 className="mt-5 max-w-3xl font-editorial text-[clamp(3.8rem,8vw,8rem)] leading-[.84] tracking-[-.05em]">Similar Designers</h1>
+            <h1 className="max-w-3xl font-editorial text-[clamp(3.8rem,8vw,8rem)] leading-[.84] tracking-[-.05em]">Similar Designers</h1>
           </div>
           <p className="max-w-2xl text-lg leading-[1.4] text-muted-foreground sm:text-xl">Helping shoppers discover their next favorite designer.</p>
         </div>
@@ -86,7 +85,8 @@ export function SimilarDesignersStory({ nextProject }: { project: Project; nextP
       </section>
 
       <StorySection id="similar-problem" heading="The problem">
-        80% of people landing on Designer pages bounced. We believed the products weren't resonating — and needed to give shoppers better paths to explore.
+        <strong className="font-semibold">80% of shoppers who landed on a Designer page left.</strong>{' '}
+        The data told us shoppers weren't continuing to explore. We hypothesized that better recommendations could give them more relevant paths forward.
       </StorySection>
 
       <StorySection id="similar-built" heading="What I built">
