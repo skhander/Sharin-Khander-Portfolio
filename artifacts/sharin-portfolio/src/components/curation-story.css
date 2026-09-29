@@ -1,13 +1,16 @@
 .curation-story {
-  position: relative;
-  isolation: isolate;
-  overflow: clip;
   --curation-gap: clamp(16px, 2.5vw, 32px);
   --curation-section-space: clamp(40px, 4vw, 56px);
   background-color: hsl(var(--background));
 }
 
-.curation-story::before {
+.curation-story .curation-intro-backdrop {
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+}
+
+.curation-intro-backdrop::before {
   position: absolute;
   z-index: 0;
   inset: -10% -100vw;
@@ -21,7 +24,7 @@
   transform: rotate(-4deg);
 }
 
-.curation-story::after {
+.curation-intro-backdrop::after {
   position: absolute;
   z-index: 0;
   inset: 0;
@@ -30,21 +33,21 @@
   pointer-events: none;
 }
 
-.dark .curation-story::before {
+.dark .curation-intro-backdrop::before {
   filter: grayscale(1) invert(1);
   opacity: .1;
 }
 
-.dark .curation-story::after {
+.dark .curation-intro-backdrop::after {
   background-color: hsl(var(--background) / .3);
 }
 
-.curation-story > * {
+.curation-intro-backdrop > * {
   position: relative;
   z-index: 1;
 }
 
-.curation-story > section:first-child::before {
+.curation-intro-backdrop > section:first-child::before {
   position: absolute;
   z-index: 0;
   inset: 0;
@@ -53,12 +56,12 @@
   pointer-events: none;
 }
 
-.curation-story > section:first-child > .curation-panel {
+.curation-intro-backdrop > section:first-child > .curation-panel {
   position: relative;
   z-index: 1;
 }
 
-.dark .curation-story > section:first-child::before {
+.dark .curation-intro-backdrop > section:first-child::before {
   background-color: hsl(var(--background) / .9);
 }
 
@@ -189,7 +192,7 @@
 }
 
 @media (min-width: 768px) {
-  .curation-story > section:first-child::before {
+  .curation-intro-backdrop > section:first-child::before {
     mask-image: linear-gradient(to right, black 0%, black 62%, transparent 92%);
   }
 

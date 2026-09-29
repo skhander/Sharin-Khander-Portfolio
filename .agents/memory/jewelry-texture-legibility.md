@@ -3,8 +3,8 @@ name: Jewelry texture legibility
 description: Preserve the Curation jewelry backdrop without letting it interfere with page copy.
 ---
 
-Keep the product-only jewelry texture as an editorial backdrop, but shield the headline and description with a warm, quiet reading area. It can remain visible around the edges and in open space.
+Keep the product-only jewelry texture in the Curation hero and Impact area only. Shield the headline and description with a warm, quiet reading area; numbered case-study sections need a plain background.
 
-**Why:** The user still found the writing hard to read after the entire image was faded to roughly 15% and given a warm wash. Product outlines directly behind the letters remained distracting; angling the image alone would not solve contrast.
+**Why:** The user still found the writing hard to read after fading, warming, and angling the tile. They explicitly wanted the tiling to stop after Impact so the actual case study would be easy to read.
 
-**How to apply:** When adjusting the Curation backdrop, assess legibility at desktop and phone widths with the actual title and copy. Preserve the image rather than removing it, and prioritize a clear area under text over increasing global opacity.
+**How to apply:** When adjusting the Curation backdrop, check the boundary after Impact at desktop and phone widths. Preserve the jewelry in the introduction, but never extend the texture behind “01 — PROTOTYPE” or later sections.
