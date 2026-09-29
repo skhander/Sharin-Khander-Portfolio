@@ -26,10 +26,10 @@ export default function About() {
           <div className="about-step-copy">
             <p className="about-step-lede">Checklist</p>
             <ol className="about-brief-list">
-              <li><span className="about-list-mark" aria-hidden="true">1</span><span>Write a clear brief: context + scope.</span></li>
-              <li><span className="about-list-mark" aria-hidden="true">2</span><span>Upload meeting + interview insights.</span></li>
-              <li><span className="about-list-mark" aria-hidden="true">3</span><span>Write a short PRD.</span></li>
-              <li><span className="about-list-mark" aria-hidden="true">4</span><span>Brainstorm out loud with Claude Code.</span></li>
+              <li><span className="about-list-mark" aria-hidden="true">A</span><span>Write a clear brief: context + scope.</span></li>
+              <li><span className="about-list-mark" aria-hidden="true">B</span><span>Upload meeting + interview insights.</span></li>
+              <li><span className="about-list-mark" aria-hidden="true">C</span><span>Write a short PRD.</span></li>
+              <li><span className="about-list-mark" aria-hidden="true">D</span><span>Brainstorm out loud with Claude Code.</span></li>
             </ol>
           </div>
 
@@ -50,10 +50,11 @@ export default function About() {
           <span className="about-step-index" aria-hidden="true">02</span>
           <div className="about-step-heading-copy">
             <p className="font-mono-archive text-[10px] uppercase tracking-[.16em] text-muted-foreground">design</p>
-            <h2 id="about-step-02-title">Start from what already works.</h2>
+            <h2 id="about-step-02-title">Start with a prototype</h2>
           </div>
         </div>
         <div className="about-step-grid about-diagram-grid">
+          <p className="about-step-lede">I Use Figma to design the product before I build.</p>
           <figure className="about-diagram about-system-diagram" role="img" aria-label="Enter a design system, components, tokens, and references to inform the agent.">
             <div className="about-system-inputs">
               <p className="about-system-inputs-title">Enter</p>
