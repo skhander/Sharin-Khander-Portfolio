@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ArrowLeft, Play } from 'lucide-react';
+import { ArrowLeft, Download, Play } from 'lucide-react';
 import { Link } from 'wouter';
 import type { Project } from '@/lib/projects';
 import { ProjectNavigation } from '@/components/project-content';
@@ -111,19 +111,32 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
         <div className="grid gap-8 md:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] md:gap-16">
           <h2 id="shopping-build" className="font-mono-archive text-xs font-semibold uppercase tracking-[.14em] text-accent">03 — BUILD</h2>
           <div className="max-w-2xl space-y-5 text-base leading-[1.6] md:text-lg">
-            <p>I shaped the experience and brand voice: how the agent recommends products, answers questions, and helps shoppers decide.</p>
+            <p>I shaped the <strong className="font-semibold text-accent">experience and brand voice</strong>: how the agent recommends products, answers questions, and helps shoppers decide.</p>
             <p>Under the hood: <strong className="font-semibold">Gemini + a custom intent layer + our shopping APIs.</strong> The intent layer translated what shoppers meant into product queries, while the APIs handled <strong className="font-semibold">PDP, Add to Cart, and Wishlist</strong> actions.</p>
           </div>
         </div>
+        <figure className="mx-auto mt-10 max-w-[1100px] md:mt-14">
+          <figcaption className="mb-4 font-mono-archive text-sm font-medium tracking-[.02em] text-accent">System Instructions - Sample Questions &amp; Outputs</figcaption>
+          <a href={media('system-instructions-sample.png')} target="_blank" rel="noopener noreferrer" className="block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
+            <img src={media('system-instructions-sample.png')} alt="Ask TRR spreadsheet showing system instructions, shopper questions, and assistant sample responses." width={1766} height={1168} loading="lazy" className="block h-auto w-full border border-border" />
+          </a>
+          <a href={media('ask-trr-agent-instructions.xlsx')} download="Ask_TRR_Agent_Instructions.xlsx" className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-accent underline underline-offset-4 hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
+            Download the Excel sheet <Download size={15} aria-hidden="true" />
+          </a>
+        </figure>
       </section>
 
       <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-12 sm:px-10 md:py-16 lg:px-16" aria-labelledby="shopping-learning">
         <div className="grid gap-8 md:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] md:gap-16">
           <h2 id="shopping-learning" className="font-mono-archive text-xs font-semibold uppercase tracking-[.14em] text-accent">04 — LEARN</h2>
           <div className="max-w-2xl space-y-5 text-base leading-[1.6] md:text-lg">
-            <p>Natural language unlocked new kinds of shopping intent. But shopping is visual.</p>
+            <p>Natural language unlocked new kinds of shopping intent.</p>
             <p className="text-muted-foreground">The conversational interface showed fewer products and made comparison harder.</p>
-            <p className="border-t-2 border-accent pt-5 font-editorial text-[clamp(2.5rem,4vw,4.5rem)] leading-[1.05] tracking-[-.04em]">Search needs conversation. Shopping needs browsing.</p>
+            <p className="border-t-2 border-accent pt-5 font-editorial text-[clamp(2.5rem,4vw,4.5rem)] leading-[1.05] tracking-[-.04em]">Chatbot interfaces are limiting. They're text-heavy, and shopping is visual.</p>
+            <p>Shopping isn't just about the transaction. It's about exploration, self-expression, inspiration. Customer feedback reflects people's expectations for further feed-like discovery.</p>
+            <figure>
+              <img src={media('customer-feedback.png')} alt="Customer feedback screenshot listing issues with responses, examples, AI search inventory, and the number of products shown." width={676} height={244} loading="lazy" className="block h-auto w-full border border-border" />
+            </figure>
           </div>
         </div>
       </section>
