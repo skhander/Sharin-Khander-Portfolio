@@ -56,3 +56,17 @@ mtime_ms = 1790701752711
 storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:c68ef5f3-94cf-4e53-98d9-cf139a80adf0/0e3137ba-6527-437b-846f-76bf17d1b6c9/bf203be9-b1b1-4ebc-a22c-5c280c36e8d5"
 storage_version_token = "1790702049466523"
 content_type = "image/png"
+
+[[outputs]]
+id = "1_IIhNwPpR3gtDBwahOz2"
+uri = "file://artifacts/sharin-portfolio/public/media/about/figma-system-mockup.png"
+type = "image"
+title = "Figma system mockup — Sharin"
+description = "Edited Section 2 mockup with Sharin in all three greetings and the social icons and counts removed."
+logical_id = "653b9975-51f0-45f4-ad2c-2f5ef435180c"
+content_hash = "sha256:bcbabbbfa60fba7848d3b3cbabe6505696f561e3732d75446c2a44f082f6776b"
+size = 529045
+mtime_ms = 1790702290121
+storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:c68ef5f3-94cf-4e53-98d9-cf139a80adf0/653b9975-51f0-45f4-ad2c-2f5ef435180c/c78755bb-19b2-404e-8060-ba225bd927e4"
+storage_version_token = "1790702370329257"
+content_type = "image/png"

@@ -319,12 +319,6 @@
   line-height: 1;
   letter-spacing: -.075em;
 }
-.about-intro-lede {
-  margin-top: clamp(34px, 5vw, 62px);
-  font-size: clamp(22px, 2.5vw, 32px);
-  font-weight: 500;
-  letter-spacing: -.035em;
-}
 .about-process-sequence {
   margin-top: 22px;
   color: hsl(var(--accent));
@@ -513,6 +507,17 @@
   letter-spacing: .08em;
   text-align: right;
   text-transform: uppercase;
+}
+.about-system-mockup {
+  min-width: 0;
+  margin: 0;
+  border: 1px solid hsl(var(--foreground) / .13);
+  background: #f8f7f5;
+}
+.about-system-mockup img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 .about-build-diagram {
   display: flex;

@@ -9,7 +9,6 @@ export default function About() {
     <div className="page-reveal about-process">
       <section className="about-intro mx-auto w-full max-w-[1440px] px-6 pb-16 pt-14 sm:px-10 md:pb-20 md:pt-24 lg:px-16">
         <h1 className="about-title">How I build products</h1>
-        <p className="about-intro-lede">I start with a prototype.</p>
         <p className="about-process-sequence"><strong>Brief → Design → Build → Refine</strong></p>
         <p className="about-intro-copy">I get clear on the problem, design the experience, build it, and iterate.</p>
       </section>
@@ -53,12 +52,11 @@ export default function About() {
         <div className="about-step-heading">
           <span className="about-step-index" aria-hidden="true">02</span>
           <div className="about-step-heading-copy">
-            <p className="font-mono-archive text-[10px] uppercase tracking-[.16em] text-muted-foreground">Bring the system</p>
+            <p className="font-mono-archive text-[10px] uppercase tracking-[.16em] text-muted-foreground">design</p>
             <h2 id="about-step-02-title">Start from what already works.</h2>
           </div>
         </div>
         <div className="about-step-grid about-diagram-grid">
-          <p className="about-step-lede">Your system, not the agent’s defaults.</p>
           <figure className="about-diagram about-system-diagram" role="img" aria-label="Design system, tokens, components, and references inform the agent. A Figma MCP connection is one example.">
             <div className="about-system-inputs">
               <span>Design system</span><span>Tokens</span><span>Components</span><span>References</span>
@@ -66,6 +64,17 @@ export default function About() {
             <span className="about-diagram-connector" aria-hidden="true"><i /></span>
             <div className="about-system-agent">Agent</div>
             <p className="about-diagram-caption">A Figma MCP example</p>
+          </figure>
+          <figure className="about-system-mockup">
+            <a href="/media/about/figma-system-mockup.png" target="_blank" rel="noopener noreferrer" aria-label="Open the Figma system mockup at full size">
+              <img
+                src="/media/about/figma-system-mockup.png"
+                alt="Figma design screens addressed to Sharin alongside a connected Figma MCP panel and a code-generation example."
+                loading="lazy"
+                decoding="async"
+                data-testid="img-about-figma-system"
+              />
+            </a>
           </figure>
         </div>
       </section>
