@@ -24,7 +24,8 @@ function Walkthrough({ video, poster, alt }: { video: string; poster: string; al
   const [started, setStarted] = useState(false);
 
   return (
-    <figure className="curation-media mt-8 md:mt-12">
+    <figure className="curation-media">
+      <figcaption className="mb-3 font-mono-archive text-[10px] uppercase tracking-[.12em] text-muted-foreground">The workflow · Prototype</figcaption>
       {started ? (
         <video className="curation-prototype-video" controls autoPlay playsInline preload="metadata" poster={media(poster)} aria-label={alt}>
           <source src={media(video)} type="video/mp4" />
@@ -36,23 +37,22 @@ function Walkthrough({ video, poster, alt }: { video: string; poster: string; al
           <span className="curation-prototype-play"><Play size={16} fill="currentColor" aria-hidden="true" /> Play</span>
         </button>
       )}
-      <figcaption className="mt-3 font-mono-archive text-[10px] uppercase tracking-[.12em] text-muted-foreground">Prototype</figcaption>
     </figure>
   );
 }
 
-function CustomerPage({ image, alt, label, tall = false }: { image: string; alt: string; label: string; tall?: boolean }) {
+function CustomerPage({ image, alt, label, tall = false, comparison = false }: { image: string; alt: string; label: string; tall?: boolean; comparison?: boolean }) {
   return (
-    <figure className="curation-media mt-10 md:mt-14">
-      <figcaption className="mb-3 flex flex-wrap items-center justify-between gap-x-4 gap-y-2 font-mono-archive text-[10px] uppercase tracking-[.12em] text-muted-foreground">
+    <figure className={`curation-media${comparison ? '' : ' mt-10 md:mt-14'}`}>
+      <figcaption className="mb-3 flex min-h-4 flex-wrap items-center justify-between gap-x-4 gap-y-2 font-mono-archive text-[10px] uppercase tracking-[.12em] text-muted-foreground">
         <span>{label}</span>
         <a href={media(image)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-accent underline underline-offset-4 hover:text-foreground">
           Open full image <ArrowUpRight size={12} aria-hidden="true" />
         </a>
-        <span className="w-full md:hidden">{tall ? 'Swipe and scroll to explore the page' : 'Swipe horizontally to explore the page'}</span>
+        <span className="w-full md:hidden">{comparison ? 'Scroll to explore the page' : tall ? 'Swipe and scroll to explore the page' : 'Swipe horizontally to explore the page'}</span>
         {tall && <span className="w-full hidden md:block">Scroll the image to explore the full assortment</span>}
       </figcaption>
-      <div className={`curation-customer-frame${tall ? ' is-evergreen' : ''}`} tabIndex={0} role="region" aria-label={`${label}; scroll to inspect the full screenshot`}>
+      <div className={`curation-customer-frame${tall ? ' is-evergreen' : ''}${comparison ? ' is-comparison' : ''}`} tabIndex={0} role="region" aria-label={`${label}; scroll to inspect the full screenshot`}>
         <img src={media(image)} alt={alt} loading="lazy" />
       </div>
     </figure>
@@ -102,12 +102,17 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
           </div>
           <p className="max-w-2xl self-end text-base leading-[1.6] text-muted-foreground md:text-lg">A new curation workflow that turned merchandiser expertise into scalable, programmatic assortments.</p>
         </div>
-        <div className="curation-media mt-10 md:mt-14">
-          <p className="font-mono-archive text-[10px] uppercase tracking-[.14em] text-accent">0 → 1 · PRODUCT + AI · INTERNAL TOOL</p>
+        <div className="mt-8 grid gap-10 md:mt-10 md:grid-cols-2 md:items-start md:gap-6 lg:gap-10">
           <Walkthrough
             video="curation-tool-prototype.mp4"
             poster="curation-tool-poster.jpg"
             alt="Curation Tool prototype showing the Create New Editorial interface"
+          />
+          <CustomerPage
+            image="next-level-layers.png"
+            alt="The RealReal Next-Level Layers customer browse page with a four-column edit of clothing, shoes, and accessories"
+            label="Customer view · Next-Level Layers"
+            comparison
           />
         </div>
       </section>
@@ -126,12 +131,7 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-12 sm:px-10 md:py-16 lg:px-16" aria-label="Customer-facing curation screenshots">
-        <CustomerPage
-          image="next-level-layers.png"
-          alt="The RealReal Next-Level Layers customer browse page with a four-column edit of clothing, shoes, and accessories"
-          label="Next-Level Layers"
-        />
+      <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-12 sm:px-10 md:py-16 lg:px-16" aria-label="Shop Vintage Bridal customer page">
         <CustomerPage
           image="shop-vintage-bridal.png"
           alt="The RealReal Shop Vintage Bridal page with an assortment of vintage bridal dresses and accessories"
