@@ -106,7 +106,7 @@ export const projects: Project[] = [
     title: 'Attribute Prediction',
     company: 'The RealReal',
     category: 'AI / Discovery / Curation',
-    description: 'Predict trend, occasion, and vibe from a photo to power discovery.',
+    description: 'Predict trend, occasion, and vibe from a photo to power search.',
     thesis: 'Give the marketplace a richer language for understanding style.',
     role: 'Prompts, taxonomy, evaluation, UAT, testing strategy',
     team: [
