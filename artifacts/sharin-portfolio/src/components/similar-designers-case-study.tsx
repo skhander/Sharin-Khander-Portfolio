@@ -85,8 +85,8 @@ export function SimilarDesignersStory({ nextProject }: { project: Project; nextP
       </section>
 
       <StorySection id="similar-problem" heading="The problem">
-        <strong className="font-semibold">80% of shoppers who landed on a Designer page left.</strong>{' '}
-        The data told us shoppers weren't continuing to explore. We hypothesized that better recommendations could give them more relevant paths forward.
+        <strong className="block font-semibold">80% of shoppers landing on Designer pages bounced.</strong>{' '}
+        <span className="mt-5 block">I built a recommendation experience that turned Designer pages from a dead end into a starting point for discovery.</span>
       </StorySection>
 
       <StorySection id="similar-built" heading="What I built">
