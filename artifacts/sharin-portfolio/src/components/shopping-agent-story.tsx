@@ -1,10 +1,12 @@
-import { ArrowLeft } from 'lucide-react';
+import { useState } from 'react';
+import { ArrowLeft, Play } from 'lucide-react';
 import { Link } from 'wouter';
 import type { Project } from '@/lib/projects';
 import { ProjectNavigation } from '@/components/project-content';
 import './shopping-agent-story.css';
 
 const media = (filename: string) => `${import.meta.env.BASE_URL}media/shopping-agent/${filename}`;
+const workMedia = (filename: string) => `${import.meta.env.BASE_URL}media/work/${filename}`;
 
 const metrics = [
   { value: '+1%', label: 'visitor conversion' },
@@ -13,6 +15,8 @@ const metrics = [
 ];
 
 export function ShoppingAgentStory({ nextProject }: { project: Project; nextProject: Project }) {
+  const [prototypeStarted, setPrototypeStarted] = useState(false);
+
   return (
     <article className="page-reveal shopping-agent-story">
       <header className="mx-auto max-w-[1440px] px-6 pb-12 pt-10 sm:px-10 md:pb-16 md:pt-14 lg:px-16" aria-labelledby="shopping-agent-title">
@@ -99,21 +103,23 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
         <div className="grid gap-8 md:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] md:gap-16">
           <h2 id="shopping-prototype" className="font-mono-archive text-xs font-semibold uppercase tracking-[.14em] text-accent">02 — PROTOTYPE</h2>
           <div className="max-w-2xl space-y-5 text-base leading-[1.6] md:text-lg">
-            <p>I designed two paths: help curious shoppers discover new finds, or show familiar search results when they already knew what they wanted.</p>
+            <p>I designed 3 paths for MP: searching with an image and/or prompt, refining results with dialogue, and comparing items side-by-side.</p>
             <p className="font-mono-archive text-sm font-medium tracking-[.02em] text-accent">Ask → Find → Buy</p>
           </div>
         </div>
-        <figure className="shopping-agent-prototype-gallery mt-10 md:mt-14">
-          <a className="shopping-agent-prototype-shot" href={`${import.meta.env.BASE_URL}media/work/shopping-agent-cold-start.png`} target="_blank" rel="noopener noreferrer" aria-label="Open full-size Ask TRR welcome screen">
-            <img src={`${import.meta.env.BASE_URL}media/work/shopping-agent-cold-start.png`} alt="Ask TRR welcome screen with suggested prompts and the search input." loading="lazy" />
-          </a>
-          <a className="shopping-agent-prototype-shot" href={`${import.meta.env.BASE_URL}media/work/shopping-agent-first-prompt.png`} target="_blank" rel="noopener noreferrer" aria-label="Open full-size Ask TRR first prompt and response">
-            <img src={`${import.meta.env.BASE_URL}media/work/shopping-agent-first-prompt.png`} alt="Ask TRR responds to a question about what to wear to a Napa wedding with styling advice and dress suggestions." loading="lazy" />
-          </a>
-          <a className="shopping-agent-prototype-shot" href={`${import.meta.env.BASE_URL}media/work/shopping-agent-comparison.png`} target="_blank" rel="noopener noreferrer" aria-label="Open full-size Ask TRR product comparison">
-            <img src={`${import.meta.env.BASE_URL}media/work/shopping-agent-comparison.png`} alt="Mobile Shopping Agent comparing two diamond bracelets, with product details shown side by side." loading="lazy" />
-          </a>
-        </figure>
+        <div className="shopping-agent-prototype-player mt-10 md:mt-14">
+          {prototypeStarted ? (
+            <video controls autoPlay playsInline preload="metadata" poster={workMedia('shopping-agent-prototype-poster.webp')} aria-label="Ask TRR prototype walkthrough">
+              <source src={workMedia('shopping-agent-prototype.mp4')} type="video/mp4" />
+              Your browser does not support video playback.
+            </video>
+          ) : (
+            <button type="button" className="shopping-agent-prototype-preview" onClick={() => setPrototypeStarted(true)} aria-label="Play Ask TRR prototype walkthrough">
+              <img src={workMedia('shopping-agent-prototype-poster.webp')} alt="" loading="lazy" />
+              <span className="shopping-agent-prototype-play"><Play size={22} fill="currentColor" aria-hidden="true" /></span>
+            </button>
+          )}
+        </div>
       </section>
 
       <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-12 sm:px-10 md:py-16 lg:px-16" aria-labelledby="shopping-build">
