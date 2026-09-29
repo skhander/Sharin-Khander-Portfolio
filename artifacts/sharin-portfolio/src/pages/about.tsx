@@ -14,7 +14,7 @@ export default function About() {
         <div>
           <h1 className="max-w-4xl font-editorial text-[clamp(3.8rem,8vw,7.8rem)] leading-[.86] tracking-[-.05em]">Builder first.<br /><em>Engineer before.</em></h1>
           <div className="mt-12 max-w-xl text-lg leading-[1.5] text-foreground sm:mt-16 sm:text-xl">
-            <p>I’m Sharin Khander. I build better ways to shop. Easier, more personal, and more fun.</p>
+            <p>I’m Sharin Khander. I build easier ways to shop. Easier, more personal, and more fun.</p>
             <p className="mt-5 text-muted-foreground">My work spans marketplaces, discovery, AI, and commerce.</p>
           </div>
         </div>

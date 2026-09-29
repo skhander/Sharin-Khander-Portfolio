@@ -150,7 +150,7 @@ export default function Work() {
       <section className="work-hero mx-auto w-full max-w-[1440px] px-6 pb-12 pt-14 sm:px-10 md:pb-14 md:pt-16 lg:px-[5%]">
         <h1 className="work-hero-name font-editorial" data-testid="text-work-name">Sharin<br />{' '}Khander<span className="text-accent">.</span></h1>
         <div className="work-hero-support">
-          <p className="work-hero-role font-editorial" data-testid="text-work-tagline">I build better ways<br />{' '}to shop<span className="text-accent">.</span></p>
+          <p className="work-hero-role font-editorial" data-testid="text-work-tagline">I build easier ways<br />{' '}to shop<span className="text-accent">.</span></p>
           <div className="work-proof" aria-label="2026 impact metrics">
             <span className="work-proof-heading font-mono-archive">2026 Impact</span>
             <div className="work-proof-grid">
