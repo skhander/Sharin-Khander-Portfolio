@@ -84,7 +84,7 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
         <div className="curation-panel curation-grid">
           <h2 id="curation-prototype" className="curation-rail font-mono-archive text-[11px] uppercase tracking-[.14em] text-accent">01 — PROTOTYPE</h2>
           <p className="curation-body text-base leading-[1.6] md:text-lg">I sat with everyone from the assistants doing the work to the CMO defining the operating model. Then I turned the workflow into a working prototype.</p>
-          <div className="curation-feature">
+          <div className="curation-full">
             <Walkthrough
               video="curation-tool-prototype.mp4"
               poster="curation-tool-poster.jpg"
@@ -99,7 +99,7 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
         <div className="curation-panel curation-grid">
           <h2 id="curation-ship" className="curation-rail font-mono-archive text-[11px] uppercase tracking-[.14em] text-accent">02 — SHIP</h2>
           <p className="curation-body text-base leading-[1.6] md:text-lg">I led Design, Engineering, and ML through the build.</p>
-          <div className="curation-body">
+          <div className="curation-full">
             <CustomerPage
               image="next-level-layers.png"
               alt="The RealReal Next-Level Layers customer browse page with a four-column edit of clothing, shoes, and accessories"
@@ -113,7 +113,7 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
         <div className="curation-panel curation-grid">
           <h2 id="curation-automate" className="curation-rail font-mono-archive text-[11px] uppercase tracking-[.14em] text-accent">03 — AUTOMATE</h2>
           <p className="curation-body text-base leading-[1.6] md:text-lg">We layered in programmatic assortments, human-in-the-loop review, and eventually agentic curation.</p>
-          <div className="curation-body">
+          <div className="curation-full">
             <Walkthrough
               video="evergreen-tool-prototype.mp4"
               poster="evergreen-tool-poster.jpg"

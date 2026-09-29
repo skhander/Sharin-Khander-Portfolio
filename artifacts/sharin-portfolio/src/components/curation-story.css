@@ -23,8 +23,7 @@
 
 .curation-story .curation-full,
 .curation-story .curation-rail,
-.curation-story .curation-body,
-.curation-story .curation-feature {
+.curation-story .curation-body {
   min-width: 0;
   grid-column: 1 / -1;
 }
@@ -142,10 +141,6 @@
 
   .curation-story .curation-body {
     grid-column: 6 / -1;
-  }
-
-  .curation-story .curation-feature {
-    grid-column: 1 / span 10;
   }
 
   .curation-story .curation-hero-title {
