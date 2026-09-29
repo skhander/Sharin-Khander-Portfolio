@@ -89,7 +89,7 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
         <div className="grid gap-8 md:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] md:gap-16">
           <h2 id="shopping-prototype" className="font-mono-archive text-xs font-semibold uppercase tracking-[.14em] text-accent">02 — PROTOTYPE</h2>
           <div className="max-w-2xl space-y-5 text-base leading-[1.6] md:text-lg">
-            <p>I designed 3 paths for MVP: searching with an image and/or prompt, refining results with dialogue, and comparing items side-by-side.</p>
+            <p>The MVP had three journeys: <strong className="font-semibold text-accent">search, refine, compare</strong>. The design challenge: show the product without losing the <strong className="font-semibold text-accent">context, nuance, and romance</strong> behind the recommendation.</p>
           </div>
         </div>
         <div className="shopping-agent-prototype-player mt-10 md:mt-14">
