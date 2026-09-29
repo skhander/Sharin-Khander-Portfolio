@@ -304,7 +304,7 @@ export default function Work() {
                     ) : project.slug === 'attribute-enrichment' ? (
                       <div className="metadata-enrichment-preview">
                         <div className="metadata-seed">
-                          <p className="metadata-preview-label">Seed Product</p>
+                          <p className="metadata-preview-label">Photo</p>
                           <div className="metadata-seed-frame">
                             <img src={visual.src} alt={visual.alt} loading="lazy" />
                           </div>

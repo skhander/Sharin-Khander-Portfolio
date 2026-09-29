@@ -7,7 +7,7 @@
   </defs>
   <rect width="360" height="560" fill="#faf9f6"/>
   <rect x="11" y="11" width="338" height="538" rx="3" fill="none" stroke="#d8d5cd"/>
-  <text x="30" y="46" fill="#77736e" font-family="Arial, sans-serif" font-size="10" letter-spacing="2.5">SEED DESIGNER</text>
+  <text x="30" y="46" fill="#77736e" font-family="Arial, sans-serif" font-size="10" letter-spacing="2.5">SEED</text>
   <text x="30" y="86" fill="#242322" font-family="Arial, sans-serif" font-size="30">The Row</text>
   <path d="M30 101h65" stroke="#7b3649" stroke-width="2.5"/>
 
