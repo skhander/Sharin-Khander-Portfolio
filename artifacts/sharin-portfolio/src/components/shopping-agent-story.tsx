@@ -113,11 +113,17 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
             </p>
           </div>
         </div>
+      </section>
+
+      <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-12 sm:px-10 md:py-16 lg:px-16" aria-labelledby="shopping-learning">
+        <div className="grid gap-8 md:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] md:gap-16">
+          <h2 id="shopping-learning" className="font-mono-archive text-xs font-semibold uppercase tracking-[.14em] text-accent">04 — LEARN</h2>
+          <div className="max-w-2xl">
+            <h3 className="font-editorial text-[clamp(2.5rem,4vw,4.5rem)] font-semibold leading-[1.05] tracking-[-.04em]">Teaching the agent how to shop</h3>
+            <p className="mt-5 text-lg leading-[1.6] md:text-xl">I built a library of representative shopping questions and expected behaviors to evaluate whether the agent was actually helping shoppers—not just generating convincing answers.</p>
+          </div>
+        </div>
         <figure className="mx-auto mt-10 max-w-[1100px] md:mt-14">
-          <figcaption className="mb-6 max-w-2xl text-base leading-[1.6] md:text-lg">
-            <h3 className="font-semibold text-foreground">Teaching the agent how to shop</h3>
-            <p className="mt-3">I built a library of representative shopping questions and expected behaviors to evaluate whether the agent was actually helping shoppers—not just generating convincing answers.</p>
-          </figcaption>
           <a href={media('system-instructions-sample.png')} target="_blank" rel="noopener noreferrer" className="block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
             <img src={media('system-instructions-sample.png')} alt="Ask TRR spreadsheet showing system instructions, shopper questions, and assistant sample responses." width={1766} height={1168} loading="lazy" className="block h-auto w-full border border-border" />
           </a>
@@ -125,19 +131,17 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
             Download the Excel sheet <Download size={15} aria-hidden="true" />
           </a>
         </figure>
-      </section>
-
-      <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-12 sm:px-10 md:py-16 lg:px-16" aria-labelledby="shopping-learning">
-        <div className="grid gap-8 md:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] md:gap-16">
-          <h2 id="shopping-learning" className="font-mono-archive text-xs font-semibold uppercase tracking-[.14em] text-accent">04 — LEARN</h2>
-          <div className="max-w-2xl space-y-5 text-base leading-[1.6] md:text-lg">
+        <div className="mt-14 grid gap-8 md:mt-20 md:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] md:gap-16">
+          <div className="max-w-2xl space-y-5 text-base leading-[1.6] md:col-start-2 md:text-lg">
             <p>Natural language unlocked new kinds of shopping intent.</p>
             <p className="text-muted-foreground">The conversational interface showed fewer products and made comparison harder.</p>
-            <p className="border-t-2 border-accent pt-5 font-editorial text-[clamp(2.5rem,4vw,4.5rem)] leading-[1.05] tracking-[-.04em]">Chatbot interfaces are limiting. They're text-heavy, and shopping is visual.</p>
-            <p>Shopping isn't just about the transaction. It's about exploration, self-expression, inspiration. Customer feedback reflects people's expectations for further feed-like discovery.</p>
+            <p className="border-t-2 border-accent pt-5 font-editorial text-[clamp(2rem,3vw,3.25rem)] leading-[1.08] tracking-[-.04em]">Chatbot interfaces are limiting. They're text-heavy, and shopping is visual.</p>
+            <p className="border-t border-border pt-6 font-editorial text-[clamp(2rem,3vw,3.25rem)] leading-[1.08] tracking-[-.04em]">Chat is great for understanding. Feeds are great for shopping.</p>
             <figure>
               <img src={media('customer-feedback.png')} alt="Customer feedback screenshot listing issues with responses, examples, AI search inventory, and the number of products shown." width={676} height={244} loading="lazy" className="block h-auto w-full border border-border" />
+              <figcaption className="mt-3">Customer feedback pointed to the same thing: shoppers wanted more products, easier comparison, and a more visual way to explore.</figcaption>
             </figure>
+            <p className="border-t-2 border-accent pt-6 font-editorial text-[clamp(2.5rem,4vw,4.5rem)] leading-[1.05] tracking-[-.04em]">The future isn't a chatbot replacing a website. It's conversational intelligence embedded inside a visual shopping experience.</p>
           </div>
         </div>
       </section>
