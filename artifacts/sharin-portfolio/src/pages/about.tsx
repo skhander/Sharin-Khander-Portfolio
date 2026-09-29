@@ -119,12 +119,11 @@ export default function About() {
         <div className="about-step-heading">
           <span className="about-step-index" aria-hidden="true">04</span>
           <div className="about-step-heading-copy">
-            <p className="font-mono-archive text-[10px] uppercase tracking-[.16em] text-muted-foreground">Critique it</p>
+            <p className="font-mono-archive text-[10px] uppercase tracking-[.16em] text-muted-foreground">Test It</p>
             <h2 id="about-step-04-title">Try to break the happy path.</h2>
           </div>
         </div>
         <div className="about-step-grid about-diagram-grid">
-          <p className="about-step-lede">Test like a user. Give exact feedback. Repeat.</p>
           <figure className="about-diagram about-critique-diagram" role="img" aria-label="A critique loop: click around, try to break it, give focused feedback, compare to the design system, and repeat.">
             <div className="about-critique-loop">
               <div className="about-loop-node"><span>01</span><strong>Click around</strong></div>

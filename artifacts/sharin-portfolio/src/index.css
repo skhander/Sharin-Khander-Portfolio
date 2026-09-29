@@ -533,27 +533,28 @@
   font-weight: 700;
   letter-spacing: .1em;
 }
-.about-critique-diagram { padding-bottom: 20px; }
+.about-critique-diagram { padding: clamp(28px, 3.5vw, 48px); }
 .about-critique-loop {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 24px minmax(0, 1fr) 24px minmax(0, 1fr) 24px minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) 30px minmax(0, 1fr) 30px minmax(0, 1fr) 30px minmax(0, 1fr);
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 .about-loop-node {
   display: flex;
-  min-height: 88px;
+  min-height: 134px;
   flex-direction: column;
   justify-content: space-between;
-  gap: 14px;
-  padding: 12px;
+  gap: 18px;
+  padding: 18px;
   border: 1px solid hsl(var(--foreground) / .15);
   background: hsl(var(--background) / .76);
 }
+.about-loop-node > span { font-size: 12px; }
 .about-loop-node strong {
-  font-size: clamp(10px, 1vw, 13px);
+  font-size: clamp(14px, 1.3vw, 18px);
   font-weight: 600;
-  line-height: 1.4;
+  line-height: 1.35;
 }
 .about-loop-arrow {
   position: relative;
@@ -573,31 +574,24 @@
   transform: rotate(45deg);
 }
 .about-loop-return {
-  position: relative;
-  margin: 22px 0 0;
-  border-top: 1px solid hsl(var(--accent) / .55);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 32px 0 0;
   color: hsl(var(--muted-foreground));
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: .1em;
-  text-align: center;
   text-transform: uppercase;
 }
-.about-loop-return::before {
-  position: absolute;
-  top: -4px;
-  left: 0;
-  width: 7px;
-  height: 7px;
-  border-top: 1px solid hsl(var(--accent));
-  border-left: 1px solid hsl(var(--accent));
+.about-loop-return::before,
+.about-loop-return::after {
   content: '';
-  transform: rotate(-45deg);
+  flex: 1;
+  height: 1px;
+  background: hsl(var(--accent) / .55);
 }
 .about-loop-return span {
-  position: relative;
-  top: -8px;
-  padding: 0 10px;
-  background: hsl(var(--secondary) / .2);
+  white-space: nowrap;
 }
 .about-tools-table {
   width: 100%;
@@ -688,19 +682,20 @@
     transform: rotate(135deg);
   }
   .about-diagram-caption { text-align: left; }
+  .about-critique-diagram { padding: 24px; }
   .about-critique-loop {
     grid-template-columns: 1fr;
     gap: 8px;
   }
   .about-loop-node {
-    min-height: 58px;
+    min-height: 76px;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
     gap: 14px;
-    padding: 11px;
+    padding: 15px;
   }
-  .about-loop-node strong { font-size: 12px; }
+  .about-loop-node strong { font-size: 15px; }
   .about-loop-arrow {
     width: 1px;
     height: 14px;
@@ -713,7 +708,7 @@
     bottom: 0;
     transform: rotate(135deg);
   }
-  .about-loop-return { margin-top: 18px; }
+  .about-loop-return { margin-top: 24px; gap: 12px; }
   .about-tools-table th:first-child { width: 44%; }
   .about-tools-table tbody th,
   .about-tools-table tbody td { padding-block: 16px; }
