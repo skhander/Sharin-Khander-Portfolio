@@ -103,8 +103,16 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
             <p className="font-mono-archive text-sm font-medium tracking-[.02em] text-accent">Ask → Find → Buy</p>
           </div>
         </div>
-        <figure className="shopping-agent-media mt-10 md:mt-14">
-          <img className="mx-auto block w-full max-w-[460px]" src={`${import.meta.env.BASE_URL}media/work/shopping-agent-comparison.png`} alt="Mobile Shopping Agent comparing two diamond bracelets, with product details shown side by side." loading="lazy" />
+        <figure className="shopping-agent-prototype-gallery mt-10 md:mt-14">
+          <a className="shopping-agent-prototype-shot" href={`${import.meta.env.BASE_URL}media/work/shopping-agent-cold-start.png`} target="_blank" rel="noopener noreferrer" aria-label="Open full-size Ask TRR welcome screen">
+            <img src={`${import.meta.env.BASE_URL}media/work/shopping-agent-cold-start.png`} alt="Ask TRR welcome screen with suggested prompts and the search input." loading="lazy" />
+          </a>
+          <a className="shopping-agent-prototype-shot" href={`${import.meta.env.BASE_URL}media/work/shopping-agent-first-prompt.png`} target="_blank" rel="noopener noreferrer" aria-label="Open full-size Ask TRR first prompt and response">
+            <img src={`${import.meta.env.BASE_URL}media/work/shopping-agent-first-prompt.png`} alt="Ask TRR responds to a question about what to wear to a Napa wedding with styling advice and dress suggestions." loading="lazy" />
+          </a>
+          <a className="shopping-agent-prototype-shot" href={`${import.meta.env.BASE_URL}media/work/shopping-agent-comparison.png`} target="_blank" rel="noopener noreferrer" aria-label="Open full-size Ask TRR product comparison">
+            <img src={`${import.meta.env.BASE_URL}media/work/shopping-agent-comparison.png`} alt="Mobile Shopping Agent comparing two diamond bracelets, with product details shown side by side." loading="lazy" />
+          </a>
         </figure>
       </section>
 
