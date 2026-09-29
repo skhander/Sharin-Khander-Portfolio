@@ -117,7 +117,7 @@ const projectVisuals: Record<string, { src: string; alt: string; note?: string; 
     badges: ['ML', '0→1'],
   },
   'similar-designers': {
-    src: '/media/work/similar-designers-network.svg',
+    src: `${import.meta.env.BASE_URL}media/work/similar-designers-network-refined.png`,
     alt: 'Illustrative recommendation network: seed designer The Row produces Lemaire score 96, Studio Nicholson score 90, Toteme score 86, and Margaret Howell score 79',
     badges: ['ML', '0→1'],
   },

@@ -213,14 +213,19 @@
   background: hsl(var(--background));
 }
 
+.editorial-work .editorial-project.is-similar-designers .editorial-project-artwork {
+  height: clamp(440px, 48vw, 580px);
+}
+
 @media (min-width: 768px) {
   .editorial-work .editorial-project.is-similar-designers {
     grid-template-columns: minmax(0, .5fr) minmax(0, 1.5fr);
   }
-}
 
-.editorial-work .editorial-project.is-similar-designers .editorial-project-artwork {
-  height: clamp(440px, 48vw, 580px);
+  .editorial-work .editorial-project.is-similar-designers .editorial-project-artwork {
+    height: auto;
+    aspect-ratio: 1774 / 818;
+  }
 }
 
 .editorial-work .editorial-project.is-similar-designers picture {
