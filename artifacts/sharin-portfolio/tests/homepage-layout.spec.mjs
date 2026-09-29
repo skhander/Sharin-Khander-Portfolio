@@ -13,7 +13,7 @@ for (const viewport of viewports) {
 
     const name = page.getByTestId('text-work-name');
     const metrics = page.locator('.work-proof');
-    const selectedWork = page.getByRole('heading', { name: 'Things I’ve Built' });
+    const selectedWork = page.getByRole('heading', { name: "Things I've Built in 2026" });
 
     await expect(name).toContainText('Sharin');
     await expect(name).toContainText('Khander');
@@ -98,7 +98,7 @@ for (const viewport of viewports) {
     });
 
     expect(layout.name.top, 'name starts above the metrics').toBeLessThan(layout.metrics.top);
-    expect(layout.metrics.bottom, 'metrics precede Things I’ve Built').toBeLessThan(layout.selectedWork.top);
+    expect(layout.metrics.bottom, "metrics precede Things I've Built in 2026").toBeLessThan(layout.selectedWork.top);
     expect(layout.metrics.bottom, 'all metrics fit above the fold').toBeLessThanOrEqual(layout.viewportHeight);
     expect(layout.documentWidth, 'no horizontal page overflow').toBeLessThanOrEqual(layout.viewportWidth + 1);
 
