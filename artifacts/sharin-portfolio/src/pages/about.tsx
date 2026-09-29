@@ -18,7 +18,7 @@ export default function About() {
           <span className="about-step-index" aria-hidden="true">01</span>
           <div className="about-step-heading-copy">
             <p className="font-mono-archive text-[10px] uppercase tracking-[.16em] text-muted-foreground">Frame the problem</p>
-            <h2 id="about-step-title">Give the agent the requirements.</h2>
+            <h2 id="about-step-title">Give the agent requirements.</h2>
           </div>
         </div>
 
