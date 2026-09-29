@@ -45,7 +45,6 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
           <h2 id="shopping-problem" className="font-mono-archive text-xs font-semibold uppercase tracking-[.14em] text-accent">01 — PROBLEM</h2>
           <div className="max-w-2xl space-y-5 text-base leading-[1.6] md:text-lg">
             <p>Traditional search understood product attributes. Shoppers searched in much richer language.</p>
-            <p className="font-mono-archive text-sm font-medium tracking-[.02em] text-accent">Traditional search → Shopping Agent</p>
           </div>
         </div>
         <div className="shopping-agent-comparison-wrap mt-10 md:mt-14" tabIndex={0} role="region" aria-label="Search comparison table; scroll horizontally to view both columns">
