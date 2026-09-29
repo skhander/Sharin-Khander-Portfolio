@@ -207,9 +207,11 @@ export default function Work() {
                 </div>
                 <h3 className="font-editorial">{project.title}</h3>
                 <p className="editorial-project-description text-muted-foreground">{project.description}</p>
-                <div className="editorial-project-badges" aria-label={`${project.title} categories`}>
-                  {project.badges.map((badge) => <span key={badge}>{badge}</span>)}
-                </div>
+                {project.badges.length > 0 && (
+                  <div className="editorial-project-badges" aria-label={`${project.title} categories`}>
+                    {project.badges.map((badge) => <span key={badge}>{badge}</span>)}
+                  </div>
+                )}
               </>
             );
             return (
@@ -239,10 +241,8 @@ export default function Work() {
                       />
                     </div>
                   ) : (
-                    <div className="personal-unavailable">
-                      <span className="personal-unavailable-number font-mono-archive">FIG. {number} / {project.title}</span>
-                      <span className="personal-unavailable-title font-editorial">{project.title}</span>
-                      <span className="personal-unavailable-status font-mono-archive">Prototype preview unavailable</span>
+                    <div className="personal-coming-soon">
+                      <span className="font-editorial">Coming Soon</span>
                     </div>
                   )}
                 </figure>

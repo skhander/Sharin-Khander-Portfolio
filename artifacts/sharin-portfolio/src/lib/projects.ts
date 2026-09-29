@@ -59,7 +59,7 @@ export type PersonalProject = {
   title: string;
   description: string;
   badges: string[];
-  preview: 'recordings' | 'video' | 'unavailable';
+  preview: 'recordings' | 'video' | 'coming-soon';
 };
 
 export const personalProjects: PersonalProject[] = [
@@ -67,7 +67,7 @@ export const personalProjects: PersonalProject[] = [
     slug: 'virtual-try-on',
     title: 'Virtual Try-On',
     description: 'Chrome Extension',
-    badges: ['Live Demo', 'Try-on'],
+    badges: ['Image Gen'],
     preview: 'recordings',
   },
   {
@@ -80,9 +80,9 @@ export const personalProjects: PersonalProject[] = [
   {
     slug: 'medigo',
     title: 'Medigo',
-    description: 'A personal product exploration.',
-    badges: ['Personal project'],
-    preview: 'unavailable',
+    description: 'A marketplace for medical tourism. Find and book procedures abroad from 100+ accredited doctors and clinics.',
+    badges: [],
+    preview: 'coming-soon',
   },
 ];
 
