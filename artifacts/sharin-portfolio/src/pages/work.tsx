@@ -1,5 +1,5 @@
-import { useState, type KeyboardEvent } from 'react';
-import { ArrowUpRight, Play } from 'lucide-react';
+import { useRef, useState, type KeyboardEvent } from 'react';
+import { ArrowUpRight, Pause, Play } from 'lucide-react';
 import { Link } from 'wouter';
 import { personalProjects, publishedProjects } from '@/lib/projects';
 import { usePageMeta } from '@/lib/use-page-meta';
@@ -28,6 +28,48 @@ function Recording({ clip }: { clip: typeof tryOnClips[number] }) {
           <span className="personal-play-icon"><Play size={18} fill="currentColor" aria-hidden="true" /></span>
         </button>
       )}
+    </div>
+  );
+}
+
+function ImageSearchPrototype({ src, alt }: { src: string; alt: string }) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [playing, setPlaying] = useState(false);
+
+  const togglePlayback = () => {
+    const video = videoRef.current;
+    if (!video) return;
+    if (video.paused) {
+      void video.play().catch(() => setPlaying(false));
+    } else {
+      video.pause();
+    }
+  };
+
+  return (
+    <div className="image-search-prototype">
+      <video
+        ref={videoRef}
+        src={src}
+        poster={`${import.meta.env.BASE_URL}media/work/image-search-prototype-poster.jpg`}
+        aria-label={alt}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        onPlay={() => setPlaying(true)}
+        onPause={() => setPlaying(false)}
+      />
+      <button
+        type="button"
+        className="image-search-playback"
+        onClick={togglePlayback}
+        aria-label={playing ? 'Pause Image Search prototype' : 'Play Image Search prototype'}
+      >
+        {playing ? <Pause size={12} fill="currentColor" aria-hidden="true" /> : <Play size={12} fill="currentColor" aria-hidden="true" />}
+        {playing ? 'Pause preview' : 'Play preview'}
+      </button>
     </div>
   );
 }
@@ -70,8 +112,8 @@ const projectVisuals: Record<string, { src: string; alt: string; note?: string; 
     badges: ['Agents', '0→1'],
   },
   'visual-search': {
-    src: '/media/work/visual-search-ui.png',
-    alt: 'Visual Search mobile camera interface with selectable regions in a photo',
+    src: `${import.meta.env.BASE_URL}media/work/image-search-prototype.mp4`,
+    alt: 'Image Search prototype showing camera search and matching products',
     badges: ['Machine Learning', '0→1'],
   },
   'similar-designers': {
@@ -200,13 +242,9 @@ export default function Work() {
             const cardTitle = project.slug === 'curation' ? 'Curation Tool' : project.slug === 'attribute-enrichment' ? 'Metadata Enrichment' : project.slug === 'visual-search' ? 'Image Search' : project.slug === 'elevated-experience' ? 'Site Redesign' : project.title;
             const visual = projectVisuals[project.slug];
             if (!visual) throw new Error(`Missing homepage visual for ${project.slug}`);
-            return (
-              <Link
-                href={`/work/${project.slug}`}
-                key={project.slug}
-                className={`editorial-project group${project.slug === 'curation' ? ' is-curation' : ''}${project.slug === 'ai-discovery' ? ' is-shopping-agent' : ''}${project.slug === 'similar-designers' ? ' is-similar-designers' : ''}${project.slug === 'visual-search' ? ' is-visual-search' : ''}${projectIndex % 2 === 1 && project.slug !== 'ai-discovery' ? ' is-reversed' : ''}${projectIndex % 3 === 2 && project.slug !== 'similar-designers' ? ' is-wide' : ''}`}
-                data-testid={`link-project-${project.slug}`}
-              >
+            const cardClassName = `editorial-project group${project.slug === 'curation' ? ' is-curation' : ''}${project.slug === 'ai-discovery' ? ' is-shopping-agent' : ''}${project.slug === 'similar-designers' ? ' is-similar-designers' : ''}${project.slug === 'visual-search' ? ' is-visual-search' : ''}${projectIndex % 2 === 1 && project.slug !== 'ai-discovery' ? ' is-reversed' : ''}${projectIndex % 3 === 2 && project.slug !== 'similar-designers' ? ' is-wide' : ''}`;
+            const cardContent = (
+              <>
                 <div className="editorial-project-copy">
                   <div className="editorial-project-kicker font-mono-archive text-accent">
                     <span className="text-[10px]">{projectNumber}</span>
@@ -264,11 +302,33 @@ export default function Work() {
                           </div>
                         </dl>
                       </div>
+                    ) : project.slug === 'visual-search' ? (
+                      <ImageSearchPrototype src={visual.src} alt={visual.alt} />
                     ) : (
                       <img src={visual.src} alt={visual.alt} loading={projectIndex < 2 ? 'eager' : 'lazy'} />
                     )}
                   </div>
                 </figure>
+              </>
+            );
+            return project.slug === 'visual-search' ? (
+              <article key={project.slug} className={cardClassName}>
+                <Link
+                  href={`/work/${project.slug}`}
+                  className="editorial-project-cover-link"
+                  data-testid={`link-project-${project.slug}`}
+                  aria-label={`View ${cardTitle} project`}
+                />
+                {cardContent}
+              </article>
+            ) : (
+              <Link
+                href={`/work/${project.slug}`}
+                key={project.slug}
+                className={cardClassName}
+                data-testid={`link-project-${project.slug}`}
+              >
+                {cardContent}
               </Link>
             );
           })}
