@@ -164,9 +164,10 @@
 .work-proof-heading {
   display: block;
   margin-bottom: 12px;
-  font-size: 12px;
+  font-size: 13px;
+  font-weight: 600;
   line-height: 1.4;
-  letter-spacing: .13em;
+  letter-spacing: .11em;
 }
 .work-proof-grid {
   display: grid;
@@ -206,9 +207,11 @@
 }
 .work-proof-label {
   margin-top: 6px;
+  opacity: .78;
 }
 .work-proof-note {
   margin-top: 2px;
+  opacity: .82;
 }
 .work-band {
   position: relative;
