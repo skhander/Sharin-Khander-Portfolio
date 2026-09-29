@@ -51,10 +51,10 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
         <div className="grid gap-8 md:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] md:gap-16">
           <h2 id="shopping-problem" className="font-mono-archive text-xs font-semibold uppercase tracking-[.14em] text-accent">01 — PROBLEM</h2>
           <div className="max-w-2xl space-y-5 text-base leading-[1.6] md:text-lg">
-            <p>Traditional search returns zero results if the words you enter don't match the catalog. It doesn't understand intent for complex queries.</p>
+            <p>Shoppers need to translate their taste into catalog language.</p>
           </div>
         </div>
-        <div className="shopping-agent-comparison mt-8 md:mt-10" role="group" aria-label="Traditional search and Shopping Agent comparison">
+        <div className="shopping-agent-comparison mt-8 md:mt-10" role="group" aria-label="Traditional search and How shoppers think comparison">
           <div className="shopping-agent-comparison-heading shopping-agent-comparison-heading--traditional">
             <h3 className="font-editorial text-2xl font-normal">Traditional search</h3>
             <span className="shopping-agent-query-tag">“black silk dress”</span>
@@ -66,7 +66,7 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
             <p className="mt-2 font-mono-archive text-[10px] text-muted-foreground sm:hidden">Scroll to inspect the screenshot</p>
           </div>
           <div className="shopping-agent-comparison-heading shopping-agent-comparison-heading--agent">
-            <h3 className="font-editorial text-2xl font-normal">Shopping Agent</h3>
+            <h3 className="font-editorial text-2xl font-normal">How shoppers think</h3>
             <span className="shopping-agent-query-tag">“90s minimalist Calvin Klein look for a winter wedding.”</span>
           </div>
           <div className="shopping-agent-comparison-media shopping-agent-comparison-media--agent">
@@ -82,7 +82,8 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
         <div className="grid gap-8 md:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] md:gap-16">
           <h2 id="shopping-prototype" className="font-mono-archive text-xs font-semibold uppercase tracking-[.14em] text-accent">02 — PROTOTYPE</h2>
           <div className="max-w-2xl space-y-5 text-base leading-[1.6] md:text-lg">
-            <p>The MVP had three journeys: <strong className="font-semibold text-accent">search, refine, compare</strong>. The design challenge: show the product without losing the <strong className="font-semibold text-accent">context, nuance, and romance</strong> behind the recommendation.</p>
+            <p><strong className="font-semibold text-foreground">The MVP had three journeys: search, refine, compare.</strong></p>
+            <p>The challenge: <strong className="font-semibold text-foreground">make the experience conversational without losing what makes shopping visual, contextual, and emotional.</strong></p>
           </div>
         </div>
         <div className="shopping-agent-prototype-player mt-10 md:mt-14">
