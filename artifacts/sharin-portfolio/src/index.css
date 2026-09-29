@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Newsreader:wght@400;500;600&display=swap');
 @import 'tailwindcss';
 @import 'tw-animate-css';
 @plugin "@tailwindcss/typography";
@@ -28,8 +27,8 @@
   --color-destructive: hsl(var(--destructive));
   --color-destructive-foreground: hsl(var(--destructive-foreground));
   --font-sans: var(--app-font-sans);
-  --font-serif: var(--app-font-serif);
-  --font-mono: var(--app-font-mono);
+  --font-serif: var(--app-font-sans);
+  --font-mono: var(--app-font-sans);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -37,15 +36,15 @@
 }
 
 :root {
-  --background: 39 27% 94%;
+  --background: 0 0% 100%;
   --foreground: 30 13% 13%;
   --border: 36 15% 79%;
   --input: 36 15% 79%;
   --ring: 347 38% 31%;
-  --card: 39 27% 94%;
+  --card: 0 0% 100%;
   --card-foreground: 30 13% 13%;
   --card-border: 36 15% 79%;
-  --popover: 39 27% 94%;
+  --popover: 0 0% 100%;
   --popover-foreground: 30 13% 13%;
   --popover-border: 36 15% 79%;
   --primary: 347 38% 31%;
@@ -60,9 +59,8 @@
   --destructive-foreground: 39 27% 94%;
   --rose-surface: 352 27% 80%;
   --olive-surface: 68 17% 69%;
-  --app-font-sans: 'DM Sans', sans-serif;
-  --app-font-serif: 'Newsreader', Georgia, serif;
-  --app-font-mono: 'DM Mono', monospace;
+  --app-font-sans: 'Avenir Next', Avenir, Arial, sans-serif;
+  --app-font-mono: var(--app-font-sans);
   --radius: 0.15rem;
   --shadow-sm: 0 8px 24px rgba(40, 32, 28, 0.05);
 }
@@ -102,8 +100,8 @@
 }
 
 @layer utilities {
-  .font-editorial { font-family: var(--app-font-serif); font-optical-sizing: auto; }
-  .font-mono-archive { font-family: var(--app-font-mono); }
+  .font-editorial { font-family: var(--app-font-sans); }
+  .font-mono-archive { font-family: var(--app-font-sans); }
   .text-balance { text-wrap: balance; }
 }
 
@@ -135,10 +133,10 @@
 
 .work-hero-name {
   max-width: max-content;
-  font-size: clamp(6rem, 11vw, 9rem);
-  font-weight: 500;
-  line-height: .91;
-  letter-spacing: -.035em;
+  font-size: clamp(5rem, 10vw, 8.7rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -.055em;
 }
 .work-hero-support {
   display: grid;
@@ -148,10 +146,10 @@
   margin-top: clamp(50px, 5vw, 68px);
 }
 .work-hero-role {
-  font-size: clamp(2.75rem, 5vw, 4.2rem);
-  font-weight: 400;
-  line-height: 1.13;
-  letter-spacing: -.012em;
+  font-size: clamp(2.1rem, 4.15vw, 3.6rem);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -.035em;
 }
 .work-proof {
   padding: 14px clamp(18px, 2vw, 30px) 16px;
@@ -184,7 +182,7 @@
 .work-proof-number {
   display: block;
   font-size: clamp(2.25rem, 3vw, 3.1rem);
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.02;
   letter-spacing: -.025em;
   white-space: nowrap;
@@ -195,7 +193,7 @@
 .work-proof-label,
 .work-proof-note {
   display: block;
-  font-family: var(--app-font-mono);
+  font-family: var(--app-font-sans);
   font-size: 11px;
   letter-spacing: .055em;
   line-height: 1.5;
@@ -213,8 +211,10 @@
   padding-top: clamp(44px, 5.3vw, 62px);
 }
 .work-band h2 {
-  line-height: 1.12;
-  letter-spacing: -.02em;
+  font-size: clamp(2rem, 3.7vw, 3.4rem);
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: -.025em;
 }
 @media (max-width: 899px) {
   .work-hero-support {
@@ -224,13 +224,13 @@
 }
 @media (max-width: 767px) {
   .work-hero-name {
-    font-size: clamp(4.1rem, 17vw, 7rem);
+    font-size: clamp(3.9rem, 16.5vw, 6.8rem);
   }
   .work-hero-support {
     margin-top: 34px;
   }
   .work-hero-role {
-    font-size: clamp(2.3rem, 9vw, 3.6rem);
+    font-size: clamp(2rem, 8vw, 3rem);
   }
   .work-proof {
     padding: 16px 18px 19px;
@@ -248,16 +248,19 @@
   }
 }
 @media (max-width: 430px) {
-  .work-proof { padding-inline: 8px; }
+  .work-proof { padding-inline: 4px; }
   .work-proof-item { padding-left: 4px; }
   .work-proof-item:last-child .work-proof-number {
     font-size: clamp(24px, 7.2vw, 32px);
   }
 }
+@media (max-width: 350px) {
+  .work-hero-role { font-size: 29px; }
+}
 
 /* Elevated Experience: a restrained editorial product dossier. */
 .elevated-frame {
-  background: hsl(38 18% 88%);
+  background: #fff;
   overflow: hidden;
 }
 .elevated-frame img,
