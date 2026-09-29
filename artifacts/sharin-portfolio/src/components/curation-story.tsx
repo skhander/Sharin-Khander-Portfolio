@@ -7,9 +7,9 @@ import './curation-story.css';
 const media = (file: string) => `${import.meta.env.BASE_URL}media/curation/${file}`;
 
 const metrics = [
-  { value: '30%', label: 'faster assortment creation' },
-  { value: '2×', label: 'assortments per quarter' },
-  { value: '+8%', label: 'share of GMV from curation YoY' },
+  { value: '30%', label: 'more assortments per quarter' },
+  { value: '2×', label: 'share of GMV from curation YoY' },
+  { value: '+8%', label: 'faster assortment creation' },
 ];
 
 function Walkthrough({ video, poster, alt, caption }: { video: string; poster: string; alt: string; caption: string }) {
@@ -62,7 +62,7 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
             <div className="curation-grid curation-hero-content">
               <p className="curation-full font-mono-archive text-[10px] uppercase tracking-[.16em] text-accent">CURATION</p>
               <h1 id="curation-title" className="curation-full curation-hero-title max-w-[17ch] font-editorial text-[clamp(2.75rem,6vw,6.5rem)] leading-[.98] tracking-[-.05em]">Scaling editorial taste</h1>
-              <p className="curation-full curation-hero-intro text-base leading-[1.65] text-muted-foreground md:text-xl">Merchandisers were jumping between multiple tools to build a single assortment. I prototyped and led the 0→1 build of a new curation platform, then worked with ML to automate parts of the workflow without losing the editorial judgment behind each selection.</p>
+              <p className="curation-full curation-hero-intro text-base leading-[1.65] text-muted-foreground md:text-xl">Merchandisers used several tools to build one assortment. I prototyped a better workflow, led the 0→1 build, then automated the repetitive parts without replacing editorial judgment.</p>
             </div>
           </div>
         </section>
@@ -84,8 +84,11 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
 
       <section className="curation-container" aria-labelledby="curation-prototype">
         <div className="curation-panel curation-grid">
-          <h2 id="curation-prototype" className="curation-rail font-mono-archive text-[11px] uppercase tracking-[.14em] text-accent">01 — PROTOTYPE</h2>
-          <p className="curation-body text-base leading-[1.6] md:text-lg">I sat with everyone from the assistants doing the work to the CMO defining the operating model. Then I turned the workflow into a working prototype.</p>
+          <h2 id="curation-prototype" className="curation-rail font-mono-archive text-xs font-semibold uppercase tracking-[.14em] text-accent">01 — PROTOTYPE</h2>
+          <div className="curation-body">
+            <p className="text-base leading-[1.6] md:text-lg">I mapped the workflow with merchandisers, then turned it into a working prototype.</p>
+            <p className="mt-4 font-mono-archive text-sm font-medium tracking-[.02em] text-accent">Workflow → Prototype</p>
+          </div>
           <div className="curation-full">
             <Walkthrough
               video="curation-tool-prototype.mp4"
@@ -99,8 +102,11 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
 
       <section className="curation-container" aria-labelledby="curation-ship">
         <div className="curation-panel curation-grid">
-          <h2 id="curation-ship" className="curation-rail font-mono-archive text-[11px] uppercase tracking-[.14em] text-accent">02 — SHIP</h2>
-          <p className="curation-body text-base leading-[1.6] md:text-lg">I led Design, Engineering, and ML through the build.</p>
+          <h2 id="curation-ship" className="curation-rail font-mono-archive text-xs font-semibold uppercase tracking-[.14em] text-accent">02 — BUILD</h2>
+          <div className="curation-body">
+            <p className="text-base leading-[1.6] md:text-lg">I led Design, Engineering, and ML from prototype to production.</p>
+            <p className="mt-4 font-mono-archive text-sm font-medium tracking-[.02em] text-accent">Prototype → Product</p>
+          </div>
           <div className="curation-full">
             <CustomerPage
               image="next-level-layers.png"
@@ -113,8 +119,11 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
 
       <section className="curation-container" aria-labelledby="curation-automate">
         <div className="curation-panel curation-grid">
-          <h2 id="curation-automate" className="curation-rail font-mono-archive text-[11px] uppercase tracking-[.14em] text-accent">03 — AUTOMATE</h2>
-          <p className="curation-body text-base leading-[1.6] md:text-lg">We layered in programmatic assortments, human-in-the-loop review, and eventually agentic curation.</p>
+          <h2 id="curation-automate" className="curation-rail font-mono-archive text-xs font-semibold uppercase tracking-[.14em] text-accent">03 — AUTOMATE</h2>
+          <div className="curation-body">
+            <p className="text-base leading-[1.6] md:text-lg">We automated repetitive work while keeping editors in the loop.</p>
+            <p className="mt-4 font-mono-archive text-sm font-medium tracking-[.02em] text-accent">Rules → ML → Human review</p>
+          </div>
           <div className="curation-full">
             <Walkthrough
               video="evergreen-tool-prototype.mp4"
@@ -128,11 +137,10 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
 
       <section className="curation-container" aria-labelledby="curation-learn">
         <div className="curation-panel curation-grid">
-          <h2 id="curation-learn" className="curation-rail font-mono-archive text-[11px] uppercase tracking-[.14em] text-accent">04 — LEARN</h2>
-          <p className="curation-body text-base leading-[1.6] md:text-lg">Our first automation could find products that looked similar. It couldn't understand why an editor chose them.</p>
+          <h2 id="curation-learn" className="curation-rail font-mono-archive text-xs font-semibold uppercase tracking-[.14em] text-accent">04 — LEARN</h2>
+          <p className="curation-body text-base leading-[1.6] md:text-lg">Our first model found similar products. It didn’t understand editorial intent.</p>
           <div className="curation-body curation-lesson">
-            <p className="font-mono-archive text-[10px] uppercase tracking-[.14em] text-accent">The lesson:</p>
-            <p className="mt-3 font-editorial text-[clamp(2.5rem,4vw,4.5rem)] leading-[1.05] tracking-[-.04em]">Similarity isn't taste.</p>
+            <p className="font-editorial text-[clamp(2.5rem,4vw,4.5rem)] leading-[1.05] tracking-[-.04em]">Similarity isn’t taste.</p>
           </div>
         </div>
       </section>

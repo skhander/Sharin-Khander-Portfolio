@@ -7,9 +7,9 @@ import './shopping-agent-story.css';
 const media = (filename: string) => `${import.meta.env.BASE_URL}media/shopping-agent/${filename}`;
 
 const metrics = [
-  { value: '+1%', label: 'Visitor conversion' },
+  { value: '+1%', label: 'visitor conversion' },
   { value: '+3%', label: 'Obsessions / visitor' },
-  { value: '$14M', label: 'Annualized GMV' },
+  { value: '$14M', label: 'annualized GMV' },
 ];
 
 export function ShoppingAgentStory({ nextProject }: { project: Project; nextProject: Project }) {
@@ -20,11 +20,11 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
           <ArrowLeft size={14} aria-hidden="true" /> All work
         </Link>
         <div className="mt-14 grid gap-7 md:mt-20 md:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] md:items-end md:gap-16">
-          <h1 id="shopping-agent-title" className="font-editorial text-[clamp(3.8rem,8vw,8rem)] leading-[.84] tracking-[-.05em]" data-testid="text-project-title">Shopping Agent</h1>
-          <div className="max-w-2xl space-y-5">
-            <p className="text-lg leading-[1.4] sm:text-xl">Expanding search beyond structured product attributes.</p>
-            <p className="text-base leading-[1.6] text-muted-foreground md:text-lg">I led the 0→1 build of an AI shopping agent that allowed shoppers to search using natural language. I owned the product experience, agent behavior, and brand voice, partnering with ML and Engineering to take it from prototype to production.</p>
+          <div>
+            <p className="mb-6 font-mono-archive text-[10px] uppercase tracking-[.16em] text-accent">SHOPPING AGENT</p>
+            <h1 id="shopping-agent-title" className="font-editorial text-[clamp(2.75rem,5vw,5.5rem)] leading-[.98] tracking-[-.05em]" data-testid="text-project-title">Expanding search beyond keywords</h1>
           </div>
+          <p className="max-w-2xl text-base leading-[1.65] text-muted-foreground md:text-xl">Traditional search relied on structured product attributes. I led the 0→1 build of an AI shopping agent that let shoppers search by style, occasion, aesthetic, and intent.</p>
         </div>
       </header>
 
@@ -42,12 +42,11 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
 
       <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-12 sm:px-10 md:py-16 lg:px-16" aria-labelledby="shopping-problem">
         <div className="grid gap-8 md:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] md:gap-16">
-          <h2 id="shopping-problem" className="font-editorial text-[clamp(2.5rem,4.5vw,4.5rem)] leading-[.94] tracking-[-.04em]">The problem</h2>
+          <h2 id="shopping-problem" className="font-mono-archive text-xs font-semibold uppercase tracking-[.14em] text-accent">01 — PROBLEM</h2>
           <div className="max-w-2xl space-y-5 text-base leading-[1.6] md:text-lg">
-            <p className="font-medium">Traditional search was limited by product attributes.</p>
-            <p className="text-muted-foreground">The RealReal has 6M+ products, but traditional search relies heavily on the language used to describe those products.</p>
-            <p className="text-muted-foreground">Shoppers often search using a combination of style, occasion, aesthetic, brand, and other contextual signals that aren&apos;t captured by a simple keyword query.</p>
+            <p>Traditional search understood product attributes. Shoppers searched in much richer language.</p>
             <blockquote className="border-l-2 border-accent pl-5 font-editorial text-[clamp(1.9rem,3vw,3rem)] leading-[1.06] tracking-[-.025em]">“90s minimalist Calvin Klein look for a winter wedding.”</blockquote>
+            <p className="font-mono-archive text-sm font-medium tracking-[.02em] text-accent">Traditional search → Shopping Agent</p>
           </div>
         </div>
         <figure className="shopping-agent-media mt-10 md:mt-14">
@@ -72,21 +71,12 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
         </figure>
       </section>
 
-      <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-12 sm:px-10 md:py-16 lg:px-16" aria-labelledby="shopping-build">
+      <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-12 sm:px-10 md:py-16 lg:px-16" aria-labelledby="shopping-prototype">
         <div className="grid gap-8 md:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] md:gap-16">
-          <h2 id="shopping-build" className="font-editorial text-[clamp(2.5rem,4.5vw,4.5rem)] leading-[.94] tracking-[-.04em]">The build</h2>
+          <h2 id="shopping-prototype" className="font-mono-archive text-xs font-semibold uppercase tracking-[.14em] text-accent">02 — PROTOTYPE</h2>
           <div className="max-w-2xl space-y-5 text-base leading-[1.6] md:text-lg">
-            <p className="font-medium">I prototyped a natural-language search experience.</p>
-            <p className="text-muted-foreground">I started with the shopper experience and defined how the agent should interpret requests, retrieve products, and respond.</p>
-            <p>I owned:</p>
-            <ul className="list-disc space-y-1 pl-5 text-muted-foreground">
-              <li>Product experience</li>
-              <li>Agent behavior and instructions</li>
-              <li>Brand voice</li>
-              <li>Shopper journeys</li>
-              <li>Evaluation and testing</li>
-            </ul>
-            <p className="text-muted-foreground">I partnered with ML and Engineering to connect the agent to our 6M+ product catalog, search, and cart APIs, taking the experience from prototype → production.</p>
+            <p>I defined how the agent interpreted requests, found products, and responded.</p>
+            <p className="font-mono-archive text-sm font-medium tracking-[.02em] text-accent">Intent → Retrieval → Response</p>
           </div>
         </div>
         <figure className="shopping-agent-media mt-10 md:mt-14">
@@ -94,15 +84,24 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
         </figure>
       </section>
 
+      <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-12 sm:px-10 md:py-16 lg:px-16" aria-labelledby="shopping-build">
+        <div className="grid gap-8 md:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] md:gap-16">
+          <h2 id="shopping-build" className="font-mono-archive text-xs font-semibold uppercase tracking-[.14em] text-accent">03 — BUILD</h2>
+          <div className="max-w-2xl space-y-5 text-base leading-[1.6] md:text-lg">
+            <p>I owned the product experience, agent behavior, brand voice, and evaluation.</p>
+            <p>I partnered with ML and Engineering to connect the agent to our 6M+ catalog, search, and cart APIs.</p>
+            <p className="font-mono-archive text-sm font-medium tracking-[.02em] text-accent">Prototype → Production</p>
+          </div>
+        </div>
+      </section>
+
       <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-12 sm:px-10 md:py-16 lg:px-16" aria-labelledby="shopping-learning">
         <div className="grid gap-8 md:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] md:gap-16">
-          <h2 id="shopping-learning" className="font-editorial text-[clamp(2.5rem,4.5vw,4.5rem)] leading-[.94] tracking-[-.04em]">What we learned</h2>
+          <h2 id="shopping-learning" className="font-mono-archive text-xs font-semibold uppercase tracking-[.14em] text-accent">04 — LEARN</h2>
           <div className="max-w-2xl space-y-5 text-base leading-[1.6] md:text-lg">
-            <p className="font-medium">Natural-language search expanded the types of intent we could support.</p>
-            <p className="text-muted-foreground">The agent could interpret more contextual requests than traditional keyword search.</p>
-            <p className="text-muted-foreground">But the experience also surfaced a limitation: shopping is highly visual.</p>
-            <p className="text-muted-foreground">The conversational interface presented fewer products at a time and made it harder for shoppers to compare and explore.</p>
-            <p className="text-muted-foreground">This shifted the product direction toward combining natural-language intent with a more visual shopping experience.</p>
+            <p>Natural language unlocked new kinds of shopping intent. But shopping is visual.</p>
+            <p className="text-muted-foreground">The conversational interface showed fewer products and made comparison harder.</p>
+            <p className="border-t-2 border-accent pt-5 font-editorial text-[clamp(2.5rem,4vw,4.5rem)] leading-[1.05] tracking-[-.04em]">Search needs conversation. Shopping needs browsing.</p>
           </div>
         </div>
       </section>

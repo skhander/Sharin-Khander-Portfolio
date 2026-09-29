@@ -24,7 +24,7 @@ export default function About() {
 
         <div className="about-step-grid">
           <div className="about-step-copy">
-            <p className="about-step-lede">Checklist</p>
+            <p className="about-step-lede">Checklist <span aria-hidden="true">✅</span></p>
             <ol className="about-brief-list">
               <li><span className="about-list-mark" aria-hidden="true">A</span><span>Write a clear brief: context + scope.</span></li>
               <li><span className="about-list-mark" aria-hidden="true">B</span><span>Upload meeting + interview insights.</span></li>
@@ -49,11 +49,11 @@ export default function About() {
           <span className="about-step-index" aria-hidden="true">02</span>
           <div className="about-step-heading-copy">
             <p className="font-mono-archive text-[10px] uppercase tracking-[.16em] text-muted-foreground">design</p>
-            <h2 id="about-step-02-title">Start with a prototype</h2>
+            <h2 id="about-step-02-title">Create a prototype</h2>
           </div>
         </div>
         <div className="about-step-grid about-diagram-grid">
-          <p className="about-step-lede">I Use Figma to design the product before I build.</p>
+          <p className="about-step-lede">I use Figma to design the product before I build.</p>
           <figure className="about-system-mockup">
             <img
               src="/media/about/figma-system-mockup-refined.png"
@@ -80,7 +80,7 @@ export default function About() {
           <span className="about-step-index" aria-hidden="true">03</span>
           <div className="about-step-heading-copy">
             <p className="font-mono-archive text-[10px] uppercase tracking-[.16em] text-muted-foreground">Build</p>
-            <h2 id="about-step-03-title">Build One Component at a Time</h2>
+            <h2 id="about-step-03-title">Build one component at a time.</h2>
           </div>
         </div>
         <div className="about-step-grid about-diagram-grid">
@@ -96,7 +96,7 @@ export default function About() {
               </tr>
               <tr>
                 <th scope="row"><span className="about-tool-name"><img src="/media/about/supabase-logo.png" alt="" width="56" height="56" loading="lazy" />Supabase</span></th>
-                <td>Backend for data and logins.</td>
+                <td>Backend: used for database and logins.</td>
               </tr>
             </tbody>
           </table>
