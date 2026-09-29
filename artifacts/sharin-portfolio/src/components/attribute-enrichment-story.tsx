@@ -39,14 +39,14 @@ export function AttributeEnrichmentStory({ project, nextProject }: { project: Pr
         </Link>
         <div className="mt-14 grid gap-7 md:mt-20 md:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] md:items-end md:gap-16">
           <div>
-            <p className="font-mono-archive text-[10px] uppercase tracking-[.16em] text-accent">{project.company} / Attribute Prediction Model</p>
-            <h1 id="catalog-title" className="mt-5 font-editorial text-[clamp(3.8rem,7vw,7rem)] leading-[.84] tracking-[-.05em]" data-testid="text-project-title">Attribute Prediction Model</h1>
+            <p className="font-mono-archive text-[10px] uppercase tracking-[.16em] text-accent">{project.company} / Attribute Prediction</p>
+            <h1 id="catalog-title" className="mt-5 font-editorial text-[clamp(3.8rem,7vw,7rem)] leading-[.84] tracking-[-.05em]" data-testid="text-project-title">Attribute Prediction</h1>
           </div>
-          <p className="max-w-2xl text-lg leading-[1.4] text-muted-foreground sm:text-xl">Teaching a 6M-item catalog to understand how people actually shop.</p>
+          <p className="max-w-2xl text-lg leading-[1.4] text-muted-foreground sm:text-xl">{project.description}</p>
         </div>
       </header>
 
-      <section className="mx-auto max-w-[1440px] border-y border-border px-6 py-8 sm:px-10 md:py-10 lg:px-16" aria-label="Attribute Prediction Model at a glance">
+      <section className="mx-auto max-w-[1440px] border-y border-border px-6 py-8 sm:px-10 md:py-10 lg:px-16" aria-label="Attribute Prediction at a glance">
         <dl className="grid divide-y divide-border sm:grid-cols-3 sm:divide-x sm:divide-y-0">
           <div className="flex flex-col justify-center py-6 sm:px-6 sm:py-2 sm:first:pl-0">
             <dt className="order-2 mt-3 font-mono-archive text-[10px] uppercase tracking-[.12em] text-muted-foreground">Approach</dt>

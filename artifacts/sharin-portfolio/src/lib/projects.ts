@@ -103,10 +103,10 @@ export const projects: Project[] = [
   },
   {
     slug: 'attribute-enrichment',
-    title: 'Attribute Prediction Model',
+    title: 'Attribute Prediction',
     company: 'The RealReal',
     category: 'AI / Discovery / Curation',
-    description: 'Teaching a 6M-item catalog to understand how people actually shop.',
+    description: 'Predict trend, occasion, and vibe descriptions from a product photo to power discovery.',
     thesis: 'Give the marketplace a richer language for understanding style.',
     role: 'Prompts, taxonomy, evaluation, UAT, testing strategy',
     team: [
