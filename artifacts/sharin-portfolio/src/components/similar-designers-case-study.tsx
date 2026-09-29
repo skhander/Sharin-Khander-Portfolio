@@ -10,6 +10,24 @@ const metrics = [
   { value: '−10%', label: 'bounce rate' },
 ];
 
+const phases = [
+  {
+    label: 'Phase 1',
+    src: 'similar-designers-phase-1.png',
+    alt: 'Customers Also Shop: Chanel, Christian Dior, Gucci, Prada, Fendi, Hermès',
+  },
+  {
+    label: 'Phase 2',
+    src: 'similar-designers-phase-2.png',
+    alt: 'Similar Designers: Fendi, Gucci, Loewe, Celine, Ferragamo, Miu Miu',
+  },
+  {
+    label: 'Phase 3',
+    src: 'similar-designers-phase-3.png',
+    alt: 'You may also like: Mulberry, Strathberry, DeMellier, Polène, Mansur Gavriel, APC',
+  },
+];
+
 function StorySection({ id, heading, children }: { id: string; heading: string; children: React.ReactNode }) {
   return (
     <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-12 sm:px-10 md:py-16 lg:px-16" aria-labelledby={id}>
@@ -19,9 +37,14 @@ function StorySection({ id, heading, children }: { id: string; heading: string; 
       </div>
       {id === 'similar-built' && (
         <div className="similar-designers-media mt-10 md:mt-14">
-          <p className="font-mono-archive text-[10px] uppercase tracking-[.14em] text-accent">0 → 1 · PRODUCT + ML · RECOMMENDATIONS</p>
-          <div className="similar-designers-placeholder similar-designers-prototype mt-8 md:mt-12" role="img" aria-label="Placeholder for the Similar Designers prototype or product visual">
-            <span>Similar Designers prototype / product visual</span>
+          <p className="font-mono-archive text-[10px] uppercase tracking-[.14em] text-accent">Similar Designers progression · Phase 1 → Phase 2 → Phase 3</p>
+          <div className="similar-designers-phases mt-8 md:mt-12">
+            {phases.map((phase) => (
+              <figure className="similar-designers-phase" key={phase.label}>
+                <figcaption className="font-mono-archive text-[11px] uppercase tracking-[.14em] text-accent">{phase.label}</figcaption>
+                <img src={`${import.meta.env.BASE_URL}media/work/${phase.src}`} alt={phase.alt} width={684} height={1312} loading="lazy" />
+              </figure>
+            ))}
           </div>
         </div>
       )}
@@ -71,19 +94,6 @@ export function SimilarDesignersStory({ nextProject }: { project: Project; nextP
       <StorySection id="similar-learned" heading="What I learned">
         Get to useful before you optimize for incrementality.
       </StorySection>
-
-      <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-12 sm:px-10 md:py-16 lg:px-16" aria-label="Similar Designers progression">
-        <div className="similar-designers-media">
-          <p className="font-mono-archive text-[10px] uppercase tracking-[.14em] text-accent">Similar Designers progression · Phase 1 → Phase 2 → Phase 3</p>
-          <div className="similar-designers-phases mt-8 md:mt-12">
-            {[1, 2, 3].map((phase) => (
-              <div className="similar-designers-placeholder similar-designers-phase" role="img" aria-label={`Placeholder for Phase ${phase} screenshot`} key={phase}>
-                <span>Phase {phase}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <ProjectNavigation nextProject={nextProject} />
     </article>

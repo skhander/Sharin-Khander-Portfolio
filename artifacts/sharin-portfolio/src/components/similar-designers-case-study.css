@@ -1,55 +1,46 @@
 .similar-designers-case-study .similar-designers-media {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1200px;
   margin-inline: auto;
-}
-
-.similar-designers-case-study .similar-designers-placeholder {
-  display: grid;
-  place-items: center;
-  padding: 28px;
-  border: 1px dashed hsl(var(--border));
-  background: hsl(var(--muted) / .28);
-  color: hsl(var(--muted-foreground));
-  text-align: center;
-}
-
-.similar-designers-case-study .similar-designers-placeholder span {
-  font-family: var(--app-font-mono);
-  font-size: 11px;
-  line-height: 1.6;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-}
-
-.similar-designers-case-study .similar-designers-prototype {
-  min-height: 310px;
-  aspect-ratio: 16 / 9;
 }
 
 .similar-designers-case-study .similar-designers-phases {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
+  align-items: start;
+  gap: clamp(16px, 2.2vw, 32px);
 }
 
 .similar-designers-case-study .similar-designers-phase {
-  min-height: 280px;
-  aspect-ratio: 4 / 5;
+  min-width: 0;
+  margin: 0;
+}
+
+.similar-designers-case-study .similar-designers-phase figcaption {
+  margin-bottom: 12px;
+}
+
+.similar-designers-case-study .similar-designers-phase img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 900px) and (min-width: 640px) {
+  .similar-designers-case-study .similar-designers-phases {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 639px) {
-  .similar-designers-case-study .similar-designers-prototype {
-    min-height: 230px;
-    aspect-ratio: auto;
-  }
-
   .similar-designers-case-study .similar-designers-phases {
     grid-template-columns: 1fr;
+    gap: 36px;
   }
 
   .similar-designers-case-study .similar-designers-phase {
-    min-height: 220px;
-    aspect-ratio: auto;
+    width: 100%;
+    max-width: 410px;
+    margin-inline: auto;
   }
 }
