@@ -93,7 +93,7 @@ export default function About() {
             <tbody>
               <tr>
                 <th scope="row"><span className="about-tool-name"><img src="/media/about/cursor-logo.png" alt="" width="56" height="56" loading="lazy" />Cursor</span></th>
-                <td>My workhorse. I use Ask mode to make a clear plan, then build one component at a time.</td>
+                <td>My workhorse. I use Ask and Plan mode to brainstorm, then build one component at a time.</td>
               </tr>
               <tr>
                 <th scope="row"><span className="about-tool-name"><img src="/media/about/supabase-logo.png" alt="" width="56" height="56" loading="lazy" />Supabase</span></th>
