@@ -68,10 +68,9 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
         </Link>
         <div className="mt-14 grid grid-cols-1 gap-7 md:mt-20 md:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] md:items-end md:gap-16">
           <div>
-            <p className="font-mono-archive text-[10px] uppercase tracking-[.16em] text-accent">CURATION TOOL</p>
-            <h1 id="curation-title" className="mt-5 max-w-3xl font-editorial text-[clamp(3.8rem,8vw,8rem)] leading-[.84] tracking-[-.05em]">Curation Tool</h1>
+            <h1 id="curation-title" className="max-w-3xl font-editorial text-[clamp(3.8rem,8vw,8rem)] leading-[.84] tracking-[-.05em]">Curation Tool</h1>
           </div>
-          <p className="max-w-2xl text-lg leading-[1.4] text-muted-foreground sm:text-xl">Making merchandisers faster.</p>
+          <p className="max-w-2xl text-lg leading-[1.4] text-muted-foreground sm:text-xl">build an entire assortment in minutes</p>
         </div>
       </section>
 

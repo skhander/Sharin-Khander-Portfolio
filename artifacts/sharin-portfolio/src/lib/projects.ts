@@ -147,7 +147,7 @@ export const projects: Project[] = [
     title: 'Curation Tool',
     company: 'The RealReal',
     category: 'Discovery / Personalization',
-    description: 'Making merchandisers faster.',
+    description: 'build an entire assortment in minutes',
     status: 'published',
   },
 ];
