@@ -114,7 +114,10 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
           </div>
         </div>
         <figure className="mx-auto mt-10 max-w-[1100px] md:mt-14">
-          <figcaption className="mb-4 font-mono-archive text-sm font-medium tracking-[.02em] text-accent">System Instructions - Sample Questions &amp; Outputs</figcaption>
+          <figcaption className="mb-6 max-w-2xl text-base leading-[1.6] md:text-lg">
+            <h3 className="font-semibold text-foreground">Teaching the agent how to shop</h3>
+            <p className="mt-3">I built a library of representative shopping questions and expected behaviors to evaluate whether the agent was actually helping shoppers—not just generating convincing answers.</p>
+          </figcaption>
           <a href={media('system-instructions-sample.png')} target="_blank" rel="noopener noreferrer" className="block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
             <img src={media('system-instructions-sample.png')} alt="Ask TRR spreadsheet showing system instructions, shopper questions, and assistant sample responses." width={1766} height={1168} loading="lazy" className="block h-auto w-full border border-border" />
           </a>
