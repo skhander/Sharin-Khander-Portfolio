@@ -114,17 +114,17 @@ const projectVisuals: Record<string, { src: string; alt: string; note?: string; 
   'visual-search': {
     src: `${import.meta.env.BASE_URL}media/work/image-search-prototype.mp4`,
     alt: 'Image Search prototype showing camera search and matching products',
-    badges: ['Machine Learning', '0→1'],
+    badges: ['ML', '0→1'],
   },
   'similar-designers': {
     src: '/media/work/similar-designers-customers-also-shop.png',
     alt: 'Customers also shop recommendations for Chanel, Christian Dior, Gucci, Prada, Fendi, and Hermès',
-    badges: ['Machine Learning', '0→1'],
+    badges: ['ML', '0→1'],
   },
   curation: {
     src: '/media/work/curation-vacation-shop.mp4',
     alt: 'The RealReal Vacation Shop product browse video',
-    badges: ['Agents', 'Machine Learning', '0→1'],
+    badges: ['Agents', 'ML', '0→1'],
   },
 };
 
