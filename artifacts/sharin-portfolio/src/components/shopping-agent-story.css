@@ -70,6 +70,20 @@
   vertical-align: top;
 }
 
+.shopping-agent-story .shopping-agent-query-tag {
+  display: inline-block;
+  max-width: 100%;
+  margin-top: 12px;
+  padding: 7px 11px;
+  border: 1px solid hsl(var(--accent) / .16);
+  border-radius: 999px;
+  background: hsl(var(--accent) / .07);
+  color: hsl(var(--foreground));
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
 .shopping-agent-story .shopping-agent-comparison .shopping-agent-image-frame {
   height: 600px;
   max-height: none;

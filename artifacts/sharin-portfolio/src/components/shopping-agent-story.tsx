@@ -51,18 +51,17 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
             <p>Traditional search only understood structured product attributes. It understands the words you type in, but not what you meant.</p>
           </div>
         </div>
-        <h3 className="mx-auto mt-8 max-w-[1100px] font-mono-archive text-sm font-medium tracking-[.02em] text-accent md:mt-10">From → To</h3>
-        <div className="shopping-agent-comparison-wrap mt-4" tabIndex={0} role="region" aria-label="Search comparison table; scroll horizontally to view both columns">
+        <div className="shopping-agent-comparison-wrap mt-8 md:mt-10" tabIndex={0} role="region" aria-label="Search comparison table; scroll horizontally to view both columns">
           <table className="shopping-agent-comparison" aria-label="Traditional search and Shopping Agent comparison">
             <thead>
               <tr>
                 <th scope="col">
                   <span className="block font-editorial text-2xl font-normal">Traditional search</span>
-                  <span className="mt-1 block font-normal text-muted-foreground">“black silk dress”</span>
+                  <span className="shopping-agent-query-tag">“black silk dress”</span>
                 </th>
                 <th scope="col">
                   <span className="block font-editorial text-2xl font-normal">Shopping Agent</span>
-                  <span className="mt-1 block font-normal text-muted-foreground">“90s minimalist Calvin Klein look for a winter wedding.”</span>
+                  <span className="shopping-agent-query-tag">“90s minimalist Calvin Klein look for a winter wedding.”</span>
                 </th>
               </tr>
             </thead>
