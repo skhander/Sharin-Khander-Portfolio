@@ -13,13 +13,13 @@ const metrics = [
 const phases = [
   {
     label: 'Phase 1',
-    name: 'Collaborative Filtering',
+    name: 'Co-Browsing & Buying',
     src: 'similar-designers-phase-1.png',
     alt: 'Customers Also Shop: Chanel, Christian Dior, Gucci, Prada, Fendi, Hermès',
   },
   {
     label: 'Phase 2',
-    name: 'Visual + Attribute Similarity',
+    name: 'Looks + Feels like',
     src: 'similar-designers-phase-2.png',
     alt: 'Similar Designers: Fendi, Gucci, Loewe, Celine, Ferragamo, Miu Miu',
   },
@@ -40,7 +40,7 @@ function StorySection({ id, heading, children }: { id: string; heading: string; 
       </div>
       {id === 'similar-built' && (
         <div className="similar-designers-media mt-10 md:mt-14">
-          <p className="font-mono-archive text-[10px] uppercase tracking-[.14em] text-accent">Similar Designers progression · Phase 1 → Phase 2 → Phase 3</p>
+          <p className="font-mono-archive text-[10px] uppercase tracking-[.14em] text-accent">Similar Designers progression</p>
           <div className="similar-designers-phases mt-8 md:mt-12">
             {phases.map((phase) => (
               <figure className="similar-designers-phase" key={phase.label}>
