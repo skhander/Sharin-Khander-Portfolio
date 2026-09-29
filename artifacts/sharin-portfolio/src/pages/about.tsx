@@ -85,7 +85,7 @@ export default function About() {
         </div>
         <div className="about-step-grid about-diagram-grid">
           <table className="about-tools-table">
-            <caption className="sr-only">How I use Cursor during the build stage</caption>
+            <caption className="sr-only">Tools I use during the build stage</caption>
             <thead>
               <tr><th scope="col">Tool</th><th scope="col">How I use it</th></tr>
             </thead>
@@ -93,6 +93,10 @@ export default function About() {
               <tr>
                 <th scope="row"><span className="about-tool-name"><img src="/media/about/cursor-logo.png" alt="" width="56" height="56" loading="lazy" />Cursor</span></th>
                 <td>My workhorse. I use Ask mode to make a clear plan, then build one component at a time.</td>
+              </tr>
+              <tr>
+                <th scope="row"><span className="about-tool-name"><img src="/media/about/supabase-logo.png" alt="" width="56" height="56" loading="lazy" />Supabase</span></th>
+                <td>Backend for data and logins.</td>
               </tr>
             </tbody>
           </table>
@@ -145,15 +149,11 @@ export default function About() {
         </div>
         <div className="about-step-grid about-diagram-grid">
           <table className="about-tools-table">
-            <caption className="sr-only">Tools for backend, code history, and deployment</caption>
+            <caption className="sr-only">Tools for code history and deployment</caption>
             <thead>
               <tr><th scope="col">Tool</th><th scope="col">What it does</th></tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row"><span className="about-tool-name"><img src="/media/about/supabase-logo.png" alt="" width="56" height="56" loading="lazy" />Supabase</span></th>
-                <td>Backend for data and logins.</td>
-              </tr>
               <tr>
                 <th scope="row"><span className="about-tool-name"><img src="/media/about/github-logo.png" alt="" width="56" height="56" loading="lazy" />GitHub</span></th>
                 <td>Code repository. Roll back mistakes.</td>
