@@ -7,10 +7,9 @@ export default function About() {
 
   return (
     <div className="page-reveal about-process">
-      <section className="about-intro mx-auto w-full max-w-[1440px] px-6 pb-16 pt-14 sm:px-10 md:pb-20 md:pt-24 lg:px-16">
+      <section className="about-intro mx-auto w-full max-w-[1440px] px-6 pb-12 pt-14 sm:px-10 md:pb-14 md:pt-24 lg:px-16">
         <h1 className="about-title">How I build</h1>
         <p className="about-process-sequence"><strong>Brief → Design → Build → Refine</strong></p>
-        <p className="about-intro-copy">I get clear on the problem, design the experience, build it, and iterate.</p>
       </section>
 
       <section className="about-step mx-auto w-full max-w-[1440px] px-6 pb-20 sm:px-10 md:pb-28 lg:px-16" aria-labelledby="about-step-title">

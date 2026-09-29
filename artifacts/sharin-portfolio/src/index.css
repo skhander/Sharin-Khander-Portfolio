@@ -325,13 +325,6 @@
   font-size: clamp(17px, 2.35vw, 29px);
   letter-spacing: -.035em;
 }
-.about-intro-copy {
-  max-width: 730px;
-  margin-top: 22px;
-  font-size: clamp(17px, 1.75vw, 21px);
-  line-height: 1.55;
-  color: hsl(var(--muted-foreground));
-}
 .about-step {
   --about-content-indent: clamp(18%, calc(65vw - 485px), 27.5%);
   border-top: 1px solid var(--about-rule);
