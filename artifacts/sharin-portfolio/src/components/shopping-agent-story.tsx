@@ -48,7 +48,7 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
         <div className="grid gap-8 md:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] md:gap-16">
           <h2 id="shopping-problem" className="font-mono-archive text-xs font-semibold uppercase tracking-[.14em] text-accent">01 — PROBLEM</h2>
           <div className="max-w-2xl space-y-5 text-base leading-[1.6] md:text-lg">
-            <p>Traditional search only understood structured product attributes. It understands the words you type in, but not what you meant.</p>
+            <p>Traditional search returns zero results if the words you enter don't match the catalog. It doesn't understand intent for complex queries.</p>
           </div>
         </div>
         <div className="shopping-agent-comparison-wrap mt-8 md:mt-10" tabIndex={0} role="region" aria-label="Search comparison table; scroll horizontally to view both columns">
