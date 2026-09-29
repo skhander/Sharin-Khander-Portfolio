@@ -101,7 +101,7 @@ const projectVisuals: Record<string, { src: string; alt: string; note?: string; 
     badges: ['Experiments'],
   },
   'attribute-enrichment': {
-    src: '/media/attribute-enrichment/chanel-top.webp',
+    src: '/media/attribute-enrichment/chanel-top-product.webp',
     alt: 'Chanel vintage top used in the attribute-enrichment project',
     note: 'ATTRIBUTE ENRICHMENT / SOURCE VISUAL',
     badges: ['LLMs', '0→1'],
