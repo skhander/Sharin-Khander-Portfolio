@@ -86,8 +86,8 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
         <div className="curation-panel curation-grid">
           <h2 id="curation-prototype" className="curation-rail font-mono-archive text-xs font-semibold uppercase tracking-[.14em] text-accent">01 — PROTOTYPE</h2>
           <div className="curation-body">
-            <p className="text-base leading-[1.6] md:text-lg">I mapped the workflow with merchandisers, then turned it into a working prototype.</p>
-            <p className="mt-4 font-mono-archive text-sm font-medium tracking-[.02em] text-accent">Workflow → Prototype</p>
+            <p className="text-base leading-[1.6] md:text-lg"><strong className="font-semibold text-foreground">From five tools to one workflow.</strong></p>
+            <p className="mt-4 text-base leading-[1.6] md:text-lg">I mapped the end-to-end workflow with merchandisers, identified the highest-friction steps, and turned them into a working prototype.</p>
           </div>
           <div className="curation-full">
             <Walkthrough
@@ -104,8 +104,9 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
         <div className="curation-panel curation-grid">
           <h2 id="curation-ship" className="curation-rail font-mono-archive text-xs font-semibold uppercase tracking-[.14em] text-accent">02 — BUILD</h2>
           <div className="curation-body">
-            <p className="text-base leading-[1.6] md:text-lg">I led Design, Engineering, and ML from prototype to production.</p>
-            <p className="mt-4 font-mono-archive text-sm font-medium tracking-[.02em] text-accent">Prototype → Product</p>
+            <p className="text-base leading-[1.6] md:text-lg">We automated repetitive work while keeping editors in the loop.</p>
+            <p className="mt-4 font-mono-archive text-sm font-medium tracking-[.02em] text-accent">Rules → ML → Human review</p>
+            <p className="mt-4 text-base leading-[1.6] md:text-lg">We started with rules for predictable criteria, introduced ML where patterns were harder to encode, and kept editors in control of the final assortment.</p>
           </div>
           <div className="curation-full">
             <CustomerPage
