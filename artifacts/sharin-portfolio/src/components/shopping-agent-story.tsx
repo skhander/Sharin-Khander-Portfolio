@@ -112,8 +112,7 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
           <h2 id="shopping-build" className="font-mono-archive text-xs font-semibold uppercase tracking-[.14em] text-accent">03 — BUILD</h2>
           <div className="max-w-2xl space-y-5 text-base leading-[1.6] md:text-lg">
             <p>I shaped the experience and brand voice: how the agent recommends products, answers questions, and helps shoppers decide.</p>
-            <p>With ML and Engineering, I brought it to our 6M+ catalog and made it possible for returning shoppers to pick up where they left off across visits and devices.</p>
-            <p className="font-mono-archive text-sm font-medium tracking-[.02em] text-accent">Prototype → Product</p>
+            <p>Under the hood: <strong className="font-semibold">Gemini + a custom intent layer + our shopping APIs.</strong> The intent layer translated what shoppers meant into product queries, while the APIs handled <strong className="font-semibold">PDP, Add to Cart, and Wishlist</strong> actions.</p>
           </div>
         </div>
       </section>
