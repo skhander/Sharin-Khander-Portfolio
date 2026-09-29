@@ -246,6 +246,24 @@ export default function Work() {
                         playsInline
                         preload="metadata"
                       />
+                    ) : project.slug === 'attribute-enrichment' ? (
+                      <div className="metadata-enrichment-preview">
+                        <img src={visual.src} alt={visual.alt} loading="lazy" />
+                        <dl className="metadata-enrichment-attributes" aria-label="Predicted attributes">
+                          <div className="metadata-attribute-group">
+                            <dt>Aesthetic</dt>
+                            <dd className="metadata-attribute-tags">
+                              {['Romantic', 'Classic', 'Feminine'].map((tag) => <span key={tag}>{tag}</span>)}
+                            </dd>
+                          </div>
+                          <div className="metadata-attribute-group">
+                            <dt>Occasion</dt>
+                            <dd className="metadata-attribute-tags">
+                              {['Evening wear', 'Date night', 'Party'].map((tag) => <span key={tag}>{tag}</span>)}
+                            </dd>
+                          </div>
+                        </dl>
+                      </div>
                     ) : (
                       <img src={visual.src} alt={visual.alt} loading={projectIndex < 2 ? 'eager' : 'lazy'} />
                     )}

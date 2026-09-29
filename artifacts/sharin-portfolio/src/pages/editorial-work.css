@@ -149,6 +149,70 @@
   aspect-ratio: 1.12;
 }
 
+.editorial-work .editorial-project-visual[data-project="attribute-enrichment"] {
+  display: block;
+  aspect-ratio: auto;
+}
+
+.editorial-work .metadata-enrichment-preview {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(18px, 2.6vw, 38px);
+  min-height: 420px;
+  padding: clamp(20px, 3vw, 40px);
+  background: hsl(var(--olive-surface) / .2);
+}
+
+.editorial-work .editorial-project-visual[data-project="attribute-enrichment"] .metadata-enrichment-preview img {
+  width: 100%;
+  height: auto;
+  max-height: 410px;
+  object-fit: contain;
+}
+
+.editorial-work .metadata-enrichment-attributes {
+  min-width: 0;
+  margin: 0;
+}
+
+.editorial-work .metadata-attribute-group {
+  padding-block: 20px;
+  border-top: 1px solid hsl(var(--border));
+}
+
+.editorial-work .metadata-attribute-group dt {
+  color: hsl(var(--muted-foreground));
+  font-family: var(--app-font-sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.editorial-work .metadata-attribute-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 13px 0 0;
+}
+
+.editorial-work .metadata-attribute-tags span {
+  padding: 7px 11px;
+  border: 1px solid hsl(var(--accent) / .16);
+  border-radius: 999px;
+  background: hsl(var(--accent) / .07);
+  color: hsl(var(--foreground));
+  font-size: 12px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.editorial-work .metadata-attribute-group + .metadata-attribute-group .metadata-attribute-tags span {
+  border-color: hsl(var(--foreground) / .12);
+  background: hsl(var(--background) / .8);
+}
+
 .editorial-work .editorial-project-artwork {
   min-height: 0;
   overflow: hidden;
@@ -464,6 +528,27 @@
   .editorial-work .editorial-project-visual[data-project="attribute-enrichment"],
   .editorial-work .editorial-project-visual[data-project="visual-search"] {
     aspect-ratio: 1;
+  }
+
+  .editorial-work .editorial-project-visual[data-project="attribute-enrichment"] {
+    aspect-ratio: auto;
+  }
+
+  .editorial-work .metadata-enrichment-preview {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+    min-height: 0;
+    padding: 24px;
+  }
+
+  .editorial-work .editorial-project-visual[data-project="attribute-enrichment"] .metadata-enrichment-preview img {
+    max-width: 210px;
+    max-height: 310px;
+    margin-inline: auto;
+  }
+
+  .editorial-work .metadata-attribute-group {
+    padding-block: 14px;
   }
 
   .editorial-work .editorial-project.is-similar-designers .editorial-project-visual {
