@@ -4,85 +4,6 @@
   background-color: hsl(var(--background));
 }
 
-.curation-story .curation-intro-backdrop {
-  position: relative;
-  isolation: isolate;
-  overflow: clip;
-}
-
-.curation-intro-backdrop::before {
-  position: absolute;
-  z-index: 0;
-  inset: -10% -100vw;
-  background-image: url('../assets/curation-products-tile.webp');
-  background-position: center top;
-  background-repeat: repeat;
-  background-size: clamp(720px, 100vw, 1128px) auto;
-  content: '';
-  opacity: .15;
-  pointer-events: none;
-  transform: rotate(-4deg);
-}
-
-.curation-intro-backdrop::after {
-  position: absolute;
-  z-index: 0;
-  inset: 0;
-  background-color: hsl(42 35% 97% / .3);
-  content: '';
-  pointer-events: none;
-}
-
-.dark .curation-intro-backdrop::before {
-  filter: grayscale(1) invert(1);
-  opacity: .1;
-}
-
-.dark .curation-intro-backdrop::after {
-  background-color: hsl(var(--background) / .3);
-}
-
-.curation-intro-backdrop > * {
-  position: relative;
-  z-index: 1;
-}
-
-.curation-intro-backdrop > section:first-child::before {
-  position: absolute;
-  z-index: 0;
-  inset: 0;
-  background-color: hsl(42 35% 98% / .9);
-  content: '';
-  pointer-events: none;
-}
-
-.curation-intro-backdrop > section:first-child > .curation-panel {
-  position: relative;
-  z-index: 1;
-}
-
-.dark .curation-intro-backdrop > section:first-child::before {
-  background-color: hsl(var(--background) / .9);
-}
-
-.curation-intro-backdrop .curation-impact::before {
-  position: absolute;
-  z-index: 0;
-  inset: 0;
-  background-color: hsl(42 35% 98% / .35);
-  content: '';
-  pointer-events: none;
-}
-
-.curation-intro-backdrop .curation-impact > .curation-panel {
-  position: relative;
-  z-index: 1;
-}
-
-.dark .curation-intro-backdrop .curation-impact::before {
-  background-color: hsl(var(--background) / .35);
-}
-
 .curation-story .curation-container {
   width: 100%;
   max-width: 1440px;
@@ -210,10 +131,6 @@
 }
 
 @media (min-width: 768px) {
-  .curation-intro-backdrop > section:first-child::before {
-    mask-image: linear-gradient(to right, black 0%, black 62%, transparent 92%);
-  }
-
   .curation-story .curation-grid {
     grid-template-columns: repeat(12, minmax(0, 1fr));
     row-gap: 32px;

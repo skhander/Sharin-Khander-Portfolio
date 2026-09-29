@@ -95,7 +95,9 @@ export function SimilarDesignersStory({ nextProject }: { project: Project; nextP
       </StorySection>
 
       <StorySection id="similar-hard-part" heading="The hard part">
-        We had to speed-run from a basic recommendation model to something genuinely useful. We started with behavioral similarity, then layered in visual and attribute similarity, and finally personalization. Each phase was an experiment: learn what drives deeper exploration, then build on it.
+        <span className="block">Was it the model or the experience?</span>{' '}
+        <span className="mt-5 block">Our first recommendations were generic. We couldn't tell if shoppers didn't want recommendations or if they just weren't useful enough.</span>{' '}
+        <span className="mt-5 block">So we tested both the recommendation quality and the UI before investing deeper in the model.</span>
       </StorySection>
 
       <StorySection id="similar-learned" heading="What I learned">

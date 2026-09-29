@@ -53,34 +53,32 @@ function CustomerPage({ image, alt, label }: { image: string; alt: string; label
 export function CurationStory({ nextProject }: { project: Project; nextProject: Project }) {
   return (
     <div className="page-reveal curation-story">
-      <div className="curation-intro-backdrop">
-        <section className="curation-container" aria-labelledby="curation-title">
-          <div className="curation-panel">
-            <Link href="/" className="inline-flex items-center gap-2 font-mono-archive text-[10px] uppercase tracking-[.15em] text-muted-foreground archive-link">
-              <ArrowLeft size={14} aria-hidden="true" /> All work
-            </Link>
-            <div className="curation-grid curation-hero-content">
-              <p className="curation-full font-mono-archive text-[10px] uppercase tracking-[.16em] text-accent">CURATION</p>
-              <h1 id="curation-title" className="curation-full curation-hero-title max-w-[17ch] font-editorial text-[clamp(2.75rem,6vw,6.5rem)] leading-[.98] tracking-[-.05em]">Scaling editorial taste</h1>
-              <p className="curation-full curation-hero-intro text-base leading-[1.65] text-muted-foreground md:text-xl">Merchandisers used several tools to build one assortment. I mapped the workflow, prototyped a single curation experience, and led the 0→1 build. Then we automated the repetitive work—without automating the taste.</p>
-            </div>
+      <section className="curation-container" aria-labelledby="curation-title">
+        <div className="curation-panel">
+          <Link href="/" className="inline-flex items-center gap-2 font-mono-archive text-[10px] uppercase tracking-[.15em] text-muted-foreground archive-link">
+            <ArrowLeft size={14} aria-hidden="true" /> All work
+          </Link>
+          <div className="curation-grid curation-hero-content">
+            <p className="curation-full font-mono-archive text-[10px] uppercase tracking-[.16em] text-accent">CURATION</p>
+            <h1 id="curation-title" className="curation-full curation-hero-title max-w-[17ch] font-editorial text-[clamp(2.75rem,6vw,6.5rem)] leading-[.98] tracking-[-.05em]">Scaling editorial taste</h1>
+            <p className="curation-full curation-hero-intro text-base leading-[1.65] text-muted-foreground md:text-xl">Merchandisers used several tools to build one assortment. I mapped the workflow, prototyped a single curation experience, and led the 0→1 build. Then we automated the repetitive work—without automating the taste.</p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="curation-container curation-impact" aria-labelledby="curation-impact">
-          <div className="curation-panel curation-grid">
-            <h2 id="curation-impact" className="curation-full font-mono-archive text-[10px] uppercase tracking-[.16em] text-muted-foreground">Impact</h2>
-            <dl className="curation-full curation-metrics">
-              {metrics.map((metric) => (
-                <div key={metric.label} className="curation-metric flex flex-col">
-                  <dt className="order-2 mt-3 font-mono-archive text-[10px] uppercase tracking-[.12em] text-muted-foreground">{metric.label}</dt>
-                  <dd className="order-1 font-editorial text-[clamp(3rem,5vw,5rem)] leading-none tracking-[-.04em]">{metric.value}</dd>
-                </div>
-              ))}
-            </dl>
-          </div>
-        </section>
-      </div>
+      <section className="curation-container" aria-labelledby="curation-impact">
+        <div className="curation-panel curation-grid">
+          <h2 id="curation-impact" className="curation-full font-mono-archive text-[10px] uppercase tracking-[.16em] text-muted-foreground">Impact</h2>
+          <dl className="curation-full curation-metrics">
+            {metrics.map((metric) => (
+              <div key={metric.label} className="curation-metric flex flex-col">
+                <dt className="order-2 mt-3 font-mono-archive text-[10px] uppercase tracking-[.12em] text-muted-foreground">{metric.label}</dt>
+                <dd className="order-1 font-editorial text-[clamp(3rem,5vw,5rem)] leading-none tracking-[-.04em]">{metric.value}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
 
       <section className="curation-container" aria-labelledby="curation-prototype">
         <div className="curation-panel curation-grid">
