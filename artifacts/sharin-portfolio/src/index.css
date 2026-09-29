@@ -193,7 +193,7 @@
   letter-spacing: -.025em;
   white-space: nowrap;
 }
-.work-proof-item:last-child .work-proof-number {
+.work-proof-item:first-child .work-proof-number {
   font-size: clamp(2rem, 2.8vw, 3rem);
 }
 .work-proof-label,

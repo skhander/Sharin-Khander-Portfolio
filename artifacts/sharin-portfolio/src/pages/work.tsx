@@ -155,8 +155,8 @@ export default function Work() {
             <span className="work-proof-heading font-mono-archive">2026 Impact</span>
             <div className="work-proof-grid">
               <div className="work-proof-item">
-                <strong className="work-proof-number font-editorial" data-testid="text-products-count">7</strong>
-                <span className="work-proof-label">0→1 BUILDS</span>
+                <strong className="work-proof-number font-editorial" data-testid="text-gmv-impact">$180M</strong>
+                <span className="work-proof-label">GMV</span>
               </div>
               <div className="work-proof-item">
                 <strong className="work-proof-number font-editorial" data-testid="text-experiments-count">40</strong>
@@ -164,8 +164,8 @@ export default function Work() {
                 <span className="work-proof-note">36 WINS</span>
               </div>
               <div className="work-proof-item">
-                <strong className="work-proof-number font-editorial" data-testid="text-gmv-impact">$180M</strong>
-                <span className="work-proof-label">GMV</span>
+                <strong className="work-proof-number font-editorial" data-testid="text-products-count">7</strong>
+                <span className="work-proof-label">0→1 BUILDS</span>
               </div>
             </div>
           </div>
