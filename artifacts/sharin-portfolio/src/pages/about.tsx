@@ -35,12 +35,12 @@ export default function About() {
 
           <figure className="about-brief-figure">
             <img
-              src="/media/about/build-process-brief.jpg"
+              src="/media/about/build-process-brief-clean.png"
               alt="A mockup showing Sharin’s Claude conversation alongside a short PRD and user interview insights."
               loading="lazy"
               data-testid="img-about-build-brief"
             />
-            <figcaption>Claude PRD Drafts</figcaption>
+            <figcaption>Claude PRDs</figcaption>
           </figure>
         </div>
       </section>

@@ -70,3 +70,17 @@ mtime_ms = 1790702290121
 storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:c68ef5f3-94cf-4e53-98d9-cf139a80adf0/653b9975-51f0-45f4-ad2c-2f5ef435180c/c78755bb-19b2-404e-8060-ba225bd927e4"
 storage_version_token = "1790702370329257"
 content_type = "image/png"
+
+[[outputs]]
+id = "RVzoQZ8ZVnjwCTkn6Icqz"
+uri = "file://artifacts/sharin-portfolio/public/media/about/build-process-brief-clean.png"
+type = "image"
+title = "Claude PRDs screenshot"
+description = "Section 1 screenshot with the heart, counts, comment icon, and repost icon removed."
+logical_id = "4c3a94ac-1931-417c-a30f-ffbac22014b7"
+content_hash = "sha256:071655848e2c5978773baa816b61ef6bc20c1cb49bf34e66789ad911c54cd1b6"
+size = 534936
+mtime_ms = 1790703125536
+storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:c68ef5f3-94cf-4e53-98d9-cf139a80adf0/4c3a94ac-1931-417c-a30f-ffbac22014b7/25a45541-8712-4a63-8c37-d0f9e89aff2f"
+storage_version_token = "1790703188049421"
+content_type = "image/png"

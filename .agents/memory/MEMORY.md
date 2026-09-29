@@ -13,3 +13,4 @@
 - [Product backdrop legibility](product-backdrop-legibility.md) — keep product texture through Impact only; the numbered case study needs a plain background.
 - [Publish layer warnings](publish-layer-warnings.md) — a broken temporary audio symlink warning can occur in successful publishes; compare build history before blaming it.
 - [Process reference attribution](process-reference-attribution.md) — named tools are approved About-page copy, not proof of the running app’s infrastructure.
+- [Screenshot overlay cleanup](screenshot-overlay-cleanup.md) — reconstruct covered UI edges from clean neighboring rows, not flat fills that leave visible blocks.
