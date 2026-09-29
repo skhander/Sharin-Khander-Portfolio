@@ -105,8 +105,12 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
         <div className="grid gap-8 md:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] md:gap-16">
           <h2 id="shopping-build" className="font-mono-archive text-xs font-semibold uppercase tracking-[.14em] text-accent">03 — BUILD</h2>
           <div className="max-w-2xl space-y-5 text-base leading-[1.6] md:text-lg">
-            <p>I shaped the <strong className="font-semibold text-accent">experience and brand voice</strong>: how the agent recommends products, answers questions, and helps shoppers decide.</p>
-            <p>Under the hood: <strong className="font-semibold">Gemini + a custom intent layer + our shopping APIs.</strong> The intent layer translated what shoppers meant into product queries, while the APIs handled <strong className="font-semibold">PDP, Add to Cart, and Wishlist</strong> actions.</p>
+            <p><strong className="font-semibold text-foreground">I designed the interaction model, wrote the system instructions, shaped the agent's voice, and connected it to our shopping infrastructure.</strong></p>
+            <p>
+              <span className="block"><strong className="font-semibold text-foreground">Gemini</strong> handled the conversation.</span>
+              <span className="block"><strong className="font-semibold text-foreground">Our intent layer</strong> translated shopper language into search queries.</span>
+              <span className="block"><strong className="font-semibold text-foreground">Our APIs</strong> handled PDP, Add to Cart, and Wishlist actions.</span>
+            </p>
           </div>
         </div>
         <figure className="mx-auto mt-10 max-w-[1100px] md:mt-14">
