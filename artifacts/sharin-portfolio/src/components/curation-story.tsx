@@ -82,17 +82,12 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
           <h2 id="curation-prototype" className="font-mono-archive text-[11px] uppercase tracking-[.14em] text-accent">01 — PROTOTYPE</h2>
           <p className="max-w-2xl text-base leading-[1.6] md:text-lg">I sat with everyone from the assistants doing the work to the CMO defining the operating model. Then I turned the workflow into a working prototype.</p>
         </div>
-        <div className="mt-8 grid gap-10 md:mt-10 md:grid-cols-2 md:items-start md:gap-6 lg:gap-10">
+        <div className="mx-auto mt-8 max-w-[920px] md:mt-10">
           <Walkthrough
             video="curation-tool-prototype.mp4"
             poster="curation-tool-poster.jpg"
             alt="Curation Tool prototype showing the Create New Editorial interface"
             caption="The workflow · Prototype"
-          />
-          <CustomerPage
-            image="next-level-layers.png"
-            alt="The RealReal Next-Level Layers customer browse page with a four-column edit of clothing, shoes, and accessories"
-            label="Customer view · Next-Level Layers"
           />
         </div>
       </section>
@@ -100,7 +95,16 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
       <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-10 sm:px-10 md:py-14 lg:px-16" aria-labelledby="curation-ship">
         <div className="grid gap-5 md:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] md:gap-16">
           <h2 id="curation-ship" className="font-mono-archive text-[11px] uppercase tracking-[.14em] text-accent">02 — SHIP</h2>
-          <p className="max-w-2xl text-base leading-[1.6] md:text-lg">I led Design, Engineering, and ML through the build.</p>
+          <div>
+            <p className="max-w-2xl text-base leading-[1.6] md:text-lg">I led Design, Engineering, and ML through the build.</p>
+            <div className="mt-8 md:mt-10">
+              <CustomerPage
+                image="next-level-layers.png"
+                alt="The RealReal Next-Level Layers customer browse page with a four-column edit of clothing, shoes, and accessories"
+                label="Customer view · Next-Level Layers"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
