@@ -57,24 +57,23 @@ export default function About() {
           </div>
         </div>
         <div className="about-step-grid about-diagram-grid">
-          <figure className="about-diagram about-system-diagram" role="img" aria-label="Design system, tokens, components, and references inform the agent. A Figma MCP connection is one example.">
+          <figure className="about-diagram about-system-diagram" role="img" aria-label="Enter a design system, components, tokens, and references to inform the agent.">
             <div className="about-system-inputs">
-              <span>Design system</span><span>Tokens</span><span>Components</span><span>References</span>
+              <p className="about-system-inputs-title">Enter</p>
+              <span>Design system</span><span>Components</span><span>Tokens</span><span>References</span>
             </div>
             <span className="about-diagram-connector" aria-hidden="true"><i /></span>
             <div className="about-system-agent">Agent</div>
-            <p className="about-diagram-caption">A Figma MCP example</p>
           </figure>
           <figure className="about-system-mockup">
-            <a href="/media/about/figma-system-mockup.png" target="_blank" rel="noopener noreferrer" aria-label="Open the Figma system mockup at full size">
-              <img
-                src="/media/about/figma-system-mockup.png"
-                alt="Figma design screens addressed to Sharin alongside a connected Figma MCP panel and a code-generation example."
-                loading="lazy"
-                decoding="async"
-                data-testid="img-about-figma-system"
-              />
-            </a>
+            <img
+              src="/media/about/figma-system-mockup.png"
+              alt="Figma design screens addressed to Sharin alongside a connected Figma MCP panel and a code-generation example."
+              loading="lazy"
+              decoding="async"
+              data-testid="img-about-figma-system"
+            />
+            <figcaption className="about-diagram-caption">A Figma MCP example</figcaption>
           </figure>
         </div>
       </section>
