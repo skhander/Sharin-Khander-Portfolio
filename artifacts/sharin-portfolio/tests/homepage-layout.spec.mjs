@@ -27,7 +27,16 @@ for (const viewport of viewports) {
     await expect(page.getByText('Product builder and former engineer.')).toHaveCount(0);
     const personalTab = page.getByRole('tab', { name: 'Personal' });
     const realRealTab = page.getByRole('tab', { name: 'The RealReal' });
+    await expect(page.getByRole('tab')).toHaveText(['The RealReal', 'Personal']);
+    await expect(realRealTab).toHaveAttribute('aria-selected', 'true');
+    await expect(personalTab).toHaveAttribute('aria-selected', 'false');
+    await expect(page.getByRole('tabpanel')).toHaveAttribute('aria-labelledby', 'work-tab-0');
+    await expect(page.getByTestId('link-project-curation')).toBeVisible();
+    await expect(page.locator('.personal-project')).toHaveCount(0);
+    await personalTab.click();
     await expect(personalTab).toHaveAttribute('aria-selected', 'true');
+    await expect(realRealTab).toHaveAttribute('aria-selected', 'false');
+    await expect(page.getByRole('tabpanel')).toHaveAttribute('aria-labelledby', 'work-tab-1');
     await expect(page.getByRole('tabpanel')).toBeVisible();
     await expect(page.locator('.personal-project h3')).toHaveText(['Virtual Try-On', 'AI Advent Calendar', 'Medigo']);
     await expect(page.getByTestId('personal-project-ai-advent-calendar').locator('.editorial-project-kicker')).toHaveText('02');

@@ -5,7 +5,7 @@ import { personalProjects, publishedProjects } from '@/lib/projects';
 import { usePageMeta } from '@/lib/use-page-meta';
 import './editorial-work.css';
 
-const workTypes = ['Personal', 'The RealReal'] as const;
+const workTypes = ['The RealReal', 'Personal'] as const;
 type WorkType = typeof workTypes[number];
 
 const tryOnClips = [
@@ -87,7 +87,7 @@ const projectVisuals: Record<string, { src: string; alt: string; note?: string; 
 };
 
 export default function Work() {
-  const [workType, setWorkType] = useState<WorkType>('Personal');
+  const [workType, setWorkType] = useState<WorkType>(workTypes[0]);
   usePageMeta('Work — Sharin Khander', 'Explore Sharin Khander’s product work across luxury marketplaces, shopping agents, visual search, designer discovery, and personalization.');
 
   const selectWorkType = (next: WorkType) => {
@@ -153,7 +153,7 @@ export default function Work() {
           </div>
         </div>
 
-        <div id="work-panel" role="tabpanel" aria-labelledby={`work-tab-${workType === 'Personal' ? 0 : 1}`} tabIndex={0} className="work-list editorial-project-list" aria-live="polite">
+        <div id="work-panel" role="tabpanel" aria-labelledby={`work-tab-${workTypes.indexOf(workType)}`} tabIndex={0} className="work-list editorial-project-list" aria-live="polite">
           <div key={workType} className="work-list-content">
           {workType === 'Personal' ? personalProjects.map((project, index) => {
             const number = String(index + 1).padStart(2, '0');
