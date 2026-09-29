@@ -303,21 +303,32 @@ export default function Work() {
                       </picture>
                     ) : project.slug === 'attribute-enrichment' ? (
                       <div className="metadata-enrichment-preview">
-                        <img src={visual.src} alt={visual.alt} loading="lazy" />
-                        <dl className="metadata-enrichment-attributes" aria-label="Predicted attributes">
-                          <div className="metadata-attribute-group">
-                            <dt>Aesthetic</dt>
-                            <dd className="metadata-attribute-tags">
-                              {['Romantic', 'Classic', 'Feminine'].map((tag) => <span key={tag}>{tag}</span>)}
-                            </dd>
+                        <div className="metadata-seed">
+                          <p className="metadata-preview-label">Seed Product</p>
+                          <div className="metadata-seed-frame">
+                            <img src={visual.src} alt={visual.alt} loading="lazy" />
                           </div>
-                          <div className="metadata-attribute-group">
-                            <dt>Occasion</dt>
-                            <dd className="metadata-attribute-tags">
-                              {['Evening wear', 'Date night', 'Party'].map((tag) => <span key={tag}>{tag}</span>)}
-                            </dd>
-                          </div>
-                        </dl>
+                        </div>
+                        <div className="metadata-model">
+                          <span>Gemini 3.1 Flash</span>
+                        </div>
+                        <div className="metadata-output">
+                          <p className="metadata-preview-label">Output</p>
+                          <dl className="metadata-enrichment-attributes" aria-label="Predicted attributes">
+                            <div className="metadata-attribute-group">
+                              <dt>Aesthetic</dt>
+                              <dd className="metadata-attribute-tags">
+                                {['Romantic', 'Classic', 'Feminine'].map((tag) => <span key={tag}>{tag}</span>)}
+                              </dd>
+                            </div>
+                            <div className="metadata-attribute-group">
+                              <dt>Occasion</dt>
+                              <dd className="metadata-attribute-tags">
+                                {['Evening wear', 'Date night', 'Party'].map((tag) => <span key={tag}>{tag}</span>)}
+                              </dd>
+                            </div>
+                          </dl>
+                        </div>
                       </div>
                     ) : project.slug === 'visual-search' ? (
                       <ImageSearchPrototype src={visual.src} alt={visual.alt} />
