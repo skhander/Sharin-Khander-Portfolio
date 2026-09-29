@@ -62,7 +62,7 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
             <div className="curation-grid curation-hero-content">
               <p className="curation-full font-mono-archive text-[10px] uppercase tracking-[.16em] text-accent">CURATION</p>
               <h1 id="curation-title" className="curation-full curation-hero-title max-w-[17ch] font-editorial text-[clamp(2.75rem,6vw,6.5rem)] leading-[.98] tracking-[-.05em]">Scaling editorial taste</h1>
-              <p className="curation-full curation-hero-intro text-base leading-[1.65] text-muted-foreground md:text-xl">Merchandisers used several tools to build one assortment. I prototyped a better workflow, led the 0→1 build, then automated the repetitive parts without replacing editorial judgment.</p>
+              <p className="curation-full curation-hero-intro text-base leading-[1.65] text-muted-foreground md:text-xl">Merchandisers used several tools to build one assortment. I mapped the workflow, prototyped a single curation experience, and led the 0→1 build. Then we automated the repetitive work—without automating the taste.</p>
             </div>
           </div>
         </section>
