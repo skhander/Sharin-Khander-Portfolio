@@ -24,7 +24,7 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
             <p className="mb-6 font-mono-archive text-[10px] uppercase tracking-[.16em] text-accent">SHOPPING AGENT</p>
             <h1 id="shopping-agent-title" className="font-editorial text-[clamp(2.75rem,5vw,5.5rem)] leading-[.98] tracking-[-.05em]" data-testid="text-project-title">Expanding search beyond keywords</h1>
           </div>
-          <p className="max-w-2xl text-base leading-[1.65] text-muted-foreground md:text-xl">Traditional search relied on structured product attributes. I led the 0→1 build of an AI shopping agent that let shoppers search by style, occasion, aesthetic, and intent.</p>
+          <p className="max-w-2xl text-base leading-[1.65] text-muted-foreground md:text-xl">Traditional search worked when shoppers knew the right words. I led the 0→1 build of an AI shopping agent that feels more like a personal shopping concierge—helping people discover products by style, occasion, or intent.</p>
         </div>
       </header>
 
@@ -44,7 +44,7 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
         <div className="grid gap-8 md:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] md:gap-16">
           <h2 id="shopping-problem" className="font-mono-archive text-xs font-semibold uppercase tracking-[.14em] text-accent">01 — PROBLEM</h2>
           <div className="max-w-2xl space-y-5 text-base leading-[1.6] md:text-lg">
-            <p>Traditional search understood product attributes. Shoppers searched in much richer language.</p>
+            <p>Traditional search worked for straightforward requests. It struggled when someone had a look, occasion, or feeling in mind.</p>
           </div>
         </div>
         <div className="shopping-agent-comparison-wrap mt-10 md:mt-14" tabIndex={0} role="region" aria-label="Search comparison table; scroll horizontally to view both columns">
@@ -85,8 +85,8 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
         <div className="grid gap-8 md:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] md:gap-16">
           <h2 id="shopping-prototype" className="font-mono-archive text-xs font-semibold uppercase tracking-[.14em] text-accent">02 — PROTOTYPE</h2>
           <div className="max-w-2xl space-y-5 text-base leading-[1.6] md:text-lg">
-            <p>I defined how the agent interpreted requests, found products, and responded.</p>
-            <p className="font-mono-archive text-sm font-medium tracking-[.02em] text-accent">Intent → Retrieval → Response</p>
+            <p>I designed two paths: help curious shoppers discover new finds, or show familiar search results when they already knew what they wanted.</p>
+            <p className="font-mono-archive text-sm font-medium tracking-[.02em] text-accent">Ask → Find → Buy</p>
           </div>
         </div>
         <figure className="shopping-agent-media mt-10 md:mt-14">
@@ -98,9 +98,9 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
         <div className="grid gap-8 md:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] md:gap-16">
           <h2 id="shopping-build" className="font-mono-archive text-xs font-semibold uppercase tracking-[.14em] text-accent">03 — BUILD</h2>
           <div className="max-w-2xl space-y-5 text-base leading-[1.6] md:text-lg">
-            <p>I owned the product experience, agent behavior, brand voice, and evaluation.</p>
-            <p>I partnered with ML and Engineering to connect the agent to our 6M+ catalog, search, and cart APIs.</p>
-            <p className="font-mono-archive text-sm font-medium tracking-[.02em] text-accent">Prototype → Production</p>
+            <p>I shaped the experience and brand voice: how the agent recommends products, answers questions, and helps shoppers decide.</p>
+            <p>With ML and Engineering, I brought it to our 6M+ catalog and made it possible for returning shoppers to pick up where they left off across visits and devices.</p>
+            <p className="font-mono-archive text-sm font-medium tracking-[.02em] text-accent">Prototype → Product</p>
           </div>
         </div>
       </section>
