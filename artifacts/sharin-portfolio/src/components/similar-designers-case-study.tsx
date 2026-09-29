@@ -13,16 +13,19 @@ const metrics = [
 const phases = [
   {
     label: 'Phase 1',
+    name: 'Collaborative Filtering',
     src: 'similar-designers-phase-1.png',
     alt: 'Customers Also Shop: Chanel, Christian Dior, Gucci, Prada, Fendi, Hermès',
   },
   {
     label: 'Phase 2',
+    name: 'Visual + Attribute Similarity',
     src: 'similar-designers-phase-2.png',
     alt: 'Similar Designers: Fendi, Gucci, Loewe, Celine, Ferragamo, Miu Miu',
   },
   {
     label: 'Phase 3',
+    name: 'Personalized Similar Designers',
     src: 'similar-designers-phase-3.png',
     alt: 'You may also like: Mulberry, Strathberry, DeMellier, Polène, Mansur Gavriel, APC',
   },
@@ -41,7 +44,10 @@ function StorySection({ id, heading, children }: { id: string; heading: string; 
           <div className="similar-designers-phases mt-8 md:mt-12">
             {phases.map((phase) => (
               <figure className="similar-designers-phase" key={phase.label}>
-                <figcaption className="font-mono-archive text-[11px] uppercase tracking-[.14em] text-accent">{phase.label}</figcaption>
+                <figcaption>
+                  <span className="block font-mono-archive text-[11px] uppercase tracking-[.14em] text-accent">{phase.label}</span>
+                  <span className="mt-2 block font-editorial text-[clamp(1.1rem,1.6vw,1.4rem)] leading-tight">{phase.name}</span>
+                </figcaption>
                 <img src={`${import.meta.env.BASE_URL}media/work/${phase.src}`} alt={phase.alt} width={684} height={1312} loading="lazy" />
               </figure>
             ))}
