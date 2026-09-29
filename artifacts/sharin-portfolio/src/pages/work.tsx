@@ -213,7 +213,7 @@ export default function Work() {
                     <ArrowUpRight size={16} strokeWidth={1.5} className="project-arrow" aria-hidden="true" />
                   </div>
                   <h3 className="font-editorial">{cardTitle}</h3>
-                  <p className="editorial-project-description text-muted-foreground">{project.slug === 'curation' ? 'Create complete assortments in minutes.' : project.slug === 'ai-discovery' ? 'Find and compare products with natural language.' : project.slug === 'similar-designers' ? 'Discover your next favorite designer.' : project.slug === 'attribute-enrichment' ? 'Making 6M products discoverable by trend, vibe, and occasion.' : project.slug === 'visual-search' ? 'Shop what inspires you.' : project.slug === 'elevated-experience' ? 'Elevating the shopping experience for improved discovery and conversion.' : project.description}</p>
+                  <p className="editorial-project-description text-muted-foreground">{project.slug === 'curation' ? 'Create complete assortments in minutes.' : project.slug === 'ai-discovery' ? 'Find and compare products with natural language.' : project.slug === 'similar-designers' ? 'Discover your next favorite designer.' : project.slug === 'attribute-enrichment' ? 'Making 6M products discoverable by trend, vibe, and occasion.' : project.slug === 'visual-search' ? 'Shop what inspires you.' : project.slug === 'elevated-experience' ? 'A more elevated way to browse and shop.' : project.description}</p>
                   <div className="editorial-project-badges" aria-label={`${cardTitle} categories`}>
                     {visual.badges.map((badge) => <span key={badge}>{badge}</span>)}
                   </div>
