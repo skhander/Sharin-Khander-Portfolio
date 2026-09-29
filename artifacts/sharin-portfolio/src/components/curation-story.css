@@ -56,6 +56,9 @@
 .curation-story .curation-customer-frame {
   width: 100%;
   overflow-x: auto;
+  overflow-y: auto;
+  aspect-ratio: 1200 / 1106;
+  overscroll-behavior: contain;
   background: #fff;
   border: 1px solid hsl(var(--border));
   scrollbar-color: hsl(var(--olive-surface)) transparent;
@@ -65,26 +68,4 @@
   display: block;
   width: 100%;
   height: auto;
-}
-
-.curation-story .curation-customer-frame.is-evergreen {
-  max-height: min(1100px, 80vh);
-  overflow-y: auto;
-}
-
-.curation-story .curation-customer-frame.is-comparison {
-  aspect-ratio: 1200 / 1106;
-  overflow-y: auto;
-  overscroll-behavior: contain;
-}
-
-@media (max-width: 767px) {
-  .curation-story .curation-customer-frame img {
-    width: 720px;
-    max-width: none;
-  }
-
-  .curation-story .curation-customer-frame.is-comparison img {
-    width: 100%;
-  }
 }
