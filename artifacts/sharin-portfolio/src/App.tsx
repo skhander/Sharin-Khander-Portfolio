@@ -8,6 +8,7 @@ import About from '@/pages/about';
 import Contact from '@/pages/contact';
 import NotFound from '@/pages/not-found';
 import ProjectDetail from '@/pages/project-detail';
+import VirtualTryOn from '@/pages/virtual-try-on';
 import Work from '@/pages/work';
 import {
   Route,
@@ -28,6 +29,7 @@ function Router() {
           <Route path="/" component={Work} />
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
+          <Route path="/work/virtual-try-on" component={VirtualTryOn} />
           <Route path="/work/:slug" component={ProjectDetail} />
           <Route component={NotFound} />
         </Switch>

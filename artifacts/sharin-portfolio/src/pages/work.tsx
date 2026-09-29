@@ -199,16 +199,28 @@ export default function Work() {
           <div key={workType} className="work-list-content">
           {workType === 'Personal' ? personalProjects.map((project, index) => {
             const number = String(index + 1).padStart(2, '0');
+            const copy = (
+              <>
+                <div className="editorial-project-kicker font-mono-archive text-accent">
+                  <span className="text-[10px]">{number}</span>
+                  {project.slug === 'virtual-try-on' && <ArrowUpRight size={16} strokeWidth={1.5} className="project-arrow" aria-hidden="true" />}
+                </div>
+                <h3 className="font-editorial">{project.title}</h3>
+                <p className="editorial-project-description text-muted-foreground">{project.description}</p>
+                <div className="editorial-project-badges" aria-label={`${project.title} categories`}>
+                  {project.badges.map((badge) => <span key={badge}>{badge}</span>)}
+                </div>
+              </>
+            );
             return (
               <article className={`editorial-project personal-project${project.preview === 'recordings' || project.preview === 'video' ? ' has-video' : ''}`} key={project.slug} data-testid={`personal-project-${project.slug}`}>
-                <div className="editorial-project-copy">
-                  <div className="editorial-project-kicker font-mono-archive text-accent"><span className="text-[10px]">{number}</span></div>
-                  <h3 className="font-editorial">{project.title}</h3>
-                  <p className="editorial-project-description text-muted-foreground">{project.description}</p>
-                  <div className="editorial-project-badges" aria-label={`${project.title} categories`}>
-                    {project.badges.map((badge) => <span key={badge}>{badge}</span>)}
-                  </div>
-                </div>
+                {project.slug === 'virtual-try-on' ? (
+                  <Link href="/work/virtual-try-on" className="editorial-project-copy personal-project-link" data-testid="link-project-virtual-try-on">
+                    {copy}
+                  </Link>
+                ) : (
+                  <div className="editorial-project-copy">{copy}</div>
+                )}
                 <figure className="editorial-project-visual personal-project-visual" data-project={project.slug}>
                   {project.preview === 'recordings' ? (
                     <div className="personal-recordings">{tryOnClips.map((clip) => <Recording key={clip.src} clip={clip} />)}</div>

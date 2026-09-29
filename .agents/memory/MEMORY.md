@@ -5,7 +5,7 @@
 - [Scoped pnpm installs](scoped-pnpm-installs.md) — the package-install callback may target workspace root; scoped artifact dependencies need a filtered pnpm install.
 - [Portfolio video preview](portfolio-video-preview.md) — mount walkthrough video on click; a video element can show a spinner over its poster even with preloading off.
 - [Embedded phone scrolling](embedded-phone-scrolling.md) — styled native scrollbars can remain invisible inside a phone iframe; show a persistent scroll affordance.
-- [Virtual Try-On page intent](virtual-try-on-page-intent.md) — keep the Product Detail recording for a future separate page; the homepage card shows Browse Grid only.
+- [Virtual Try-On page intent](virtual-try-on-page-intent.md) — Product Detail belongs on the linked page; ShopMy examples are authentic recording frames.
 - [Screen recording fidelity](screen-recording-fidelity.md) — preserve high-quality UI recordings; tiny compressed previews make interface text unreadable.
 - [Portfolio copy fidelity](portfolio-copy-fidelity.md) — visual refinements must not invent or paraphrase page copy; keep exact wording unless explicitly changed.
 - [Portfolio typeface choice](portfolio-typeface-choice.md) — Manrope is the intended site-wide face; do not restore local Avenir or editorial serifs.

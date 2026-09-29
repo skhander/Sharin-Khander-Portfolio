@@ -53,7 +53,7 @@ export type Project = {
   status: 'published' | 'future';
 };
 
-// Homepage-only personal work. These entries intentionally have no detail routes.
+// Personal work shown on the homepage; individual projects may have detail routes.
 export type PersonalProject = {
   slug: string;
   title: string;

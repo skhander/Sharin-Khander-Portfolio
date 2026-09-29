@@ -66,6 +66,17 @@
   padding-block: 0;
 }
 
+.editorial-work .personal-project-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.editorial-work .personal-project-link:focus-visible {
+  outline: 2px solid hsl(var(--accent));
+  outline-offset: 8px;
+}
+
 .editorial-work .work-list-content > .editorial-project:first-child {
   border-top: 0;
   padding-top: clamp(28px, 3.4vw, 44px);
