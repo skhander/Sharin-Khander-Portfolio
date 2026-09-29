@@ -1,0 +1,16 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "8Yw4pwPjKFIRMNbvPg-wB"
+uri = "file://artifacts/sharin-portfolio/public/media/about/build-process-brief.jpg"
+type = "image"
+title = "Build process mockup — Sharin"
+description = "Edited mockup with Sharin replacing Aneta in the greeting and account label."
+logical_id = "9ee79b52-9f64-4c9d-863f-68d99cd1a481"
+content_hash = "sha256:241d4b65b3e1b202d00c5672cb997885c4c7a33716c042d6d832c39a1d0042b6"
+size = 194504
+mtime_ms = 1790700674024
+storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:c68ef5f3-94cf-4e53-98d9-cf139a80adf0/9ee79b52-9f64-4c9d-863f-68d99cd1a481/8a75ba73-f01b-401e-803f-d48e0dc4e986"
+storage_version_token = "1790700753602357"
+content_type = "image/jpeg"
