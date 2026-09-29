@@ -45,30 +45,41 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
           <h2 id="shopping-problem" className="font-mono-archive text-xs font-semibold uppercase tracking-[.14em] text-accent">01 — PROBLEM</h2>
           <div className="max-w-2xl space-y-5 text-base leading-[1.6] md:text-lg">
             <p>Traditional search understood product attributes. Shoppers searched in much richer language.</p>
-            <blockquote className="border-l-2 border-accent pl-5 font-editorial text-[clamp(1.9rem,3vw,3rem)] leading-[1.06] tracking-[-.025em]">“90s minimalist Calvin Klein look for a winter wedding.”</blockquote>
             <p className="font-mono-archive text-sm font-medium tracking-[.02em] text-accent">Traditional search → Shopping Agent</p>
           </div>
         </div>
-        <figure className="shopping-agent-media mt-10 md:mt-14">
-          <figcaption className="mb-4 space-y-1">
-            <span className="block font-editorial text-2xl">Traditional search</span>
-            <span className="block text-muted-foreground">“black silk dress”</span>
-          </figcaption>
-          <div className="shopping-agent-image-frame shopping-agent-image-frame--search" tabIndex={0} role="region" aria-label="Traditional Search screenshot; scroll to inspect">
-            <img src={media('traditional-search.png')} alt="The RealReal traditional search results for black silk dress, showing a keyword search box, filters, and a grid of black dresses." loading="lazy" />
-          </div>
-          <p className="mt-2 font-mono-archive text-[10px] text-muted-foreground sm:hidden">Scroll to inspect the screenshot</p>
-        </figure>
-        <figure className="shopping-agent-media mt-10 md:mt-14">
-          <figcaption className="mb-4 space-y-1">
-            <span className="block font-editorial text-2xl">Shopping Agent</span>
-            <span className="block text-muted-foreground">“90s minimalist Calvin Klein look for a winter wedding”</span>
-          </figcaption>
-          <div className="shopping-agent-image-frame shopping-agent-image-frame--agent" tabIndex={0} role="region" aria-label="Shopping Agent screenshot; scroll to inspect">
-            <img src={media('agent-results.png')} alt="Ask TRR Shopping Agent responding to a request for a 90s minimalist Calvin Klein look for a winter wedding with a visual selection of dresses." loading="lazy" />
-          </div>
-          <p className="mt-2 font-mono-archive text-[10px] text-muted-foreground sm:hidden">Swipe and scroll to inspect the screenshot</p>
-        </figure>
+        <div className="shopping-agent-comparison-wrap mt-10 md:mt-14" tabIndex={0} role="region" aria-label="Search comparison table; scroll horizontally to view both columns">
+          <table className="shopping-agent-comparison" aria-label="Traditional search and Shopping Agent comparison">
+            <thead>
+              <tr>
+                <th scope="col">
+                  <span className="block font-editorial text-2xl font-normal">Traditional search</span>
+                  <span className="mt-1 block font-normal text-muted-foreground">“black silk dress”</span>
+                </th>
+                <th scope="col">
+                  <span className="block font-editorial text-2xl font-normal">Shopping Agent</span>
+                  <span className="mt-1 block font-normal text-muted-foreground">“90s minimalist Calvin Klein look for a winter wedding.”</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div className="shopping-agent-image-frame shopping-agent-image-frame--search" tabIndex={0} role="region" aria-label="Traditional Search screenshot; scroll to inspect">
+                    <img src={media('traditional-search.png')} alt="The RealReal traditional search results for black silk dress, showing a keyword search box, filters, and a grid of black dresses." loading="lazy" />
+                  </div>
+                  <p className="mt-2 font-mono-archive text-[10px] text-muted-foreground sm:hidden">Scroll to inspect the screenshot</p>
+                </td>
+                <td>
+                  <div className="shopping-agent-image-frame shopping-agent-image-frame--agent" tabIndex={0} role="region" aria-label="Shopping Agent screenshot; scroll to inspect">
+                    <img src={media('agent-results.png')} alt="Ask TRR Shopping Agent responding to a request for a 90s minimalist Calvin Klein look for a winter wedding with a visual selection of dresses." loading="lazy" />
+                  </div>
+                  <p className="mt-2 font-mono-archive text-[10px] text-muted-foreground sm:hidden">Swipe and scroll to inspect the screenshot</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
       <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-12 sm:px-10 md:py-16 lg:px-16" aria-labelledby="shopping-prototype">
