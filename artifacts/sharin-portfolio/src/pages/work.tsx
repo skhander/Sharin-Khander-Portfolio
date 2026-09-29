@@ -114,17 +114,17 @@ const projectVisuals: Record<string, { src: string; alt: string; note?: string; 
   'visual-search': {
     src: `${import.meta.env.BASE_URL}media/work/image-search-prototype.mp4`,
     alt: 'Image Search prototype showing camera search and matching products',
-    badges: ['Machine Learning', '0→1'],
+    badges: ['ML', '0→1'],
   },
   'similar-designers': {
     src: '/media/work/similar-designers-network.svg',
     alt: 'Illustrative recommendation network: seed designer The Row produces Lemaire score 96, Studio Nicholson score 90, Toteme score 86, and Margaret Howell score 79',
-    badges: ['Machine Learning', '0→1'],
+    badges: ['ML', '0→1'],
   },
   curation: {
     src: '/media/work/curation-vacation-shop.mp4',
     alt: 'The RealReal Vacation Shop product browse video',
-    badges: ['Agents', 'Machine Learning', '0→1 BUILD'],
+    badges: ['Agents', 'ML', '0→1'],
   },
 };
 
@@ -151,12 +151,12 @@ export default function Work() {
         <h1 className="work-hero-name font-editorial" data-testid="text-work-name">Sharin<br />{' '}Khander<span className="text-accent">.</span></h1>
         <div className="work-hero-support">
           <p className="work-hero-role font-editorial" data-testid="text-work-tagline">I build better ways<br />{' '}to shop<span className="text-accent">.</span></p>
-          <div className="work-proof" aria-label="2026 year-to-date metrics">
-            <span className="work-proof-heading font-mono-archive">2026 YTD</span>
+          <div className="work-proof" aria-label="2026 impact metrics">
+            <span className="work-proof-heading font-mono-archive">2026 Impact</span>
             <div className="work-proof-grid">
               <div className="work-proof-item">
                 <strong className="work-proof-number font-editorial" data-testid="text-products-count">7</strong>
-                <span className="work-proof-label">0→1 PRODUCTS</span>
+                <span className="work-proof-label">0→1 BUILDS</span>
               </div>
               <div className="work-proof-item">
                 <strong className="work-proof-number font-editorial" data-testid="text-experiments-count">40</strong>
@@ -165,7 +165,7 @@ export default function Work() {
               </div>
               <div className="work-proof-item">
                 <strong className="work-proof-number font-editorial" data-testid="text-gmv-impact">$180M</strong>
-                <span className="work-proof-label">GMV IMPACT</span>
+                <span className="work-proof-label">GMV</span>
               </div>
             </div>
           </div>
@@ -173,7 +173,7 @@ export default function Work() {
       </section>
       <section id="selected-work" className="mx-auto w-full max-w-[1440px] px-6 pb-20 sm:px-10 md:pb-28 lg:px-[5%]" aria-labelledby="work-heading">
         <div className="work-band">
-          <h2 id="work-heading" className="font-editorial text-[clamp(2.3rem,4vw,3.8rem)] leading-none tracking-[-.035em]">Things I’ve Built</h2>
+          <h2 id="work-heading" className="font-editorial text-[clamp(2.3rem,4vw,3.8rem)] leading-none tracking-[-.035em]">Things I've Built</h2>
           <div className="work-tabs" role="tablist" aria-label="Work type">
             {workTypes.map((type, index) => (
               <button
@@ -199,16 +199,30 @@ export default function Work() {
           <div key={workType} className="work-list-content">
           {workType === 'Personal' ? personalProjects.map((project, index) => {
             const number = String(index + 1).padStart(2, '0');
-            return (
-              <article className={`editorial-project personal-project${project.preview === 'recordings' || project.preview === 'video' ? ' has-video' : ''}`} key={project.slug} data-testid={`personal-project-${project.slug}`}>
-                <div className="editorial-project-copy">
-                  <div className="editorial-project-kicker font-mono-archive text-accent"><span className="text-[10px]">{number}</span></div>
-                  <h3 className="font-editorial">{project.title}</h3>
-                  <p className="editorial-project-description text-muted-foreground">{project.description}</p>
+            const copy = (
+              <>
+                <div className="editorial-project-kicker font-mono-archive text-accent">
+                  <span className="text-[10px]">{number}</span>
+                  {project.slug === 'virtual-try-on' && <ArrowUpRight size={16} strokeWidth={1.5} className="project-arrow" aria-hidden="true" />}
+                </div>
+                <h3 className="font-editorial">{project.title}</h3>
+                <p className="editorial-project-description text-muted-foreground">{project.description}</p>
+                {project.badges.length > 0 && (
                   <div className="editorial-project-badges" aria-label={`${project.title} categories`}>
                     {project.badges.map((badge) => <span key={badge}>{badge}</span>)}
                   </div>
-                </div>
+                )}
+              </>
+            );
+            return (
+              <article className={`editorial-project personal-project${project.preview === 'recordings' || project.preview === 'video' ? ' has-video' : ''}`} key={project.slug} data-testid={`personal-project-${project.slug}`}>
+                {project.slug === 'virtual-try-on' ? (
+                  <Link href="/work/virtual-try-on" className="editorial-project-copy personal-project-link" data-testid="link-project-virtual-try-on">
+                    {copy}
+                  </Link>
+                ) : (
+                  <div className="editorial-project-copy">{copy}</div>
+                )}
                 <figure className="editorial-project-visual personal-project-visual" data-project={project.slug}>
                   {project.preview === 'recordings' ? (
                     <div className="personal-recordings">{tryOnClips.map((clip) => <Recording key={clip.src} clip={clip} />)}</div>
@@ -227,10 +241,8 @@ export default function Work() {
                       />
                     </div>
                   ) : (
-                    <div className="personal-unavailable">
-                      <span className="personal-unavailable-number font-mono-archive">FIG. {number} / {project.title}</span>
-                      <span className="personal-unavailable-title font-editorial">{project.title}</span>
-                      <span className="personal-unavailable-status font-mono-archive">Prototype preview unavailable</span>
+                    <div className="personal-coming-soon">
+                      <span className="font-editorial">Coming Soon</span>
                     </div>
                   )}
                 </figure>
@@ -251,7 +263,7 @@ export default function Work() {
                     <ArrowUpRight size={16} strokeWidth={1.5} className="project-arrow" aria-hidden="true" />
                   </div>
                   <h3 className="font-editorial">{cardTitle}</h3>
-                  <p className="editorial-project-description text-muted-foreground">{project.slug === 'curation' ? 'Making editorial taste scalable.' : project.slug === 'ai-discovery' ? 'Search, compare, and buy with natural language.' : project.slug === 'similar-designers' ? 'Helping shoppers discover their next favorite designer.' : project.slug === 'attribute-enrichment' ? 'Making 6M products discoverable by trend, vibe, and occasion.' : project.slug === 'visual-search' ? 'Turn inspiration into something you can shop.' : project.slug === 'elevated-experience' ? 'Elevating the shopping experience for improved discovery and conversion.' : project.description}</p>
+                  <p className="editorial-project-description text-muted-foreground">{project.slug === 'curation' ? 'Build complete assortments in minutes.' : project.slug === 'ai-discovery' ? 'Search for products in your own words.' : project.slug === 'similar-designers' ? 'Discover your next favorite designer.' : project.slug === 'attribute-enrichment' ? 'Discover products by trend, vibe, and occasion.' : project.slug === 'visual-search' ? 'Shop your social media or IRL inspiration.' : project.slug === 'elevated-experience' ? 'A more elevated way to browse and shop.' : project.description}</p>
                   <div className="editorial-project-badges" aria-label={`${cardTitle} categories`}>
                     {visual.badges.map((badge) => <span key={badge}>{badge}</span>)}
                   </div>
