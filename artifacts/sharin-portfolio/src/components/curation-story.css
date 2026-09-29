@@ -65,6 +65,24 @@
   background-color: hsl(var(--background) / .9);
 }
 
+.curation-intro-backdrop .curation-impact::before {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background-color: hsl(42 35% 98% / .35);
+  content: '';
+  pointer-events: none;
+}
+
+.curation-intro-backdrop .curation-impact > .curation-panel {
+  position: relative;
+  z-index: 1;
+}
+
+.dark .curation-intro-backdrop .curation-impact::before {
+  background-color: hsl(var(--background) / .35);
+}
+
 .curation-story .curation-container {
   width: 100%;
   max-width: 1440px;

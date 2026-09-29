@@ -65,7 +65,7 @@ const projectVisuals: Record<string, { src: string; alt: string; note?: string; 
     badges: ['LLMs', '0→1'],
   },
   'ai-discovery': {
-    src: '/media/work/shopping-agent-demo.mp4',
+    src: `${import.meta.env.BASE_URL}media/work/shopping-agent-portrait.mp4`,
     alt: 'Ask TRR shopping agent demo video',
     badges: ['Agents', '0→1'],
   },
@@ -220,10 +220,25 @@ export default function Work() {
                 </div>
                 <figure className="editorial-project-visual" data-project={project.slug}>
                   <div className="editorial-project-artwork">
-                    {project.slug === 'curation' || project.slug === 'ai-discovery' ? (
+                    {project.slug === 'ai-discovery' ? (
+                      <div className="shopping-agent-phone">
+                        <div className="shopping-agent-phone-screen">
+                          <video
+                            src={visual.src}
+                            poster={`${import.meta.env.BASE_URL}media/work/shopping-agent-portrait-poster.jpg`}
+                            aria-label={visual.alt}
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            preload="metadata"
+                          />
+                        </div>
+                      </div>
+                    ) : project.slug === 'curation' ? (
                       <video
                         src={visual.src}
-                        poster={project.slug === 'curation' ? '/media/work/curation-vacation-shop-poster.jpg' : '/media/work/shopping-agent-poster.jpg'}
+                        poster="/media/work/curation-vacation-shop-poster.jpg"
                         aria-label={visual.alt}
                         autoPlay
                         muted

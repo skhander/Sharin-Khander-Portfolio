@@ -67,7 +67,7 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
           </div>
         </section>
 
-        <section className="curation-container" aria-labelledby="curation-impact">
+        <section className="curation-container curation-impact" aria-labelledby="curation-impact">
           <div className="curation-panel curation-grid">
             <h2 id="curation-impact" className="curation-full font-mono-archive text-[10px] uppercase tracking-[.16em] text-muted-foreground">Impact</h2>
             <dl className="curation-full curation-metrics">

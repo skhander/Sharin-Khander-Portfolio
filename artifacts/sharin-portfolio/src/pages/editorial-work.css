@@ -118,10 +118,21 @@
   background: hsl(var(--background));
 }
 
-.editorial-work .editorial-project.is-curation .editorial-project-visual,
-.editorial-work .editorial-project.is-shopping-agent .editorial-project-visual {
+.editorial-work .editorial-project.is-curation .editorial-project-visual {
   aspect-ratio: 16 / 9;
   background: transparent;
+}
+
+.editorial-work .editorial-project.is-shopping-agent .editorial-project-visual {
+  display: block;
+  aspect-ratio: auto;
+  background: transparent;
+}
+
+.editorial-work .editorial-project.is-shopping-agent .editorial-project-artwork {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .editorial-work .editorial-project.is-similar-designers .editorial-project-visual {
@@ -151,12 +162,47 @@
   transition: transform .8s cubic-bezier(.22, 1, .36, 1);
 }
 
-.editorial-work .editorial-project-visual[data-project="curation"] video,
-.editorial-work .editorial-project-visual[data-project="ai-discovery"] video {
+.editorial-work .editorial-project-visual[data-project="curation"] video {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+.editorial-work .shopping-agent-phone {
+  position: relative;
+  width: min(100%, 250px);
+  padding: 13px 7px 8px;
+  border: 1px solid #4b4b4b;
+  border-radius: 34px;
+  background: #202020;
+  box-shadow: 0 14px 30px hsl(var(--foreground) / .12);
+}
+
+.editorial-work .shopping-agent-phone::before {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  width: 32px;
+  height: 3px;
+  border-radius: 999px;
+  background: #5a5a5a;
+  content: '';
+  transform: translateX(-50%);
+}
+
+.editorial-work .shopping-agent-phone-screen {
+  overflow: hidden;
+  aspect-ratio: 310 / 674;
+  border-radius: 24px;
+  background: #fff;
+}
+
+.editorial-work .shopping-agent-phone-screen video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .editorial-work .editorial-project-visual[data-project="ai-discovery"] img,
