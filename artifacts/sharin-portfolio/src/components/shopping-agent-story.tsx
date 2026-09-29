@@ -47,23 +47,21 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
             <p>Traditional search only understood structured product attributes. It understands the words you type in, but not what you meant.</p>
           </div>
         </div>
-        <div className="shopping-agent-meaning mt-8 md:mt-10" aria-labelledby="shopping-agent-meaning-title">
-          <h3 id="shopping-agent-meaning-title" className="font-mono-archive text-sm font-medium tracking-[.02em] text-accent">From → To</h3>
-          <div className="shopping-agent-meaning-grid mt-4">
+        <div className="shopping-agent-meaning mt-8 md:mt-10">
+          <div className="shopping-agent-meaning-grid">
             <div className="shopping-agent-meaning-side">
-              <p className="font-mono-archive text-[10px] uppercase tracking-[.16em] text-muted-foreground">FROM</p>
-              <p className="mt-3 text-sm leading-[1.5] text-muted-foreground">A shopper enters a traditional search:</p>
+              <p className="text-sm leading-[1.5] text-muted-foreground">A shopper enters a traditional search:</p>
               <p className="mt-2 font-editorial text-[clamp(1.35rem,2.3vw,1.9rem)] leading-[1.2] tracking-[-.025em]">“black silk dress”</p>
             </div>
             <span className="shopping-agent-meaning-gap" aria-hidden="true" />
             <div className="shopping-agent-meaning-side">
-              <p className="font-mono-archive text-[10px] uppercase tracking-[.16em] text-muted-foreground">TO</p>
-              <p className="mt-3 text-sm leading-[1.5] text-muted-foreground">What the shopper actually has in mind:</p>
+              <p className="text-sm leading-[1.5] text-muted-foreground">What the shopper actually has in mind:</p>
               <p className="mt-2 font-editorial text-[clamp(1.35rem,2.3vw,1.9rem)] leading-[1.2] tracking-[-.025em]">“90s minimalist Calvin Klein look for a winter wedding.”</p>
             </div>
           </div>
         </div>
-        <div className="shopping-agent-comparison-wrap mt-10 md:mt-14" tabIndex={0} role="region" aria-label="Search comparison table; scroll horizontally to view both columns">
+        <h3 className="mx-auto mt-10 max-w-[1100px] font-mono-archive text-sm font-medium tracking-[.02em] text-accent md:mt-14">From → To</h3>
+        <div className="shopping-agent-comparison-wrap mt-4" tabIndex={0} role="region" aria-label="Search comparison table; scroll horizontally to view both columns">
           <table className="shopping-agent-comparison" aria-label="Traditional search and Shopping Agent comparison">
             <thead>
               <tr>
