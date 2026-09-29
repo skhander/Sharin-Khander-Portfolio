@@ -19,7 +19,7 @@ for (const viewport of viewports) {
     await expect(name).toContainText('Khander');
     await expect(page.getByTestId('text-products-count')).toHaveText('7');
     await expect(page.getByTestId('text-experiments-count')).toHaveText('40');
-    await expect(page.getByTestId('text-gmv-impact')).toHaveText('$180M');
+    await expect(page.getByTestId('text-gmv-impact')).toHaveText('$180m');
     await expect(page.getByTestId('text-work-tagline')).toHaveText('I build better ways to shop.');
     await expect(page.getByText('2026 YTD')).toBeVisible();
     await expect(page.getByText('36 WINS')).toBeVisible();

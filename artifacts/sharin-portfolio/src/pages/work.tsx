@@ -155,7 +155,7 @@ export default function Work() {
             <span className="work-proof-heading font-mono-archive">2026 Impact</span>
             <div className="work-proof-grid">
               <div className="work-proof-item">
-                <strong className="work-proof-number font-editorial" data-testid="text-gmv-impact">$180M</strong>
+                <strong className="work-proof-number font-editorial" data-testid="text-gmv-impact">$180m</strong>
                 <span className="work-proof-label">GMV</span>
               </div>
               <div className="work-proof-item">
