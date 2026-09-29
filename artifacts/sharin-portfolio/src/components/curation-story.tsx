@@ -60,7 +60,7 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
           </Link>
           <div className="curation-grid curation-hero-content">
             <p className="curation-full font-mono-archive text-[10px] uppercase tracking-[.16em] text-accent">CURATION</p>
-            <h1 id="curation-title" className="curation-full curation-hero-title max-w-[17ch] font-editorial text-[clamp(2.75rem,6vw,6.5rem)] leading-[.98] tracking-[-.05em]">How do you scale human taste without losing the human?</h1>
+            <h1 id="curation-title" className="curation-full curation-hero-title max-w-[17ch] font-editorial text-[clamp(2.75rem,6vw,6.5rem)] leading-[.98] tracking-[-.05em]">Scaling curation without losing taste</h1>
             <p className="curation-full curation-hero-intro text-base leading-[1.65] text-muted-foreground md:text-xl">Merchandisers were jumping between multiple tools to build a single assortment. I prototyped and led the 0→1 build of a new curation platform, then worked with ML to automate parts of the workflow without losing the editorial judgment behind each selection.</p>
           </div>
         </div>
