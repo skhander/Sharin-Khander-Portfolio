@@ -128,7 +128,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'visual-search',
-    title: 'Visual Search',
+    title: 'Image Search',
     company: 'The RealReal',
     category: 'AI / Discovery',
     description: 'Letting users shop their social media or IRL inspiration.',

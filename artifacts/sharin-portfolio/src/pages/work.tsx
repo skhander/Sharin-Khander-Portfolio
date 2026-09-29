@@ -130,7 +130,7 @@ const projectVisuals: Record<string, { src: string; alt: string; note?: string; 
 
 export default function Work() {
   const [workType, setWorkType] = useState<WorkType>(workTypes[0]);
-  usePageMeta('Work — Sharin Khander', 'Explore Sharin Khander’s product work across luxury marketplaces, shopping agents, visual search, designer discovery, and personalization.');
+  usePageMeta('Work — Sharin Khander', 'Explore Sharin Khander’s product work across luxury marketplaces, shopping agents, image search, designer discovery, and personalization.');
 
   const selectWorkType = (next: WorkType) => {
     setWorkType(next);

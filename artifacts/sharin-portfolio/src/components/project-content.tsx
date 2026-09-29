@@ -13,13 +13,15 @@ export function ProjectCanvas({ project, className = '' }: { project: Project; i
 }
 
 export function ProjectHero({ project }: { project: Project }) {
+  const showEyebrow = project.slug !== 'visual-search';
+
   return (
     <section className="mx-auto w-full max-w-[1440px] px-6 pb-12 pt-10 sm:px-10 md:pb-16 md:pt-14 lg:px-16">
       <Link href="/" className="inline-flex items-center gap-2 font-mono-archive text-[10px] uppercase tracking-[.15em] text-muted-foreground archive-link" data-testid="link-back-archive"><ArrowLeft size={14} /> All work</Link>
       <div className="mt-14 grid grid-cols-1 gap-7 md:mt-20 md:grid-cols-[1.2fr_.8fr] md:items-end md:gap-12">
         <div>
-          <p className="font-mono-archive text-[10px] uppercase tracking-[.15em] text-accent">{project.company} <span className="mx-2 text-border">/</span> {project.category}</p>
-          <h1 className="mt-6 max-w-3xl font-editorial text-[clamp(3.8rem,8vw,8rem)] leading-[.84] tracking-[-.05em]">{project.title}</h1>
+          {showEyebrow && <p className="font-mono-archive text-[10px] uppercase tracking-[.15em] text-accent">{project.company} <span className="mx-2 text-border">/</span> {project.category}</p>}
+          <h1 className={`${showEyebrow ? 'mt-6 ' : ''}max-w-3xl font-editorial text-[clamp(3.8rem,8vw,8rem)] leading-[.84] tracking-[-.05em]`}>{project.title}</h1>
         </div>
         <div className="max-w-md md:pb-2">
           <p className="text-lg leading-[1.4] text-muted-foreground sm:text-xl">{project.description}</p>
