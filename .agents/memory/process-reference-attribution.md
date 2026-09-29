@@ -3,8 +3,8 @@ name: Process reference attribution
 description: How to interpret the externally sourced tool screenshots used for the portfolio About process.
 ---
 
-Treat service names in the supplied process screenshots as examples, not verified claims about Sharin's own tools. Describe the process in terms of design context, media, data, code history, and hosting unless the user confirms a specific service.
+The user explicitly requested that Section 5 of the About page name Supabase for backend/data/logins, GitHub for code history and rollbacks, and Vercel for deployment from GitHub. Those names and roles are approved page content, but they do not establish that the running portfolio currently uses those services.
 
-**Why:** The screenshots came from another creator's social post. The user asked to describe their process using them as references, but did not confirm they use every pictured service. Attributing those services as their actual stack would be misleading.
+**Why:** The first screenshots came from another creator's social post; a later, direct instruction clarified which tool descriptions belong in the About page. That copy direction does not request an infrastructure migration.
 
-**How to apply:** When revising the About page or adding process details, retain useful concepts from the references while separating examples from claims about Sharin's practice.
+**How to apply:** Preserve the named tools and roles when revising Section 5. Do not configure integrations, change deployment providers, or replace the app's data storage solely because the About page describes those tools.

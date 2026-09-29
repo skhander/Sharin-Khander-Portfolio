@@ -14,3 +14,45 @@ mtime_ms = 1790700674024
 storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:c68ef5f3-94cf-4e53-98d9-cf139a80adf0/9ee79b52-9f64-4c9d-863f-68d99cd1a481/8a75ba73-f01b-401e-803f-d48e0dc4e986"
 storage_version_token = "1790700753602357"
 content_type = "image/jpeg"
+
+[[outputs]]
+id = "1Ubxhl0qPyrLOChA7Jp2g"
+uri = "file://artifacts/sharin-portfolio/public/media/about/supabase-logo.png"
+type = "image"
+title = "Supabase logo crop"
+description = "Logo-only crop from the supplied image."
+logical_id = "87c45ad5-e6ca-4255-b6c8-2af394eb36c1"
+content_hash = "sha256:13cd28425c3a16cc7fe45bd927f49c03e3cb560a35cb97c42c1c45811b16757b"
+size = 14915
+mtime_ms = 1790701752611
+storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:c68ef5f3-94cf-4e53-98d9-cf139a80adf0/87c45ad5-e6ca-4255-b6c8-2af394eb36c1/9c3883f1-dc1c-4036-9b87-d4b468818fb3"
+storage_version_token = "1790702048321098"
+content_type = "image/png"
+
+[[outputs]]
+id = "lToRAsTN4UgSjg-hL4ZSC"
+uri = "file://artifacts/sharin-portfolio/public/media/about/github-logo.png"
+type = "image"
+title = "GitHub logo crop"
+description = "Logo-only crop from the supplied image."
+logical_id = "c50dae9e-75f3-469f-998c-f8e186f04557"
+content_hash = "sha256:955126d164f6d7f3cef0d8d08142be3b0753320ddb6f6a65fd084fc988de62d9"
+size = 12646
+mtime_ms = 1790701752663
+storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:c68ef5f3-94cf-4e53-98d9-cf139a80adf0/c50dae9e-75f3-469f-998c-f8e186f04557/ca6bf343-480b-406d-ad22-309c9276d65c"
+storage_version_token = "1790702048902383"
+content_type = "image/png"
+
+[[outputs]]
+id = "NimJdGrKQ7FjN8tnmoqv0"
+uri = "file://artifacts/sharin-portfolio/public/media/about/vercel-logo.png"
+type = "image"
+title = "Vercel logo crop"
+description = "Logo-only crop from the supplied image."
+logical_id = "0e3137ba-6527-437b-846f-76bf17d1b6c9"
+content_hash = "sha256:5e45d26e24b1e334519ccfe29ecd1d9265573b68637cba668657a58dd38da860"
+size = 7356
+mtime_ms = 1790701752711
+storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:c68ef5f3-94cf-4e53-98d9-cf139a80adf0/0e3137ba-6527-437b-846f-76bf17d1b6c9/bf203be9-b1b1-4ebc-a22c-5c280c36e8d5"
+storage_version_token = "1790702049466523"
+content_type = "image/png"

@@ -124,19 +124,26 @@ export default function About() {
           </div>
         </div>
         <div className="about-step-grid about-diagram-grid">
-          <p className="about-step-lede">Real data first. Polish last. Security before launch.</p>
-          <figure className="about-diagram about-ship-diagram" role="img" aria-label="Sequence: connect real data, logins, and APIs; add motion, media, and interactions after the basics work; check security; launch and learn from actual use.">
-            <div className="about-ship-node"><span>Connect</span><strong>Data · logins · APIs</strong></div>
-            <span className="about-ship-arrow" aria-hidden="true" />
-            <div className="about-ship-node"><span>Polish</span><strong>Motion · media · interactions</strong></div>
-            <span className="about-ship-arrow" aria-hidden="true" />
-            <div className="about-ship-node"><span>Check</span><strong>Security</strong></div>
-            <span className="about-ship-arrow" aria-hidden="true" />
-            <div className="about-ship-end">
-              <span>Launch</span>
-              <strong>Learn from actual use</strong>
-            </div>
-          </figure>
+          <table className="about-tools-table">
+            <caption className="sr-only">Tools for backend, code history, and deployment</caption>
+            <thead>
+              <tr><th scope="col">Tool</th><th scope="col">What it does</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"><span className="about-tool-name"><img src="/media/about/supabase-logo.png" alt="" width="56" height="56" loading="lazy" />Supabase</span></th>
+                <td>Backend for data and logins.</td>
+              </tr>
+              <tr>
+                <th scope="row"><span className="about-tool-name"><img src="/media/about/github-logo.png" alt="" width="56" height="56" loading="lazy" />GitHub</span></th>
+                <td>Code repository. Roll back mistakes.</td>
+              </tr>
+              <tr>
+                <th scope="row"><span className="about-tool-name"><img src="/media/about/vercel-logo.png" alt="" width="56" height="56" loading="lazy" />Vercel</span></th>
+                <td>Easy deploys. GitHub changes go live.</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </section>
 

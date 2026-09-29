@@ -548,8 +548,7 @@
   color: hsl(var(--primary-foreground));
 }
 .about-flow-node-accent > span { color: hsl(var(--primary-foreground) / .74); }
-.about-flow-arrow,
-.about-ship-arrow {
+.about-flow-arrow {
   position: relative;
   display: block;
   width: 23px;
@@ -557,8 +556,7 @@
   align-self: center;
   border-top: 1px solid hsl(var(--accent) / .55);
 }
-.about-flow-arrow::after,
-.about-ship-arrow::after {
+.about-flow-arrow::after {
   position: absolute;
   top: -4px;
   right: 0;
@@ -635,43 +633,38 @@
   padding: 0 10px;
   background: hsl(var(--secondary) / .2);
 }
-.about-ship-diagram {
-  display: flex;
-  align-items: stretch;
-  gap: 10px;
+.about-tools-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  text-align: left;
 }
-.about-ship-node,
-.about-ship-end {
-  display: flex;
-  min-width: 0;
-  flex: 1 1 0;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 18px;
-  padding: 13px;
-  border: 1px solid hsl(var(--foreground) / .15);
-  background: hsl(var(--background) / .76);
-}
-.about-ship-node > span,
-.about-ship-end > span {
-  color: hsl(var(--accent));
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: .1em;
+.about-tools-table th:first-child { width: 42%; }
+.about-tools-table thead th {
+  padding: 0 12px 15px 0;
+  color: hsl(var(--muted-foreground));
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .12em;
   text-transform: uppercase;
 }
-.about-ship-node strong,
-.about-ship-end strong {
-  font-size: clamp(10px, 1.05vw, 13px);
-  font-weight: 600;
-  line-height: 1.4;
+.about-tools-table tbody tr { border-top: 1px solid var(--about-rule); }
+.about-tools-table tbody tr:last-child { border-bottom: 1px solid var(--about-rule); }
+.about-tools-table tbody th,
+.about-tools-table tbody td {
+  padding: 20px 12px 20px 0;
+  vertical-align: middle;
 }
-.about-ship-end {
-  border-color: hsl(var(--accent) / .5);
-  background: hsl(var(--primary));
-  color: hsl(var(--primary-foreground));
+.about-tools-table tbody th { font-size: clamp(17px, 1.7vw, 21px); font-weight: 600; }
+.about-tools-table tbody td { font-size: clamp(15px, 1.4vw, 18px); line-height: 1.45; }
+.about-tool-name { display: flex; align-items: center; gap: 18px; }
+.about-tool-name img {
+  display: block;
+  width: 56px;
+  height: 56px;
+  flex: none;
+  border-radius: 8px;
 }
-.about-ship-end > span { color: hsl(var(--primary-foreground) / .74); }
 .about-work-link {
   margin-top: 4px;
 }
@@ -710,8 +703,7 @@
     transform: rotate(135deg);
   }
   .about-diagram-caption { text-align: left; }
-  .about-build-diagram,
-  .about-ship-diagram {
+  .about-build-diagram {
     flex-direction: column;
     gap: 10px;
   }
@@ -720,8 +712,7 @@
     flex: none;
   }
   .about-flow-node strong { font-size: 14px; }
-  .about-flow-arrow,
-  .about-ship-arrow {
+  .about-flow-arrow {
     width: 1px;
     height: 15px;
     flex: 0 0 15px;
@@ -729,8 +720,7 @@
     border-top: 0;
     border-left: 1px solid hsl(var(--accent) / .55);
   }
-  .about-flow-arrow::after,
-  .about-ship-arrow::after {
+  .about-flow-arrow::after {
     top: auto;
     right: -3px;
     bottom: 0;
@@ -762,17 +752,11 @@
     transform: rotate(135deg);
   }
   .about-loop-return { margin-top: 18px; }
-  .about-ship-node,
-  .about-ship-end {
-    min-height: 62px;
-    flex: none;
-    flex-direction: row;
-    align-items: center;
-    gap: 14px;
-    padding: 12px;
-  }
-  .about-ship-node strong,
-  .about-ship-end strong { font-size: 12px; }
+  .about-tools-table th:first-child { width: 44%; }
+  .about-tools-table tbody th,
+  .about-tools-table tbody td { padding-block: 16px; }
+  .about-tool-name { gap: 10px; }
+  .about-tool-name img { width: 40px; height: 40px; }
   .about-brief-figure img {
     min-height: 210px;
     aspect-ratio: 1.15 / 1;

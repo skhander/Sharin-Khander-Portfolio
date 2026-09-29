@@ -12,4 +12,4 @@
 - [Product-only backdrop crops](product-only-backdrop-crops.md) — listing screenshot rows need individual visual checks to exclude labels without clipping products.
 - [Product backdrop legibility](product-backdrop-legibility.md) — keep product texture through Impact only; the numbered case study needs a plain background.
 - [Publish layer warnings](publish-layer-warnings.md) — a broken temporary audio symlink warning can occur in successful publishes; compare build history before blaming it.
-- [Process reference attribution](process-reference-attribution.md) — social-post tool screenshots inform the About process, but do not establish Sharin’s actual software stack.
+- [Process reference attribution](process-reference-attribution.md) — named tools are approved About-page copy, not proof of the running app’s infrastructure.
