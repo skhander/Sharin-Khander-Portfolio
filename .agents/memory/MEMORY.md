@@ -11,3 +11,4 @@
 - [Portfolio typeface choice](portfolio-typeface-choice.md) — Manrope is the intended site-wide face; do not restore local Avenir or editorial serifs.
 - [Product-only backdrop crops](product-only-backdrop-crops.md) — listing screenshot rows need individual visual checks to exclude labels without clipping products.
 - [Product backdrop legibility](product-backdrop-legibility.md) — keep product texture through Impact only; the numbered case study needs a plain background.
+- [Publish layer warnings](publish-layer-warnings.md) — a broken temporary audio symlink warning can occur in successful publishes; compare build history before blaming it.
