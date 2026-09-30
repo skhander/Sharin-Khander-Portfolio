@@ -160,7 +160,6 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
         <div className="curation-container">
           <div className="curation-heading-row">
             <BeatLabel number="04" as="h2" id="curation-owned-title">What I Owned</BeatLabel>
-            <span className="curation-eyebrow">01 → 04 / end to end</span>
           </div>
           <ol className="curation-ownership">
             <li>
@@ -215,7 +214,7 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
               </div>
             </article>
             <article className="curation-goal">
-              <span>03</span><div><h3>Sell-through on edits</h3><p>Use recommendations to improve assortment quality</p></div>
+              <span>03</span><div><h3>Sell-through on edits</h3><p>Improved assortment quality with recommendations.</p></div>
             </article>
           </div>
         </div>
