@@ -94,12 +94,6 @@ export function SimilarDesignersStory({ nextProject }: { project: Project; nextP
         <span className="mt-5 block">Next layering in <strong className="font-semibold">visual similarity → attribute similarity → personalized recommendations.</strong></span>
       </StorySection>
 
-      <StorySection id="similar-hard-part" heading="The hard part">
-        <span className="block">Was it the model or the experience?</span>{' '}
-        <span className="mt-5 block">Our first recommendations were generic. We couldn't tell if shoppers didn't want recommendations or if they just weren't useful enough.</span>{' '}
-        <span className="mt-5 block">So we tested both the recommendation quality and the UI before investing deeper in the model.</span>
-      </StorySection>
-
       <StorySection id="similar-tradeoffs" heading="Trade-offs">
         <div className="similar-tradeoff-block">
           <h3>Generic vs. personalized</h3>
