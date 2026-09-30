@@ -261,7 +261,7 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
               <h2 id="curation-result-title" className="curation-title curation-result-title"><span>2×</span><br />More onsite<br />edits</h2>
               <BulletList items={[
                 'Better assortment quality',
-                'Fewer sold-out products',
+                'More expansive presence on homepage & nav',
               ]} />
               <div className="curation-secondary-metric"><strong>+30%</strong><span>higher sell-through on assortments</span></div>
             </div>
