@@ -202,7 +202,7 @@ export default function Work() {
               <>
                 <div className="site-eyebrow editorial-project-kicker font-mono-archive text-accent">
                   <span>{number}</span>
-                  {project.slug === 'virtual-try-on' && <ArrowUpRight size={16} strokeWidth={1.5} className="project-arrow" aria-hidden="true" />}
+                  {(project.slug === 'virtual-try-on' || project.slug === 'ai-advent-calendar') && <ArrowUpRight size={16} strokeWidth={1.5} className="project-arrow" aria-hidden="true" />}
                 </div>
                 <h3 className="font-editorial">{project.title}</h3>
                 <p className="editorial-project-description text-muted-foreground">{project.description}</p>
@@ -219,6 +219,10 @@ export default function Work() {
                   <Link href="/work/virtual-try-on" className="editorial-project-copy personal-project-link" data-testid="link-project-virtual-try-on">
                     {copy}
                   </Link>
+                ) : project.slug === 'ai-advent-calendar' ? (
+                  <a href="https://ai-pm-advent-calendar.replit.app/" target="_blank" rel="noopener noreferrer" className="editorial-project-copy personal-project-link" data-testid="link-project-ai-advent-calendar">
+                    {copy}
+                  </a>
                 ) : (
                   <div className="editorial-project-copy">{copy}</div>
                 )}

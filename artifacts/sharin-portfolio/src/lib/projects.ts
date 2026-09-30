@@ -74,7 +74,7 @@ export const personalProjects: PersonalProject[] = [
     slug: 'ai-advent-calendar',
     title: 'AI Advent Calendar',
     description: 'Master fundamental AI concepts in 9 days.',
-    badges: ['AI Education', '9 Days'],
+    badges: ['Ed Tech'],
     preview: 'video',
   },
   {
