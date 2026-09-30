@@ -26,7 +26,7 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
         <div className="mt-14 md:mt-20">
           <p className="mb-4 font-mono-archive text-[16px] text-accent">Shopping agent</p>
           <h1 id="shopping-agent-title" className="max-w-5xl text-[clamp(2rem,4vw,3.5rem)] leading-[1.2] tracking-[-.025em]" data-testid="text-project-title">
-            <span className="block font-semibold text-foreground">Traditional search understands product attributes. Shoppers think in occasions, aesthetics, and ideas.</span>
+            <span className="block font-normal text-foreground">Traditional search understands <strong className="font-semibold">product attributes.</strong> Shoppers think in <strong className="font-semibold">occasions, aesthetics, and ideas.</strong></span>
             {' '}
             <span className="mt-3 block font-normal text-muted-foreground">I built a shopping agent that bridges the gap.</span>
           </h1>
@@ -111,29 +111,25 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
       <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-12 sm:px-10 md:py-16 lg:px-16" aria-labelledby="shopping-learning">
         <div className="grid gap-5 lg:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] lg:gap-12">
           <h2 id="shopping-learning" className="font-mono-archive text-[16px] font-semibold text-accent">04 — Learn</h2>
-          <div className="max-w-2xl">
-            <h3 className="font-editorial text-[clamp(1.6rem,2.5vw,2.25rem)] font-semibold leading-[1.2] tracking-[-.025em]">Teaching the agent how to shop</h3>
-            <p className="mt-4 text-base leading-[1.6]">I built a library of representative shopping questions and expected behaviors to evaluate whether the agent was actually helping shoppers—not just generating convincing answers.</p>
-          </div>
-        </div>
-        <figure className="mt-8 max-w-[1100px] md:mt-10">
-          <a href={media('system-instructions-sample.png')} target="_blank" rel="noopener noreferrer" className="block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
-            <img src={media('system-instructions-sample.png')} alt="Ask TRR spreadsheet showing system instructions, shopper questions, and assistant sample responses." width={1766} height={1168} loading="lazy" className="block h-auto w-full border border-border" />
-          </a>
-          <a href={media('ask-trr-agent-instructions.xlsx')} download="Ask_TRR_Agent_Instructions.xlsx" className="mt-4 inline-flex items-center gap-2 text-base font-medium text-accent underline underline-offset-4 hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
-            Download the Excel sheet <Download size={15} aria-hidden="true" />
-          </a>
-        </figure>
-        <div className="mt-10 grid gap-5 md:mt-14 lg:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] lg:gap-12">
-          <div className="max-w-2xl space-y-5 text-base leading-[1.6] lg:col-start-2 md:text-lg">
+          <div className="max-w-2xl space-y-5 text-base leading-[1.6] md:text-lg">
+            <p><strong className="font-semibold text-foreground">Teaching the agent how to shop</strong></p>
+            <p>I built a library of representative shopping questions and expected behaviors to evaluate whether the agent was actually helping shoppers—not just generating convincing answers.</p>
+            <figure className="pt-3">
+              <a href={media('system-instructions-sample.png')} target="_blank" rel="noopener noreferrer" className="block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
+                <img src={media('system-instructions-sample.png')} alt="Ask TRR spreadsheet showing system instructions, shopper questions, and assistant sample responses." width={1766} height={1168} loading="lazy" className="block h-auto w-full border border-border" />
+              </a>
+              <a href={media('ask-trr-agent-instructions.xlsx')} download="Ask_TRR_Agent_Instructions.xlsx" className="mt-4 inline-flex items-center gap-2 text-base font-medium text-accent underline underline-offset-4 hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
+                Download the Excel sheet <Download size={15} aria-hidden="true" />
+              </a>
+            </figure>
             <p>Natural language unlocked new kinds of shopping intent.</p>
             <p className="text-muted-foreground">The conversational interface showed fewer products and made comparison harder.</p>
-            <p className="border-t border-border pt-5 font-editorial text-[clamp(1.5rem,2.2vw,2rem)] font-semibold leading-[1.25] tracking-[-.025em]">Chat is great for understanding. Feeds are great for shopping.</p>
+            <p><strong className="font-semibold text-foreground">Chat is great for understanding. Feeds are great for shopping.</strong></p>
             <figure>
               <img src={media('customer-feedback.png')} alt="Customer feedback screenshot listing issues with responses, examples, AI search inventory, and the number of products shown." width={676} height={244} loading="lazy" className="block h-auto w-full border border-border" />
               <figcaption className="mt-3">Customer feedback pointed to the same thing: shoppers wanted more products, easier comparison, and a more visual way to explore.</figcaption>
             </figure>
-            <p className="border-t border-accent pt-5 font-editorial text-[clamp(1.6rem,2.6vw,2.3rem)] font-semibold leading-[1.25] tracking-[-.03em]">The future isn't a chatbot replacing a website. It's conversational intelligence embedded inside a visual shopping experience.</p>
+            <p><strong className="font-semibold text-foreground">The future isn't a chatbot replacing a website. It's conversational intelligence embedded inside a visual shopping experience.</strong></p>
           </div>
         </div>
       </section>
