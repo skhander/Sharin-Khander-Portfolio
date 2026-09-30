@@ -190,7 +190,7 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
           <div className="curation-heading-row">
             <BeatLabel number="05">The goals</BeatLabel>
           </div>
-          <h2 id="curation-goals-title" className="curation-title curation-goals-title">Key performance indicators</h2>
+          <h2 id="curation-goals-title" className="curation-title curation-goals-title">KPIs</h2>
           <div className="curation-goal-list">
             <article className="curation-goal">
               <span>01</span>
