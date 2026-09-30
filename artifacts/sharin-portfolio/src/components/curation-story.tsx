@@ -63,8 +63,7 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
             <h1 id="curation-title" className="curation-full curation-hero-title max-w-[17ch] font-editorial text-[clamp(2.75rem,6vw,6.5rem)] leading-[.98] tracking-[-.05em]">Scaling editorial taste</h1>
             <p className="curation-full curation-hero-intro text-base leading-[1.65] text-muted-foreground md:text-xl">
               <span className="block">Merchandisers used <strong className="font-semibold">several tools to build one assortment</strong>.</span>{' '}
-              <span className="mt-5 block">I <strong className="font-semibold">shadowed the team</strong>, prototyped a more efficient <strong className="font-semibold">workflow</strong>, and led the 0→1 build.</span>{' '}
-              <span className="mt-5 block">Then automated the repetitive work—so merchandisers can spend <strong className="font-semibold">more time exercising their judgement.</strong></span>
+              <span className="mt-5 block">I <strong className="font-semibold">shadowed the team</strong>, prototyped a more efficient <strong className="font-semibold">workflow</strong>, and led the 0→1 build.</span>
             </p>
           </div>
         </div>
