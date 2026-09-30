@@ -73,7 +73,6 @@
   gap: clamp(28px, 5vw, 72px);
 }
 
-.vto-bet { padding-block: 56px; }
 .vto-build { padding-block: 42px; }
 
 .vto-section-title {
@@ -220,7 +219,6 @@
   .vto-question { max-width: 28ch; font-size: clamp(1.25rem, 5vw, 1.5rem); }
   .vto-description { font-size: 16px; }
   .vto-section-grid { grid-template-columns: 1fr; gap: 16px; }
-  .vto-bet { padding-block: 36px 40px; }
   .vto-build { padding-block: 34px 38px; }
   .vto-section-title { font-size: 1.45rem; }
   .vto-section-statement { font-size: clamp(1.4rem, 6vw, 2rem); }

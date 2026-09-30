@@ -77,27 +77,18 @@ export default function VirtualTryOn() {
               </h1>
             </div>
             <div className="vto-intro-copy">
-              <p className="vto-question font-editorial">What if you could try on something before you bought it?</p>
+              <p className="vto-question font-editorial">See it on before you buy it.</p>
               <p className="vto-description">
-                I built a Chrome extension that lets you upload a photo of yourself and virtually try on products from The RealReal and ShopMy.
+                I built a Chrome extension that lets you upload a photo of yourself and virtually try on products from any website.
               </p>
             </div>
           </div>
         </div>
       </header>
 
-      <section className="vto-editorial-section vto-bet" id="the-bet" aria-labelledby="vto-bet-title">
-        <div className="vto-shell vto-section-grid">
-          <h2 id="vto-bet-title" className="vto-section-title font-editorial">The bet</h2>
-          <p className="vto-section-statement font-editorial">
-            Make try-on part of the shopping experience—not a separate destination.
-          </p>
-        </div>
-      </section>
-
       <section className="vto-editorial-section vto-build" aria-labelledby="vto-build-title">
         <div className="vto-shell vto-section-grid">
-          <h2 id="vto-build-title" className="vto-section-title font-editorial">The build</h2>
+          <h2 id="vto-build-title" className="vto-section-title font-editorial">Demo</h2>
           <div className="vto-build-content">
             <p className="vto-build-copy">
               I built the first version end-to-end: upload a photo → select a product → generate a try-on → see it in context.
