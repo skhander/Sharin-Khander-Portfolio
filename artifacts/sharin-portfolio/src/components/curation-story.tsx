@@ -159,14 +159,6 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
               caption="The workflow · Click to play"
             />
           </div>
-          <div className="curation-flow" aria-label="Find, recommend, curate, publish">
-            {['Find', 'Recommend', 'Curate', 'Publish'].map((step, index) => (
-              <div className="curation-flow-step" key={step}>
-                <span>{step}</span>
-                {index < 3 && <ArrowRight size={16} aria-hidden="true" />}
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
