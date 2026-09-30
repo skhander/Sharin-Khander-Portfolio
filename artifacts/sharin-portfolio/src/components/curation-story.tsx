@@ -126,7 +126,7 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
           <BeatLabel number="02">The shift</BeatLabel>
           <div>
             <h2 id="curation-shift-title" className="curation-title curation-shift-title">
-              Merchandisers spend <strong>less time searching</strong> and <strong>more time using their taste</strong> to curate the assortment.
+              We set out to help merchandisers spend <strong>less time searching for products</strong> and <strong>more time curating.</strong>
             </h2>
           </div>
         </div>
