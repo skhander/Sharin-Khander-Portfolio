@@ -217,7 +217,16 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
               </div>
             </article>
             <article className="curation-goal">
-              <span>03</span><div><h3>Sell-through on edits</h3><p>Improved assortment quality with recommendations.</p></div>
+              <span>03</span>
+              <div>
+                <h3 className="curation-goal-with-trend">
+                  Sell-through on edits
+                  <span className="curation-goal-trend" role="img" aria-label="increasing">
+                    <ArrowUp size={17} strokeWidth={1.8} aria-hidden="true" />
+                  </span>
+                </h3>
+                <p>Improved assortment quality with recommendations.</p>
+              </div>
             </article>
           </div>
         </div>
