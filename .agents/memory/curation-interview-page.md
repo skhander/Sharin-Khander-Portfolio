@@ -20,3 +20,9 @@ In the problem beat, present assortment production time against shelf-life as a 
 **Why:** The user clarified that the contrast between how long an assortment takes to produce and how briefly it stays live is the point they need to remember in an interview.
 
 **How to apply:** Keep those two measures visibly paired and clearly labeled whenever the opening metrics are rearranged.
+
+The whole Curation Tool page should follow the homepage's visual language, not a separate dark or presentation-style theme. Continuity must be obvious immediately after opening the homepage card, not only after scrolling.
+
+**Why:** The user repeatedly objected that entering the detail page felt like entering a different site. Matching a few colors or headings is insufficient if the opening hierarchy and section rhythm change abruptly.
+
+**How to apply:** Carry the homepage card's project identity and typographic hierarchy into the opening viewport. Use the homepage's white canvas, Manrope, charcoal text, thin rules, and restrained existing burgundy, pink, and olive accents across all eight beats while keeping text selectable and media functional.

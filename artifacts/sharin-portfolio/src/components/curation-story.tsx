@@ -87,7 +87,7 @@ function BulletList({ items }: { items: ReactNode[] }) {
   );
 }
 
-export function CurationStory({ nextProject }: { project: Project; nextProject: Project }) {
+export function CurationStory({ project, nextProject }: { project: Project; nextProject: Project }) {
   return (
     <main className="page-reveal curation-story">
       <section className="curation-beat curation-problem" aria-labelledby="curation-problem-title">
@@ -95,13 +95,17 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
           <Link href="/" className="curation-back archive-link">
             <ArrowLeft size={14} aria-hidden="true" /> All work
           </Link>
+          <header className="curation-project-intro">
+            <p className="curation-project-mark">{project.company}</p>
+            <h1>{project.title}</h1>
+            <p className="curation-project-summary">Complete assortments in minutes.</p>
+          </header>
           <div className="curation-problem-top">
             <BeatLabel number="01">The Problem</BeatLabel>
-            <p className="curation-project-mark">The RealReal <span>/</span> Curation Tool</p>
           </div>
-          <h1 id="curation-problem-title" className="curation-title curation-problem-title">
+          <h2 id="curation-problem-title" className="curation-title curation-problem-title">
             Curation was manual, slow, and difficult to scale.
-          </h1>
+          </h2>
           <div className="curation-problem-bottom">
             <BulletList items={[
               <>Merchandisers spent <strong>weeks building assortments</strong> that might only live for a few days.</>,
@@ -116,7 +120,6 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
               <p className="curation-problem-comparison">Production time exceeds shelf-life.</p>
             </div>
           </div>
-          <div className="curation-next-cue" aria-hidden="true"><span>Then the question changed</span><ArrowDown size={15} /></div>
         </div>
       </section>
 
@@ -128,10 +131,9 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
               From finding products → curating
             </h2>
             <p className="curation-shift-line">
-              I wanted merchandisers spending <strong>less time finding products</strong> and more time using their <strong>taste to curate the assortment.</strong>
+              I wanted merchandisers spending <strong>less time searching</strong> and more time using their <strong>taste to curate the assortment.</strong>
             </p>
           </div>
-          <div className="curation-shift-stamp" aria-hidden="true">The insight<br />that changed<br />the workflow</div>
         </div>
       </section>
 
@@ -139,11 +141,10 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
         <div className="curation-container">
           <div className="curation-heading-row">
             <BeatLabel number="03">What I Built</BeatLabel>
-            <span className="curation-eyebrow">From fragmented tools to one place</span>
           </div>
           <div className="curation-built-layout">
             <div className="curation-built-copy">
-              <h2 id="curation-built-title" className="curation-title curation-built-title">ONE PLACE<br />TO CURATE</h2>
+              <h2 id="curation-built-title" className="curation-title curation-built-title">One place<br />to curate</h2>
               <BulletList items={[
                 'End-to-end curation workflow',
                 'Centralized the work into one tool',
@@ -175,7 +176,7 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
             <BeatLabel number="04">What I Owned</BeatLabel>
             <span className="curation-eyebrow">01 → 04 / end to end</span>
           </div>
-          <h2 id="curation-owned-title" className="curation-title curation-owned-title">I OWNED IT <em>END TO END.</em></h2>
+          <h2 id="curation-owned-title" className="curation-title curation-owned-title">I owned it <em>end to end.</em></h2>
           <ol className="curation-ownership">
             <li>
               <span className="curation-ownership-number">01</span>
@@ -203,7 +204,7 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
             <BeatLabel number="05">The Goals</BeatLabel>
             <span className="curation-eyebrow">Three measures of a better workflow</span>
           </div>
-          <h2 id="curation-goals-title" className="curation-title curation-goals-title">THREE THINGS HAD<br />TO GET BETTER.</h2>
+          <h2 id="curation-goals-title" className="curation-title curation-goals-title">Three things had<br />to get better.</h2>
           <div className="curation-goal-list">
             <article className="curation-goal">
               <span>01</span><div><h3>Less time</h3><p>Cut curation time</p></div>
@@ -226,7 +227,7 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
           </div>
           <div className="curation-hard-layout">
             <div className="curation-hard-story">
-              <h2 id="curation-hard-title" className="curation-title curation-hard-title">THE RECS<br />WEREN'T<br /><em>GOOD ENOUGH.</em></h2>
+              <h2 id="curation-hard-title" className="curation-title curation-hard-title">The recs<br />weren't<br /><em>good enough.</em></h2>
               <div className="curation-contrast" aria-label="Machine recommendation: technically similar. Human curation: actually feels right.">
                 <div><span>Machine recommendation</span><strong>“Technically similar”</strong></div>
                 <ArrowDown size={17} aria-hidden="true" />
@@ -264,7 +265,7 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
           </div>
           <div className="curation-result-layout">
             <div className="curation-result-copy">
-              <h2 id="curation-result-title" className="curation-title curation-result-title"><span>2×</span><br />MORE ONSITE<br />EDITS</h2>
+              <h2 id="curation-result-title" className="curation-title curation-result-title"><span>2×</span><br />More onsite<br />edits</h2>
               <BulletList items={[
                 'Twice as many onsite edits vs. a year earlier',
                 'Better assortment quality',
@@ -285,9 +286,8 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
         <div className="curation-container">
           <div className="curation-heading-row">
             <BeatLabel number="08">What's Next</BeatLabel>
-            <span className="curation-eyebrow">The forward view</span>
           </div>
-          <h2 id="curation-next-title" className="curation-title curation-next-title">THE END STATE ISN'T<br />A BETTER SEARCH BOX.</h2>
+          <h2 id="curation-next-title" className="curation-title curation-next-title">The end state isn't<br />a better search box.</h2>
           <div className="curation-evolution" aria-label="Evolution from tools to systems to agents">
             <div><span>Tools</span><p>Help people do the work</p></div>
             <ArrowRight aria-hidden="true" />
