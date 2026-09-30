@@ -1,7 +1,8 @@
 import { useRef, useState, type KeyboardEvent } from 'react';
 import { ArrowUpRight, Pause, Play } from 'lucide-react';
 import { Link } from 'wouter';
-import dreamCatcherMockup from '@assets/Dream_Catcher_phone_no_bg.png';
+import dreamCatcherJournal from '@assets/Dream_Catcher_journal_frame.png';
+import dreamCatcherHome from '@assets/Dream_Catcher_home_aligned.png';
 import { personalProjects, publishedProjects } from '@/lib/projects';
 import { usePageMeta } from '@/lib/use-page-meta';
 import './editorial-work.css';
@@ -247,8 +248,13 @@ export default function Work() {
                   ) : project.preview === 'mockup' ? (
                     <div className="personal-dream-preview">
                       <img
-                        src={dreamCatcherMockup}
-                        alt="Dream Catcher phone mockup showing a dream journal, a dream recording prompt, and recurring themes."
+                        src={dreamCatcherJournal}
+                        alt="Dream Catcher Journal screen with a list of illustrated dreams."
+                        loading="lazy"
+                      />
+                      <img
+                        src={dreamCatcherHome}
+                        alt="Dream Catcher Home screen with a dream recording prompt and an interpretation."
                         loading="lazy"
                       />
                     </div>
