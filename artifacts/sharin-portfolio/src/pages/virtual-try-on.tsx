@@ -106,22 +106,24 @@ export default function VirtualTryOn() {
       </section>
 
       <section className="vto-demo vto-shell" aria-label="Virtual Try-On working demo">
-        <div className="vto-video-figure vto-video-main">
-          <DemoVideo
-            file="virtual-try-on-grid.mp4"
-            poster="virtual-try-on-grid-poster.jpg"
-            label="Virtual Try-On demo recording showing ShopMy product browsing and try-on"
-            testId="video-virtual-try-on-grid"
-          />
-        </div>
-        <div className="vto-video-figure vto-video-detail">
+        <figure className="vto-video-figure vto-video-detail">
+          <figcaption className="vto-video-caption">PDP</figcaption>
           <DemoVideo
             file="virtual-try-on-pdp.mp4"
             poster="virtual-try-on-pdp-poster.jpg"
             label="Virtual Try-On demo recording showing a ShopMy product detail page and try-on"
             testId="video-virtual-try-on-product-page"
           />
-        </div>
+        </figure>
+        <figure className="vto-video-figure vto-video-main">
+          <figcaption className="vto-video-caption">Browse Page</figcaption>
+          <DemoVideo
+            file="virtual-try-on-grid.mp4"
+            poster="virtual-try-on-grid-poster.jpg"
+            label="Virtual Try-On demo recording showing ShopMy product browsing and try-on"
+            testId="video-virtual-try-on-grid"
+          />
+        </figure>
       </section>
 
       <section className="vto-editorial-section vto-learning" aria-labelledby="vto-learning-title">

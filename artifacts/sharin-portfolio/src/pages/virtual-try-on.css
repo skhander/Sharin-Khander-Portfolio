@@ -73,7 +73,10 @@
   gap: clamp(28px, 5vw, 72px);
 }
 
-.vto-build { padding-block: 42px; }
+.vto-build {
+  padding-block: 42px;
+  border-bottom: 0;
+}
 
 .vto-section-title {
   margin: 0;
@@ -103,7 +106,7 @@
 
 .vto-demo {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr);
   align-items: start;
   gap: clamp(16px, 2.4vw, 32px);
   padding-block: 38px 72px;
@@ -111,6 +114,13 @@
 
 .vto-video-figure { min-width: 0; margin: 0; }
 .vto-build-recording { margin-top: clamp(24px, 3vw, 36px); }
+.vto-video-caption {
+  margin-bottom: 12px;
+  color: hsl(var(--muted-foreground));
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+}
 
 .vto-video-figure video,
 .vto-video-play,
