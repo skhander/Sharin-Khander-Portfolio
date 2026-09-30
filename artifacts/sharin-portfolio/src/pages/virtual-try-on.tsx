@@ -79,7 +79,7 @@ export default function VirtualTryOn() {
             <div className="vto-intro-copy">
               <p className="vto-question font-editorial">Online shopping today asks you to picture clothes on strangers.</p>
               <p className="vto-description">
-                I built a Chrome extension that lets you browse any website as an avatar of yourself.
+                I built a Chrome extension that lets you browse any apparel site as an avatar of yourself.
               </p>
             </div>
           </div>
@@ -141,7 +141,7 @@ export default function VirtualTryOn() {
         <div className="vto-shell">
           <div className="vto-proof-heading">
             <div>
-              <h2 id="vto-proof-title" className="font-editorial">The next gen of personalized shopping</h2>
+              <h2 id="vto-proof-title" className="font-editorial">I think so.</h2>
             </div>
           </div>
           <div className="vto-proof-grid">
