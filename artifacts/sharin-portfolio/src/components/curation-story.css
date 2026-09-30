@@ -662,11 +662,9 @@
 .curation-story .curation-problem-numbers {
   width: min(100%, 540px);
   justify-content: start;
-  padding: 15px 0;
-  border: 0;
-  border-top: 1px solid var(--cs-rule);
-  border-bottom: 1px solid var(--cs-rule);
-  background: transparent;
+  padding: 20px 22px 17px;
+  border: 1px solid hsl(var(--foreground) / .13);
+  background: hsl(var(--olive-surface) / .19);
 }
 
 .curation-problem-numbers strong {

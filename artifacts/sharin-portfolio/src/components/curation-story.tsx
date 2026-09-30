@@ -104,7 +104,7 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
             </h1>
             <div className="curation-problem-evidence">
               <div className="curation-problem-numbers" aria-label="Average production time: 2 weeks; average time on site: 6 days.">
-                <div data-testid="stat-curation-production-time"><strong>2 weeks</strong><span>avg production time</span></div>
+                <div data-testid="stat-curation-production-time"><strong>2 weeks</strong><span>Avg production time</span></div>
                 <span className="curation-number-arrow" aria-hidden="true">→</span>
                 <div data-testid="stat-curation-shelf-life"><strong>6 days</strong><span>Avg time on site</span></div>
               </div>
@@ -139,9 +139,9 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
           </div>
           <div className="curation-built-layout">
             <div className="curation-built-copy">
-              <h2 id="curation-built-title" className="curation-title curation-built-title">One place<br />to curate</h2>
+              <h2 id="curation-built-title" className="curation-title curation-built-title">One end-to-end curation tool</h2>
               <BulletList items={[
-                'Centralized, end-to-end workflow',
+                'Centralized workflow',
                 'Recommendations built into the workflow',
                 'Less manual searching',
               ]} />
