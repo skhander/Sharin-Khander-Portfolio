@@ -1,32 +1,62 @@
 import { useState } from 'react';
-import { ArrowLeft, ArrowUpRight, Play } from 'lucide-react';
+import type { ReactNode } from 'react';
+import { ArrowDown, ArrowLeft, ArrowRight, ArrowUpRight, Play } from 'lucide-react';
 import { Link } from 'wouter';
 import type { Project } from '@/lib/projects';
 import './curation-story.css';
 
 const media = (file: string) => `${import.meta.env.BASE_URL}media/curation/${file}`;
 
-const metrics = [
-  { value: '2×', label: 'faster assortment creation' },
-  { value: '+30%', label: 'assortments per quarter' },
-  { value: '+8%', label: 'share of Curation GMV YoY' },
-];
+function BeatLabel({ number, children }: { number: string; children: string }) {
+  return (
+    <div className="curation-beat-label">
+      <span className="curation-beat-number" aria-hidden="true">{number}</span>
+      <span className="curation-beat-name">{children}</span>
+    </div>
+  );
+}
 
-function Walkthrough({ video, poster, alt, caption }: { video: string; poster: string; alt: string; caption: string }) {
+function Walkthrough({
+  video,
+  poster,
+  alt,
+  caption,
+}: {
+  video: string;
+  poster: string;
+  alt: string;
+  caption: string;
+}) {
   const [started, setStarted] = useState(false);
 
   return (
     <figure className="curation-media">
-      <figcaption className="mb-3 font-mono-archive text-[10px] uppercase tracking-[.12em] text-muted-foreground">{caption}</figcaption>
+      <figcaption className="curation-media-caption">{caption}</figcaption>
       {started ? (
-        <video className="curation-prototype-video" controls autoPlay playsInline preload="metadata" poster={media(poster)} aria-label={alt}>
+        <video
+          className="curation-prototype-video"
+          controls
+          autoPlay
+          playsInline
+          preload="metadata"
+          poster={media(poster)}
+          aria-label={alt}
+        >
           <source src={media(video)} type="video/mp4" />
           Your browser does not support video playback.
         </video>
       ) : (
-        <button type="button" className="curation-prototype-preview" onClick={() => setStarted(true)} aria-label={`Play ${alt}`}>
+        <button
+          type="button"
+          className="curation-prototype-preview"
+          onClick={() => setStarted(true)}
+          aria-label={`Play ${alt}`}
+        >
           <img src={media(poster)} alt={alt} loading="lazy" />
-          <span className="curation-prototype-play"><Play size={16} fill="currentColor" aria-hidden="true" /> Play</span>
+          <span className="curation-prototype-play">
+            <Play size={14} fill="currentColor" aria-hidden="true" />
+            Play prototype
+          </span>
         </button>
       )}
     </figure>
@@ -36,12 +66,11 @@ function Walkthrough({ video, poster, alt, caption }: { video: string; poster: s
 function CustomerPage({ image, alt, label }: { image: string; alt: string; label: string }) {
   return (
     <figure className="curation-media">
-      <figcaption className="mb-3 flex min-h-4 flex-wrap items-center justify-between gap-x-4 gap-y-2 font-mono-archive text-[10px] uppercase tracking-[.12em] text-muted-foreground">
+      <figcaption className="curation-media-caption curation-customer-caption">
         <span>{label}</span>
-        <a href={media(image)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-accent underline underline-offset-4 hover:text-foreground">
-          Open full image <ArrowUpRight size={12} aria-hidden="true" />
+        <a href={media(image)} target="_blank" rel="noopener noreferrer">
+          Open full image <ArrowUpRight size={13} aria-hidden="true" />
         </a>
-        <span className="w-full md:hidden">Scroll to explore the page</span>
       </figcaption>
       <div className="curation-customer-frame" tabIndex={0} role="region" aria-label={`${label}; scroll to inspect the full screenshot`}>
         <img src={media(image)} alt={alt} loading="lazy" />
@@ -50,116 +79,235 @@ function CustomerPage({ image, alt, label }: { image: string; alt: string; label
   );
 }
 
+function BulletList({ items }: { items: ReactNode[] }) {
+  return (
+    <ul className="curation-bullets">
+      {items.map((item, index) => <li key={index}>{item}</li>)}
+    </ul>
+  );
+}
+
 export function CurationStory({ nextProject }: { project: Project; nextProject: Project }) {
   return (
-    <div className="page-reveal curation-story">
-      <section className="curation-container" aria-labelledby="curation-title">
-        <div className="curation-panel">
-          <Link href="/" className="inline-flex items-center gap-2 font-mono-archive text-[10px] uppercase tracking-[.15em] text-muted-foreground archive-link">
+    <main className="page-reveal curation-story">
+      <section className="curation-beat curation-problem" aria-labelledby="curation-problem-title">
+        <div className="curation-container">
+          <Link href="/" className="curation-back archive-link">
             <ArrowLeft size={14} aria-hidden="true" /> All work
           </Link>
-          <div className="curation-grid curation-hero-content">
-            <p className="curation-full font-mono-archive text-[10px] uppercase tracking-[.16em] text-accent">CURATION</p>
-            <h1 id="curation-title" className="curation-full curation-hero-title max-w-[17ch] font-editorial text-[clamp(2.75rem,6vw,6.5rem)] leading-[.98] tracking-[-.05em]">Scaling editorial taste</h1>
-            <p className="curation-full curation-hero-intro text-base leading-[1.65] text-muted-foreground md:text-xl">
-              <span className="block">Merchandisers used <strong className="font-semibold">several tools to build one assortment</strong>. Curation manual, slow, and expensive.</span>{' '}
-              <span className="mt-5 block">I <strong className="font-semibold">shadowed the team</strong>, prototyped a more efficient <strong className="font-semibold">workflow</strong>, and led the 0→1 build.</span>
+          <div className="curation-problem-top">
+            <BeatLabel number="01">The Problem</BeatLabel>
+            <p className="curation-project-mark">The RealReal <span>/</span> Curation Tool</p>
+          </div>
+          <h1 id="curation-problem-title" className="curation-title curation-problem-title">
+            WEEKS OF WORK.<br /><em>DAYS LIVE.</em>
+          </h1>
+          <div className="curation-problem-bottom">
+            <BulletList items={[
+              <>Merchandisers spent <strong>weeks building assortments</strong> that might only live for a few days.</>,
+              <>Switching between multiple tools.</>,
+              <>Manually searching through <strong>6M products.</strong></>,
+              <>No recommendations to help decide what to pull.</>,
+            ]} />
+            <div className="curation-problem-numbers" aria-label="Six million products; weeks of work for days live">
+              <div><strong>6M</strong><span>products</span></div>
+              <span className="curation-number-arrow" aria-hidden="true">→</span>
+              <div><strong>weeks<span className="curation-small-arrow">→</span>days</strong><span>work / live</span></div>
+            </div>
+          </div>
+          <div className="curation-next-cue" aria-hidden="true"><span>Then the question changed</span><ArrowDown size={15} /></div>
+        </div>
+      </section>
+
+      <section className="curation-beat curation-shift" aria-labelledby="curation-shift-title">
+        <div className="curation-container curation-shift-layout">
+          <BeatLabel number="02">The Shift</BeatLabel>
+          <div>
+            <h2 id="curation-shift-title" className="curation-title curation-shift-title">
+              FROM FINDING<br /><span>PRODUCTS</span> <i aria-hidden="true">→</i><br />CURATING
+            </h2>
+            <p className="curation-shift-line">
+              I wanted merchandisers spending <strong>less time finding products</strong> and more time using their <strong>taste to curate the assortment.</strong>
             </p>
           </div>
+          <div className="curation-shift-stamp" aria-hidden="true">The insight<br />that changed<br />the workflow</div>
         </div>
       </section>
 
-      <section className="curation-container" aria-labelledby="curation-impact">
-        <div className="curation-panel curation-grid">
-          <h2 id="curation-impact" className="curation-full font-mono-archive text-[10px] uppercase tracking-[.16em] text-muted-foreground">Impact</h2>
-          <dl className="curation-full curation-metrics">
-            {metrics.map((metric) => (
-              <div key={metric.label} className="curation-metric flex flex-col">
-                <dt className="order-2 mt-3 font-mono-archive text-[10px] uppercase tracking-[.12em] text-muted-foreground">{metric.label}</dt>
-                <dd className="order-1 font-editorial text-[clamp(3rem,5vw,5rem)] leading-none tracking-[-.04em]">{metric.value}</dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-      </section>
-
-      <section className="curation-container" aria-labelledby="curation-prototype">
-        <div className="curation-panel curation-grid">
-          <h2 id="curation-prototype" className="curation-rail font-mono-archive text-xs font-semibold uppercase tracking-[.14em] text-accent">01 — PROTOTYPE</h2>
-          <div className="curation-body">
-            <p className="text-base leading-[1.6] md:text-lg"><strong className="font-semibold text-foreground">From five tools to one workflow.</strong></p>
-            <p className="mt-4 text-base leading-[1.6] md:text-lg">I mapped the end-to-end workflow with merchandisers, identified the highest-friction steps, and turned them into a working prototype.</p>
+      <section className="curation-beat curation-built" aria-labelledby="curation-built-title">
+        <div className="curation-container">
+          <div className="curation-heading-row">
+            <BeatLabel number="03">What I Built</BeatLabel>
+            <span className="curation-eyebrow">From fragmented tools to one place</span>
           </div>
-          <div className="curation-full">
+          <div className="curation-built-layout">
+            <div className="curation-built-copy">
+              <h2 id="curation-built-title" className="curation-title curation-built-title">ONE PLACE<br />TO CURATE</h2>
+              <BulletList items={[
+                'End-to-end curation workflow',
+                'Centralized the work into one tool',
+                'Recommendations built into the workflow',
+                'Less manual searching',
+              ]} />
+            </div>
             <Walkthrough
               video="curation-tool-prototype.mp4"
               poster="curation-tool-poster.jpg"
               alt="Curation Tool prototype showing the Create New Editorial interface"
-              caption="The workflow · Prototype"
+              caption="The workflow · Click to play"
             />
+          </div>
+          <div className="curation-flow" aria-label="Find, recommend, curate, publish">
+            {['Find', 'Recommend', 'Curate', 'Publish'].map((step, index) => (
+              <div className="curation-flow-step" key={step}>
+                <span>{step}</span>
+                {index < 3 && <ArrowRight size={16} aria-hidden="true" />}
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="curation-container" aria-labelledby="curation-ship">
-        <div className="curation-panel curation-grid">
-          <h2 id="curation-ship" className="curation-rail font-mono-archive text-xs font-semibold uppercase tracking-[.14em] text-accent">02 — BUILD</h2>
-          <div className="curation-body">
-            <p className="text-base leading-[1.6] md:text-lg">I turned a fragmented workflow into one place to build, preview, and publish an assortment.</p>
-            <p className="mt-4 text-base leading-[1.6] md:text-lg">I led Design, Engineering, and ML from prototype to production.</p>
-            <p className="mt-4 font-mono-archive text-sm font-medium tracking-[.02em] text-accent">Prototype → Product</p>
+      <section className="curation-beat curation-owned" aria-labelledby="curation-owned-title">
+        <div className="curation-container">
+          <div className="curation-heading-row">
+            <BeatLabel number="04">What I Owned</BeatLabel>
+            <span className="curation-eyebrow">01 → 04 / end to end</span>
           </div>
-          <div className="curation-full">
+          <h2 id="curation-owned-title" className="curation-title curation-owned-title">I OWNED IT <em>END TO END.</em></h2>
+          <ol className="curation-ownership">
+            <li>
+              <span className="curation-ownership-number">01</span>
+              <div><h3>Discover</h3><p>Shadowed merchandisers across levels</p></div>
+            </li>
+            <li>
+              <span className="curation-ownership-number">02</span>
+              <div><h3>Define</h3><p>Partnered with Engineering on scope, timelines, phased delivery</p></div>
+            </li>
+            <li>
+              <span className="curation-ownership-number">03</span>
+              <div><h3>Execute</h3><p>Owned workflow quality + recommendation quality</p></div>
+            </li>
+            <li>
+              <span className="curation-ownership-number">04</span>
+              <div><h3>Adopt</h3><p>Onboarding + change management as teams moved over</p></div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section className="curation-beat curation-goals" aria-labelledby="curation-goals-title">
+        <div className="curation-container">
+          <div className="curation-heading-row">
+            <BeatLabel number="05">The Goals</BeatLabel>
+            <span className="curation-eyebrow">Three measures of a better workflow</span>
+          </div>
+          <h2 id="curation-goals-title" className="curation-title curation-goals-title">THREE THINGS HAD<br />TO GET BETTER.</h2>
+          <div className="curation-goal-list">
+            <article className="curation-goal">
+              <span>01</span><div><h3>Less time</h3><p>Cut curation time</p></div>
+            </article>
+            <article className="curation-goal">
+              <span>02</span><div><h3>More edits</h3><p>Increase assortment edits</p></div>
+            </article>
+            <article className="curation-goal">
+              <span>03</span><div><h3>Better edits</h3><p>Use recommendations to improve assortment quality</p></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="curation-beat curation-hard-part" aria-labelledby="curation-hard-title">
+        <div className="curation-container">
+          <div className="curation-heading-row">
+            <BeatLabel number="06">The Hard Part</BeatLabel>
+            <span className="curation-eyebrow">Recommendation ≠ taste</span>
+          </div>
+          <div className="curation-hard-layout">
+            <div className="curation-hard-story">
+              <h2 id="curation-hard-title" className="curation-title curation-hard-title">THE RECS<br />WEREN'T<br /><em>GOOD ENOUGH.</em></h2>
+              <div className="curation-contrast" aria-label="Machine recommendation: technically similar. Human curation: actually feels right.">
+                <div><span>Machine recommendation</span><strong>“Technically similar”</strong></div>
+                <ArrowDown size={17} aria-hidden="true" />
+                <div className="curation-human"><span>Human curation</span><strong>“Actually feels right”</strong></div>
+              </div>
+              <p className="curation-realization">They looked similar.<br /><em>They didn't nail the taste.</em></p>
+            </div>
+            <div className="curation-hard-detail">
+              <Walkthrough
+                video="evergreen-tool-prototype.mp4"
+                poster="evergreen-tool-poster.jpg"
+                alt="Evergreen Sale prototype showing item criteria and editorial review controls"
+                caption="Human review · Prototype"
+              />
+              <div className="curation-change">
+                <h3>What we changed</h3>
+                <BulletList items={[
+                  <>Invested in <strong>richer product metadata</strong></>,
+                  <>Added trend, aesthetic, occasion, silhouette</>,
+                  <>Added human review + feedback loops</>,
+                  <>Merchandiser judgment improved the system over time</>,
+                ]} />
+                <p className="curation-change-takeaway">Better recommendations needed better product understanding <i>and</i> human judgment.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="curation-beat curation-result" aria-labelledby="curation-result-title">
+        <div className="curation-container">
+          <div className="curation-heading-row">
+            <BeatLabel number="07">The Result</BeatLabel>
+            <span className="curation-eyebrow">A better workflow, in the edit</span>
+          </div>
+          <div className="curation-result-layout">
+            <div className="curation-result-copy">
+              <h2 id="curation-result-title" className="curation-title curation-result-title"><span>2×</span><br />MORE ONSITE<br />EDITS</h2>
+              <BulletList items={[
+                'Twice as many onsite edits vs. a year earlier',
+                'Better assortment quality',
+                'Fewer sold-out products',
+              ]} />
+              <div className="curation-secondary-metric"><strong>+30%</strong><span>more assortments per quarter</span></div>
+            </div>
             <CustomerPage
               image="next-level-layers.png"
               alt="The RealReal Next-Level Layers customer browse page with a four-column edit of clothing, shoes, and accessories"
-              label="Customer view · Next-Level Layers"
+              label="The edit, live · Next-Level Layers"
             />
           </div>
         </div>
       </section>
 
-      <section className="curation-container" aria-labelledby="curation-automate">
-        <div className="curation-panel curation-grid">
-          <h2 id="curation-automate" className="curation-rail font-mono-archive text-xs font-semibold uppercase tracking-[.14em] text-accent">03 — AUTOMATE</h2>
-          <div className="curation-body">
-            <p className="text-base leading-[1.6] md:text-lg">We automated repetitive work while keeping editors in the loop.</p>
-            <p className="mt-4 font-mono-archive text-sm font-medium tracking-[.02em] text-accent">Rules → ML → Human review</p>
-            <p className="mt-4 text-base leading-[1.6] md:text-lg">We started with rules for predictable criteria, introduced ML where patterns were harder to encode, and kept editors in control of the final assortment.</p>
+      <section className="curation-beat curation-next" aria-labelledby="curation-next-title">
+        <div className="curation-container">
+          <div className="curation-heading-row">
+            <BeatLabel number="08">What's Next</BeatLabel>
+            <span className="curation-eyebrow">The forward view</span>
           </div>
-          <div className="curation-full">
-            <Walkthrough
-              video="evergreen-tool-prototype.mp4"
-              poster="evergreen-tool-poster.jpg"
-              alt="Evergreen Sale prototype showing item criteria and editorial review controls"
-              caption="Programmatic curation · Prototype"
-            />
+          <h2 id="curation-next-title" className="curation-title curation-next-title">THE END STATE ISN'T<br />A BETTER SEARCH BOX.</h2>
+          <div className="curation-evolution" aria-label="Evolution from tools to systems to agents">
+            <div><span>Tools</span><p>Help people do the work</p></div>
+            <ArrowRight aria-hidden="true" />
+            <div><span>Systems</span><p>Do more of the work</p></div>
+            <ArrowRight aria-hidden="true" />
+            <div className="curation-agent"><span>Agents</span><p>Pull → Rank → Optimize</p></div>
           </div>
+          <div className="curation-human-role">
+            <span className="curation-human-role-label">The human role</span>
+            <div>
+              <h3>Final arbiter<br /><em>of taste.</em></h3>
+              <p>The system does more of the work. Humans define what “good” looks like — and their decisions continuously teach the system.</p>
+            </div>
+          </div>
+          <nav className="curation-next-project" aria-label="Project navigation">
+            <Link href={`/work/${nextProject.slug}`} className="archive-link">
+              Next project: {nextProject.title} <ArrowUpRight size={16} aria-hidden="true" />
+            </Link>
+          </nav>
         </div>
       </section>
-
-      <section className="curation-container" aria-labelledby="curation-learn">
-        <div className="curation-panel curation-grid">
-          <h2 id="curation-learn" className="curation-rail font-mono-archive text-xs font-semibold uppercase tracking-[.14em] text-accent">04 — LEARN</h2>
-          <div className="curation-body">
-            <h3 className="font-editorial text-[clamp(2.5rem,4vw,4.5rem)] leading-[1.05] tracking-[-.04em]">Similarity isn't taste.</h3>
-            <p className="mt-8 text-base leading-[1.6] md:text-lg">Our first model could find products that looked alike.</p>
-            <p className="mt-5 text-base leading-[1.6] md:text-lg">But merchandisers weren't simply looking for similarity. They were making editorial choices—what belonged together, what told a story, and what felt right for the customer.</p>
-          </div>
-          <div className="curation-body curation-lesson font-editorial text-[clamp(1.75rem,2.8vw,2.75rem)] leading-[1.15] tracking-[-.03em]">
-            <p>The lesson: automation could scale the mechanics of curation.<br />Taste still needed a human in the loop.</p>
-          </div>
-        </div>
-      </section>
-
-      <div className="curation-container">
-        <nav className="curation-grid curation-next-project" aria-label="Project navigation">
-          <p className="curation-rail font-mono-archive text-[10px] uppercase tracking-[.15em] text-muted-foreground">Next project</p>
-          <Link href={`/work/${nextProject.slug}`} className="curation-body group inline-flex items-center gap-3 font-editorial text-3xl archive-link" data-testid="link-next-project">
-            {nextProject.title} <ArrowUpRight size={18} strokeWidth={1.2} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </Link>
-        </nav>
-      </div>
-    </div>
+    </main>
   );
 }

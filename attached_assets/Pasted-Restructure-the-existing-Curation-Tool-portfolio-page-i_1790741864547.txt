@@ -1,0 +1,311 @@
+Restructure the existing Curation Tool portfolio page into a **spoken-story / interview memory-bullet format**.
+
+The page is NOT meant to be a case study that someone reads linearly. It is a visual aid for me during an interview. I need to be able to glance at the page, see a few words, and immediately remember the next part of my spoken story.
+
+### Core principle
+
+Turn the current page into **8 clear story beats**:
+
+1. THE PROBLEM
+2. THE SHIFT
+3. WHAT I BUILT
+4. WHAT I OWNED
+5. THE GOALS
+6. THE HARD PART
+7. THE RESULT
+8. WHAT'S NEXT
+
+Each section should contain:
+
+* A very short, bold headline that acts as a memory trigger
+* 1–3 short supporting bullets
+* Important numbers displayed visually
+* Lots of whitespace
+* No paragraphs
+* No dense blocks of text
+
+The page should feel like an **executive presentation / interview cheat sheet**, not a traditional product case study.
+
+---
+
+## 1. THE PROBLEM
+
+Large headline:
+
+**WEEKS OF WORK. DAYS LIVE.**
+
+Supporting bullets:
+
+* Merchandisers spent weeks building assortments that might only live for a few days.
+* Switching between multiple tools.
+* Manually searching through **6M products**.
+* No recommendations to help decide what to pull.
+
+Visual emphasis:
+
+**6M products**
+**weeks → days**
+
+The phrase "weeks of work, days live" should be one of the strongest visual moments on the page.
+
+---
+
+## 2. THE SHIFT
+
+Headline:
+
+**FROM FINDING PRODUCTS → CURATING**
+
+Supporting text:
+
+**I wanted merchandisers spending less time finding products and more time using their taste to curate the assortment.**
+
+Keep this extremely prominent.
+
+This is the central product insight of the story.
+
+---
+
+## 3. WHAT I BUILT
+
+Headline:
+
+**ONE PLACE TO CURATE**
+
+Show a simple visual of the product/tool.
+
+Supporting bullets:
+
+* End-to-end curation workflow
+* Centralized the work into one tool
+* Recommendations built directly into the workflow
+* Less manual searching
+
+Use a visual flow if possible:
+
+**Find → Recommend → Curate → Publish**
+
+Do not write a paragraph here.
+
+---
+
+## 4. WHAT I OWNED
+
+Headline:
+
+**I OWNED IT END TO END**
+
+Show four simple steps horizontally:
+
+**01 — DISCOVER**
+Shadowed merchandisers across levels
+
+**02 — DEFINE**
+Partnered with Engineering on scope, timelines, phased delivery
+
+**03 — EXECUTE**
+Owned workflow quality + recommendation quality
+
+**04 — ADOPT**
+Onboarding + change management as teams moved over
+
+Make "end to end" visually prominent.
+
+---
+
+## 5. THE GOALS
+
+Headline:
+
+**THREE THINGS HAD TO GET BETTER**
+
+Display as three large cards:
+
+**01**
+**LESS TIME**
+Cut curation time
+
+**02**
+**MORE EDITS**
+Increase assortment edits
+
+**03**
+**BETTER EDITS**
+Use recommendations to improve assortment quality
+
+Keep this section extremely scannable.
+
+---
+
+## 6. THE HARD PART
+
+This should be one of the strongest sections.
+
+Headline:
+
+**THE RECS WEREN'T GOOD ENOUGH.**
+
+Then show the problem visually:
+
+**Machine recommendation**
+“Technically similar”
+
+↓
+
+**Human curation**
+“Actually feels right”
+
+Then the key realization:
+
+**They looked similar.
+They didn't nail the taste.**
+
+This is the important story beat I need to remember.
+
+Then:
+
+### WHAT WE CHANGED
+
+* Invested in richer product metadata
+* Added attributes like **trend, aesthetic, occasion, silhouette**
+* Added human review + feedback loops
+* Used merchandiser judgment to improve the system over time
+
+The point should be:
+
+**Better recommendations required better understanding of the products AND human judgment.**
+
+Do not over-explain this.
+
+---
+
+## 7. THE RESULT
+
+Headline:
+
+**2× MORE ONSITE EDITS**
+
+Make **2×** extremely large.
+
+Supporting bullets:
+
+* Twice as many onsite edits vs. a year earlier
+* Better assortment quality
+* Fewer sold-out products
+
+If the existing page has the current metrics:
+**30% more assortments per quarter**
+and
+**2× share of GMV from curation YoY**
+
+keep those only if they are already verified in the existing page/data. Do not invent or change numbers.
+
+The result section should feel like a payoff.
+
+---
+
+## 8. WHAT'S NEXT
+
+Headline:
+
+**THE END STATE ISN'T A BETTER SEARCH BOX.**
+
+Then show a simple evolution:
+
+**TOOLS**
+Help people do the work
+
+→
+
+**SYSTEMS**
+Do more of the work
+
+→
+
+**AGENTS**
+Pull → Rank → Optimize
+
+Then:
+
+### THE HUMAN ROLE
+
+**Final arbiter of taste**
+
+Supporting line:
+
+**The system does more of the work. Humans define what "good" looks like — and their decisions continuously teach the system.**
+
+This should be the final section of the page and feel like the forward-looking product vision.
+
+---
+
+# IMPORTANT DESIGN DIRECTION
+
+This is for an interview, so optimize for **memory and speaking**, not reading.
+
+I should be able to look at the page and reconstruct this story:
+
+**Weeks of work, days live.**
+
+→
+
+**6M products + manual search.**
+
+→
+
+**I wanted merchandisers curating, not searching.**
+
+→
+
+**Built one end-to-end tool + recommendations.**
+
+→
+
+**I owned discovery → definition → execution → adoption.**
+
+→
+
+**The hard part was taste.**
+
+→
+
+**Recs looked similar but didn't feel right.**
+
+→
+
+**We improved metadata + added human feedback.**
+
+→
+
+**2× more edits.**
+
+→
+
+**Next: agents do the initial work; humans remain the arbiters of taste.**
+
+These should be the **memory anchors** of the page.
+
+### Visual style
+
+Keep the existing visual identity of the portfolio, but make this page more editorial and presentation-like:
+
+* Large typography
+* Very short copy
+* Strong hierarchy
+* Generous whitespace
+* Minimal borders/cards
+* No dense paragraphs
+* No unnecessary product-management jargon
+* Black/white base with the existing accent color
+* Use screenshots/mockups where they actually help tell the story
+* Make the numbers visually dominant
+* Use arrows and simple diagrams to show progression
+* Preserve existing animations only if they don't distract from the story
+
+### Critical constraint
+
+Do NOT simply summarize the existing case study.
+
+Actually **restructure the information architecture and visual hierarchy** around the eight spoken-story beats above.
+
+The page should feel like something a product builder could keep open during an interview and glance at to remember the story.
