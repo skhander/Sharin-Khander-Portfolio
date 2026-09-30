@@ -164,10 +164,10 @@
 .work-proof-heading {
   display: block;
   margin-bottom: 12px;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 1.4;
-  letter-spacing: .11em;
+  letter-spacing: .04em;
 }
 .work-proof-grid {
   display: grid;
@@ -200,10 +200,10 @@
 .work-proof-note {
   display: block;
   font-family: var(--app-font-sans);
-  font-size: 11.5px;
-  letter-spacing: .045em;
+  font-size: 14px;
+  letter-spacing: .01em;
   line-height: 1.55;
-  white-space: nowrap;
+  white-space: normal;
 }
 .work-proof-label {
   margin-top: 6px;
@@ -252,7 +252,7 @@
   }
   .work-proof-label,
   .work-proof-note {
-    font-size: 11px;
+    font-size: 14px;
     letter-spacing: 0;
   }
 }
@@ -707,8 +707,8 @@
 }
 .about-process .about-process-sequence {
   margin-top: 12px;
-  font-size: 16px;
-  line-height: 1.55;
+  font-size: clamp(17px, 1.5vw, 19px);
+  line-height: 1.6;
   letter-spacing: -.01em;
 }
 .about-process .about-step {
@@ -728,7 +728,7 @@
 .about-process .about-step-heading-copy > p {
   margin: 0 0 8px;
   color: hsl(var(--muted-foreground));
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 600;
   line-height: 1.45;
   letter-spacing: 0;
@@ -736,7 +736,7 @@
 }
 .about-process .about-step-heading h2 {
   max-width: 650px;
-  font-size: clamp(1.55rem, 2.8vw, 2.35rem);
+  font-size: clamp(1.75rem, 2.8vw, 2.5rem);
   line-height: 1.2;
   letter-spacing: -.035em;
 }
@@ -756,9 +756,9 @@
   max-width: 440px;
 }
 .about-process .about-step-lede {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 500;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 .about-process .about-brief-list {
   margin-top: 18px;
@@ -766,16 +766,16 @@
 .about-process .about-brief-list li {
   grid-template-columns: 22px 1fr;
   gap: 10px;
-  padding: 11px 0;
-  font-size: 14px;
-  line-height: 1.55;
+  padding: 13px 0;
+  font-size: 17px;
+  line-height: 1.6;
   transition: none;
 }
 .about-process .about-brief-list li:hover {
   padding-left: 0;
 }
 .about-process .about-list-mark {
-  font-size: 11px;
+  font-size: 15px;
   letter-spacing: 0;
 }
 .about-process .about-brief-figure img {
@@ -794,17 +794,24 @@
   max-width: 760px;
   padding: 18px;
 }
+.about-process .about-system-inputs-title {
+  font-size: 16px;
+  line-height: 1.4;
+}
 .about-process .about-system-inputs span,
 .about-process .about-system-agent {
-  min-height: 42px;
+  min-height: 48px;
   place-items: center start;
   text-align: left;
+  font-size: 16px;
+  line-height: 1.4;
 }
 .about-process .about-system-agent {
   min-height: 62px;
 }
 .about-process .about-diagram-caption {
-  font-size: 11px;
+  font-size: 15px;
+  line-height: 1.5;
   letter-spacing: 0;
   text-align: left;
   text-transform: none;
@@ -825,22 +832,25 @@
   text-align: left;
 }
 .about-process .about-loop-node > span {
-  font-size: 11px;
+  font-size: 14px;
   letter-spacing: 0;
 }
 .about-process .about-loop-node strong {
-  font-size: 14px;
+  font-size: 17px;
+  line-height: 1.4;
 }
 .about-process .about-loop-return {
   gap: 12px;
   margin-top: 20px;
-  font-size: 11px;
+  font-size: 15px;
+  line-height: 1.5;
   letter-spacing: 0;
   text-transform: none;
 }
 .about-process .about-tools-table thead th {
   padding-bottom: 10px;
-  font-size: 12px;
+  font-size: 15px;
+  line-height: 1.5;
   letter-spacing: 0;
   text-transform: none;
 }
@@ -849,10 +859,10 @@
   padding-block: 13px;
 }
 .about-process .about-tools-table tbody th {
-  font-size: 15px;
+  font-size: 17px;
 }
 .about-process .about-tools-table tbody td {
-  font-size: 14px;
+  font-size: 17px;
   line-height: 1.55;
 }
 .about-process .about-tool-name {
@@ -865,7 +875,8 @@
 }
 .about-process .about-cursor-window figcaption {
   padding: 9px 12px;
-  font-size: 11px;
+  font-size: 15px;
+  line-height: 1.5;
   letter-spacing: 0;
   text-transform: none;
 }
@@ -877,7 +888,7 @@
   gap: 16px;
 }
 .about-process .about-work-link a {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.5;
 }
 
@@ -898,10 +909,13 @@
     gap: 12px;
   }
   .about-process .about-step-index {
-    font-size: 24px;
+    font-size: 26px;
+  }
+  .about-process .about-step-heading-copy > p {
+    font-size: 15px;
   }
   .about-process .about-step-heading h2 {
-    font-size: clamp(1.45rem, 6vw, 1.9rem);
+    font-size: clamp(1.65rem, 6vw, 2rem);
   }
   .about-process .about-step-grid,
   .about-process .about-step-grid.about-diagram-grid {
@@ -932,6 +946,16 @@
   .about-process .about-loop-return {
     margin-top: 16px;
   }
+  .about-process .about-loop-node strong,
+  .about-process .about-step-lede {
+    font-size: 16px;
+  }
+  .about-process .about-brief-list li {
+    font-size: 16px;
+  }
+  .about-process .about-tools-table thead th {
+    font-size: 14px;
+  }
   .about-process .about-tools-table th:first-child {
     width: 42%;
   }
@@ -946,7 +970,14 @@
     width: 32px;
     height: 32px;
   }
+  .about-process .about-tools-table tbody th,
+  .about-process .about-tools-table tbody td {
+    font-size: 16px;
+  }
   .about-process .about-work-link > div {
     align-items: flex-start;
+  }
+  .about-process .about-work-link a {
+    font-size: 18px;
   }
 }

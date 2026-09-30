@@ -268,9 +268,9 @@
   margin: 0 0 18px;
   color: hsl(var(--muted-foreground));
   font-family: var(--app-font-sans);
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 600;
-  letter-spacing: .16em;
+  letter-spacing: .04em;
 }
 
 .editorial-work .metadata-seed-frame {
@@ -320,13 +320,13 @@
 
 .editorial-work .metadata-model span {
   position: relative;
-  max-width: 96px;
+  max-width: 128px;
   padding: 10px 8px;
   border: 1px solid hsl(var(--accent) / .25);
   background: hsl(var(--background));
   color: hsl(var(--accent));
   font-family: var(--app-font-sans);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 1.3;
 }
@@ -344,9 +344,9 @@
 .editorial-work .metadata-attribute-group dt {
   color: hsl(var(--muted-foreground));
   font-family: var(--app-font-sans);
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 600;
-  letter-spacing: .14em;
+  letter-spacing: .04em;
 }
 
 .editorial-work .metadata-attribute-tags {
@@ -362,7 +362,7 @@
   border-radius: 999px;
   background: hsl(var(--accent) / .07);
   color: hsl(var(--foreground));
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.2;
   white-space: nowrap;
 }
@@ -453,13 +453,13 @@
   align-items: center;
   justify-content: space-between;
   gap: 8px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.6;
-  letter-spacing: .11em;
+  letter-spacing: .04em;
 }
 
 .editorial-work .editorial-project-kicker span {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .editorial-work .editorial-project-copy h3 {
@@ -569,7 +569,7 @@
 
 .editorial-work .editorial-project-description {
   max-width: 29rem;
-  font-size: clamp(15px, 1.24vw, 17px);
+  font-size: clamp(16px, 1.24vw, 18px);
   line-height: 1.65;
 }
 
@@ -587,9 +587,9 @@
   color: hsl(var(--foreground));
   padding: .3rem .7rem;
   font-family: var(--app-font-sans);
-  font-size: 11.5px;
+  font-size: 14px;
   line-height: 1.55;
-  letter-spacing: .1em;
+  letter-spacing: .02em;
 }
 
 @media (max-width: 1023px) {
@@ -707,7 +707,7 @@
   }
 
   .editorial-work .editorial-project-description {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   .editorial-work .editorial-project-badges {

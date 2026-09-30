@@ -5,7 +5,7 @@
 }
 
 .similar-designers-case-study .similar-back-link {
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.5;
   text-decoration: none;
 }
@@ -33,8 +33,8 @@
 .similar-designers-case-study .similar-case-intro p {
   max-width: 36rem;
   margin: 0;
-  font-size: clamp(15px, 1.25vw, 17px);
-  line-height: 1.6;
+  font-size: clamp(17px, 1.35vw, 18px);
+  line-height: 1.65;
 }
 
 .similar-designers-case-study .similar-metric dd {
@@ -46,8 +46,8 @@
 }
 
 .similar-designers-case-study .similar-metric dt {
-  font-size: 13px;
-  line-height: 1.5;
+  font-size: 15px;
+  line-height: 1.55;
 }
 
 .similar-designers-case-study .similar-story-grid {
@@ -60,7 +60,7 @@
 .similar-designers-case-study .similar-story-heading {
   max-width: 20ch;
   margin: 0;
-  font-size: clamp(1.45rem, 2.1vw, 1.9rem);
+  font-size: clamp(1.6rem, 2.3vw, 2rem);
   font-weight: 600;
   line-height: 1.3;
   letter-spacing: -.025em;
@@ -68,8 +68,8 @@
 
 .similar-designers-case-study .similar-story-copy {
   max-width: 42rem;
-  font-size: 15px;
-  line-height: 1.65;
+  font-size: clamp(17px, 1.2vw, 18px);
+  line-height: 1.7;
 }
 
 .similar-designers-case-study .similar-story-copy strong {
@@ -79,15 +79,15 @@
 .similar-designers-case-study .similar-progression-label,
 .similar-designers-case-study .similar-phase-label {
   margin: 0;
-  font-size: 12px;
-  line-height: 1.5;
+  font-size: 15px;
+  line-height: 1.55;
   letter-spacing: 0;
 }
 
 .similar-designers-case-study .similar-phase-name {
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 600;
-  line-height: 1.4;
+  line-height: 1.45;
 }
 
 .similar-designers-case-study .similar-designers-phases {
@@ -138,15 +138,20 @@
   }
 
   .similar-designers-case-study .similar-story-heading {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 
   .similar-designers-case-study .similar-story-copy {
-    font-size: 14px;
+    font-size: 16px;
+    line-height: 1.7;
   }
 
   .similar-designers-case-study .similar-metric dd {
     font-size: 1.8rem;
+  }
+
+  .similar-designers-case-study .similar-metric dt {
+    font-size: 15px;
   }
 }
 

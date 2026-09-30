@@ -24,7 +24,7 @@ function StorySection({ id, title, children }: { id: string; title: string; chil
     <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-8 text-left sm:px-10 md:py-10 lg:px-16" aria-labelledby={id}>
       <div className="grid gap-4 md:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] md:gap-10">
         <h2 id={id} className="max-w-[16ch] font-editorial text-[clamp(1.5rem,2.8vw,2.25rem)] font-semibold leading-[1.2] tracking-[-.025em]">{title}</h2>
-        <div className="max-w-2xl self-start space-y-3 text-sm leading-[1.6] text-muted-foreground md:text-base">{children}</div>
+        <div className="max-w-2xl self-start space-y-4 text-base leading-[1.7] text-muted-foreground md:text-[17px]">{children}</div>
       </div>
     </section>
   );
@@ -34,30 +34,30 @@ export function AttributeEnrichmentStory({ project, nextProject }: { project: Pr
   return (
     <div className="page-reveal">
       <header className="mx-auto max-w-[1440px] px-6 pb-8 pt-8 text-left sm:px-10 md:pb-10 md:pt-10 lg:px-16">
-        <Link href="/" className="archive-link inline-flex items-center gap-2 font-mono-archive text-xs text-muted-foreground">
+        <Link href="/" className="archive-link inline-flex items-center gap-2 font-mono-archive text-[15px] leading-relaxed text-muted-foreground">
           <ArrowLeft size={14} aria-hidden="true" /> All work
         </Link>
         <div className="mt-9 grid gap-4 md:mt-12 md:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] md:items-start md:gap-10">
           <div>
-            <p className="font-mono-archive text-xs text-accent">{project.company} / Attribute Prediction</p>
+            <p className="font-mono-archive text-[15px] leading-relaxed text-accent">{project.company} / Attribute Prediction</p>
             <h1 id="catalog-title" className="mt-3 font-editorial text-[clamp(2rem,4vw,3.25rem)] font-semibold leading-[1.12] tracking-[-.035em]" data-testid="text-project-title">Attribute Prediction</h1>
           </div>
-          <p className="max-w-2xl text-sm leading-[1.55] text-muted-foreground md:text-base">{project.description}</p>
+          <p className="max-w-2xl text-base leading-[1.7] text-muted-foreground md:text-[18px]">{project.description}</p>
         </div>
       </header>
 
       <section className="mx-auto max-w-[1440px] border-y border-border px-6 py-5 text-left sm:px-10 md:py-6 lg:px-16" aria-label="Attribute Prediction at a glance">
         <dl className="grid divide-y divide-border sm:grid-cols-3 sm:divide-x sm:divide-y-0">
           <div className="flex flex-col justify-start py-4 text-left sm:px-5 sm:py-2 sm:first:pl-0">
-            <dt className="order-2 mt-2 font-mono-archive text-xs text-muted-foreground">Approach</dt>
+            <dt className="order-2 mt-2 font-mono-archive text-[15px] leading-relaxed text-muted-foreground">Approach</dt>
             <dd className="order-1 font-editorial text-[clamp(1.2rem,2vw,1.75rem)] font-semibold leading-tight tracking-[-.02em]">LLM + computer vision</dd>
           </div>
           <div className="flex flex-col justify-start py-4 text-left sm:px-5 sm:py-2">
-            <dt className="order-2 mt-2 font-mono-archive text-xs text-muted-foreground">Products</dt>
+            <dt className="order-2 mt-2 font-mono-archive text-[15px] leading-relaxed text-muted-foreground">Products</dt>
             <dd className="order-1 font-editorial text-[clamp(1.75rem,3vw,2.5rem)] font-semibold leading-tight tracking-[-.03em]">6m+</dd>
           </div>
           <div className="flex flex-col justify-start py-4 text-left sm:px-5 sm:py-2 sm:last:pr-0">
-            <dt className="order-2 mt-2 font-mono-archive text-xs text-muted-foreground">Experiences</dt>
+            <dt className="order-2 mt-2 font-mono-archive text-[15px] leading-relaxed text-muted-foreground">Experiences</dt>
             <dd className="order-1 font-editorial text-[clamp(1.2rem,2vw,1.75rem)] font-semibold leading-tight tracking-[-.02em]">Search · Browse · Recommendations</dd>
           </div>
         </dl>
@@ -75,7 +75,7 @@ export function AttributeEnrichmentStory({ project, nextProject }: { project: Pr
       <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-12 sm:px-10 md:py-16 lg:px-16" aria-labelledby="catalog-examples">
         <div className="flex flex-col items-start gap-2">
           <h2 id="catalog-examples" className="font-editorial text-[clamp(1.5rem,2.8vw,2.25rem)] font-semibold leading-[1.2] tracking-[-.025em]">Inside the catalog</h2>
-          <p className="font-mono-archive text-xs text-muted-foreground">Product images → richer attributes</p>
+          <p className="font-mono-archive text-[15px] leading-relaxed text-muted-foreground">Product images → richer attributes</p>
         </div>
         <div className="mt-5 grid gap-6 md:mt-7 md:grid-cols-2 md:gap-5">
           {examples.map(({ image, title, alt }) => (
@@ -83,9 +83,9 @@ export function AttributeEnrichmentStory({ project, nextProject }: { project: Pr
               <a href={media(image)} target="_blank" rel="noopener noreferrer" className="block overflow-hidden border border-border bg-[hsl(var(--olive-surface)/.3)] transition-opacity hover:opacity-90" aria-label={`Open full image: ${title}`}>
                 <img src={media(image)} alt={alt} loading="lazy" className="block aspect-[1030/583] w-full object-contain" />
               </a>
-              <figcaption className="mt-2 flex flex-col items-start gap-2 font-mono-archive text-xs text-muted-foreground">
+              <figcaption className="mt-2 flex flex-col items-start gap-2 font-mono-archive text-[15px] leading-relaxed text-muted-foreground">
                 <span>{title} / Attribute example</span>
-                <a href={media(image)} target="_blank" rel="noopener noreferrer" className="inline-flex shrink-0 items-center gap-1 text-accent underline underline-offset-4 hover:text-foreground">Open full image <ArrowUpRight size={12} aria-hidden="true" /></a>
+                <a href={media(image)} target="_blank" rel="noopener noreferrer" className="inline-flex shrink-0 items-center gap-1 text-[15px] leading-relaxed text-accent underline underline-offset-4 hover:text-foreground">Open full image <ArrowUpRight size={12} aria-hidden="true" /></a>
               </figcaption>
             </figure>
           ))}

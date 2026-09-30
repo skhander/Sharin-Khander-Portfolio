@@ -53,24 +53,24 @@ export function ElevatedExperienceStory({ project, nextProject }: { project: Pro
   return (
     <div className="page-reveal">
       <header className="mx-auto w-full max-w-[1440px] px-6 pb-10 pt-10 sm:px-10 md:pb-14 md:pt-14 lg:px-16">
-        <Link href="/" className="archive-link inline-flex items-center gap-2 font-mono-archive text-xs text-muted-foreground" data-testid="link-back-archive">
+        <Link href="/" className="archive-link inline-flex items-center gap-2 font-mono-archive text-[15px] leading-relaxed text-muted-foreground" data-testid="link-back-archive">
           <ArrowLeft size={14} /> All work
         </Link>
         <div className="mt-10 border-t border-border pt-5 md:mt-12">
-          <p className="font-mono-archive text-xs text-accent">
+          <p className="font-mono-archive text-[15px] leading-relaxed text-accent">
             {project.company} <span className="mx-2 text-border">/</span> {project.category}
           </p>
           <h1 className="mt-4 max-w-5xl font-editorial text-[clamp(2.5rem,5vw,4rem)] font-semibold leading-[1.08] tracking-[-.04em]" data-testid="text-project-title">
             Site Redesign
           </h1>
-          <p className="mt-4 max-w-2xl text-base leading-[1.65] text-muted-foreground">{project.description}</p>
+          <p className="mt-4 max-w-2xl text-base leading-[1.7] text-muted-foreground md:text-[18px]">{project.description}</p>
         </div>
       </header>
       <section className="mx-auto max-w-[1440px] border-y border-border px-6 py-5 text-left sm:px-10 md:py-6 lg:px-16" aria-label="Site Redesign metrics">
         <dl className="grid gap-x-8 sm:grid-cols-3">
           {metrics.map((metric) => (
             <div key={metric.label} className="flex flex-col border-t border-border py-5">
-              <dt className="order-2 mt-2 font-mono-archive text-xs text-muted-foreground">{metric.label}</dt>
+              <dt className="order-2 mt-2 font-mono-archive text-[15px] leading-relaxed text-muted-foreground">{metric.label}</dt>
               <dd className="order-1 font-editorial text-[clamp(1.75rem,3vw,2.5rem)] font-semibold leading-tight tracking-[-.03em]">{metric.value}</dd>
             </div>
           ))}
@@ -81,8 +81,8 @@ export function ElevatedExperienceStory({ project, nextProject }: { project: Pro
       <div>
         <section className="mx-auto max-w-[1440px] px-6 pb-12 pt-12 sm:px-10 md:pb-16 md:pt-16 lg:px-16" aria-labelledby="elevated-start">
           <div className="mb-5 flex flex-col items-start gap-1 border-t border-border pt-3 md:mb-7">
-            <span className="font-mono-archive text-xs text-accent">01 / Before</span>
-            <span className="font-mono-archive text-xs text-muted-foreground">PDP</span>
+            <span className="font-mono-archive text-[15px] leading-relaxed text-accent">01 / Before</span>
+            <span className="font-mono-archive text-[15px] leading-relaxed text-muted-foreground">PDP</span>
           </div>
           <figure>
             <div className="elevated-frame max-w-[1120px]">
@@ -97,7 +97,7 @@ export function ElevatedExperienceStory({ project, nextProject }: { project: Pro
               <h2 id="elevated-start" className="max-w-[720px] font-editorial text-[clamp(1.75rem,3.2vw,2.75rem)] font-semibold leading-[1.15] tracking-[-.03em]">
                 The PDP felt anything but <em className="font-normal text-accent">luxurious.</em>
               </h2>
-              <p className="max-w-[350px] text-sm leading-[1.55] text-muted-foreground md:justify-self-start md:text-base">
+              <p className="max-w-[350px] text-base leading-[1.65] text-muted-foreground md:justify-self-start md:text-[17px]">
                 Small imagery. Too much whitespace. Not enough product.
               </p>
             </figcaption>
@@ -109,7 +109,7 @@ export function ElevatedExperienceStory({ project, nextProject }: { project: Pro
             </h3>
             <div className="mt-6 grid gap-6 md:mt-8 md:grid-cols-2 md:gap-5">
               <figure>
-                <figcaption className="mb-2 font-mono-archive text-xs text-accent">A — Grid</figcaption>
+                <figcaption className="mb-2 font-mono-archive text-[15px] leading-relaxed text-accent">A — Grid</figcaption>
                 <div className="elevated-frame">
                   {gridVideoStarted ? (
                     <video
@@ -143,7 +143,7 @@ export function ElevatedExperienceStory({ project, nextProject }: { project: Pro
                 </div>
               </figure>
               <figure>
-                <figcaption className="mb-2 font-mono-archive text-xs text-accent">B — Immersive scroll</figcaption>
+                <figcaption className="mb-2 font-mono-archive text-[15px] leading-relaxed text-accent">B — Immersive scroll</figcaption>
                 <div className="elevated-frame">
                   {immersiveVideoStarted ? (
                     <video
@@ -182,13 +182,13 @@ export function ElevatedExperienceStory({ project, nextProject }: { project: Pro
 
         <section className="bg-background py-10 md:py-12" aria-labelledby="elevated-lesson">
           <div className="mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-16">
-            <p className="border-t border-foreground/20 pt-3 font-mono-archive text-xs text-accent">02 / A small change. A big lesson.</p>
+            <p className="border-t border-foreground/20 pt-3 font-mono-archive text-[15px] leading-relaxed text-accent">02 / A small change. A big lesson.</p>
             <div className="mt-6 grid gap-7 md:grid-cols-[1.15fr_.85fr] md:items-start md:gap-10">
               <figure>
                 <div className="elevated-frame">
                   <img src={media('pdp-heart.webp')} alt="Crop of the original watch PDP showing the Obsessions heart immediately to the left of the product details and Rolex title." loading="lazy" data-testid="img-pdp-heart-crop" />
                 </div>
-                <figcaption className="mt-2 font-mono-archive text-xs leading-relaxed text-muted-foreground">
+                <figcaption className="mt-2 font-mono-archive text-[15px] leading-relaxed text-muted-foreground">
                   Heart-left placement, cropped from the supplied PDP.
                 </figcaption>
               </figure>
@@ -199,14 +199,14 @@ export function ElevatedExperienceStory({ project, nextProject }: { project: Pro
                 <div className="mt-6 grid grid-cols-2 gap-4 border-t border-foreground/20 pt-4 md:mt-8">
                   <div>
                     <p className="font-editorial text-[clamp(1.75rem,3vw,2.5rem)] font-semibold leading-tight tracking-[-.03em] text-accent" data-testid="text-obsessions-result">−15%</p>
-                    <p className="mt-2 text-sm leading-tight">Obsessions</p>
+                    <p className="mt-2 text-base leading-relaxed md:text-[17px]">Obsessions</p>
                   </div>
                   <div>
                     <p className="font-editorial text-[clamp(1.75rem,3vw,2.5rem)] font-semibold leading-tight tracking-[-.03em] text-accent" data-testid="text-orders-visitor-negative">−10%</p>
-                    <p className="mt-2 text-sm leading-tight">Orders / visitor</p>
+                    <p className="mt-2 text-base leading-relaxed md:text-[17px]">Orders / visitor</p>
                   </div>
                 </div>
-                <p className="mt-6 max-w-sm text-sm leading-[1.55] md:text-base">We moved the heart. Users stopped using it. We shipped the fix the same day.</p>
+                <p className="mt-6 max-w-sm text-base leading-[1.65] md:text-[17px]">We moved the heart. Users stopped using it. We shipped the fix the same day.</p>
               </div>
             </div>
           </div>
@@ -214,19 +214,19 @@ export function ElevatedExperienceStory({ project, nextProject }: { project: Pro
 
         <section className="bg-background py-10 text-foreground md:py-12" aria-labelledby="elevated-winner">
           <div className="mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-16">
-            <p className="border-t border-current/30 pt-3 font-mono-archive text-xs opacity-75">03 / The winning experience</p>
+            <p className="border-t border-current/30 pt-3 font-mono-archive text-[15px] leading-relaxed opacity-75">03 / The winning experience</p>
             <div className="mt-6 grid gap-6 md:grid-cols-[1fr_auto] md:items-start md:gap-10">
               <div>
                 <h2 id="elevated-winner" className="max-w-[850px] font-editorial text-[clamp(1.75rem,3.2vw,2.75rem)] font-semibold leading-[1.15] tracking-[-.03em]">
                   Good friction can still be <em className="font-normal text-accent">good UX.</em>
                 </h2>
-                <p className="mt-4 max-w-xl text-sm leading-[1.55] opacity-85 md:text-base">
+                <p className="mt-4 max-w-xl text-base leading-[1.65] opacity-85 md:text-[17px]">
                   The third image took an extra scroll to reach—but the more immersive experience won.
                 </p>
               </div>
               <div className="border-t border-current/35 pt-3 text-left md:min-w-[150px]">
                 <p className="font-editorial text-[clamp(1.75rem,3vw,2.5rem)] font-semibold leading-tight tracking-[-.03em]" data-testid="text-orders-visitor-positive">+5%</p>
-                <p className="mt-1 font-mono-archive text-xs">Orders / visitor</p>
+                <p className="mt-1 font-mono-archive text-[15px] leading-relaxed">Orders / visitor</p>
               </div>
             </div>
             <figure className="mt-7 md:mt-9">
@@ -242,13 +242,13 @@ export function ElevatedExperienceStory({ project, nextProject }: { project: Pro
                 <source src={media('pdp-immersive-prototype.mp4')} type="video/mp4" />
                 Your browser does not support this video.
               </video>
-              <figcaption className="mt-2 font-mono-archive text-xs opacity-70">B — Immersive scroll · Play the product experience</figcaption>
+              <figcaption className="mt-2 font-mono-archive text-[15px] leading-relaxed opacity-70">B — Immersive scroll · Play the product experience</figcaption>
             </figure>
           </div>
         </section>
 
         <section className="mx-auto max-w-[1440px] px-6 py-12 sm:px-10 md:py-16 lg:px-16" aria-labelledby="elevated-browse">
-          <p className="border-t border-border pt-3 font-mono-archive text-xs text-accent">04 / Browse</p>
+          <p className="border-t border-border pt-3 font-mono-archive text-[15px] leading-relaxed text-accent">04 / Browse</p>
           <h2 id="elevated-browse" className="mt-5 max-w-4xl font-editorial text-[clamp(1.75rem,3.2vw,2.75rem)] font-semibold leading-[1.15] tracking-[-.03em]">
             Next, we brought the same thinking to <em className="font-normal text-accent">PLPs.</em>
           </h2>
@@ -258,7 +258,7 @@ export function ElevatedExperienceStory({ project, nextProject }: { project: Pro
               { key: 'after' as const, label: 'After', description: 'Filters behind a drawer. Larger product imagery. More visual breathing room.' },
             ]).map(({ key, label, description }) => (
               <figure key={key} className="min-w-0">
-                <figcaption className="mb-2 flex flex-col items-start gap-1 font-mono-archive text-xs text-accent">
+                <figcaption className="mb-2 flex flex-col items-start gap-1 font-mono-archive text-[15px] leading-relaxed text-accent">
                   <span>{label}</span>
                   {key === 'before' && <ArrowUpRight size={14} className="rotate-45 opacity-50" aria-hidden="true" />}
                   {key === 'after' && <span className="text-muted-foreground">→</span>}
@@ -267,12 +267,12 @@ export function ElevatedExperienceStory({ project, nextProject }: { project: Pro
                   <img src={browseImages[key].src} alt={browseImages[key].alt} loading="lazy" data-testid={`img-browse-${key}`} />
                 </div>
                 <div className="mt-4 flex flex-col items-start gap-3">
-                  <p className="max-w-md text-sm leading-[1.5] text-muted-foreground md:text-base">{description}</p>
-                  <button type="button" onClick={() => setZoomedImage(key)} className="archive-link inline-flex shrink-0 items-center gap-1.5 font-mono-archive text-xs text-accent" aria-label={`Enlarge Browse ${label.toLowerCase()} image`} data-testid={`button-enlarge-browse-${key}`}>
+                  <p className="max-w-md text-base leading-[1.65] text-muted-foreground md:text-[17px]">{description}</p>
+                  <button type="button" onClick={() => setZoomedImage(key)} className="archive-link inline-flex shrink-0 items-center gap-1.5 font-mono-archive text-[15px] leading-relaxed text-accent" aria-label={`Enlarge Browse ${label.toLowerCase()} image`} data-testid={`button-enlarge-browse-${key}`}>
                     <Maximize2 size={14} /> Enlarge
                   </button>
                 </div>
-                <p className="mt-2 font-mono-archive text-xs text-muted-foreground md:hidden">Swipe image to inspect</p>
+                <p className="mt-2 font-mono-archive text-[15px] leading-relaxed text-muted-foreground md:hidden">Swipe image to inspect</p>
               </figure>
             ))}
           </div>
@@ -280,7 +280,7 @@ export function ElevatedExperienceStory({ project, nextProject }: { project: Pro
 
         <section className="bg-background py-10 md:py-12" aria-labelledby="elevated-risk">
           <div className="mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-16">
-            <p className="border-t border-foreground/20 pt-3 font-mono-archive text-xs text-accent">05 / The risk</p>
+            <p className="border-t border-foreground/20 pt-3 font-mono-archive text-[15px] leading-relaxed text-accent">05 / The risk</p>
             <div className="mt-6 grid gap-7 lg:grid-cols-[.9fr_1.1fr] lg:gap-10">
               <h2 id="elevated-risk" className="max-w-xl font-editorial text-[clamp(1.75rem,3.2vw,2.75rem)] font-semibold leading-[1.15] tracking-[-.03em]">
                 This could have <em className="font-normal text-accent">backfired.</em>
@@ -293,14 +293,14 @@ export function ElevatedExperienceStory({ project, nextProject }: { project: Pro
                 ].map(([title, detail]) => (
                   <div key={title} className="grid gap-1 border-b border-foreground/25 py-4 sm:grid-cols-[.38fr_.62fr] sm:gap-6">
                     <h3 className="font-editorial text-lg font-semibold leading-tight md:text-xl">{title}</h3>
-                    <p className="max-w-sm text-sm leading-[1.5] text-muted-foreground md:text-base">{detail}</p>
+                    <p className="max-w-sm text-base leading-[1.6] text-muted-foreground md:text-[17px]">{detail}</p>
                   </div>
                 ))}
               </div>
             </div>
             <div className="mt-10 grid gap-5 border-t border-foreground/25 pt-5 md:mt-14 md:grid-cols-[.45fr_.55fr] md:items-start md:gap-10">
               <div>
-                <p className="font-mono-archive text-xs text-accent">The result</p>
+                <p className="font-mono-archive text-[15px] leading-relaxed text-accent">The result</p>
                 <p className="mt-2 font-editorial text-[clamp(2rem,4vw,3.25rem)] font-semibold leading-tight tracking-[-.04em] text-accent" data-testid="text-conversion-result">+10%</p>
                 <p className="mt-1 text-base">Conversion</p>
               </div>
@@ -324,15 +324,15 @@ export function ElevatedExperienceStory({ project, nextProject }: { project: Pro
           data-testid="dialog-browse-enlarged"
         >
           <div className="mx-auto flex w-full max-w-[1280px] flex-col items-start gap-3 border-b border-border pb-4">
-            <p className="font-mono-archive text-xs text-accent">Browse / {zoomedImage}</p>
-            <button type="button" ref={closeZoomRef} onClick={() => setZoomedImage(null)} className="archive-link inline-flex items-center gap-2 font-mono-archive text-xs text-accent" data-testid="button-close-browse-enlarged">
+            <p className="font-mono-archive text-[15px] leading-relaxed text-accent">Browse / {zoomedImage}</p>
+            <button type="button" ref={closeZoomRef} onClick={() => setZoomedImage(null)} className="archive-link inline-flex items-center gap-2 font-mono-archive text-[15px] leading-relaxed text-accent" data-testid="button-close-browse-enlarged">
               Close <X size={18} />
             </button>
           </div>
           <div className="mx-auto mt-5 w-full max-w-[1280px] flex-1 overflow-auto" onClick={(event) => event.stopPropagation()}>
             <img src={browseImages[zoomedImage].src} alt={browseImages[zoomedImage].alt} className="mx-auto h-auto w-full min-w-[900px] object-contain" data-testid="img-browse-enlarged" />
           </div>
-          <p className="mx-auto mt-3 w-full max-w-[1280px] font-mono-archive text-xs text-muted-foreground sm:hidden">Swipe to inspect the full image</p>
+          <p className="mx-auto mt-3 w-full max-w-[1280px] font-mono-archive text-[15px] leading-relaxed text-muted-foreground sm:hidden">Swipe to inspect the full image</p>
         </div>
       )}
     </div>

@@ -20,12 +20,12 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
   return (
     <article className="page-reveal shopping-agent-story">
       <header className="mx-auto max-w-[1440px] px-6 pb-12 pt-10 sm:px-10 md:pb-16 md:pt-14 lg:px-16" aria-labelledby="shopping-agent-title">
-        <Link href="/" className="archive-link inline-flex items-center gap-2 font-mono-archive text-[12px] text-muted-foreground" data-testid="link-back-shopping-agent">
+        <Link href="/" className="archive-link inline-flex items-center gap-2 font-mono-archive text-[16px] text-muted-foreground" data-testid="link-back-shopping-agent">
           <ArrowLeft size={14} aria-hidden="true" /> All work
         </Link>
         <div className="mt-14 md:mt-20">
-          <p className="mb-4 font-mono-archive text-[12px] text-accent">Shopping agent</p>
-          <h1 id="shopping-agent-title" className="max-w-5xl text-[clamp(1.5rem,2.5vw,2.5rem)] leading-[1.35] tracking-[-.025em]" data-testid="text-project-title">
+          <p className="mb-4 font-mono-archive text-[16px] text-accent">Shopping agent</p>
+          <h1 id="shopping-agent-title" className="max-w-5xl text-[clamp(2rem,4vw,3.5rem)] leading-[1.2] tracking-[-.025em]" data-testid="text-project-title">
             <span className="block font-semibold text-foreground">Traditional search understands product attributes. Shoppers think in occasions, aesthetics, and ideas.</span>
             {' '}
             <span className="mt-3 block font-normal text-muted-foreground">I built a shopping agent that bridges the gap.</span>
@@ -34,11 +34,11 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
       </header>
 
       <section className="mx-auto max-w-[1440px] border-y border-border px-6 py-8 sm:px-10 md:py-10 lg:px-16" aria-labelledby="shopping-impact">
-        <h2 id="shopping-impact" className="mb-5 font-mono-archive text-[13px] font-semibold text-muted-foreground">Impact</h2>
+        <h2 id="shopping-impact" className="mb-5 font-mono-archive text-[16px] font-semibold text-muted-foreground">Impact</h2>
         <dl className="grid grid-cols-1 divide-y divide-border sm:grid-cols-3 sm:divide-x sm:divide-y-0">
           {metrics.map(({ value, label }) => (
             <div key={label} className="flex flex-col py-6 sm:px-6 sm:py-2 first:sm:pl-0 last:sm:pr-0">
-              <dt className="order-2 mt-2 font-mono-archive text-[12px] text-muted-foreground">{label}</dt>
+              <dt className="order-2 mt-2 font-mono-archive text-[16px] text-muted-foreground">{label}</dt>
               <dd className="order-1 font-editorial text-[clamp(2rem,3vw,2.75rem)] font-semibold leading-none tracking-[-.035em]">{value}</dd>
             </div>
           ))}
@@ -46,7 +46,7 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
       </section>
 
       <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-12 sm:px-10 md:py-16 lg:px-16" aria-labelledby="shopping-problem">
-        <h2 id="shopping-problem" className="font-mono-archive text-[13px] font-semibold text-accent">01 — Problem</h2>
+        <h2 id="shopping-problem" className="font-mono-archive text-[16px] font-semibold text-accent">01 — Problem</h2>
         <div className="shopping-agent-comparison mt-5 md:mt-6" role="group" aria-label="Traditional search and How shoppers think comparison">
           <div className="shopping-agent-comparison-heading shopping-agent-comparison-heading--traditional">
             <h3 className="font-editorial text-2xl font-normal">Traditional search</h3>
@@ -56,7 +56,7 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
             <div className="shopping-agent-image-frame shopping-agent-image-frame--search" tabIndex={0} role="region" aria-label="Traditional Search screenshot; scroll to inspect">
               <img src={media('traditional-search.png')} alt="The RealReal traditional search results for black silk dress, showing a keyword search box, filters, and a grid of black dresses." loading="lazy" />
             </div>
-            <p className="shopping-agent-comparison-hint mt-2 font-mono-archive text-[10px] text-muted-foreground">Scroll to inspect the screenshot</p>
+            <p className="shopping-agent-comparison-hint mt-2 font-mono-archive text-[15px] text-muted-foreground">Scroll to inspect the screenshot</p>
           </div>
           <div className="shopping-agent-comparison-heading shopping-agent-comparison-heading--agent">
             <h3 className="font-editorial text-2xl font-normal">How shoppers think</h3>
@@ -66,14 +66,14 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
             <div className="shopping-agent-image-frame shopping-agent-image-frame--agent" tabIndex={0} role="region" aria-label="Shopping Agent screenshot; scroll to inspect">
               <img src={media('agent-results.png')} alt="Ask TRR Shopping Agent responding to a request for a 90s minimalist Calvin Klein look for a winter wedding with a visual selection of dresses." loading="lazy" />
             </div>
-            <p className="shopping-agent-comparison-hint mt-2 font-mono-archive text-[10px] text-muted-foreground">Swipe and scroll to inspect the screenshot</p>
+            <p className="shopping-agent-comparison-hint mt-2 font-mono-archive text-[15px] text-muted-foreground">Swipe and scroll to inspect the screenshot</p>
           </div>
         </div>
       </section>
 
       <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-12 sm:px-10 md:py-16 lg:px-16" aria-labelledby="shopping-prototype">
         <div className="grid gap-5 lg:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] lg:gap-12">
-          <h2 id="shopping-prototype" className="font-mono-archive text-[13px] font-semibold text-accent">02 — Prototype</h2>
+          <h2 id="shopping-prototype" className="font-mono-archive text-[16px] font-semibold text-accent">02 — Prototype</h2>
           <div className="max-w-2xl space-y-5 text-base leading-[1.6] md:text-lg">
             <p><strong className="font-semibold text-foreground">The MVP had three journeys: search, refine, compare.</strong></p>
             <p>The challenge: <strong className="font-semibold text-foreground">make the experience conversational without losing what makes shopping visual, contextual, and emotional.</strong></p>
@@ -96,7 +96,7 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
 
       <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-12 sm:px-10 md:py-16 lg:px-16" aria-labelledby="shopping-build">
         <div className="grid gap-5 lg:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] lg:gap-12">
-          <h2 id="shopping-build" className="font-mono-archive text-[13px] font-semibold text-accent">03 — Build</h2>
+          <h2 id="shopping-build" className="font-mono-archive text-[16px] font-semibold text-accent">03 — Build</h2>
           <div className="max-w-2xl space-y-5 text-base leading-[1.6] md:text-lg">
             <p><strong className="font-semibold text-foreground">I designed the interaction model, wrote the system instructions, shaped the agent's voice, and connected it to our shopping infrastructure.</strong></p>
             <p>
@@ -110,7 +110,7 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
 
       <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-12 sm:px-10 md:py-16 lg:px-16" aria-labelledby="shopping-learning">
         <div className="grid gap-5 lg:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] lg:gap-12">
-          <h2 id="shopping-learning" className="font-mono-archive text-[13px] font-semibold text-accent">04 — Learn</h2>
+          <h2 id="shopping-learning" className="font-mono-archive text-[16px] font-semibold text-accent">04 — Learn</h2>
           <div className="max-w-2xl">
             <h3 className="font-editorial text-[clamp(1.6rem,2.5vw,2.25rem)] font-semibold leading-[1.2] tracking-[-.025em]">Teaching the agent how to shop</h3>
             <p className="mt-4 text-base leading-[1.6]">I built a library of representative shopping questions and expected behaviors to evaluate whether the agent was actually helping shoppers—not just generating convincing answers.</p>
@@ -120,7 +120,7 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
           <a href={media('system-instructions-sample.png')} target="_blank" rel="noopener noreferrer" className="block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
             <img src={media('system-instructions-sample.png')} alt="Ask TRR spreadsheet showing system instructions, shopper questions, and assistant sample responses." width={1766} height={1168} loading="lazy" className="block h-auto w-full border border-border" />
           </a>
-          <a href={media('ask-trr-agent-instructions.xlsx')} download="Ask_TRR_Agent_Instructions.xlsx" className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-accent underline underline-offset-4 hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
+          <a href={media('ask-trr-agent-instructions.xlsx')} download="Ask_TRR_Agent_Instructions.xlsx" className="mt-4 inline-flex items-center gap-2 text-base font-medium text-accent underline underline-offset-4 hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
             Download the Excel sheet <Download size={15} aria-hidden="true" />
           </a>
         </figure>

@@ -29,18 +29,18 @@
 .curation-story .curation-beat-label {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   min-width: max-content;
   color: var(--cs-accent);
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 600;
-  letter-spacing: .045em;
-  line-height: 1.5;
+  letter-spacing: .01em;
+  line-height: 1.45;
 }
 .curation-story h2.curation-beat-label { margin: 0; }
 
 .curation-story .curation-beat-number {
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 600;
   letter-spacing: 0;
 }
@@ -52,7 +52,7 @@
   align-items: center;
   gap: 9px;
   color: var(--cs-muted);
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 600;
   text-decoration: none;
 }
@@ -378,7 +378,7 @@
 .curation-change h3 {
   margin: 0 0 11px;
   color: var(--cs-accent);
-  font-size: 13px;
+  font-size: 18px;
   font-weight: 700;
 }
 .curation-change-takeaway {
@@ -634,6 +634,8 @@
 
 .curation-story .curation-eyebrow {
   text-align: left;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .curation-story .curation-problem-layout {
@@ -650,10 +652,10 @@
 .curation-story .curation-result-title,
 .curation-story .curation-next-title {
   max-width: 760px;
-  font-size: clamp(1.45rem, 2.6vw, 2rem);
+  font-size: clamp(1.9rem, 3.2vw, 3rem);
   font-weight: 600;
   letter-spacing: -.035em;
-  line-height: 1.3;
+  line-height: 1.2;
   text-wrap: initial;
 }
 
@@ -673,8 +675,19 @@
 }
 
 .curation-problem-numbers strong {
-  font-size: clamp(1.55rem, 2.6vw, 2rem);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
   letter-spacing: -.04em;
+}
+
+.curation-story .curation-problem-numbers > div span {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.curation-story .curation-bullets li {
+  padding-block: 14px;
+  font-size: clamp(17px, 1.2vw, 18px);
+  line-height: 1.6;
 }
 
 .curation-story .curation-problem-visual {
@@ -708,6 +721,8 @@
 .curation-story .curation-media-caption {
   justify-content: flex-start;
   text-align: left;
+  font-size: 15px;
+  line-height: 1.5;
 }
 
 .curation-story .curation-prototype-play {
@@ -715,7 +730,7 @@
   bottom: 12px;
   left: 12px;
   padding: 9px 11px;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 600;
 }
 
@@ -729,24 +744,25 @@
 }
 
 .curation-ownership li {
-  min-height: 144px;
-  gap: 20px;
-  padding: 16px clamp(12px, 1.6vw, 20px);
+  min-height: 168px;
+  gap: 24px;
+  padding: 20px clamp(14px, 1.8vw, 24px);
   text-align: left;
 }
 
 .curation-story .curation-ownership-number {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   letter-spacing: -.04em;
 }
 
 .curation-ownership h3 {
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .curation-ownership p {
   margin-top: 6px;
-  font-size: 12px;
+  font-size: 17px;
+  line-height: 1.55;
 }
 
 .curation-story .curation-goals-title {
@@ -755,25 +771,30 @@
 
 .curation-story .curation-goal-list {
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin-top: 22px;
+  margin-top: 28px;
 }
 
 .curation-story .curation-goal {
-  min-height: 132px;
-  gap: 18px;
-  padding: 16px clamp(14px, 2vw, 24px);
+  min-height: 156px;
+  gap: 20px;
+  padding: 20px clamp(16px, 2vw, 26px);
   text-align: left;
 }
 
+.curation-story .curation-goal > span {
+  font-size: 14px;
+}
+
 .curation-goal h3 {
-  font-size: 16px;
+  font-size: clamp(18px, 1.6vw, 21px);
   letter-spacing: -.02em;
-  line-height: 1.4;
+  line-height: 1.35;
 }
 
 .curation-goal p {
   margin-top: 5px;
-  font-size: 12px;
+  font-size: 17px;
+  line-height: 1.55;
 }
 
 .curation-story .curation-hard-layout {
@@ -799,7 +820,8 @@
 
 .curation-story .curation-change-takeaway {
   margin-top: 14px;
-  font-size: 14px;
+  font-size: 17px;
+  line-height: 1.6;
 }
 
 .curation-story .curation-result-layout {
@@ -828,6 +850,11 @@
   padding-top: 12px;
 }
 
+.curation-story .curation-secondary-metric span {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
 .curation-secondary-metric strong {
   font-size: 1.65rem;
 }
@@ -842,7 +869,7 @@
 }
 
 .curation-story .curation-agent p {
-  font-size: 14px;
+  font-size: 17px;
 }
 
 .curation-story .curation-human-role {
@@ -853,6 +880,8 @@
 
 .curation-human-role-label {
   text-align: left;
+  font-size: 15px;
+  line-height: 1.5;
 }
 
 .curation-human-role h3 {
@@ -862,12 +891,33 @@
 
 .curation-human-role p {
   margin-top: 12px;
-  font-size: 14px;
+  font-size: 17px;
+  line-height: 1.65;
 }
 
 .curation-story .curation-next-project {
   justify-content: flex-start;
   margin-top: 38px;
+}
+
+.curation-next-project a {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+@media (min-width: 701px) and (max-width: 900px) {
+  .curation-story .curation-ownership {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .curation-story .curation-ownership li:nth-child(odd) {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .curation-story .curation-ownership li:nth-child(n+3) {
+    border-top: 1px solid var(--cs-rule);
+  }
 }
 
 @media (max-width: 900px) {
@@ -910,8 +960,8 @@
   .curation-story .curation-hard-title,
   .curation-story .curation-result-title,
   .curation-story .curation-next-title {
-    font-size: 1.45rem;
-    line-height: 1.35;
+    font-size: clamp(1.75rem, 7vw, 2.25rem);
+    line-height: 1.25;
   }
 
   .curation-story .curation-problem-visual {
@@ -932,8 +982,8 @@
     min-height: 0;
     grid-template-columns: 42px minmax(0, 1fr);
     grid-template-rows: auto;
-    gap: 12px;
-    padding: 14px 0;
+    gap: 16px;
+    padding: 17px 0;
     border-left: 0;
   }
 
@@ -949,8 +999,33 @@
   .curation-story .curation-goal {
     grid-template-rows: auto auto;
     min-height: 0;
+    gap: 12px;
+    padding: 16px 0;
+  }
+
+  .curation-story .curation-goal h3 {
+    font-size: 19px;
+  }
+
+  .curation-story .curation-goal p {
+    font-size: 16px;
+  }
+
+  .curation-story .curation-ownership h3 {
+    font-size: 18px;
+  }
+
+  .curation-story .curation-ownership p {
+    font-size: 16px;
+  }
+
+  .curation-story .curation-problem-numbers {
+    grid-template-columns: minmax(0, 1fr) 30px minmax(0, 1.1fr);
     gap: 10px;
-    padding: 14px 0;
+  }
+
+  .curation-story .curation-problem-numbers > div span {
+    font-size: 14px;
   }
 
   .curation-story .curation-goal + .curation-goal {
@@ -978,7 +1053,15 @@
     margin-top: 30px;
   }
 
+  .curation-story .curation-human-role-label {
+    font-size: 15px;
+  }
+
   .curation-story .curation-next-project {
     margin-top: 30px;
+  }
+
+  .curation-story .curation-next-project a {
+    font-size: 15px;
   }
 }

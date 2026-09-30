@@ -21,7 +21,7 @@ export default function ProjectDetail() {
   if (!project) {
     return (
       <section className="mx-auto max-w-[1440px] px-6 pb-16 pt-14 sm:px-10 md:pt-16 lg:px-[5%]">
-        <Link href="/" className="inline-flex items-center gap-2 font-mono-archive text-xs text-muted-foreground archive-link" data-testid="link-back-not-found"><ArrowLeft size={14} /> All work</Link>
+        <Link href="/" className="inline-flex items-center gap-2 font-mono-archive text-sm text-muted-foreground archive-link" data-testid="link-back-not-found"><ArrowLeft size={14} /> All work</Link>
         <h1 className="mt-8 font-editorial text-[clamp(2.2rem,4vw,4rem)] font-semibold leading-[1.1] tracking-[-.03em]">Project not found.</h1>
       </section>
     );
