@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import type { ReactNode } from 'react';
-import { ArrowDown, ArrowLeft, ArrowRight, ArrowUpRight, Play } from 'lucide-react';
+import { ArrowDown, ArrowLeft, ArrowUpRight, Play } from 'lucide-react';
 import { Link } from 'wouter';
 import type { Project } from '@/lib/projects';
 import './curation-story.css';
@@ -194,12 +194,21 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
         <div className="curation-container">
           <div className="curation-heading-row">
             <BeatLabel number="05">The Goals</BeatLabel>
-            <span className="curation-eyebrow">Three measures of a better workflow</span>
           </div>
-          <h2 id="curation-goals-title" className="curation-title curation-goals-title">Three things had<br />to get better.</h2>
+          <h2 id="curation-goals-title" className="curation-title curation-goals-title">Three measures of a better workflow</h2>
           <div className="curation-goal-list">
             <article className="curation-goal">
-              <span>01</span><div><h3>Less time</h3><p>Cut curation time</p></div>
+              <span>01</span>
+              <div>
+                <h3 className="curation-goal-with-trend">
+                  production time
+                  <span className="curation-goal-trend" role="img" aria-label="decreasing">
+                    <span className="curation-goal-bars" aria-hidden="true"><i /><i /><i /></span>
+                    <ArrowDown size={17} strokeWidth={1.8} aria-hidden="true" />
+                  </span>
+                </h3>
+                <p>increased efficiency</p>
+              </div>
             </article>
             <article className="curation-goal">
               <span>02</span><div><h3>More edits</h3><p>Increase assortment edits</p></div>
@@ -219,7 +228,7 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
           </div>
           <div className="curation-hard-layout">
             <div className="curation-hard-story">
-              <h2 id="curation-hard-title" className="curation-title curation-hard-title">The recs<br />weren't<br /><em>good enough.</em></h2>
+              <h2 id="curation-hard-title" className="curation-title curation-hard-title">Recs did not meet the <strong>quality bar</strong>.</h2>
               <div className="curation-contrast" aria-label="Machine recommendation: technically similar. Human curation: actually feels right.">
                 <div><span>Machine recommendation</span><strong>“Technically similar”</strong></div>
                 <ArrowDown size={17} aria-hidden="true" />
@@ -279,13 +288,9 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
           <div className="curation-heading-row">
             <BeatLabel number="08">What's Next</BeatLabel>
           </div>
-          <h2 id="curation-next-title" className="curation-title curation-next-title">The end state isn't<br />a better search box.</h2>
-          <div className="curation-evolution" aria-label="Evolution from tools to systems to agents">
-            <div><span>Tools</span><p>Help people do the work</p></div>
-            <ArrowRight aria-hidden="true" />
-            <div><span>Systems</span><p>Do more of the work</p></div>
-            <ArrowRight aria-hidden="true" />
-            <div className="curation-agent"><span>Agents</span><p>Pull → Rank → Optimize</p></div>
+          <div className="curation-agent">
+            <h2 id="curation-next-title" className="curation-title curation-next-title">Agents</h2>
+            <p>Pull → Rank → Optimize</p>
           </div>
           <div className="curation-human-role">
             <span className="curation-human-role-label">The human role</span>

@@ -16,3 +16,4 @@
 - [Long JSX patch matching](patch-matching-long-jsx.md) — when large exact-match hunks fail silently, use smaller anchored edits rather than retrying the same block.
 - [Lazy media screenshots](lazy-media-screenshots.md) — let nearby lazy posters finish loading before capturing sections below them; scrolling can shift the target.
 - [Curation interview page](curation-interview-page.md) — keep its eight beats as a speaking aid, not a conventional long-form case study.
+- [Portfolio browser captures](portfolio-browser-captures.md) — direct Playwright captures need the system Chromium path; wait for lazy media before scrolling to late sections.
