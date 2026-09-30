@@ -65,6 +65,9 @@
 .curation-story .curation-problem-visual {
   width: 100%;
   margin: 18px 0 0;
+}
+.curation-story .curation-problem-frame {
+  width: 100%;
   overflow: hidden;
   aspect-ratio: 1043 / 576;
   border: 1px solid var(--cs-rule);
@@ -76,6 +79,12 @@
   height: 100%;
   object-fit: cover;
   object-position: center top;
+}
+.curation-story .curation-problem-visual figcaption {
+  margin-top: 8px;
+  color: var(--cs-muted);
+  font-size: 12px;
+  line-height: 1.4;
 }
 
 .curation-story .curation-problem-top,
@@ -527,7 +536,7 @@
 @media (max-width: 700px) {
   .curation-story .curation-beat { padding-block: 50px; }
   .curation-story .curation-problem { padding-top: 24px; padding-bottom: 50px; }
-  .curation-story .curation-problem-visual { aspect-ratio: 1.35 / 1; }
+  .curation-story .curation-problem-frame { aspect-ratio: 1.35 / 1; }
   .curation-story .curation-problem-visual img { object-position: left top; }
   .curation-story .curation-problem-top { margin-top: 36px; align-items: flex-start; }
   .curation-story .curation-problem-title { font-size: clamp(1.35rem, 5vw, 1.6rem); }

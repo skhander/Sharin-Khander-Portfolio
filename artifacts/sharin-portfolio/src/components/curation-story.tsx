@@ -109,12 +109,15 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
                 <div data-testid="stat-curation-shelf-life"><strong>6 days</strong><span>Avg time on site</span></div>
               </div>
               <figure className="curation-problem-visual">
-                <img
-                  src={media('falls-best-bags.png')}
-                  alt="Fall's Best Bags assortment showing editor-selected designer bags"
-                  width={1043}
-                  height={576}
-                />
+                <div className="curation-problem-frame">
+                  <img
+                    src={media('falls-best-bags.png')}
+                    alt="Fall's Best Bags assortment showing editor-selected designer bags"
+                    width={1043}
+                    height={576}
+                  />
+                </div>
+                <figcaption>Example Assortment</figcaption>
               </figure>
             </div>
           </div>
