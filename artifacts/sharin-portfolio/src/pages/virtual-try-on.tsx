@@ -91,7 +91,7 @@ export default function VirtualTryOn() {
           <h2 id="vto-build-title" className="vto-section-title font-editorial">Demo</h2>
           <div className="vto-build-content">
             <p className="vto-build-copy">
-              I built the first version end-to-end: upload a photo → select a product → generate a try-on → see it in context.
+              Upload a photo → submit → browse the site as an avatar of you.
             </p>
             <figure className="vto-video-figure vto-build-recording">
               <DemoVideo
