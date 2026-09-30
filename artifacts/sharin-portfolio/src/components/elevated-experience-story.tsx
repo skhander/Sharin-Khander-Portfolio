@@ -18,10 +18,9 @@ const browseImages = {
 };
 
 const metrics = [
-  { value: '+10%', label: 'Add to Cart Rate' },
-  { value: '−3%', label: 'Obsessions' },
-  { value: '+8%', label: 'Orders' },
   { value: '$60M', label: 'Annualized GMV' },
+  { value: '+10%', label: 'Add to Cart Rate' },
+  { value: '+8%', label: 'Orders' },
 ];
 
 export function ElevatedExperienceStory({ project, nextProject }: { project: Project; nextProject: Project }) {
@@ -65,7 +64,7 @@ export function ElevatedExperienceStory({ project, nextProject }: { project: Pro
         </div>
       </header>
       <section className="mx-auto max-w-[1440px] border-y border-border px-6 py-8 sm:px-10 md:py-10 lg:px-16" aria-label="Site Redesign metrics">
-        <dl className="grid gap-x-8 sm:grid-cols-2 lg:grid-cols-4">
+        <dl className="grid gap-x-8 sm:grid-cols-3">
           {metrics.map((metric) => (
             <div key={metric.label} className="flex flex-col border-t border-border py-5">
               <dt className="order-2 mt-3 font-mono-archive text-[10px] uppercase tracking-[.12em] text-muted-foreground">{metric.label}</dt>
@@ -79,7 +78,7 @@ export function ElevatedExperienceStory({ project, nextProject }: { project: Pro
       <div>
         <section className="mx-auto max-w-[1440px] px-6 pb-20 pt-20 sm:px-10 md:pb-28 md:pt-28 lg:px-16" aria-labelledby="elevated-start">
           <div className="mb-7 flex items-baseline justify-between gap-4 border-t border-border pt-4 md:mb-10">
-            <span className="font-mono-archive text-[10px] uppercase tracking-[.17em] text-accent">01 / The starting point</span>
+            <span className="font-mono-archive text-[10px] uppercase tracking-[.17em] text-accent">01 / Before</span>
             <span className="font-mono-archive text-[10px] uppercase tracking-[.17em] text-muted-foreground">PDP</span>
           </div>
           <figure>
