@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import type { ReactNode } from 'react';
-import { ArrowDown, ArrowLeft, ArrowUpRight, Play } from 'lucide-react';
+import { ArrowDown, ArrowLeft, ArrowUp, ArrowUpRight, Play } from 'lucide-react';
 import { Link } from 'wouter';
 import type { Project } from '@/lib/projects';
 import './curation-story.css';
@@ -172,19 +172,19 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
           <ol className="curation-ownership">
             <li>
               <span className="curation-ownership-number">01</span>
-              <div><h3>Discover</h3><p>Shadowed merchandisers across levels</p></div>
+              <div><h3>Discovery</h3><p>Shadowed merchandisers across levels</p></div>
             </li>
             <li>
               <span className="curation-ownership-number">02</span>
-              <div><h3>Define</h3><p>Partnered with Engineering on scope, timelines, phased delivery</p></div>
+              <div><h3>Definition</h3><p>Partnered with Engineering on scope, timelines, phased delivery</p></div>
             </li>
             <li>
               <span className="curation-ownership-number">03</span>
-              <div><h3>Execute</h3><p>Owned workflow quality + recommendation quality</p></div>
+              <div><h3>Execution</h3><p>Owned workflow quality + recommendation quality</p></div>
             </li>
             <li>
               <span className="curation-ownership-number">04</span>
-              <div><h3>Adopt</h3><p>Onboarding + change management as teams moved over</p></div>
+              <div><h3>Adoption</h3><p>Onboarding + change management as teams moved over</p></div>
             </li>
           </ol>
         </div>
@@ -201,9 +201,8 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
               <span>01</span>
               <div>
                 <h3 className="curation-goal-with-trend">
-                  production time
+                  Production time
                   <span className="curation-goal-trend" role="img" aria-label="decreasing">
-                    <span className="curation-goal-bars" aria-hidden="true"><i /><i /><i /></span>
                     <ArrowDown size={17} strokeWidth={1.8} aria-hidden="true" />
                   </span>
                 </h3>
@@ -211,7 +210,16 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
               </div>
             </article>
             <article className="curation-goal">
-              <span>02</span><div><h3>More edits</h3><p>Increase assortment edits</p></div>
+              <span>02</span>
+              <div>
+                <h3 className="curation-goal-with-trend">
+                  More edits
+                  <span className="curation-goal-trend" role="img" aria-label="increasing">
+                    <ArrowUp size={17} strokeWidth={1.8} aria-hidden="true" />
+                  </span>
+                </h3>
+                <p>Increase assortment edits</p>
+              </div>
             </article>
             <article className="curation-goal">
               <span>03</span><div><h3>Better edits</h3><p>Use recommendations to improve assortment quality</p></div>
@@ -224,7 +232,6 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
         <div className="curation-container">
           <div className="curation-heading-row">
             <BeatLabel number="06">The Hard Part</BeatLabel>
-            <span className="curation-eyebrow">Recommendation ≠ taste</span>
           </div>
           <div className="curation-hard-layout">
             <div className="curation-hard-story">

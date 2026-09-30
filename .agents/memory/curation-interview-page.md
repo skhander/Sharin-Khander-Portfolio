@@ -26,3 +26,9 @@ The whole Curation Tool page should follow the homepage's visual language, not a
 **Why:** The user repeatedly objected that entering the detail page felt like entering a different site. They chose an actual curated-assortment image over repeating the homepage card's company, title, and subtitle, then moved the image from hero position into the first beat.
 
 **How to apply:** Use the supplied assortment visual as smaller supporting context in the problem beat near the production-time comparison, not as a full-width hero or a reason to restore the repeated card title block. Use the homepage's white canvas, Manrope, charcoal text, thin rules, and restrained existing burgundy, pink, and olive accents across all eight beats while keeping text selectable and media functional.
+
+In the Goals beat, indicate the direction of production time and edit volume with plain arrows, not decorative mini bar charts.
+
+**Why:** The user found a descending-bars glyph beside production time distracting and specifically asked to remove it while keeping the directional cues.
+
+**How to apply:** Keep the goals easy to scan without implying charted data where no values are shown.

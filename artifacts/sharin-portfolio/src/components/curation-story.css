@@ -350,23 +350,8 @@
   display: inline-flex;
   flex: none;
   align-items: center;
-  gap: 6px;
   color: var(--cs-accent);
 }
-.curation-goal-bars {
-  display: inline-flex;
-  height: 22px;
-  align-items: flex-end;
-  gap: 3px;
-}
-.curation-goal-bars i {
-  width: 3px;
-  border-radius: 1px 1px 0 0;
-  background: currentColor;
-}
-.curation-goal-bars i:nth-child(1) { height: 19px; }
-.curation-goal-bars i:nth-child(2) { height: 14px; }
-.curation-goal-bars i:nth-child(3) { height: 9px; }
 .curation-goal p {
   max-width: 280px;
   margin: 8px 0 0;
