@@ -664,6 +664,10 @@
   line-height: 1.35;
 }
 
+.curation-story .curation-problem-title strong {
+  font-weight: 700;
+}
+
 .curation-story .curation-problem-numbers {
   width: min(100%, 540px);
   justify-content: start;

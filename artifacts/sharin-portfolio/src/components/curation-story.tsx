@@ -100,13 +100,13 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
           </div>
           <div className="curation-problem-layout">
             <h1 id="curation-problem-title" className="curation-title curation-problem-title">
-              Curation was manual, slow, and difficult to scale.
+              Curation was <strong>manual, slow</strong>, and <strong>difficult to scale.</strong>
             </h1>
             <div className="curation-problem-evidence">
-              <div className="curation-problem-numbers" aria-label="Median assortment production time: 2 weeks; shelf-life: 6 days.">
-                <div data-testid="stat-curation-production-time"><strong>2 weeks</strong><span>med assortment production time</span></div>
+              <div className="curation-problem-numbers" aria-label="Average production time: 2 weeks; average time on site: 6 days.">
+                <div data-testid="stat-curation-production-time"><strong>2 weeks</strong><span>avg production time</span></div>
                 <span className="curation-number-arrow" aria-hidden="true">→</span>
-                <div data-testid="stat-curation-shelf-life"><strong>6 days</strong><span>shelf-life</span></div>
+                <div data-testid="stat-curation-shelf-life"><strong>6 days</strong><span>Avg time on site</span></div>
               </div>
               <figure className="curation-problem-visual">
                 <img
