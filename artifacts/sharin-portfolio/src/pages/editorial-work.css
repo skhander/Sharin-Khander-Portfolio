@@ -173,6 +173,7 @@
 }
 
 .editorial-work .image-search-prototype {
+  position: relative;
   width: min(100%, 270px);
 }
 
@@ -184,21 +185,19 @@
 }
 
 .editorial-work .image-search-playback {
-  position: relative;
+  position: absolute;
   z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 7px;
-  margin: 10px auto 0;
-  padding: 7px 12px;
+  right: 12px;
+  bottom: 12px;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
   border: 1px solid hsl(var(--border));
-  border-radius: 999px;
-  background: hsl(var(--background));
+  border-radius: 50%;
+  background: hsl(var(--background) / .92);
   color: hsl(var(--foreground));
-  font-family: var(--app-font-sans);
-  font-size: 11px;
-  line-height: 1.2;
   cursor: pointer;
 }
 
@@ -206,6 +205,11 @@
 .editorial-work .image-search-playback:focus-visible {
   border-color: hsl(var(--accent));
   color: hsl(var(--accent));
+}
+
+.editorial-work .image-search-playback:focus-visible {
+  outline: 2px solid hsl(var(--accent));
+  outline-offset: 2px;
 }
 
 .editorial-work .editorial-project.is-similar-designers .editorial-project-visual {

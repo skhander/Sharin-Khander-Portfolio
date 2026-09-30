@@ -67,8 +67,7 @@ function ImageSearchPrototype({ src, alt }: { src: string; alt: string }) {
         onClick={togglePlayback}
         aria-label={playing ? 'Pause Image Search prototype' : 'Play Image Search prototype'}
       >
-        {playing ? <Pause size={12} fill="currentColor" aria-hidden="true" /> : <Play size={12} fill="currentColor" aria-hidden="true" />}
-        {playing ? 'Pause preview' : 'Play preview'}
+        {playing ? <Pause size={16} fill="currentColor" aria-hidden="true" /> : <Play size={16} fill="currentColor" aria-hidden="true" />}
       </button>
     </div>
   );
