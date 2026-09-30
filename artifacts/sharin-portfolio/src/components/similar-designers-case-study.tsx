@@ -1,6 +1,8 @@
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'wouter';
 import type { Project } from '@/lib/projects';
+import moduleScreenshot from '@assets/Screenshot_2026-09-30_at_6.38.46_AM_1790775534830.png';
+import placementScreenshot from '@assets/Screenshot_2026-09-29_at_3.15.39_PM_1790775289060.png';
 import { ProjectNavigation } from './project-content';
 import './similar-designers-case-study.css';
 
@@ -96,6 +98,24 @@ export function SimilarDesignersStory({ nextProject }: { project: Project; nextP
         <span className="block">Was it the model or the experience?</span>{' '}
         <span className="mt-5 block">Our first recommendations were generic. We couldn't tell if shoppers didn't want recommendations or if they just weren't useful enough.</span>{' '}
         <span className="mt-5 block">So we tested both the recommendation quality and the UI before investing deeper in the model.</span>
+      </StorySection>
+
+      <StorySection id="similar-tradeoffs" heading="Trade-offs">
+        <div className="similar-tradeoff-block">
+          <h3>Generic vs. personalized</h3>
+          <p>Early recommendations were too generic. We invested further in personalization to make them more relevant.</p>
+          <a href={moduleScreenshot} target="_blank" rel="noopener noreferrer" aria-label="View full-size Similar Designers module screenshot" data-testid="link-similar-designers-module">
+            <img src={moduleScreenshot} alt="Similar Designers module with designer tabs above a row of product placeholders." loading="lazy" />
+          </a>
+        </div>
+        <div className="similar-tradeoff-block">
+          <h3>Visibility vs. screen real estate</h3>
+          <p>Mid-page placement hurt funnel engagement. We moved the module lower and gave it enough space to show personalized products without disrupting browsing.</p>
+          <a href={placementScreenshot} target="_blank" rel="noopener noreferrer" aria-label="View full-size placement comparison" data-testid="link-similar-designers-placement">
+            <img src={placementScreenshot} alt="Three mobile page variants comparing the original, mid-page, and bottom placement of the recommendation module." loading="lazy" />
+          </a>
+        </div>
+        <p className="similar-tradeoff-takeaway"><strong>Takeaway:</strong> Relevance and enough product context both mattered.</p>
       </StorySection>
 
       <StorySection id="similar-learned" heading="What I learned">

@@ -111,6 +111,44 @@
   height: auto;
 }
 
+.similar-designers-case-study .similar-tradeoff-block + .similar-tradeoff-block {
+  margin-top: 36px;
+}
+
+.similar-designers-case-study .similar-tradeoff-block h3 {
+  margin: 0 0 8px;
+  color: hsl(var(--foreground));
+  font-size: clamp(19px, 1.6vw, 23px);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.similar-designers-case-study .similar-tradeoff-block p {
+  margin: 0;
+}
+
+.similar-designers-case-study .similar-tradeoff-block a {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+.similar-designers-case-study .similar-tradeoff-block a:focus-visible {
+  outline: 2px solid hsl(var(--accent));
+  outline-offset: 4px;
+}
+
+.similar-designers-case-study .similar-tradeoff-block img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.similar-designers-case-study .similar-tradeoff-takeaway {
+  margin: 36px 0 0;
+}
+
 @media (max-width: 900px) and (min-width: 640px) {
   .similar-designers-case-study .similar-designers-phases {
     grid-template-columns: repeat(2, minmax(0, 1fr));
