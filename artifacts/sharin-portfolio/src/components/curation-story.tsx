@@ -139,7 +139,7 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
           </div>
           <div className="curation-built-layout">
             <div className="curation-built-copy">
-              <h2 id="curation-built-title" className="curation-title curation-built-title">One end-to-end curation tool</h2>
+              <h2 id="curation-built-title" className="curation-title curation-built-title">One end-to-end tool</h2>
               <BulletList items={[
                 'Centralized workflow',
                 'Recommendations built into the workflow',
