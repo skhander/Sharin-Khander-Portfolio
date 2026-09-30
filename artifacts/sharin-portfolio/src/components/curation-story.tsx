@@ -87,7 +87,7 @@ function BulletList({ items }: { items: ReactNode[] }) {
   );
 }
 
-export function CurationStory({ project, nextProject }: { project: Project; nextProject: Project }) {
+export function CurationStory({ nextProject }: { project: Project; nextProject: Project }) {
   return (
     <main className="page-reveal curation-story">
       <section className="curation-beat curation-problem" aria-labelledby="curation-problem-title">
@@ -95,17 +95,12 @@ export function CurationStory({ project, nextProject }: { project: Project; next
           <Link href="/" className="curation-back archive-link">
             <ArrowLeft size={14} aria-hidden="true" /> All work
           </Link>
-          <header className="curation-project-intro">
-            <p className="curation-project-mark">{project.company}</p>
-            <h1>{project.title}</h1>
-            <p className="curation-project-summary">Complete assortments in minutes.</p>
-          </header>
           <div className="curation-problem-top">
             <BeatLabel number="01">The Problem</BeatLabel>
           </div>
-          <h2 id="curation-problem-title" className="curation-title curation-problem-title">
+          <h1 id="curation-problem-title" className="curation-title curation-problem-title">
             Curation was manual, slow, and difficult to scale.
-          </h2>
+          </h1>
           <div className="curation-problem-bottom">
             <BulletList items={[
               <>Merchandisers spent <strong>weeks building assortments</strong> that might only live for a few days.</>,
@@ -113,11 +108,21 @@ export function CurationStory({ project, nextProject }: { project: Project; next
               <>Manually searching through the product catalog.</>,
               <>No recommendations to help decide what to pull.</>,
             ]} />
-            <div className="curation-problem-numbers" aria-label="Median assortment production time: 2 weeks; shelf-life: 6 days. Production takes longer than the assortment stays live.">
-              <div data-testid="stat-curation-production-time"><strong>2 weeks</strong><span>med assortment production time</span></div>
-              <span className="curation-number-arrow" aria-hidden="true">→</span>
-              <div data-testid="stat-curation-shelf-life"><strong>6 days</strong><span>shelf-life</span></div>
-              <p className="curation-problem-comparison">Production time exceeds shelf-life.</p>
+            <div className="curation-problem-evidence">
+              <figure className="curation-problem-visual">
+                <img
+                  src={media('falls-best-bags.png')}
+                  alt="Fall's Best Bags assortment showing editor-selected designer bags"
+                  width={1043}
+                  height={576}
+                />
+              </figure>
+              <div className="curation-problem-numbers" aria-label="Median assortment production time: 2 weeks; shelf-life: 6 days. Production takes longer than the assortment stays live.">
+                <div data-testid="stat-curation-production-time"><strong>2 weeks</strong><span>med assortment production time</span></div>
+                <span className="curation-number-arrow" aria-hidden="true">→</span>
+                <div data-testid="stat-curation-shelf-life"><strong>6 days</strong><span>shelf-life</span></div>
+                <p className="curation-problem-comparison">Production time exceeds shelf-life.</p>
+              </div>
             </div>
           </div>
         </div>

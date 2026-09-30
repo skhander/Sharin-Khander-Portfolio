@@ -23,6 +23,6 @@ In the problem beat, present assortment production time against shelf-life as a 
 
 The whole Curation Tool page should follow the homepage's visual language, not a separate dark or presentation-style theme. Continuity must be obvious immediately after opening the homepage card, not only after scrolling.
 
-**Why:** The user repeatedly objected that entering the detail page felt like entering a different site. Matching a few colors or headings is insufficient if the opening hierarchy and section rhythm change abruptly.
+**Why:** The user repeatedly objected that entering the detail page felt like entering a different site. They chose an actual curated-assortment image over repeating the homepage card's company, title, and subtitle, then moved the image from hero position into the first beat.
 
-**How to apply:** Carry the homepage card's project identity and typographic hierarchy into the opening viewport. Use the homepage's white canvas, Manrope, charcoal text, thin rules, and restrained existing burgundy, pink, and olive accents across all eight beats while keeping text selectable and media functional.
+**How to apply:** Use the supplied assortment visual as smaller supporting context in the problem beat near the production-time comparison, not as a full-width hero or a reason to restore the repeated card title block. Use the homepage's white canvas, Manrope, charcoal text, thin rules, and restrained existing burgundy, pink, and olive accents across all eight beats while keeping text selectable and media functional.
