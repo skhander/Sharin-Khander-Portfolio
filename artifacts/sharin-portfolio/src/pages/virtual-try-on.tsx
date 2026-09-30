@@ -129,9 +129,11 @@ export default function VirtualTryOn() {
       <section className="vto-editorial-section vto-learning" aria-labelledby="vto-learning-title">
         <div className="vto-shell vto-section-grid">
           <h2 id="vto-learning-title" className="vto-section-title font-editorial">What I learned</h2>
-          <p className="vto-section-statement vto-learning-copy font-editorial">
-            The interesting product question wasn’t whether AI could generate a try-on. It was whether the result was useful enough to change a shopping decision.
-          </p>
+          <div className="vto-learning-copy font-editorial">
+            <p><strong>AI struggled with fit.</strong> It warped faces and bodies.</p>
+            <p><strong>The trade-off was speed.</strong> More realistic meant slower page load.</p>
+            <p><strong>The real question:</strong> Was it good enough to help someone decide what to buy?</p>
+          </div>
         </div>
       </section>
 
