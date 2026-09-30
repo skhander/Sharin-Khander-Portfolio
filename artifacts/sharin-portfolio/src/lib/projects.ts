@@ -80,7 +80,7 @@ export const personalProjects: PersonalProject[] = [
   {
     slug: 'dream-catcher',
     title: 'Dream Catcher',
-    description: 'A dream journal and interpretation app to help you understand what you dream.',
+    description: 'A dream journal and interpretation app to help you understand dreams and connect them to your life.',
     badges: ['COMING SOON'],
     preview: 'mockup',
   },

@@ -1,7 +1,7 @@
 import { useRef, useState, type KeyboardEvent } from 'react';
 import { ArrowUpRight, Pause, Play } from 'lucide-react';
 import { Link } from 'wouter';
-import dreamCatcherMockup from '@assets/Dream_Interpretation_Journal_1790776731515.png';
+import dreamCatcherMockup from '@assets/Dream_Catcher_phone_no_bg.png';
 import { personalProjects, publishedProjects } from '@/lib/projects';
 import { usePageMeta } from '@/lib/use-page-meta';
 import './editorial-work.css';
