@@ -98,9 +98,19 @@ export default function VirtualTryOn() {
       <section className="vto-editorial-section vto-build" aria-labelledby="vto-build-title">
         <div className="vto-shell vto-section-grid">
           <h2 id="vto-build-title" className="vto-section-title font-editorial">The build</h2>
-          <p className="vto-build-copy">
-            I built the first version end-to-end: upload a photo → select a product → generate a try-on → see it in context.
-          </p>
+          <div className="vto-build-content">
+            <p className="vto-build-copy">
+              I built the first version end-to-end: upload a photo → select a product → generate a try-on → see it in context.
+            </p>
+            <figure className="vto-video-figure vto-build-recording">
+              <DemoVideo
+                file="virtual-try-on-build-upload.mp4"
+                poster="virtual-try-on-build-upload-poster.jpg"
+                label="Virtual Try-On build recording showing a photo upload on ShopMy"
+                testId="video-virtual-try-on-build-upload"
+              />
+            </figure>
+          </div>
         </div>
       </section>
 
