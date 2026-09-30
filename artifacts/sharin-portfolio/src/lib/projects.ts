@@ -59,7 +59,7 @@ export type PersonalProject = {
   title: string;
   description: string;
   badges: string[];
-  preview: 'recordings' | 'video' | 'coming-soon';
+  preview: 'recordings' | 'video' | 'mockup' | 'coming-soon';
 };
 
 export const personalProjects: PersonalProject[] = [
@@ -76,6 +76,13 @@ export const personalProjects: PersonalProject[] = [
     description: 'Master fundamental AI concepts in 9 days.',
     badges: ['Ed Tech'],
     preview: 'video',
+  },
+  {
+    slug: 'dream-catcher',
+    title: 'Dream Catcher',
+    description: 'A dream journal and interpretation app to help you understand what you dream.',
+    badges: ['COMING SOON'],
+    preview: 'mockup',
   },
   {
     slug: 'medigo',

@@ -496,6 +496,17 @@
   object-fit: contain;
 }
 
+.editorial-work .personal-dream-preview {
+  width: min(100%, 340px);
+  margin-inline: auto;
+}
+
+.editorial-work .personal-dream-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .editorial-work .personal-recordings {
   display: flex;
   flex-direction: column;
