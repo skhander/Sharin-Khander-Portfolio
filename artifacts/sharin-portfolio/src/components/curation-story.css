@@ -229,11 +229,14 @@
   align-items: start;
 }
 .curation-story .curation-shift-title {
-  font-size: clamp(3.5rem, 9vw, 8.2rem);
-  line-height: .92;
+  color: hsl(352 35% 77%);
+  font-family: var(--app-font-sans);
+  font-size: clamp(1.5rem, 2.2vw, 2rem);
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: -.025em;
+  text-wrap: normal;
 }
-.curation-shift-title span { color: hsl(0 0% 100% / .58); }
-.curation-shift-title i { color: hsl(352 35% 77%); font-style: normal; }
 .curation-story .curation-shift-line {
   max-width: 780px;
   margin: clamp(32px, 5vw, 67px) 0 0;
@@ -686,7 +689,7 @@
   .curation-problem-numbers strong { font-size: clamp(1.45rem, 7vw, 2rem); }
   .curation-problem-numbers > div span { margin-top: 7px; font-size: 10px; }
   .curation-story .curation-next-cue { margin-top: 43px; }
-  .curation-story .curation-shift-title { font-size: clamp(3rem, 13vw, 6.4rem); }
+  .curation-story .curation-shift-title { font-size: clamp(1.35rem, 5vw, 1.6rem); }
   .curation-story .curation-shift-line { margin-top: 30px; font-size: clamp(1.4rem, 6vw, 2.1rem); }
   .curation-story .curation-heading-row { align-items: flex-start; }
   .curation-story .curation-eyebrow { max-width: 145px; text-align: right; line-height: 1.5; }

@@ -125,7 +125,7 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
           <BeatLabel number="02">The Shift</BeatLabel>
           <div>
             <h2 id="curation-shift-title" className="curation-title curation-shift-title">
-              FROM FINDING<br /><span>PRODUCTS</span> <i aria-hidden="true">→</i><br />CURATING
+              From finding products → curating
             </h2>
             <p className="curation-shift-line">
               I wanted merchandisers spending <strong>less time finding products</strong> and more time using their <strong>taste to curate the assortment.</strong>
