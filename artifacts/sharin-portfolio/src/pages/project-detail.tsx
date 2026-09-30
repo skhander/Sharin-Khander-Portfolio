@@ -20,9 +20,9 @@ export default function ProjectDetail() {
 
   if (!project) {
     return (
-      <section className="mx-auto max-w-[1440px] px-6 pb-32 pt-24 sm:px-10 lg:px-16">
-        <Link href="/" className="inline-flex items-center gap-2 font-mono-archive text-[10px] uppercase tracking-[.15em] text-muted-foreground archive-link" data-testid="link-back-not-found"><ArrowLeft size={14} /> All work</Link>
-        <h1 className="mt-12 font-editorial text-6xl">Project not found.</h1>
+      <section className="mx-auto max-w-[1440px] px-6 pb-16 pt-14 sm:px-10 md:pt-16 lg:px-[5%]">
+        <Link href="/" className="inline-flex items-center gap-2 font-mono-archive text-xs text-muted-foreground archive-link" data-testid="link-back-not-found"><ArrowLeft size={14} /> All work</Link>
+        <h1 className="mt-8 font-editorial text-[clamp(2.2rem,4vw,4rem)] font-semibold leading-[1.1] tracking-[-.03em]">Project not found.</h1>
       </section>
     );
   }
@@ -50,17 +50,17 @@ export default function ProjectDetail() {
     <div className="page-reveal">
       <ProjectHero project={project} />
       {project.cover && (
-        <div className="mx-auto w-full max-w-[1440px] px-6 pb-12 sm:px-10 lg:px-16">
+        <div className="mx-auto w-full max-w-[1440px] px-6 pb-8 sm:px-10 lg:px-[5%]">
           <ProjectCanvas project={project} index={index} className="aspect-[1.6] md:aspect-[2.3]" />
         </div>
       )}
       <ProjectMeta project={project} />
       {contentSections.length > 0 && (
-        <div className="mx-auto w-full max-w-[1440px] pt-12 md:pt-16">
+        <div className="mx-auto w-full max-w-[1440px] pt-8 md:pt-12">
           {contentSections.map((section, sectionIndex) => <Section key={section.heading} section={section} index={sectionIndex} />)}
         </div>
       )}
-      <div className="h-16 md:h-24" aria-hidden="true" />
+      <div className="h-8 md:h-12" aria-hidden="true" />
       <ProjectNavigation nextProject={nextProject} />
     </div>
   );

@@ -17,3 +17,4 @@
 - [Lazy media screenshots](lazy-media-screenshots.md) — let nearby lazy posters finish loading before capturing sections below them; scrolling can shift the target.
 - [Curation interview page](curation-interview-page.md) — keep its eight beats as a speaking aid, not a conventional long-form case study.
 - [Portfolio browser captures](portfolio-browser-captures.md) — direct Playwright captures need the system Chromium path; wait for lazy media before scrolling to late sections.
+- [Artifact shell-build environment](artifact-shell-build-env.md) — standalone portfolio builds need the manifest's runtime values that workflows normally inject.

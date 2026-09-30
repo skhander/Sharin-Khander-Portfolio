@@ -96,7 +96,7 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
             <ArrowLeft size={14} aria-hidden="true" /> All work
           </Link>
           <div className="curation-problem-top">
-            <BeatLabel number="01">The Problem</BeatLabel>
+            <BeatLabel number="01">The problem</BeatLabel>
           </div>
           <div className="curation-problem-layout">
             <h1 id="curation-problem-title" className="curation-title curation-problem-title">
@@ -123,7 +123,7 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
 
       <section className="curation-beat curation-shift" aria-labelledby="curation-shift-title">
         <div className="curation-container curation-shift-layout">
-          <BeatLabel number="02">The Shift</BeatLabel>
+          <BeatLabel number="02">The shift</BeatLabel>
           <div>
             <h2 id="curation-shift-title" className="curation-title curation-shift-title">
               Merchandisers spend <strong>less time searching</strong> and <strong>more time using their taste</strong> to curate the assortment.
@@ -186,9 +186,9 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
       <section className="curation-beat curation-goals" aria-labelledby="curation-goals-title">
         <div className="curation-container">
           <div className="curation-heading-row">
-            <BeatLabel number="05">The Goals</BeatLabel>
+            <BeatLabel number="05">The goals</BeatLabel>
           </div>
-          <h2 id="curation-goals-title" className="curation-title curation-goals-title">KPIs</h2>
+          <h2 id="curation-goals-title" className="curation-title curation-goals-title">Key performance indicators</h2>
           <div className="curation-goal-list">
             <article className="curation-goal">
               <span>01</span>
@@ -224,7 +224,7 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
       <section className="curation-beat curation-hard-part" aria-labelledby="curation-hard-title">
         <div className="curation-container">
           <div className="curation-heading-row">
-            <BeatLabel number="06">The Hard Part</BeatLabel>
+            <BeatLabel number="06">The hard part</BeatLabel>
           </div>
           <div className="curation-hard-layout">
             <div className="curation-hard-story">
@@ -254,7 +254,7 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
       <section className="curation-beat curation-result" aria-labelledby="curation-result-title">
         <div className="curation-container">
           <div className="curation-heading-row">
-            <BeatLabel number="07">The Result</BeatLabel>
+            <BeatLabel number="07">The result</BeatLabel>
             <span className="curation-eyebrow">A better workflow, in the edit</span>
           </div>
           <div className="curation-result-layout">
@@ -278,7 +278,7 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
       <section className="curation-beat curation-next" aria-labelledby="curation-next-title">
         <div className="curation-container">
           <div className="curation-heading-row">
-            <BeatLabel number="08">What's Next</BeatLabel>
+            <BeatLabel number="08">What's next</BeatLabel>
           </div>
           <div className="curation-agent">
             <h2 id="curation-next-title" className="curation-title curation-next-title">Agents</h2>

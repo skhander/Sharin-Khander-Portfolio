@@ -96,13 +96,13 @@ const projectVisuals: Record<string, { src: string; alt: string; note?: string; 
   'elevated-experience': {
     src: '/media/browse-after.webp',
     alt: 'The RealReal luxury handbag browse interface',
-    note: 'PRODUCT INTERFACE',
+    note: 'Product interface',
     badges: ['Experiments'],
   },
   'attribute-enrichment': {
     src: '/media/attribute-enrichment/chanel-top-product.webp',
     alt: 'Chanel vintage top used in the Attribute Prediction project',
-    note: 'ATTRIBUTE PREDICTION / SOURCE VISUAL',
+    note: 'Attribute prediction / source visual',
     badges: ['LLMs', '0→1'],
   },
   'ai-discovery': {
@@ -151,7 +151,7 @@ export default function Work() {
         <div className="work-hero-support">
           <p className="work-hero-role font-editorial" data-testid="text-work-tagline">I build easier ways<br />{' '}to shop<span className="text-accent">.</span></p>
           <div className="work-proof" aria-label="2026 impact metrics">
-            <span className="work-proof-heading font-mono-archive">2026 Impact</span>
+            <span className="work-proof-heading font-mono-archive">2026 impact</span>
             <div className="work-proof-grid">
               <div className="work-proof-item">
                 <strong className="work-proof-number font-editorial" data-testid="text-gmv-impact">$180m</strong>
@@ -159,12 +159,12 @@ export default function Work() {
               </div>
               <div className="work-proof-item">
                 <strong className="work-proof-number font-editorial" data-testid="text-experiments-count">40</strong>
-                <span className="work-proof-label">EXPERIMENTS</span>
-                <span className="work-proof-note">36 WINS</span>
+                <span className="work-proof-label">Experiments</span>
+                <span className="work-proof-note">36 wins</span>
               </div>
               <div className="work-proof-item">
                 <strong className="work-proof-number font-editorial" data-testid="text-products-count">7</strong>
-                <span className="work-proof-label">0→1 BUILDS</span>
+                <span className="work-proof-label">0→1 builds</span>
               </div>
             </div>
           </div>
@@ -172,7 +172,7 @@ export default function Work() {
       </section>
       <section id="selected-work" className="mx-auto w-full max-w-[1440px] px-6 pb-20 sm:px-10 md:pb-28 lg:px-[5%]" aria-labelledby="work-heading">
         <div className="work-band">
-          <h2 id="work-heading" className="font-editorial text-[clamp(2.3rem,4vw,3.8rem)] leading-none tracking-[-.035em]">Things I've Built</h2>
+          <h2 id="work-heading" className="font-editorial text-[clamp(2.3rem,4vw,3.8rem)] leading-none tracking-[-.035em]">Things I've built</h2>
           <div className="work-tabs" role="tablist" aria-label="Work type">
             {workTypes.map((type, index) => (
               <button

@@ -9,26 +9,26 @@ export default function About() {
     <div className="page-reveal about-process">
       <section className="about-intro mx-auto w-full max-w-[1440px] px-6 pb-12 pt-14 sm:px-10 md:pb-14 md:pt-24 lg:px-16">
         <h1 className="about-title">How I build</h1>
-        <p className="about-process-sequence"><strong>Brief → Design → Build → Refine</strong></p>
+        <p className="about-process-sequence"><strong>Brief → design → build → refine</strong></p>
       </section>
 
       <section className="about-step mx-auto w-full max-w-[1440px] px-6 pb-20 sm:px-10 md:pb-28 lg:px-16" aria-labelledby="about-step-title">
         <div className="about-step-heading">
           <span className="about-step-index" aria-hidden="true">01</span>
           <div className="about-step-heading-copy">
-            <p className="font-mono-archive text-[10px] uppercase tracking-[.16em] text-muted-foreground">Frame the problem</p>
+            <p className="font-mono-archive text-[10px] tracking-[.16em] text-muted-foreground">Frame the problem</p>
             <h2 id="about-step-title">Give the agent requirements.</h2>
           </div>
         </div>
 
         <div className="about-step-grid">
           <div className="about-step-copy">
-            <p className="about-step-lede">Checklist <span aria-hidden="true">✅</span></p>
+            <p className="about-step-lede">Checklist</p>
             <ol className="about-brief-list">
-              <li><span className="about-list-mark" aria-hidden="true">A</span><span>Write a clear brief: context + scope.</span></li>
-              <li><span className="about-list-mark" aria-hidden="true">B</span><span>Upload meeting + interview insights.</span></li>
-              <li><span className="about-list-mark" aria-hidden="true">C</span><span>Write a short PRD.</span></li>
-              <li><span className="about-list-mark" aria-hidden="true">D</span><span>Brainstorm out loud with Claude Code.</span></li>
+              <li><span className="about-list-mark" aria-hidden="true">a</span><span>Write a clear brief: context + scope.</span></li>
+              <li><span className="about-list-mark" aria-hidden="true">b</span><span>Upload meeting + interview insights.</span></li>
+              <li><span className="about-list-mark" aria-hidden="true">c</span><span>Write a short PRD.</span></li>
+              <li><span className="about-list-mark" aria-hidden="true">d</span><span>Brainstorm out loud with Claude Code.</span></li>
             </ol>
           </div>
 
@@ -47,7 +47,7 @@ export default function About() {
         <div className="about-step-heading">
           <span className="about-step-index" aria-hidden="true">02</span>
           <div className="about-step-heading-copy">
-            <p className="font-mono-archive text-[10px] uppercase tracking-[.16em] text-muted-foreground">design</p>
+            <p className="font-mono-archive text-[10px] tracking-[.16em] text-muted-foreground">Design</p>
             <h2 id="about-step-02-title">Create a prototype</h2>
           </div>
         </div>
@@ -78,7 +78,7 @@ export default function About() {
         <div className="about-step-heading">
           <span className="about-step-index" aria-hidden="true">03</span>
           <div className="about-step-heading-copy">
-            <p className="font-mono-archive text-[10px] uppercase tracking-[.16em] text-muted-foreground">Build</p>
+            <p className="font-mono-archive text-[10px] tracking-[.16em] text-muted-foreground">Build</p>
             <h2 id="about-step-03-title">Build one component at a time.</h2>
           </div>
         </div>
@@ -117,7 +117,7 @@ export default function About() {
         <div className="about-step-heading">
           <span className="about-step-index" aria-hidden="true">04</span>
           <div className="about-step-heading-copy">
-            <p className="font-mono-archive text-[10px] uppercase tracking-[.16em] text-muted-foreground">Test It</p>
+            <p className="font-mono-archive text-[10px] tracking-[.16em] text-muted-foreground">Test it</p>
             <h2 id="about-step-04-title">Try to break the happy path.</h2>
           </div>
         </div>
@@ -141,7 +141,7 @@ export default function About() {
         <div className="about-step-heading">
           <span className="about-step-index" aria-hidden="true">05</span>
           <div className="about-step-heading-copy">
-            <p className="font-mono-archive text-[10px] uppercase tracking-[.16em] text-muted-foreground">Polish + ship</p>
+            <p className="font-mono-archive text-[10px] tracking-[.16em] text-muted-foreground">Polish + ship</p>
             <h2 id="about-step-05-title">Make it real. Then learn.</h2>
           </div>
         </div>
@@ -168,7 +168,7 @@ export default function About() {
 
       <section className="about-work-link mx-auto w-full max-w-[1440px] border-t border-border px-6 py-6 sm:px-10 lg:px-16">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
-          <p className="font-mono-archive text-[10px] uppercase tracking-[.16em] text-muted-foreground">Process / Sharin Khander</p>
+          <p className="font-mono-archive text-[10px] tracking-[.16em] text-muted-foreground">Process / Sharin Khander</p>
           <Link href="/" className="group inline-flex items-center gap-3 font-editorial text-2xl archive-link" data-testid="link-about-work">View work <ArrowUpRight size={17} strokeWidth={1.2} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" /></Link>
         </div>
       </section>

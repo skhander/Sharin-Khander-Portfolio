@@ -21,10 +21,10 @@ const examples = [
 
 function StorySection({ id, title, children }: { id: string; title: string; children: ReactNode }) {
   return (
-    <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-12 sm:px-10 md:py-16 lg:px-16" aria-labelledby={id}>
-      <div className="grid gap-6 md:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] md:gap-16">
-        <h2 id={id} className="max-w-[12ch] font-editorial text-[clamp(2.5rem,4.5vw,4.5rem)] leading-[.94] tracking-[-.04em]">{title}</h2>
-        <div className="max-w-2xl self-end space-y-5 text-base leading-[1.6] text-muted-foreground md:text-lg">{children}</div>
+    <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-8 text-left sm:px-10 md:py-10 lg:px-16" aria-labelledby={id}>
+      <div className="grid gap-4 md:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] md:gap-10">
+        <h2 id={id} className="max-w-[16ch] font-editorial text-[clamp(1.5rem,2.8vw,2.25rem)] font-semibold leading-[1.2] tracking-[-.025em]">{title}</h2>
+        <div className="max-w-2xl self-start space-y-3 text-sm leading-[1.6] text-muted-foreground md:text-base">{children}</div>
       </div>
     </section>
   );
@@ -33,32 +33,32 @@ function StorySection({ id, title, children }: { id: string; title: string; chil
 export function AttributeEnrichmentStory({ project, nextProject }: { project: Project; nextProject: Project }) {
   return (
     <div className="page-reveal">
-      <header className="mx-auto max-w-[1440px] px-6 pb-12 pt-10 sm:px-10 md:pb-16 md:pt-14 lg:px-16">
-        <Link href="/" className="archive-link inline-flex items-center gap-2 font-mono-archive text-[10px] uppercase tracking-[.15em] text-muted-foreground">
+      <header className="mx-auto max-w-[1440px] px-6 pb-8 pt-8 text-left sm:px-10 md:pb-10 md:pt-10 lg:px-16">
+        <Link href="/" className="archive-link inline-flex items-center gap-2 font-mono-archive text-xs text-muted-foreground">
           <ArrowLeft size={14} aria-hidden="true" /> All work
         </Link>
-        <div className="mt-14 grid gap-7 md:mt-20 md:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] md:items-end md:gap-16">
+        <div className="mt-9 grid gap-4 md:mt-12 md:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] md:items-start md:gap-10">
           <div>
-            <p className="font-mono-archive text-[10px] uppercase tracking-[.16em] text-accent">{project.company} / Attribute Prediction</p>
-            <h1 id="catalog-title" className="mt-5 font-editorial text-[clamp(3.8rem,7vw,7rem)] leading-[.84] tracking-[-.05em]" data-testid="text-project-title">Attribute Prediction</h1>
+            <p className="font-mono-archive text-xs text-accent">{project.company} / Attribute Prediction</p>
+            <h1 id="catalog-title" className="mt-3 font-editorial text-[clamp(2rem,4vw,3.25rem)] font-semibold leading-[1.12] tracking-[-.035em]" data-testid="text-project-title">Attribute Prediction</h1>
           </div>
-          <p className="max-w-2xl text-lg leading-[1.4] text-muted-foreground sm:text-xl">{project.description}</p>
+          <p className="max-w-2xl text-sm leading-[1.55] text-muted-foreground md:text-base">{project.description}</p>
         </div>
       </header>
 
-      <section className="mx-auto max-w-[1440px] border-y border-border px-6 py-8 sm:px-10 md:py-10 lg:px-16" aria-label="Attribute Prediction at a glance">
+      <section className="mx-auto max-w-[1440px] border-y border-border px-6 py-5 text-left sm:px-10 md:py-6 lg:px-16" aria-label="Attribute Prediction at a glance">
         <dl className="grid divide-y divide-border sm:grid-cols-3 sm:divide-x sm:divide-y-0">
-          <div className="flex flex-col justify-center py-6 sm:px-6 sm:py-2 sm:first:pl-0">
-            <dt className="order-2 mt-3 font-mono-archive text-[10px] uppercase tracking-[.12em] text-muted-foreground">Approach</dt>
-            <dd className="order-1 font-editorial text-[clamp(1.8rem,2.9vw,3.2rem)] leading-none tracking-[-.03em]">LLM + Computer Vision</dd>
+          <div className="flex flex-col justify-start py-4 text-left sm:px-5 sm:py-2 sm:first:pl-0">
+            <dt className="order-2 mt-2 font-mono-archive text-xs text-muted-foreground">Approach</dt>
+            <dd className="order-1 font-editorial text-[clamp(1.2rem,2vw,1.75rem)] font-semibold leading-tight tracking-[-.02em]">LLM + computer vision</dd>
           </div>
-          <div className="flex flex-col justify-center py-6 sm:px-6 sm:py-2">
-            <dt className="order-2 mt-3 font-mono-archive text-[10px] uppercase tracking-[.12em] text-muted-foreground">Products</dt>
-            <dd className="order-1 font-editorial text-[clamp(3rem,5vw,5rem)] leading-none tracking-[-.04em]">6M+</dd>
+          <div className="flex flex-col justify-start py-4 text-left sm:px-5 sm:py-2">
+            <dt className="order-2 mt-2 font-mono-archive text-xs text-muted-foreground">Products</dt>
+            <dd className="order-1 font-editorial text-[clamp(1.75rem,3vw,2.5rem)] font-semibold leading-tight tracking-[-.03em]">6m+</dd>
           </div>
-          <div className="flex flex-col justify-center py-6 sm:px-6 sm:py-2 sm:last:pr-0">
-            <dt className="order-2 mt-3 font-mono-archive text-[10px] uppercase tracking-[.12em] text-muted-foreground">Experiences</dt>
-            <dd className="order-1 font-editorial text-[clamp(1.8rem,2.9vw,3.2rem)] leading-none tracking-[-.03em]">Search · Browse · Recommendations</dd>
+          <div className="flex flex-col justify-start py-4 text-left sm:px-5 sm:py-2 sm:last:pr-0">
+            <dt className="order-2 mt-2 font-mono-archive text-xs text-muted-foreground">Experiences</dt>
+            <dd className="order-1 font-editorial text-[clamp(1.2rem,2vw,1.75rem)] font-semibold leading-tight tracking-[-.02em]">Search · Browse · Recommendations</dd>
           </div>
         </dl>
       </section>
@@ -73,17 +73,17 @@ export function AttributeEnrichmentStory({ project, nextProject }: { project: Pr
       </StorySection>
 
       <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-12 sm:px-10 md:py-16 lg:px-16" aria-labelledby="catalog-examples">
-        <div className="flex flex-wrap items-end justify-between gap-3">
-          <h2 id="catalog-examples" className="font-editorial text-[clamp(2.5rem,4.5vw,4.5rem)] leading-[.94] tracking-[-.04em]">Inside the catalog</h2>
-          <p className="font-mono-archive text-[10px] uppercase tracking-[.12em] text-muted-foreground">Product images → richer attributes</p>
+        <div className="flex flex-col items-start gap-2">
+          <h2 id="catalog-examples" className="font-editorial text-[clamp(1.5rem,2.8vw,2.25rem)] font-semibold leading-[1.2] tracking-[-.025em]">Inside the catalog</h2>
+          <p className="font-mono-archive text-xs text-muted-foreground">Product images → richer attributes</p>
         </div>
-        <div className="mt-8 grid gap-8 md:mt-12 md:grid-cols-2 md:gap-6">
+        <div className="mt-5 grid gap-6 md:mt-7 md:grid-cols-2 md:gap-5">
           {examples.map(({ image, title, alt }) => (
             <figure key={image} className="min-w-0">
               <a href={media(image)} target="_blank" rel="noopener noreferrer" className="block overflow-hidden border border-border bg-[hsl(var(--olive-surface)/.3)] transition-opacity hover:opacity-90" aria-label={`Open full image: ${title}`}>
                 <img src={media(image)} alt={alt} loading="lazy" className="block aspect-[1030/583] w-full object-contain" />
               </a>
-              <figcaption className="mt-3 flex items-center justify-between gap-4 font-mono-archive text-[10px] uppercase tracking-[.12em] text-muted-foreground">
+              <figcaption className="mt-2 flex flex-col items-start gap-2 font-mono-archive text-xs text-muted-foreground">
                 <span>{title} / Attribute example</span>
                 <a href={media(image)} target="_blank" rel="noopener noreferrer" className="inline-flex shrink-0 items-center gap-1 text-accent underline underline-offset-4 hover:text-foreground">Open full image <ArrowUpRight size={12} aria-hidden="true" /></a>
               </figcaption>
@@ -97,7 +97,7 @@ export function AttributeEnrichmentStory({ project, nextProject }: { project: Pr
       </StorySection>
 
       <StorySection id="catalog-learned" title="What I learned">
-        <p className="font-editorial text-[clamp(2rem,3vw,3rem)] leading-[1.12] text-foreground">AI products are only as good as the evaluation behind them.</p>
+        <p className="font-editorial text-[clamp(1.5rem,2.8vw,2.25rem)] font-semibold leading-[1.2] text-foreground">AI products are only as good as the evaluation behind them.</p>
       </StorySection>
 
       <ProjectNavigation nextProject={nextProject} />

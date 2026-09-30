@@ -1,69 +1,65 @@
 .virtual-try-on {
   --vto-line: hsl(var(--foreground) / .18);
-  --vto-soft: hsl(var(--olive-surface) / .28);
   padding-bottom: 12px;
 }
 
 .vto-shell {
-  width: min(100% - 48px, 1312px);
+  width: min(90%, 1440px);
   margin-inline: auto;
 }
 
 .vto-header {
-  position: relative;
-  padding: 26px 0 clamp(48px, 7vw, 92px);
+  padding: 24px 0 42px;
   border-bottom: 1px solid var(--vto-line);
 }
 
 .vto-back {
   display: inline-flex;
   align-items: center;
-  gap: 9px;
+  gap: 8px;
   color: hsl(var(--muted-foreground));
   font-family: var(--app-font-sans);
-  font-size: 11px;
-  letter-spacing: .12em;
+  font-size: 13px;
+  line-height: 1.5;
   text-decoration: none;
-  text-transform: uppercase;
 }
 
 .vto-intro {
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(300px, .9fr);
-  align-items: end;
-  gap: clamp(42px, 8vw, 120px);
-  margin-top: clamp(60px, 9vw, 126px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  margin-top: 40px;
 }
 
 .vto-intro h1 {
-  max-width: 9ch;
   margin: 0;
-  font-size: clamp(4.5rem, 10.3vw, 9.4rem);
+  font-size: clamp(2.4rem, 4.5vw, 4rem);
   font-weight: 600;
-  line-height: .82;
-  letter-spacing: -.075em;
+  line-height: 1.1;
+  letter-spacing: -.03em;
 }
 
 .vto-title-break { display: none; }
+
 .vto-intro-copy {
-  max-width: 500px;
-  padding-bottom: 7px;
+  max-width: 680px;
 }
 
 .vto-question {
-  margin: 0 0 20px;
-  font-size: clamp(1.75rem, 3vw, 2.65rem);
+  margin: 0 0 16px;
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
   font-weight: 500;
-  line-height: 1.08;
-  letter-spacing: -.04em;
+  line-height: 1.2;
+  letter-spacing: -.035em;
 }
 
 .vto-description {
-  max-width: 42ch;
+  max-width: 48ch;
   margin: 0;
   color: hsl(var(--muted-foreground));
-  font-size: clamp(15px, 1.25vw, 17px);
-  line-height: 1.7;
+  font-size: 15px;
+  line-height: 1.65;
 }
 
 .vto-editorial-section {
@@ -72,48 +68,48 @@
 
 .vto-section-grid {
   display: grid;
-  grid-template-columns: minmax(220px, .58fr) minmax(0, 1fr);
-  gap: clamp(36px, 7vw, 104px);
+  grid-template-columns: minmax(160px, .34fr) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(28px, 5vw, 72px);
 }
 
-.vto-bet { padding-block: clamp(54px, 8vw, 112px); }
-.vto-build { padding-block: clamp(44px, 6vw, 78px); }
+.vto-bet { padding-block: 56px; }
+.vto-build { padding-block: 42px; }
 
 .vto-section-title {
   margin: 0;
-  font-size: clamp(2.1rem, 3.7vw, 3.5rem);
-  font-weight: 500;
-  line-height: .98;
-  letter-spacing: -.05em;
+  font-size: clamp(1.5rem, 2.3vw, 2rem);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -.035em;
 }
 
 .vto-section-statement {
-  max-width: 780px;
-  margin: -7px 0 0;
-  font-size: clamp(2rem, 4.1vw, 4.3rem);
+  max-width: 740px;
+  margin: 0;
+  font-size: clamp(1.65rem, 3.1vw, 2.8rem);
   font-weight: 500;
-  line-height: 1.02;
-  letter-spacing: -.055em;
+  line-height: 1.18;
+  letter-spacing: -.04em;
 }
 
 .vto-build-copy {
-  max-width: 750px;
+  max-width: 760px;
   margin: 0;
-  font-size: clamp(1.18rem, 2vw, 1.65rem);
-  line-height: 1.55;
-  letter-spacing: -.025em;
+  font-size: clamp(1rem, 1.45vw, 1.2rem);
+  line-height: 1.65;
 }
 
 .vto-demo {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, .48fr);
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
   align-items: start;
-  column-gap: clamp(20px, 3.4vw, 50px);
-  row-gap: 18px;
-  padding-block: clamp(28px, 4vw, 54px) clamp(72px, 10vw, 140px);
+  gap: clamp(16px, 2.4vw, 32px);
+  padding-block: 38px 72px;
 }
 
 .vto-video-figure { min-width: 0; margin: 0; }
+
 .vto-video-figure video,
 .vto-video-play,
 .vto-video-play img {
@@ -128,72 +124,69 @@
 .vto-video-play {
   position: relative;
   padding: 0;
-  border: 0;
+  border: 1px solid var(--vto-line);
   cursor: pointer;
 }
+
+.vto-video-play img { object-fit: contain; }
 
 .vto-play-icon {
   position: absolute;
   top: 50%;
   left: 50%;
   display: grid;
-  width: 56px;
-  height: 56px;
+  width: 46px;
+  height: 46px;
   place-items: center;
-  border-radius: 50%;
-  background: hsl(var(--background) / .94);
-  color: hsl(var(--accent));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  background: hsl(var(--background) / .96);
+  color: hsl(var(--foreground));
   transform: translate(-50%, -50%);
-  transition: transform .2s ease, background .2s ease;
 }
 
 .vto-video-play:hover .vto-play-icon {
-  background: hsl(var(--background));
-  transform: translate(-50%, -50%) scale(1.1);
+  color: hsl(var(--accent));
 }
 
-.vto-video-detail { padding-top: clamp(42px, 7vw, 96px); }
-
-.vto-learning { padding-block: clamp(54px, 8vw, 112px); }
-.vto-learning-copy { max-width: 800px; }
+.vto-learning { padding-block: 56px; }
+.vto-learning-copy { max-width: 760px; }
 
 .vto-proof-section {
-  padding-block: clamp(58px, 8vw, 112px) clamp(72px, 9vw, 128px);
-  background: hsl(var(--olive-surface) / .16);
+  padding-block: 56px 76px;
+  border-bottom: 1px solid var(--vto-line);
 }
 
 .vto-proof-heading {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 24px;
-  margin-bottom: clamp(28px, 4vw, 52px);
+  margin-bottom: 28px;
 }
 
 .vto-proof-heading h2 {
+  max-width: 26ch;
   margin: 0;
-  font-size: clamp(2.7rem, 5vw, 5.3rem);
+  font-size: clamp(1.75rem, 3vw, 2.6rem);
   font-weight: 500;
-  line-height: .94;
-  letter-spacing: -.06em;
+  line-height: 1.2;
+  letter-spacing: -.04em;
 }
 
 .vto-proof-grid {
   display: grid;
-  grid-template-columns: 1.02fr .86fr 1.02fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: start;
-  gap: clamp(14px, 2.2vw, 30px);
+  gap: clamp(12px, 2vw, 24px);
 }
 
 .vto-proof-figure { min-width: 0; margin: 0; }
-.vto-proof-blue { margin-top: clamp(42px, 8vw, 108px); }
-.vto-proof-floral { margin-top: clamp(14px, 3vw, 40px); }
+.vto-proof-blue,
+.vto-proof-floral { margin-top: 0; }
 
 .vto-proof-image {
   display: grid;
-  min-height: 250px;
+  min-height: 180px;
   place-items: center;
   overflow: hidden;
+  border: 1px solid var(--vto-line);
   background: hsl(var(--background));
 }
 
@@ -209,49 +202,35 @@
   outline-offset: 4px;
 }
 
-@media (min-width: 1500px) {
-  .vto-shell { width: min(100% - 96px, 1312px); }
-}
-
 @media (max-width: 767px) {
-  .vto-shell { width: min(100% - 40px, 560px); }
-  .vto-header { padding-top: 20px; }
+  .vto-shell { width: min(100% - 40px, 600px); }
+  .vto-header { padding-top: 20px; padding-bottom: 40px; }
   .vto-intro {
-    grid-template-columns: 1fr;
-    gap: 31px;
-    margin-top: 67px;
+    gap: 16px;
+    margin-top: 34px;
   }
   .vto-intro h1 {
-    font-size: clamp(4.3rem, 17vw, 7rem);
-    line-height: .84;
+    font-size: clamp(2.25rem, 10vw, 2.8rem);
+    line-height: 1.1;
   }
   .vto-title-break { display: block; }
-  .vto-question { max-width: 16ch; font-size: clamp(1.8rem, 7.5vw, 2.5rem); }
+  .vto-question { max-width: 28ch; font-size: clamp(1.25rem, 5vw, 1.5rem); }
   .vto-description { font-size: 15px; }
-  .vto-section-grid { grid-template-columns: 1fr; gap: 26px; }
-  .vto-bet { padding-block: 48px 58px; }
-  .vto-build { padding-block: 40px 48px; }
-  .vto-section-title { font-size: 2.15rem; }
-  .vto-section-statement { margin: 0; font-size: clamp(2.1rem, 9vw, 3.6rem); }
-  .vto-build-copy { font-size: 1.15rem; }
+  .vto-section-grid { grid-template-columns: 1fr; gap: 16px; }
+  .vto-bet { padding-block: 36px 40px; }
+  .vto-build { padding-block: 34px 38px; }
+  .vto-section-title { font-size: 1.45rem; }
+  .vto-section-statement { font-size: clamp(1.4rem, 6vw, 2rem); }
+  .vto-build-copy { font-size: 1rem; }
   .vto-demo {
     grid-template-columns: 1fr;
-    gap: 18px;
-    padding-block: 25px 66px;
+    gap: 16px;
+    padding-block: 24px 48px;
   }
-  .vto-video-detail { padding-top: 0; }
-  .vto-learning { padding-block: 48px 58px; }
-  .vto-proof-section { padding-block: 53px 64px; }
-  .vto-proof-heading { align-items: start; }
-  .vto-proof-heading h2 { max-width: 9ch; font-size: clamp(2.8rem, 11vw, 4rem); }
-  .vto-proof-grid { grid-template-columns: 1fr 1fr; gap: 24px 12px; }
-  .vto-proof-blue { margin-top: 38px; }
-  .vto-proof-floral { margin-top: -24px; }
-  .vto-proof-image { min-height: 160px; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .virtual-try-on { animation: none; }
-  .vto-back { transition: none; }
-  .vto-play-icon { transition: none; }
+  .vto-learning { padding-block: 38px 42px; }
+  .vto-proof-section { padding-block: 40px 48px; }
+  .vto-proof-heading { margin-bottom: 20px; }
+  .vto-proof-heading h2 { font-size: clamp(1.7rem, 7vw, 2.25rem); }
+  .vto-proof-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .vto-proof-image { min-height: 130px; }
 }

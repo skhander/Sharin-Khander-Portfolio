@@ -7,7 +7,7 @@ import './similar-designers-case-study.css';
 const metrics = [
   { value: '$30M', label: 'GMV' },
   { value: '+3%', label: 'GMV per visitor' },
-  { value: '↓10%', label: 'bounce rate' },
+  { value: '↓10%', label: 'Bounce rate' },
 ];
 
 const phases = [
@@ -33,20 +33,20 @@ const phases = [
 
 function StorySection({ id, heading, children }: { id: string; heading: string; children: React.ReactNode }) {
   return (
-    <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-12 sm:px-10 md:py-16 lg:px-16" aria-labelledby={id}>
-      <div className="grid gap-6 md:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] md:gap-16">
-        <h2 id={id} className="max-w-[12ch] font-editorial text-[clamp(2.5rem,4.5vw,4.5rem)] leading-[.94] tracking-[-.04em]">{heading}</h2>
-        <p className="max-w-2xl self-end text-base leading-[1.6] text-muted-foreground md:text-lg">{children}</p>
+    <section className="similar-story-section mx-auto max-w-[1440px] border-b border-border px-6 py-9 sm:px-10 md:py-11 lg:px-16" aria-labelledby={id}>
+      <div className="similar-story-grid">
+        <h2 id={id} className="similar-story-heading font-editorial">{heading}</h2>
+        <div className="similar-story-copy text-muted-foreground">{children}</div>
       </div>
       {id === 'similar-built' && (
-        <div className="similar-designers-media mt-10 md:mt-14">
-          <p className="font-mono-archive text-[10px] uppercase tracking-[.14em] text-accent">Similar Designers progression</p>
-          <div className="similar-designers-phases mt-8 md:mt-12">
+        <div className="similar-designers-media mt-8">
+          <p className="similar-progression-label text-muted-foreground">Similar Designers progression</p>
+          <div className="similar-designers-phases mt-6">
             {phases.map((phase) => (
               <figure className="similar-designers-phase" key={phase.label}>
                 <figcaption>
-                  <span className="block font-mono-archive text-[11px] tracking-[.14em] text-accent">{phase.label}</span>
-                  <span className="mt-2 block font-editorial text-[clamp(1.1rem,1.6vw,1.4rem)] leading-tight">{phase.name}</span>
+                  <span className="similar-phase-label block text-muted-foreground">{phase.label}</span>
+                  <span className="similar-phase-name mt-2 block font-editorial">{phase.name}</span>
                 </figcaption>
                 <img src={`${import.meta.env.BASE_URL}media/work/${phase.src}`} alt={phase.alt} width={684} height={1312} loading="lazy" />
               </figure>
@@ -61,24 +61,22 @@ function StorySection({ id, heading, children }: { id: string; heading: string; 
 export function SimilarDesignersStory({ nextProject }: { project: Project; nextProject: Project }) {
   return (
     <article className="page-reveal similar-designers-case-study">
-      <header className="mx-auto max-w-[1440px] px-6 pb-12 pt-10 sm:px-10 md:pb-16 md:pt-14 lg:px-16">
-        <Link href="/" className="inline-flex items-center gap-2 font-mono-archive text-[10px] uppercase tracking-[.15em] text-muted-foreground archive-link">
+      <header className="similar-case-header mx-auto max-w-[1440px] px-6 pb-9 pt-10 sm:px-10 md:pb-11 md:pt-12 lg:px-16">
+        <Link href="/" className="similar-back-link inline-flex items-center gap-2 text-muted-foreground archive-link">
           <ArrowLeft size={14} aria-hidden="true" /> All work
         </Link>
-        <div className="mt-14 grid grid-cols-1 gap-7 md:mt-20 md:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] md:items-end md:gap-16">
-          <div>
-            <h1 className="max-w-3xl font-editorial text-[clamp(3.8rem,8vw,8rem)] leading-[.84] tracking-[-.05em]">Similar Designers</h1>
-          </div>
-          <p className="max-w-2xl text-lg leading-[1.4] text-muted-foreground sm:text-xl">Helping shoppers discover their next favorite designer.</p>
+        <div className="similar-case-intro mt-9">
+          <h1 className="font-editorial">Similar Designers</h1>
+          <p className="text-muted-foreground">Helping shoppers discover their next favorite designer.</p>
         </div>
       </header>
 
-      <section className="mx-auto max-w-[1440px] border-y border-border px-6 py-8 sm:px-10 md:py-10 lg:px-16" aria-label="Similar Designers metrics">
+      <section className="similar-metrics mx-auto max-w-[1440px] border-y border-border px-6 py-5 sm:px-10 md:py-6 lg:px-16" aria-label="Similar Designers metrics">
         <dl className="grid grid-cols-1 divide-y divide-border sm:grid-cols-3 sm:divide-x sm:divide-y-0">
           {metrics.map((metric) => (
-            <div key={metric.label} className="flex flex-col py-6 sm:px-6 sm:py-2 first:sm:pl-0 last:sm:pr-0">
-              <dt className="order-2 mt-3 font-mono-archive text-[10px] uppercase tracking-[.12em] text-muted-foreground">{metric.label}</dt>
-              <dd className="order-1 font-editorial text-[clamp(3rem,5vw,5rem)] leading-none tracking-[-.04em]">{metric.value}</dd>
+            <div key={metric.label} className="similar-metric flex flex-col py-4 sm:px-6 sm:py-1 first:sm:pl-0 last:sm:pr-0">
+              <dt className="order-2 mt-1 text-muted-foreground">{metric.label}</dt>
+              <dd className="order-1 font-editorial">{metric.value}</dd>
             </div>
           ))}
         </dl>

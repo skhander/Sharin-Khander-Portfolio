@@ -1,13 +1,13 @@
 .shopping-agent-story .shopping-agent-media {
   width: 100%;
   max-width: 1100px;
-  margin-inline: auto;
+  margin-left: 0;
 }
 
 .shopping-agent-story .shopping-agent-prototype-player {
   width: 100%;
   max-width: 400px;
-  margin-inline: auto;
+  margin-left: 0;
 }
 
 .shopping-agent-story .shopping-agent-prototype-preview {
@@ -33,8 +33,8 @@
   top: 50%;
   left: 50%;
   display: grid;
-  width: 54px;
-  height: 54px;
+  width: 46px;
+  height: 46px;
   place-items: center;
   transform: translate(-50%, -50%);
   border-radius: 50%;
@@ -52,18 +52,27 @@
   grid-template-columns: minmax(0, 1fr);
   width: 100%;
   max-width: 1100px;
-  margin-inline: auto;
+  margin-left: 0;
   border: 1px solid hsl(var(--border));
 }
 
 .shopping-agent-story .shopping-agent-comparison-heading,
 .shopping-agent-story .shopping-agent-comparison-media {
   min-width: 0;
-  padding: 20px 24px;
+  padding: 18px 20px;
 }
 
 .shopping-agent-story .shopping-agent-comparison-heading {
   border-bottom: 1px solid hsl(var(--border));
+}
+
+.shopping-agent-story .shopping-agent-comparison-heading h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -.02em;
+  text-align: left;
 }
 
 .shopping-agent-story .shopping-agent-comparison-heading--agent {
@@ -73,15 +82,15 @@
 .shopping-agent-story .shopping-agent-query-tag {
   display: inline-block;
   max-width: 100%;
-  margin-top: 12px;
-  padding: 7px 11px;
-  border: 1px solid hsl(var(--accent) / .16);
-  border-radius: 999px;
-  background: hsl(var(--accent) / .07);
+  margin-top: 10px;
+  padding: 6px 9px;
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  background: transparent;
   color: hsl(var(--foreground));
   font-size: 12px;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.4;
 }
 
 .shopping-agent-story .shopping-agent-comparison .shopping-agent-image-frame {
@@ -92,7 +101,7 @@
 .shopping-agent-story .shopping-agent-image-frame {
   width: 100%;
   overflow: auto;
-  background: #fff;
+  background: hsl(var(--background));
   border: 1px solid hsl(var(--border));
   scrollbar-color: hsl(var(--olive-surface)) transparent;
 }
@@ -111,7 +120,6 @@
   .shopping-agent-story .shopping-agent-comparison {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .shopping-agent-story .shopping-agent-comparison-hint { display: none; }
   .shopping-agent-story .shopping-agent-comparison-heading--traditional {
     grid-column: 1;
     grid-row: 1;
@@ -136,6 +144,7 @@
 @media (max-width: 767px) {
   .shopping-agent-story .shopping-agent-comparison-heading,
   .shopping-agent-story .shopping-agent-comparison-media { padding: 16px; }
+  .shopping-agent-story .shopping-agent-comparison-heading h3 { font-size: 17px; }
   .shopping-agent-story .shopping-agent-comparison .shopping-agent-image-frame { height: 520px; }
   .shopping-agent-story .shopping-agent-image-frame--search { max-height: 560px; }
   .shopping-agent-story .shopping-agent-image-frame--agent { max-height: 600px; }
