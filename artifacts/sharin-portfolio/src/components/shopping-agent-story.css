@@ -97,12 +97,6 @@
   scrollbar-color: hsl(var(--olive-surface)) transparent;
 }
 
-.shopping-agent-story .shopping-agent-image-frame--search {
-  max-width: 460px;
-  max-height: 660px;
-  margin-inline: auto;
-}
-
 .shopping-agent-story .shopping-agent-image-frame--agent {
   max-height: 780px;
 }
@@ -113,10 +107,11 @@
   height: auto;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1100px) {
   .shopping-agent-story .shopping-agent-comparison {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+  .shopping-agent-story .shopping-agent-comparison-hint { display: none; }
   .shopping-agent-story .shopping-agent-comparison-heading--traditional {
     grid-column: 1;
     grid-row: 1;

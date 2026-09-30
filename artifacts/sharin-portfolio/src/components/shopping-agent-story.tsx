@@ -46,7 +46,7 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
       </section>
 
       <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-12 sm:px-10 md:py-16 lg:px-16" aria-labelledby="shopping-problem">
-        <div className="grid gap-8 md:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] md:gap-16">
+        <div className="grid gap-8 lg:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] lg:gap-16">
           <h2 id="shopping-problem" className="font-mono-archive text-xs font-semibold uppercase tracking-[.14em] text-accent">01 — PROBLEM</h2>
           <div className="max-w-2xl space-y-5 text-base leading-[1.6] md:text-lg">
             <p>Shoppers need to translate their taste into catalog language.</p>
@@ -61,7 +61,7 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
             <div className="shopping-agent-image-frame shopping-agent-image-frame--search" tabIndex={0} role="region" aria-label="Traditional Search screenshot; scroll to inspect">
               <img src={media('traditional-search.png')} alt="The RealReal traditional search results for black silk dress, showing a keyword search box, filters, and a grid of black dresses." loading="lazy" />
             </div>
-            <p className="mt-2 font-mono-archive text-[10px] text-muted-foreground sm:hidden">Scroll to inspect the screenshot</p>
+            <p className="shopping-agent-comparison-hint mt-2 font-mono-archive text-[10px] text-muted-foreground">Scroll to inspect the screenshot</p>
           </div>
           <div className="shopping-agent-comparison-heading shopping-agent-comparison-heading--agent">
             <h3 className="font-editorial text-2xl font-normal">How shoppers think</h3>
@@ -71,13 +71,13 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
             <div className="shopping-agent-image-frame shopping-agent-image-frame--agent" tabIndex={0} role="region" aria-label="Shopping Agent screenshot; scroll to inspect">
               <img src={media('agent-results.png')} alt="Ask TRR Shopping Agent responding to a request for a 90s minimalist Calvin Klein look for a winter wedding with a visual selection of dresses." loading="lazy" />
             </div>
-            <p className="mt-2 font-mono-archive text-[10px] text-muted-foreground sm:hidden">Swipe and scroll to inspect the screenshot</p>
+            <p className="shopping-agent-comparison-hint mt-2 font-mono-archive text-[10px] text-muted-foreground">Swipe and scroll to inspect the screenshot</p>
           </div>
         </div>
       </section>
 
       <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-12 sm:px-10 md:py-16 lg:px-16" aria-labelledby="shopping-prototype">
-        <div className="grid gap-8 md:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] md:gap-16">
+        <div className="grid gap-8 lg:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] lg:gap-16">
           <h2 id="shopping-prototype" className="font-mono-archive text-xs font-semibold uppercase tracking-[.14em] text-accent">02 — PROTOTYPE</h2>
           <div className="max-w-2xl space-y-5 text-base leading-[1.6] md:text-lg">
             <p><strong className="font-semibold text-foreground">The MVP had three journeys: search, refine, compare.</strong></p>
@@ -100,7 +100,7 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
       </section>
 
       <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-12 sm:px-10 md:py-16 lg:px-16" aria-labelledby="shopping-build">
-        <div className="grid gap-8 md:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] md:gap-16">
+        <div className="grid gap-8 lg:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] lg:gap-16">
           <h2 id="shopping-build" className="font-mono-archive text-xs font-semibold uppercase tracking-[.14em] text-accent">03 — BUILD</h2>
           <div className="max-w-2xl space-y-5 text-base leading-[1.6] md:text-lg">
             <p><strong className="font-semibold text-foreground">I designed the interaction model, wrote the system instructions, shaped the agent's voice, and connected it to our shopping infrastructure.</strong></p>
@@ -114,7 +114,7 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
       </section>
 
       <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-12 sm:px-10 md:py-16 lg:px-16" aria-labelledby="shopping-learning">
-        <div className="grid gap-8 md:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] md:gap-16">
+        <div className="grid gap-8 lg:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] lg:gap-16">
           <h2 id="shopping-learning" className="font-mono-archive text-xs font-semibold uppercase tracking-[.14em] text-accent">04 — LEARN</h2>
           <div className="max-w-2xl">
             <h3 className="font-editorial text-[clamp(2.5rem,4vw,4.5rem)] font-semibold leading-[1.05] tracking-[-.04em]">Teaching the agent how to shop</h3>
@@ -129,8 +129,8 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
             Download the Excel sheet <Download size={15} aria-hidden="true" />
           </a>
         </figure>
-        <div className="mt-14 grid gap-8 md:mt-20 md:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] md:gap-16">
-          <div className="max-w-2xl space-y-5 text-base leading-[1.6] md:col-start-2 md:text-lg">
+        <div className="mt-14 grid gap-8 md:mt-20 lg:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] lg:gap-16">
+          <div className="max-w-2xl space-y-5 text-base leading-[1.6] lg:col-start-2 md:text-lg">
             <p>Natural language unlocked new kinds of shopping intent.</p>
             <p className="text-muted-foreground">The conversational interface showed fewer products and made comparison harder.</p>
             <p className="border-t border-border pt-6 font-editorial text-[clamp(2rem,3vw,3.25rem)] leading-[1.08] tracking-[-.04em]">Chat is great for understanding. Feeds are great for shopping.</p>
