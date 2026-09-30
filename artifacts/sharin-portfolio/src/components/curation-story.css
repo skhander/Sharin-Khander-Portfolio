@@ -117,14 +117,16 @@
 }
 
 .curation-story .curation-problem-title {
-  max-width: 1100px;
+  max-width: 40ch;
   margin-top: clamp(36px, 5.4vw, 78px);
-  font-size: clamp(4.1rem, 12.5vw, 11.3rem);
-  line-height: .83;
-  letter-spacing: -.095em;
+  color: hsl(352 35% 77%);
+  font-family: var(--app-font-sans);
+  font-size: clamp(1.5rem, 2.2vw, 2rem);
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: -.025em;
+  text-wrap: normal;
 }
-
-.curation-problem-title em { color: hsl(352 35% 77%) !important; }
 
 .curation-story .curation-problem-bottom {
   display: grid;
@@ -670,7 +672,7 @@
   }
   .curation-story .curation-problem-top { margin-top: 58px; align-items: flex-start; }
   .curation-story .curation-project-mark { max-width: 135px; text-align: right; line-height: 1.5; }
-  .curation-story .curation-problem-title { font-size: clamp(3.45rem, 15.8vw, 7.7rem); }
+  .curation-story .curation-problem-title { font-size: clamp(1.35rem, 5vw, 1.6rem); }
   .curation-story .curation-problem-bottom { grid-template-columns: 1fr; gap: 37px; margin-top: 43px; }
   .curation-story .curation-problem-numbers { grid-template-columns: minmax(0, 1fr) 28px minmax(0, 1.3fr); }
   .curation-problem-numbers strong { font-size: clamp(3.5rem, 15vw, 6.4rem); }

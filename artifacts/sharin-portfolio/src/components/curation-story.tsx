@@ -100,7 +100,7 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
             <p className="curation-project-mark">The RealReal <span>/</span> Curation Tool</p>
           </div>
           <h1 id="curation-problem-title" className="curation-title curation-problem-title">
-            WEEKS OF WORK.<br /><em>DAYS LIVE.</em>
+            Curation was manual, slow, and difficult to scale.
           </h1>
           <div className="curation-problem-bottom">
             <BulletList items={[
