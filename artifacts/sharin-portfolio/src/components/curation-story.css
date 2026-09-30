@@ -183,7 +183,6 @@
   line-height: .9;
   white-space: nowrap;
 }
-.curation-problem-numbers > div:last-child strong { font-size: clamp(2rem, 3.4vw, 3.4rem); }
 .curation-problem-numbers > div span {
   margin-top: 11px;
   color: hsl(39 27% 96% / .58);
@@ -192,7 +191,6 @@
   letter-spacing: .15em;
   text-transform: uppercase;
 }
-.curation-problem-numbers .curation-small-arrow { padding-inline: .12em; color: hsl(352 35% 77%); }
 .curation-story .curation-number-arrow { color: hsl(352 35% 77%); font-size: 25px; }
 .curation-story .curation-next-cue {
   display: flex;
@@ -676,7 +674,6 @@
   .curation-story .curation-problem-bottom { grid-template-columns: 1fr; gap: 37px; margin-top: 43px; }
   .curation-story .curation-problem-numbers { grid-template-columns: minmax(0, 1fr) 28px minmax(0, 1.3fr); }
   .curation-problem-numbers strong { font-size: clamp(3.5rem, 15vw, 6.4rem); }
-  .curation-problem-numbers > div:last-child strong { font-size: clamp(1.15rem, 5.5vw, 1.8rem); }
   .curation-problem-numbers > div span { margin-top: 7px; font-size: 9px; }
   .curation-story .curation-next-cue { margin-top: 43px; }
   .curation-story .curation-shift-title { font-size: clamp(3rem, 13vw, 6.4rem); }

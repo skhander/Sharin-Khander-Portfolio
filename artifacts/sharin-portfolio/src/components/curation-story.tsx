@@ -106,13 +106,13 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
             <BulletList items={[
               <>Merchandisers spent <strong>weeks building assortments</strong> that might only live for a few days.</>,
               <>Switching between multiple tools.</>,
-              <>Manually searching through <strong>6M products.</strong></>,
+              <>Manually searching through the product catalog.</>,
               <>No recommendations to help decide what to pull.</>,
             ]} />
-            <div className="curation-problem-numbers" aria-label="Six million products; weeks of work for days live">
-              <div><strong>6M</strong><span>products</span></div>
+            <div className="curation-problem-numbers" aria-label="2 weeks of work; 6 days live">
+              <div><strong>2</strong><span>weeks</span></div>
               <span className="curation-number-arrow" aria-hidden="true">→</span>
-              <div><strong>weeks<span className="curation-small-arrow">→</span>days</strong><span>work / live</span></div>
+              <div><strong>6</strong><span>days / live</span></div>
             </div>
           </div>
           <div className="curation-next-cue" aria-hidden="true"><span>Then the question changed</span><ArrowDown size={15} /></div>
