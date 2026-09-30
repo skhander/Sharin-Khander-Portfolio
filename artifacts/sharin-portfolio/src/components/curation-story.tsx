@@ -109,10 +109,11 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
               <>Manually searching through the product catalog.</>,
               <>No recommendations to help decide what to pull.</>,
             ]} />
-            <div className="curation-problem-numbers" aria-label="2 weeks of work; 6 days live">
-              <div><strong>2</strong><span>weeks</span></div>
+            <div className="curation-problem-numbers" aria-label="Median assortment production time: 2 weeks; shelf-life: 6 days. Production takes longer than the assortment stays live.">
+              <div data-testid="stat-curation-production-time"><strong>2 weeks</strong><span>med assortment production time</span></div>
               <span className="curation-number-arrow" aria-hidden="true">→</span>
-              <div><strong>6</strong><span>days / live</span></div>
+              <div data-testid="stat-curation-shelf-life"><strong>6 days</strong><span>shelf-life</span></div>
+              <p className="curation-problem-comparison">Production time exceeds shelf-life.</p>
             </div>
           </div>
           <div className="curation-next-cue" aria-hidden="true"><span>Then the question changed</span><ArrowDown size={15} /></div>

@@ -14,3 +14,9 @@ Keep the opening problem statement understated, in sentence case and the existin
 **Why:** The user explicitly corrected the oversized “Weeks of Work. Days Live.” treatment and asked for a modest editorial sentence aligned with the homepage.
 
 **How to apply:** Preserve the interview beat and supporting numbers, but do not promote the opening sentence into an attention-grabbing headline when refining this page.
+
+In the problem beat, present assortment production time against shelf-life as a comparison, not as unrelated volume or duration statistics.
+
+**Why:** The user clarified that the contrast between how long an assortment takes to produce and how briefly it stays live is the point they need to remember in an interview.
+
+**How to apply:** Keep those two measures visibly paired and clearly labeled whenever the opening metrics are rearranged.

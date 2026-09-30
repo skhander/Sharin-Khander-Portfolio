@@ -177,21 +177,31 @@
 
 .curation-problem-numbers > div { display: flex; min-width: 0; flex-direction: column; }
 .curation-problem-numbers strong {
-  font-size: clamp(3.5rem, 8.5vw, 8rem);
+  font-size: clamp(1.9rem, 4vw, 3.6rem);
   font-weight: 600;
-  letter-spacing: -.09em;
-  line-height: .9;
+  letter-spacing: -.055em;
+  line-height: 1;
   white-space: nowrap;
 }
 .curation-problem-numbers > div span {
   margin-top: 11px;
   color: hsl(39 27% 96% / .58);
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: .15em;
-  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .01em;
+  line-height: 1.4;
 }
 .curation-story .curation-number-arrow { color: hsl(352 35% 77%); font-size: 25px; }
+.curation-story .curation-problem-comparison {
+  grid-column: 1 / -1;
+  margin: 10px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid hsl(39 27% 96% / .2);
+  color: hsl(352 35% 77%);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+}
 .curation-story .curation-next-cue {
   display: flex;
   align-items: center;
@@ -673,8 +683,8 @@
   .curation-story .curation-problem-title { font-size: clamp(1.35rem, 5vw, 1.6rem); }
   .curation-story .curation-problem-bottom { grid-template-columns: 1fr; gap: 37px; margin-top: 43px; }
   .curation-story .curation-problem-numbers { grid-template-columns: minmax(0, 1fr) 28px minmax(0, 1.3fr); }
-  .curation-problem-numbers strong { font-size: clamp(3.5rem, 15vw, 6.4rem); }
-  .curation-problem-numbers > div span { margin-top: 7px; font-size: 9px; }
+  .curation-problem-numbers strong { font-size: clamp(1.45rem, 7vw, 2rem); }
+  .curation-problem-numbers > div span { margin-top: 7px; font-size: 10px; }
   .curation-story .curation-next-cue { margin-top: 43px; }
   .curation-story .curation-shift-title { font-size: clamp(3rem, 13vw, 6.4rem); }
   .curation-story .curation-shift-line { margin-top: 30px; font-size: clamp(1.4rem, 6vw, 2.1rem); }
