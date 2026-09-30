@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { ArrowLeft, ArrowUpRight, Maximize2, X } from 'lucide-react';
+import { ArrowLeft, ArrowUpRight, Maximize2, Play, X } from 'lucide-react';
 import { Link } from 'wouter';
 import { ProjectMeta, ProjectNavigation } from '@/components/project-content';
 import type { Project } from '@/lib/projects';
@@ -25,6 +25,8 @@ const metrics = [
 
 export function ElevatedExperienceStory({ project, nextProject }: { project: Project; nextProject: Project }) {
   const [zoomedImage, setZoomedImage] = useState<keyof typeof browseImages | null>(null);
+  const [gridVideoStarted, setGridVideoStarted] = useState(false);
+  const [immersiveVideoStarted, setImmersiveVideoStarted] = useState(false);
   const closeZoomRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
@@ -108,13 +110,69 @@ export function ElevatedExperienceStory({ project, nextProject }: { project: Pro
               <figure>
                 <figcaption className="mb-3 font-mono-archive text-[10px] uppercase tracking-[.18em] text-accent">A — Grid</figcaption>
                 <div className="elevated-frame">
-                  <img src={media('pdp-grid.webp')} alt="Grid PDP variation showing a large Rolex watch image with smaller image tiles below and product details to the right." loading="lazy" data-testid="img-pdp-grid" />
+                  {gridVideoStarted ? (
+                    <video
+                      controls
+                      autoPlay
+                      playsInline
+                      preload="metadata"
+                      poster={media('pdp-grid-prototype-poster.webp')}
+                      aria-label="A — Grid prototype walkthrough showing the watch product page and its enlarged image gallery"
+                      data-testid="video-pdp-grid"
+                    >
+                      <source src={media('pdp-grid-prototype.mp4')} type="video/mp4" />
+                      Your browser does not support this video.
+                    </video>
+                  ) : (
+                    <button
+                      type="button"
+                      className="group relative block w-full focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-accent"
+                      onClick={() => setGridVideoStarted(true)}
+                      aria-label="Play A — Grid prototype walkthrough"
+                      data-testid="button-play-pdp-grid"
+                    >
+                      <img src={media('pdp-grid-prototype-poster.webp')} alt="" loading="lazy" />
+                      <span className="absolute inset-0 flex items-center justify-center">
+                        <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white/90 text-foreground shadow-md transition-transform group-hover:scale-105">
+                          <Play size={22} fill="currentColor" aria-hidden="true" />
+                        </span>
+                      </span>
+                    </button>
+                  )}
                 </div>
               </figure>
               <figure>
                 <figcaption className="mb-3 font-mono-archive text-[10px] uppercase tracking-[.18em] text-accent">B — Immersive scroll</figcaption>
                 <div className="elevated-frame">
-                  <img src={media('pdp-immersive-poster.webp')} alt="Frame from the immersive-scroll PDP recording showing a Cartier watch worn on a model, image thumbnails at left, and product details at right." loading="lazy" data-testid="img-pdp-immersive-comparison" />
+                  {immersiveVideoStarted ? (
+                    <video
+                      controls
+                      autoPlay
+                      playsInline
+                      preload="metadata"
+                      poster={media('pdp-immersive-prototype-poster.webp')}
+                      aria-label="B — Immersive scroll prototype walkthrough showing the watch product page as its imagery scrolls"
+                      data-testid="video-pdp-immersive-comparison"
+                    >
+                      <source src={media('pdp-immersive-prototype.mp4')} type="video/mp4" />
+                      Your browser does not support this video.
+                    </video>
+                  ) : (
+                    <button
+                      type="button"
+                      className="group relative block w-full focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-accent"
+                      onClick={() => setImmersiveVideoStarted(true)}
+                      aria-label="Play B — Immersive scroll prototype walkthrough"
+                      data-testid="button-play-pdp-immersive-comparison"
+                    >
+                      <img src={media('pdp-immersive-prototype-poster.webp')} alt="" loading="lazy" />
+                      <span className="absolute inset-0 flex items-center justify-center">
+                        <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white/90 text-foreground shadow-md transition-transform group-hover:scale-105">
+                          <Play size={22} fill="currentColor" aria-hidden="true" />
+                        </span>
+                      </span>
+                    </button>
+                  )}
                 </div>
               </figure>
             </div>
@@ -175,12 +233,12 @@ export function ElevatedExperienceStory({ project, nextProject }: { project: Pro
                 controls
                 playsInline
                 preload="metadata"
-                poster={media('pdp-immersive-poster.webp')}
-                className="block aspect-video w-full bg-[hsl(var(--foreground))]"
-                aria-label="Recording of the immersive-scroll product detail page"
+                poster={media('pdp-immersive-prototype-poster.webp')}
+                className="block aspect-[2290/1526] w-full bg-[hsl(var(--foreground))]"
+                aria-label="Recording of the immersive-scroll A. Lange & Söhne watch product detail page"
                 data-testid="video-pdp-immersive"
               >
-                <source src={media('pdp-immersive.webm')} type="video/webm" />
+                <source src={media('pdp-immersive-prototype.mp4')} type="video/mp4" />
                 Your browser does not support this video.
               </video>
               <figcaption className="mt-3 font-mono-archive text-[10px] uppercase tracking-[.13em] opacity-70">B — Immersive scroll · Play the product experience</figcaption>
