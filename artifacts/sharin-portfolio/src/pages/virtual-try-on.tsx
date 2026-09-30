@@ -77,9 +77,9 @@ export default function VirtualTryOn() {
               </h1>
             </div>
             <div className="vto-intro-copy">
-              <p className="vto-question font-editorial">See it on before you buy it.</p>
+              <p className="vto-question font-editorial">See it on yourself before you buy it.</p>
               <p className="vto-description">
-                I built a Chrome extension that lets you upload a photo of yourself and virtually try on products from any website.
+                I built a Chrome extension that lets you browse any website as an avatar of yourself.
               </p>
             </div>
           </div>
