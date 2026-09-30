@@ -46,13 +46,8 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
       </section>
 
       <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-12 sm:px-10 md:py-16 lg:px-16" aria-labelledby="shopping-problem">
-        <div className="grid gap-8 lg:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] lg:gap-16">
-          <h2 id="shopping-problem" className="font-mono-archive text-xs font-semibold uppercase tracking-[.14em] text-accent">01 — PROBLEM</h2>
-          <div className="max-w-2xl space-y-5 text-base leading-[1.6] md:text-lg">
-            <p>Shoppers need to translate their taste into catalog language.</p>
-          </div>
-        </div>
-        <div className="shopping-agent-comparison mt-8 md:mt-10" role="group" aria-label="Traditional search and How shoppers think comparison">
+        <h2 id="shopping-problem" className="font-mono-archive text-xs font-semibold uppercase tracking-[.14em] text-accent">01 — PROBLEM</h2>
+        <div className="shopping-agent-comparison mt-5 md:mt-6" role="group" aria-label="Traditional search and How shoppers think comparison">
           <div className="shopping-agent-comparison-heading shopping-agent-comparison-heading--traditional">
             <h3 className="font-editorial text-2xl font-normal">Traditional search</h3>
             <span className="shopping-agent-query-tag">“black silk dress”</span>
