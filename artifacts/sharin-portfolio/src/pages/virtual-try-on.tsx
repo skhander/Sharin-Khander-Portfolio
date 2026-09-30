@@ -139,7 +139,7 @@ export default function VirtualTryOn() {
         <div className="vto-shell">
           <div className="vto-proof-heading">
             <div>
-              <h2 id="vto-proof-title" className="font-editorial">Personalized shopping</h2>
+              <h2 id="vto-proof-title" className="font-editorial">The next gen of personalized shopping</h2>
             </div>
           </div>
           <div className="vto-proof-grid">
