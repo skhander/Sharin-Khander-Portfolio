@@ -118,7 +118,7 @@ export default function VirtualTryOn() {
         <figure className="vto-video-figure vto-video-main">
           <figcaption className="vto-video-caption">Browse Page</figcaption>
           <DemoVideo
-            file="virtual-try-on-grid.mp4"
+            file="virtual-try-on-grid-web.mp4"
             poster="virtual-try-on-grid-poster.jpg"
             label="Virtual Try-On demo recording showing ShopMy product browsing and try-on"
             testId="video-virtual-try-on-grid"

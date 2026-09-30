@@ -13,7 +13,7 @@ type WorkType = typeof workTypes[number];
 const tryOnClips = [
   {
     label: 'Browse grid',
-    src: `${import.meta.env.BASE_URL}media/personal/virtual-try-on-grid.mp4?v=2`,
+    src: `${import.meta.env.BASE_URL}media/personal/virtual-try-on-grid-web.mp4`,
     poster: `${import.meta.env.BASE_URL}media/personal/virtual-try-on-grid-poster.jpg?v=2`,
   },
 ];
