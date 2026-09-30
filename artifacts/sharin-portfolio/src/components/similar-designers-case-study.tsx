@@ -40,12 +40,12 @@ function StorySection({ id, heading, children }: { id: string; heading: string; 
       </div>
       {id === 'similar-built' && (
         <div className="similar-designers-media mt-8">
-          <p className="similar-progression-label text-muted-foreground">Similar Designers progression</p>
+          <p className="site-eyebrow similar-progression-label text-muted-foreground">Similar Designers progression</p>
           <div className="similar-designers-phases mt-6">
             {phases.map((phase) => (
               <figure className="similar-designers-phase" key={phase.label}>
                 <figcaption>
-                  <span className="similar-phase-label block text-muted-foreground">{phase.label}</span>
+                  <span className="site-eyebrow similar-phase-label block text-muted-foreground">{phase.label}</span>
                   <span className="similar-phase-name mt-2 block font-editorial">{phase.name}</span>
                 </figcaption>
                 <img src={`${import.meta.env.BASE_URL}media/work/${phase.src}`} alt={phase.alt} width={684} height={1312} loading="lazy" />

@@ -151,7 +151,7 @@ export default function Work() {
         <div className="work-hero-support">
           <p className="work-hero-role font-editorial" data-testid="text-work-tagline">I build easier ways<br />{' '}to shop<span className="text-accent">.</span></p>
           <div className="work-proof" aria-label="2026 impact metrics">
-            <span className="work-proof-heading font-mono-archive">2026 impact</span>
+            <span className="site-eyebrow work-proof-heading font-mono-archive">2026 impact</span>
             <div className="work-proof-grid">
               <div className="work-proof-item">
                 <strong className="work-proof-number font-editorial" data-testid="text-gmv-impact">$180m</strong>
@@ -200,8 +200,8 @@ export default function Work() {
             const number = String(index + 1).padStart(2, '0');
             const copy = (
               <>
-                <div className="editorial-project-kicker font-mono-archive text-accent">
-                  <span className="text-[10px]">{number}</span>
+                <div className="site-eyebrow editorial-project-kicker font-mono-archive text-accent">
+                  <span>{number}</span>
                   {project.slug === 'virtual-try-on' && <ArrowUpRight size={16} strokeWidth={1.5} className="project-arrow" aria-hidden="true" />}
                 </div>
                 <h3 className="font-editorial">{project.title}</h3>
@@ -257,8 +257,8 @@ export default function Work() {
             const cardContent = (
               <>
                 <div className="editorial-project-copy">
-                  <div className="editorial-project-kicker font-mono-archive text-accent">
-                    <span className="text-[10px]">{projectNumber}</span>
+                  <div className="site-eyebrow editorial-project-kicker font-mono-archive text-accent">
+                    <span>{projectNumber}</span>
                     <ArrowUpRight size={16} strokeWidth={1.5} className="project-arrow" aria-hidden="true" />
                   </div>
                   <h3 className="font-editorial">{cardTitle}</h3>

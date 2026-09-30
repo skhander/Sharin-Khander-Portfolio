@@ -16,7 +16,7 @@ export default function About() {
         <div className="about-step-heading">
           <span className="about-step-index" aria-hidden="true">01</span>
           <div className="about-step-heading-copy">
-            <p className="font-mono-archive text-sm tracking-[.04em] text-muted-foreground">Frame the problem</p>
+            <p className="site-eyebrow font-mono-archive tracking-[.04em] text-muted-foreground">Frame the problem</p>
             <h2 id="about-step-title">Give the agent requirements.</h2>
           </div>
         </div>
@@ -47,7 +47,7 @@ export default function About() {
         <div className="about-step-heading">
           <span className="about-step-index" aria-hidden="true">02</span>
           <div className="about-step-heading-copy">
-            <p className="font-mono-archive text-sm tracking-[.04em] text-muted-foreground">Design</p>
+            <p className="site-eyebrow font-mono-archive tracking-[.04em] text-muted-foreground">Design</p>
             <h2 id="about-step-02-title">Create a prototype</h2>
           </div>
         </div>
@@ -78,7 +78,7 @@ export default function About() {
         <div className="about-step-heading">
           <span className="about-step-index" aria-hidden="true">03</span>
           <div className="about-step-heading-copy">
-            <p className="font-mono-archive text-sm tracking-[.04em] text-muted-foreground">Build</p>
+            <p className="site-eyebrow font-mono-archive tracking-[.04em] text-muted-foreground">Build</p>
             <h2 id="about-step-03-title">Build one component at a time.</h2>
           </div>
         </div>
@@ -117,7 +117,7 @@ export default function About() {
         <div className="about-step-heading">
           <span className="about-step-index" aria-hidden="true">04</span>
           <div className="about-step-heading-copy">
-            <p className="font-mono-archive text-sm tracking-[.04em] text-muted-foreground">Test it</p>
+            <p className="site-eyebrow font-mono-archive tracking-[.04em] text-muted-foreground">Test it</p>
             <h2 id="about-step-04-title">Try to break the happy path.</h2>
           </div>
         </div>
@@ -141,7 +141,7 @@ export default function About() {
         <div className="about-step-heading">
           <span className="about-step-index" aria-hidden="true">05</span>
           <div className="about-step-heading-copy">
-            <p className="font-mono-archive text-sm tracking-[.04em] text-muted-foreground">Polish + ship</p>
+            <p className="site-eyebrow font-mono-archive tracking-[.04em] text-muted-foreground">Polish + ship</p>
             <h2 id="about-step-05-title">Make it real. Then learn.</h2>
           </div>
         </div>
@@ -168,7 +168,7 @@ export default function About() {
 
       <section className="about-work-link mx-auto w-full max-w-[1440px] border-t border-border px-6 py-6 sm:px-10 lg:px-16">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
-          <p className="font-mono-archive text-sm tracking-[.04em] text-muted-foreground">Process / Sharin Khander</p>
+          <p className="site-eyebrow font-mono-archive tracking-[.04em] text-muted-foreground">Process / Sharin Khander</p>
           <Link href="/" className="group inline-flex items-center gap-3 font-editorial text-2xl archive-link" data-testid="link-about-work">View work <ArrowUpRight size={17} strokeWidth={1.2} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" /></Link>
         </div>
       </section>

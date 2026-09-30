@@ -110,6 +110,11 @@
   .text-balance { text-wrap: balance; }
 }
 
+.site-eyebrow {
+  font-size: 15px;
+  font-weight: 400;
+}
+
 .archive-noise::before {
   content: '';
   position: fixed;
@@ -164,8 +169,6 @@
 .work-proof-heading {
   display: block;
   margin-bottom: 12px;
-  font-size: 14px;
-  font-weight: 600;
   line-height: 1.4;
   letter-spacing: .04em;
 }
@@ -728,8 +731,6 @@
 .about-process .about-step-heading-copy > p {
   margin: 0 0 8px;
   color: hsl(var(--muted-foreground));
-  font-size: 15px;
-  font-weight: 600;
   line-height: 1.45;
   letter-spacing: 0;
   text-transform: none;
@@ -910,9 +911,6 @@
   }
   .about-process .about-step-index {
     font-size: 26px;
-  }
-  .about-process .about-step-heading-copy > p {
-    font-size: 15px;
   }
   .about-process .about-step-heading h2 {
     font-size: clamp(1.65rem, 6vw, 2rem);

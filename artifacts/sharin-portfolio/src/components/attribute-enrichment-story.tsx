@@ -39,7 +39,7 @@ export function AttributeEnrichmentStory({ project, nextProject }: { project: Pr
         </Link>
         <div className="mt-9 grid gap-4 md:mt-12 md:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] md:items-start md:gap-10">
           <div>
-            <p className="font-mono-archive text-[15px] leading-relaxed text-accent">{project.company} / Attribute Prediction</p>
+            <p className="site-eyebrow font-mono-archive leading-relaxed text-accent">{project.company} / Attribute Prediction</p>
             <h1 id="catalog-title" className="mt-3 font-editorial text-[clamp(2rem,4vw,3.25rem)] font-semibold leading-[1.12] tracking-[-.035em]" data-testid="text-project-title">Attribute Prediction</h1>
           </div>
           <p className="max-w-2xl text-base leading-[1.7] text-muted-foreground md:text-[18px]">{project.description}</p>
@@ -75,7 +75,7 @@ export function AttributeEnrichmentStory({ project, nextProject }: { project: Pr
       <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-12 sm:px-10 md:py-16 lg:px-16" aria-labelledby="catalog-examples">
         <div className="flex flex-col items-start gap-2">
           <h2 id="catalog-examples" className="font-editorial text-[clamp(1.5rem,2.8vw,2.25rem)] font-semibold leading-[1.2] tracking-[-.025em]">Inside the catalog</h2>
-          <p className="font-mono-archive text-[15px] leading-relaxed text-muted-foreground">Product images → richer attributes</p>
+          <p className="site-eyebrow font-mono-archive leading-relaxed text-muted-foreground">Product images → richer attributes</p>
         </div>
         <div className="mt-5 grid gap-6 md:mt-7 md:grid-cols-2 md:gap-5">
           {examples.map(({ image, title, alt }) => (

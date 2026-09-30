@@ -32,16 +32,12 @@
   gap: 12px;
   min-width: max-content;
   color: var(--cs-accent);
-  font-size: 15px;
-  font-weight: 600;
   letter-spacing: .01em;
   line-height: 1.45;
 }
 .curation-story h2.curation-beat-label { margin: 0; }
 
 .curation-story .curation-beat-number {
-  font-size: 14px;
-  font-weight: 600;
   letter-spacing: 0;
 }
 
@@ -95,8 +91,6 @@
 .curation-story .curation-eyebrow {
   margin: 0;
   color: var(--cs-muted);
-  font-size: 11px;
-  font-weight: 600;
   letter-spacing: .035em;
 }
 
@@ -470,8 +464,6 @@
   padding-top: 11px;
   border-top: 1px solid var(--cs-rule);
   color: var(--cs-accent);
-  font-size: 11px;
-  font-weight: 600;
 }
 .curation-human-role h3 {
   margin: 0;
@@ -634,7 +626,6 @@
 
 .curation-story .curation-eyebrow {
   text-align: left;
-  font-size: 14px;
   line-height: 1.5;
 }
 
@@ -884,7 +875,6 @@
 
 .curation-human-role-label {
   text-align: left;
-  font-size: 15px;
   line-height: 1.5;
 }
 
@@ -1055,10 +1045,6 @@
     grid-template-columns: 1fr;
     gap: 16px;
     margin-top: 30px;
-  }
-
-  .curation-story .curation-human-role-label {
-    font-size: 15px;
   }
 
   .curation-story .curation-next-project {

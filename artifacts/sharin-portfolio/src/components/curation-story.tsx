@@ -9,7 +9,7 @@ const media = (file: string) => `${import.meta.env.BASE_URL}media/curation/${fil
 
 function BeatLabel({ number, children, as: Tag = 'div', id }: { number: string; children: string; as?: 'div' | 'h2'; id?: string }) {
   return (
-    <Tag id={id} className="curation-beat-label">
+    <Tag id={id} className="site-eyebrow curation-beat-label">
       <span className="curation-beat-number" aria-hidden="true">{number}</span>
       <span className="curation-beat-name">{children}</span>
     </Tag>
@@ -254,7 +254,7 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
         <div className="curation-container">
           <div className="curation-heading-row">
             <BeatLabel number="07">The result</BeatLabel>
-            <span className="curation-eyebrow">A better workflow, in the edit</span>
+            <span className="site-eyebrow curation-eyebrow">A better workflow, in the edit</span>
           </div>
           <div className="curation-result-layout">
             <div className="curation-result-copy">
@@ -284,7 +284,7 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
             <p>Pull → Rank → Optimize</p>
           </div>
           <div className="curation-human-role">
-            <span className="curation-human-role-label">The human role</span>
+            <span className="site-eyebrow curation-human-role-label">The human role</span>
             <div>
               <h3>Final arbiter<br /><em>of taste.</em></h3>
               <p>The system does more of the work. Humans define what “good” looks like — and their decisions continuously teach the system.</p>

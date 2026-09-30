@@ -24,7 +24,7 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
           <ArrowLeft size={14} aria-hidden="true" /> All work
         </Link>
         <div className="mt-14 md:mt-20">
-          <p className="mb-4 font-mono-archive text-[16px] text-accent">Shopping agent</p>
+          <p className="site-eyebrow mb-4 font-mono-archive text-accent">Shopping agent</p>
           <h1 id="shopping-agent-title" className="max-w-5xl text-[clamp(2rem,4vw,3.5rem)] leading-[1.2] tracking-[-.025em]" data-testid="text-project-title">
             <span className="block font-normal text-foreground">Traditional search understands <strong className="font-semibold">product attributes.</strong> Shoppers think in <strong className="font-semibold">occasions, aesthetics, and ideas.</strong></span>
             {' '}
@@ -34,7 +34,7 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
       </header>
 
       <section className="mx-auto max-w-[1440px] border-y border-border px-6 py-8 sm:px-10 md:py-10 lg:px-16" aria-labelledby="shopping-impact">
-        <h2 id="shopping-impact" className="mb-5 font-mono-archive text-[16px] font-semibold text-muted-foreground">Impact</h2>
+        <h2 id="shopping-impact" className="site-eyebrow mb-5 font-mono-archive text-muted-foreground">Impact</h2>
         <dl className="grid grid-cols-1 divide-y divide-border sm:grid-cols-3 sm:divide-x sm:divide-y-0">
           {metrics.map(({ value, label }) => (
             <div key={label} className="flex flex-col py-6 sm:px-6 sm:py-2 first:sm:pl-0 last:sm:pr-0">
@@ -46,7 +46,7 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
       </section>
 
       <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-12 sm:px-10 md:py-16 lg:px-16" aria-labelledby="shopping-problem">
-        <h2 id="shopping-problem" className="font-mono-archive text-[16px] font-semibold text-accent">01 — Problem</h2>
+        <h2 id="shopping-problem" className="site-eyebrow font-mono-archive text-accent">01 — Problem</h2>
         <div className="shopping-agent-comparison mt-5 md:mt-6" role="group" aria-label="Traditional search and How shoppers think comparison">
           <div className="shopping-agent-comparison-heading shopping-agent-comparison-heading--traditional">
             <h3 className="font-editorial text-2xl font-normal">Traditional search</h3>
@@ -73,7 +73,7 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
 
       <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-12 sm:px-10 md:py-16 lg:px-16" aria-labelledby="shopping-prototype">
         <div className="grid gap-5 lg:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] lg:gap-12">
-          <h2 id="shopping-prototype" className="font-mono-archive text-[16px] font-semibold text-accent">02 — Prototype</h2>
+          <h2 id="shopping-prototype" className="site-eyebrow font-mono-archive text-accent">02 — Prototype</h2>
           <div className="max-w-2xl space-y-5 text-base leading-[1.6] md:text-lg">
             <p><strong className="font-semibold text-foreground">The MVP had three journeys: search, refine, compare.</strong></p>
             <p>The challenge: <strong className="font-semibold text-foreground">make the experience conversational without losing what makes shopping visual, contextual, and emotional.</strong></p>
@@ -96,7 +96,7 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
 
       <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-12 sm:px-10 md:py-16 lg:px-16" aria-labelledby="shopping-build">
         <div className="grid gap-5 lg:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] lg:gap-12">
-          <h2 id="shopping-build" className="font-mono-archive text-[16px] font-semibold text-accent">03 — Build</h2>
+          <h2 id="shopping-build" className="site-eyebrow font-mono-archive text-accent">03 — Build</h2>
           <div className="max-w-2xl space-y-5 text-base leading-[1.6] md:text-lg">
             <p><strong className="font-semibold text-foreground">I designed the interaction model, wrote the system instructions, shaped the agent's voice, and connected it to our shopping infrastructure.</strong></p>
             <p>
@@ -110,7 +110,7 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
 
       <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-12 sm:px-10 md:py-16 lg:px-16" aria-labelledby="shopping-learning">
         <div className="grid gap-5 lg:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] lg:gap-12">
-          <h2 id="shopping-learning" className="font-mono-archive text-[16px] font-semibold text-accent">04 — Learn</h2>
+          <h2 id="shopping-learning" className="site-eyebrow font-mono-archive text-accent">04 — Learn</h2>
           <div className="max-w-2xl space-y-5 text-base leading-[1.6] md:text-lg">
             <p><strong className="font-semibold text-foreground">Teaching the agent how to shop</strong></p>
             <p>I built a library of representative shopping questions and expected behaviors to evaluate whether the agent was actually helping shoppers—not just generating convincing answers.</p>

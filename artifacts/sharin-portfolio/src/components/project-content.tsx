@@ -19,7 +19,7 @@ export function ProjectHero({ project }: { project: Project }) {
     <section className="mx-auto w-full max-w-[1440px] px-6 pb-10 pt-10 sm:px-10 md:pt-14 lg:px-[5%]">
       <Link href="/" className="inline-flex items-center gap-2 font-mono-archive text-sm text-muted-foreground archive-link" data-testid="link-back-archive"><ArrowLeft size={14} /> All work</Link>
       <div className="mt-9 md:mt-10">
-        {showEyebrow && <p className="font-mono-archive text-sm text-accent md:text-[15px]">{project.company} <span className="mx-2 text-border">/</span> {project.category}</p>}
+        {showEyebrow && <p className="site-eyebrow font-mono-archive text-accent">{project.company} <span className="mx-2 text-border">/</span> {project.category}</p>}
         <h1 className={`${showEyebrow ? 'mt-3 ' : ''}max-w-3xl font-editorial text-[clamp(2.2rem,4vw,4rem)] font-semibold leading-[1.1] tracking-[-.03em]`}>{project.title}</h1>
         <p className="mt-5 max-w-2xl text-base leading-[1.65] text-muted-foreground md:text-lg">{project.description}</p>
         {project.thesis && <p className="mt-4 max-w-2xl border-l-2 border-accent pl-4 text-base leading-[1.6] md:text-lg">{project.thesis}</p>}
@@ -133,7 +133,7 @@ export function Section({ section, index }: { section: CaseSection; index: numbe
   if (!hasContent) return null;
   return (
     <section className="mx-auto w-full max-w-[1440px] border-t border-border px-6 py-10 sm:px-10 md:py-12 lg:px-[5%]" aria-labelledby={`section-${section.heading.toLowerCase()}`}>
-      <div className="mb-4 font-mono-archive text-sm text-accent md:text-[15px]">{String(index + 1).padStart(2, '0')}</div>
+      <div className="site-eyebrow mb-4 font-mono-archive text-accent">{String(index + 1).padStart(2, '0')}</div>
       <div>
         <h2 id={`section-${section.heading.toLowerCase()}`} className="font-editorial text-[clamp(2rem,3.4vw,3.4rem)] font-medium leading-[1.18] tracking-[-.03em]">{section.heading}</h2>
         {section.body?.map((paragraph) => <p key={paragraph} className="mt-4 max-w-3xl text-base leading-[1.65] text-muted-foreground md:text-lg">{paragraph}</p>)}
@@ -151,7 +151,7 @@ export function Section({ section, index }: { section: CaseSection; index: numbe
 export function ProjectNavigation({ nextProject }: { nextProject: Project }) {
   return (
     <nav className="mx-auto flex w-full max-w-[1440px] flex-col items-start gap-3 border-t border-border px-6 py-8 sm:px-10 lg:px-[5%]" aria-label="Project navigation">
-      <p className="font-mono-archive text-sm text-muted-foreground md:text-[15px]">Next project</p>
+      <p className="site-eyebrow font-mono-archive text-muted-foreground">Next project</p>
       <Link href={`/work/${nextProject.slug}`} className="group inline-flex items-center gap-3 font-editorial text-2xl font-medium archive-link md:text-3xl" data-testid="link-next-project">{nextProject.title} <ArrowUpRight size={18} strokeWidth={1.2} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" /></Link>
     </nav>
   );

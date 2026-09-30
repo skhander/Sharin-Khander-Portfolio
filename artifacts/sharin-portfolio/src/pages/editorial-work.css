@@ -453,13 +453,8 @@
   align-items: center;
   justify-content: space-between;
   gap: 8px;
-  font-size: 14px;
   line-height: 1.6;
   letter-spacing: .04em;
-}
-
-.editorial-work .editorial-project-kicker span {
-  font-size: 14px;
 }
 
 .editorial-work .editorial-project-copy h3 {

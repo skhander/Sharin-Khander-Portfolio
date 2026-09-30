@@ -57,7 +57,7 @@ export function ElevatedExperienceStory({ project, nextProject }: { project: Pro
           <ArrowLeft size={14} /> All work
         </Link>
         <div className="mt-10 border-t border-border pt-5 md:mt-12">
-          <p className="font-mono-archive text-[15px] leading-relaxed text-accent">
+          <p className="site-eyebrow font-mono-archive leading-relaxed text-accent">
             {project.company} <span className="mx-2 text-border">/</span> {project.category}
           </p>
           <h1 className="mt-4 max-w-5xl font-editorial text-[clamp(2.5rem,5vw,4rem)] font-semibold leading-[1.08] tracking-[-.04em]" data-testid="text-project-title">
@@ -81,7 +81,7 @@ export function ElevatedExperienceStory({ project, nextProject }: { project: Pro
       <div>
         <section className="mx-auto max-w-[1440px] px-6 pb-12 pt-12 sm:px-10 md:pb-16 md:pt-16 lg:px-16" aria-labelledby="elevated-start">
           <div className="mb-5 flex flex-col items-start gap-1 border-t border-border pt-3 md:mb-7">
-            <span className="font-mono-archive text-[15px] leading-relaxed text-accent">01 / Before</span>
+            <span className="site-eyebrow font-mono-archive leading-relaxed text-accent">01 / Before</span>
             <span className="font-mono-archive text-[15px] leading-relaxed text-muted-foreground">PDP</span>
           </div>
           <figure>
@@ -182,7 +182,7 @@ export function ElevatedExperienceStory({ project, nextProject }: { project: Pro
 
         <section className="bg-background py-10 md:py-12" aria-labelledby="elevated-lesson">
           <div className="mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-16">
-            <p className="border-t border-foreground/20 pt-3 font-mono-archive text-[15px] leading-relaxed text-accent">02 / A small change. A big lesson.</p>
+            <p className="site-eyebrow border-t border-foreground/20 pt-3 font-mono-archive leading-relaxed text-accent">02 / A small change. A big lesson.</p>
             <div className="mt-6 grid gap-7 md:grid-cols-[1.15fr_.85fr] md:items-start md:gap-10">
               <figure>
                 <div className="elevated-frame">
@@ -214,7 +214,7 @@ export function ElevatedExperienceStory({ project, nextProject }: { project: Pro
 
         <section className="bg-background py-10 text-foreground md:py-12" aria-labelledby="elevated-winner">
           <div className="mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-16">
-            <p className="border-t border-current/30 pt-3 font-mono-archive text-[15px] leading-relaxed opacity-75">03 / The winning experience</p>
+            <p className="site-eyebrow border-t border-current/30 pt-3 font-mono-archive leading-relaxed opacity-75">03 / The winning experience</p>
             <div className="mt-6 grid gap-6 md:grid-cols-[1fr_auto] md:items-start md:gap-10">
               <div>
                 <h2 id="elevated-winner" className="max-w-[850px] font-editorial text-[clamp(1.75rem,3.2vw,2.75rem)] font-semibold leading-[1.15] tracking-[-.03em]">
@@ -248,7 +248,7 @@ export function ElevatedExperienceStory({ project, nextProject }: { project: Pro
         </section>
 
         <section className="mx-auto max-w-[1440px] px-6 py-12 sm:px-10 md:py-16 lg:px-16" aria-labelledby="elevated-browse">
-          <p className="border-t border-border pt-3 font-mono-archive text-[15px] leading-relaxed text-accent">04 / Browse</p>
+          <p className="site-eyebrow border-t border-border pt-3 font-mono-archive leading-relaxed text-accent">04 / Browse</p>
           <h2 id="elevated-browse" className="mt-5 max-w-4xl font-editorial text-[clamp(1.75rem,3.2vw,2.75rem)] font-semibold leading-[1.15] tracking-[-.03em]">
             Next, we brought the same thinking to <em className="font-normal text-accent">PLPs.</em>
           </h2>
@@ -280,7 +280,7 @@ export function ElevatedExperienceStory({ project, nextProject }: { project: Pro
 
         <section className="bg-background py-10 md:py-12" aria-labelledby="elevated-risk">
           <div className="mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-16">
-            <p className="border-t border-foreground/20 pt-3 font-mono-archive text-[15px] leading-relaxed text-accent">05 / The risk</p>
+            <p className="site-eyebrow border-t border-foreground/20 pt-3 font-mono-archive leading-relaxed text-accent">05 / The risk</p>
             <div className="mt-6 grid gap-7 lg:grid-cols-[.9fr_1.1fr] lg:gap-10">
               <h2 id="elevated-risk" className="max-w-xl font-editorial text-[clamp(1.75rem,3.2vw,2.75rem)] font-semibold leading-[1.15] tracking-[-.03em]">
                 This could have <em className="font-normal text-accent">backfired.</em>
@@ -300,7 +300,7 @@ export function ElevatedExperienceStory({ project, nextProject }: { project: Pro
             </div>
             <div className="mt-10 grid gap-5 border-t border-foreground/25 pt-5 md:mt-14 md:grid-cols-[.45fr_.55fr] md:items-start md:gap-10">
               <div>
-                <p className="font-mono-archive text-[15px] leading-relaxed text-accent">The result</p>
+                <p className="site-eyebrow font-mono-archive leading-relaxed text-accent">The result</p>
                 <p className="mt-2 font-editorial text-[clamp(2rem,4vw,3.25rem)] font-semibold leading-tight tracking-[-.04em] text-accent" data-testid="text-conversion-result">+10%</p>
                 <p className="mt-1 text-base">Conversion</p>
               </div>
