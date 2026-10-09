@@ -64,12 +64,12 @@ export function AttributeEnrichmentStory({ project, nextProject }: { project: Pr
       </section>
 
       <StorySection id="catalog-problem" title="The problem">
-        <p>Our catalog understood basic attributes like color, category, and silhouette. But customers search for things like <strong className="font-medium text-foreground">“’90s minimalist dress for a black-tie wedding.”</strong> Our data couldn&apos;t understand that.</p>
+        <p>People search for a vibe. The catalog only knew the color. A query like <strong className="font-medium text-foreground">“’90s minimalist dress for a black-tie wedding”</strong> had nowhere to land.</p>
       </StorySection>
 
       <StorySection id="catalog-built" title="What I built">
-        <p>An AI-powered enrichment system that predicts <strong className="font-medium text-foreground">trends, occasions, and aesthetics</strong> from product images.</p>
-        <p>I owned the product end to end—from defining the attributes and evaluation framework to working with the AI team on prompts, quality, and how the new data would power search, browse, and recommendations.</p>
+        <p>It reads a product photo and predicts trend, occasion, and style.</p>
+        <p>I defined the labels and the test. Then I worked with the AI team on the prompts, and on where the new data shows up: search, browse, and recommendations.</p>
       </StorySection>
 
       <section className="mx-auto max-w-[1440px] border-b border-border px-6 py-12 sm:px-10 md:py-16 lg:px-16" aria-labelledby="catalog-examples">
@@ -80,7 +80,7 @@ export function AttributeEnrichmentStory({ project, nextProject }: { project: Pr
         <div className="mt-5 grid gap-6 md:mt-7 md:grid-cols-2 md:gap-5">
           {examples.map(({ image, title, alt }) => (
             <figure key={image} className="min-w-0">
-              <a href={media(image)} target="_blank" rel="noopener noreferrer" className="block overflow-hidden border border-border bg-[hsl(var(--olive-surface)/.3)] transition-opacity hover:opacity-90" aria-label={`Open full image: ${title}`}>
+              <a href={media(image)} target="_blank" rel="noopener noreferrer" className="block overflow-hidden border border-border bg-white transition-opacity hover:opacity-90" aria-label={`Open full image: ${title}`}>
                 <img src={media(image)} alt={alt} loading="lazy" className="block aspect-[1030/583] w-full object-contain" />
               </a>
               <figcaption className="mt-2 flex flex-col items-start gap-2 font-mono-archive text-[15px] leading-relaxed text-muted-foreground">
@@ -93,11 +93,11 @@ export function AttributeEnrichmentStory({ project, nextProject }: { project: Pr
       </section>
 
       <StorySection id="catalog-hard-part" title="The hard part">
-        <p><strong className="font-medium text-foreground">Quality.</strong> Early versions produced false labels and inconsistent results. I built an evaluation framework, identified the biggest failure patterns, and worked with the AI team to improve the prompts and model output.</p>
+        <p>The first labels were wrong. I built a test, found the worst misses, and worked with the AI team to fix the prompts.</p>
       </StorySection>
 
       <StorySection id="catalog-learned" title="What I learned">
-        <p className="font-editorial text-[clamp(1.5rem,2.8vw,2.25rem)] font-semibold leading-[1.2] text-foreground">AI products are only as good as the evaluation behind them.</p>
+        <p className="font-editorial text-[clamp(1.5rem,2.8vw,2.25rem)] font-semibold leading-[1.2] text-foreground">The model is only as good as the test you run on it.</p>
       </StorySection>
 
       <ProjectNavigation nextProject={nextProject} />

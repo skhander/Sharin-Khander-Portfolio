@@ -55,7 +55,7 @@ function DemoVideo({ file, poster, label, testId }: { file: string; poster: stri
 export default function VirtualTryOn() {
   usePageMeta(
     'Virtual Try-On — Sharin Khander',
-    'A Chrome extension to try on products from The RealReal and ShopMy.',
+    'Try clothes on yourself. A Chrome extension for browsing as you.',
   );
 
   return (
@@ -77,9 +77,9 @@ export default function VirtualTryOn() {
               </h1>
             </div>
             <div className="vto-intro-copy">
-              <p className="vto-question font-editorial">Online shopping today asks you to picture clothes on strangers.</p>
+              <p className="vto-question font-editorial">You have to imagine the clothes on someone else.</p>
               <p className="vto-description">
-                I built a Chrome extension that lets you browse any apparel site as an avatar of yourself.
+                This extension lets you browse as yourself.
               </p>
             </div>
           </div>
@@ -130,9 +130,9 @@ export default function VirtualTryOn() {
         <div className="vto-shell vto-section-grid">
           <h2 id="vto-learning-title" className="vto-section-title font-editorial">What I learned</h2>
           <div className="vto-learning-copy font-editorial">
-            <p><strong>AI struggled with fit.</strong> It warped faces and bodies.</p>
-            <p><strong>The trade-off was speed.</strong> More realistic meant slower page load.</p>
-            <p><strong>The real question:</strong> Was it good enough to help someone decide what to buy?</p>
+            <p>The model messed up fit. Faces and bodies warped.</p>
+            <p>More realistic meant a slower page.</p>
+            <p>The question was simple. Was it good enough to help someone buy?</p>
           </div>
         </div>
       </section>
@@ -141,7 +141,7 @@ export default function VirtualTryOn() {
         <div className="vto-shell">
           <div className="vto-proof-heading">
             <div>
-              <h2 id="vto-proof-title" className="font-editorial">I think so.</h2>
+              <h2 id="vto-proof-title" className="font-editorial">Yes.</h2>
             </div>
           </div>
           <div className="vto-proof-grid">

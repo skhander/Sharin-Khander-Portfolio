@@ -58,7 +58,7 @@
   grid-template-columns: minmax(180px, .72fr) minmax(0, 1.28fr);
   align-items: start;
   gap: clamp(28px, 6vw, 88px);
-  background: hsl(var(--secondary) / .22);
+  background: hsl(var(--card));
 }
 
 .image-search-story .image-search-metrics {
@@ -151,7 +151,7 @@
   margin: 0;
   padding: clamp(8px, 1.5vw, 18px);
   border: 1px solid hsl(var(--border) / .8);
-  background: hsl(var(--secondary) / .18);
+  background: #fff;
 }
 
 .image-search-story .image-search-example-overview {

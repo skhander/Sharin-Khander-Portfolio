@@ -84,6 +84,15 @@ const homepageProjectSlugs = [
   'elevated-experience',
 ] as const;
 
+const homepageOutcomes: Record<string, string> = {
+  curation: '2× more edits on the site. Sell-through up 30%.',
+  'ai-discovery': '$14M in GMV. Shoppers can search the way they talk.',
+  'similar-designers': '$30M in GMV. Bounce rate down 10%.',
+  'attribute-enrichment': 'Labels on 6M+ products. We built a check for bad labels.',
+  'visual-search': '$14M in GMV. Keyword searches per visitor down 10%.',
+  'elevated-experience': '$60M in GMV. Add to cart up 10%.',
+};
+
 const homepageProjects = homepageProjectSlugs.map((slug) => {
   const project = publishedProjects.find((item) => item.slug === slug);
   if (!project) throw new Error(`Missing published homepage project: ${slug}`);
@@ -131,7 +140,7 @@ const projectVisuals: Record<string, { src: string; alt: string; note?: string; 
 
 export default function Work() {
   const [workType, setWorkType] = useState<WorkType>(workTypes[0]);
-  usePageMeta('Work — Sharin Khander', 'Explore Sharin Khander’s product work across luxury marketplaces, shopping agents, image search, designer discovery, and personalization.');
+  usePageMeta('Work — Sharin Khander', 'I help people discover what they want when there are 6M options. Work from The RealReal, plus personal projects.');
 
   const selectWorkType = (next: WorkType) => {
     setWorkType(next);
@@ -151,13 +160,13 @@ export default function Work() {
       <section className="work-hero mx-auto w-full max-w-[1440px] px-6 pb-12 pt-14 sm:px-10 md:pb-14 md:pt-16 lg:px-[5%]">
         <h1 className="work-hero-name font-editorial" data-testid="text-work-name">Sharin<br />{' '}Khander<span className="text-accent">.</span></h1>
         <div className="work-hero-support">
-          <p className="work-hero-role font-editorial" data-testid="text-work-tagline">I build easier ways<br />{' '}to shop<span className="text-accent">.</span></p>
-          <div className="work-proof" aria-label="2026 impact metrics">
-            <span className="site-eyebrow work-proof-heading font-mono-archive">2026 impact</span>
+          <p className="work-hero-role font-editorial" data-testid="text-work-tagline">I help people discover what they want<br />{' '}when there are 6M options.</p>
+          <div className="work-proof" aria-label="2026 YTD metrics">
+            <span className="site-eyebrow work-proof-heading font-mono-archive">2026 YTD</span>
             <div className="work-proof-grid">
               <div className="work-proof-item">
                 <strong className="work-proof-number font-editorial" data-testid="text-gmv-impact">$180m</strong>
-                <span className="work-proof-label">GMV</span>
+                <span className="work-proof-label">revenue</span>
               </div>
               <div className="work-proof-item">
                 <strong className="work-proof-number font-editorial" data-testid="text-experiments-count">40</strong>
@@ -174,7 +183,7 @@ export default function Work() {
       </section>
       <section id="selected-work" className="mx-auto w-full max-w-[1440px] px-6 pb-20 sm:px-10 md:pb-28 lg:px-[5%]" aria-labelledby="work-heading">
         <div className="work-band">
-          <h2 id="work-heading" className="font-editorial text-[clamp(2.3rem,4vw,3.8rem)] leading-none tracking-[-.035em]">Things I've built</h2>
+          <h2 id="work-heading" className="font-editorial leading-none tracking-[-.035em]">Work</h2>
           <div className="work-tabs" role="tablist" aria-label="Work type">
             {workTypes.map((type, index) => (
               <button
@@ -208,11 +217,6 @@ export default function Work() {
                 </div>
                 <h3 className="font-editorial">{project.title}</h3>
                 <p className="editorial-project-description text-muted-foreground">{project.description}</p>
-                {project.badges.length > 0 && (
-                  <div className="editorial-project-badges" aria-label={`${project.title} categories`}>
-                    {project.badges.map((badge) => <span key={badge}>{badge}</span>)}
-                  </div>
-                )}
               </>
             );
             return (
@@ -269,10 +273,10 @@ export default function Work() {
           }) : homepageProjects.map((project) => {
             const projectIndex = homepageProjects.findIndex((item) => item.slug === project.slug);
             const projectNumber = String(projectIndex + 1).padStart(2, '0');
-            const cardTitle = project.slug === 'curation' ? 'Curation Tool' : project.slug === 'attribute-enrichment' ? 'Attribute Prediction' : project.slug === 'visual-search' ? 'Image Search' : project.slug === 'elevated-experience' ? 'Site Redesign' : project.title;
+            const cardTitle = project.slug === 'curation' ? 'Curation Automation' : project.slug === 'attribute-enrichment' ? 'Attribute Prediction' : project.slug === 'visual-search' ? 'Image Search' : project.slug === 'elevated-experience' ? 'Site Redesign' : project.title;
             const visual = projectVisuals[project.slug];
             if (!visual) throw new Error(`Missing homepage visual for ${project.slug}`);
-            const cardClassName = `editorial-project group${project.slug === 'curation' ? ' is-curation' : ''}${project.slug === 'ai-discovery' ? ' is-shopping-agent' : ''}${project.slug === 'similar-designers' ? ' is-similar-designers' : ''}${project.slug === 'visual-search' ? ' is-visual-search' : ''}${projectIndex % 2 === 1 && project.slug !== 'ai-discovery' ? ' is-reversed' : ''}${projectIndex % 3 === 2 && project.slug !== 'similar-designers' ? ' is-wide' : ''}`;
+            const cardClassName = `editorial-project group${project.slug === 'curation' ? ' is-curation' : ''}${project.slug === 'ai-discovery' ? ' is-shopping-agent' : ''}${project.slug === 'similar-designers' ? ' is-similar-designers' : ''}${project.slug === 'visual-search' ? ' is-visual-search' : ''}${project.slug === 'elevated-experience' ? ' is-site-redesign' : ''}${projectIndex % 2 === 1 && project.slug !== 'ai-discovery' ? ' is-reversed' : ''}${projectIndex % 3 === 2 && project.slug !== 'similar-designers' && project.slug !== 'elevated-experience' ? ' is-wide' : ''}`;
             const cardContent = (
               <>
                 <div className="editorial-project-copy">
@@ -281,10 +285,7 @@ export default function Work() {
                     <ArrowUpRight size={16} strokeWidth={1.5} className="project-arrow" aria-hidden="true" />
                   </div>
                   <h3 className="font-editorial">{cardTitle}</h3>
-                   <p className="editorial-project-description text-muted-foreground">{project.slug === 'curation' ? 'Build assortments in minutes.' : project.slug === 'ai-discovery' ? 'Search in your own words.' : project.slug === 'similar-designers' ? 'Discover your next favorite designer.' : project.slug === 'attribute-enrichment' ? 'Power search with trend, occasion, and vibe labels' : project.slug === 'visual-search' ? 'Shop your social media or IRL inspiration.' : project.slug === 'elevated-experience' ? 'A more elevated way to browse and shop.' : project.description}</p>
-                  <div className="editorial-project-badges" aria-label={`${cardTitle} categories`}>
-                    {visual.badges.map((badge) => <span key={badge}>{badge}</span>)}
-                  </div>
+                   <p className="editorial-project-description text-muted-foreground">{homepageOutcomes[project.slug] ?? project.description}</p>
                 </div>
                 <figure className="editorial-project-visual" data-project={project.slug}>
                   <div className="editorial-project-artwork">

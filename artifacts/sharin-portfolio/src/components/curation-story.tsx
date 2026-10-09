@@ -100,7 +100,7 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
           </div>
           <div className="curation-problem-layout">
             <h1 id="curation-problem-title" className="curation-title curation-problem-title">
-              Curation was <strong>manual, slow</strong>, and <strong>difficult to scale.</strong>
+              Curation took too long.
             </h1>
             <div className="curation-problem-evidence">
               <div className="curation-problem-numbers" aria-label="Average production time: 2 weeks; average time on site: 6 days.">
@@ -129,7 +129,7 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
           <BeatLabel number="02">The shift</BeatLabel>
           <div>
             <h2 id="curation-shift-title" className="curation-title curation-shift-title">
-              We set out to help merchandisers spend <strong>less time searching for products</strong> and <strong>more time curating.</strong>
+              Merchandisers should spend less time searching for items and more time taste-making.
             </h2>
           </div>
         </div>
@@ -142,17 +142,17 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
           </div>
           <div className="curation-built-layout">
             <div className="curation-built-copy">
-              <h2 id="curation-built-title" className="curation-title curation-built-title">One end-to-end tool</h2>
+              <h2 id="curation-built-title" className="curation-title curation-built-title">One tool, start to finish</h2>
               <BulletList items={[
-                'Centralized workflow',
-                'Recommendations for items to add to assortments',
-                'Less manual searching',
+                'One workflow',
+                'Suggestions for what to add',
+                'Less time hunting for products',
               ]} />
             </div>
             <Walkthrough
               video="curation-tool-prototype.mp4"
               poster="curation-tool-poster.jpg"
-              alt="Curation Tool prototype showing the Create New Editorial interface"
+              alt="Curation Automation prototype showing the Create New Editorial interface"
               caption="The workflow · Click to play"
             />
           </div>
@@ -167,19 +167,19 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
           <ol className="curation-ownership">
             <li>
               <span className="curation-ownership-number">01</span>
-              <div><h3>Discovery</h3><p>Shadowed merchandisers across levels</p></div>
+              <div><h3>Discovery</h3><p>Sat with merchandisers at every level</p></div>
             </li>
             <li>
               <span className="curation-ownership-number">02</span>
-              <div><h3>Definition</h3><p>Partnered with Engineering on scope, timelines, phased delivery</p></div>
+              <div><h3>Definition</h3><p>Set scope, timeline, and what shipped first with Engineering</p></div>
             </li>
             <li>
               <span className="curation-ownership-number">03</span>
-              <div><h3>Execution</h3><p>Owned workflow quality + recommendation quality</p></div>
+              <div><h3>Execution</h3><p>Owned the workflow and the quality of the recommendations</p></div>
             </li>
             <li>
               <span className="curation-ownership-number">04</span>
-              <div><h3>Adoption</h3><p>Onboarding + change management as teams moved over</p></div>
+              <div><h3>Adoption</h3><p>Helped teams switch over</p></div>
             </li>
           </ol>
         </div>
@@ -201,7 +201,7 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
                     <ArrowDown size={17} strokeWidth={1.8} aria-hidden="true" />
                   </span>
                 </h3>
-                <p>increased efficiency</p>
+                <p>Get edits out faster</p>
               </div>
             </article>
             <article className="curation-goal">
@@ -213,7 +213,7 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
                     <ArrowUp size={17} strokeWidth={1.8} aria-hidden="true" />
                   </span>
                 </h3>
-                <p>Expanded curation presence</p>
+                <p>More edits on the site</p>
               </div>
             </article>
             <article className="curation-goal">
@@ -225,7 +225,7 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
                     <ArrowUp size={17} strokeWidth={1.8} aria-hidden="true" />
                   </span>
                 </h3>
-                <p>Improved assortment quality with recommendations.</p>
+                <p>Edits that sell through</p>
               </div>
             </article>
           </div>
@@ -239,8 +239,8 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
           </div>
           <div className="curation-hard-layout">
             <div className="curation-hard-story">
-              <h2 id="curation-hard-title" className="curation-title curation-hard-title">Recs did not meet the <strong>quality bar</strong>.</h2>
-              <p className="curation-realization">They looked similar.<br /><em>They didn't nail the taste.</em></p>
+              <h2 id="curation-hard-title" className="curation-title curation-hard-title">The recommendations looked the same.</h2>
+              <p className="curation-realization">They were not good.</p>
             </div>
             <Walkthrough
               video="evergreen-tool-prototype.mp4"
@@ -251,12 +251,12 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
             <div className="curation-change">
               <h3>What we changed</h3>
               <BulletList items={[
-                <>Invested in <strong>richer product metadata</strong></>,
-                <>Added trend, aesthetic, occasion, silhouette</>,
-                <>Added human review + feedback loops</>,
-                <>Merchandiser judgment improved the system over time</>,
+                <>Added richer product data</>,
+                <>Added trend, style, occasion, and silhouette</>,
+                <>Added a person in the loop</>,
+                <>Merchandiser choices trained the next round</>,
               ]} />
-              <p className="curation-change-takeaway">Better recommendations needed better product understanding <i>and</i> human judgment.</p>
+              <p className="curation-change-takeaway">Better recommendations needed better product data and a person in the loop.</p>
             </div>
           </div>
         </div>
@@ -266,16 +266,16 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
         <div className="curation-container">
           <div className="curation-heading-row">
             <BeatLabel number="07">The result</BeatLabel>
-            <span className="site-eyebrow curation-eyebrow">A better workflow, in the edit</span>
+            <span className="site-eyebrow curation-eyebrow">A faster edit</span>
           </div>
           <div className="curation-result-layout">
             <div className="curation-result-copy">
               <h2 id="curation-result-title" className="curation-title curation-result-title"><span>2×</span><br />More onsite<br />edits</h2>
               <BulletList items={[
-                'Better assortment quality',
-                'More expansive presence on homepage & nav',
+                'Better edits',
+                'More of them on the homepage and in the nav',
               ]} />
-              <div className="curation-secondary-metric"><strong>+30%</strong><span>higher sell-through on assortments</span></div>
+              <div className="curation-secondary-metric"><strong>+30%</strong><span>sell-through on those edits</span></div>
             </div>
             <CustomerPage
               image="next-level-layers.png"
@@ -298,8 +298,8 @@ export function CurationStory({ nextProject }: { project: Project; nextProject: 
           <div className="curation-human-role">
             <span className="site-eyebrow curation-human-role-label">The human role</span>
             <div>
-              <h3>Final arbiter<br /><em>of taste.</em></h3>
-              <p>The system does more of the work. Humans define what “good” looks like — and their decisions continuously teach the system.</p>
+              <h3>A person still<br />makes the call.</h3>
+              <p>The system does more of the searching. A person still decides what is good. Those choices train the next round.</p>
             </div>
           </div>
           <nav className="curation-next-project" aria-label="Project navigation">

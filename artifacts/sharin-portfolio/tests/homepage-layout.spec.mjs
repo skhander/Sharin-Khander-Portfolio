@@ -131,7 +131,7 @@ for (const viewport of viewports) {
     await expect(realRealTab).toHaveAttribute('aria-selected', 'true');
     await expect(page.locator('.work-list a.editorial-project')).toHaveCount(6);
     await expect(page.locator('.work-list a.editorial-project h3')).toHaveText([
-      'Curation Tool', 'Shopping Agent', 'Similar Designers',
+      'Curation Automation', 'Shopping Agent', 'Similar Designers',
       'Metadata Enrichment', 'Image Search', 'Site Redesign',
     ]);
     await expect(page.locator('.work-filters, .work-list-content > div')).toHaveCount(0);

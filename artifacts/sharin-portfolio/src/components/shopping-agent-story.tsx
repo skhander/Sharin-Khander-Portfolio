@@ -25,10 +25,9 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
         </Link>
         <div className="mt-14 md:mt-20">
           <p className="site-eyebrow mb-4 font-mono-archive text-accent">Shopping agent</p>
-          <h1 id="shopping-agent-title" className="max-w-5xl text-[clamp(2rem,4vw,3.5rem)] leading-[1.2] tracking-[-.025em]" data-testid="text-project-title">
-            <span className="block font-normal text-foreground">Traditional search understands <strong className="font-semibold">product attributes.</strong> Shoppers think in <strong className="font-semibold">occasions, aesthetics, and ideas.</strong></span>
-            {' '}
-            <span className="mt-3 block font-normal text-muted-foreground">I built a shopping agent that bridges the gap.</span>
+          <h1 id="shopping-agent-title" className="max-w-5xl font-editorial text-[clamp(2rem,4vw,3.5rem)] leading-[1.2] tracking-[-.025em]" data-testid="text-project-title">
+            <span className="block font-normal text-foreground">Search knows the product. Shoppers know the occasion.</span>
+            <span className="mt-3 block font-normal text-muted-foreground">I built an agent for the second one.</span>
           </h1>
         </div>
       </header>
@@ -75,8 +74,8 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
         <div className="grid gap-5 lg:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] lg:gap-12">
           <h2 id="shopping-prototype" className="site-eyebrow font-mono-archive text-accent">02 — Prototype</h2>
           <div className="max-w-2xl space-y-5 text-base leading-[1.6] md:text-lg">
-            <p><strong className="font-semibold text-foreground">The MVP had three journeys: search, refine, compare.</strong></p>
-            <p>The challenge: <strong className="font-semibold text-foreground">make the experience conversational without losing what makes shopping visual, contextual, and emotional.</strong></p>
+            <p>The first version had three jobs: search, refine, compare.</p>
+            <p>The hard part was keeping it visual. Shoppers still want to see the product.</p>
           </div>
         </div>
         <div className="shopping-agent-prototype-player mt-10 md:mt-14">
@@ -98,11 +97,11 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
         <div className="grid gap-5 lg:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] lg:gap-12">
           <h2 id="shopping-build" className="site-eyebrow font-mono-archive text-accent">03 — Build</h2>
           <div className="max-w-2xl space-y-5 text-base leading-[1.6] md:text-lg">
-            <p><strong className="font-semibold text-foreground">I designed the interaction model, wrote the system instructions, shaped the agent's voice, and connected it to our shopping infrastructure.</strong></p>
+            <p>I designed how it talks, wrote the instructions, and hooked it up to shopping.</p>
             <p>
-              <span className="block"><strong className="font-semibold text-foreground">Gemini</strong> handled the conversation.</span>
-              <span className="block"><strong className="font-semibold text-foreground">Our intent layer</strong> translated shopper language into search queries.</span>
-              <span className="block"><strong className="font-semibold text-foreground">Our APIs</strong> handled PDP, Add to Cart, and Wishlist actions.</span>
+              <span className="block">Gemini ran the conversation.</span>
+              <span className="block">Our intent layer turned shopper language into search.</span>
+              <span className="block">Our APIs handled the product page, add to cart, and wishlist.</span>
             </p>
           </div>
         </div>
@@ -112,8 +111,8 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
         <div className="grid gap-5 lg:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] lg:gap-12">
           <h2 id="shopping-learning" className="site-eyebrow font-mono-archive text-accent">04 — Learn</h2>
           <div className="max-w-2xl space-y-5 text-base leading-[1.6] md:text-lg">
-            <p><strong className="font-semibold text-foreground">Teaching the agent how to shop</strong></p>
-            <p>I built a library of representative shopping questions and expected behaviors to evaluate whether the agent was actually helping shoppers—not just generating convincing answers.</p>
+            <p>I taught it how to shop.</p>
+            <p>I wrote a set of real shopping questions and the answers we wanted, so we could tell if it was helping.</p>
             <figure className="pt-3">
               <a href={media('system-instructions-sample.png')} target="_blank" rel="noopener noreferrer" className="block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
                 <img src={media('system-instructions-sample.png')} alt="Ask TRR spreadsheet showing system instructions, shopper questions, and assistant sample responses." width={1766} height={1168} loading="lazy" className="block h-auto w-full border border-border" />
@@ -122,14 +121,14 @@ export function ShoppingAgentStory({ nextProject }: { project: Project; nextProj
                 Download the Excel sheet <Download size={15} aria-hidden="true" />
               </a>
             </figure>
-            <p>Natural language unlocked new kinds of shopping intent.</p>
-            <p className="text-muted-foreground">The conversational interface showed fewer products and made comparison harder.</p>
-            <p><strong className="font-semibold text-foreground">Chat is great for understanding. Feeds are great for shopping.</strong></p>
+            <p>People could ask for things they never typed into search.</p>
+            <p className="text-muted-foreground">The chat showed fewer products, so comparing got harder.</p>
+            <p>Chat is good for understanding. A feed is good for shopping.</p>
             <figure>
               <img src={media('customer-feedback.png')} alt="Customer feedback screenshot listing issues with responses, examples, AI search inventory, and the number of products shown." width={676} height={244} loading="lazy" className="block h-auto w-full border border-border" />
-              <figcaption className="mt-3">Customer feedback pointed to the same thing: shoppers wanted more products, easier comparison, and a more visual way to explore.</figcaption>
+              <figcaption className="mt-3">Shoppers asked for more products, easier comparison, and a more visual way to look.</figcaption>
             </figure>
-            <p><strong className="font-semibold text-foreground">The future isn't a chatbot replacing a website. It's conversational intelligence embedded inside a visual shopping experience.</strong></p>
+            <p>The chat should sit inside the shopping page. It should not replace it.</p>
           </div>
         </div>
       </section>

@@ -95,17 +95,17 @@ export function ElevatedExperienceStory({ project, nextProject }: { project: Pro
             </div>
             <figcaption className="mt-5 grid gap-2 md:grid-cols-[1fr_1fr] md:items-start md:gap-8">
               <h2 id="elevated-start" className="max-w-[720px] font-editorial text-[clamp(1.75rem,3.2vw,2.75rem)] font-semibold leading-[1.15] tracking-[-.03em]">
-                The PDP felt anything but <em className="font-normal text-accent">luxurious.</em>
+                The product page did not feel like luxury.
               </h2>
               <p className="max-w-[350px] text-base leading-[1.65] text-muted-foreground md:justify-self-start md:text-[17px]">
-                Small imagery. Too much whitespace. Not enough product.
+                The photos were small. There was too much empty space.
               </p>
             </figcaption>
           </figure>
 
           <div className="mt-12 border-t border-border pt-6 md:mt-16">
             <h3 className="max-w-3xl font-editorial text-[clamp(1.5rem,2.8vw,2.25rem)] font-semibold leading-[1.2] tracking-[-.025em]">
-              We tested two ways to make the product more immersive.
+              We tried two ways to make the product bigger.
             </h3>
             <div className="mt-6 grid gap-6 md:mt-8 md:grid-cols-2 md:gap-5">
               <figure>
@@ -182,7 +182,7 @@ export function ElevatedExperienceStory({ project, nextProject }: { project: Pro
 
         <section className="bg-background py-10 md:py-12" aria-labelledby="elevated-lesson">
           <div className="mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-16">
-            <p className="site-eyebrow border-t border-foreground/20 pt-3 font-mono-archive leading-relaxed text-accent">02 / A small change. A big lesson.</p>
+            <p className="site-eyebrow border-t border-foreground/20 pt-3 font-mono-archive leading-relaxed text-accent">02 / A small move. A clear result.</p>
             <div className="mt-6 grid gap-7 md:grid-cols-[1.15fr_.85fr] md:items-start md:gap-10">
               <figure>
                 <div className="elevated-frame">
@@ -194,7 +194,7 @@ export function ElevatedExperienceStory({ project, nextProject }: { project: Pro
               </figure>
               <div>
                 <h2 id="elevated-lesson" className="font-editorial text-[clamp(1.75rem,3.2vw,2.75rem)] font-semibold leading-[1.15] tracking-[-.03em]">
-                  Don&apos;t make users look for <em className="font-normal text-accent">muscle memory.</em>
+                  People already knew where the heart was.
                 </h2>
                 <div className="mt-6 grid grid-cols-2 gap-4 border-t border-foreground/20 pt-4 md:mt-8">
                   <div>
@@ -206,7 +206,7 @@ export function ElevatedExperienceStory({ project, nextProject }: { project: Pro
                     <p className="mt-2 text-base leading-relaxed md:text-[17px]">Orders / visitor</p>
                   </div>
                 </div>
-                <p className="mt-6 max-w-sm text-base leading-[1.65] md:text-[17px]">We moved the heart. Users stopped using it. We shipped the fix the same day.</p>
+                <p className="mt-6 max-w-sm text-base leading-[1.65] md:text-[17px]">We moved the heart. People stopped using it. We put it back the same day.</p>
               </div>
             </div>
           </div>
@@ -214,14 +214,14 @@ export function ElevatedExperienceStory({ project, nextProject }: { project: Pro
 
         <section className="bg-background py-10 text-foreground md:py-12" aria-labelledby="elevated-winner">
           <div className="mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-16">
-            <p className="site-eyebrow border-t border-current/30 pt-3 font-mono-archive leading-relaxed opacity-75">03 / The winning experience</p>
+            <p className="site-eyebrow border-t border-current/30 pt-3 font-mono-archive leading-relaxed opacity-75">03 / What won</p>
             <div className="mt-6 grid gap-6 md:grid-cols-[1fr_auto] md:items-start md:gap-10">
               <div>
                 <h2 id="elevated-winner" className="max-w-[850px] font-editorial text-[clamp(1.75rem,3.2vw,2.75rem)] font-semibold leading-[1.15] tracking-[-.03em]">
-                  Good friction can still be <em className="font-normal text-accent">good UX.</em>
+                  An extra scroll was fine. The bigger photos won.
                 </h2>
                 <p className="mt-4 max-w-xl text-base leading-[1.65] opacity-85 md:text-[17px]">
-                  The third image took an extra scroll to reach—but the more immersive experience won.
+                  The third image took an extra scroll. The bigger photos still won.
                 </p>
               </div>
               <div className="border-t border-current/35 pt-3 text-left md:min-w-[150px]">
@@ -250,12 +250,12 @@ export function ElevatedExperienceStory({ project, nextProject }: { project: Pro
         <section className="mx-auto max-w-[1440px] px-6 py-12 sm:px-10 md:py-16 lg:px-16" aria-labelledby="elevated-browse">
           <p className="site-eyebrow border-t border-border pt-3 font-mono-archive leading-relaxed text-accent">04 / Browse</p>
           <h2 id="elevated-browse" className="mt-5 max-w-4xl font-editorial text-[clamp(1.75rem,3.2vw,2.75rem)] font-semibold leading-[1.15] tracking-[-.03em]">
-            Next, we brought the same thinking to <em className="font-normal text-accent">PLPs.</em>
+            Then we did the same thing on browse.
           </h2>
           <div className="mt-7 grid gap-7 md:mt-9 md:grid-cols-2 md:gap-5">
             {([
-              { key: 'before' as const, label: 'Before', description: 'Cluttered filters. Tiny product images.' },
-              { key: 'after' as const, label: 'After', description: 'Filters behind a drawer. Larger product imagery. More visual breathing room.' },
+              { key: 'before' as const, label: 'Before', description: 'Too many filters. Tiny photos.' },
+              { key: 'after' as const, label: 'After', description: 'Filters in a drawer. Bigger photos. More room around them.' },
             ]).map(({ key, label, description }) => (
               <figure key={key} className="min-w-0">
                 <figcaption className="mb-2 flex flex-col items-start gap-1 font-mono-archive text-[15px] leading-relaxed text-accent">
@@ -283,13 +283,13 @@ export function ElevatedExperienceStory({ project, nextProject }: { project: Pro
             <p className="site-eyebrow border-t border-foreground/20 pt-3 font-mono-archive leading-relaxed text-accent">05 / The risk</p>
             <div className="mt-6 grid gap-7 lg:grid-cols-[.9fr_1.1fr] lg:gap-10">
               <h2 id="elevated-risk" className="max-w-xl font-editorial text-[clamp(1.75rem,3.2vw,2.75rem)] font-semibold leading-[1.15] tracking-[-.03em]">
-                This could have <em className="font-normal text-accent">backfired.</em>
+                This could have gone the wrong way.
               </h2>
               <div className="border-t border-foreground/25">
                 {[
-                  ['More clicks', 'Filtering now required an extra tap.'],
-                  ['6m+ items', 'Shoppers rely on filters to find what they want.'],
-                  ['Bigger images', 'More visual browsing could slow high-throughput shoppers.'],
+                  ['More clicks', 'Filtering took one more tap.'],
+                  ['6m+ items', 'Shoppers use filters to get through millions of items.'],
+                  ['Bigger images', 'Bigger photos could slow people who browse fast.'],
                 ].map(([title, detail]) => (
                   <div key={title} className="grid gap-1 border-b border-foreground/25 py-4 sm:grid-cols-[.38fr_.62fr] sm:gap-6">
                     <h3 className="font-editorial text-lg font-semibold leading-tight md:text-xl">{title}</h3>
@@ -305,7 +305,7 @@ export function ElevatedExperienceStory({ project, nextProject }: { project: Pro
                 <p className="mt-1 text-base">Conversion</p>
               </div>
               <p className="max-w-[700px] font-editorial text-[clamp(1.5rem,2.8vw,2.25rem)] font-semibold leading-[1.2] tracking-[-.025em]">
-                More immersive browsing beat <em className="font-normal text-accent">faster browsing.</em>
+                Bigger photos beat faster browsing.
               </p>
             </div>
           </div>

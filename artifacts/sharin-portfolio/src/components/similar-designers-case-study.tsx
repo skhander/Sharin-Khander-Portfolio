@@ -69,7 +69,7 @@ export function SimilarDesignersStory({ nextProject }: { project: Project; nextP
         </Link>
         <div className="similar-case-intro mt-9">
           <h1 className="font-editorial">Similar Designers</h1>
-          <p className="text-muted-foreground">Helping shoppers discover their next favorite designer.</p>
+          <p className="text-muted-foreground">Help shoppers find the next designer they&apos;ll love.</p>
         </div>
       </header>
 
@@ -85,36 +85,36 @@ export function SimilarDesignersStory({ nextProject }: { project: Project; nextP
       </section>
 
       <StorySection id="similar-problem" heading="The problem">
-        <strong className="block font-semibold">80% of shoppers landing on Designer pages bounced.</strong>{' '}
-        <span className="mt-5 block">I built a recommendation experience that turned Designer pages from a dead end into a starting point for discovery.</span>
+        <strong className="block font-semibold">80% of shoppers who landed on a designer page left.</strong>{' '}
+        <span className="mt-5 block">I turned that page into a place to keep looking.</span>
       </StorySection>
 
       <StorySection id="similar-built" heading="What I built">
-        <span className="block">I started with “Customers Also Shop” then evolved into a designer discovery engine.</span>{' '}
-        <span className="mt-5 block">Next layering in <strong className="font-semibold">visual similarity → attribute similarity → personalized recommendations.</strong></span>
+        <span className="block">I started with what other shoppers bought.</span>{' '}
+        <span className="mt-5 block">Then I added what looks similar, what shares attributes, and what you might like.</span>
       </StorySection>
 
       <StorySection id="similar-tradeoffs" heading="Trade-offs">
         <div className="similar-tradeoff-block">
           <h3>Generic vs. personalized</h3>
-          <p>Early recommendations were too generic. We invested further in personalization to make them more relevant.</p>
+          <p>Early picks were too broad. We made them more personal.</p>
           <a href={moduleScreenshot} target="_blank" rel="noopener noreferrer" aria-label="View full-size Similar Designers module screenshot" data-testid="link-similar-designers-module">
             <img src={moduleScreenshot} alt="Similar Designers module with designer tabs above a row of product placeholders." loading="lazy" />
           </a>
         </div>
         <div className="similar-tradeoff-block">
           <h3>Visibility vs. screen real estate</h3>
-          <p>Mid-page placement hurt funnel engagement. We moved the module lower and gave it enough space to show personalized products without disrupting browsing.</p>
+          <p>Putting it in the middle of the page hurt. We moved it down and gave it room to show products.</p>
           <a href={placementScreenshot} target="_blank" rel="noopener noreferrer" aria-label="View full-size placement comparison" data-testid="link-similar-designers-placement">
             <img src={placementScreenshot} alt="Three mobile page variants comparing the original, mid-page, and bottom placement of the recommendation module." loading="lazy" />
           </a>
         </div>
-        <p className="similar-tradeoff-takeaway"><strong>Takeaway:</strong> Relevance and enough product context both mattered.</p>
+        <p className="similar-tradeoff-takeaway">The picks had to be relevant, and shoppers needed enough products to judge them.</p>
       </StorySection>
 
       <StorySection id="similar-learned" heading="What I learned">
-        <span className="block">Lower price didn’t mean lower value.</span>{' '}
-        <span className="mt-5 block">Personalized recommendations drove the highest conversion without hurting GMV or AOV.</span>
+        <span className="block">A lower price did not mean a worse outcome.</span>{' '}
+        <span className="mt-5 block">Personal picks converted best. GMV and order value held.</span>
       </StorySection>
 
       <ProjectNavigation nextProject={nextProject} />

@@ -10,10 +10,10 @@ type ImageSearchStoryProps = {
 };
 
 const leadership = [
-  { number: '01', title: 'DISCOVERY', description: 'Selected the vendor and shaped the architecture + tech stack.' },
-  { number: '02', title: 'DEFINITION', description: 'Partnered with Engineering + ML on scope, timelines, and phased delivery.' },
-  { number: '03', title: 'EXECUTION', description: 'Owned the search workflow and result quality.' },
-  { number: '04', title: 'ADOPTION', description: 'Monitored usage and GMV impact.' },
+  { number: '01', title: 'Discovery', description: 'Picked the vendor and the stack.' },
+  { number: '02', title: 'Definition', description: 'Set scope and the shipping plan with Engineering and ML.' },
+  { number: '03', title: 'Execution', description: 'Owned the search flow and whether the results were right.' },
+  { number: '04', title: 'Adoption', description: 'Watched usage and GMV.' },
 ];
 
 const tradeOffExamples = [
@@ -42,17 +42,17 @@ export function ImageSearchStory({ nextProject }: ImageSearchStoryProps) {
     <article className="page-reveal image-search-story">
       <section className="image-search-section image-search-problem mx-auto max-w-[1440px] border-t border-border px-6 py-10 sm:px-10 md:py-12 lg:px-16" aria-labelledby="image-search-problem">
         <div className="image-search-section-grid">
-          <h2 id="image-search-problem" className="image-search-heading font-editorial">THE PROBLEM</h2>
+          <h2 id="image-search-problem" className="image-search-heading font-editorial">The problem</h2>
           <div className="image-search-copy">
-            <p className="image-search-lede"><strong>Some products are hard to describe.</strong></p>
-            <p>Customers see something they want on social media, in a store, or on someone else — but don&apos;t know what to search for.</p>
-            <p className="image-search-resolution">Image search removes the need to guess the right keywords</p>
+            <p className="image-search-lede"><strong>Some products are hard to describe in words.</strong></p>
+            <p>Someone sees it on social, in a store, or on another person. They do not know what to type.</p>
+            <p className="image-search-resolution">Image search lets them skip the keywords.</p>
           </div>
         </div>
       </section>
 
       <section className="image-search-impact mx-auto max-w-[1440px] border-y border-border px-6 py-8 sm:px-10 md:py-10 lg:px-16" aria-labelledby="image-search-impact-heading">
-        <h2 id="image-search-impact-heading" className="image-search-heading font-editorial">IMPACT</h2>
+        <h2 id="image-search-impact-heading" className="image-search-heading font-editorial">Impact</h2>
         <dl className="image-search-metrics">
           <div className="image-search-metric">
             <dt>GMV</dt>
@@ -71,7 +71,7 @@ export function ImageSearchStory({ nextProject }: ImageSearchStoryProps) {
 
       <section className="image-search-section mx-auto max-w-[1440px] border-b border-border px-6 py-10 sm:px-10 md:py-12 lg:px-16" aria-labelledby="image-search-led">
         <div className="image-search-section-grid">
-          <h2 id="image-search-led" className="image-search-heading font-editorial">WHAT I LED</h2>
+          <h2 id="image-search-led" className="image-search-heading font-editorial">What I led</h2>
           <ol className="image-search-leadership">
             {leadership.map((item) => (
               <li className="image-search-leadership-item" key={item.number}>
@@ -87,15 +87,15 @@ export function ImageSearchStory({ nextProject }: ImageSearchStoryProps) {
 
       <section className="image-search-section image-search-tradeoff mx-auto max-w-[1440px] border-b border-border px-6 py-10 sm:px-10 md:py-12 lg:px-16" aria-labelledby="image-search-tradeoff">
         <div className="image-search-section-grid">
-          <h2 id="image-search-tradeoff" className="image-search-heading font-editorial">THE TRADE-OFF</h2>
+          <h2 id="image-search-tradeoff" className="image-search-heading font-editorial">The trade-off</h2>
           <div className="image-search-copy">
-            <p className="image-search-lede"><strong>The model wasn&apos;t always great at nuance.</strong></p>
+            <p className="image-search-lede"><strong>The model missed the details.</strong></p>
             <ul className="image-search-nuances">
               <li>Metallics vs. whites.</li>
               <li>Subtle patterns.</li>
               <li>Hermès scarves and ties.</li>
             </ul>
-            <p className="image-search-resolution">We built a feedback loop to improve results over time.</p>
+            <p className="image-search-resolution">We added a feedback loop so results got better over time.</p>
           </div>
         </div>
         <div className="image-search-examples" aria-label="Image search result examples">

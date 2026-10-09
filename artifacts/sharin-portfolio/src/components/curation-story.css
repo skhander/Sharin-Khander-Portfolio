@@ -105,7 +105,8 @@
 
 .curation-story .curation-title {
   margin: 0;
-  font-weight: 500;
+  font-family: var(--app-font-serif);
+  font-weight: 400;
   letter-spacing: -.03em;
   line-height: 1.15;
   text-wrap: balance;
@@ -167,7 +168,7 @@
   gap: clamp(9px, 1.6vw, 22px);
   padding: 20px 22px 17px;
   border: 1px solid hsl(var(--foreground) / .13);
-  background: hsl(var(--olive-surface) / .19);
+  background: hsl(var(--card));
 }
 
 .curation-problem-numbers > div { display: flex; min-width: 0; flex-direction: column; }
@@ -665,7 +666,8 @@
 }
 
 .curation-story .curation-problem-title strong {
-  font-weight: 700;
+  font-weight: 400;
+  font-style: italic;
 }
 
 .curation-story .curation-problem-numbers {
@@ -673,7 +675,7 @@
   justify-content: start;
   padding: 20px 22px 17px;
   border: 1px solid hsl(var(--foreground) / .13);
-  background: hsl(var(--olive-surface) / .19);
+  background: hsl(var(--card));
 }
 
 .curation-problem-numbers strong {
