@@ -140,7 +140,7 @@ const projectVisuals: Record<string, { src: string; alt: string; note?: string; 
 
 export default function Work() {
   const [workType, setWorkType] = useState<WorkType>(workTypes[0]);
-  usePageMeta('Work — Sharin Khander', 'I help people discover what they want when there are 6M options. Work from The RealReal, plus personal projects.');
+  usePageMeta('Work — Sharin Khander', 'I help shoppers choose among 6 million options. Work from The RealReal, plus personal projects.');
 
   const selectWorkType = (next: WorkType) => {
     setWorkType(next);
@@ -157,20 +157,20 @@ export default function Work() {
 
   return (
     <div className="page-reveal editorial-work">
-      <section className="work-hero mx-auto w-full max-w-[1440px] px-6 pb-12 pt-14 sm:px-10 md:pb-14 md:pt-16 lg:px-[5%]">
-        <h1 className="work-hero-name font-editorial" data-testid="text-work-name">Sharin<br />{' '}Khander<span className="text-accent">.</span></h1>
+      <section className="work-hero mx-auto w-full max-w-[1440px]">
+        <h1 className="work-hero-name font-editorial" data-testid="text-work-name">Sharin Khander<span className="text-accent">.</span></h1>
         <div className="work-hero-support">
-          <p className="work-hero-role font-editorial" data-testid="text-work-tagline">I help people discover what they want<br />{' '}when there are 6M options.</p>
-          <div className="work-proof" aria-label="2026 YTD metrics">
-            <span className="site-eyebrow work-proof-heading font-mono-archive">2026 YTD</span>
+          <p className="work-hero-role font-editorial" data-testid="text-work-tagline">I help shoppers choose among <span className="work-hero-mark">6 million options.</span></p>
+          <div className="work-proof" aria-label="2026 Impact metrics">
+            <span className="site-eyebrow work-proof-heading font-mono-archive">2026 Impact</span>
             <div className="work-proof-grid">
               <div className="work-proof-item">
-                <strong className="work-proof-number font-editorial" data-testid="text-gmv-impact">$180m</strong>
-                <span className="work-proof-label">revenue</span>
+                <strong className="work-proof-number font-editorial" data-testid="text-gmv-impact">$180M</strong>
+                <span className="work-proof-label">sales</span>
               </div>
               <div className="work-proof-item">
                 <strong className="work-proof-number font-editorial" data-testid="text-experiments-count">40</strong>
-                <span className="work-proof-label">Experiments</span>
+                <span className="work-proof-label">experiments</span>
                 <span className="work-proof-note">36 wins</span>
               </div>
               <div className="work-proof-item">
@@ -181,7 +181,7 @@ export default function Work() {
           </div>
         </div>
       </section>
-      <section id="selected-work" className="mx-auto w-full max-w-[1440px] px-6 pb-20 sm:px-10 md:pb-28 lg:px-[5%]" aria-labelledby="work-heading">
+      <section id="selected-work" className="work-section mx-auto w-full max-w-[1440px] pb-20 md:pb-28" aria-labelledby="work-heading">
         <div className="work-band">
           <h2 id="work-heading" className="font-editorial leading-none tracking-[-.035em]">Work</h2>
           <div className="work-tabs" role="tablist" aria-label="Work type">
@@ -195,7 +195,7 @@ export default function Work() {
                 tabIndex={workType === type ? 0 : -1}
                 onKeyDown={(event) => handleTabKeyDown(event, index)}
                 onClick={() => selectWorkType(type)}
-                className="work-tab font-editorial"
+                className="work-tab"
                 data-testid={`tab-${type === 'Personal' ? 'personal' : 'realreal'}`}
                 key={type}
               >
@@ -211,7 +211,7 @@ export default function Work() {
             const number = String(index + 1).padStart(2, '0');
             const copy = (
               <>
-                <div className="site-eyebrow editorial-project-kicker font-mono-archive text-accent">
+                <div className="site-eyebrow editorial-project-kicker font-mono-archive">
                   <span>{number}</span>
                   {(project.slug === 'virtual-try-on' || project.slug === 'ai-advent-calendar') && <ArrowUpRight size={16} strokeWidth={1.5} className="project-arrow" aria-hidden="true" />}
                 </div>
@@ -280,7 +280,7 @@ export default function Work() {
             const cardContent = (
               <>
                 <div className="editorial-project-copy">
-                  <div className="site-eyebrow editorial-project-kicker font-mono-archive text-accent">
+                  <div className="site-eyebrow editorial-project-kicker font-mono-archive">
                     <span>{projectNumber}</span>
                     <ArrowUpRight size={16} strokeWidth={1.5} className="project-arrow" aria-hidden="true" />
                   </div>

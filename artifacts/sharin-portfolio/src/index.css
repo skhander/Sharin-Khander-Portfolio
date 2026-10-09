@@ -145,135 +145,162 @@
 .project-row:hover .project-arrow { transform: translate(3px, -3px); color: hsl(var(--accent)); }
 .project-arrow { transition: transform .25s ease, color .25s ease; }
 
+.work-hero,
+.work-section {
+  padding-right: 24px;
+  padding-left: 24px;
+}
+.work-hero {
+  padding-top: 56px;
+  padding-bottom: 0;
+}
 .work-hero-name {
-  max-width: max-content;
-  font-size: clamp(3.25rem, 6vw, 5.5rem);
+  max-width: none;
+  font-size: clamp(48px, 6vw, 80px);
   font-weight: 400;
-  line-height: 1;
-  letter-spacing: -.03em;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
 }
 .work-hero-support {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  align-items: start;
-  gap: clamp(38px, 5.4vw, 82px);
-  margin-top: clamp(50px, 5vw, 68px);
+  display: block;
+  margin-top: 20px;
 }
 .work-hero-role {
-  font-size: clamp(1.35rem, 2vw, 2rem);
+  font-size: clamp(28px, 3vw, 40px);
   font-weight: 400;
-  line-height: 1.15;
-  letter-spacing: -.02em;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: hsl(var(--foreground));
+}
+.work-hero-line {
+  display: block;
+}
+.work-hero-mark {
+  color: hsl(var(--accent));
 }
 .work-proof {
-  padding: 14px clamp(18px, 2vw, 30px) 16px;
-  border: 1px solid hsl(var(--border));
+  margin-top: 40px;
+  padding: 0;
+  border: 0;
   background: transparent;
   color: hsl(var(--foreground));
 }
 .work-proof-heading {
   display: block;
-  margin-bottom: 12px;
-  line-height: 1.4;
-  letter-spacing: .04em;
+  margin-bottom: 14px;
+  color: hsl(var(--muted-foreground));
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.08em;
 }
 .work-proof-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, max-content);
+  width: max-content;
+  max-width: 100%;
+  border-top: 1px solid hsl(var(--border));
+  padding-top: 20px;
 }
 .work-proof-item {
   display: flex;
   min-width: 0;
   flex-direction: column;
   justify-content: start;
-  padding-left: clamp(12px, 1.7vw, 26px);
+  padding: 0 32px;
   border-left: 1px solid hsl(var(--border));
 }
 .work-proof-item:first-child {
   padding-left: 0;
   border-left: 0;
 }
+.work-proof-item:last-child {
+  padding-right: 0;
+}
 .work-proof-number {
   display: block;
-  font-size: clamp(1.5rem, 2vw, 2rem);
+  font-size: 40px;
   font-weight: 400;
-  line-height: 1.02;
-  letter-spacing: -.025em;
+  line-height: 1;
+  letter-spacing: -0.02em;
   white-space: nowrap;
 }
 .work-proof-item:first-child .work-proof-number {
-  font-size: clamp(1.5rem, 2vw, 2rem);
+  font-size: 40px;
 }
 .work-proof-label,
 .work-proof-note {
   display: block;
   font-family: var(--app-font-mono);
   font-size: 14px;
-  letter-spacing: .01em;
-  line-height: 1.55;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
   white-space: normal;
 }
 .work-proof-label {
-  margin-top: 6px;
+  margin-top: 8px;
+  color: hsl(var(--muted-foreground));
   opacity: 1;
 }
 .work-proof-note {
-  margin-top: 2px;
+  margin-top: 4px;
   font-weight: 400;
   color: hsl(var(--accent));
   opacity: 1;
 }
 .work-band {
   position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: 48px;
+  margin-top: 56px;
   border-top: 1px solid hsl(var(--border));
-  padding-top: clamp(44px, 5.3vw, 62px);
+  padding-top: 40px;
 }
 .work-band h2 {
-  font-size: clamp(1.5rem, 2.2vw, 2rem);
+  margin: 0;
+  font-size: 40px;
   font-weight: 400;
-  line-height: 1.18;
-  letter-spacing: -.02em;
+  line-height: 1;
+  letter-spacing: -0.02em;
 }
-@media (max-width: 899px) {
-  .work-hero-support {
-    grid-template-columns: 1fr;
-    gap: 34px;
+@media (min-width: 768px) {
+  .work-hero,
+  .work-section {
+    padding-right: 96px;
+    padding-left: 96px;
   }
 }
 @media (max-width: 767px) {
-  .work-hero-name {
-    font-size: clamp(2.6rem, 12vw, 3.6rem);
+  .work-hero {
+    padding-top: 40px;
   }
-  .work-hero-support {
-    margin-top: 34px;
-  }
-  .work-hero-role {
-    font-size: clamp(1.35rem, 5.5vw, 1.75rem);
-  }
-  .work-proof {
-    padding: 16px 18px 19px;
+  .work-proof-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: 100%;
   }
   .work-proof-item {
+    padding-right: 12px;
     padding-left: 12px;
   }
-  .work-proof-number {
-    font-size: clamp(1.35rem, 6vw, 1.75rem);
+  .work-proof-item:first-child {
+    padding-left: 0;
   }
-  .work-proof-label,
-  .work-proof-note {
-    font-size: 14px;
-    letter-spacing: 0;
+  .work-proof-item:last-child {
+    padding-right: 0;
   }
-}
-@media (max-width: 430px) {
-  .work-proof { padding-inline: 4px; }
-  .work-proof-item { padding-left: 4px; }
-  .work-proof-item:last-child .work-proof-number {
-    font-size: clamp(20px, 5.5vw, 26px);
+  .work-proof-number,
+  .work-proof-item:first-child .work-proof-number {
+    font-size: 28px;
   }
-}
-@media (max-width: 350px) {
-  .work-hero-role { font-size: 22px; }
+  .work-band {
+    flex-wrap: wrap;
+    gap: 16px 48px;
+    margin-top: 40px;
+    padding-top: 28px;
+  }
+  .work-band h2 {
+    font-size: 32px;
+  }
 }
 
 /* Elevated Experience: a restrained editorial product dossier. */
