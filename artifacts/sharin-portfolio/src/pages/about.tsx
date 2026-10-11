@@ -18,7 +18,7 @@ const stats = [
 ] as const;
 
 export default function About() {
-  usePageMeta('About — Sharin Khander', 'Product mind. Engineering roots. $180M in sales, 90% win rate, and 7 builds from zero.');
+  usePageMeta('About — Sharin Khander', '$180M in sales, 90% win rate, and 7 builds from zero.');
 
   useEffect(() => {
     const stage = document.querySelector('.about-stage');
@@ -30,12 +30,11 @@ export default function About() {
   return (
     <div className="about-stage" style={{ '--about-goo': `url(${goo})` } as CSSProperties}>
       <div className="about-sheet">
-        <div className="about-identity">
-          <img src={portrait} alt="Sharin Khander" className="about-portrait" />
-          <h1 className="about-title font-editorial">Product mind. Engineering roots.</h1>
-        </div>
+        <h1 className="sr-only">Sharin Khander</h1>
+        <img src={portrait} alt="Sharin Khander" className="about-portrait" />
 
         <section className="about-panel" aria-label="2026 Impact">
+          <p className="about-place">Product builder in New York City.</p>
           <p className="about-kicker">2026 Impact</p>
           <dl className="about-stats">
             {stats.map((stat) => (
