@@ -140,7 +140,7 @@ const projectVisuals: Record<string, { src: string; alt: string; note?: string; 
 
 export default function Work() {
   const [workType, setWorkType] = useState<WorkType>(workTypes[0]);
-  usePageMeta('Work — Sharin Khander', 'I help shoppers choose among 6 million options. Work from The RealReal, plus personal projects.');
+  usePageMeta('Work — Sharin Khander', 'I build better ways to shop. Work from The RealReal, plus personal projects.');
 
   const selectWorkType = (next: WorkType) => {
     setWorkType(next);
@@ -160,7 +160,7 @@ export default function Work() {
       <section className="work-hero mx-auto w-full max-w-[1440px]">
         <h1 className="work-hero-name font-editorial" data-testid="text-work-name">Sharin Khander<span className="text-accent">.</span></h1>
         <div className="work-hero-support">
-          <p className="work-hero-role font-editorial" data-testid="text-work-tagline">I help shoppers choose among <span className="work-hero-mark">6 million options.</span></p>
+          <p className="work-hero-role font-editorial" data-testid="text-work-tagline">I build better ways to shop.</p>
           <div className="work-proof" aria-label="2026 Impact metrics">
             <span className="site-eyebrow work-proof-heading font-mono-archive">2026 Impact</span>
             <div className="work-proof-grid">

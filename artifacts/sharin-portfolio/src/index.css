@@ -175,9 +175,6 @@
 .work-hero-line {
   display: block;
 }
-.work-hero-mark {
-  color: hsl(var(--accent));
-}
 .work-proof {
   margin-top: 40px;
   padding: 0;
