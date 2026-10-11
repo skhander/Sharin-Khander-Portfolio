@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Link, useLocation } from 'wouter';
 import { ArrowUpRight } from 'lucide-react';
 import { Footer } from '@/components/project-content';
+import { ViewToggle } from '@/components/view-toggle';
 
 type PortfolioShellProps = { children: React.ReactNode };
 
@@ -12,29 +13,32 @@ export function PortfolioShell({ children }: PortfolioShellProps) {
   }, [location]);
 
   const links = [
-    { href: '/', label: 'Work' },
-    { href: '/about', label: 'Process' },
-    { href: '/contact', label: 'Contact' },
+    { href: '/', label: 'Work', testId: 'link-nav-work' },
+    { href: '/about', label: 'About', testId: 'link-nav-about' },
   ];
+  const isAbout = location === '/about' || location === '/contact';
+  const showToggle = location === '/' || isAbout;
 
   return (
     <div className="archive-noise min-h-[100dvh] bg-background text-foreground">
-      <header className="mx-auto flex min-h-16 w-full max-w-[1440px] items-center justify-end border-b border-border px-6 py-4 sm:px-10 lg:px-[5%]">
-        <nav className="flex items-center gap-5 sm:gap-8" aria-label="Primary navigation">
-          {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`archive-link text-[18px] font-medium ${location === link.href ? 'text-accent' : 'text-muted-foreground'}`}
-              data-testid={`link-nav-${link.label.toLowerCase()}`}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-      </header>
+      {showToggle ? <ViewToggle /> : (
+        <header className="mx-auto flex min-h-16 w-full max-w-[1440px] items-center justify-end border-b border-border px-6 py-4 sm:px-10 lg:px-[5%]">
+          <nav className="flex items-center gap-5 sm:gap-8" aria-label="Primary navigation">
+            {links.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`archive-link text-[18px] font-medium ${location === link.href ? 'text-accent' : 'text-muted-foreground'}`}
+                data-testid={link.testId}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+        </header>
+      )}
       <main>{children}</main>
-      <Footer />
+      {isAbout ? null : <Footer />}
     </div>
   );
 }
