@@ -130,7 +130,7 @@ export const projects: Project[] = [
     title: 'Shopping Agent',
     company: 'The RealReal',
     category: 'AI / Discovery / Commerce',
-    description: '$14M in GMV. Shoppers can search the way they talk.',
+    description: 'Easier product discovery with an AI agent that helps users search in their own words, compare products, and get styling advice, driving 14 million in GMV.',
     status: 'published',
   },
   {
@@ -151,10 +151,10 @@ export const projects: Project[] = [
   },
   {
     slug: 'curation',
-    title: 'Curation Automation',
+    title: 'Curation Enablement',
     company: 'The RealReal',
     category: 'Discovery / Personalization',
-    description: '2× more edits on the site. Sell-through up 30%.',
+    description: 'Automated manual curation, doubling editorial output and increasing sell-through by 30%.',
     status: 'published',
   },
 ];

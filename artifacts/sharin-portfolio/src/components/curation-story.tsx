@@ -110,7 +110,7 @@ export function CurationStory({ project, nextProject }: { project: Project; next
             <Prototype
               video="curation-tool-prototype.mp4"
               poster="curation-tool-poster.jpg"
-              alt="Curation Automation prototype showing the Create New Editorial interface"
+              alt="Curation Enablement prototype showing the Create New Editorial interface"
               caption="The workflow"
             />
           </div>

@@ -719,7 +719,12 @@
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
+  html { scroll-behavior: auto; }
+  .page-reveal,
+  .about-sheet::before,
+  .about-portrait { animation: none; }
+  .project-arrow,
+  .project-row:hover .project-arrow { transition: none; transform: none; }
   .about-brief-figure:hover img { transform: none; }
 }
 

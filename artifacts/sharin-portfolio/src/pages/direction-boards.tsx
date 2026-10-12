@@ -18,8 +18,8 @@ const homepageProjectSlugs = [
 ] as const;
 
 const outcomes: Record<string, string> = {
-  curation: '2× more edits on the site. Sell-through up 30%.',
-  'ai-discovery': '$14M in GMV. Shoppers can search the way they talk.',
+  curation: 'Automated manual curation, doubling editorial output and increasing sell-through by 30%.',
+  'ai-discovery': 'Easier product discovery with an AI agent that helps users search in their own words, compare products, and get styling advice, driving 14 million in GMV.',
   'similar-designers': '$30M in GMV. Bounce rate down 10%.',
   'attribute-enrichment': 'Labels on 6M+ products. We built a check for bad labels.',
   'visual-search': '$14M in GMV. Keyword searches per visitor down 10%.',
@@ -54,15 +54,15 @@ const visuals: Record<string, { src: string; alt: string }> = {
 };
 
 function titleFor(slug: string, title: string) {
-  if (slug === 'curation') return 'Curation Automation';
+  if (slug === 'curation') return 'Curation Enablement';
   if (slug === 'attribute-enrichment') return 'Attribute Prediction';
   if (slug === 'visual-search') return 'Image Search';
   if (slug === 'elevated-experience') return 'Site Redesign';
   return title;
 }
 
-function Still({ src, alt }: { src: string; alt: string }) {
-  return <img src={src} alt={alt} />;
+function Still({ src, alt, eager = false }: { src: string; alt: string; eager?: boolean }) {
+  return <img src={src} alt={alt} loading={eager ? 'eager' : 'lazy'} decoding="async" fetchPriority={eager ? 'high' : 'low'} />;
 }
 
 function SearchFilm({ src, alt }: { src: string; alt: string }) {
@@ -95,18 +95,18 @@ function SearchFilm({ src, alt }: { src: string; alt: string }) {
   );
 }
 
-function PublishedFrame({ slug, thumb = false }: { slug: string; thumb?: boolean }) {
+function PublishedFrame({ slug, thumb = false, eager = false }: { slug: string; thumb?: boolean; eager?: boolean }) {
   const visual = visuals[slug];
   if (!visual) return null;
-  if (slug === 'curation') return <Still src="/media/work/curation-vacation-shop-poster.jpg" alt={visual.alt} />;
-  if (slug === 'ai-discovery') return <Still src="/media/work/shopping-agent-portrait-poster.jpg" alt={visual.alt} />;
+  if (slug === 'curation') return <Still src="/media/work/curation-vacation-shop-poster.jpg" alt={visual.alt} eager={eager} />;
+  if (slug === 'ai-discovery') return <Still src="/media/work/shopping-agent-portrait-poster.jpg" alt={visual.alt} eager={eager} />;
   if (slug === 'visual-search' && !thumb) return <SearchFilm src={visual.src} alt={visual.alt} />;
-  if (slug === 'visual-search') return <Still src="/media/work/image-search-prototype-poster.jpg" alt={visual.alt} />;
+  if (slug === 'visual-search') return <Still src="/media/work/image-search-prototype-poster.jpg" alt={visual.alt} eager={eager} />;
   if (slug === 'attribute-enrichment') {
     return (
       <div className="attrs">
-        <img src={visual.src} alt={visual.alt} />
-        <div>
+        <img src={visual.src} alt={visual.alt} loading={eager ? 'eager' : 'lazy'} decoding="async" />
+        <div aria-hidden="true">
           <p>Aesthetic</p>
           <p>Romantic, Classic, Feminine</p>
           <p>Occasion</p>
@@ -119,25 +119,25 @@ function PublishedFrame({ slug, thumb = false }: { slug: string; thumb?: boolean
     return (
       <picture>
         <source media="(max-width: 767px)" srcSet="/media/work/similar-designers-network-mobile.svg" />
-        <img src={visual.src} alt={visual.alt} />
+        <img src={visual.src} alt={visual.alt} loading={eager ? 'eager' : 'lazy'} decoding="async" fetchPriority={eager ? 'high' : 'low'} />
       </picture>
     );
   }
-  return <Still src={visual.src} alt={visual.alt} />;
+  return <Still src={visual.src} alt={visual.alt} eager={eager} />;
 }
 
-function PersonalFrame({ project }: { project: PersonalProject }) {
+function PersonalFrame({ project, eager = false }: { project: PersonalProject; eager?: boolean }) {
   if (project.preview === 'recordings') {
-    return <Still src="/media/personal/virtual-try-on-grid-poster.jpg?v=2" alt="Virtual Try-On browse grid" />;
+    return <Still src="/media/personal/virtual-try-on-grid-poster.jpg?v=2" alt="Virtual Try-On browse grid" eager={eager} />;
   }
   if (project.preview === 'video') {
-    return <Still src="/media/personal/ai-advent-calendar-poster.jpg?v=2" alt="AI Advent Calendar demo" />;
+    return <Still src="/media/personal/ai-advent-calendar-poster.jpg?v=2" alt="AI Advent Calendar demo" eager={eager} />;
   }
   if (project.preview === 'mockup') {
     return (
       <div className="pair">
-        <img src={dreamCatcherJournal} alt="Dream Catcher Journal screen with a list of illustrated dreams." />
-        <img src={dreamCatcherHome} alt="Dream Catcher Home screen with a dream recording prompt and an interpretation." />
+        <img src={dreamCatcherJournal} alt="Dream Catcher Journal screen with a list of illustrated dreams." loading={eager ? 'eager' : 'lazy'} decoding="async" />
+        <img src={dreamCatcherHome} alt="Dream Catcher Home screen with a dream recording prompt and an interpretation." loading="lazy" decoding="async" />
       </div>
     );
   }
@@ -150,7 +150,7 @@ type Entry = {
   outcome: string;
   href?: string;
   external?: boolean;
-  frame: (thumb?: boolean) => ReactNode;
+  frame: (thumb?: boolean, eager?: boolean) => ReactNode;
 };
 
 function entriesFor(workType: WorkType): Entry[] {
@@ -165,7 +165,7 @@ function entriesFor(workType: WorkType): Entry[] {
           ? 'https://ai-pm-advent-calendar.replit.app/'
           : undefined,
       external: project.slug === 'ai-advent-calendar',
-      frame: () => <PersonalFrame project={project} />,
+      frame: (_thumb?: boolean, eager?: boolean) => <PersonalFrame project={project} eager={eager} />,
     }));
   }
   return homepageProjectSlugs.map((slug) => {
@@ -176,7 +176,7 @@ function entriesFor(workType: WorkType): Entry[] {
       title: titleFor(slug, project.title),
       outcome: outcomes[slug] ?? project.description,
       href: `/work/${slug}`,
-      frame: (thumb?: boolean) => <PublishedFrame slug={slug} thumb={thumb} />,
+      frame: (thumb?: boolean, eager?: boolean) => <PublishedFrame slug={slug} thumb={thumb} eager={eager} />,
     };
   }).filter((entry): entry is Entry => entry !== null);
 }
@@ -184,7 +184,12 @@ function entriesFor(workType: WorkType): Entry[] {
 function EntryLink({ entry, className, children }: { entry: Entry; className: string; children: ReactNode }) {
   if (!entry.href) return <article className={className}>{children}</article>;
   if (entry.external) {
-    return <a className={className} href={entry.href} target="_blank" rel="noopener noreferrer">{children}</a>;
+    return (
+      <a className={className} href={entry.href} target="_blank" rel="noopener noreferrer">
+        {children}
+        <span className="sr-only"> (opens in a new tab)</span>
+      </a>
+    );
   }
   return <Link className={className} href={entry.href}>{children}</Link>;
 }
@@ -252,7 +257,7 @@ export function DirectionBoard({
       <div className="dir dir-gallery">
         {feature && (
           <div className="feature">
-            <div className="object">{feature.frame(false)}</div>
+            <div className="object">{feature.frame(false, true)}</div>
             <div className="label">
               <h1>{feature.title}</h1>
               <p>{feature.outcome}</p>
@@ -318,9 +323,9 @@ export function DirectionBoard({
         <Switch idPrefix={layout} workType={workType} onSelect={onSelect} onKeyDown={onKeyDown} />
       </header>
       <div id={panelId} role="tabpanel" aria-labelledby={`${layout}-tab-${workType === 'Personal' ? 1 : 0}`}>
-        {entries.map((entry) => (
+        {entries.map((entry, index) => (
           <EntryLink entry={entry} className="row" key={entry.key}>
-            <span className="object">{entry.frame(false)}</span>
+            <span className="object">{entry.frame(false, index === 0)}</span>
             <span className="copy">
               <strong>{entry.title}</strong>
               <em>{entry.outcome}</em>
