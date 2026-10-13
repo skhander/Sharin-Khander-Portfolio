@@ -17,13 +17,13 @@ const homepageProjectSlugs = [
   'elevated-experience',
 ] as const;
 
-const outcomes: Record<string, string> = {
-  curation: 'Automated manual curation, doubling editorial output and increasing sell-through by 30%.',
-  'ai-discovery': 'Easier product discovery with an AI agent that helps users search in their own words, compare products, and get styling advice, driving 14 million in GMV.',
-  'similar-designers': '$30M in GMV. Bounce rate down 10%.',
-  'attribute-enrichment': 'Labels on 6M+ products. We built a check for bad labels.',
-  'visual-search': '$14M in GMV. Keyword searches per visitor down 10%.',
-  'elevated-experience': '$60M in GMV. Add to cart up 10%.',
+const outcomes: Record<string, ReactNode> = {
+  curation: <><span className="heat">Automates manual curation</span> for 3X the editorial output and 30% higher lookbook engagement.</>,
+  'ai-discovery': <><span className="heat">Lets users search naturally</span>, compare products, and style outfits, driving 1% lift in conversion.</>,
+  'similar-designers': <><span className="heat">Designer recommendations based on users' taste and budget</span>, enabling deeper discovery and 10% lift in browse page engagement.</>,
+  'attribute-enrichment': <><span className="heat">AI tags items with trend, occasion, and vibe labels</span> to power more natural discovery.</>,
+  'visual-search': <><span className="heat">Lets users shop their social media inspiration</span>, driving 2.5x higher conversion vs. traditional search.</>,
+  'elevated-experience': <><span className="heat">A more elevated shopping experience</span>, driving 5% lift in GMV per visitor.</>,
 };
 
 const visuals: Record<string, { src: string; alt: string }> = {
@@ -65,7 +65,7 @@ function Still({ src, alt, eager = false }: { src: string; alt: string; eager?: 
   return <img src={src} alt={alt} loading={eager ? 'eager' : 'lazy'} decoding="async" fetchPriority={eager ? 'high' : 'low'} />;
 }
 
-function SearchFilm({ src, alt }: { src: string; alt: string }) {
+function Film({ src, poster, alt, label }: { src: string; poster: string; alt: string; label: string }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(false);
   const toggle = () => {
@@ -79,7 +79,7 @@ function SearchFilm({ src, alt }: { src: string; alt: string }) {
       <video
         ref={videoRef}
         src={src}
-        poster="/media/work/image-search-prototype-poster.jpg"
+        poster={poster}
         aria-label={alt}
         muted
         loop
@@ -88,7 +88,7 @@ function SearchFilm({ src, alt }: { src: string; alt: string }) {
         onPlay={() => setPlaying(true)}
         onPause={() => setPlaying(false)}
       />
-      <button type="button" onClick={(event) => { event.preventDefault(); event.stopPropagation(); toggle(); }} aria-label={playing ? 'Pause Image Search prototype' : 'Play Image Search prototype'}>
+      <button type="button" onClick={(event) => { event.preventDefault(); event.stopPropagation(); toggle(); }} aria-label={playing ? `Pause ${label}` : `Play ${label}`}>
         {playing ? <Pause size={16} aria-hidden="true" /> : <Play size={16} aria-hidden="true" />}
       </button>
     </div>
@@ -98,9 +98,17 @@ function SearchFilm({ src, alt }: { src: string; alt: string }) {
 function PublishedFrame({ slug, thumb = false, eager = false }: { slug: string; thumb?: boolean; eager?: boolean }) {
   const visual = visuals[slug];
   if (!visual) return null;
+  if (slug === 'curation' && !thumb) {
+    return <Film src={visual.src} poster="/media/work/curation-vacation-shop-poster.jpg" alt={visual.alt} label="Curation Enablement prototype" />;
+  }
   if (slug === 'curation') return <Still src="/media/work/curation-vacation-shop-poster.jpg" alt={visual.alt} eager={eager} />;
+  if (slug === 'ai-discovery' && !thumb) {
+    return <Film src={visual.src} poster="/media/work/shopping-agent-portrait-poster.jpg" alt={visual.alt} label="Shopping Agent prototype" />;
+  }
   if (slug === 'ai-discovery') return <Still src="/media/work/shopping-agent-portrait-poster.jpg" alt={visual.alt} eager={eager} />;
-  if (slug === 'visual-search' && !thumb) return <SearchFilm src={visual.src} alt={visual.alt} />;
+  if (slug === 'visual-search' && !thumb) {
+    return <Film src={visual.src} poster="/media/work/image-search-prototype-poster.jpg" alt={visual.alt} label="Image Search prototype" />;
+  }
   if (slug === 'visual-search') return <Still src="/media/work/image-search-prototype-poster.jpg" alt={visual.alt} eager={eager} />;
   if (slug === 'attribute-enrichment') {
     return (
@@ -147,7 +155,7 @@ function PersonalFrame({ project, eager = false }: { project: PersonalProject; e
 type Entry = {
   key: string;
   title: string;
-  outcome: string;
+  outcome: ReactNode;
   href?: string;
   external?: boolean;
   frame: (thumb?: boolean, eager?: boolean) => ReactNode;

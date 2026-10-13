@@ -916,6 +916,7 @@
 }
 
 .dir-showroom .copy em { font-style: normal; color: var(--quiet); max-width: 36ch; }
+.dir-showroom .copy .heat { color: var(--heat); }
 .dir-showroom .object { background: var(--plate); color: var(--plate-ink); border: 1px solid var(--line); min-height: 180px; }
 
 .dir-showroom .object img,

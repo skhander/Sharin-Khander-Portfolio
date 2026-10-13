@@ -68,17 +68,16 @@ export function CurationStory({ project, nextProject }: { project: Project; next
             <ArrowLeft size={16} aria-hidden="true" /> All work
           </Link>
           <h1 className="curation-page-title">{project.title}</h1>
-          <p className="curation-dek">{project.description}</p>
         </header>
 
         <section className="curation-section" aria-labelledby="curation-problem-title">
           <div className="curation-copy">
             <p className="curation-label">01 · The problem</p>
-            <h2 id="curation-problem-title" className="curation-headline">Building an edit took two weeks.</h2>
+            <h2 id="curation-problem-title" className="curation-headline">Curation was slow, manual, and didn&apos;t scale.</h2>
             <p className="curation-body">Merchandisers searched the catalog item by item for every edit.</p>
           </div>
           <div className="curation-media">
-            <Frame caption="Example assortment">
+            <Frame caption="Example edit">
               <img
                 src={media('falls-best-bags.png')}
                 alt="Fall's Best Bags assortment showing editor-selected designer bags"

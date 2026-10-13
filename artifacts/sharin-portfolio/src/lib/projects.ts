@@ -101,7 +101,7 @@ export const projects: Project[] = [
     title: 'Site Redesign',
     company: 'The RealReal',
     category: 'Browse + PDP',
-    description: '$60M in GMV. Add to cart up 10%.',
+    description: 'A more elevated shopping experience, driving 5% lift in GMV per visitor.',
     thesis: 'Make the product bigger. Make the page calmer.',
     role: 'Product strategy, product direction, execution',
     team: 'Design, Engineering, Research, Data',
@@ -113,7 +113,7 @@ export const projects: Project[] = [
     title: 'Attribute Prediction',
     company: 'The RealReal',
     category: 'AI / Discovery / Curation',
-    description: 'Labels on 6M+ products. We built a check for bad labels.',
+    description: 'AI tags items with trend, occasion, and vibe labels to power more natural discovery.',
     thesis: 'People search for a vibe. The catalog only knew the color.',
     role: 'Prompts, taxonomy, evaluation, UAT, testing strategy',
     team: [
@@ -130,7 +130,7 @@ export const projects: Project[] = [
     title: 'Shopping Agent',
     company: 'The RealReal',
     category: 'AI / Discovery / Commerce',
-    description: 'Easier product discovery with an AI agent that helps users search in their own words, compare products, and get styling advice, driving 14 million in GMV.',
+    description: 'Lets users search naturally, compare products, and style outfits, driving 1% lift in conversion.',
     status: 'published',
   },
   {
@@ -138,7 +138,7 @@ export const projects: Project[] = [
     title: 'Image Search',
     company: 'The RealReal',
     category: 'AI / Discovery',
-    description: '$14M in GMV. Keyword searches per visitor down 10%.',
+    description: 'Lets users shop their social media inspiration, driving 2.5x higher conversion vs. traditional search.',
     status: 'published',
   },
   {
@@ -146,7 +146,7 @@ export const projects: Project[] = [
     title: 'Similar Designers',
     company: 'The RealReal',
     category: 'Discovery / Recommendations',
-    description: '$30M in GMV. Bounce rate down 10%.',
+    description: "Designer recommendations based on users' taste and budget, enabling deeper discovery and 10% lift in browse page engagement.",
     status: 'published',
   },
   {
@@ -154,7 +154,7 @@ export const projects: Project[] = [
     title: 'Curation Enablement',
     company: 'The RealReal',
     category: 'Discovery / Personalization',
-    description: 'Automated manual curation, doubling editorial output and increasing sell-through by 30%.',
+    description: 'Automates manual curation for 3X the editorial output and 30% higher lookbook engagement.',
     status: 'published',
   },
 ];

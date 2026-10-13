@@ -32,13 +32,6 @@
   letter-spacing: -0.01em;
 }
 
-.curation-dek {
-  margin: 20px 0 0;
-  max-width: 36rem;
-  font-size: 24px;
-  line-height: 1.4;
-}
-
 .curation-section {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -46,6 +39,11 @@
   align-items: start;
   padding-block: 96px;
   border-top: 1px solid hsl(var(--border));
+}
+
+.curation-top + .curation-section {
+  border-top: 0;
+  padding-top: 40px;
 }
 
 .curation-copy { grid-column: 1 / 5; padding-right: 40px; }
@@ -210,4 +208,5 @@
   .curation-headline { font-size: 36px; }
   .curation-frame-media { height: 280px; padding: 16px; }
   .curation-page-title { font-size: 48px; }
+  .curation-top + .curation-section { padding-top: 32px; }
 }
