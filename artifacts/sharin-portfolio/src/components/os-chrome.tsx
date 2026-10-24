@@ -1,7 +1,6 @@
 import { Link, useLocation } from 'wouter';
-import { exitTastePreview } from '@/lib/taste-preview';
 
-export function OsChrome({ preview = false }: { preview?: boolean }) {
+export function OsChrome() {
   const [location] = useLocation();
   const about = location === '/about' || location === '/contact';
 
@@ -12,11 +11,6 @@ export function OsChrome({ preview = false }: { preview?: boolean }) {
         <Link href="/" aria-current={!about ? 'page' : undefined} data-testid="link-nav-work">Work</Link>
         <Link href="/about" aria-current={about ? 'page' : undefined} data-testid="link-nav-about">About</Link>
       </nav>
-      {preview ? (
-        <button type="button" className="os-exit" onClick={exitTastePreview}>
-          Exit preview
-        </button>
-      ) : null}
     </div>
   );
 }

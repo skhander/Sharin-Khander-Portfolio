@@ -5,33 +5,25 @@ import { Footer } from '@/components/project-content';
 import { OsBoot } from '@/components/os-boot';
 import { OsChrome } from '@/components/os-chrome';
 import { OsLife } from '@/components/os-life';
-import { applyTastePreview } from '@/lib/taste-preview';
 
 type PortfolioShellProps = { children: React.ReactNode };
 
 export function PortfolioShell({ children }: PortfolioShellProps) {
   const [location] = useLocation();
-  const [preview, setPreview] = useState(() => applyTastePreview());
-  const [booting, setBooting] = useState(() => applyTastePreview());
+  const [booting, setBooting] = useState(true);
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [location]);
-
-  useEffect(() => {
-    const on = applyTastePreview();
-    setPreview(on);
-    if (!on) setBooting(false);
   }, [location]);
 
   const finishBoot = useCallback(() => setBooting(false), []);
   const isAbout = location === '/about' || location === '/contact';
 
   return (
-    <div className={`archive-noise min-h-[100dvh] bg-background text-foreground${preview && isAbout ? ' has-life' : ''}`}>
-      {preview && isAbout ? <OsLife /> : null}
-      {preview && booting ? <OsBoot onDone={finishBoot} /> : null}
-      <OsChrome preview={preview} />
+    <div className={`archive-noise min-h-[100dvh] bg-background text-foreground${isAbout ? ' has-life' : ''}`}>
+      {isAbout ? <OsLife /> : null}
+      {booting ? <OsBoot onDone={finishBoot} /> : null}
+      <OsChrome />
       <main>{children}</main>
       {isAbout ? null : <Footer />}
     </div>
