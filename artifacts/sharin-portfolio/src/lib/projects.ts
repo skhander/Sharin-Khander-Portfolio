@@ -124,7 +124,7 @@ export const projects: Project[] = [
     title: 'Image Search',
     company: 'The RealReal',
     category: 'AI / Discovery',
-    description: 'Let users shop their social media inspiration and converted 2.5x better than search.',
+    description: 'Enabled product discovery with no guesswork and converted 2.5x higher than keyword search.',
     status: 'published',
   },
   {

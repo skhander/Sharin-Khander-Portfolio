@@ -55,7 +55,7 @@ export default function About() {
         <section className="about-panel" aria-labelledby="about-me-title">
           <h2 id="about-me-title" className="about-kicker">About Me</h2>
           <p className="about-bio">
-            Product manager, former engineer based in{' '}
+            Product builder based in{' '}
             <span className="about-bio-place">New York City 🗽</span>
           </p>
         </section>

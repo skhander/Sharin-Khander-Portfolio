@@ -23,7 +23,7 @@ const outcomes: Record<string, ReactNode> = {
   'ai-discovery': 'Simplified product discovery to drive a 1% lift in conversion.',
   'similar-designers': 'Enabled deeper browsing and cut bounce rate by 6%.',
   'attribute-enrichment': 'Generated richer product descriptions with LLMs to lift search conversion by 5%.',
-  'visual-search': 'Let users shop their social media inspiration and converted 2.5x better than search.',
+  'visual-search': 'Enabled product discovery with no guesswork and converted 2.5x higher than keyword search.',
   'elevated-experience': 'Elevated the buying experience to drive a 5% lift in revenue per visitor.',
 };
 
