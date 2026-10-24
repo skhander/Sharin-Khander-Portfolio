@@ -19,12 +19,12 @@ const homepageProjectSlugs = [
 ] as const;
 
 const outcomes: Record<string, ReactNode> = {
-  curation: <><span className="heat">Automates manual curation</span> to build lookbooks 3x faster.</>,
-  'ai-discovery': <><span className="heat">Simplifies product discovery</span>, driving a 1% lift in conversion.</>,
-  'similar-designers': <><span className="heat">Related designer recommendations enable deeper browsing</span> and cut bounce rate by 6%.</>,
-  'attribute-enrichment': <><span className="heat">Tags 6 million products by trend, occasion and vibe</span> so shoppers can discover them more naturally.</>,
-  'visual-search': <><span className="heat">Lets users shop their social media inspiration</span>, driving 2.5x higher conversion vs. traditional search.</>,
-  'elevated-experience': <><span className="heat">A more elevated shopping experience</span>, driving 5% lift in GMV per visitor.</>,
+  curation: 'Automated manual curation to build look books 3x faster.',
+  'ai-discovery': 'Simplified product discovery to drive a 1% lift in conversion.',
+  'similar-designers': 'Enabled deeper browsing and cut bounce rate by 6%.',
+  'attribute-enrichment': 'Generated richer product descriptions with LLMs to lift search conversion by 5%.',
+  'visual-search': 'Let users shop their social media inspiration and converted 2.5x better than search.',
+  'elevated-experience': 'Elevated the buying experience to drive a 5% lift in revenue per visitor.',
 };
 
 const visuals: Record<string, { src: string; alt: string }> = {
@@ -34,7 +34,7 @@ const visuals: Record<string, { src: string; alt: string }> = {
   },
   'attribute-enrichment': {
     src: '/media/attribute-enrichment/chanel-top-product.webp',
-    alt: 'Chanel vintage top used in the Attribute Prediction project',
+    alt: 'Chanel vintage top used in the Catalog Enrichment project',
   },
   'ai-discovery': {
     src: '/media/work/shopping-agent-portrait.mp4',
@@ -56,9 +56,10 @@ const visuals: Record<string, { src: string; alt: string }> = {
 
 function titleFor(slug: string, title: string) {
   if (slug === 'curation') return 'Curation Enablement';
-  if (slug === 'attribute-enrichment') return 'Attribute Prediction';
+  if (slug === 'attribute-enrichment') return 'Catalog Enrichment';
   if (slug === 'visual-search') return 'Image Search';
   if (slug === 'elevated-experience') return 'Site Redesign';
+  if (slug === 'similar-designers') return 'Similar Designer Recommendations';
   return title;
 }
 
@@ -166,18 +167,12 @@ function PersonalFrame({ project, eager = false }: { project: PersonalProject; e
   if (project.preview === 'recordings') {
     return <Still src="/media/personal/virtual-try-on-grid-poster.jpg?v=2" alt="Virtual Try-On browse grid" eager={eager} />;
   }
-  if (project.preview === 'video') {
-    return <Still src="/media/personal/ai-advent-calendar-poster.jpg?v=2" alt="AI Advent Calendar demo" eager={eager} />;
-  }
-  if (project.preview === 'mockup') {
-    return (
-      <div className="pair">
-        <img src={dreamCatcherJournal} alt="Dream Catcher Journal screen with a list of illustrated dreams." loading={eager ? 'eager' : 'lazy'} decoding="async" />
-        <img src={dreamCatcherHome} alt="Dream Catcher Home screen with a dream recording prompt and an interpretation." loading="lazy" decoding="async" />
-      </div>
-    );
-  }
-  return <p className="soon">Coming soon</p>;
+  return (
+    <div className="pair">
+      <img src={dreamCatcherJournal} alt="Dream Catcher Journal screen with a list of illustrated dreams." loading={eager ? 'eager' : 'lazy'} decoding="async" />
+      <img src={dreamCatcherHome} alt="Dream Catcher Home screen with a dream recording prompt and an interpretation." loading="lazy" decoding="async" />
+    </div>
+  );
 }
 
 type Entry = {
@@ -195,12 +190,7 @@ function entriesFor(workType: WorkType): Entry[] {
       key: project.slug,
       title: project.title,
       outcome: project.description,
-      href: project.slug === 'virtual-try-on'
-        ? '/work/virtual-try-on'
-        : project.slug === 'ai-advent-calendar'
-          ? 'https://ai-pm-advent-calendar.replit.app/'
-          : undefined,
-      external: project.slug === 'ai-advent-calendar',
+      href: project.slug === 'virtual-try-on' ? '/work/virtual-try-on' : undefined,
       frame: (_thumb?: boolean, eager?: boolean) => <PersonalFrame project={project} eager={eager} />,
     }));
   }
@@ -364,7 +354,7 @@ export function DirectionBoard({
       </header>
       <div id={panelId} role="tabpanel" aria-labelledby={`${layout}-tab-${workType === 'Personal' ? 1 : 0}`}>
         {entries.map((entry, index) => (
-          <article className="row" key={entry.key}>
+          <article className="row" data-window={entry.title} key={entry.key}>
             <span className="object">{entry.frame(false, index === 0)}</span>
             <span className="copy">
               <TitleLink entry={entry}>{entry.title}</TitleLink>

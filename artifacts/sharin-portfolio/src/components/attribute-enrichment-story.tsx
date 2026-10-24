@@ -39,14 +39,14 @@ export function AttributeEnrichmentStory({ project, nextProject }: { project: Pr
         </Link>
         <div className="mt-9 grid gap-4 md:mt-12 md:grid-cols-[minmax(0,.75fr)_minmax(0,1.25fr)] md:items-start md:gap-10">
           <div>
-            <p className="site-eyebrow font-mono-archive leading-relaxed text-accent">{project.company} / Attribute Prediction</p>
-            <h1 id="catalog-title" className="mt-3 font-editorial text-[clamp(2rem,4vw,3.25rem)] font-semibold leading-[1.12] tracking-[-.035em]" data-testid="text-project-title">Attribute Prediction</h1>
+            <p className="site-eyebrow font-mono-archive leading-relaxed text-accent">{project.company} / {project.title}</p>
+            <h1 id="catalog-title" className="mt-3 font-editorial text-[clamp(2rem,4vw,3.25rem)] font-semibold leading-[1.12] tracking-[-.035em]" data-testid="text-project-title">{project.title}</h1>
           </div>
           <p className="max-w-2xl text-base leading-[1.7] text-muted-foreground md:text-[18px]">{project.description}</p>
         </div>
       </header>
 
-      <section className="mx-auto max-w-[1440px] border-y border-border px-6 py-5 text-left sm:px-10 md:py-6 lg:px-16" aria-label="Attribute Prediction at a glance">
+      <section className="mx-auto max-w-[1440px] border-y border-border px-6 py-5 text-left sm:px-10 md:py-6 lg:px-16" aria-label={`${project.title} at a glance`}>
         <dl className="grid divide-y divide-border sm:grid-cols-3 sm:divide-x sm:divide-y-0">
           <div className="flex flex-col justify-start py-4 text-left sm:px-5 sm:py-2 sm:first:pl-0">
             <dt className="order-2 mt-2 font-mono-archive text-[15px] leading-relaxed text-muted-foreground">Approach</dt>

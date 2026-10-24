@@ -60,7 +60,7 @@ function StorySection({ id, heading, children }: { id: string; heading: string; 
   );
 }
 
-export function SimilarDesignersStory({ nextProject }: { project: Project; nextProject: Project }) {
+export function SimilarDesignersStory({ project, nextProject }: { project: Project; nextProject: Project }) {
   return (
     <article className="page-reveal similar-designers-case-study">
       <header className="similar-case-header mx-auto max-w-[1440px] px-6 pb-9 pt-10 sm:px-10 md:pb-11 md:pt-12 lg:px-16">
@@ -68,7 +68,7 @@ export function SimilarDesignersStory({ nextProject }: { project: Project; nextP
           <ArrowLeft size={14} aria-hidden="true" /> All work
         </Link>
         <div className="similar-case-intro mt-9">
-          <h1 className="font-editorial">Similar Designers</h1>
+          <h1 className="font-editorial">{project.title}</h1>
           <p className="text-muted-foreground">Help shoppers find the next designer they&apos;ll love.</p>
         </div>
       </header>

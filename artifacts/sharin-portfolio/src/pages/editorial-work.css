@@ -507,22 +507,6 @@
   justify-self: center;
 }
 
-.editorial-work .personal-project-visual[data-project="ai-advent-calendar"] {
-  aspect-ratio: auto;
-}
-
-.editorial-work .personal-advent-preview {
-  min-width: 0;
-}
-
-.editorial-work .personal-advent-preview video {
-  display: block;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  background: #0b3029;
-  object-fit: contain;
-}
-
 .editorial-work .personal-dream-preview {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -938,8 +922,7 @@
   line-height: 1.1;
 }
 
-.dir-showroom .copy em { font-style: normal; color: var(--quiet); max-width: 36ch; }
-.dir-showroom .copy .heat { color: var(--heat); }
+.dir-showroom .copy em { font-style: normal; color: var(--heat); max-width: 36ch; }
 
 .dir-showroom .object {
   display: grid;
@@ -1061,13 +1044,6 @@
   height: 100%;
   object-fit: contain;
   object-position: center;
-}
-
-.dir-showroom .soon {
-  margin: 0;
-  padding: 24px 0;
-  text-align: left;
-  color: var(--quiet);
 }
 
 @media (max-width: 767px) {

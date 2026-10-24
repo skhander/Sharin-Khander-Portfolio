@@ -38,12 +38,10 @@ for (const viewport of viewports) {
     await expect(realRealTab).toHaveAttribute('aria-selected', 'false');
     await expect(page.getByRole('tabpanel')).toHaveAttribute('aria-labelledby', 'work-tab-1');
     await expect(page.getByRole('tabpanel')).toBeVisible();
-    await expect(page.locator('.personal-project h3')).toHaveText(['Virtual Try-On', 'AI Advent Calendar', 'Medigo']);
-    await expect(page.getByTestId('personal-project-ai-advent-calendar').locator('.editorial-project-kicker')).toHaveText('02');
-    await expect(page.getByTestId('personal-project-medigo').locator('.editorial-project-kicker')).toHaveText('03');
-    await expect(page.getByLabel('AI Advent Calendar demo recording')).toBeVisible();
+    await expect(page.locator('.dir-showroom .copy strong')).toHaveText(['Virtual Try-On', 'Dream Catcher']);
+    await expect(page.getByText('AI Advent Calendar')).toHaveCount(0);
+    await expect(page.getByText('Medigo')).toHaveCount(0);
     await expect(page.locator('.editorial-project-visual figcaption, .personal-recording-label')).toHaveCount(0);
-    await expect(page.locator('[data-project="dream-catcher"]')).toHaveCount(0);
     await expect(page.locator('.work-filters')).toHaveCount(0);
     await expect(page.locator('.work-list-content > div')).toHaveCount(0);
     await expect(page.locator('.personal-unavailable-status')).toHaveCount(1);
@@ -136,7 +134,7 @@ for (const viewport of viewports) {
     ]);
     await expect(page.locator('.work-filters, .work-list-content > div')).toHaveCount(0);
     await personalTab.click();
-    await expect(page.locator('.personal-project')).toHaveCount(3);
+    await expect(page.locator('.dir-showroom .row')).toHaveCount(2);
     await realRealTab.focus();
     await realRealTab.press('ArrowLeft');
     await expect(personalTab).toHaveAttribute('aria-selected', 'true');
