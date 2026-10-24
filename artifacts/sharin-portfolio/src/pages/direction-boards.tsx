@@ -1,6 +1,7 @@
 import { useRef, useState, type KeyboardEvent, type ReactNode } from 'react';
 import { Pause, Play } from 'lucide-react';
 import { Link } from 'wouter';
+import './showroom-media.css';
 import dreamCatcherJournal from '@assets/Dream_Catcher_journal_frame.png';
 import dreamCatcherHome from '@assets/Dream_Catcher_home_aligned.png';
 import { personalProjects, publishedProjects, type PersonalProject } from '@/lib/projects';
@@ -9,8 +10,8 @@ const workTypes = ['The RealReal', 'Personal'] as const;
 export type WorkType = typeof workTypes[number];
 
 const homepageProjectSlugs = [
-  'curation',
   'ai-discovery',
+  'curation',
   'similar-designers',
   'attribute-enrichment',
   'visual-search',
@@ -18,12 +19,12 @@ const homepageProjectSlugs = [
 ] as const;
 
 const outcomes: Record<string, ReactNode> = {
-  curation: <><span className="heat">Automates manual curation</span> for 3X the editorial output and 30% higher lookbook engagement.</>,
-  'ai-discovery': <><span className="heat">Lets users search naturally</span>, compare products, and style outfits, driving 1% lift in conversion.</>,
-  'similar-designers': <><span className="heat">Designer recommendations based on users' taste and budget</span>, enabling deeper discovery and 10% lift in browse page engagement.</>,
-  'attribute-enrichment': <><span className="heat">AI tags items with trend, occasion, and vibe labels</span> to power more natural discovery.</>,
-  'visual-search': <><span className="heat">Lets users shop their social media inspiration</span>, driving 2.5x higher conversion vs. traditional search.</>,
-  'elevated-experience': <><span className="heat">A more elevated shopping experience</span>, driving 5% lift in GMV per visitor.</>,
+  curation: 'Automated manual curation to build look books 3x faster.',
+  'ai-discovery': 'Simplified product discovery to drive a 1% lift in conversion.',
+  'similar-designers': 'Enabled deeper browsing and cut bounce rate by 6%.',
+  'attribute-enrichment': 'Generated richer product descriptions with LLMs to lift search conversion by 5%.',
+  'visual-search': 'Enabled product discovery with no guesswork and converted 2.5x higher than keyword search.',
+  'elevated-experience': 'Elevated the buying experience to drive a 5% lift in revenue per visitor.',
 };
 
 const visuals: Record<string, { src: string; alt: string }> = {
@@ -33,7 +34,7 @@ const visuals: Record<string, { src: string; alt: string }> = {
   },
   'attribute-enrichment': {
     src: '/media/attribute-enrichment/chanel-top-product.webp',
-    alt: 'Chanel vintage top used in the Attribute Prediction project',
+    alt: 'Chanel vintage top used in the Catalog Enrichment project',
   },
   'ai-discovery': {
     src: '/media/work/shopping-agent-portrait.mp4',
@@ -55,19 +56,45 @@ const visuals: Record<string, { src: string; alt: string }> = {
 
 function titleFor(slug: string, title: string) {
   if (slug === 'curation') return 'Curation Enablement';
-  if (slug === 'attribute-enrichment') return 'Attribute Prediction';
+  if (slug === 'attribute-enrichment') return 'Catalog Enrichment';
   if (slug === 'visual-search') return 'Image Search';
   if (slug === 'elevated-experience') return 'Site Redesign';
+  if (slug === 'similar-designers') return 'Similar Designer Recommendations';
   return title;
 }
 
-function Still({ src, alt, eager = false }: { src: string; alt: string; eager?: boolean }) {
-  return <img src={src} alt={alt} loading={eager ? 'eager' : 'lazy'} decoding="async" fetchPriority={eager ? 'high' : 'low'} />;
+function Still({ src, alt, eager = false, width, height }: { src: string; alt: string; eager?: boolean; width?: number; height?: number }) {
+  return (
+    <img
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      loading={eager ? 'eager' : 'lazy'}
+      decoding="async"
+      fetchPriority={eager ? 'high' : 'low'}
+    />
+  );
 }
 
-function Film({ src, poster, alt, label }: { src: string; poster: string; alt: string; label: string }) {
+function Film({
+  src,
+  poster,
+  alt,
+  label,
+  width,
+  height,
+}: {
+  src: string;
+  poster: string;
+  alt: string;
+  label: string;
+  width: number;
+  height: number;
+}) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(false);
+  const portrait = height > width;
   const toggle = () => {
     const video = videoRef.current;
     if (!video) return;
@@ -75,16 +102,18 @@ function Film({ src, poster, alt, label }: { src: string; poster: string; alt: s
     else video.pause();
   };
   return (
-    <div className="film">
+    <div className={portrait ? 'film film--portrait' : 'film film--landscape'}>
       <video
         ref={videoRef}
         src={src}
         poster={poster}
+        width={width}
+        height={height}
         aria-label={alt}
         muted
         loop
         playsInline
-        preload="none"
+        preload="metadata"
         onPlay={() => setPlaying(true)}
         onPause={() => setPlaying(false)}
       />
@@ -99,17 +128,17 @@ function PublishedFrame({ slug, thumb = false, eager = false }: { slug: string; 
   const visual = visuals[slug];
   if (!visual) return null;
   if (slug === 'curation' && !thumb) {
-    return <Film src={visual.src} poster="/media/work/curation-vacation-shop-poster.jpg" alt={visual.alt} label="Curation Enablement prototype" />;
+    return <Film src={visual.src} poster="/media/work/curation-vacation-shop-poster.jpg" alt={visual.alt} label="Curation Enablement prototype" width={1280} height={720} />;
   }
-  if (slug === 'curation') return <Still src="/media/work/curation-vacation-shop-poster.jpg" alt={visual.alt} eager={eager} />;
+  if (slug === 'curation') return <Still src="/media/work/curation-vacation-shop-poster.jpg" alt={visual.alt} eager={eager} width={1280} height={720} />;
   if (slug === 'ai-discovery' && !thumb) {
-    return <Film src={visual.src} poster="/media/work/shopping-agent-portrait-poster.jpg" alt={visual.alt} label="Shopping Agent prototype" />;
+    return <Film src={visual.src} poster="/media/work/shopping-agent-portrait-poster.jpg" alt={visual.alt} label="Shopping Agent prototype" width={310} height={674} />;
   }
-  if (slug === 'ai-discovery') return <Still src="/media/work/shopping-agent-portrait-poster.jpg" alt={visual.alt} eager={eager} />;
+  if (slug === 'ai-discovery') return <Still src="/media/work/shopping-agent-portrait-poster.jpg" alt={visual.alt} eager={eager} width={310} height={674} />;
   if (slug === 'visual-search' && !thumb) {
-    return <Film src={visual.src} poster="/media/work/image-search-prototype-poster.jpg" alt={visual.alt} label="Image Search prototype" />;
+    return <Film src={visual.src} poster="/media/work/image-search-prototype-poster.jpg" alt={visual.alt} label="Image Search prototype" width={900} height={1764} />;
   }
-  if (slug === 'visual-search') return <Still src="/media/work/image-search-prototype-poster.jpg" alt={visual.alt} eager={eager} />;
+  if (slug === 'visual-search') return <Still src="/media/work/image-search-prototype-poster.jpg" alt={visual.alt} eager={eager} width={900} height={1764} />;
   if (slug === 'attribute-enrichment') {
     return (
       <div className="attrs">
@@ -138,18 +167,12 @@ function PersonalFrame({ project, eager = false }: { project: PersonalProject; e
   if (project.preview === 'recordings') {
     return <Still src="/media/personal/virtual-try-on-grid-poster.jpg?v=2" alt="Virtual Try-On browse grid" eager={eager} />;
   }
-  if (project.preview === 'video') {
-    return <Still src="/media/personal/ai-advent-calendar-poster.jpg?v=2" alt="AI Advent Calendar demo" eager={eager} />;
-  }
-  if (project.preview === 'mockup') {
-    return (
-      <div className="pair">
-        <img src={dreamCatcherJournal} alt="Dream Catcher Journal screen with a list of illustrated dreams." loading={eager ? 'eager' : 'lazy'} decoding="async" />
-        <img src={dreamCatcherHome} alt="Dream Catcher Home screen with a dream recording prompt and an interpretation." loading="lazy" decoding="async" />
-      </div>
-    );
-  }
-  return <p className="soon">Coming soon</p>;
+  return (
+    <div className="pair">
+      <img src={dreamCatcherJournal} alt="Dream Catcher Journal screen with a list of illustrated dreams." loading={eager ? 'eager' : 'lazy'} decoding="async" />
+      <img src={dreamCatcherHome} alt="Dream Catcher Home screen with a dream recording prompt and an interpretation." loading="lazy" decoding="async" />
+    </div>
+  );
 }
 
 type Entry = {
@@ -167,12 +190,7 @@ function entriesFor(workType: WorkType): Entry[] {
       key: project.slug,
       title: project.title,
       outcome: project.description,
-      href: project.slug === 'virtual-try-on'
-        ? '/work/virtual-try-on'
-        : project.slug === 'ai-advent-calendar'
-          ? 'https://ai-pm-advent-calendar.replit.app/'
-          : undefined,
-      external: project.slug === 'ai-advent-calendar',
+      href: project.slug === 'virtual-try-on' ? '/work/virtual-try-on' : undefined,
       frame: (_thumb?: boolean, eager?: boolean) => <PersonalFrame project={project} eager={eager} />,
     }));
   }
@@ -189,17 +207,21 @@ function entriesFor(workType: WorkType): Entry[] {
   }).filter((entry): entry is Entry => entry !== null);
 }
 
-function EntryLink({ entry, className, children }: { entry: Entry; className: string; children: ReactNode }) {
-  if (!entry.href) return <article className={className}>{children}</article>;
+function TitleLink({ entry, children }: { entry: Entry; children: ReactNode }) {
+  if (!entry.href) return <strong>{children}</strong>;
   if (entry.external) {
     return (
-      <a className={className} href={entry.href} target="_blank" rel="noopener noreferrer">
-        {children}
+      <a className="title-link" href={entry.href} target="_blank" rel="noopener noreferrer">
+        <strong>{children}</strong>
         <span className="sr-only"> (opens in a new tab)</span>
       </a>
     );
   }
-  return <Link className={className} href={entry.href}>{children}</Link>;
+  return (
+    <Link className="title-link" href={entry.href}>
+      <strong>{children}</strong>
+    </Link>
+  );
 }
 
 function Switch({
@@ -284,13 +306,13 @@ export function DirectionBoard({
           <ul className="rest">
             {rest.map((entry) => (
               <li key={entry.key}>
-                <EntryLink entry={entry} className="rest-row">
+                <article className="rest-row">
                   <span className="thumb">{entry.frame(true)}</span>
                   <span>
-                    <strong>{entry.title}</strong>
+                    <TitleLink entry={entry}>{entry.title}</TitleLink>
                     <em>{entry.outcome}</em>
                   </span>
-                </EntryLink>
+                </article>
               </li>
             ))}
           </ul>
@@ -310,11 +332,11 @@ export function DirectionBoard({
         <Switch idPrefix={layout} workType={workType} onSelect={onSelect} onKeyDown={onKeyDown} />
         <div id={panelId} className="catalog" role="tabpanel" aria-labelledby={`${layout}-tab-${workType === 'Personal' ? 1 : 0}`}>
           {entries.map((entry) => (
-            <EntryLink entry={entry} className="tile" key={entry.key}>
+            <article className="tile" key={entry.key}>
               <span className="object">{entry.frame(false)}</span>
-              <strong>{entry.title}</strong>
+              <TitleLink entry={entry}>{entry.title}</TitleLink>
               <em>{entry.outcome}</em>
-            </EntryLink>
+            </article>
           ))}
         </div>
       </div>
@@ -332,13 +354,13 @@ export function DirectionBoard({
       </header>
       <div id={panelId} role="tabpanel" aria-labelledby={`${layout}-tab-${workType === 'Personal' ? 1 : 0}`}>
         {entries.map((entry, index) => (
-          <EntryLink entry={entry} className="row" key={entry.key}>
+          <article className="row" data-window={entry.title} key={entry.key}>
             <span className="object">{entry.frame(false, index === 0)}</span>
             <span className="copy">
-              <strong>{entry.title}</strong>
+              <TitleLink entry={entry}>{entry.title}</TitleLink>
               <em>{entry.outcome}</em>
             </span>
-          </EntryLink>
+          </article>
         ))}
       </div>
     </div>

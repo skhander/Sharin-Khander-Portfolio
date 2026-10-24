@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600&family=JetBrains+Mono:wght@400&family=VT323&display=swap');
 @import 'tailwindcss';
 @import 'tw-animate-css';
 @plugin "@tailwindcss/typography";
@@ -37,60 +37,60 @@
 }
 
 :root {
-  --background: 30 6% 5%;
-  --foreground: 40 18% 94%;
-  --border: 36 8% 22%;
-  --input: 36 8% 22%;
-  --ring: 350 45% 72%;
-  --card: 30 5% 8%;
-  --card-foreground: 40 18% 94%;
-  --card-border: 36 8% 22%;
-  --popover: 30 5% 8%;
-  --popover-foreground: 40 18% 94%;
-  --popover-border: 36 8% 22%;
-  --primary: 350 45% 72%;
-  --primary-foreground: 30 6% 5%;
-  --secondary: 347 12% 16%;
-  --secondary-foreground: 40 18% 94%;
-  --muted: 30 5% 12%;
-  --muted-foreground: 36 10% 68%;
-  --accent: 350 45% 72%;
-  --accent-foreground: 30 6% 5%;
-  --destructive: 350 45% 72%;
-  --destructive-foreground: 30 6% 5%;
-  --rose-surface: 347 16% 14%;
-  --olive-surface: 30 5% 12%;
-  --app-font-sans: 'Instrument Sans', Arial, sans-serif;
-  --app-font-serif: 'Instrument Serif', Georgia, serif;
-  --app-font-mono: 'IBM Plex Mono', ui-monospace, monospace;
-  --radius: 0.15rem;
-  --shadow-sm: 0 8px 24px rgba(0, 0, 0, 0.28);
+  --background: 345 82% 74%;
+  --foreground: 0 0% 12%;
+  --border: 0 0% 12%;
+  --input: 0 0% 12%;
+  --ring: 0 0% 12%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 12%;
+  --card-border: 0 0% 12%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 12%;
+  --popover-border: 0 0% 12%;
+  --primary: 0 0% 12%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 345 40% 68%;
+  --secondary-foreground: 0 0% 12%;
+  --muted: 345 40% 68%;
+  --muted-foreground: 0 0% 22%;
+  --accent: 0 0% 12%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 0% 12%;
+  --destructive-foreground: 0 0% 100%;
+  --rose-surface: 345 82% 74%;
+  --olive-surface: 345 40% 68%;
+  --app-font-sans: 'Inter Tight', 'Helvetica Neue', Arial, sans-serif;
+  --app-font-serif: 'Inter Tight', 'Helvetica Neue', Arial, sans-serif;
+  --app-font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --radius: 0;
+  --shadow-sm: 3px 3px 0 #1e1e1e;
 }
 
 .dark {
-  --background: 30 6% 5%;
-  --foreground: 40 18% 94%;
-  --border: 36 8% 22%;
-  --input: 36 8% 22%;
-  --ring: 350 45% 72%;
-  --card: 30 5% 8%;
-  --card-foreground: 40 18% 94%;
-  --card-border: 36 8% 22%;
-  --popover: 30 5% 8%;
-  --popover-foreground: 40 18% 94%;
-  --popover-border: 36 8% 22%;
-  --primary: 350 45% 72%;
-  --primary-foreground: 30 6% 5%;
-  --secondary: 347 12% 16%;
-  --secondary-foreground: 40 18% 94%;
-  --muted: 30 5% 12%;
-  --muted-foreground: 36 10% 68%;
-  --accent: 350 45% 72%;
-  --accent-foreground: 30 6% 5%;
-  --destructive: 350 45% 72%;
-  --destructive-foreground: 30 6% 5%;
-  --rose-surface: 347 16% 14%;
-  --olive-surface: 30 5% 12%;
+  --background: 345 82% 74%;
+  --foreground: 0 0% 12%;
+  --border: 0 0% 12%;
+  --input: 0 0% 12%;
+  --ring: 0 0% 12%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 12%;
+  --card-border: 0 0% 12%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 12%;
+  --popover-border: 0 0% 12%;
+  --primary: 0 0% 12%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 345 40% 68%;
+  --secondary-foreground: 0 0% 12%;
+  --muted: 345 40% 68%;
+  --muted-foreground: 0 0% 22%;
+  --accent: 0 0% 12%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 0% 12%;
+  --destructive-foreground: 0 0% 100%;
+  --rose-surface: 345 82% 74%;
+  --olive-surface: 345 40% 68%;
 }
 
 @layer base {
@@ -102,10 +102,10 @@
 }
 
 @layer utilities {
-  .font-editorial { font-family: var(--app-font-serif); font-weight: 400; }
+  .font-editorial { font-family: var(--app-font-serif); font-weight: 600; }
   .font-editorial.font-semibold,
   .font-editorial.font-medium,
-  .font-editorial.font-normal { font-weight: 400; }
+  .font-editorial.font-normal { font-weight: 600; }
   .font-mono-archive { font-family: var(--app-font-mono); }
   .font-mono-archive:is([class~="text-[9px]"], [class~="text-[10px]"]) {
     font-size: 11px;

@@ -1,42 +1,37 @@
-import { useEffect } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { Link, useLocation } from 'wouter';
 import { ArrowUpRight } from 'lucide-react';
 import { Footer } from '@/components/project-content';
-import { ViewToggle } from '@/components/view-toggle';
+import { OsBoot } from '@/components/os-boot';
+import { OsChrome } from '@/components/os-chrome';
+import { OsLife } from '@/components/os-life';
+import { applyTastePreview } from '@/lib/taste-preview';
 
 type PortfolioShellProps = { children: React.ReactNode };
 
 export function PortfolioShell({ children }: PortfolioShellProps) {
   const [location] = useLocation();
+  const [preview, setPreview] = useState(() => applyTastePreview());
+  const [booting, setBooting] = useState(() => applyTastePreview());
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
 
-  const links = [
-    { href: '/', label: 'Work', testId: 'link-nav-work' },
-    { href: '/about', label: 'About', testId: 'link-nav-about' },
-  ];
+  useEffect(() => {
+    const on = applyTastePreview();
+    setPreview(on);
+    if (!on) setBooting(false);
+  }, [location]);
+
+  const finishBoot = useCallback(() => setBooting(false), []);
   const isAbout = location === '/about' || location === '/contact';
-  const showToggle = location === '/' || isAbout;
 
   return (
-    <div className="archive-noise min-h-[100dvh] bg-background text-foreground">
-      {showToggle ? <ViewToggle /> : (
-        <header className="mx-auto flex min-h-16 w-full max-w-[1440px] items-center justify-end border-b border-border px-6 py-4 sm:px-10 lg:px-[5%]">
-          <nav className="flex items-center gap-5 sm:gap-8" aria-label="Primary navigation">
-            {links.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`archive-link text-[18px] font-medium ${location === link.href ? 'text-accent' : 'text-muted-foreground'}`}
-                data-testid={link.testId}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
-        </header>
-      )}
+    <div className={`archive-noise min-h-[100dvh] bg-background text-foreground${preview && isAbout ? ' has-life' : ''}`}>
+      {preview && isAbout ? <OsLife /> : null}
+      {preview && booting ? <OsBoot onDone={finishBoot} /> : null}
+      <OsChrome preview={preview} />
       <main>{children}</main>
       {isAbout ? null : <Footer />}
     </div>

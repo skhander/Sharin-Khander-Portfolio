@@ -59,7 +59,7 @@ export type PersonalProject = {
   title: string;
   description: string;
   badges: string[];
-  preview: 'recordings' | 'video' | 'mockup' | 'coming-soon';
+  preview: 'recordings' | 'mockup';
 };
 
 export const personalProjects: PersonalProject[] = [
@@ -71,25 +71,11 @@ export const personalProjects: PersonalProject[] = [
     preview: 'recordings',
   },
   {
-    slug: 'ai-advent-calendar',
-    title: 'AI Advent Calendar',
-    description: 'Learn the basics of AI in 9 days.',
-    badges: ['Ed Tech'],
-    preview: 'video',
-  },
-  {
     slug: 'dream-catcher',
     title: 'Dream Catcher',
     description: 'Record a dream. Get an AI read. See how it connects to your life.',
     badges: ['COMING SOON'],
     preview: 'mockup',
-  },
-  {
-    slug: 'medigo',
-    title: 'Medigo',
-    description: 'Find and book a procedure abroad. 100+ accredited doctors and clinics.',
-    badges: [],
-    preview: 'coming-soon',
   },
 ];
 
@@ -101,7 +87,7 @@ export const projects: Project[] = [
     title: 'Site Redesign',
     company: 'The RealReal',
     category: 'Browse + PDP',
-    description: 'A more elevated shopping experience, driving 5% lift in GMV per visitor.',
+    description: 'Elevated the buying experience to drive a 5% lift in revenue per visitor.',
     thesis: 'Make the product bigger. Make the page calmer.',
     role: 'Product strategy, product direction, execution',
     team: 'Design, Engineering, Research, Data',
@@ -110,10 +96,10 @@ export const projects: Project[] = [
   },
   {
     slug: 'attribute-enrichment',
-    title: 'Attribute Prediction',
+    title: 'Catalog Enrichment',
     company: 'The RealReal',
     category: 'AI / Discovery / Curation',
-    description: 'AI tags items with trend, occasion, and vibe labels to power more natural discovery.',
+    description: 'Generated richer product descriptions with LLMs to lift search conversion by 5%.',
     thesis: 'People search for a vibe. The catalog only knew the color.',
     role: 'Prompts, taxonomy, evaluation, UAT, testing strategy',
     team: [
@@ -130,7 +116,7 @@ export const projects: Project[] = [
     title: 'Shopping Agent',
     company: 'The RealReal',
     category: 'AI / Discovery / Commerce',
-    description: 'Lets users search naturally, compare products, and style outfits, driving 1% lift in conversion.',
+    description: 'Simplified product discovery to drive a 1% lift in conversion.',
     status: 'published',
   },
   {
@@ -138,15 +124,15 @@ export const projects: Project[] = [
     title: 'Image Search',
     company: 'The RealReal',
     category: 'AI / Discovery',
-    description: 'Lets users shop their social media inspiration, driving 2.5x higher conversion vs. traditional search.',
+    description: 'Enabled product discovery with no guesswork and converted 2.5x higher than keyword search.',
     status: 'published',
   },
   {
     slug: 'similar-designers',
-    title: 'Similar Designers',
+    title: 'Similar Designer Recommendations',
     company: 'The RealReal',
     category: 'Discovery / Recommendations',
-    description: "Designer recommendations based on users' taste and budget, enabling deeper discovery and 10% lift in browse page engagement.",
+    description: 'Enabled deeper browsing and cut bounce rate by 6%.',
     status: 'published',
   },
   {
@@ -154,7 +140,7 @@ export const projects: Project[] = [
     title: 'Curation Enablement',
     company: 'The RealReal',
     category: 'Discovery / Personalization',
-    description: 'Automates manual curation for 3X the editorial output and 30% higher lookbook engagement.',
+    description: 'Automated manual curation to build look books 3x faster.',
     status: 'published',
   },
 ];
