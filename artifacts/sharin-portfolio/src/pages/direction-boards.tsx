@@ -1,6 +1,7 @@
 import { useRef, useState, type KeyboardEvent, type ReactNode } from 'react';
 import { Pause, Play } from 'lucide-react';
 import { Link } from 'wouter';
+import './showroom-media.css';
 import dreamCatcherJournal from '@assets/Dream_Catcher_journal_frame.png';
 import dreamCatcherHome from '@assets/Dream_Catcher_home_aligned.png';
 import { personalProjects, publishedProjects, type PersonalProject } from '@/lib/projects';
@@ -61,13 +62,38 @@ function titleFor(slug: string, title: string) {
   return title;
 }
 
-function Still({ src, alt, eager = false }: { src: string; alt: string; eager?: boolean }) {
-  return <img src={src} alt={alt} loading={eager ? 'eager' : 'lazy'} decoding="async" fetchPriority={eager ? 'high' : 'low'} />;
+function Still({ src, alt, eager = false, width, height }: { src: string; alt: string; eager?: boolean; width?: number; height?: number }) {
+  return (
+    <img
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      loading={eager ? 'eager' : 'lazy'}
+      decoding="async"
+      fetchPriority={eager ? 'high' : 'low'}
+    />
+  );
 }
 
-function Film({ src, poster, alt, label }: { src: string; poster: string; alt: string; label: string }) {
+function Film({
+  src,
+  poster,
+  alt,
+  label,
+  width,
+  height,
+}: {
+  src: string;
+  poster: string;
+  alt: string;
+  label: string;
+  width: number;
+  height: number;
+}) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(false);
+  const portrait = height > width;
   const toggle = () => {
     const video = videoRef.current;
     if (!video) return;
@@ -75,16 +101,18 @@ function Film({ src, poster, alt, label }: { src: string; poster: string; alt: s
     else video.pause();
   };
   return (
-    <div className="film">
+    <div className={portrait ? 'film film--portrait' : 'film film--landscape'}>
       <video
         ref={videoRef}
         src={src}
         poster={poster}
+        width={width}
+        height={height}
         aria-label={alt}
         muted
         loop
         playsInline
-        preload="none"
+        preload="metadata"
         onPlay={() => setPlaying(true)}
         onPause={() => setPlaying(false)}
       />
@@ -99,17 +127,17 @@ function PublishedFrame({ slug, thumb = false, eager = false }: { slug: string; 
   const visual = visuals[slug];
   if (!visual) return null;
   if (slug === 'curation' && !thumb) {
-    return <Film src={visual.src} poster="/media/work/curation-vacation-shop-poster.jpg" alt={visual.alt} label="Curation Enablement prototype" />;
+    return <Film src={visual.src} poster="/media/work/curation-vacation-shop-poster.jpg" alt={visual.alt} label="Curation Enablement prototype" width={1280} height={720} />;
   }
-  if (slug === 'curation') return <Still src="/media/work/curation-vacation-shop-poster.jpg" alt={visual.alt} eager={eager} />;
+  if (slug === 'curation') return <Still src="/media/work/curation-vacation-shop-poster.jpg" alt={visual.alt} eager={eager} width={1280} height={720} />;
   if (slug === 'ai-discovery' && !thumb) {
-    return <Film src={visual.src} poster="/media/work/shopping-agent-portrait-poster.jpg" alt={visual.alt} label="Shopping Agent prototype" />;
+    return <Film src={visual.src} poster="/media/work/shopping-agent-portrait-poster.jpg" alt={visual.alt} label="Shopping Agent prototype" width={310} height={674} />;
   }
-  if (slug === 'ai-discovery') return <Still src="/media/work/shopping-agent-portrait-poster.jpg" alt={visual.alt} eager={eager} />;
+  if (slug === 'ai-discovery') return <Still src="/media/work/shopping-agent-portrait-poster.jpg" alt={visual.alt} eager={eager} width={310} height={674} />;
   if (slug === 'visual-search' && !thumb) {
-    return <Film src={visual.src} poster="/media/work/image-search-prototype-poster.jpg" alt={visual.alt} label="Image Search prototype" />;
+    return <Film src={visual.src} poster="/media/work/image-search-prototype-poster.jpg" alt={visual.alt} label="Image Search prototype" width={900} height={1764} />;
   }
-  if (slug === 'visual-search') return <Still src="/media/work/image-search-prototype-poster.jpg" alt={visual.alt} eager={eager} />;
+  if (slug === 'visual-search') return <Still src="/media/work/image-search-prototype-poster.jpg" alt={visual.alt} eager={eager} width={900} height={1764} />;
   if (slug === 'attribute-enrichment') {
     return (
       <div className="attrs">
@@ -189,17 +217,21 @@ function entriesFor(workType: WorkType): Entry[] {
   }).filter((entry): entry is Entry => entry !== null);
 }
 
-function EntryLink({ entry, className, children }: { entry: Entry; className: string; children: ReactNode }) {
-  if (!entry.href) return <article className={className}>{children}</article>;
+function TitleLink({ entry, children }: { entry: Entry; children: ReactNode }) {
+  if (!entry.href) return <strong>{children}</strong>;
   if (entry.external) {
     return (
-      <a className={className} href={entry.href} target="_blank" rel="noopener noreferrer">
-        {children}
+      <a className="title-link" href={entry.href} target="_blank" rel="noopener noreferrer">
+        <strong>{children}</strong>
         <span className="sr-only"> (opens in a new tab)</span>
       </a>
     );
   }
-  return <Link className={className} href={entry.href}>{children}</Link>;
+  return (
+    <Link className="title-link" href={entry.href}>
+      <strong>{children}</strong>
+    </Link>
+  );
 }
 
 function Switch({
@@ -284,13 +316,13 @@ export function DirectionBoard({
           <ul className="rest">
             {rest.map((entry) => (
               <li key={entry.key}>
-                <EntryLink entry={entry} className="rest-row">
+                <article className="rest-row">
                   <span className="thumb">{entry.frame(true)}</span>
                   <span>
-                    <strong>{entry.title}</strong>
+                    <TitleLink entry={entry}>{entry.title}</TitleLink>
                     <em>{entry.outcome}</em>
                   </span>
-                </EntryLink>
+                </article>
               </li>
             ))}
           </ul>
@@ -310,11 +342,11 @@ export function DirectionBoard({
         <Switch idPrefix={layout} workType={workType} onSelect={onSelect} onKeyDown={onKeyDown} />
         <div id={panelId} className="catalog" role="tabpanel" aria-labelledby={`${layout}-tab-${workType === 'Personal' ? 1 : 0}`}>
           {entries.map((entry) => (
-            <EntryLink entry={entry} className="tile" key={entry.key}>
+            <article className="tile" key={entry.key}>
               <span className="object">{entry.frame(false)}</span>
-              <strong>{entry.title}</strong>
+              <TitleLink entry={entry}>{entry.title}</TitleLink>
               <em>{entry.outcome}</em>
-            </EntryLink>
+            </article>
           ))}
         </div>
       </div>
@@ -332,13 +364,13 @@ export function DirectionBoard({
       </header>
       <div id={panelId} role="tabpanel" aria-labelledby={`${layout}-tab-${workType === 'Personal' ? 1 : 0}`}>
         {entries.map((entry, index) => (
-          <EntryLink entry={entry} className="row" key={entry.key}>
+          <article className="row" key={entry.key}>
             <span className="object">{entry.frame(false, index === 0)}</span>
             <span className="copy">
-              <strong>{entry.title}</strong>
+              <TitleLink entry={entry}>{entry.title}</TitleLink>
               <em>{entry.outcome}</em>
             </span>
-          </EntryLink>
+          </article>
         ))}
       </div>
     </div>

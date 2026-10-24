@@ -2,6 +2,7 @@ import { useState, type KeyboardEvent } from 'react';
 import { usePageMeta } from '@/lib/use-page-meta';
 import { DirectionBoard, type WorkType } from './direction-boards';
 import './editorial-work.css';
+import './showroom-media.css';
 
 const workTypes = ['The RealReal', 'Personal'] as const;
 

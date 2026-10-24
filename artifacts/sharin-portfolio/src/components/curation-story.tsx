@@ -1,5 +1,5 @@
 import { useRef, useState, type ReactNode } from 'react';
-import { ArrowLeft, ArrowUpRight, Pause, Play } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ArrowUpRight, Pause, Play } from 'lucide-react';
 import { Link } from 'wouter';
 import type { Project } from '@/lib/projects';
 import './curation-story.css';
@@ -88,29 +88,32 @@ export function CurationStory({ project, nextProject }: { project: Project; next
             <ArrowLeft size={16} aria-hidden="true" /> All work
           </Link>
           <h1 className="curation-page-title">{project.title}</h1>
+          <p className="curation-dek">
+            I built a tool that uses recommendations to cut merchandising time by 30%.
+          </p>
         </header>
 
         <section className="curation-section curation-section-problem" aria-labelledby="curation-problem-title">
           <div className="curation-copy">
             <p className="curation-label">01 · The problem</p>
             <h2 id="curation-problem-title" className="curation-headline">
-              Curation was <span className="curation-accent">slow</span>, <span className="curation-accent">manual</span>, and didn&apos;t{' '}
+              Curation was <span className="curation-accent">manual</span>, <span className="curation-accent">slow</span>, and didn&apos;t{' '}
               <span className="curation-accent">scale</span>.
             </h2>
-            <p className="curation-body">Creating an editorial meant:</p>
+            <p className="curation-body">Curating assortments meant:</p>
             <ul className="curation-chips" aria-label="Pain points">
-              <li>Spending hours searching for the right items</li>
               <li>Switching between multiple tools</li>
-              <li>Manually replacing sold items</li>
+              <li>Spending hours searching for the right items</li>
             </ul>
-            <p className="curation-body curation-body-follow">As a result:</p>
-            <ul className="curation-chips" aria-label="Outcomes">
-              <li>Curation presence onsite was minimal.</li>
-              <li>Editorials that took weeks to create only live onsite for days</li>
-            </ul>
+            <div className="curation-result-callout">
+              <p className="curation-body curation-body-follow">As a result:</p>
+              <ul className="curation-chips" aria-label="Outcomes">
+                <li>Curation presence onsite was minimal.</li>
+              </ul>
+            </div>
           </div>
-          <div className="curation-media curation-media-stack">
-            <Frame caption="Example edit">
+          <div className="curation-media">
+            <Frame caption="Curation onsite">
               <img
                 src={media('falls-best-bags.png')}
                 alt="Fall's Best Bags assortment showing editor-selected designer bags"
@@ -118,6 +121,24 @@ export function CurationStory({ project, nextProject }: { project: Project; next
                 height={576}
               />
             </Frame>
+          </div>
+        </section>
+
+        <section className="curation-section curation-section-opportunity" aria-labelledby="curation-insight-title">
+          <div className="curation-copy">
+            <p className="curation-label">02 · The opportunity</p>
+            <h2 id="curation-insight-title" className="curation-headline">
+              One end-to-end tool with <span className="curation-accent">ML-powered recommendations</span>.
+            </h2>
+            <p className="curation-takeaway">
+              <ArrowRight size={16} strokeWidth={1.75} aria-hidden="true" />
+              <span>
+                Merchandisers spend <span className="curation-accent">less time searching</span> for products and{' '}
+                <span className="curation-accent">more time curating</span>.
+              </span>
+            </p>
+          </div>
+          <div className="curation-media">
             <Prototype
               video="curation-tool-prototype.mp4"
               poster="curation-tool-poster.jpg"
@@ -128,32 +149,26 @@ export function CurationStory({ project, nextProject }: { project: Project; next
           </div>
         </section>
 
-        <section className="curation-section curation-section-text" aria-labelledby="curation-insight-title">
-          <div className="curation-copy curation-copy-wide">
-            <p className="curation-label">02 · The opportunity</p>
-            <h2 id="curation-insight-title" className="curation-headline">
-              One <span className="curation-accent">end-to-end tool</span> with ML recommendations so merchandisers spend{' '}
-              <span className="curation-accent">less time searching</span> and <span className="curation-accent">more time curating</span>.
-            </h2>
-          </div>
-        </section>
-
         <section className="curation-section curation-section-role" aria-labelledby="curation-role-title">
           <div className="curation-copy">
             <p className="curation-label">03 · My role</p>
-            <h2 id="curation-role-title" className="curation-role-title">Ideation to rollout</h2>
+            <h2 id="curation-role-title" className="curation-role-title">Led a team of 20 across engineering, ML, and design.</h2>
             <ul className="curation-role-grid">
               <li className="curation-role-cell">
-                <span className="curation-accent">Research</span> Shadowed merchandisers at every level.
+                <span className="curation-accent">Research</span>
+                <span className="curation-role-detail">Shadowed merchandisers at every level.</span>
               </li>
               <li className="curation-role-cell">
-                <span className="curation-accent">Scope</span> Defined the first release with Engineering.
+                <span className="curation-accent">Scope</span>
+                <span className="curation-role-detail">Defined the first release with Engineering.</span>
               </li>
               <li className="curation-role-cell">
-                <span className="curation-accent">Delivery</span> Owned the workflow and recommendation quality.
+                <span className="curation-accent">Delivery</span>
+                <span className="curation-role-detail">Owned the workflow and recommendation quality.</span>
               </li>
               <li className="curation-role-cell">
-                <span className="curation-accent">Adoption</span> Moved teams onto the tool.
+                <span className="curation-accent">Adoption</span>
+                <span className="curation-role-detail">Moved teams onto the tool.</span>
               </li>
             </ul>
           </div>
@@ -168,19 +183,19 @@ export function CurationStory({ project, nextProject }: { project: Project; next
           </div>
         </section>
 
-        <section className="curation-section curation-section-text curation-section-solution" aria-labelledby="curation-solution-title">
-          <div className="curation-copy curation-copy-wide">
+        <section className="curation-section curation-section-solution" aria-labelledby="curation-solution-title">
+          <div className="curation-solution-copy">
             <p className="curation-label">04 · The solution</p>
             <h2 id="curation-solution-title" className="curation-headline">
               Eliminate <span className="curation-accent">tool switching</span> and reduce{' '}
               <span className="curation-accent">manual searches</span>.
             </h2>
-            <ul className="curation-rows">
-              <li>Builds the edit in one workflow</li>
-              <li>Recommends products to add</li>
-              <li>Suggestions improve over time with human feedback</li>
-            </ul>
           </div>
+          <ul className="curation-rows curation-solution-rows">
+            <li>Builds the edit in one workflow</li>
+            <li>Recommends products to add</li>
+            <li>Suggestions improve over time with human feedback</li>
+          </ul>
           <figure className="curation-scrollshot">
             <div className="curation-scrollshot-viewport" tabIndex={0} role="region" aria-label="Scrollable Create New Editorial screenshot">
               <img
@@ -200,15 +215,30 @@ export function CurationStory({ project, nextProject }: { project: Project; next
           <div className="curation-copy curation-copy-wide">
             <p className="curation-label">05 · Decisions &amp; Trade-offs</p>
             <h2 id="curation-decisions-title" className="curation-sr">Decisions &amp; Trade-offs</h2>
-            <ol className="curation-rows curation-decisions">
-              <li>
-                <span className="curation-accent">1. Prioritize workflow centralization over easier product discovery.</span> The tradeoff was delayed discovery improvements in exchange for fewer dependencies and one system to maintain.
+            <ol className="curation-decisions">
+              <li className="curation-decision">
+                <p className="curation-decision-lead">
+                  <span className="curation-accent">1. Prioritize workflow centralization over easier product discovery.</span>
+                </p>
+                <p className="curation-decision-body">
+                  The tradeoff was delayed discovery improvements in exchange for fewer dependencies and one system to maintain.
+                </p>
               </li>
-              <li>
-                <span className="curation-accent">2. Keep human review of AI.</span> The VP proposed automatically refreshing collections with recommended products. We kept merchandisers in control to catch irrelevant recommendations while we improved the models.
+              <li className="curation-decision">
+                <p className="curation-decision-lead">
+                  <span className="curation-accent">2. Keep human review of AI.</span>
+                </p>
+                <p className="curation-decision-body">
+                  The VP proposed automatically refreshing collections with recommended products. We kept merchandisers in control to catch irrelevant recommendations while we improved the models.
+                </p>
               </li>
-              <li>
-                <span className="curation-accent">3. Reuse existing models.</span> We explored whether shopper recommendations meet merchandising needs before building from scratch.
+              <li className="curation-decision">
+                <p className="curation-decision-lead">
+                  <span className="curation-accent">3. Reuse existing models.</span>
+                </p>
+                <p className="curation-decision-body">
+                  We explored whether shopper recommendations meet merchandising needs before building from scratch.
+                </p>
               </li>
             </ol>
           </div>
@@ -261,15 +291,30 @@ export function CurationStory({ project, nextProject }: { project: Project; next
           <div className="curation-copy">
             <p className="curation-label">07 · Learnings</p>
             <h2 id="curation-learnings-title" className="curation-sr">Learnings</h2>
-            <ul className="curation-rows">
-              <li>
-                <span className="curation-accent">Similarity isn&apos;t taste.</span> Recommendations needed to reflect merchandisers&apos; judgment, not just product similarity.
+            <ul className="curation-learnings">
+              <li className="curation-learning">
+                <p className="curation-learning-lead">
+                  <span className="curation-accent">Similarity isn&apos;t taste.</span>
+                </p>
+                <p className="curation-learning-body">
+                  Recommendations needed to reflect merchandisers&apos; judgment, not just product similarity.
+                </p>
               </li>
-              <li>
-                <span className="curation-accent">Faster tools don&apos;t mean more edits.</span> Campaign schedules and editorial capacity still limited output.
+              <li className="curation-learning">
+                <p className="curation-learning-lead">
+                  <span className="curation-accent">Faster tools don&apos;t mean more edits.</span>
+                </p>
+                <p className="curation-learning-body">
+                  Campaign schedules and editorial capacity still limited output.
+                </p>
               </li>
-              <li>
-                <span className="curation-accent">More curation isn&apos;t the goal.</span> A larger curation presence didn&apos;t mean anything if it didn&apos;t contribute to a greater share of GMV over time.
+              <li className="curation-learning">
+                <p className="curation-learning-lead">
+                  <span className="curation-accent">More curation isn&apos;t the goal.</span>
+                </p>
+                <p className="curation-learning-body">
+                  A larger curation presence didn&apos;t mean anything if it didn&apos;t contribute to a greater share of GMV over time.
+                </p>
               </li>
             </ul>
           </div>
