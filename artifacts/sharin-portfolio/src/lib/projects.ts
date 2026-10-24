@@ -113,7 +113,7 @@ export const projects: Project[] = [
     title: 'Attribute Prediction',
     company: 'The RealReal',
     category: 'AI / Discovery / Curation',
-    description: 'AI tags items with trend, occasion, and vibe labels to power more natural discovery.',
+    description: 'Tags 6 million products by trend, occasion and vibe so shoppers can discover them more naturally.',
     thesis: 'People search for a vibe. The catalog only knew the color.',
     role: 'Prompts, taxonomy, evaluation, UAT, testing strategy',
     team: [
@@ -130,7 +130,7 @@ export const projects: Project[] = [
     title: 'Shopping Agent',
     company: 'The RealReal',
     category: 'AI / Discovery / Commerce',
-    description: 'Lets users search naturally, compare products, and style outfits, driving 1% lift in conversion.',
+    description: 'Simplifies product discovery, driving a 1% lift in conversion.',
     status: 'published',
   },
   {
@@ -146,7 +146,7 @@ export const projects: Project[] = [
     title: 'Similar Designers',
     company: 'The RealReal',
     category: 'Discovery / Recommendations',
-    description: "Designer recommendations based on users' taste and budget, enabling deeper discovery and 10% lift in browse page engagement.",
+    description: 'Related designer recommendations enable deeper browsing and cut bounce rate by 6%.',
     status: 'published',
   },
   {
@@ -154,7 +154,7 @@ export const projects: Project[] = [
     title: 'Curation Enablement',
     company: 'The RealReal',
     category: 'Discovery / Personalization',
-    description: 'Automates manual curation for 3X the editorial output and 30% higher lookbook engagement.',
+    description: 'Automates manual curation to build lookbooks 3x faster.',
     status: 'published',
   },
 ];

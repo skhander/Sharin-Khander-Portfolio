@@ -10,8 +10,8 @@ const workTypes = ['The RealReal', 'Personal'] as const;
 export type WorkType = typeof workTypes[number];
 
 const homepageProjectSlugs = [
-  'curation',
   'ai-discovery',
+  'curation',
   'similar-designers',
   'attribute-enrichment',
   'visual-search',
@@ -19,10 +19,10 @@ const homepageProjectSlugs = [
 ] as const;
 
 const outcomes: Record<string, ReactNode> = {
-  curation: <><span className="heat">Automates manual curation</span> for 3X the editorial output and 30% higher lookbook engagement.</>,
-  'ai-discovery': <><span className="heat">Lets users search naturally</span>, compare products, and style outfits, driving 1% lift in conversion.</>,
-  'similar-designers': <><span className="heat">Designer recommendations based on users' taste and budget</span>, enabling deeper discovery and 10% lift in browse page engagement.</>,
-  'attribute-enrichment': <><span className="heat">AI tags items with trend, occasion, and vibe labels</span> to power more natural discovery.</>,
+  curation: <><span className="heat">Automates manual curation</span> to build lookbooks 3x faster.</>,
+  'ai-discovery': <><span className="heat">Simplifies product discovery</span>, driving a 1% lift in conversion.</>,
+  'similar-designers': <><span className="heat">Related designer recommendations enable deeper browsing</span> and cut bounce rate by 6%.</>,
+  'attribute-enrichment': <><span className="heat">Tags 6 million products by trend, occasion and vibe</span> so shoppers can discover them more naturally.</>,
   'visual-search': <><span className="heat">Lets users shop their social media inspiration</span>, driving 2.5x higher conversion vs. traditional search.</>,
   'elevated-experience': <><span className="heat">A more elevated shopping experience</span>, driving 5% lift in GMV per visitor.</>,
 };
