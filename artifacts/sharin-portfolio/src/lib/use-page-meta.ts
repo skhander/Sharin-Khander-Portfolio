@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-const defaultTitle = 'Sharin Khander — Product archive';
+const defaultTitle = 'Sharin Khander — Building smarter ways to shop';
 
 export function usePageMeta(title: string, description: string) {
   useEffect(() => {

@@ -8,7 +8,7 @@ const workTypes = ['The RealReal', 'Personal'] as const;
 
 export default function Work() {
   const [workType, setWorkType] = useState<WorkType>(workTypes[0]);
-  usePageMeta('Work — Sharin Khander', 'I build smarter ways to shop. Work from The RealReal, plus personal projects.');
+  usePageMeta('Sharin Khander — Building smarter ways to shop', 'I build smarter ways to shop. Work from The RealReal, plus personal projects.');
 
   const selectWorkType = (next: WorkType) => {
     setWorkType(next);
