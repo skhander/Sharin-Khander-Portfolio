@@ -175,6 +175,22 @@ footer {
   outline: 0;
 }
 
+.os-resume {
+  margin-left: auto;
+  flex-shrink: 0;
+  color: var(--ink);
+  background: var(--paper);
+  text-decoration: none;
+  padding: 3px 10px 5px;
+}
+
+.os-resume:hover,
+.os-resume:focus-visible {
+  background: var(--pink);
+  color: var(--ink);
+  outline: 0;
+}
+
 @keyframes os-blink {
   0%, 49.9% { opacity: 1; }
   50%, 100% { opacity: 0; }
@@ -224,7 +240,10 @@ html .dir-showroom .row::before {
 }
 
 html .dir-showroom .mast::before {
-  content: 'SHARIN.TXT';
+  content: '';
+  height: 28px;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html .dir-showroom .row::before {
