@@ -15,13 +15,12 @@ const email = 'skhander@gmail.com';
 
 const stats = [
   { value: '$180M', label: 'sales', testId: 'text-gmv-impact' },
-  { value: '90%', label: 'win rate', testId: 'text-experiments-count' },
   { value: '7', label: '0→1 builds', testId: 'text-products-count' },
 ] as const;
 
 export default function About() {
   const [status, setStatus] = useState<'idle' | 'copied' | 'failed'>('idle');
-  usePageMeta('About — Sharin Khander', '$180M in sales, 90% win rate, and 7 builds from zero.');
+  usePageMeta('About — Sharin Khander', '$180M in sales and 7 builds from zero.');
 
   useEffect(() => {
     const stage = document.querySelector('.about-stage');

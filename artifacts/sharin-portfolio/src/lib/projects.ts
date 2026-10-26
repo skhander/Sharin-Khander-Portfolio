@@ -65,8 +65,8 @@ export type PersonalProject = {
 export const personalProjects: PersonalProject[] = [
   {
     slug: 'virtual-try-on',
-    title: 'Virtual Try-On',
-    description: 'Try clothes on yourself, in Chrome.',
+    title: 'Virtual try-on avatar',
+    description: 'A Chrome extension that lets you shop any site as an avatar of yourself.',
     badges: ['Image Gen'],
     preview: 'recordings',
   },
@@ -87,7 +87,7 @@ export const projects: Project[] = [
     title: 'Site Redesign',
     company: 'The RealReal',
     category: 'Browse + PDP',
-    description: 'Elevated the buying experience to drive a 5% lift in revenue per visitor.',
+    description: 'Elevated the buying experience and increased revenue per visitor by 5%.',
     thesis: 'Make the product bigger. Make the page calmer.',
     role: 'Product strategy, product direction, execution',
     team: 'Design, Engineering, Research, Data',
@@ -99,7 +99,7 @@ export const projects: Project[] = [
     title: 'Catalog Enrichment',
     company: 'The RealReal',
     category: 'AI / Discovery / Curation',
-    description: 'Generated richer product descriptions with LLMs to lift search conversion by 5%.',
+    description: 'Generated richer product descriptions with LLMs and increased search conversion by 5%.',
     thesis: 'People search for a vibe. The catalog only knew the color.',
     role: 'Prompts, taxonomy, evaluation, UAT, testing strategy',
     team: [
@@ -116,7 +116,7 @@ export const projects: Project[] = [
     title: 'Shopping Agent',
     company: 'The RealReal',
     category: 'AI / Discovery / Commerce',
-    description: 'Simplified product discovery to drive a 1% lift in conversion.',
+    description: 'Simplified product discovery and drove a 1% lift in conversion.',
     status: 'published',
   },
   {
@@ -124,7 +124,7 @@ export const projects: Project[] = [
     title: 'Image Search',
     company: 'The RealReal',
     category: 'AI / Discovery',
-    description: 'Enabled product discovery with no guesswork and converted 2.5x higher than keyword search.',
+    description: 'Let users shop their social media inspiration and converted at 2.5x the rate of keyword search.',
     status: 'published',
   },
   {

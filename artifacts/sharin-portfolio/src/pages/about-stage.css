@@ -115,21 +115,26 @@
 
 .about-stats {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: max-content max-content;
+  width: max-content;
+  max-width: 100%;
   margin: 12px 0 0;
 }
 
 .about-stats > div {
   min-width: 0;
-  padding: 0 24px;
+  padding: 0 32px;
   border-left: 1px solid var(--about-line);
-  text-align: center;
+  text-align: left;
 }
 
 .about-stats > div:first-child {
   padding-left: 0;
   border-left: 0;
-  text-align: left;
+}
+
+.about-stats > div:last-child {
+  padding-right: 0;
 }
 
 .about-stats dt {
@@ -250,15 +255,25 @@
   .about-stage { --about-goo-top: 86px; padding: 86px 20px 64px; }
   .about-portrait { width: clamp(168px, 42cqi, 200px); }
   .about-panel { padding: 16px 16px 18px; }
-  .about-stats { grid-template-columns: 1fr; }
+  .about-stats {
+    grid-template-columns: max-content max-content;
+    width: max-content;
+  }
   .about-stats > div {
     margin: 0;
-    padding: 16px 0 0;
-    border-top: 1px solid var(--about-line);
-    border-left: 0;
+    padding: 0 16px;
+    border-top: 0;
+    border-left: 1px solid var(--about-line);
     text-align: left;
   }
-  .about-stats > div:first-child { padding-top: 0; border-top: 0; }
+  .about-stats > div:first-child {
+    padding-left: 0;
+    border-top: 0;
+    border-left: 0;
+  }
+  .about-stats > div:last-child {
+    padding-right: 0;
+  }
   .about-stats dt { font-size: 40px; }
 }
 

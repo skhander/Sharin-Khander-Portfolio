@@ -150,12 +150,6 @@ footer {
   border-bottom: 1px solid var(--ink);
 }
 
-.os-mark {
-  margin: 0;
-  font: inherit;
-  letter-spacing: 0.04em;
-}
-
 .os-nav {
   display: flex;
   gap: 6px;

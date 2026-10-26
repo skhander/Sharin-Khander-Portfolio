@@ -54,8 +54,8 @@ function DemoVideo({ file, poster, label, testId }: { file: string; poster: stri
 
 export default function VirtualTryOn() {
   usePageMeta(
-    'Virtual Try-On — Sharin Khander',
-    'Try clothes on yourself. A Chrome extension for browsing as you.',
+    'Virtual try-on avatar — Sharin Khander',
+    'A Chrome extension that lets you shop any site as an avatar of yourself.',
   );
 
   return (
@@ -73,7 +73,7 @@ export default function VirtualTryOn() {
           <div className="vto-intro">
             <div>
               <h1 id="virtual-try-on-title" className="font-editorial" data-testid="text-virtual-try-on-title">
-                Virtual<br className="vto-title-break" /> Try-On
+                Virtual try-on<br className="vto-title-break" /> avatar
               </h1>
             </div>
             <div className="vto-intro-copy">
@@ -97,7 +97,7 @@ export default function VirtualTryOn() {
               <DemoVideo
                 file="virtual-try-on-build-upload.mp4"
                 poster="virtual-try-on-build-upload-poster.jpg"
-                label="Virtual Try-On build recording showing a photo upload on ShopMy"
+                label="Virtual try-on avatar build recording showing a photo upload on ShopMy"
                 testId="video-virtual-try-on-build-upload"
               />
             </figure>
@@ -105,13 +105,13 @@ export default function VirtualTryOn() {
         </div>
       </section>
 
-      <section className="vto-demo vto-shell" aria-label="Virtual Try-On working demo">
+      <section className="vto-demo vto-shell" aria-label="Virtual try-on avatar working demo">
         <figure className="vto-video-figure vto-video-detail">
           <figcaption className="vto-video-caption">PDP</figcaption>
           <DemoVideo
             file="virtual-try-on-pdp.mp4"
             poster="virtual-try-on-pdp-poster.jpg"
-            label="Virtual Try-On demo recording showing a ShopMy product detail page and try-on"
+            label="Virtual try-on avatar demo recording showing a ShopMy product detail page and try-on"
             testId="video-virtual-try-on-product-page"
           />
         </figure>
@@ -120,7 +120,7 @@ export default function VirtualTryOn() {
           <DemoVideo
             file="virtual-try-on-grid-web.mp4"
             poster="virtual-try-on-grid-poster.jpg"
-            label="Virtual Try-On demo recording showing ShopMy product browsing and try-on"
+            label="Virtual try-on avatar demo recording showing ShopMy product browsing and try-on"
             testId="video-virtual-try-on-grid"
           />
         </figure>

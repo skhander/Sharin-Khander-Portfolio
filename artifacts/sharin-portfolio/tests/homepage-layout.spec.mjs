@@ -38,7 +38,7 @@ for (const viewport of viewports) {
     await expect(realRealTab).toHaveAttribute('aria-selected', 'false');
     await expect(page.getByRole('tabpanel')).toHaveAttribute('aria-labelledby', 'work-tab-1');
     await expect(page.getByRole('tabpanel')).toBeVisible();
-    await expect(page.locator('.dir-showroom .copy strong')).toHaveText(['Virtual Try-On', 'Dream Catcher']);
+    await expect(page.locator('.dir-showroom .copy strong')).toHaveText(['Virtual try-on avatar', 'Dream Catcher']);
     await expect(page.getByText('AI Advent Calendar')).toHaveCount(0);
     await expect(page.getByText('Medigo')).toHaveCount(0);
     await expect(page.locator('.editorial-project-visual figcaption, .personal-recording-label')).toHaveCount(0);

@@ -20,11 +20,11 @@ const homepageProjectSlugs = [
 
 const outcomes: Record<string, ReactNode> = {
   curation: 'Automated manual curation to build look books 3x faster.',
-  'ai-discovery': 'Simplified product discovery to drive a 1% lift in conversion.',
+  'ai-discovery': 'Simplified product discovery and drove a 1% lift in conversion.',
   'similar-designers': 'Enabled deeper browsing and cut bounce rate by 6%.',
-  'attribute-enrichment': 'Generated richer product descriptions with LLMs to lift search conversion by 5%.',
-  'visual-search': 'Enabled product discovery with no guesswork and converted 2.5x higher than keyword search.',
-  'elevated-experience': 'Elevated the buying experience to drive a 5% lift in revenue per visitor.',
+  'attribute-enrichment': 'Generated richer product descriptions with LLMs and increased search conversion by 5%.',
+  'visual-search': 'Let users shop their social media inspiration and converted at 2.5x the rate of keyword search.',
+  'elevated-experience': 'Elevated the buying experience and increased revenue per visitor by 5%.',
 };
 
 const visuals: Record<string, { src: string; alt: string }> = {
@@ -165,7 +165,7 @@ function PublishedFrame({ slug, thumb = false, eager = false }: { slug: string; 
 
 function PersonalFrame({ project, eager = false }: { project: PersonalProject; eager?: boolean }) {
   if (project.preview === 'recordings') {
-    return <Still src="/media/personal/virtual-try-on-grid-poster.jpg?v=2" alt="Virtual Try-On browse grid" eager={eager} />;
+    return <Still src="/media/personal/virtual-try-on-grid-poster.jpg?v=2" alt="Virtual try-on avatar browse grid" eager={eager} />;
   }
   return (
     <div className="pair">
