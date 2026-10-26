@@ -309,7 +309,7 @@
 
 .shopping-agent-story .shopping-agent-solution {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 9.5rem));
+  grid-template-columns: repeat(3, minmax(0, 11.25rem));
   width: max-content;
   max-width: 100%;
   min-width: 0;
@@ -403,7 +403,7 @@
 
 @media (max-width: 767px) {
   .shopping-agent-story .shopping-agent-solution {
-    grid-template-columns: minmax(0, 11.5rem);
+    grid-template-columns: minmax(0, 13rem);
   }
 
   .shopping-agent-story .shopping-agent-solution .shopping-agent-comparison-pane + .shopping-agent-comparison-pane {
