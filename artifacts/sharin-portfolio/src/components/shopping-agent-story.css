@@ -39,8 +39,8 @@
 
 .shopping-agent-story .shopping-agent-impact {
   display: grid;
-  gap: .45rem;
-  margin: 1.5rem 0 0;
+  gap: .55rem;
+  margin: 1.75rem 0 0;
 }
 
 .shopping-agent-story .shopping-agent-impact h2 {
@@ -50,34 +50,41 @@
 .shopping-agent-story .shopping-agent-impact dl {
   display: flex;
   flex-wrap: wrap;
-  gap: .65rem 1.75rem;
+  align-items: start;
   margin: 0;
 }
 
 .shopping-agent-story .shopping-agent-impact dl div {
   display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: .4rem .55rem;
+  flex-direction: column;
+  min-width: 0;
+  padding: 0 1.35rem;
+  border-left: 1px solid var(--ink);
+}
+
+.shopping-agent-story .shopping-agent-impact dl div:first-child {
+  padding-left: 0;
+  border-left: 0;
 }
 
 .shopping-agent-story .shopping-agent-impact dt {
   order: 2;
-  margin: 0;
+  margin: .4rem 0 0;
   font-family: var(--app-font-mono);
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 1.4;
-  color: hsl(var(--muted-foreground));
+  line-height: 1.35;
+  color: var(--ink);
 }
 
 .shopping-agent-story .shopping-agent-impact dd {
   order: 1;
   margin: 0;
-  font-size: 1.05rem;
+  font-size: clamp(1.85rem, 3.2vw, 2.5rem);
   font-weight: 600;
-  letter-spacing: -.02em;
-  line-height: 1.2;
+  letter-spacing: -.03em;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
 }
 
 .shopping-agent-story .shopping-agent-prototype-player {

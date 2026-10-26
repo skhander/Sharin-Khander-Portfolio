@@ -149,7 +149,7 @@ export function ShoppingAgentStory(_props: { project: Project; nextProject: Proj
                   <span>eras</span>
                   <span>occasions</span>
                 </span>
-                but traditional search only understands attributes.
+                but traditional search only understands flat descriptors.
               </p>
             </div>
           </div>
@@ -171,8 +171,8 @@ export function ShoppingAgentStory(_props: { project: Project; nextProject: Proj
           <div className="shopping-agent-solution-copy">
             <h2 id="shopping-solution" className="site-eyebrow font-mono-archive text-accent">02 — Solution</h2>
             <div className="shopping-agent-solution-prose">
-              <p className="shopping-agent-problem-punch">AskTRR helps you discover, decide, and style.</p>
-              <p>It works like a personal shopper who already knows your taste.</p>
+              <p className="shopping-agent-problem-punch">A shopping agent detects intent and helps you decide confidently.</p>
+              <p>It's a personal shopper who knows your taste.</p>
               <p>Gemini handles language understanding. We built the product layer: search across live inventory, personalization, add to cart, and a brand voice tuned to The RealReal.</p>
             </div>
           </div>
