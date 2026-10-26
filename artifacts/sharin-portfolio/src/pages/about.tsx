@@ -1,4 +1,4 @@
-import { useEffect, useState, type CSSProperties } from 'react';
+import { useEffect, type CSSProperties } from 'react';
 import { usePageMeta } from '@/lib/use-page-meta';
 import { ArrowUpRight } from 'lucide-react';
 import portrait from '@assets/sharin-khander.jpg';
@@ -11,15 +11,12 @@ const links = [
   { label: 'Medium', href: 'https://medium.com/@sharinkhander' },
 ] as const;
 
-const email = 'skhander@gmail.com';
-
 const stats = [
   { value: '$180M', label: 'sales', testId: 'text-gmv-impact' },
   { value: '7', label: '0→1 builds', testId: 'text-products-count' },
 ] as const;
 
 export default function About() {
-  const [status, setStatus] = useState<'idle' | 'copied' | 'failed'>('idle');
   usePageMeta('About — Sharin Khander', '$180M in sales and 7 builds from zero.');
 
   useEffect(() => {
@@ -28,22 +25,6 @@ export default function About() {
     document.addEventListener('visibilitychange', sync);
     return () => document.removeEventListener('visibilitychange', sync);
   }, []);
-
-  useEffect(() => {
-    if (status !== 'copied') return;
-    const timer = window.setTimeout(() => setStatus('idle'), 1600);
-    return () => window.clearTimeout(timer);
-  }, [status]);
-
-  async function copyEmail() {
-    try {
-      await navigator.clipboard.writeText(email);
-    } catch {
-      setStatus('failed');
-      return;
-    }
-    setStatus('copied');
-  }
 
   return (
     <div className="about-stage" style={{ '--about-goo': `url(${goo})` } as CSSProperties}>
@@ -71,8 +52,8 @@ export default function About() {
           </dl>
         </section>
 
-        <section className="about-panel" aria-labelledby="about-contact-title">
-          <h2 id="about-contact-title" className="about-kicker">Contact</h2>
+        <section className="about-panel" aria-labelledby="about-resources-title">
+          <h2 id="about-resources-title" className="about-kicker">Resources</h2>
           <div className="about-links">
             {links.map(({ label, href }) => (
               <a key={label} href={href} target="_blank" rel="noopener noreferrer">
@@ -81,18 +62,7 @@ export default function About() {
                 <ArrowUpRight size={16} strokeWidth={1.6} aria-hidden="true" />
               </a>
             ))}
-            <button type="button" className="about-email" data-state={status} onClick={copyEmail}>
-              {status === 'failed' ? "Couldn't copy. Try again." : (
-                <>
-                  <span className={status === 'copied' ? 'is-idle' : undefined} aria-hidden={status === 'copied'}>Email</span>
-                  <span className={status === 'copied' ? undefined : 'is-idle'} aria-hidden={status !== 'copied'}>Copied</span>
-                </>
-              )}
-            </button>
           </div>
-          <p className="sr-only" role="status" aria-live="polite">
-            {status === 'copied' ? 'Email address copied.' : status === 'failed' ? "Couldn't copy. Try again." : ''}
-          </p>
         </section>
       </div>
     </div>

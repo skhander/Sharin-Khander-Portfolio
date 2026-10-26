@@ -426,8 +426,7 @@ html .about-stats dd {
   font-family: var(--f-display);
 }
 
-html .about-links a,
-html .about-links .about-email {
+html .about-links a {
   background: var(--ink);
   color: var(--paper) !important;
   font-family: var(--f-pixel);
@@ -437,16 +436,13 @@ html .about-links .about-email {
 }
 
 html .about-links a:hover,
-html .about-links .about-email:hover,
-html .about-links a:focus-visible,
-html .about-links .about-email:focus-visible {
+html .about-links a:focus-visible {
   background: var(--paper);
   color: var(--ink) !important;
   outline: 1px solid var(--ink);
 }
 
-html .about-links a::before,
-html .about-links .about-email::before {
+html .about-links a::before {
   content: none;
 }
 
