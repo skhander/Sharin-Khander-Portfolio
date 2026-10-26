@@ -79,11 +79,6 @@ html body .dir-showroom .film--portrait {
   height: 100%;
 }
 
-html body .dir-showroom .film--portrait button {
-  left: 50%;
-  transform: translateX(-50%);
-}
-
 html body .dir-showroom .attrs,
 html body .dir-showroom .pair {
   width: 100%;
