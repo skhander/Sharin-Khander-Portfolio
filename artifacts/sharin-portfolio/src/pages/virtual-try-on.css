@@ -1,246 +1,208 @@
 .virtual-try-on {
-  --vto-line: hsl(var(--foreground) / .18);
-  padding-bottom: 12px;
+  color: var(--ink);
+  font-family: var(--f-display);
+  font-size: 16px;
+  line-height: 1.5;
+  padding: clamp(40px, 6vw, 72px) clamp(20px, 5vw, 80px) clamp(64px, 8vw, 96px);
 }
 
-.vto-shell {
-  width: min(90%, 1440px);
+.vto-wrap {
+  width: min(1200px, 100%);
   margin-inline: auto;
-}
-
-.vto-header {
-  padding: 24px 0 42px;
-  border-bottom: 1px solid var(--vto-line);
 }
 
 .vto-back {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: hsl(var(--muted-foreground));
-  font-family: var(--app-font-sans);
+  color: var(--ink-86);
   font-size: 15px;
-  line-height: 1.5;
+  line-height: 1.4;
   text-decoration: none;
 }
 
-.vto-intro {
+.vto-back:hover {
+  color: var(--paper);
+  background: var(--ink);
+}
+
+.vto-title {
+  margin: clamp(28px, 4vw, 40px) 0 0;
+  font-family: var(--f-display);
+  font-size: clamp(1.75rem, 3.4vw, 2.5rem);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+.vto-dek {
+  margin: clamp(20px, 2.8vw, 32px) 0 0;
+  max-width: 38em;
+  color: var(--ink);
+  font-size: clamp(1.125rem, 2vw, 1.35rem);
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: -0.015em;
+}
+
+.vto-section {
+  padding-block: clamp(48px, 8vw, 80px);
+  border-top: 1px solid var(--ink);
+}
+
+.vto-top + .vto-section {
+  margin-top: clamp(40px, 6vw, 64px);
+}
+
+.vto-heading {
+  margin: 0 0 16px;
+  font-family: var(--f-display);
+  font-size: clamp(1.75rem, 3.4vw, 2.5rem);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+.vto-body {
+  margin: 0;
+  max-width: 38em;
+  font-size: clamp(1.05rem, 1.7vw, 1.2rem);
+  line-height: 1.55;
+}
+
+.vto-media {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 18px;
-  margin-top: 40px;
+  gap: 28px;
+  margin-top: clamp(28px, 4vw, 40px);
 }
 
-.vto-intro h1 {
-  margin: 0;
-  font-size: clamp(2.4rem, 4.5vw, 4rem);
-  font-weight: 600;
-  line-height: 1.1;
-  letter-spacing: -.03em;
-}
-
-.vto-title-break { display: none; }
-
-.vto-intro-copy {
-  max-width: 680px;
-}
-
-.vto-question {
-  margin: 0 0 16px;
-  font-size: clamp(1.25rem, 2vw, 1.75rem);
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: -.035em;
-}
-
-.vto-description {
-  max-width: 48ch;
-  margin: 0;
-  color: hsl(var(--muted-foreground));
-  font-size: 17px;
-  line-height: 1.65;
-}
-
-.vto-editorial-section {
-  border-bottom: 1px solid var(--vto-line);
-}
-
-.vto-section-grid {
+.vto-stills {
   display: grid;
-  grid-template-columns: minmax(160px, .34fr) minmax(0, 1fr);
-  align-items: start;
-  gap: clamp(28px, 5vw, 72px);
-}
-
-.vto-build {
-  padding-block: 42px;
-  border-bottom: 0;
-}
-
-.vto-section-title {
-  margin: 0;
-  font-size: clamp(1.5rem, 2.3vw, 2rem);
-  font-weight: 600;
-  line-height: 1.25;
-  letter-spacing: -.035em;
-}
-
-.vto-build-copy {
-  max-width: 760px;
-  margin: 0;
-  font-size: clamp(17px, 1.2vw, 18px);
-  line-height: 1.65;
-}
-
-.vto-build-content { min-width: 0; }
-
-.vto-demo {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr);
-  align-items: start;
-  gap: clamp(16px, 2.4vw, 32px);
-  padding-block: 38px 72px;
-}
-
-.vto-video-figure { min-width: 0; margin: 0; }
-.vto-build-recording { margin-top: clamp(24px, 3vw, 36px); }
-.vto-video-caption {
-  margin-bottom: 12px;
-  color: hsl(var(--muted-foreground));
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.4;
-}
-
-.vto-video-figure video,
-.vto-video-play,
-.vto-video-play img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 3420 / 2146;
-  height: auto;
-  background: hsl(var(--foreground));
-  object-fit: contain;
-}
-
-.vto-video-play {
-  position: relative;
-  padding: 0;
-  border: 1px solid var(--vto-line);
-  cursor: pointer;
-}
-
-.vto-video-play img { object-fit: contain; }
-
-.vto-play-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: grid;
-  width: 46px;
-  height: 46px;
-  place-items: center;
-  border: 1px solid hsl(var(--border));
-  border-radius: var(--radius);
-  background: hsl(var(--background) / .96);
-  color: hsl(var(--foreground));
-  transform: translate(-50%, -50%);
-}
-
-.vto-video-play:hover .vto-play-icon {
-  color: hsl(var(--accent));
-}
-
-.vto-learning { padding-block: 56px; }
-.vto-learning-copy {
-  max-width: 760px;
-  font-size: clamp(1.125rem, 1.65vw, 1.5rem);
-  line-height: 1.45;
-  letter-spacing: -.025em;
-}
-.vto-learning-copy p { margin: 0; }
-.vto-learning-copy p + p { margin-top: 20px; }
-.vto-learning-copy strong { font-weight: 700; }
-
-.vto-proof-section {
-  padding-block: 56px 76px;
-  border-bottom: 1px solid var(--vto-line);
-}
-
-.vto-proof-heading {
-  margin-bottom: 28px;
-}
-
-.vto-proof-heading h2 {
-  max-width: 26ch;
-  margin: 0;
-  font-size: clamp(1.75rem, 3vw, 2.6rem);
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: -.04em;
-}
-
-.vto-proof-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  align-items: start;
+  grid-template-columns: 1fr 1fr;
   gap: clamp(12px, 2vw, 24px);
 }
 
-.vto-proof-figure { min-width: 0; margin: 0; }
-.vto-proof-blue,
-.vto-proof-floral { margin-top: 0; }
-
-.vto-proof-image {
-  display: grid;
-  min-height: 180px;
-  place-items: center;
-  overflow: hidden;
-  border: 1px solid var(--vto-line);
-  background: hsl(var(--background));
+.vto-figure {
+  min-width: 0;
+  margin: 0;
 }
 
-.vto-proof-image img {
+.vto-frame {
+  position: relative;
+  display: grid;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  place-items: center;
+  overflow: hidden;
+  padding: clamp(12px, 1.8vw, 20px);
+  border: 1px solid var(--ink);
+  background: var(--paper);
+}
+
+.vto-frame img,
+.vto-frame video,
+.vto-play,
+.vto-play img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: contain;
+  object-position: center;
+  background: transparent;
+}
+
+.vto-play {
+  position: relative;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.vto-play-icon {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  z-index: 1;
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border: 1px solid var(--ink);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.vto-play:hover .vto-play-icon {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.vto-figure figcaption {
+  margin-top: 12px;
+  color: var(--ink-86);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.vto-learnings {
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+  max-width: 38em;
+}
+
+.vto-learnings li {
+  padding: 16px 0;
+  border-top: 1px solid var(--ink);
+  font-size: clamp(1.05rem, 1.7vw, 1.2rem);
+  line-height: 1.5;
+}
+
+.vto-learnings li:last-child {
+  border-bottom: 1px solid var(--ink);
+}
+
+.vto-learnings strong {
+  font-weight: 600;
 }
 
 .virtual-try-on :focus-visible {
-  outline: 2px solid hsl(var(--accent));
-  outline-offset: 4px;
+  outline: 1px solid var(--ink);
+  outline-offset: 3px;
 }
 
 @media (max-width: 767px) {
-  .vto-shell { width: min(100% - 40px, 600px); }
-  .vto-header { padding-top: 20px; padding-bottom: 40px; }
-  .vto-intro {
-    gap: 16px;
-    margin-top: 34px;
+  .virtual-try-on {
+    padding: 28px 20px 64px;
   }
-  .vto-intro h1 {
-    font-size: clamp(2.25rem, 10vw, 2.8rem);
-    line-height: 1.1;
+
+  .vto-title {
+    font-size: 1.6rem;
   }
-  .vto-title-break { display: block; }
-  .vto-question { max-width: 28ch; font-size: clamp(1.25rem, 5vw, 1.5rem); }
-  .vto-description { font-size: 16px; }
-  .vto-section-grid { grid-template-columns: 1fr; gap: 16px; }
-  .vto-build { padding-block: 34px 38px; }
-  .vto-section-title { font-size: 1.45rem; }
-  .vto-build-copy { font-size: 16px; }
-  .vto-demo {
+
+  .vto-dek {
+    font-size: 1.125rem;
+  }
+
+  .vto-heading {
+    margin-bottom: 12px;
+    font-size: 1.6rem;
+  }
+
+  .vto-body,
+  .vto-learnings li {
+    font-size: 1.05rem;
+  }
+
+  .vto-stills {
     grid-template-columns: 1fr;
-    gap: 16px;
-    padding-block: 24px 48px;
+    gap: 20px;
   }
-  .vto-learning { padding-block: 38px 42px; }
-  .vto-learning-copy { font-size: clamp(1.125rem, 4.8vw, 1.35rem); }
-  .vto-proof-section { padding-block: 40px 48px; }
-  .vto-proof-heading { margin-bottom: 20px; }
-  .vto-proof-heading h2 { font-size: clamp(1.7rem, 7vw, 2.25rem); }
-  .vto-proof-grid { grid-template-columns: 1fr; gap: 18px; }
-  .vto-proof-image { min-height: 180px; }
+
+  .vto-media {
+    gap: 20px;
+    margin-top: 24px;
+  }
 }
