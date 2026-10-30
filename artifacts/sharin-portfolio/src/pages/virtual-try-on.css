@@ -3,7 +3,7 @@
   font-family: var(--f-display);
   font-size: 16px;
   line-height: 1.5;
-  padding: clamp(40px, 6vw, 72px) clamp(20px, 5vw, 80px) clamp(64px, 8vw, 96px);
+  padding: 28px clamp(20px, 4vw, 48px) 72px;
 }
 
 .vto-wrap {
@@ -27,7 +27,7 @@
 }
 
 .vto-title {
-  margin: clamp(28px, 4vw, 40px) 0 0;
+  margin: 20px 0 0;
   font-family: var(--f-display);
   font-size: clamp(1.75rem, 3.4vw, 2.5rem);
   font-weight: 500;
@@ -35,27 +35,27 @@
   letter-spacing: -0.03em;
 }
 
-.vto-dek {
-  margin: clamp(20px, 2.8vw, 32px) 0 0;
-  max-width: 38em;
+.vto-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 40px;
+  align-items: start;
+  margin-top: 20px;
+}
+
+.vto-dek,
+.vto-body {
+  margin: 0;
+  max-width: none;
   color: var(--ink);
-  font-size: clamp(1.125rem, 2vw, 1.35rem);
+  font-size: clamp(1.05rem, 1.5vw, 1.15rem);
   font-weight: 400;
   line-height: 1.45;
-  letter-spacing: -0.015em;
-}
-
-.vto-section {
-  padding-block: clamp(48px, 8vw, 80px);
-  border-top: 1px solid var(--ink);
-}
-
-.vto-top + .vto-section {
-  margin-top: clamp(40px, 6vw, 64px);
+  letter-spacing: -0.01em;
 }
 
 .vto-heading {
-  margin: 0 0 16px;
+  margin: 0 0 10px;
   font-family: var(--f-display);
   font-size: clamp(1.75rem, 3.4vw, 2.5rem);
   font-weight: 500;
@@ -63,24 +63,18 @@
   letter-spacing: -0.03em;
 }
 
-.vto-body {
-  margin: 0;
-  max-width: 38em;
-  font-size: clamp(1.05rem, 1.7vw, 1.2rem);
-  line-height: 1.55;
+.vto-demo {
+  margin-top: 28px;
 }
 
-.vto-media {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-  margin-top: clamp(28px, 4vw, 40px);
+.vto-demo .vto-body {
+  margin-bottom: 16px;
 }
 
-.vto-stills {
+.vto-shots {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(12px, 2vw, 24px);
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
 }
 
 .vto-figure {
@@ -95,7 +89,7 @@
   aspect-ratio: 16 / 9;
   place-items: center;
   overflow: hidden;
-  padding: clamp(12px, 1.8vw, 20px);
+  padding: 8px;
   border: 1px solid var(--ink);
   background: var(--paper);
 }
@@ -122,12 +116,12 @@
 
 .vto-play-icon {
   position: absolute;
-  left: 12px;
-  bottom: 12px;
+  left: 10px;
+  bottom: 10px;
   z-index: 1;
   display: grid;
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   place-items: center;
   border: 1px solid var(--ink);
   background: var(--paper);
@@ -140,10 +134,16 @@
 }
 
 .vto-figure figcaption {
-  margin-top: 12px;
+  margin-top: 8px;
   color: var(--ink-86);
-  font-size: 14px;
-  line-height: 1.4;
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+.vto-learned {
+  margin-top: 48px;
+  padding-top: 36px;
+  border-top: 1px solid var(--ink);
 }
 
 .vto-learnings {
@@ -154,9 +154,9 @@
 }
 
 .vto-learnings li {
-  padding: 16px 0;
+  padding: 14px 0;
   border-top: 1px solid var(--ink);
-  font-size: clamp(1.05rem, 1.7vw, 1.2rem);
+  font-size: clamp(1.05rem, 1.5vw, 1.15rem);
   line-height: 1.5;
 }
 
@@ -175,34 +175,30 @@
 
 @media (max-width: 767px) {
   .virtual-try-on {
-    padding: 28px 20px 64px;
+    padding: 20px 20px 56px;
   }
 
-  .vto-title {
-    font-size: 1.6rem;
-  }
-
-  .vto-dek {
-    font-size: 1.125rem;
-  }
-
+  .vto-title,
   .vto-heading {
-    margin-bottom: 12px;
     font-size: 1.6rem;
   }
 
-  .vto-body,
-  .vto-learnings li {
-    font-size: 1.05rem;
-  }
-
-  .vto-stills {
+  .vto-intro,
+  .vto-shots {
     grid-template-columns: 1fr;
     gap: 20px;
   }
 
-  .vto-media {
-    gap: 20px;
-    margin-top: 24px;
+  .vto-intro {
+    margin-top: 16px;
+  }
+
+  .vto-demo {
+    margin-top: 28px;
+  }
+
+  .vto-learned {
+    margin-top: 36px;
+    padding-top: 28px;
   }
 }

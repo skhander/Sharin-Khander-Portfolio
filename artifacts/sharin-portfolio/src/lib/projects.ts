@@ -65,7 +65,7 @@ export type PersonalProject = {
 export const personalProjects: PersonalProject[] = [
   {
     slug: 'virtual-try-on',
-    title: 'Virtual try-on avatar',
+    title: 'Virtual Try-On',
     description: 'A Chrome extension that lets you shop any site as an avatar of yourself.',
     badges: ['Image Gen'],
     preview: 'recordings',

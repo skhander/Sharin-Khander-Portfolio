@@ -41,14 +41,14 @@ function DemoVideo({ file, poster, label, testId }: { file: string; poster: stri
 
 export default function VirtualTryOn() {
   usePageMeta(
-    'Virtual try-on avatar — Sharin Khander',
-    'I built a Chrome extension that lets you try on clothes on any apparel site, as yourself.',
+    'Virtual try-on chrome extension — Sharin Khander',
+    'Browse any apparel site as an avatar of yourself. See how clothes will look on you before you buy them.',
   );
 
   return (
     <article className="page-reveal virtual-try-on">
       <div className="vto-wrap">
-        <header className="vto-top">
+        <header className="vto-mast">
           <Link
             href="/"
             className="vto-back archive-link"
@@ -58,63 +58,62 @@ export default function VirtualTryOn() {
             All work
           </Link>
           <h1 id="virtual-try-on-title" className="vto-title" data-testid="text-virtual-try-on-title">
-            Virtual try-on avatar
+            Virtual try-on chrome extension
           </h1>
-          <p className="vto-dek">
-            I built a Chrome extension that lets you try on clothes on any apparel site, as yourself. Upload a photo once, and every product page shows the clothes on you.
-          </p>
+          <div className="vto-intro">
+            <p className="vto-dek">
+              Browse any apparel site as an avatar of yourself. See how clothes will look on you before you buy them.
+            </p>
+            <div>
+              <h2 id="vto-problem-title" className="vto-heading">The problem</h2>
+              <p className="vto-body">
+                Online shopping requires you to look at clothes on a mannequin or model and imagine how they will look on you.
+              </p>
+            </div>
+          </div>
         </header>
 
-        <section className="vto-section" aria-labelledby="vto-problem-title">
-          <h2 id="vto-problem-title" className="vto-heading">The problem</h2>
-          <p className="vto-body">
-            Online, you have to imagine clothes on someone else, usually a model or a mannequin. You can't tell how something will look on your skin tone or whether it fits your style.
-          </p>
-        </section>
-
-        <section className="vto-section" aria-labelledby="vto-demo-title">
+        <section className="vto-demo" aria-labelledby="vto-demo-title">
           <h2 id="vto-demo-title" className="vto-heading">The demo</h2>
-          <p className="vto-body">Upload a photo. Submit it. Browse any store as an avatar of you.</p>
-          <div className="vto-media">
-            <figure className="vto-figure vto-figure-demo">
+          <p className="vto-body">Upload a full-body photo. Enter your measurements. Then browse any store as an avatar of you.</p>
+          <div className="vto-shots">
+            <figure className="vto-figure">
               <div className="vto-frame">
                 <DemoVideo
                   file="virtual-try-on-build-upload.mp4"
                   poster="virtual-try-on-build-upload-poster.jpg"
-                  label="Virtual try-on avatar demo: upload a photo on ShopMy"
+                  label="Virtual try-on chrome extension demo: upload a photo on ShopMy"
                   testId="video-virtual-try-on-build-upload"
                 />
               </div>
               <figcaption>Demo</figcaption>
             </figure>
-            <div className="vto-stills">
-              <figure className="vto-figure">
-                <div className="vto-frame">
-                  <img
-                    src={media('virtual-try-on-pdp-poster.jpg')}
-                    alt="ShopMy product page showing clothes tried on as an avatar"
-                    width={1600}
-                    height={900}
-                  />
-                </div>
-                <figcaption>Product page</figcaption>
-              </figure>
-              <figure className="vto-figure">
-                <div className="vto-frame">
-                  <img
-                    src={`${media('virtual-try-on-grid-poster.jpg')}?v=2`}
-                    alt="ShopMy browse page showing a grid of products tried on as an avatar"
-                    width={1600}
-                    height={900}
-                  />
-                </div>
-                <figcaption>Browse page</figcaption>
-              </figure>
-            </div>
+            <figure className="vto-figure">
+              <div className="vto-frame">
+                <img
+                  src={media('virtual-try-on-pdp-poster.jpg')}
+                  alt="ShopMy product page showing clothes tried on as an avatar"
+                  width={1600}
+                  height={900}
+                />
+              </div>
+              <figcaption>Product page</figcaption>
+            </figure>
+            <figure className="vto-figure">
+              <div className="vto-frame">
+                <img
+                  src={`${media('virtual-try-on-grid-poster.jpg')}?v=2`}
+                  alt="ShopMy browse page showing a grid of products tried on as an avatar"
+                  width={1600}
+                  height={900}
+                />
+              </div>
+              <figcaption>Browse page</figcaption>
+            </figure>
           </div>
         </section>
 
-        <section className="vto-section" aria-labelledby="vto-learned-title">
+        <section className="vto-learned" aria-labelledby="vto-learned-title">
           <h2 id="vto-learned-title" className="vto-heading">What I learned</h2>
           <ul className="vto-learnings">
             {learnings.map((line) => (
